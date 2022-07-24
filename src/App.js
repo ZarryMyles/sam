@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./App.css";
+import { LandingSection } from "./components/";
 
 function App() {
   const [mousePos, setMousePos] = useState({
@@ -54,35 +55,18 @@ function App() {
   return (
     <>
       <div className="bg-gray-300 h-screen flex items-center justify-center">
-        <h1
-          onMouseEnter={textEnter}
-          onMouseLeave={textLeave}
-          className="text-black text-9xl"
-        >
-          Sam Port
-        </h1>
+        <LandingSection
+          imageEnter={imageEnter}
+          textEnter={textEnter}
+          textLeave={textLeave}
+        />
+        {/* other sections */}
+
         <motion.div
           className="cursor"
           variants={variants}
           animate={cursorVariant}
         />
-      </div>
-      <div className="bg-gray-300 h-screen flex items-center justify-center">
-        <h1
-          onMouseEnter={textEnter}
-          onMouseLeave={textLeave}
-          className="text-black text-9xl"
-        >
-          Sam Port
-        </h1>
-        <div
-          onMouseEnter={imageEnter}
-          onMouseLeave={textLeave}
-          class="w-full h-96 bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url("https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60")`,
-          }}
-        ></div>
       </div>
     </>
   );
