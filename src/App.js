@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./App.css";
-import { LandingSection } from "./components/";
+import { Work } from "./components/";
 
 function App() {
   const [mousePos, setMousePos] = useState({
@@ -55,7 +55,7 @@ function App() {
   return (
     <>
       <div className="bg-gray-300 h-screen flex items-center justify-center">
-        <LandingSection
+        <Work
           imageEnter={imageEnter}
           textEnter={textEnter}
           textLeave={textLeave}

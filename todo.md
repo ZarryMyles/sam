@@ -1,32 +1,17 @@
-//common section
+# Common sections
+
 (A) Nav
+(H) Loading
 
-// Homepage {count:0/11} {due:2022-07-31}
-(B) Landing Section [slider] @richinrix {start}
-(C) Second Section
-(D) Services
-(E) Project Showcase Section 1
-(F) Creative Designs
-(G) Project Showcase Section 2
-(H) Feedback
-(I) Latest News #might-not-need
-(J) Clients #might-not-need
-(K) Hiring Section #might-not-need
-(L) Footer 1
+# Homepage {count:0/11} {due:2022-07-31}
 
-> // About Page
-> Landing Section
-> Services
-> Team/Image section
-> Feedback
-> Clients
-> Hiring Section
-> Footer 2
+(B) Hero
+(C) Work [slider]
+(D) Company Logos
+(E) Social Proof
+(F) Get in touch
+(G) Footer 1
 
-> // Contact Page
-> Landing Section
-> Contact Form Section
-> Portfolio redirect section
+# About Page
 
-> // Portfolio Page
-> List projects
+# Work
