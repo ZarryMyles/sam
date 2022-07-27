@@ -1,1 +1,1 @@
-export { default as LandingSection } from "./LandingSection";
+export { default as Work } from "./Work";

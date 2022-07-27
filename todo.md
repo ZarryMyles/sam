@@ -1,32 +1,17 @@
-//common section
-(A) Nav @ZarryMyles
+# Common sections
 
-// Homepage {count:0/11} {due:2022-07-31}
-(B) Landing Section [slider] @richinrix {start}
-(C) Second Section
-(D) Services
-(E) Project Showcase Section 1
-(F) Creative Designs
-(G) Project Showcase Section 2
-(H) Feedback
-(I) Latest News #might-not-need
-(J) Clients #might-not-need
-(K) Hiring Section #might-not-need
-(L) Footer 1 @ZarryMyles 
+(A) Nav
+(H) Loading
 
-> // About Page
-> Landing Section
-> Services
-> Team/Image section
-> Feedback
-> Clients
-> Hiring Section
-> Footer 2
+# Homepage {count:0/11} {due:2022-07-31}
 
-> // Contact Page
-> Landing Section
-> Contact Form Section
-> Portfolio redirect section
+(B) Hero
+(C) Work [slider] @richinrix
+(D) Company Logos
+(E) Social Proof
+(F) Get in touch
+(G) Footer 1
 
-> // Portfolio Page
-> List projects
+# About Page
+
+# Work
