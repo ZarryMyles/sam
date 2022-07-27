@@ -1,5 +1,5 @@
 //common section
-(A) Nav
+(A) Nav @ZarryMyles
 
 // Homepage {count:0/11} {due:2022-07-31}
 (B) Landing Section [slider] @richinrix {start}
@@ -12,7 +12,7 @@
 (I) Latest News #might-not-need
 (J) Clients #might-not-need
 (K) Hiring Section #might-not-need
-(L) Footer 1
+(L) Footer 1 @ZarryMyles 
 
 > // About Page
 > Landing Section
