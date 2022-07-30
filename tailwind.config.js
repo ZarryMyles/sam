@@ -32,6 +32,7 @@ module.exports = {
     fontFamily: {
       custom: ["font-montserrat", "font-rubik"],
       lato: "'Lato', sans-serif",
+      lora: "'Lora', sans-serif",
       montserrat: "'Montserrat', sans-serif",
       rubik: "'Rubik', sans-serif",
       raleways: [

@@ -26,8 +26,8 @@ function App() {
 
   const variants = {
     default: {
-      x: mousePos.x - 14,
-      y: mousePos.y - 14,
+      x: mousePos.x,
+      y: mousePos.y,
       bounce: 0,
     },
     text: {
@@ -40,8 +40,8 @@ function App() {
       bounce: 0,
     },
     secondary: {
-      x: mousePos.x - 40,
-      y: mousePos.y - 40,
+      x: mousePos.x - 14,
+      y: mousePos.y - 14,
       backgroundColor: "#d1d5db",
       mixBlendMode: "difference",
       bounce: 0,

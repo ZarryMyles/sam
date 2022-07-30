@@ -121,13 +121,13 @@ const LandingSection = ({ textEnter, textLeave, imageEnter }) => {
               <div class="text-white text-xl">ARCHITECTURE</div>
             </motion.li>
             <motion.li
-              className=" text-7xl font-bold text-white my-5"
+              className=" text-7xl font-bold font-lora text-white my-5"
               onMouseEnter={textEnter}
               onMouseLeave={imageEnter}
             >
               Novara Conic
             </motion.li>
-            <motion.li class="text-base text-white my-5">
+            <motion.li class="text-base font-lato text-white my-5">
               Cal was first. The first public university in the great state of
               California. They are the pioneers.
             </motion.li>
