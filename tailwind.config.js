@@ -26,7 +26,7 @@ module.exports = {
       purple: colors.violet,
       pink: colors.pink,
       brand: {
-        grey: "#252525",
+        darkGrey: "#090909",
       },
     },
     fontFamily: {

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./App.css";
-import { Work } from "./components/";
+import "./vishal.css";
+import { Work, WorkLogos, SocialProof } from "./components/";
 
 function App() {
   const [mousePos, setMousePos] = useState({
@@ -54,8 +55,18 @@ function App() {
 
   return (
     <>
-      <div className="bg-gray-300 h-screen flex items-center justify-center">
+      <div className="  flex flex-col items-center justify-center">
         <Work
+          imageEnter={imageEnter}
+          textEnter={textEnter}
+          textLeave={textLeave}
+        />
+        <WorkLogos
+          imageEnter={imageEnter}
+          textEnter={textEnter}
+          textLeave={textLeave}
+        />
+        <SocialProof
           imageEnter={imageEnter}
           textEnter={textEnter}
           textLeave={textLeave}
