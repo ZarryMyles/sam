@@ -11,3 +11,7 @@
   font-family: "Lora";
   src: url("./fonts/Lora-Regular.ttf");
 }
+
+body {
+  background-color: #fcfffd;
+}

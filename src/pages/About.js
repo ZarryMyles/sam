@@ -45,18 +45,11 @@ const About = ({}) => {
       mixBlendMode: "difference",
       bounce: 0,
     },
-    whitebg: {
-      x: mousePos.x - 14,
-      y: mousePos.y - 14,
-      backgroundColor: "#000",
-      mixBlendMode: "difference",
-    },
   };
 
   const textEnter = () => setcursorVariant("text");
   const imageEnter = () => setcursorVariant("secondary");
   const textLeave = () => setcursorVariant("default");
-  const whitebg = () => setcursorVariant("whitebg");
   return (
     <div className="w-full h-auto ">
       <div

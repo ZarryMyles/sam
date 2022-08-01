@@ -9,6 +9,7 @@ import {
   GetInTouch,
   Footer,
 } from "./components/";
+import Navbar from "./components/Navbar";
 import { ParallaxProvider } from "react-scroll-parallax";
 
 function App() {
@@ -63,6 +64,11 @@ function App() {
   return (
     <div>
       <>
+        <Navbar
+          imageEnter={imageEnter}
+          textLeave={textLeave}
+          textEnter={textEnter}
+        />
         <div className="  flex flex-col items-center justify-center">
           <Work
             imageEnter={imageEnter}
