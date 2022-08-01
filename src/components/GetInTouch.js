@@ -2,17 +2,17 @@ import React from "react";
 
 const GetInTouch = ({ textEnter, textLeave, imageEnter }) => {
   return (
-    <div
-      onMouseEnter={imageEnter}
-      onMouseLeave={textLeave}
-      className="w-full  bg-brand-lightGrey my-10"
-    >
-      <div class="px-5 md:px-48 w-full  ">
+    <div className="w-screen overflow-clip  my-10 relative getintouch-root">
+      <div
+        // onMouseEnter={imageEnter}
+        // onMouseLeave={textLeave}
+        className="px-5 md:px-48 w-full   left-0 top-0  z-20 "
+      >
         <div className="flex items-center justify-between w-full md:py-40 ">
           <div
             onMouseEnter={textEnter}
-            onMouseLeave={textLeave}
-            className="text-4xl font-bold"
+            onMouseLeave={imageEnter}
+            className="text-5xl font-bold  text-stroke-black tracking-wider"
           >
             Get In Touch
           </div>
@@ -23,13 +23,14 @@ const GetInTouch = ({ textEnter, textLeave, imageEnter }) => {
               href="/"
               class="font-bold underline"
               onMouseEnter={textEnter}
-              onMouseLeave={textLeave}
+              onMouseLeave={imageEnter}
             >
               LinkedIn
             </a>
           </div>
         </div>
       </div>
+      <div className="bg-brand-lightGrey w-full h-full absolute left-0 top-0 -z-10 getintouch-graybg" />
     </div>
   );
 };

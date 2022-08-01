@@ -6,8 +6,8 @@
 # Homepage {count:0/11} {due:2022-07-31}
 
 (B) Hero
-(C) Work [slider] @richinrix // on hold :)
-(D) Company Logos @richinrix // started
+(C) Work [slider]
+(D) Company Logos
 (E) Social Proof
 (F) Get in touch
 (G) Footer 1

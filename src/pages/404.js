@@ -51,7 +51,7 @@ const Error = () => {
   const textLeave = () => setcursorVariant("default");
   return (
     <>
-      <div className=" h-screen w-full bg-brand-grey text-white flex flex-col justify-center items-center">
+      <div className=" h-screen w-full bg-brand-darkGrey text-white flex flex-col justify-center items-center">
         <div
           className="text-base md:text-8xl"
           onMouseLeave={textLeave}
@@ -67,7 +67,7 @@ const Error = () => {
           Page Not Found. Go back to the{" "}
           <a
             href="/"
-            className="rounded-md  mx-2 bg-white text-brand-grey px-4 py-1"
+            className="rounded-md  mx-2 bg-white text-brand-darkGrey px-4 py-1"
           >
             Home
           </a>

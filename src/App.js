@@ -62,7 +62,7 @@ function App() {
 
   return (
     <div>
-      <ParallaxProvider>
+      <>
         <div className="  flex flex-col items-center justify-center">
           <Work
             imageEnter={imageEnter}
@@ -97,7 +97,7 @@ function App() {
             animate={cursorVariant}
           />
         </div>
-      </ParallaxProvider>
+      </>
     </div>
   );
 }

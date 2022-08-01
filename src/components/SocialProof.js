@@ -26,7 +26,7 @@ const SocialProof = ({ textEnter, textLeave, imageEnter }) => {
     }
   };
   return (
-    <div className="w-full h-full mx-auto">
+    <ParallaxProvider className="w-full h-full mx-auto">
       <div
         onMouseEnter={imageEnter}
         onMouseLeave={textLeave}
@@ -38,10 +38,10 @@ const SocialProof = ({ textEnter, textLeave, imageEnter }) => {
         >
           <Parallax
             class="text-4xl md:text-5xl w-full md:w-1/3 absolute -top-10 px-4 md:px-0 md:-top-12 md:left-12 font-bold"
-            translateY={[-100, 100]}
+            translateY={[-50, 100]}
           >
             <div
-            // ref={parallaxRef}
+
             // class="text-4xl md:text-5xl w-full md:w-1/3 absolute -top-10 px-4 md:px-0 md:-top-12 md:left-12 font-bold"
             >
               Feedback from my clients.
@@ -74,7 +74,7 @@ const SocialProof = ({ textEnter, textLeave, imageEnter }) => {
           />
         </div>
       </div>
-    </div>
+    </ParallaxProvider>
   );
 };
 
