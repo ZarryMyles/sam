@@ -56,7 +56,7 @@ const Footer = ({ textEnter, textLeave, imageEnter }) => {
         </div>
       </div>
       <div className=" bg-brand-footerGrey shadow-xl text-xs font-lato text-gray-400 flex items-center justify-center p-10">
-        © 2022. Shradha. All Rights Reserved.
+        © {new Date().getFullYear()}. Shradha. All Rights Reserved.
       </div>
     </div>
   );
