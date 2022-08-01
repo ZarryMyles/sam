@@ -5,7 +5,7 @@ const NavTest = () => {
   return (
     <>
       <Navbar />
-      <div className="text-base md:text-8xl h-screen w-full bg-brand-grey text-white flex justify-center items-center">
+      <div className="text-base md:text-8xl h-screen w-full bg-brand-darkGrey text-white flex justify-center items-center">
         Nav
       </div>
     </>

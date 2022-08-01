@@ -16,10 +16,16 @@ const GetInTouch = ({ textEnter, textLeave, imageEnter }) => {
           >
             Get In Touch
           </div>
-          <div onMouseEnter={textEnter} onMouseLeave={textLeave}>
-            To create more soulful stories and delightful experiences,{" "}
-            <a href="/" class="font-bold">
-              connect to me on LinkedIn
+          <div>
+            To create more soulful stories and delightful experiences,
+            <span className="font-bold"> connect to me on</span>{" "}
+            <a
+              href="/"
+              class="font-bold underline"
+              onMouseEnter={textEnter}
+              onMouseLeave={textLeave}
+            >
+              LinkedIn
             </a>
           </div>
         </div>

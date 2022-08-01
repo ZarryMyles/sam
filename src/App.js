@@ -10,7 +10,7 @@ import {
   Footer,
 } from "./components/";
 import { ParallaxProvider } from "react-scroll-parallax";
-import Scrollbar from "smooth-scrollbar";
+
 function App() {
   const [mousePos, setMousePos] = useState({
     x: 0,
@@ -34,8 +34,8 @@ function App() {
 
   const variants = {
     default: {
-      x: mousePos.x,
-      y: mousePos.y,
+      x: mousePos.x - 14,
+      y: mousePos.y - 14,
       bounce: 0,
     },
     text: {
@@ -59,54 +59,46 @@ function App() {
   const textEnter = () => setcursorVariant("text");
   const imageEnter = () => setcursorVariant("secondary");
   const textLeave = () => setcursorVariant("default");
-  const options = {
-    damping: 0.07,
-  };
 
-  useEffect(() => {
-    Scrollbar.init(document.body, options);
-
-    return () => {
-      if (Scrollbar) Scrollbar.destroy(document.body);
-    };
-  }, []);
   return (
-    <ParallaxProvider>
-      <div className="  flex flex-col items-center justify-center">
-        <Work
-          imageEnter={imageEnter}
-          textEnter={textEnter}
-          textLeave={textLeave}
-        />
-        <WorkLogos
-          imageEnter={imageEnter}
-          textEnter={textEnter}
-          textLeave={textLeave}
-        />
-        <SocialProof
-          imageEnter={imageEnter}
-          textEnter={textEnter}
-          textLeave={textLeave}
-        />
-        <GetInTouch
-          imageEnter={imageEnter}
-          textEnter={textEnter}
-          textLeave={textLeave}
-        />
-        <Footer
-          imageEnter={imageEnter}
-          textEnter={textEnter}
-          textLeave={textLeave}
-        />
-        {/* other sections */}
+    <div>
+      <ParallaxProvider>
+        <div className="  flex flex-col items-center justify-center">
+          <Work
+            imageEnter={imageEnter}
+            textEnter={textEnter}
+            textLeave={textLeave}
+          />
+          <WorkLogos
+            imageEnter={imageEnter}
+            textEnter={textEnter}
+            textLeave={textLeave}
+          />
+          <SocialProof
+            imageEnter={imageEnter}
+            textEnter={textEnter}
+            textLeave={textLeave}
+          />
+          <GetInTouch
+            imageEnter={imageEnter}
+            textEnter={textEnter}
+            textLeave={textLeave}
+          />
+          <Footer
+            imageEnter={imageEnter}
+            textEnter={textEnter}
+            textLeave={textLeave}
+          />
+          {/* other sections */}
 
-        <motion.div
-          className="cursor"
-          variants={variants}
-          animate={cursorVariant}
-        />
-      </div>
-    </ParallaxProvider>
+          <motion.div
+            className="cursor"
+            variants={variants}
+            animate={cursorVariant}
+          />
+        </div>
+      </ParallaxProvider>
+    </div>
   );
 }
 

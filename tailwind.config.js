@@ -30,6 +30,7 @@ module.exports = {
         darkGrey: "#090909",
         darkGrey2: "#111111",
         lightGrey: "#e6e6e6",
+        footerGrey: "#1f1f1f",
       },
     },
     fontFamily: {

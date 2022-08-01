@@ -1,5 +1,5 @@
 import React from "react";
-import Marquee from "react-marquee-slider";
+// import Marquee from "react-marquee-slider";
 import { AiOutlineMinus } from "react-icons/ai";
 import { GoDash } from "react-icons/go";
 const WorkLogos = ({ textEnter, textLeave, imageEnter }) => {
@@ -32,7 +32,7 @@ const WorkLogos = ({ textEnter, textLeave, imageEnter }) => {
       id="work-logo-container   overflow-hidden "
     >
       <div class="w-full ">
-        <Marquee velocity={25}>
+        {/* <Marquee velocity={25}>
           {clients.map((client, index) => (
             <div className="flex items-center">
               <div
@@ -43,7 +43,6 @@ const WorkLogos = ({ textEnter, textLeave, imageEnter }) => {
                   backgroundImage: `url(${client.logo})`,
                 }}
               />
-              {/* <AiOutlineMinus class="text-5xl" /> */}
             </div>
           ))}
         </Marquee>
@@ -58,10 +57,9 @@ const WorkLogos = ({ textEnter, textLeave, imageEnter }) => {
                   backgroundImage: `url(${client.logo})`,
                 }}
               />
-              {/* <AiOutlineMinus class="text-5xl" /> */}
             </div>
           ))}
-        </Marquee>
+        </Marquee> */}
       </div>
     </div>
   );
