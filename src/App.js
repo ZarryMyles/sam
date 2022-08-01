@@ -2,8 +2,15 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./App.css";
 import "./vishal.css";
-import { Work, WorkLogos, SocialProof } from "./components/";
-
+import {
+  Work,
+  WorkLogos,
+  SocialProof,
+  GetInTouch,
+  Footer,
+} from "./components/";
+import { ParallaxProvider } from "react-scroll-parallax";
+import Scrollbar from "smooth-scrollbar";
 function App() {
   const [mousePos, setMousePos] = useState({
     x: 0,
@@ -52,9 +59,19 @@ function App() {
   const textEnter = () => setcursorVariant("text");
   const imageEnter = () => setcursorVariant("secondary");
   const textLeave = () => setcursorVariant("default");
+  const options = {
+    damping: 0.07,
+  };
 
+  useEffect(() => {
+    Scrollbar.init(document.body, options);
+
+    return () => {
+      if (Scrollbar) Scrollbar.destroy(document.body);
+    };
+  }, []);
   return (
-    <>
+    <ParallaxProvider>
       <div className="  flex flex-col items-center justify-center">
         <Work
           imageEnter={imageEnter}
@@ -71,6 +88,16 @@ function App() {
           textEnter={textEnter}
           textLeave={textLeave}
         />
+        <GetInTouch
+          imageEnter={imageEnter}
+          textEnter={textEnter}
+          textLeave={textLeave}
+        />
+        <Footer
+          imageEnter={imageEnter}
+          textEnter={textEnter}
+          textLeave={textLeave}
+        />
         {/* other sections */}
 
         <motion.div
@@ -79,7 +106,7 @@ function App() {
           animate={cursorVariant}
         />
       </div>
-    </>
+    </ParallaxProvider>
   );
 }
 

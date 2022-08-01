@@ -2,6 +2,7 @@ const colors = require("tailwindcss/colors");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "class",
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     screens: {
@@ -27,6 +28,8 @@ module.exports = {
       pink: colors.pink,
       brand: {
         darkGrey: "#090909",
+        darkGrey2: "#111111",
+        lightGrey: "#e6e6e6",
       },
     },
     fontFamily: {
