@@ -2,17 +2,20 @@ import React from "react";
 
 const GetInTouch = ({ textEnter, textLeave, imageEnter }) => {
   return (
-    <div className="w-screen overflow-clip  my-10 relative getintouch-root">
-      <div
-        // onMouseEnter={imageEnter}
-        // onMouseLeave={textLeave}
-        className="px-5 md:px-48 w-full   left-0 top-0  z-20 "
-      >
-        <div className="flex items-center justify-between w-full md:py-40 ">
+    <div
+      id="get-in-touch"
+      className="w-screen overflow-clip  my-10 relative getintouch-root "
+    >
+      <div className=" text-black dark:text-white px-5 md:px-48  md:py-40  w-full   left-0 top-0  z-20  ">
+        <div
+          className="flex items-center justify-between w-full"
+          onMouseEnter={textEnter}
+          onMouseLeave={textLeave}
+        >
           <div
-            onMouseEnter={textEnter}
-            onMouseLeave={imageEnter}
-            className="text-5xl font-bold  text-stroke-black tracking-wider"
+            // onMouseEnter={textEnter}
+            // onMouseLeave={imageEnter}
+            className="text-5xl font-bold dark:text-white text-stroke-black tracking-wider"
           >
             Get In Touch
           </div>
@@ -22,8 +25,8 @@ const GetInTouch = ({ textEnter, textLeave, imageEnter }) => {
             <a
               href="/"
               class="font-bold underline"
-              onMouseEnter={textEnter}
-              onMouseLeave={imageEnter}
+              // onMouseEnter={textEnter}
+              // onMouseLeave={imageEnter}
             >
               LinkedIn
             </a>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-
+import { Footer, GetInTouch, Principles, Skills } from "../components";
 import { BsDot } from "react-icons/bs";
 const About = ({}) => {
   const [mousePos, setMousePos] = useState({
@@ -52,6 +52,7 @@ const About = ({}) => {
   const textLeave = () => setcursorVariant("default");
   return (
     <div className="w-full h-auto ">
+      {/* landing section */}
       <div
         onMouseEnter={imageEnter}
         onMouseLeave={textLeave}
@@ -73,7 +74,11 @@ const About = ({}) => {
             both{" "}
             <span class="font-bold">technological and humanistic values.</span>
           </div>
-          <div class="font-bold text-xl  flex items-center ">
+          <div
+            onMouseEnter={textEnter}
+            onMouseLeave={imageEnter}
+            class="font-bold text-xl  flex items-center "
+          >
             <div>Shradha</div>
             <div
               style={{
@@ -94,6 +99,22 @@ const About = ({}) => {
           />
         </div>
       </div>
+      <Principles
+        textEnter={textEnter}
+        textLeave={textLeave}
+        imageEnter={imageEnter}
+      />
+      <Skills
+        textEnter={textEnter}
+        textLeave={textLeave}
+        imageEnter={imageEnter}
+      />
+
+      <GetInTouch
+        textEnter={textEnter}
+        textLeave={textLeave}
+        imageEnter={imageEnter}
+      />
       <motion.div
         className="cursor"
         variants={variants}

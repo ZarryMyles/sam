@@ -14,27 +14,22 @@ import { Parallax, useParallax, ParallaxProvider } from "react-scroll-parallax";
 
 // feedback
 
-const SocialProof = ({ textEnter, textLeave, imageEnter }) => {
-  const toggleTheme = () => {
-    const theme = document.querySelector("html").classList;
-    if (theme.contains("dark")) {
-      theme.remove("dark");
-      theme.add("light");
-    } else {
-      theme.remove("light");
-      theme.add("dark");
-    }
-  };
+const SocialProof = ({ textEnter, textLeave, imageEnter, toggleTheme }) => {
+  const theme = document.querySelector("html").classList;
+
+  const quoteImg = theme.contains("dark") ? WhiteQuote : BlackQuote;
+
   return (
     <ParallaxProvider className="w-full h-full mx-auto">
       <div
+        id="social-proof"
         onMouseEnter={imageEnter}
         onMouseLeave={textLeave}
-        className="px-5 md:px-48 py-10 md:py-20 flex items-center justify-center my-10 md:my-5 bg-white dark:bg-black  "
+        className="px-5 md:px-48 py-10 md:py-20 flex items-center justify-center my-10 md:my-5 bg-white dark:bg-black transition-all duration-500"
       >
         <div
           // modules={[EffectFade, Navigation, Pagination]}
-          class="bg-brand-darkGrey text-gray-400 w-full md:px-10 md:py-20 flex items-center justify-end relative"
+          class=" bg-brand-lightGrey dark:bg-brand-darkGrey text-black dark:text-gray-400 w-full md:px-10 md:py-20 flex items-center justify-end relative"
         >
           <Parallax
             class="text-4xl md:text-5xl w-full md:w-1/3 absolute -top-10 px-4 md:px-0 md:-top-12 md:left-12 font-bold"
@@ -56,7 +51,7 @@ const SocialProof = ({ textEnter, textLeave, imageEnter }) => {
               great person. I would recommend him to anyone who is looking for a
               developer."
             </div>
-            <div class="text-white tracking-wider text-xl  my-6">
+            <div class="text-black dark:text-white tracking-wider text-xl  my-6">
               - John Doe, CEO of XYZ
             </div>
             <div class="flex justify-center items-center w-full">
@@ -67,10 +62,9 @@ const SocialProof = ({ textEnter, textLeave, imageEnter }) => {
           </div>
 
           <img
-            src={WhiteQuote}
+            src={quoteImg}
             alt="quote"
             className="absolute -bottom-10 right-10 w-20"
-            onClick={() => toggleTheme()}
           />
         </div>
       </div>

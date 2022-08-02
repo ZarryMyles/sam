@@ -100,7 +100,7 @@ const LandingSection = ({ textEnter, textLeave, imageEnter }) => {
   const button = document.querySelector(".view-button-lp");
   // new HoverButton(button);
   return (
-    <div className="h-screen w-full ">
+    <div id="work" className="h-screen w-full ">
       <div
         className="text-black  h-screen w-full bg-cover bg-no-repeat bg-center   flex flex-col justify-center  top-0 left-0 px-5 md:px-32  "
         onMouseEnter={imageEnter}

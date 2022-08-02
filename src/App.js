@@ -61,15 +61,62 @@ function App() {
   const imageEnter = () => setcursorVariant("secondary");
   const textLeave = () => setcursorVariant("default");
 
+  // setting dark or light theme
+  const setTheme = (theme = "light") => {
+    const html = document.querySelector("html").classList;
+    html.remove("dark");
+    html.remove("light");
+    html.add(theme);
+  };
+  // observing active section
+  const [activeSection, setActiveSection] = useState("home");
+  let options = {
+    root: document.querySelector("#sections"),
+    rootMargin: "0px",
+    threshold: 0.6, // percentage of the element that is visible for triggering the callback for nav
+  };
+  useEffect(() => {
+    let callback = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+          // console.log(entry.target.id);
+        }
+      });
+    };
+    // targets
+    let observer = new IntersectionObserver(callback, options);
+    let getInTouch = document.querySelector("#get-in-touch");
+    let socialProof = document.querySelector("#social-proof");
+    let work = document.querySelector("#work");
+
+    observer.observe(socialProof);
+    observer.observe(getInTouch);
+    observer.observe(work);
+    // observer.observe(keyFeatures);
+    // observer.observe(services);
+    // observer.observe(contact);
+  }, []);
+  useEffect(() => {
+    console.log(activeSection);
+    if (activeSection === "work") setTheme("light");
+    else if (activeSection === "social-proof") setTheme("dark");
+    else if (activeSection === "get-in-touch") setTheme("light");
+    // else setTheme();
+  }, [activeSection]);
+
   return (
-    <div>
+    <div className="  dark:bg-black duration-500 transition-colors">
       <>
         <Navbar
           imageEnter={imageEnter}
           textLeave={textLeave}
           textEnter={textEnter}
         />
-        <div className="  flex flex-col items-center justify-center">
+        <div
+          id="sections"
+          className="  flex flex-col items-center justify-center"
+        >
           <Work
             imageEnter={imageEnter}
             textEnter={textEnter}
