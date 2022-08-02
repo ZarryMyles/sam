@@ -1,22 +1,45 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 const Navbar = ({ textEnter, textLeave, imageEnter }) => {
-  const [hov, setHov] = useState(false);
+  // const [hov, setHov] = useState(false);
 
-  const variants = {
-    default: { opacity: 0, y: 50 },
-    hover: { opacity: 1, y: 0 },
-    delay1: { opacity: 1, y: 0, transition: { delay: 0.025 } },
-    delay2: { opacity: 1, y: 0, transition: { delay: 0.05 } },
-    delay3: { opacity: 1, y: 0, transition: { delay: 0.075 } },
-    delay4: { opacity: 1, y: 0, transition: { delay: 0.1 } },
-    delay5: { opacity: 1, y: 0, transition: { delay: 0.125 } },
-  };
+  // const variants = {
+  //   default: { opacity: 0, y: 50, zIndex: -10 },
+  //   hover: { opacity: 1, y: 0, zIndex: 10 },
+  //   delay1: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.025 } },
+  //   delay2: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.05 } },
+  //   delay3: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.075 } },
+  //   delay4: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.1 } },
+  //   delay5: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.125 } },
+  // };
 
   return (
-    <div className="navContainer z-10 w-screen fixed flex flex-row justify-between items-center md:px-10 md:py-10">
-      <motion.div
+    <div
+      onMouseEnter={imageEnter}
+      onMouseLeave={textLeave}
+      className="navContainer z- bg-brand-darkGrey w-screen fixed flex flex-row justify-between items-center md:px-10 md:py-5"
+    >
+      <div
+        className="text-3xl font-normal text-white "
+        style={{ fontFamily: "Arial" }}
+        onMouseEnter={textEnter}
+        onMouseLeave={imageEnter}
+      >
+        shradha
+      </div>
+      <div className="flex flex-row text-white gap-4 font-laro text-lg uppercase">
+        <div onMouseEnter={textEnter} onMouseLeave={imageEnter}>
+          Work
+        </div>
+        <div onMouseEnter={textEnter} onMouseLeave={imageEnter}>
+          About
+        </div>
+        <div onMouseEnter={textEnter} onMouseLeave={imageEnter}>
+          Resume
+        </div>
+      </div>
+      {/* <motion.div
         className="font-lora text-5xl flex flex-row"
         onMouseOver={() => setHov((hov) => !hov)}
         onMouseOut={() => setHov((hov) => !hov)}
@@ -95,8 +118,8 @@ const Navbar = ({ textEnter, textLeave, imageEnter }) => {
           variants={variants}
         >
           u
-        </motion.span>
-      </div>
+        </motion.span> */}
+      {/* </div> */}
     </div>
   );
 };

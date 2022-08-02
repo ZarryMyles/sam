@@ -35,22 +35,22 @@ function App() {
 
   const variants = {
     default: {
-      x: mousePos.x - 14,
-      y: mousePos.y - 14,
+      x: mousePos.x - 10,
+      y: mousePos.y - 10,
       bounce: 0,
     },
     text: {
-      height: 80,
-      width: 80,
-      x: mousePos.x - 40,
-      y: mousePos.y - 40,
+      height: 50,
+      width: 50,
+      x: mousePos.x - 25,
+      y: mousePos.y - 25,
       backgroundColor: "#d1d5db",
       mixBlendMode: "difference",
       bounce: 0,
     },
     secondary: {
-      x: mousePos.x - 14,
-      y: mousePos.y - 14,
+      x: mousePos.x - 10,
+      y: mousePos.y - 10,
       backgroundColor: "#d1d5db",
       mixBlendMode: "difference",
       bounce: 0,
