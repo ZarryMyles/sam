@@ -15,3 +15,11 @@
 # About Page
 
 # Work
+
+# Mini Tasks
+
+(I) Fix Parallax text in Feedback Section
+(J) Button Microinteractions like on Droow
+(K) Implement Smooth Scroll that doesnt break Scrollbar
+(L) Remove Cursor for Mobile
+(M)

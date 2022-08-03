@@ -52,7 +52,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter }) => {
             : "nav scrol fixed flex flex-wrap items-center justify-between px-4 top-0 w-full z-20"
         }
       >
-        <div className="flex flex-no-shrink items-center mr-6 pl-0 md:pl-2">
+        <div className="flex flex-no-shrink items-center mr-6 pl-0 md:p-5">
           <a className="navLogo self-center md:pb-3" href="/#">
             <button>
               {window.innerWidth > 767 ? (
@@ -86,14 +86,14 @@ const Navbar = ({ textEnter, textLeave, imageEnter }) => {
           <span className="navicon flex items-center relative"></span>
         </label>
 
-        <ul className="navList menu md:border-none  font-normal flex mr-5 md:mt-0 md:my-2 mt-2 ml-5 items-center justify-end list-none m-0 p-0 w-screen md:w-auto  md:bg-transparent">
+        <ul className="navList uppercase font-lora menu md:border-none  font-normal flex mr-5 md:mt-0 md:my-2 mt-2 ml-5 items-center justify-end list-none m-0 p-0 w-screen md:w-auto  md:bg-transparent">
           <li className="border-none text-center md:pb-3">
             <ScrollIntoView
-              selector="#services"
+              selector="#work"
               onClick={uncheckNav}
               className=" block md:inline-block  py-3 no-underline border-none text-black"
             >
-              <button className="cursor-pointer">Services</button>
+              <button className="cursor-pointer uppercase">Work</button>
             </ScrollIntoView>
           </li>
 
@@ -103,7 +103,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter }) => {
               className="block md:inline-block  py-3 no-underline border-none text-black"
               onClick={uncheckNav}
             >
-              <button className="cursor-pointer">Team</button>
+              <button className="cursor-pointer uppercase">About</button>
             </ScrollIntoView>
           </li>
 
@@ -114,7 +114,9 @@ const Navbar = ({ textEnter, textLeave, imageEnter }) => {
               onClick={uncheckNav}
               className="block md:inline-block  py-3 no-underline border-none text-black"
             >
-              <button className="cursor-pointer">Contact</button>
+              <button className="cursor-pointer uppercase font-lora">
+                Contact
+              </button>
             </ScrollIntoView>
           </li>
 
@@ -126,7 +128,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter }) => {
               onClick={uncheckNav}
               className="block md:inline-block py-3 no-underline border-none text-black"
             >
-              Blog
+              Resume
             </Link>
           </li>
         </ul>

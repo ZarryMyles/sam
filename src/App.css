@@ -16,11 +16,6 @@
 /* -----------Navbar--------- */
 
 @media (max-width: 767px) {
-  .navicon {
-    width: 1.125em;
-    height: 0.125em;
-    /* margin-top: 3rem; */
-  }
   .navList {
     background: #f0f0f0;
   }
@@ -117,77 +112,11 @@
   .lite button {
     color: white !important;
   }
-  .navList button::before,
-  .navList button::after {
-    content: "";
-    height: 14px;
-    width: 14px;
-    position: absolute;
-    transition: all 0.35s ease;
-    opacity: 0;
-  }
-  .navList button::before {
-    content: "";
-    right: 0;
-    top: 0;
-    border-top: 3px solid #ffd805;
-    border-right: 3px solid #e0c10e;
-    transform: translate(-100%, 50%);
-  }
-  .navList button:after {
-    content: "";
-    left: 0;
-    bottom: 0;
-    border-bottom: 3px solid #e0c10e;
-    border-left: 3px solid #ffd805;
-    transform: translate(100%, -50%);
-  }
-  .navList button:hover:before,
-  .navList button:hover:after {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-  .navList button:hover,
-  .navList .lite a:hover {
-    color: black;
-  }
+
   .lite a {
     color: white !important;
   }
-  .navList a::before,
-  .navList a::after {
-    content: "";
-    height: 14px;
-    width: 14px;
-    position: absolute;
-    transition: all 0.35s ease;
-    opacity: 0;
-  }
-  .navList a::before {
-    content: "";
-    right: 0;
-    top: 0;
-    border-top: 3px solid #ffd805;
-    border-right: 3px solid #e0c10e;
-    transform: translate(-100%, 50%);
-  }
-  .navList a:after {
-    content: "";
-    left: 0;
-    bottom: 0;
-    border-bottom: 3px solid #e0c10e;
-    border-left: 3px solid #ffd805;
-    transform: translate(100%, -50%);
-  }
-  .navList a:hover:before,
-  .navList a:hover:after {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-  .navList a:hover,
-  .navList .lite a:hover {
-    color: black;
-  }
+
   .navLiteBack {
     background-color: rgba(0, 0, 0, 0.8) !important;
     height: 70px !important;
