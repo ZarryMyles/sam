@@ -13,11 +13,30 @@ import { Parallax, useParallax, ParallaxProvider } from "react-scroll-parallax";
 // import { EffectFade, Navigation, Pagination } from "swiper";
 
 // feedback
-
+const feedbacks = [
+  {
+    name: "Soam",
+    company: "NinjaasLabs",
+    feedback:
+      "Fake: I have worked with him on multiple projects and he is a great team player. He is very passionate about his work and always ready to learn new things. He is a great asset to any team. fake:123 laborated on. Her keen eye for details and strong work ethic added elegance and simplicity to all of our applications. She showed initiative in building the design architecture from scratch, which resulted in a rich user experience and helped advance our projects from a design and usability perspective.  She has been a brilliant leader to work with, and I wholeheartedly endorse her as an invaluable team member!",
+  },
+  {
+    name: "Sanjana",
+    company: "Amazon",
+    feedback:
+      "Shradha is one of the most creative designers that I’ve had the privilege of working with.  She managed to independently design, wireframe, and create the overall UI and UX for projects that we collaborated on. Her keen eye for details and strong work ethic added elegance and simplicity to all of our applications. She showed initiative in building the design architecture from scratch, which resulted in a rich user experience and helped advance our projects from a design and usability perspective.  She has been a brilliant leader to work with, and I wholeheartedly endorse her as an invaluable team member!",
+  },
+  {
+    name: "Neel",
+    company: "HappilyEver",
+    feedback:
+      "Shradha is one of the colleagues who has immense dedication towards her work and art. Her knowledge in the field of design is impeccable. Shradha would be a great asset to any organization that she works with. fake:123  Her keen eye for details and strong work ethic added elegance and simplicity to all of our applications. She showed initiative in building the design architecture from scratch, which resulted in a rich user experience and helped advance our projects from a design and usability perspective.  She has been a brilliant leader to work with, and I wholeheartedly endorse her as an invaluable team member!",
+  },
+];
 const SocialProof = ({ textEnter, textLeave, imageEnter, toggleTheme }) => {
   const theme = document.querySelector("html").classList;
-
   const quoteImg = theme.contains("dark") ? WhiteQuote : BlackQuote;
+  const [feedback, setFeedback] = useState(feedbacks[0]);
 
   return (
     <ParallaxProvider className="w-full h-full mx-auto">
@@ -46,18 +65,37 @@ const SocialProof = ({ textEnter, textLeave, imageEnter, toggleTheme }) => {
 
           <div class="w-full md:w-2/3 px-10 md:px-0 py-16 md:py-0 flex flex-col justify-center">
             <div className="italic my-6">
-              "I have worked with many developers in the past, but I have never
-              met anyone as dedicated as him. He is a great developer and a
-              great person. I would recommend him to anyone who is looking for a
-              developer."
+              "{feedback.feedback.split("fake:123")[0]}"
+              <span
+                style={{
+                  MozWindowDragging: "none",
+                }}
+                class="text-transparent "
+              >
+                {feedback.feedback.split("fake:123")[1]}
+              </span>
             </div>
             <div class="text-black dark:text-white tracking-wider text-xl  my-6">
-              - John Doe, CEO of XYZ
+              - {feedback.name}, {feedback.company}
             </div>
             <div class="flex justify-center items-center w-full">
-              <GoDash class="text-2xl text-gray-400 cursor-pointer hover:text-white" />
-              <GoDash class="text-2xl text-gray-400 cursor-pointer hover:text-white" />
-              <GoDash class="text-2xl text-gray-400 cursor-pointer hover:text-white" />
+              {feedbacks.map((item, index) => (
+                <div
+                  class="py-4 cursor-pointer"
+                  onClick={() => setFeedback(item)}
+                >
+                  <div
+                    style={{
+                      height: "2px",
+                    }}
+                    class={` ${
+                      item.name === feedback.name
+                        ? "bg-white w-4 "
+                        : "bg-gray-500 w-3"
+                    }   mx-2 `}
+                  />
+                </div>
+              ))}
             </div>
           </div>
 

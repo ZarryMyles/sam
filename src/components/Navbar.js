@@ -29,15 +29,15 @@ const Navbar = ({ textEnter, textLeave, imageEnter }) => {
         shradha
       </div>
       <div className="flex flex-row text-white gap-4 font-laro text-lg uppercase">
-        <div onMouseEnter={textEnter} onMouseLeave={imageEnter}>
+        <a href="/work" onMouseEnter={textEnter} onMouseLeave={imageEnter}>
           Work
-        </div>
-        <div onMouseEnter={textEnter} onMouseLeave={imageEnter}>
+        </a>
+        <a href="/about" onMouseEnter={textEnter} onMouseLeave={imageEnter}>
           About
-        </div>
-        <div onMouseEnter={textEnter} onMouseLeave={imageEnter}>
+        </a>
+        <a href="/" onMouseEnter={textEnter} onMouseLeave={imageEnter}>
           Resume
-        </div>
+        </a>
       </div>
       {/* <motion.div
         className="font-lora text-5xl flex flex-row"
