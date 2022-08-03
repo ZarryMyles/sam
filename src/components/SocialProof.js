@@ -37,6 +37,7 @@ const SocialProof = ({ textEnter, textLeave, imageEnter, toggleTheme }) => {
   const theme = document.querySelector("html").classList;
   const quoteImg = theme.contains("dark") ? WhiteQuote : BlackQuote;
   const [feedback, setFeedback] = useState(feedbacks[0]);
+  const [fade, setFade] = useState(false);
 
   return (
     <ParallaxProvider className="w-full h-full mx-auto">
@@ -64,35 +65,49 @@ const SocialProof = ({ textEnter, textLeave, imageEnter, toggleTheme }) => {
           {/*  */}
 
           <div class="w-full md:w-2/3 px-10 md:px-0 py-16 md:py-0 flex flex-col justify-center">
-            <div className="italic my-6">
+            <div
+              className={`italic my-6 transition-opacity ease-linear duration-1000 ${
+                fade ? "opacity-0" : ""
+              } `}
+            >
               "{feedback.feedback.split("fake:123")[0]}"
               <span
                 style={{
                   MozWindowDragging: "none",
                 }}
-                class="text-transparent "
+                class={`text-transparent select-none  `}
               >
                 {feedback.feedback.split("fake:123")[1]}
               </span>
             </div>
-            <div class="text-black dark:text-white tracking-wider text-xl  my-6">
+            <div
+              class={`text-black dark:text-white tracking-wider text-xl  my-6 ease-linear duration-1000 transition-opacity  ${
+                fade ? "opacity-0" : ""
+              } `}
+            >
               - {feedback.name}, {feedback.company}
             </div>
             <div class="flex justify-center items-center w-full">
               {feedbacks.map((item, index) => (
                 <div
                   class="py-4 cursor-pointer"
-                  onClick={() => setFeedback(item)}
+                  onClick={() => {
+                    setFade(true);
+                    setTimeout(() => {
+                      setFeedback(item);
+                      setFade(false);
+                    }, 800);
+                  }}
                 >
                   <div
                     style={{
                       height: "2px",
                     }}
-                    class={` ${
+                    class={` transition-all duration-200 ${
                       item.name === feedback.name
-                        ? "bg-white w-4 "
-                        : "bg-gray-500 w-3"
-                    }   mx-2 `}
+                        ? "bg-white w-6 "
+                        : "bg-gray-500 w-4"
+                    }   mx-1 `}
                   />
                 </div>
               ))}

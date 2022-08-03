@@ -4,7 +4,7 @@ const GetInTouch = ({ textEnter, textLeave, imageEnter }) => {
   return (
     <div
       id="get-in-touch"
-      className="w-screen overflow-clip  my-10 relative getintouch-root "
+      className="  w-full overflow-clip    my-10 relative getintouch-root "
     >
       <div className=" text-black dark:text-white px-5 md:px-48  md:py-40  w-full   left-0 top-0  z-20  ">
         <div

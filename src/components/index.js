@@ -1,5 +1,6 @@
 export { default as Navbar } from "./Navbar";
 // home page
+export { default as LandingSection } from "./LandingSection";
 export { default as Work } from "./Work";
 export { default as WorkLogos } from "./WorkLogos";
 export { default as SocialProof } from "./SocialProof";

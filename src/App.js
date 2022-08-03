@@ -8,6 +8,7 @@ import {
   SocialProof,
   GetInTouch,
   Footer,
+  LandingSection,
 } from "./components/";
 import Navbar from "./components/Navbar";
 import { ParallaxProvider } from "react-scroll-parallax";
@@ -55,11 +56,21 @@ function App() {
       mixBlendMode: "difference",
       bounce: 0,
     },
+    large: {
+      height: 80,
+      width: 80,
+      x: mousePos.x - 25,
+      y: mousePos.y - 25,
+      backgroundColor: "#d1d5db",
+      mixBlendMode: "difference",
+      bounce: 0,
+    },
   };
 
   const textEnter = () => setcursorVariant("text");
   const imageEnter = () => setcursorVariant("secondary");
   const textLeave = () => setcursorVariant("default");
+  const largeEnter = () => setcursorVariant("large");
 
   // setting dark or light theme
   const setTheme = (theme = "light") => {
@@ -86,20 +97,23 @@ function App() {
     };
     // targets
     let observer = new IntersectionObserver(callback, options);
-    let getInTouch = document.querySelector("#get-in-touch");
-    let socialProof = document.querySelector("#social-proof");
+    let landingSection = document.querySelector("#landing-section");
     let work = document.querySelector("#work");
+    let socialProof = document.querySelector("#social-proof");
+    let getInTouch = document.querySelector("#get-in-touch");
 
     observer.observe(socialProof);
     observer.observe(getInTouch);
     observer.observe(work);
+    observer.observe(landingSection);
     // observer.observe(keyFeatures);
     // observer.observe(services);
     // observer.observe(contact);
   }, []);
   useEffect(() => {
     console.log(activeSection);
-    if (activeSection === "work") setTheme("light");
+    if (activeSection === "landing-section") setTheme("dark");
+    else if (activeSection === "work") setTheme("light");
     else if (activeSection === "social-proof") setTheme("dark");
     else if (activeSection === "get-in-touch") setTheme("light");
     // else setTheme();
@@ -117,10 +131,17 @@ function App() {
           id="sections"
           className="  flex flex-col items-center justify-center"
         >
+          <LandingSection
+            imageEnter={imageEnter}
+            textEnter={textEnter}
+            textLeave={textLeave}
+            largeEnter={largeEnter}
+          />
           <Work
             imageEnter={imageEnter}
             textEnter={textEnter}
             textLeave={textLeave}
+            largeEnter={largeEnter}
           />
           <WorkLogos
             imageEnter={imageEnter}

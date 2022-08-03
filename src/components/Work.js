@@ -1,13 +1,46 @@
 // TODO : darken the bg images separately
 
-import React from "react";
+import React, { useState } from "react";
 import gsap from "gsap";
 import { motion } from "framer-motion";
-import { BsChevronRight } from "react-icons/bs";
+import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
+import { FiChevronRight } from "react-icons/fi";
 
-const LandingSection = ({ textEnter, textLeave, imageEnter }) => {
-  const imgUrl =
-    "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg";
+// import Slider from "react-animated-slider";
+// import "react-animated-slider/build/horizontal.css";
+
+const works = [
+  {
+    id: 1,
+    title: "Project 1",
+    domain: "Architecture",
+    description:
+      "Cal was first. The first public university in the great state of california. They're the pioneers.",
+    image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg",
+    link: "/",
+  },
+  {
+    id: 2,
+    title: "Project 2",
+    domain: "Design",
+    description:
+      "Cal was first. The first public university in the great state of california. They're the pioneers.",
+    image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/2.jpg",
+    link: "/",
+  },
+  {
+    id: 3,
+    title: "Project 3",
+    domain: "fadsfdasf",
+    description:
+      "Cal was first. The first public university in the great state of california. They're the pioneers.",
+    image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/3.jpg",
+    link: "/",
+  },
+];
+const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
+  const [activeWork, setActiveWork] = useState(works[0]);
+
   const container = {
     hidden: { opacity: 1, scale: 0 },
     visible: {
@@ -99,54 +132,122 @@ const LandingSection = ({ textEnter, textLeave, imageEnter }) => {
   }
   const button = document.querySelector(".view-button-lp");
   // new HoverButton(button);
-  return (
-    <div id="work" className="h-screen w-full ">
-      <div
-        className="text-black  h-screen w-full bg-cover bg-no-repeat bg-center   flex flex-col justify-center  top-0 left-0 px-5 md:px-32  "
-        onMouseEnter={imageEnter}
-        onMouseLeave={textLeave}
-        style={{
-          backgroundImage: `url(${imgUrl})`,
-        }}
+  const sideNav = () => (
+    <div
+      class="flex flex-col absolute"
+      style={{
+        top: "30%",
+        left: "0",
+      }}
+    >
+      {works.map((work) => (
+        <div
+          onClick={() => setActiveWork(work)}
+          style={{
+            backgroundImage: `url(${work.image})`,
+          }}
+          class={`${
+            work.id === activeWork.id
+              ? "w-24"
+              : activeWork.id + 1 === work.id || work.id + 1 === activeWork.id
+              ? "w-10 brightness-75"
+              : "w-0 brightness-75"
+          } cursor-pointer hover:w-24  h-16 bg-cover bg-center bg-no-repeat my-2 transition-all duration-500 ease-in-out rounded-r-md`}
+        />
+      ))}
+    </div>
+  );
+  const sample = () => (
+    <div
+      className="text-black relative  select-none   h-screen w-full   bg-cover bg-no-repeat bg-center   flex flex-col justify-center  top-0 left-0 px-5 md:px-32  "
+      // onMouseEnter={imageEnter}
+      // onMouseLeave={textLeave}
+    >
+      <motion.ul
+        className="container z-10"
+        variants={container}
+        initial="hidden"
+        animate="visible"
+        // onMouseEnter={imageEnter}
+        // onMouseLeave={textLeave}
       >
-        <motion.ul
-          className="container"
-          variants={container}
-          initial="hidden"
-          animate="visible"
-        >
-          <div class="w-2/5">
-            <motion.li class="flex items-center my-5">
-              <div class="w-32 bg-gray-700 h-0.5 mr-3" />
-              <div class="text-white text-xl">ARCHITECTURE</div>
-            </motion.li>
+        <div class="w-2/5">
+          <motion.li class="flex items-center my-5 ">
+            <div class="w-32 bg-gray-500 h-0.5 mr-3" />
+            <div class="text-white text-xl">{activeWork.domain}</div>
+          </motion.li>
+          <motion.li
+            className=" text-7xl font-bold w-max font-lora text-white my-5"
+            onMouseEnter={largeEnter}
+            onMouseLeave={imageEnter}
+          >
+            {activeWork.title}
+          </motion.li>
+          <motion.li class="text-base font-lato text-white my-10">
+            {activeWork.description}
+          </motion.li>
+          <a className="view-button-lp" href={activeWork.link}>
             <motion.li
-              className=" text-7xl font-bold font-lora text-white my-5"
-              onMouseEnter={textEnter}
-              onMouseLeave={imageEnter}
+              href="/"
+              // onMouseEnter={textEnter}
+              // onMouseLeave={imageEnter}
+              class="px-6 py-4 flex items-center my-3 rounded-l-full rounded-r-full text-white border-gray-500 border-2 max-w-max tracking-wider"
             >
-              Novara Conic
-            </motion.li>
-            <motion.li class="text-base font-lato text-white my-5">
-              Cal was first. The first public university in the great state of
-              California. They are the pioneers.
-            </motion.li>
-            <a className="view-button-lp" href="/">
-              <motion.li
-                href="/"
-                onMouseEnter={textEnter}
-                onMouseLeave={imageEnter}
-                class="px-3 py-2 flex items-center my-3 rounded-l-full rounded-r-full text-white border-gray-700 border-2 max-w-max"
+              <FiChevronRight class=" text-3xl p-1  mr-4 bg-white rounded-full text-black " />
+              <div
+                style={{
+                  letterSpacing: "0.2em",
+                }}
+                class=" text-lg "
               >
-                {/* <div class="rounded-full p-3 bg-white"> */}
-                <BsChevronRight class=" text-2xl p-1  mx-2 bg-white rounded-full text-gray-600" />
-                {/* </div> */}
                 VIEW CASE
-              </motion.li>
-            </a>
+              </div>
+            </motion.li>
+          </a>
+        </div>
+        <div class="absolute bottom-20 right-20 flex flex-col items-center">
+          <div class=" text-stroke-white">0{activeWork.id}</div>
+          <div class="  flex items-center  ">
+            <BsChevronLeft
+              onClick={() =>
+                works.indexOf(activeWork) > 0 &&
+                setActiveWork(works[works.indexOf(activeWork) - 1])
+              }
+              class=" hover:border-2 border-0 border-black p-3  text-5xl cursor-pointer mx-5  rounded-full text-white"
+            />
+            <BsChevronRight
+              onClick={() =>
+                works.indexOf(activeWork) < works.length - 1 &&
+                setActiveWork(works[works.indexOf(activeWork) + 1])
+              }
+              class=" hover:border-2 border-0 border-black p-3  text-5xl cursor-pointer mx-5  rounded-full text-white"
+            />
           </div>
-        </motion.ul>
-      </div>
+        </div>
+      </motion.ul>
+      <div
+        // onMouseEnter={imageEnter}
+        // onMouseLeave={imageEnter}
+        style={{
+          backgroundImage: `url(${activeWork.image})`,
+        }}
+        class="absolute bg-no-repeat bg-center bg-cover brightness-50 h-full w-full left-0 top-0 z-0 "
+      />
+    </div>
+  );
+
+  return (
+    <div
+      id="work"
+      style={
+        {
+          // width: "3",
+        }
+      }
+      className="h-screen  flex bg-black w-full relative"
+    >
+      {sample()}
+      {sideNav()}
     </div>
   );
 };
