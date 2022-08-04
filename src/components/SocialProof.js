@@ -105,8 +105,8 @@ const SocialProof = ({ textEnter, textLeave, imageEnter, toggleTheme }) => {
                     }}
                     class={` transition-all duration-200 ${
                       item.name === feedback.name
-                        ? "bg-white w-6 "
-                        : "bg-gray-500 w-4"
+                        ? "bg-black dark:bg-white w-6 "
+                        : " bg-gray-500 w-4"
                     }   mx-1 `}
                   />
                 </div>

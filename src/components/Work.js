@@ -134,11 +134,13 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
   // new HoverButton(button);
   const sideNav = () => (
     <div
-      class="flex flex-col absolute"
+      class="flex flex-col absolute "
       style={{
         top: "30%",
         left: "0",
       }}
+      onMouseEnter={imageEnter}
+      onMouseLeave={imageEnter}
     >
       {works.map((work) => (
         <div
@@ -150,16 +152,22 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
             work.id === activeWork.id
               ? "w-24"
               : activeWork.id + 1 === work.id || work.id + 1 === activeWork.id
-              ? "w-10 brightness-75"
+              ? "w-10 brightness-50 hover:brightness-75"
               : "w-0 brightness-75"
-          } cursor-pointer hover:w-24  h-16 bg-cover bg-center bg-no-repeat my-2 transition-all duration-500 ease-in-out rounded-r-md`}
-        />
+          } cursor-pointer  hover:w-24 relative h-16 bg-cover bg-center bg-no-repeat my-2 transition-all duration-500 ease-in-out rounded-r-md`}
+        >
+          {work.id === activeWork.id && (
+            <div class="text-lg absolute right-0 -top-4 work-side-nav-text font-bold tracking-wider">
+              0{work.id}
+            </div>
+          )}
+        </div>
       ))}
     </div>
   );
   const sample = () => (
     <div
-      className="text-black relative  select-none   h-screen w-full   bg-cover bg-no-repeat bg-center   flex flex-col justify-center  top-0 left-0 px-5 md:px-32  "
+      className="text-black relative  select-none   h-screen w-full overflow-x-hidden   bg-cover bg-no-repeat bg-center   flex flex-col justify-center  top-0 left-0 px-5 md:px-32  "
       // onMouseEnter={imageEnter}
       // onMouseLeave={textLeave}
     >
@@ -225,14 +233,22 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
           </div>
         </div>
       </motion.ul>
-      <div
-        // onMouseEnter={imageEnter}
-        // onMouseLeave={imageEnter}
-        style={{
-          backgroundImage: `url(${activeWork.image})`,
-        }}
-        class="absolute bg-no-repeat bg-center bg-cover brightness-50 h-full w-full left-0 top-0 z-0 "
-      />
+      {works.map((work) => (
+        <div class="w-full h-full absolute    left-0 top-0 z-0">
+          <div
+            style={{
+              backgroundImage: `url(${work.image})`,
+            }}
+            class={`${
+              work.id < activeWork.id
+                ? "-translate-x-full  bg-left"
+                : work.id > activeWork.id
+                ? " translate-x-[100%]  bg-right"
+                : "bg-center scale-125 "
+            }  w-full bg-cover bg-no-repeat ease-linear transition-all duration-700 brightness-50 h-full `}
+          />
+        </div>
+      ))}
     </div>
   );
 

@@ -22,3 +22,32 @@
     color: black;
     -webkit-text-stroke: none;
 }
+/* scroll bar */
+::-webkit-scrollbar {
+    width: 7px;
+    overflow: overlay;
+    right: 0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #424242;
+    border-radius: 5px;
+}
+
+
+  /* work side nav text */
+.work-side-nav-text{
+    color: #808080b6;
+}
+
+/* work bg translate */
+.work-bg-translate{
+    transition-property: width;
+    transition-duration: 0.9s;
+}

@@ -15,7 +15,7 @@ const LandingSection = ({ textEnter, imageEnter, textLeave, largeEnter }) => {
       <div class="flex flex-col  h-full justify-center w-3/5 ">
         <div
           class="text-6xl font-bold w-max "
-          onMouseEnter={textEnter}
+          onMouseEnter={largeEnter}
           onMouseLeave={imageEnter}
         >
           Hello <br /> I'm Shradha
