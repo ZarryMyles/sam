@@ -49,5 +49,5 @@
 /* work bg translate */
 .work-bg-translate{
     transition-property: width;
-    transition-duration: 0.9s;
+    transition-duration: 2s;
 }

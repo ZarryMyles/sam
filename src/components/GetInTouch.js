@@ -1,6 +1,6 @@
 import React from "react";
 
-const GetInTouch = ({ textEnter, textLeave, imageEnter }) => {
+const GetInTouch = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
   return (
     <div
       id="get-in-touch"
@@ -9,7 +9,7 @@ const GetInTouch = ({ textEnter, textLeave, imageEnter }) => {
       <div className=" text-black dark:text-white px-5 md:px-48  md:py-40  w-full   left-0 top-0  z-20  ">
         <div
           className="flex items-center justify-between w-full"
-          onMouseEnter={textEnter}
+          onMouseEnter={largeEnter}
           onMouseLeave={textLeave}
         >
           <div

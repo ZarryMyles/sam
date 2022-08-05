@@ -157,6 +157,7 @@ function App() {
             imageEnter={imageEnter}
             textEnter={textEnter}
             textLeave={textLeave}
+            largeEnter={largeEnter}
           />
           <Footer
             imageEnter={imageEnter}

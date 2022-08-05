@@ -1,13 +1,15 @@
 // TODO : darken the bg images separately
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import gsap from "gsap";
 import { motion } from "framer-motion";
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 import { FiChevronRight } from "react-icons/fi";
+import { useGesture } from "react-use-gesture";
+import { useSpring } from "@react-spring/web";
 
-// import Slider from "react-animated-slider";
-// import "react-animated-slider/build/horizontal.css";
+const calcX = (y, ly) => -(y - ly - window.innerHeight / 2) / 20;
+const calcY = (x, lx) => (x - lx - window.innerWidth / 2) / 20;
 
 const works = [
   {
@@ -40,98 +42,50 @@ const works = [
 ];
 const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
   const [activeWork, setActiveWork] = useState(works[0]);
+  useEffect(() => {
+    const preventDefault = (e) => e.preventDefault();
+    document.addEventListener("gesturestart", preventDefault);
+    document.addEventListener("gesturechange", preventDefault);
 
-  const container = {
-    hidden: { opacity: 1, scale: 0 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        delayChildren: 0.8,
-        staggerChildren: 0.5,
+    return () => {
+      document.removeEventListener("gesturestart", preventDefault);
+      document.removeEventListener("gesturechange", preventDefault);
+    };
+  }, []);
+  const domTarget = useRef(null);
+  const [
+    { x, y, rotateX, rotateY, rotateZ, zoom, scale, translateY, translateX },
+    api,
+  ] = useSpring(() => ({
+    rotateX: 0,
+    rotateY: 0,
+    rotateZ: 0,
+    translateY: 0,
+    translateX: 0,
+
+    scale: 1,
+    zoom: 0,
+    x: 0,
+    y: 0,
+    config: { mass: 5, tension: 350, friction: 40 },
+  }));
+  useGesture(
+    {
+      onMove: ({ xy: [px, py], dragging }) => {
+        console.log(calcX(py, y.get()));
+        return (
+          !dragging &&
+          api({
+            translateX: calcX(px, y.get()),
+            translateY: calcY(py, x.get()),
+            // scale: 1,
+          })
+        );
       },
     },
-  };
+    { domTarget, eventOptions: { passive: false } }
+  );
 
-  const item = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-    },
-  };
-  class HoverButton {
-    constructor(el) {
-      this.el = el;
-      this.hover = false;
-      this.calculatePosition();
-      this.attachEventsListener();
-    }
-
-    attachEventsListener() {
-      window.addEventListener("mousemove", (e) => this.onMouseMove(e));
-      window.addEventListener("resize", (e) => this.calculatePosition(e));
-    }
-
-    calculatePosition() {
-      gsap.set(this.el, {
-        x: 0,
-        y: 0,
-        scale: 1,
-      });
-
-      const box = this.el.getBoundingClientRect();
-      this.x = box.left + box.width * 0.5;
-      this.y = box.top + box.height * 0.5;
-      this.width = box.width;
-      this.height = box.height;
-    }
-
-    onMouseMove(e) {
-      let hover = false;
-      let hoverArea = this.hover ? 0.7 : 0.5;
-      let x = e.clientX - this.x;
-      let y = e.clientY - this.y;
-      let distance = Math.sqrt(x * x + y * y);
-      if (distance < this.width * hoverArea) {
-        hover = true;
-        if (!this.hover) {
-          this.hover = true;
-        }
-        this.onHover(e.clientX, e.clientY);
-      }
-
-      if (!hover && this.hover) {
-        this.onLeave();
-        this.hover = false;
-      }
-    }
-
-    onHover(x, y) {
-      gsap.to(this.el, {
-        x: (x - this.x) * 0.4,
-        y: (y - this.y) * 0.4,
-        scale: 1.15,
-        ease: "power2.out",
-        duration: 0.4,
-      });
-
-      this.el.style.zIndex = 10;
-    }
-    onLeave() {
-      gsap.to(this.el, {
-        x: 0,
-        y: 0,
-        scale: 1,
-        ease: "elastic.out(1.2, 0.4)",
-        duration: 0.7,
-      });
-
-      this.el.style.zIndex = 1;
-    }
-  }
-  const button = document.querySelector(".view-button-lp");
-  // new HoverButton(button);
   const sideNav = () => (
     <div
       class="flex flex-col absolute "
@@ -156,64 +110,75 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
               : "w-0 brightness-75"
           } cursor-pointer  hover:w-24 relative h-16 bg-cover bg-center bg-no-repeat my-2 transition-all duration-500 ease-in-out rounded-r-md`}
         >
-          {work.id === activeWork.id && (
-            <div class="text-lg absolute right-0 -top-4 work-side-nav-text font-bold tracking-wider">
-              0{work.id}
-            </div>
-          )}
+          <div
+            class={`${
+              work.id !== activeWork.id && "opacity-0"
+            } transition-all duration-500 text-lg absolute right-0 -top-4 work-side-nav-text font-bold tracking-wider`}
+          >
+            0{work.id}
+          </div>
         </div>
       ))}
     </div>
   );
-  const sample = () => (
+  const cards = () => (
     <div
-      className="text-black relative  select-none   h-screen w-full overflow-x-hidden   bg-cover bg-no-repeat bg-center   flex flex-col justify-center  top-0 left-0 px-5 md:px-32  "
-      // onMouseEnter={imageEnter}
-      // onMouseLeave={textLeave}
+      className="text-black relative  select-none   h-full overflow-hidden w-full    bg-cover bg-no-repeat bg-center   flex flex-col justify-center  top-0 left-0 px-5 md:px-32  "
+      onMouseEnter={imageEnter}
+      onMouseLeave={textLeave}
     >
-      <motion.ul
-        className="container z-10"
-        variants={container}
-        initial="hidden"
-        animate="visible"
+      <div
+        style={{
+          zIndex: "1",
+        }}
+
         // onMouseEnter={imageEnter}
         // onMouseLeave={textLeave}
       >
         <div class="w-2/5">
-          <motion.li class="flex items-center my-5 ">
+          <div class="flex items-center my-5 ">
             <div class="w-32 bg-gray-500 h-0.5 mr-3" />
             <div class="text-white text-xl">{activeWork.domain}</div>
-          </motion.li>
-          <motion.li
+          </div>
+          <div
             className=" text-7xl font-bold w-max font-lora text-white my-5"
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
           >
             {activeWork.title}
-          </motion.li>
-          <motion.li class="text-base font-lato text-white my-10">
+          </div>
+          <div class="text-base font-lato text-white my-10">
             {activeWork.description}
-          </motion.li>
-          <a className="view-button-lp" href={activeWork.link}>
-            <motion.li
+          </div>
+          <a className="" href={activeWork.link}>
+            <div
               href="/"
-              // onMouseEnter={textEnter}
-              // onMouseLeave={imageEnter}
-              class="px-6 py-4 flex items-center my-3 rounded-l-full rounded-r-full text-white border-gray-500 border-2 max-w-max tracking-wider"
+              ref={domTarget}
+              style={{
+                translateX: `${translateX.get()}px`,
+                translateY: `${translateY.get()}px`,
+              }}
+              class={`px-6 py-4 duration-100 transition-all  w-max  flex items-center my-3 rounded-l-full rounded-r-full text-white border-gray-500 border-2 max-w-max tracking-wider
+                translate-x-[${translateX.get() * 10}px]
+              
+              `}
             >
               <FiChevronRight class=" text-3xl p-1  mr-4 bg-white rounded-full text-black " />
               <div
+                class={` text-lg 
+                   
+                `}
                 style={{
                   letterSpacing: "0.2em",
                 }}
-                class=" text-lg "
               >
                 VIEW CASE
               </div>
-            </motion.li>
+            </div>
           </a>
         </div>
-        <div class="absolute bottom-20 right-20 flex flex-col items-center">
+        {/* the no. with text stroke */}
+        <div class="absolute bottom-10 right-20 flex flex-col items-center">
           <div class=" text-stroke-white">0{activeWork.id}</div>
           <div class="  flex items-center  ">
             <BsChevronLeft
@@ -232,7 +197,7 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
             />
           </div>
         </div>
-      </motion.ul>
+      </div>
       {works.map((work) => (
         <div class="w-full h-full absolute    left-0 top-0 z-0">
           <div
@@ -249,20 +214,32 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
           />
         </div>
       ))}
+      {/* trying changing width  */}
+      {/* {works.map((work) => (
+        <div class="w-full h-full left-0 top-0 absolute">
+          <div
+            style={{
+              backgroundImage: `url(${work.image})`,
+            }}
+            class={`${
+              work.id < activeWork.id
+                ? "left-0 w-0"
+                : work.id > activeWork.id
+                ? " right-0 w-0"
+                : "bg-center w-full "
+            }   w-full bg-cover bg-no-repeat absolute top-0 z-0 ease-linear transition-all duration-700 brightness-50 h-full `}
+          />
+        </div>
+      ))} */}
     </div>
   );
 
   return (
     <div
       id="work"
-      style={
-        {
-          // width: "3",
-        }
-      }
-      className="h-screen  flex bg-black w-full relative"
+      className="h-screen overflow-y-hidden  flex bg-white w-full relative"
     >
-      {sample()}
+      {cards()}
       {sideNav()}
     </div>
   );

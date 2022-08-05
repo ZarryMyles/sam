@@ -124,7 +124,6 @@ const About = ({}) => {
           textLeave={textLeave}
           imageEnter={imageEnter}
         />
-
         <GetInTouch
           textEnter={textEnter}
           textLeave={textLeave}
