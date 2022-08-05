@@ -25,22 +25,31 @@ const About = ({}) => {
 
   const variants = {
     default: {
-      x: mousePos.x - 14,
-      y: mousePos.y - 14,
+      x: mousePos.x - 10,
+      y: mousePos.y - 10,
       bounce: 0,
     },
     text: {
-      height: 80,
-      width: 80,
-      x: mousePos.x - 40,
-      y: mousePos.y - 40,
+      height: 50,
+      width: 50,
+      x: mousePos.x - 25,
+      y: mousePos.y - 25,
       backgroundColor: "#d1d5db",
       mixBlendMode: "difference",
       bounce: 0,
     },
     secondary: {
-      x: mousePos.x - 14,
-      y: mousePos.y - 14,
+      x: mousePos.x - 10,
+      y: mousePos.y - 10,
+      backgroundColor: "#d1d5db",
+      mixBlendMode: "difference",
+      bounce: 0,
+    },
+    large: {
+      height: 80,
+      width: 80,
+      x: mousePos.x - 25,
+      y: mousePos.y - 25,
       backgroundColor: "#d1d5db",
       mixBlendMode: "difference",
       bounce: 0,
@@ -50,6 +59,7 @@ const About = ({}) => {
   const textEnter = () => setcursorVariant("text");
   const imageEnter = () => setcursorVariant("secondary");
   const textLeave = () => setcursorVariant("default");
+  const largeEnter = () => setcursorVariant("large");
   return (
     <>
       <Navbar
@@ -63,19 +73,19 @@ const About = ({}) => {
         <div
           onMouseEnter={imageEnter}
           onMouseLeave={textLeave}
-          class="h-screen  px-5 md:pr-0 md:pl-44 py-10 md:py-20 flex items-center justify-center"
+          class="h-auto md:h-screen  w-full  px-5 md:pr-0 md:pl-44 py-10 md:py-20 flex flex-col md:flex-row md:items-center md:justify-center"
         >
-          <div class="w-5/10 h-full flex flex-col items-start tracking-wide ">
-            <div class="font-bold relative text-5xl my-5 w-full text-right">
+          <div class="w-full md:w-5/10 h-full flex flex-col items-start tracking-wide ">
+            <div class="font-bold relative text-5xl my-5 w-full md:text-right">
               <div
                 onMouseEnter={textEnter}
                 onMouseLeave={imageEnter}
-                class="-mr-10 "
+                class="md:-mr-10 "
               >
                 Hey there!
               </div>
             </div>
-            <div class="  leading-loose text-lg w-3/4 text-gray-500 my-10">
+            <div class="  leading-loose text-lg w-full md:w-3/4 text-gray-500 my-10">
               I’m Shradha, a fresh graduate looking to make my mark in the world
               of product design. <br /> A Product designer who works with the
               purpose, I indulge myself in{" "}
@@ -105,12 +115,13 @@ const About = ({}) => {
             </div>
             <div class="text-lg text-gray-500">Digital Artist</div>
           </div>
-          <div class="w-5/10 h-full bg-brand-lightGrey flex justify-center items-center p-20">
+          <div class=" md:w-5/10 h-92 md:h-full bg-brand-lightGrey flex justify-center items-center md:p-20">
             <div
               style={{
                 backgroundImage: `url("https://images.unsplash.com/photo-1610398000003-1b2b2b2b2b2b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80")`,
+                // height: "120px",
               }}
-              class="bg-center bg-red-200 bg-no-repeat bg-cover h-full w-full"
+              class="bg-center bg-red-200 bg-no-repeat bg-cover    h-full  w-full"
             />
           </div>
         </div>
@@ -128,9 +139,10 @@ const About = ({}) => {
           textEnter={textEnter}
           textLeave={textLeave}
           imageEnter={imageEnter}
+          largeEnter={largeEnter}
         />
         <motion.div
-          className="cursor"
+          className="cursor hidden md:flex"
           variants={variants}
           animate={cursorVariant}
         />

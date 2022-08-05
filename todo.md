@@ -7,19 +7,24 @@
 
 (B) Hero
 (C) Work [slider]
+project title and desription animation  
+ view button hover animation
+previous and next button border animation [refer droo for all 3]
+
 (D) Company Logos
+uncomment before final deployment
 (E) Social Proof [inprogress] #phonepending
-(F) Get in touch [done] #phonepending
-(G) Footer 1 [done] #phonepending
+check if parallax is working fine when smooth scroll is used
+(F) Get in touch #phonepending {cm:2022-08-06}
+(G) Footer 1 #phonepending {cm:2022-08-06}
 
 # About Page
 
 # Work
 
-# Mini Tasks
-
-(I) Fix Parallax text in Feedback Section
-(J) Button Microinteractions like on Droow
-(K) Implement Smooth Scroll that doesnt break Scrollbar
-(L) Remove Cursor for Mobile
-(M)
+(H) Mini Tasks
+Add links to nav options
+Fix Parallax text in Feedback Section
+Button Microinteractions like on Droow
+Implement Smooth Scroll that doesnt break Scrollbar
+Remove Cursor for Mobile {cm:2022-08-06}

@@ -101,26 +101,26 @@ function App() {
     let work = document.querySelector("#work");
     let socialProof = document.querySelector("#social-proof");
     let getInTouch = document.querySelector("#get-in-touch");
-
+    let footer = document.querySelector("#footer-main");
+    // observers
+    observer.observe(landingSection);
+    observer.observe(work);
     observer.observe(socialProof);
     observer.observe(getInTouch);
-    observer.observe(work);
-    observer.observe(landingSection);
-    // observer.observe(keyFeatures);
-    // observer.observe(services);
-    // observer.observe(contact);
+    observer.observe(footer);
   }, []);
   useEffect(() => {
-    console.log(activeSection);
+    // console.log(activeSection);
     if (activeSection === "landing-section") setTheme("dark");
     else if (activeSection === "work") setTheme("light");
     else if (activeSection === "social-proof") setTheme("dark");
     else if (activeSection === "get-in-touch") setTheme("light");
+    else if (activeSection === "footer-main") setTheme("light");
     // else setTheme();
   }, [activeSection]);
 
   return (
-    <div className="  dark:bg-black duration-500 transition-colors">
+    <div className="  dark:bg-black duration-500 transition-colors select-none">
       <>
         <Navbar
           imageEnter={imageEnter}
@@ -143,11 +143,11 @@ function App() {
             textLeave={textLeave}
             largeEnter={largeEnter}
           />
-          <WorkLogos
+          {/* <WorkLogos
             imageEnter={imageEnter}
             textEnter={textEnter}
             textLeave={textLeave}
-          />
+          /> */}
           <SocialProof
             imageEnter={imageEnter}
             textEnter={textEnter}
@@ -167,7 +167,7 @@ function App() {
           {/* other sections */}
 
           <motion.div
-            className="cursor"
+            className="cursor hidden md:flex"
             variants={variants}
             animate={cursorVariant}
           />

@@ -11,6 +11,16 @@
     transition: all 0.4s ease;
     font-size: 10rem;
 }
+@media screen and (max-width: 768px) {
+    /* .text-stroke-black{
+        color: transparent;
+        -webkit-text-stroke: 1px #000;
+        transition: all 0.4s ease;
+    } */
+    .text-stroke-white{
+        font-size: 4rem;
+    }
+}
 .getintouch-graybg{
     transform: translateX(0%);
     transition: transform 0.4s ease-in-out;
@@ -50,4 +60,14 @@
 .work-bg-translate{
     transition-property: width;
     transition-duration: 2s;
+}
+
+
+/* hiding highlight color on phone on tab */
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }

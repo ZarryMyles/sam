@@ -9,9 +9,9 @@ const Principles = ({ textEnter, imageEnter, textLeave }) => {
     <div
       onMouseEnter={imageEnter}
       onMouseLeave={textLeave}
-      className="min-h-screen px-5 md:px-44 flex flex-col justify-center "
+      className="min-h-screen my-10 md:my-0 px-5 md:px-44 flex flex-col justify-center "
     >
-      <div class=" text-xl  flex items-center ml-16  text-gray-500">
+      <div class=" text-xl  flex items-center -ml-1 md:ml-16  text-gray-500">
         <BsDot className="text-2xl text-black" />
         <div
           style={{
@@ -28,8 +28,8 @@ const Principles = ({ textEnter, imageEnter, textLeave }) => {
       >
         Principles I abide by
       </div>
-      <div class="w-full flex items-center justify-between my-16">
-        <div class="w-1/3 flex flex-col items-center px-10 py-14">
+      <div class="w-full flex flex-col md:flex-row items-center justify-between my-16">
+        <div class="w-full md:w-1/3 flex flex-col items-center px-5 md:px-10 py-5 md:py-14 md:shadow-none shadow-md my-5">
           <GiHiveMind
             onMouseEnter={textEnter}
             onMouseLeave={imageEnter}
@@ -40,7 +40,7 @@ const Principles = ({ textEnter, imageEnter, textLeave }) => {
             The process of design is to <b>understand minds.</b>
           </div>
         </div>
-        <div class="w-1/3 flex flex-col items-center px-10 py-14 bg-brand-lightGrey">
+        <div class="w-full md:w-1/3 flex flex-col items-center px-5 md:px-10 py-5 md:py-14 md:shadow-none shadow-md my-5 bg-brand-lightGrey">
           <GiArcheryTarget
             onMouseEnter={textEnter}
             onMouseLeave={imageEnter}
@@ -52,7 +52,7 @@ const Principles = ({ textEnter, imageEnter, textLeave }) => {
             product.
           </div>
         </div>
-        <div class="w-1/3 flex flex-col items-center px-10 py-14">
+        <div class="w-full md:w-1/3 flex flex-col items-center px-5 md:px-10 py-5 md:py-14 md:shadow-none shadow-md my-5 ">
           <TbPerspective
             onMouseEnter={textEnter}
             onMouseLeave={imageEnter}

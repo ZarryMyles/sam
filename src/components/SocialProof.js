@@ -49,11 +49,11 @@ const SocialProof = ({ textEnter, textLeave, imageEnter, toggleTheme }) => {
       >
         <div
           // modules={[EffectFade, Navigation, Pagination]}
-          class=" bg-brand-lightGrey dark:bg-brand-darkGrey text-black dark:text-gray-400 w-full md:px-10 md:py-20 flex items-center justify-end relative"
+          class=" bg-brand-lightGrey dark:bg-brand-footerGrey md:dark:bg-brand-darkGrey text-black dark:text-gray-400 w-full md:px-10 md:py-20 flex items-center justify-end relative"
         >
           <Parallax
             class="text-4xl md:text-5xl w-full md:w-1/3 absolute -top-10 px-4 md:px-0 md:-top-12 md:left-12 font-bold"
-            translateY={[-50, 100]}
+            translateY={[-50, 20]}
           >
             <div
 
@@ -64,7 +64,7 @@ const SocialProof = ({ textEnter, textLeave, imageEnter, toggleTheme }) => {
           </Parallax>
           {/*  */}
 
-          <div class="w-full md:w-2/3 px-10 md:px-0 py-16 md:py-0 flex flex-col justify-center">
+          <div class=" text-xs md:text-base  w-full md:w-2/3 px-5 md:px-0 py-16 md:py-0 flex flex-col justify-center">
             <div
               className={`italic my-6 transition-opacity ease-linear duration-1000 ${
                 fade ? "opacity-0" : ""
@@ -75,7 +75,7 @@ const SocialProof = ({ textEnter, textLeave, imageEnter, toggleTheme }) => {
                 style={{
                   MozWindowDragging: "none",
                 }}
-                class={`text-transparent select-none  `}
+                class={`text-transparent select-none    `}
               >
                 {feedback.feedback.split("fake:123")[1]}
               </span>
