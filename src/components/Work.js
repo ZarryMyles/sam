@@ -203,9 +203,9 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
             }}
             class={`${
               work.id < activeWork.id
-                ? "-translate-x-full  md:bg-left"
+                ? "-translate-x-full  bg-center md:bg-left"
                 : work.id > activeWork.id
-                ? " translate-x-[100%]  md:bg-right"
+                ? " translate-x-[100%]  bg-center md:bg-right"
                 : "bg-center scale-125 "
             }  w-full bg-cover bg-no-repeat ease-linear transition-all  duration-700 brightness-50 h-full `}
           />
