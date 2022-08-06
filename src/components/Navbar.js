@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ScrollIntoView from "react-scroll-into-view";
 // import { motion } from "framer-motion";
@@ -16,6 +16,35 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
   //   delay5: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.125 } },
   // };
 
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const controlNavbar = () => {
+    if (typeof window !== "undefined") {
+      if (window.scrollY > lastScrollY) {
+        // if scroll down hide the navbar
+        setShow(false);
+      } else {
+        // if scroll up show the navbar
+        setShow(true);
+      }
+
+      // remember current page location to use in the next move
+      setLastScrollY(window.scrollY);
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", controlNavbar);
+
+      // cleanup function
+      return () => {
+        window.removeEventListener("scroll", controlNavbar);
+      };
+    }
+  }, [lastScrollY]);
+
   const [scrollDetect, setScrollDetect] = useState(false);
   const screenWidth = useState(window.innerWidth);
   const [textColor, setTextColor] = useState(defaultColor);
@@ -29,7 +58,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
   const handleScroll = () => {
     // console.log(window.scrollY);
     if (screenWidth > 500) {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 50) {
         setScrollDetect(true);
         setTextColor("white");
       } else {
@@ -37,19 +66,20 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
         setTextColor(defaultColor);
       }
     } else {
-      if (window.scrollY > 350) {
+      if (window.scrollY > 50) {
         setScrollDetect(true);
         setTextColor("white");
       } else {
         setScrollDetect(false);
         setTextColor(defaultColor);
+        setShow(true);
       }
     }
   };
   window.addEventListener("scroll", handleScroll);
 
   return (
-    <div className="navContainer">
+    <div className={`navContainer ${show && "hidden"} duration-300 transition`}>
       <nav
         className={
           scrollDetect
@@ -99,7 +129,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
               className=" block md:inline-block  py-3 no-underline border-none text-black"
             >
               <button
-                onMouseEnter={imageEnter}
+                onMouseEnter={textEnter}
                 onMouseLeave={imageEnter}
                 style={{ textDecoration: "none", color: textColor }}
                 className="cursor-pointer uppercase"
@@ -111,7 +141,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
 
           <li className="border-none text-center">
             <Link
-              onMouseEnter={imageEnter}
+              onMouseEnter={textEnter}
               onMouseLeave={imageEnter}
               to="/about"
               onClick={uncheckNav}
@@ -124,13 +154,13 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
 
           <li className="border-none text-center">
             <ScrollIntoView
-              selector="#contactContainer"
+              selector="#get-in-touch"
               activeClassName="selected"
               onClick={uncheckNav}
               className="block md:inline-block  py-3 no-underline border-none"
             >
               <button
-                onMouseEnter={imageEnter}
+                onMouseEnter={textEnter}
                 onMouseLeave={imageEnter}
                 style={{ textDecoration: "none", color: textColor }}
                 className="cursor-pointer uppercase font-lora"
@@ -142,9 +172,9 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
 
           <li className="navBlog border-none text-center">
             <Link
-              onMouseEnter={imageEnter}
+              onMouseEnter={textEnter}
               onMouseLeave={imageEnter}
-              to="/blog"
+              to="/"
               target="_blank"
               rel="noreferrer"
               style={{ textDecoration: "none", color: textColor }}
