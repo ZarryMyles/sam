@@ -18,7 +18,11 @@ function App() {
     y: 0,
   });
   const [cursorVariant, setcursorVariant] = useState("default");
-
+  let options = {
+    root: document.querySelector("#sections"),
+    rootMargin: "0px",
+    threshold: 0.6, // percentage of the element that is visible for triggering the callback for nav
+  };
   useEffect(() => {
     const mouseMove = (e) => {
       setMousePos({
@@ -81,11 +85,6 @@ function App() {
   // observing active section
   const [activeSection, setActiveSection] = useState("home");
   useEffect(() => {
-    let options = {
-      root: document.querySelector("#sections"),
-      rootMargin: "0px",
-      threshold: 0.6, // percentage of the element that is visible for triggering the callback for nav
-    };
     let callback = (entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
