@@ -6,7 +6,7 @@ const LandingSection = ({ textEnter, imageEnter, textLeave, largeEnter }) => {
   return (
     <div
       id="landing-section"
-      className="px-5 md:px-32 h-screen w-full text-white from-brand-footerGrey  to-black to: bg-gradient-to-tr"
+      className="px-5 md:px-32 h-screen w-full text-white from-brand-footerGrey  to-black to: bg-gradient-to-r"
       onMouseEnter={imageEnter}
       onMouseLeave={textLeave}
     >

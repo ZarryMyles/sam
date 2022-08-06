@@ -13,6 +13,8 @@ const About = () => {
   const [cursorVariant, setcursorVariant] = useState("default");
 
   useEffect(() => {
+    // scroll to top
+    window.scrollTo(0, 0);
     const mouseMove = (e) => {
       setMousePos({
         x: e.clientX,

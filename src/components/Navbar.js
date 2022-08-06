@@ -99,6 +99,8 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
               className=" block md:inline-block  py-3 no-underline border-none text-black"
             >
               <button
+                onMouseEnter={imageEnter}
+                onMouseLeave={imageEnter}
                 style={{ textDecoration: "none", color: textColor }}
                 className="cursor-pointer uppercase"
               >
@@ -109,6 +111,8 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
 
           <li className="border-none text-center">
             <Link
+              onMouseEnter={imageEnter}
+              onMouseLeave={imageEnter}
               to="/about"
               onClick={uncheckNav}
               style={{ textDecoration: "none", color: textColor }}
@@ -126,6 +130,8 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
               className="block md:inline-block  py-3 no-underline border-none"
             >
               <button
+                onMouseEnter={imageEnter}
+                onMouseLeave={imageEnter}
                 style={{ textDecoration: "none", color: textColor }}
                 className="cursor-pointer uppercase font-lora"
               >
@@ -136,6 +142,8 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
 
           <li className="navBlog border-none text-center">
             <Link
+              onMouseEnter={imageEnter}
+              onMouseLeave={imageEnter}
               to="/blog"
               target="_blank"
               rel="noreferrer"

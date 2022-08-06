@@ -60,7 +60,7 @@ const Footer = ({ textEnter, textLeave, imageEnter }) => {
               onMouseEnter={textEnter}
               onMouseLeave={imageEnter}
               href={social.link}
-              class="text-white  md:underline flex items-center  w-1/2 md:w-full  my-2 md:my-0"
+              class="text-white  md:underline flex items-center  w-1/2 md:w-max  my-2 md:my-0"
             >
               <div class="mr-2 text-xl text-white">{social.icon}</div>
               {social.name}
