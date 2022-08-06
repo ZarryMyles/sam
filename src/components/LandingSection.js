@@ -1,5 +1,4 @@
 import React from "react";
-import LinkedIn from "../assets/icons/linkedin.png";
 import { BsLinkedin } from "react-icons/bs";
 import { FiChevronRight } from "react-icons/fi";
 

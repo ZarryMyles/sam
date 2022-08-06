@@ -1,7 +1,7 @@
 import React from "react";
 // icons
 import { BsDot } from "react-icons/bs";
-import { SiMinds } from "react-icons/si";
+// import { SiMinds } from "react-icons/si";
 import { GiArcheryTarget, GiHiveMind } from "react-icons/gi";
 import { TbPerspective } from "react-icons/tb";
 const Principles = ({ textEnter, imageEnter, textLeave }) => {

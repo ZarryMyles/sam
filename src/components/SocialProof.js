@@ -1,8 +1,8 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState } from "react";
 import BlackQuote from "../assets/icons/quote-black.png";
 import WhiteQuote from "../assets/icons/quote-white.png";
-import { GoDash } from "react-icons/go";
-import { Parallax, useParallax, ParallaxProvider } from "react-scroll-parallax";
+// import { GoDash } from "react-icons/go";
+import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 // import { Swiper, SwiperSlide } from "swiper/react";
 // import { motion, useViewportScroll, useTransform } from "framer-motion";
 // Import Swiper styles

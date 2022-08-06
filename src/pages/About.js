@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Footer, GetInTouch, Principles, Skills, Navbar } from "../components";
+import { GetInTouch, Principles, Skills, Navbar } from "../components";
 import { BsDot } from "react-icons/bs";
-const About = ({}) => {
+import { useTitle } from "../hooks/useTitle";
+
+const About = () => {
+  useTitle("About");
   const [mousePos, setMousePos] = useState({
     x: 0,
     y: 0,
@@ -66,6 +69,7 @@ const About = ({}) => {
         textEnter={textEnter}
         textLeave={textLeave}
         imageEnter={imageEnter}
+        defaultColor={"black"}
       />
 
       <div className="w-full h-auto pt-10 ">

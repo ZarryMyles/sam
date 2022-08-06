@@ -4,14 +4,13 @@ import "./App.css";
 import "./vishal.css";
 import {
   Work,
-  WorkLogos,
   SocialProof,
   GetInTouch,
   Footer,
   LandingSection,
 } from "./components/";
 import Navbar from "./components/Navbar";
-import { ParallaxProvider } from "react-scroll-parallax";
+// import { ParallaxProvider } from "react-scroll-parallax";
 
 function App() {
   const [mousePos, setMousePos] = useState({
@@ -81,12 +80,12 @@ function App() {
   };
   // observing active section
   const [activeSection, setActiveSection] = useState("home");
-  let options = {
-    root: document.querySelector("#sections"),
-    rootMargin: "0px",
-    threshold: 0.6, // percentage of the element that is visible for triggering the callback for nav
-  };
   useEffect(() => {
+    let options = {
+      root: document.querySelector("#sections"),
+      rootMargin: "0px",
+      threshold: 0.6, // percentage of the element that is visible for triggering the callback for nav
+    };
     let callback = (entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -126,6 +125,7 @@ function App() {
           imageEnter={imageEnter}
           textLeave={textLeave}
           textEnter={textEnter}
+          defaultColor={"white"}
         />
         <div
           id="sections"

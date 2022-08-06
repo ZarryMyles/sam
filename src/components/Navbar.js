@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import ScrollIntoView from "react-scroll-into-view";
 // import { motion } from "framer-motion";
 
-const Navbar = ({ textEnter, textLeave, imageEnter }) => {
+const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
   // const [hov, setHov] = useState(false);
 
   // const variants = {
@@ -18,6 +18,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter }) => {
 
   const [scrollDetect, setScrollDetect] = useState(false);
   const screenWidth = useState(window.innerWidth);
+  const [textColor, setTextColor] = useState(defaultColor);
 
   //Function to uncheck navCheckbox
   function uncheckNav() {
@@ -26,18 +27,22 @@ const Navbar = ({ textEnter, textLeave, imageEnter }) => {
 
   // Function to detect scrolling and change navbar type based on that
   const handleScroll = () => {
-    console.log(window.scrollY);
+    // console.log(window.scrollY);
     if (screenWidth > 500) {
       if (window.scrollY > 100) {
         setScrollDetect(true);
+        setTextColor("white");
       } else {
         setScrollDetect(false);
+        setTextColor(defaultColor);
       }
     } else {
       if (window.scrollY > 350) {
         setScrollDetect(true);
+        setTextColor("white");
       } else {
         setScrollDetect(false);
+        setTextColor(defaultColor);
       }
     }
   };
@@ -57,8 +62,8 @@ const Navbar = ({ textEnter, textLeave, imageEnter }) => {
             <button>
               {window.innerWidth > 767 ? (
                 <div
-                  className="text-3xl font-normal text-white "
-                  style={{ fontFamily: "Arial" }}
+                  className="text-3xl font-normal "
+                  style={{ fontFamily: "Arial", color: textColor }}
                   onMouseEnter={textEnter}
                   onMouseLeave={imageEnter}
                 >
@@ -66,8 +71,8 @@ const Navbar = ({ textEnter, textLeave, imageEnter }) => {
                 </div>
               ) : (
                 <div
-                  className="text-xl font-normal text-white "
-                  style={{ fontFamily: "Arial" }}
+                  className="text-xl font-normal "
+                  style={{ fontFamily: "Arial", color: textColor }}
                   onMouseEnter={textEnter}
                   onMouseLeave={imageEnter}
                 >
@@ -93,18 +98,24 @@ const Navbar = ({ textEnter, textLeave, imageEnter }) => {
               onClick={uncheckNav}
               className=" block md:inline-block  py-3 no-underline border-none text-black"
             >
-              <button className="cursor-pointer uppercase">Work</button>
+              <button
+                style={{ textDecoration: "none", color: textColor }}
+                className="cursor-pointer uppercase"
+              >
+                Work
+              </button>
             </ScrollIntoView>
           </li>
 
           <li className="border-none text-center">
-            <ScrollIntoView
-              selector="#teams"
-              className="block md:inline-block  py-3 no-underline border-none text-black"
+            <Link
+              to="/about"
               onClick={uncheckNav}
+              style={{ textDecoration: "none", color: textColor }}
+              className="block md:inline-block py-3 no-underline border-none"
             >
-              <button className="cursor-pointer uppercase">About</button>
-            </ScrollIntoView>
+              About
+            </Link>
           </li>
 
           <li className="border-none text-center">
@@ -112,9 +123,12 @@ const Navbar = ({ textEnter, textLeave, imageEnter }) => {
               selector="#contactContainer"
               activeClassName="selected"
               onClick={uncheckNav}
-              className="block md:inline-block  py-3 no-underline border-none text-black"
+              className="block md:inline-block  py-3 no-underline border-none"
             >
-              <button className="cursor-pointer uppercase font-lora">
+              <button
+                style={{ textDecoration: "none", color: textColor }}
+                className="cursor-pointer uppercase font-lora"
+              >
                 Contact
               </button>
             </ScrollIntoView>
@@ -125,8 +139,9 @@ const Navbar = ({ textEnter, textLeave, imageEnter }) => {
               to="/blog"
               target="_blank"
               rel="noreferrer"
+              style={{ textDecoration: "none", color: textColor }}
               onClick={uncheckNav}
-              className="block md:inline-block py-3 no-underline border-none text-black"
+              className="block md:inline-block py-3 no-underline border-none"
             >
               Resume
             </Link>

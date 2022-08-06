@@ -1,6 +1,6 @@
 // TODO : darken the bg images separately
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 // import gsap from "gsap";
 // import { motion } from "framer-motion";
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
