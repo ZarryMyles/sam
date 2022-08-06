@@ -1,4 +1,4 @@
-export { default as Navbar } from "./Navbar";
+export { default as Navbar } from "./NewNav";
 // home page
 export { default as LandingSection } from "./LandingSection";
 export { default as Work } from "./Work";

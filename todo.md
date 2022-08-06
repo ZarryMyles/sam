@@ -23,8 +23,8 @@ check if parallax is working fine when smooth scroll is used
 # Work
 
 (H) Mini Tasks
-Add links to nav options
-Fix Parallax text in Feedback Section
+Add links to nav options {cm:2022-08-06}
+Fix Parallax text in Feedback Section {cm:2022-08-06}
 Button Microinteractions like on Droow
 Implement Smooth Scroll that doesnt break Scrollbar
 Remove Cursor for Mobile {cm:2022-08-06}

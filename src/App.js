@@ -9,7 +9,7 @@ import {
   Footer,
   LandingSection,
 } from "./components/";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/NewNav";
 // import { ParallaxProvider } from "react-scroll-parallax";
 
 function App() {
@@ -118,7 +118,7 @@ function App() {
   }, [activeSection]);
 
   return (
-    <div className="  dark:bg-black duration-500 transition-colors select-none">
+    <div className=" dark:bg-black duration-500 transition-colors select-none overflow-hidden">
       <>
         <Navbar
           imageEnter={imageEnter}

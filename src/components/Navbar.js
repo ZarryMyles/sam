@@ -79,36 +79,23 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
   window.addEventListener("scroll", handleScroll);
 
   return (
-    <div className={`navContainer ${show && "hidden"} duration-300 transition`}>
+    <div className={`navContainer duration-300 transition`}>
       <nav
-        className={
-          scrollDetect
-            ? "nav scrol fixed flex flex-wrap items-center justify-between px-4 top-0 w-full z-20 navLiteBack"
-            : "nav scrol fixed flex flex-wrap items-center justify-between px-4 top-0 w-full z-20"
-        }
+        className={`nav scrol  flex flex-wrap items-center justify-between px-4 top-0 w-full z-20 ${
+          scrollDetect && "navLiteBack"
+        } ${show && "fixed"}`}
       >
         <div className="flex flex-no-shrink items-center mr-6 pl-0 md:p-5">
           <a className="navLogo self-center md:pb-3" href="/#">
             <button>
-              {window.innerWidth > 767 ? (
-                <div
-                  className="text-3xl font-normal "
-                  style={{ fontFamily: "Arial", color: textColor }}
-                  onMouseEnter={textEnter}
-                  onMouseLeave={imageEnter}
-                >
-                  shradha
-                </div>
-              ) : (
-                <div
-                  className="text-xl font-normal "
-                  style={{ fontFamily: "Arial", color: textColor }}
-                  onMouseEnter={textEnter}
-                  onMouseLeave={imageEnter}
-                >
-                  shradha
-                </div>
-              )}
+              <div
+                className="md:text-3xl text-xl font-normal "
+                style={{ fontFamily: "Arial", color: textColor }}
+                onMouseEnter={textEnter}
+                onMouseLeave={imageEnter}
+              >
+                shradha
+              </div>
             </button>
           </a>
         </div>
