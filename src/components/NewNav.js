@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { Link as myLink } from "react-scroll";
+// import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import $ from "jquery";
 
@@ -141,24 +141,24 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
           </motion.div>
         </a>
         <div className="flex flex-row">
-          <myLink
+          <Link
             activeClass="active"
             to="work"
             spy={true}
             smooth={true}
             offset={-100}
             duration={500}
-            className="block z-50 md:inline-block p-5 no-underline border-none"
+            className="block cursor-pointer z-50 md:inline-block p-5 no-underline border-none"
           >
-            {/* <button
+            <div
               onMouseEnter={textEnter}
               onMouseLeave={imageEnter}
               className="text-lg z-50 uppercase font-lato"
-            > */}
-            Work
-            {/* </button> */}
-          </myLink>
-          <Link
+            >
+              Work
+            </div>
+          </Link>
+          <a
             onMouseEnter={textEnter}
             onMouseLeave={imageEnter}
             to="/about"
@@ -166,8 +166,8 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
             className="font-lato text-lg uppercase top-0 overflow-hidden p-5 flex flex-row items-center"
           >
             About
-          </Link>
-          <myLink
+          </a>
+          <Link
             selector="#get-in-touch"
             activeClassName="selected"
             onClick={uncheckNav}
@@ -180,8 +180,8 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
             >
               Contact
             </button>
-          </myLink>
-          <Link
+          </Link>
+          <a
             onMouseEnter={textEnter}
             onMouseLeave={imageEnter}
             to="/"
@@ -189,7 +189,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
             className="font-lato text-lg uppercase top-0 overflow-hidden p-5 flex flex-row items-center"
           >
             Resume
-          </Link>
+          </a>
         </div>
       </div>
 

@@ -1,9 +1,7 @@
-// TODO : darken the bg images separately
-
 import React, { useState } from "react";
 // import gsap from "gsap";
-// import { motion } from "framer-motion";
-import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
+import { motion } from "framer-motion";
+import { BsChevronRight as Right, BsChevronLeft as Left } from "react-icons/bs";
 import { FiChevronRight } from "react-icons/fi";
 // import { useGesture } from "react-use-gesture";
 // import { useSpring } from "@react-spring/web";
@@ -86,6 +84,22 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
   //   { domTarget, eventOptions: { passive: false } }
   // );
 
+  // * text trail effect
+  const [flag, setFlag] = useState(false);
+  const trailVariants = {
+    default: { opacity: 0, y: -50, zIndex: -10 },
+    hover: { opacity: 1, y: 0, zIndex: 10 },
+    delay1: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.025 } },
+    delay2: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.05 } },
+    delay3: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.075 } },
+    delay4: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.1 } },
+    delay5: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.125 } },
+    delay6: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.15 } },
+    delay7: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.175 } },
+    delay8: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.2 } },
+    delay9: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.225 } },
+    delay10: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.25 } },
+  };
   const sideNav = () => (
     <div
       class="hidden md:flex flex-col absolute "
@@ -137,14 +151,31 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
         <div class="w-full md:w-2/5">
           <div class="flex items-center my-5 ">
             <div class="w-32 bg-gray-500 h-0.5 mr-3" />
-            <div class="text-white text-xl">{activeWork.domain}</div>
+            <div
+              onMouseOver={() => setFlag((state) => !state)}
+              onMouseOut={() => setFlag((state) => !state)}
+              class="text-white text-xl"
+            >
+              {activeWork.domain}
+            </div>
           </div>
           <div
             className=" text-5xl md:text-7xl font-bold w-max font-lora text-white my-5 flex items-center"
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
           >
-            {activeWork.title}
+            <motion.div>
+              {activeWork.title.split("").map((letter, index) => (
+                <motion.span
+                  animate={flag ? `delay${index + 1}` : "default"}
+                  variants={trailVariants}
+                  key={index}
+                  initial={{ opacity: 0, y: -50 }}
+                >
+                  {letter}
+                </motion.span>
+              ))}
+            </motion.div>
           </div>
           <div class="text-base font-lato text-white my-10 pr-5 md:pr-0">
             {activeWork.description}
@@ -177,14 +208,14 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
         <div class="absolute bottom-10   md:bottom-10 right-2 md:right-20 flex flex-col items-center">
           <div class=" text-stroke-white">0{activeWork.id}</div>
           <div class="  flex items-center  ">
-            <BsChevronLeft
+            <Left
               onClick={() =>
                 works.indexOf(activeWork) > 0 &&
                 setActiveWork(works[works.indexOf(activeWork) - 1])
               }
               class=" md:hover:border-2 border-0 md:border-black p-0 md:p-3  text-2xl md:text-5xl cursor-pointer mx-5  rounded-full text-white"
             />
-            <BsChevronRight
+            <Right
               onClick={() =>
                 works.indexOf(activeWork) < works.length - 1 &&
                 setActiveWork(works[works.indexOf(activeWork) + 1])
