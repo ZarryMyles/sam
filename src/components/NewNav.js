@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import ScrollIntoView from "react-scroll-into-view";
+import { Link as myLink } from "react-scroll";
 import { motion } from "framer-motion";
 import $ from "jquery";
 
@@ -45,16 +45,20 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
     delay5: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.125 } },
   };
 
-  // For Navbar to show up when pressed up
+  // For Navbar to show up when scrolled up
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const controlNavbar = () => {
     if (typeof window !== "undefined") {
+      console.log(show);
       if (window.scrollY > lastScrollY) {
         // if scroll down hide the navbar
-        setShow(false);
+        setShow(true);
       } else {
         // if scroll up show the navbar
+        setShow(false);
+      }
+      if (window.scrollY < 50) {
         setShow(true);
       }
       // remember current page location to use in the next move
@@ -137,30 +141,33 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
           </motion.div>
         </a>
         <div className="flex flex-row">
-          <ScrollIntoView
-            selector="#work"
-            activeClassName="selected"
-            onClick={uncheckNav}
-            className="block md:inline-block p-5 no-underline border-none"
+          <myLink
+            activeClass="active"
+            to="work"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+            className="block z-50 md:inline-block p-5 no-underline border-none"
           >
-            <button
+            {/* <button
               onMouseEnter={textEnter}
               onMouseLeave={imageEnter}
-              className="cursor-pointer text-2xl  font-lora"
-            >
-              Work
-            </button>
-          </ScrollIntoView>{" "}
+              className="text-lg z-50 uppercase font-lato"
+            > */}
+            Work
+            {/* </button> */}
+          </myLink>
           <Link
             onMouseEnter={textEnter}
             onMouseLeave={imageEnter}
             to="/about"
             onClick={uncheckNav}
-            className="font-lora text-2xl top-0 overflow-hidden p-5 flex flex-row items-center"
+            className="font-lato text-lg uppercase top-0 overflow-hidden p-5 flex flex-row items-center"
           >
             About
           </Link>
-          <ScrollIntoView
+          <myLink
             selector="#get-in-touch"
             activeClassName="selected"
             onClick={uncheckNav}
@@ -169,17 +176,17 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
             <button
               onMouseEnter={textEnter}
               onMouseLeave={imageEnter}
-              className="cursor-pointer text-2xl  font-lora"
+              className="cursor-pointer font-lato text-lg uppercase"
             >
               Contact
             </button>
-          </ScrollIntoView>
+          </myLink>
           <Link
             onMouseEnter={textEnter}
             onMouseLeave={imageEnter}
             to="/"
             onClick={uncheckNav}
-            className="font-lora text-2xl top-0 overflow-hidden p-5 flex flex-row items-center"
+            className="font-lato text-lg uppercase top-0 overflow-hidden p-5 flex flex-row items-center"
           >
             Resume
           </Link>
@@ -201,7 +208,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
         >
           shradha
         </div>
-        <div className="flex flex-row text-white gap-4 font-laro text-lg uppercase">
+        <div className="flex flex-row text-white gap-4 font-lato text-lg uppercase">
           <div onMouseEnter={textEnter} onMouseLeave={imageEnter}>
             Work
           </div>

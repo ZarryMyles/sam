@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import ScrollIntoView from "react-scroll-into-view";
+// import ScrollIntoView from "react-scroll-into-view";
 // import { motion } from "framer-motion";
 
 const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
@@ -110,7 +110,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
 
         <ul className="navList uppercase font-lora menu md:border-none  font-normal flex mr-5 md:mt-0 md:my-2 mt-2 ml-5 items-center justify-end list-none m-0 p-0 w-screen md:w-auto  md:bg-transparent">
           <li className="border-none text-center md:pb-3">
-            <ScrollIntoView
+            <div
               selector="#work"
               onClick={uncheckNav}
               className=" block md:inline-block  py-3 no-underline border-none text-black"
@@ -123,7 +123,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
               >
                 Work
               </button>
-            </ScrollIntoView>
+            </div>
           </li>
 
           <li className="border-none text-center">
@@ -140,7 +140,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
           </li>
 
           <li className="border-none text-center">
-            <ScrollIntoView
+            <div
               selector="#get-in-touch"
               activeClassName="selected"
               onClick={uncheckNav}
@@ -154,7 +154,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
               >
                 Contact
               </button>
-            </ScrollIntoView>
+            </div>
           </li>
 
           <li className="navBlog border-none text-center">
