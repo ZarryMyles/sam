@@ -4,6 +4,7 @@ import "./App.css";
 import "./vishal.css";
 import {
   Work,
+  WorkLogos,
   SocialProof,
   GetInTouch,
   Footer,
@@ -142,11 +143,11 @@ function App() {
             textLeave={textLeave}
             largeEnter={largeEnter}
           />
-          {/* <WorkLogos
+          <WorkLogos
             imageEnter={imageEnter}
             textEnter={textEnter}
             textLeave={textLeave}
-          /> */}
+          />
           <SocialProof
             imageEnter={imageEnter}
             textEnter={textEnter}
