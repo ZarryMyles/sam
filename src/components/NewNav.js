@@ -16,11 +16,11 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
     },
     {
       name: "Contact",
-      link: "/get-into-touch",
+      link: "/#get-in-touch",
     },
     {
       name: "Resume",
-      link: "/#",
+      link: "/",
     },
   ];
 
@@ -146,7 +146,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
             to="work"
             spy={true}
             smooth={true}
-            offset={-100}
+            offset={1}
             duration={500}
             className="block cursor-pointer z-50 md:inline-block p-5 no-underline border-none"
           >
@@ -161,16 +161,19 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
           <a
             onMouseEnter={textEnter}
             onMouseLeave={imageEnter}
-            to="/about"
+            href="/about"
             onClick={uncheckNav}
             className="font-lato text-lg uppercase top-0 overflow-hidden p-5 flex flex-row items-center"
           >
             About
           </a>
           <Link
-            selector="#get-in-touch"
-            activeClassName="selected"
-            onClick={uncheckNav}
+            activeClass="active"
+            to="get-in-touch"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
             className="block md:inline-block p-5 no-underline border-none"
           >
             <button
@@ -184,7 +187,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
           <a
             onMouseEnter={textEnter}
             onMouseLeave={imageEnter}
-            to="/"
+            href="/"
             onClick={uncheckNav}
             className="font-lato text-lg uppercase top-0 overflow-hidden p-5 flex flex-row items-center"
           >
@@ -209,18 +212,48 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
           shradha
         </div>
         <div className="flex flex-row text-white gap-4 font-lato text-lg uppercase">
-          <div onMouseEnter={textEnter} onMouseLeave={imageEnter}>
-            Work
-          </div>
-          <div onMouseEnter={textEnter} onMouseLeave={imageEnter}>
+          <Link
+            activeClass="active"
+            to="work"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            onMouseEnter={textEnter}
+            onMouseLeave={imageEnter}
+          >
+            <div
+              onMouseEnter={textEnter}
+              onMouseLeave={imageEnter}
+              className="text-lg z-50 uppercase font-lato"
+            >
+              Work
+            </div>
+          </Link>
+          <a href="/about" onMouseEnter={textEnter} onMouseLeave={imageEnter}>
             About
-          </div>
-          <div onMouseEnter={textEnter} onMouseLeave={imageEnter}>
-            Contact
-          </div>
-          <div onMouseEnter={textEnter} onMouseLeave={imageEnter}>
+          </a>
+          <Link
+            activeClass="active"
+            to="get-in-touch"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+            onMouseEnter={textEnter}
+            onMouseLeave={imageEnter}
+          >
+            <div
+              onMouseEnter={textEnter}
+              onMouseLeave={imageEnter}
+              className="text-lg z-50 uppercase font-lato"
+            >
+              Contact
+            </div>
+          </Link>
+          <a href="/" onMouseEnter={textEnter} onMouseLeave={imageEnter}>
             Resume
-          </div>
+          </a>
         </div>
       </div>
 
