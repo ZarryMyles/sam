@@ -152,8 +152,8 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
           <div class="flex items-center my-5 ">
             <div class="w-32 bg-gray-500 h-0.5 mr-3" />
             <div
-              onMouseOver={() => setFlag((state) => !state)}
-              onMouseOut={() => setFlag((state) => !state)}
+              // onMouseOver={() => setFlag((state) => !state)}
+              // onMouseOut={() => setFlag((state) => !state)}
               class="text-white text-xl"
             >
               {activeWork.domain}
