@@ -4,6 +4,7 @@ import "./App.css";
 import "./vishal.css";
 import {
   Work,
+  // WorkLogos,
   SocialProof,
   GetInTouch,
   Footer,
