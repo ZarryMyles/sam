@@ -164,7 +164,8 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
           >
-            <motion.div>
+            {activeWork.title}
+            {/* <motion.div>
               {activeWork.title.split("").map((letter, index) => (
                 <motion.span
                   animate={flag ? `delay${index + 1}` : "default"}
@@ -175,7 +176,7 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
                   {letter}
                 </motion.span>
               ))}
-            </motion.div>
+            </motion.div> */}
           </div>
           <div class="text-base font-lato text-white my-10 pr-5 md:pr-0">
             {activeWork.description}
