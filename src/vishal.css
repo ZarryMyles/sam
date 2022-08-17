@@ -1,0 +1,73 @@
+/* * get in touch  */
+.text-stroke-black{
+    color: transparent;
+    -webkit-text-stroke: 1px #000;
+    transition: all 0.4s ease;
+}
+.text-stroke-white{
+    color: #24242475;
+    font-weight: bold;
+    -webkit-text-stroke: 1px rgb(253, 253, 253);
+    transition: all 0.4s ease;
+    font-size: 10rem;
+}
+@media screen and (max-width: 768px) {
+    /* .text-stroke-black{
+        color: transparent;
+        -webkit-text-stroke: 1px #000;
+        transition: all 0.4s ease;
+    } */
+    .text-stroke-white{
+        font-size: 4rem;
+    }
+}
+.getintouch-graybg{
+    transform: translateX(0%);
+    transition: transform 0.4s ease-in-out;
+}
+.getintouch-root:hover .getintouch-graybg{
+    transform: translateX(100%);
+}
+.getintouch-root:hover .text-stroke-black{
+    color: black;
+    -webkit-text-stroke: none;
+}
+/* scroll bar */
+::-webkit-scrollbar {
+    width: 7px;
+    overflow: overlay;
+    right: 0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #424242;
+    border-radius: 5px;
+}
+
+
+  /* work side nav text */
+.work-side-nav-text{
+    color: #808080b6;
+}
+
+/* work bg translate */
+.work-bg-translate{
+    transition-property: width;
+    transition-duration: 2s;
+}
+
+
+/* hiding highlight color on phone on tab */
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
