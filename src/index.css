@@ -11,6 +11,12 @@
   font-family: "Lora";
   src: url("./fonts/Lora-Regular.ttf");
 }
+.font-lato {
+  font-family: "Lato";
+}
+.font-lora {
+  font-family: "Lora";
+}
 
 body {
   background-color: #fcfffd;

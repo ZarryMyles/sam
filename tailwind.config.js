@@ -32,10 +32,10 @@ module.exports = {
         lightGrey: "#e6e6e6",
         footerGrey: "#1f1f1f",
         bgGrey: "#fcfffd",
+        gray: "#B5B5B5",
       },
     },
     fontFamily: {
-      custom: ["font-montserrat", "font-rubik"],
       lato: "'Lato', sans-serif",
       lora: "'Lora', sans-serif",
       montserrat: "'Montserrat', sans-serif",

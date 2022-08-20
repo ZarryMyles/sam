@@ -9,7 +9,7 @@
     font-weight: bold;
     -webkit-text-stroke: 1px rgb(253, 253, 253);
     transition: all 0.4s ease;
-    font-size: 10rem;
+    font-size: 6rem;
 }
 @media screen and (max-width: 768px) {
     /* .text-stroke-black{
@@ -70,4 +70,8 @@ button,
 select,
 a {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.marquee-container>.overlay{
+    /* hide */
+    display: none !important;
 }

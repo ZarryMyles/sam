@@ -3,11 +3,14 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { BsChevronRight as Right, BsChevronLeft as Left } from "react-icons/bs";
 import { FiChevronRight } from "react-icons/fi";
+import WorkVideo from "./WorkVideo";
 // import { useGesture } from "react-use-gesture";
 // import { useSpring } from "@react-spring/web";
 
 // const calcX = (y, ly) => -(y - ly - window.innerHeight / 2) / 20;
 // const calcY = (x, lx) => (x - lx - window.innerWidth / 2) / 20;
+// import { useVideoConfig } from "remotion";
+// import { Gif } from "@remotion/gif";
 
 const works = [
   {
@@ -16,7 +19,10 @@ const works = [
     domain: "Architecture",
     description:
       "Cal was first. The first public university in the great state of california. They're the pioneers.",
+    gif: false,
     image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg",
+    video:
+      "https://res.cloudinary.com/genesiscloudimages/video/upload/v1660394170/work_gifs/C01_yqtldj.mp4",
     link: "/",
   },
   {
@@ -25,7 +31,10 @@ const works = [
     domain: "Design",
     description:
       "Cal was first. The first public university in the great state of california. They're the pioneers.",
+    gif: true,
     image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/2.jpg",
+    video:
+      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/Comp_1_tdwzlp.gif",
     link: "/",
   },
   {
@@ -34,7 +43,10 @@ const works = [
     domain: "fadsfdasf",
     description:
       "Cal was first. The first public university in the great state of california. They're the pioneers.",
+    gif: true,
     image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/3.jpg",
+    video:
+      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/render_s6dzdu.gif",
     link: "/",
   },
 ];
@@ -84,22 +96,6 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
   //   { domTarget, eventOptions: { passive: false } }
   // );
 
-  // * text trail effect
-  const [flag, setFlag] = useState(false);
-  const trailVariants = {
-    default: { opacity: 0, y: -50, zIndex: -10 },
-    hover: { opacity: 1, y: 0, zIndex: 10 },
-    delay1: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.025 } },
-    delay2: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.05 } },
-    delay3: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.075 } },
-    delay4: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.1 } },
-    delay5: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.125 } },
-    delay6: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.15 } },
-    delay7: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.175 } },
-    delay8: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.2 } },
-    delay9: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.225 } },
-    delay10: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.25 } },
-  };
   const sideNav = () => (
     <div
       class="hidden md:flex flex-col absolute "
@@ -150,11 +146,11 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
       >
         <div class="w-full md:w-2/5">
           <div class="flex items-center my-5 ">
-            <div class="w-32 bg-gray-500 h-0.5 mr-3" />
+            <div class="w-32 bg-brand-gray h-0.5 mr-3" />
             <div
               // onMouseOver={() => setFlag((state) => !state)}
               // onMouseOut={() => setFlag((state) => !state)}
-              class="text-white text-xl"
+              class="text-brand-gray text-xl font-lato "
             >
               {activeWork.domain}
             </div>
@@ -189,9 +185,9 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
               //   translateX: `${translateX.get()}px`,
               //   translateY: `${translateY.get()}px`,
               // }}
-              class="px-6 py-4 duration-100 transition-all  w-max  flex items-center my-3 rounded-l-full rounded-r-full text-white border-gray-400 border-2 max-w-max tracking-wider             "
+              class=" py-4 duration-100 transition-all  w-max  flex items-center my-3 rounded-l-full rounded-r-full text-white  max-w-max tracking-wider             "
             >
-              <FiChevronRight class=" text-3xl p-1  mr-4 bg-white rounded-full text-black " />
+              <FiChevronRight class=" text-3xl p-1  mr-4   rounded-full text-white border-2 border-white " />
               <div
                 class={` text-lg 
                    
@@ -206,28 +202,30 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
           </a>
         </div>
         {/* the no. with text stroke */}
-        <div class="absolute bottom-10   md:bottom-10 right-2 md:right-20 flex flex-col items-center">
-          <div class=" text-stroke-white">0{activeWork.id}</div>
+        <div class="absolute bottom-10   md:bottom-2 right-2 md:right-10 flex flex-col items-center">
           <div class="  flex items-center  ">
             <Left
               onClick={() =>
                 works.indexOf(activeWork) > 0 &&
                 setActiveWork(works[works.indexOf(activeWork) - 1])
               }
-              class=" md:hover:border-2 border-0 md:border-black p-0 md:p-3  text-2xl md:text-5xl cursor-pointer mx-5  rounded-full text-white"
+              class={` ${
+                activeWork.id == 1 && "opacity-0 cursor-auto "
+              }  p-0 md:p-3  text-2xl md:text-5xl cursor-pointer mx-5  rounded-full text-white`}
             />
+            <div class=" text-stroke-white mb-4">0{activeWork.id}</div>
             <Right
               onClick={() =>
                 works.indexOf(activeWork) < works.length - 1 &&
                 setActiveWork(works[works.indexOf(activeWork) + 1])
               }
-              class=" md:hover:border-2 border-0 md:border-black p-0 md:p-3  text-2xl md:text-5xl cursor-pointer mx-5  rounded-full text-white"
+              class="     p-0 md:p-3  text-2xl md:text-5xl cursor-pointer mx-5  rounded-full text-white"
             />
           </div>
         </div>
       </div>
       {/* bg image */}
-      {works.map((work) => (
+      {/* {works.map((work) => (
         <div class="w-full h-full absolute    left-0 top-0 z-0">
           <div
             style={{
@@ -242,24 +240,49 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
             }  w-full bg-cover bg-no-repeat ease-linear transition-all  duration-700 brightness-50 h-full `}
           />
         </div>
-      ))}
-      {/* trying changing width  */}
-      {/* {works.map((work) => (
-        <div class="w-full h-full left-0 top-0 absolute">
-          <div
-            style={{
-              backgroundImage: `url(${work.image})`,
-            }}
-            class={`${
-              work.id < activeWork.id
-                ? "left-0 w-0"
-                : work.id > activeWork.id
-                ? " right-0 w-0"
-                : "bg-center w-full "
-            }   w-full bg-cover bg-no-repeat absolute top-0 z-0 ease-linear transition-all duration-700 brightness-50 h-full `}
-          />
-        </div>
       ))} */}
+      {/* bg gif */}
+      <div class={`w-full object-cover h-full absolute     left-0 top-0 z-0`}>
+        {works.map((work) =>
+          work.gif ? (
+            <img
+              class={`${
+                work.id < activeWork.id
+                  ? "-translate-x-full  bg-center md:bg-left"
+                  : work.id > activeWork.id
+                  ? " translate-x-[100%]  bg-center md:bg-right"
+                  : "bg-center scale-125 "
+              }  w-full bg-cover bg-no-repeat ease-linear transition-all  duration-700 brightness-50 h-screen  object-cover  absolute
+             w-100 md:w-screen  md:opacity-100 opacity-100 md:object-cover  bg-red-100  `}
+              src={work.video}
+              alt="loading..."
+            />
+          ) : (
+            <video
+              // className=""
+              class={`${
+                work.id < activeWork.id
+                  ? "-translate-x-full  bg-center md:bg-left"
+                  : work.id > activeWork.id
+                  ? " translate-x-[100%]  bg-center md:bg-right"
+                  : "bg-center scale-125 "
+              }  w-full bg-cover bg-no-repeat ease-linear transition-all  duration-700 brightness-50 h-screen  object-cover  absolute
+               w-100 md:w-screen  md:opacity-100 opacity-100 md:object-cover  bg-red-100  `}
+              loop
+              autoPlay={activeWork.id == work.id ? true : false}
+              muted
+              // onLoadedData={toggleLoading}
+            >
+              <source
+                // Changing source of video depending on size of the screen
+                src={work.video}
+                type="video/mp4"
+              />
+            </video>
+            // <WorkVideo work={work.video} activeWork={activeWork} />
+          )
+        )}
+      </div>
     </div>
   );
 
@@ -269,7 +292,7 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
       className="h-screen overflow-y-hidden  flex bg-white w-full relative"
     >
       {cards()}
-      {sideNav()}
+      {/* {sideNav()} */}
     </div>
   );
 };

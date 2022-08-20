@@ -12,3 +12,4 @@ export { default as Principles } from "./Principles";
 export { default as Skills } from "./Skills";
 
 // small comps
+export { default as WorkVideo } from "./WorkVideo";
