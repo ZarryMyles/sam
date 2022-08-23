@@ -6,16 +6,53 @@
   font-family: "Lato";
   src: url("./fonts/Lato-Regular.ttf");
 }
+.font-lato {
+  font-family: "Lato";
+}
+@font-face {
+  font-family: "Lato-Thin";
+  src: url("./fonts/lato/Lato-Thin.ttf");
+}
+.font-lato-thin {
+  font-family: "Lato-Thin";
+}
+@font-face {
+  font-family: "Lato-Light";
+  src: url("./fonts/lato/Lato-Light.ttf");
+}
+.font-lato-light {
+  font-family: "Lato-Light";
+}
+@font-face {
+  font-family: "Lato-Light-Italic";
+  src: url("./fonts/lato/Lato-LightItalic.ttf");
+}
+.font-lato-light-italic {
+  font-family: "Lato-Light-Italic";
+}
 
+/* lora */
 @font-face {
   font-family: "Lora";
   src: url("./fonts/Lora-Regular.ttf");
 }
-.font-lato {
-  font-family: "Lato";
-}
 .font-lora {
   font-family: "Lora";
+}
+@font-face {
+  font-family: "LoraItalic";
+  src: url("./fonts/lora/Lora-Italic.ttf");
+}
+.font-lora-italic {
+  font-family: "LoraItalic";
+}
+
+@font-face {
+  font-family: "LoraMediumItalic";
+  src: url("./fonts/lora/Lora-Regular.ttf");
+}
+.font-lora-medium-italic {
+  font-family: "LoraMediumItalic";
 }
 
 body {

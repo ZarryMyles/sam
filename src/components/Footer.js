@@ -32,7 +32,12 @@ const Footer = ({ textEnter, textLeave, imageEnter }) => {
       className="w-full flex flex-col"
     >
       <div className="bg-brand-darkGrey2 flex flex-col md:flex-row md:items-center px-5 md:px-48 py-10 md:py-20 ">
-        <div className="flex text-gray-400 flex-col justify-center  md:w-2/6 mb-5 md:mb-0">
+        <div
+          className="flex text-gray-400 flex-col justify-center  md:w-2/6 mb-5 md:mb-0"
+          style={{
+            color: "#FFC7D1",
+          }}
+        >
           <div
             onMouseEnter={textEnter}
             onMouseLeave={imageEnter}

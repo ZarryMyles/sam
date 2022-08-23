@@ -1,18 +1,18 @@
 import React from "react";
 import { BsArrowRightShort } from "react-icons/bs";
 import { FiChevronRight } from "react-icons/fi";
-
+import HeroImage from "../assets/landingpage/Rectangle.png";
 const LandingSection = ({ textEnter, imageEnter, textLeave, largeEnter }) => {
   return (
     <div
       id="landing-section"
-      className="px-5 md:px-32 h-screen w-full text-white from-brand-footerGrey  to-black to: bg-gradient-to-r"
+      className="px-5 md:px-32 h-screen w-full text-white from-brand-footerGrey  to-black to: bg-gradient-to-r  top-0 left-0 "
       onMouseEnter={imageEnter}
       onMouseLeave={textLeave}
     >
-      <div class="flex flex-col z-20 relative  h-full justify-center w-9/10 md:w-4/5 ">
+      <div class="flex flex-col z-20 relative  h-full  md:py-36 w-9/10  md:w-3/4 ">
         <div
-          class="text-3xl md:text-5xl font-thin  w-full italic  "
+          class="text-3xl md:text-5xl font-thin  w-full   font-lato-light-italic landing-page-text  "
           onMouseEnter={largeEnter}
           onMouseLeave={imageEnter}
           style={{
@@ -20,9 +20,9 @@ const LandingSection = ({ textEnter, imageEnter, textLeave, largeEnter }) => {
             lineHeight: "1.4",
           }}
         >
-          Hello I’m <span className="font-semibold ">Shradha</span>
+          Hello I’m <span className="  font-lora-italic ml-1">Shradha</span>
           <br />I work with designs driven by purpose that reaches{" "}
-          <span class=" font-semibold">beyond</span> modernity.
+          <span class=" font-lora-italic mr-1">beyond</span> modernity.
         </div>
         <div class="flex flex-col md:flex-row md:items-center w-full">
           <a
@@ -42,7 +42,7 @@ const LandingSection = ({ textEnter, imageEnter, textLeave, largeEnter }) => {
                 letterSpacing: "0.2em",
                 color: "#FFC7D1",
               }}
-              class=" md:text-lg uppercase"
+              class=" md:text-lg uppercase font-lato   "
             >
               Work with me
             </div>
@@ -52,11 +52,12 @@ const LandingSection = ({ textEnter, imageEnter, textLeave, largeEnter }) => {
       <div
         style={{
           width: "650px",
-          height: "438px",
+          height: "380px",
+          backgroundImage: `url(${HeroImage})`,
           // left: "746px",
           // top: "321px",
         }}
-        class="absolute z-10 bg-gray-500  right-40 bottom-20"
+        class="absolute z-10 bg-gray-500  right-40 bottom-24 bg-cover bg-center bg-no-repeat"
       ></div>
     </div>
   );

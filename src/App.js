@@ -131,6 +131,7 @@ function App() {
           id="sections"
           className="  flex flex-col items-center justify-center"
         >
+          {/* <div className="h-screen bg-transparent -z-10"></div> */}
           <LandingSection
             imageEnter={imageEnter}
             textEnter={textEnter}

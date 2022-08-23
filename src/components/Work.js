@@ -219,7 +219,9 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
                 works.indexOf(activeWork) < works.length - 1 &&
                 setActiveWork(works[works.indexOf(activeWork) + 1])
               }
-              class="     p-0 md:p-3  text-2xl md:text-5xl cursor-pointer mx-5  rounded-full text-white"
+              class={` ${
+                activeWork.id == 3 && "opacity-0 cursor-auto "
+              }  p-0 md:p-3  text-2xl md:text-5xl cursor-pointer mx-5  rounded-full text-white`}
             />
           </div>
         </div>
