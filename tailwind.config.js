@@ -33,6 +33,7 @@ module.exports = {
         footerGrey: "#1f1f1f",
         bgGrey: "#fcfffd",
         gray: "#B5B5B5",
+        black: "#0D0D0D",
       },
     },
     fontFamily: {
@@ -185,6 +186,8 @@ module.exports = {
       wide: "0.025em",
       wider: "0.05em",
       widest: "0.1em",
+      1.5: "1.5px",
+      3: "3px",
     },
     extend: {},
   },

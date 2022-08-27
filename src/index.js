@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 import App from "./App";
-import { Error, About, Works, WorkOverview } from "./pages";
+import { Error, About, Works, WorkOverview, BillEasyPage } from "./pages";
 // import Scrollbar from "./components/Scrollbar";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -18,9 +18,11 @@ root.render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="about" element={<About />} />
-      <Route path="works" element={<Works />}>
-        <Route path=":workName" element={<Works />} />
-      </Route>
+      {/* <Route path="works" element={<Works />}>
+        <Route path="billeasy" element={<BillEasyPage />} />
+      </Route> */}
+      {/* works */}
+      <Route path="billeasy" element={<BillEasyPage />} />
 
       <Route path="*" element={<Error />} />
     </Routes>

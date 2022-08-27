@@ -30,6 +30,13 @@
 .font-lato-light-italic {
   font-family: "Lato-Light-Italic";
 }
+.font-lato-bold {
+  font-family: "Lato-Bold";
+}
+@font-face {
+  font-family: "Lato-Bold";
+  src: url("./fonts/lato/Lato-Bold.ttf");
+}
 
 /* lora */
 @font-face {
