@@ -25,7 +25,7 @@ const WorkLogos = ({ textEnter, textLeave, imageEnter }) => {
 
   return (
     <div
-      className="my-20 flex justify-center items-center w-full  dark:bg-black"
+      className="my-10 md:my-20 flex justify-center items-center w-full  dark:bg-black"
       id="work-logo-container "
     >
       <div class="w-full ">
@@ -37,7 +37,7 @@ const WorkLogos = ({ textEnter, textLeave, imageEnter }) => {
               style={{
                 fontWeight: "100",
               }}
-              className="flex my-5 items-center text-6xl mx-10 dark:text-brand-gray font-lato-light  "
+              className="flex my-5 items-center text-xl md:text-6xl mx-10 dark:text-brand-gray font-lato-light  "
             >
               {client.name}
             </div>
@@ -48,7 +48,7 @@ const WorkLogos = ({ textEnter, textLeave, imageEnter }) => {
             <div
               onMouseEnter={textEnter}
               onMouseLeave={textLeave}
-              className="flex my-5 items-center font-semibold font-lora-medium-italic italic text-6xl mx-10 dark:text-brand-gray"
+              className="flex my-5 items-center font-semibold font-lora-medium-italic italic text-xl md:text-6xl mx-10 dark:text-brand-gray"
             >
               {client.name}
             </div>

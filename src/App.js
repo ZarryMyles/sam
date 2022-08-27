@@ -113,8 +113,8 @@ function App() {
     if (activeSection === "landing-section") setTheme("dark");
     else if (activeSection === "work") setTheme("light");
     else if (activeSection === "social-proof") setTheme("dark");
-    else if (activeSection === "get-in-touch") setTheme("light");
-    else if (activeSection === "footer-main") setTheme("light");
+    else if (activeSection === "get-in-touch") setTheme("dark");
+    else if (activeSection === "footer-main") setTheme("dark");
     // else setTheme();
   }, [activeSection]);
 

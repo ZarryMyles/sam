@@ -1,27 +1,29 @@
 import React from "react";
 import { TiDocumentText } from "react-icons/ti";
 import { FaBehanceSquare, FaDribbbleSquare, FaLinkedin } from "react-icons/fa";
+import { HiOutlineLocationMarker } from "react-icons/hi";
 const Footer = ({ textEnter, textLeave, imageEnter }) => {
   const socials = [
     {
+      name: "Bengaluru",
+      link: "https://www.behance.net/",
+      icon: <HiOutlineLocationMarker />,
+    },
+    {
+      name: "Email",
+      link: "https://dribbble.com/",
+      // icon: <FaDribbbleSquare />,
+    },
+    {
       name: "LinkedIn",
       link: "https://www.linkedin.com/in/",
-      icon: <FaLinkedin />,
+      // icon: <FaLinkedin />,
     },
-    {
-      name: "Behance",
-      link: "https://www.behance.net/",
-      icon: <FaBehanceSquare />,
-    },
-    {
-      name: "Dribble",
-      link: "https://dribbble.com/",
-      icon: <FaDribbbleSquare />,
-    },
+
     {
       name: "Resume",
       link: "/",
-      icon: <TiDocumentText />,
+      // icon: <TiDocumentText />,
     },
   ];
   return (
@@ -41,23 +43,26 @@ const Footer = ({ textEnter, textLeave, imageEnter }) => {
           <div
             onMouseEnter={textEnter}
             onMouseLeave={imageEnter}
-            className="text-2xl max-w-max"
+            className="  text-3xl max-w-max font-lora-italic"
           >
             Sharadda Kulkarni
           </div>
           <div
             onMouseEnter={textEnter}
             onMouseLeave={imageEnter}
-            className=" text-sm tracking-widest max-w-max"
+            className=" text-lg tracking-widest max-w-max font-lato  "
+            style={{
+              color: "#B5B5B5",
+            }}
           >
-            UI / UX Designer
+            Product Designer
           </div>
-          <div
+          {/* <div
             style={{
               height: "1px",
             }}
             class="w-14 mt-2 bg-white  block md:hidden"
-          />
+          /> */}
         </div>
         <div class="flex flex-wrap md:flex-nowrap md:flex-row md:justify-between md:items-center md:w-4/6">
           {socials.map((social, index) => (
@@ -65,16 +70,35 @@ const Footer = ({ textEnter, textLeave, imageEnter }) => {
               onMouseEnter={textEnter}
               onMouseLeave={imageEnter}
               href={social.link}
-              class="text-white  md:underline flex items-center  w-1/2 md:w-max  my-2 md:my-0"
+              class="text-white   flex items-center  w-1/2 md:w-max  my-2 md:my-0"
             >
-              <div class="mr-2 text-xl text-white">{social.icon}</div>
+              {social.icon && (
+                <div
+                  class="hidden md:block mr-2 text-xl "
+                  style={{
+                    color: "#7A2222",
+                  }}
+                >
+                  {social.icon}
+                </div>
+              )}
               {social.name}
+              {social.icon && (
+                <div
+                  class="block md:hidden ml-1 text-xl "
+                  style={{
+                    color: "#7A2222",
+                  }}
+                >
+                  {social.icon}
+                </div>
+              )}
             </a>
           ))}
         </div>
       </div>
       <div className=" bg-brand-footerGrey shadow-xl text-xs font-lato text-gray-400 flex items-center justify-center p-5 md:p-10">
-        © {new Date().getFullYear()}. Shradha. All Rights Reserved.
+        © {new Date().getFullYear()}. shradha.design . All Rights Reserved.
       </div>
     </div>
   );

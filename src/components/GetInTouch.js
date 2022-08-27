@@ -15,11 +15,12 @@ const GetInTouch = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
           <div
             // onMouseEnter={textEnter}
             // onMouseLeave={imageEnter}
-            className="text-5xl font-bold dark:text-white text-stroke-black tracking-wider my-10 md:my-0"
+            // class name for text stroke : text-stroke-black
+            className="text-center md:text-left text-4xl md:text-5xl font-lato uppercase dark:text-white  tracking-wider my-10 md:my-0"
           >
             Get In Touch
           </div>
-          <div>
+          {/* <div>
             To create more soulful stories and delightful experiences,
             <span className="font-bold"> connect to me on</span>{" "}
             <a
@@ -30,6 +31,22 @@ const GetInTouch = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
             >
               LinkedIn
             </a>
+          </div> */}
+          <div
+            className="font-lato text-center md:text-left  "
+            style={{
+              letterSpacing: "0.01em",
+            }}
+          >
+            Lets create more{" "}
+            <span
+              style={{
+                color: "#FFC7D1",
+              }}
+              className=" font-lato-light-italic font-bold"
+            >
+              soulful stories and delightful experiences
+            </span>
           </div>
         </div>
       </div>
