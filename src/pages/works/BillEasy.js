@@ -2,6 +2,10 @@ import React from "react";
 import { WorkHero, WorkVideos } from "../../components";
 import { ReactComponent as Quote } from "../../assets/icons/quotestart.svg";
 import insightsImg from "../../assets/works/billEasy/billEasyInsights.png";
+import usability1 from "../../assets/works/billEasy/billEasyUsabilityTesting1.png";
+import usability2 from "../../assets/works/billEasy/billEasyUsabilityTesting2.png";
+import usability3 from "../../assets/works/billEasy/billEasyUsabilityTesting3.png";
+import usability4 from "../../assets/works/billEasy/billEasyUsabilityTesting4.png";
 const BillEasy = () => {
   const work = {
     image:
@@ -20,7 +24,7 @@ const BillEasy = () => {
       <WorkHero work={work} />
       <WorkVideos work={work} />
       {/* project brief */}
-      <div class=" p-24 grid grid-cols-4 gap-20">
+      <div class=" p-5 md:p-24 grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-20">
         <div>
           <div class="text-xl font-bold font-lato-bold flex items-center">
             👨‍👩‍👦 Project Type
@@ -47,8 +51,8 @@ const BillEasy = () => {
         </div>
       </div>
       {/* project concept */}
-      <div class=" p-24 grid grid-cols-12 gap-28 h-full">
-        <div class="col-span-7 h-full  ">
+      <div class=" p-5 md:p-24 grid grid-cols-12 md:gap-28 h-full">
+        <div class="col-span-12 md:col-span-7 h-full  ">
           <div class="flex items-center mb-12">
             <div
               style={{
@@ -76,7 +80,7 @@ const BillEasy = () => {
             has you covered 😎
           </div>
         </div>
-        <div class="col-span-5 h-full flex flex-col items-center justify-center">
+        <div class="col-span-12 md:col-span-5 h-full flex flex-col items-center justify-center">
           <div className="my-5">
             <div className="mb-3">✅ Results</div>
             <div>
@@ -94,7 +98,7 @@ const BillEasy = () => {
         </div>
       </div>
       {/* purpose */}
-      <div className="p-20">
+      <div className="p-5 md:p-20">
         <div class="flex items-center mb-12">
           <div
             style={{
@@ -107,7 +111,7 @@ const BillEasy = () => {
           </div>
         </div>
         <div class="grid grid-cols-12">
-          <div class="col-span-4">
+          <div class="col-span-12 md:col-span-4">
             <div class="text-2xl">🎯 Goals</div>
             <div className="my-5 ">
               1. Optimize efficiency <br />
@@ -115,24 +119,22 @@ const BillEasy = () => {
               3. Save time
             </div>
           </div>
-          <div class="col-span-8 ">
-            <div class="text-2xl font-lato-light font-bold">
-              👨‍👨‍👧‍👦 Target audience
-            </div>
+          <div class="col-span-12 md:col-span-8 ">
+            <div class="text-2xl font-lato ">👨‍👨‍👧‍👦 Target audience</div>
             <div class="flex  font-lato-bold  my-4">
               <div className="mr-16">Direct users</div>
               <div className="mr-16">Indirect users</div>
             </div>
-            <div className="flex my-4  pl-14 ">
-              <div className="mr-16">Accounts team</div>
-              <div className="mr-16">Stakeholders</div>
-              <div className="mr-16">Business Intelligence</div>
+            <div className="flex w-full justify-between md:justify-start my-4  pl-0 md:pl-14 ">
+              <div className="mr-2 md:mr-16">Accounts team</div>
+              <div className="mr-2 md:mr-16">Stakeholders</div>
+              <div className="mr-2 md:mr-16">Business Intelligence</div>
             </div>
           </div>
         </div>
       </div>
       {/* challenge */}
-      <div class="bg-brand-black  p-24 ">
+      <div class="bg-brand-black  p-5 md:p-24 ">
         <div class="flex items-center mb-12">
           <div
             style={{
@@ -144,10 +146,10 @@ const BillEasy = () => {
             Challenge
           </div>
         </div>
-        <div class="grid grid-cols-12 gap-10 items-center">
-          <div class="col-span-7 relative">
+        <div class="grid grid-cols-12 md:gap-10 items-center">
+          <div class="col-span-12 md:col-span-7 relative">
             <Quote
-              className="absolute -top-5 -left-5 w-6 h-6  "
+              className="absolute -top-4 md:-top-5 -left-4 md:-left-5 w-6 h-6  "
               stroke="none"
             />
             <div
@@ -163,12 +165,12 @@ const BillEasy = () => {
             </div>
           </div>
           <div
-            class="col-span-5  text-black p-10 rounded-md flex"
+            class="col-span-12 md:col-span-5 my-2 md:my-0  text-black p-5 md:p-10 rounded-md flex md:flex-row flex-col "
             style={{
               backgroundColor: "#EFFCF5",
             }}
           >
-            <div class="w-1/2 ">
+            <div class="w-full md:w-1/2 text-center md:text-left my-5 md:my-0">
               <div
                 style={{
                   color: "#064925",
@@ -186,7 +188,7 @@ const BillEasy = () => {
                 To prep a signle manually
               </div>
             </div>
-            <div class="w-1/2 ">
+            <div class="w-full md:w-1/2 text-center md:text-left my-5 md:my-0">
               <div
                 style={{
                   color: "#064925",
@@ -207,9 +209,10 @@ const BillEasy = () => {
           </div>
         </div>
       </div>
+      {/* TODO: icon */}
       {/* problem identification */}
-      <div class=" p-24 grid grid-cols-12 gap-28 h-full">
-        <div class="col-span-7 h-full  ">
+      <div class=" p-5 md:p-24 grid grid-cols-12 md:gap-28 h-full">
+        <div class="col-span-12 md:col-span-7 h-full  ">
           <div class="flex items-center mb-12">
             <div
               style={{
@@ -243,7 +246,7 @@ const BillEasy = () => {
             </li>
           </ul>
         </div>
-        <div class="col-span-5 h-full flex flex-col items-center justify-center">
+        <div class="col-span-12 md:col-span-5 h-full flex flex-col items-center justify-center">
           <div class="flex items-center">
             <div></div>
             <div
@@ -259,10 +262,10 @@ const BillEasy = () => {
         </div>
       </div>
       {/* insights */}
-      <div class="p-24 font-lato">
+      <div class="p-5 md:p-24 font-lato">
         <div className=" text-2xl">🗝️ Insights</div>
-        <div class="grid grid-cols-12 gap-28">
-          <div class="col-span-7">
+        <div class="grid grid-cols-12 md:gap-28">
+          <div class="col-span-12 md:col-span-7">
             <ul className=" list-disc ml-5">
               <li className="my-4">
                 {" "}
@@ -308,8 +311,71 @@ const BillEasy = () => {
               </li>
             </ul>
           </div>
-          <div class="col-span-5 flex items-center">
-            <img className="w-full" src={insightsImg} alt="" />
+          <div class="col-span-12 md:col-span-5 flex items-center justify-center">
+            <img className="w-full object-center" src={insightsImg} alt="" />
+          </div>
+        </div>
+      </div>
+      {/* usability testing */}
+      <div class="p-5 md:p-24 font-lato bg-black ">
+        <div className="grid-cols-12 grid md:gap-28">
+          <div class="col-span-12 md:col-span-7 h-full ">
+            <div className=" text-white text-4xl my-5 md:my-8">
+              🧐 Usability testing
+            </div>
+            <ul class="text-brand-gray list-disc ml-4 text-justify ">
+              <li className="my-4">
+                The purpose of usability testing was to determine whether
+                existing solutions in the market truly addresses the problem
+                better than the current manual approach,{" "}
+                <b class="text-white">meets users’ expectations</b> and help us
+                in making{" "}
+                <b class="text-white">fact- based design decisions.</b>
+              </li>
+
+              <li className="my-4">
+                We chose to run a test on{" "}
+                <b class="text-white">Clear one software</b> through our
+                competitors' study since it was close to our vision.
+              </li>
+
+              <li className="my-4">
+                After establishing usability matrix, we{" "}
+                <b class="text-white">compared Clear one</b> matrix to the
+                matrix obtained from <b class="text-white">excel sheets</b> (a
+                manual process).
+              </li>
+            </ul>
+          </div>
+          <div class="col-span-12 md:col-span-5 h-full flex flex-col justify-center">
+            <img className="w-full object-center" src={usability1} alt="" />
+            <div
+              style={{
+                color: "#3D6BC5",
+                // letterSpacing: "3px",
+              }}
+              class="uppercase text-base font-lato-light font-bold tracking-3 my-5 "
+            >
+              UT DOCUMENTS
+            </div>
+          </div>
+        </div>
+        <div class=" text-brand-gray mt-10 mb-5">🌡️ Heat-map</div>
+        <div className="grid-cols-12 grid md:gap-28">
+          <div class="col-span-12 md:col-span-7 h-full flex items-center ">
+            <img src={usability2} className="w-full   object-center" alt="" />
+          </div>
+          <div className="col-span-12 md:col-span-5 h-full">
+            <img
+              src={usability3}
+              className="w-full col-span-12 md:col-span-5 my-3   object-center"
+              alt=""
+            />
+            <img
+              src={usability4}
+              className="w-full col-span-12 md:col-span-5 my-3   object-center"
+              alt=""
+            />
           </div>
         </div>
       </div>
