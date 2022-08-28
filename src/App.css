@@ -190,6 +190,12 @@ path:nth-child(6) {
   0% {
     width: 0%;
   }
+  30% {
+    width: 50%;
+  }
+  60% {
+    width: 80%;
+  }
   100% {
     width: 100%;
   }
