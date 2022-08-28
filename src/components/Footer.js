@@ -33,7 +33,7 @@ const Footer = ({ textEnter, textLeave, imageEnter }) => {
       id="footer-main"
       className="w-full flex flex-col"
     >
-      <div className="bg-brand-darkGrey2 flex flex-col md:flex-row md:items-center px-5 md:px-48 py-10 md:py-20 ">
+      <div className="bg-brand-darkGrey2 flex flex-col md:flex-row md:items-end md:justify-between px-5 md:px-48 py-10 md:py-20 ">
         <div
           className="flex text-gray-400 flex-col justify-center  md:w-2/6 mb-5 md:mb-0"
           style={{
@@ -45,7 +45,7 @@ const Footer = ({ textEnter, textLeave, imageEnter }) => {
             onMouseLeave={imageEnter}
             className="  text-3xl max-w-max font-lora-italic"
           >
-            Sharadda Kulkarni
+            Shradha
           </div>
           <div
             onMouseEnter={textEnter}
@@ -64,7 +64,7 @@ const Footer = ({ textEnter, textLeave, imageEnter }) => {
             class="w-14 mt-2 bg-white  block md:hidden"
           /> */}
         </div>
-        <div class="flex flex-wrap md:flex-nowrap md:flex-row md:justify-between md:items-center md:w-4/6">
+        <div class="flex flex-wrap md:flex-nowrap md:flex-row md:justify-between md:items-center md:w-3/6">
           {socials.map((social, index) => (
             <a
               onMouseEnter={textEnter}

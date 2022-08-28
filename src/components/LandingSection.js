@@ -12,7 +12,7 @@ const LandingSection = ({ textEnter, imageEnter, textLeave, largeEnter }) => {
     >
       <div class="flex flex-col z-20 relative  h-full  md:py-36 w-9/10  md:w-3/4 ">
         <div
-          class="text-3xl md:text-5xl font-thin  w-full   font-lato-light-italic landing-page-text  "
+          class="text-3xl md:text-5xl font-thin  w-full md:mt-20  font-lato-light-italic landing-page-text  "
           onMouseEnter={largeEnter}
           onMouseLeave={imageEnter}
           style={{
@@ -20,14 +20,14 @@ const LandingSection = ({ textEnter, imageEnter, textLeave, largeEnter }) => {
             lineHeight: "1.4",
           }}
         >
-          Hello I’m <span className="  font-lora-italic ml-1">Shradha</span>
+          Hello I’m <span className="font-lora-italic ml-1">Shradha</span>
           <br />I work with designs driven by purpose that reaches{" "}
           <span class=" font-lora-italic mr-1">beyond</span> modernity.
         </div>
         <div class="flex flex-col md:flex-row md:items-center w-full">
           <a
             href="/"
-            class=" py-2 md:py-4 flex justify-center items-center mt-8 rounded-l-full rounded-r-full text-white  max-w-max tracking-wider"
+            class=" py-2 md:py-4 flex justify-center items-center mt-8 md:mt-0 rounded-l-full rounded-r-full text-white  max-w-max tracking-wider"
           >
             <BsArrowRightShort
               style={{

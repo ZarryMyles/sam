@@ -3,7 +3,14 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 import App from "./App";
-import { Error, About, Works, WorkOverview, BillEasyPage } from "./pages";
+import {
+  Error,
+  About,
+  Works,
+  WorkOverview,
+  BillEasyPage,
+  BillEasyVisual,
+} from "./pages";
 // import Scrollbar from "./components/Scrollbar";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -23,6 +30,7 @@ root.render(
       </Route> */}
       {/* works */}
       <Route path="billeasy" element={<BillEasyPage />} />
+      <Route path="billeasy-visual-design" element={<BillEasyVisual />} />
 
       <Route path="*" element={<Error />} />
     </Routes>

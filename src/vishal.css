@@ -1,67 +1,65 @@
 /* * get in touch  */
-.text-stroke-black{
-    color: transparent;
-    -webkit-text-stroke: 1px #000;
-    transition: all 0.4s ease;
+.text-stroke-black {
+  color: transparent;
+  -webkit-text-stroke: 1px #000;
+  transition: all 0.4s ease;
 }
-.text-stroke-white{
-    color: #24242475;
-    font-weight: bold;
-    -webkit-text-stroke: 1px rgb(253, 253, 253);
-    transition: all 0.4s ease;
-    font-size: 6rem;
+.text-stroke-white {
+  color: #24242475;
+  font-weight: bold;
+  -webkit-text-stroke: 1px rgb(253, 253, 253);
+  transition: all 0.4s ease;
+  font-size: 6rem;
 }
 @media screen and (max-width: 768px) {
-    /* .text-stroke-black{
+  /* .text-stroke-black{
         color: transparent;
         -webkit-text-stroke: 1px #000;
         transition: all 0.4s ease;
     } */
-    .text-stroke-white{
-        font-size: 4rem;
-    }
+  .text-stroke-white {
+    font-size: 4rem;
+  }
 }
-.getintouch-graybg{
-    transform: translateX(0%);
-    transition: transform 0.4s ease-in-out;
+.getintouch-graybg {
+  transform: translateX(0%);
+  transition: transform 0.4s ease-in-out;
 }
-.getintouch-root:hover .getintouch-graybg{
-    transform: translateX(100%);
+.getintouch-root:hover .getintouch-graybg {
+  transform: translateX(100%);
 }
-.getintouch-root:hover .text-stroke-black{
-    color: black;
-    -webkit-text-stroke: none;
+.getintouch-root:hover .text-stroke-black {
+  color: black;
+  -webkit-text-stroke: none;
 }
 /* scroll bar */
 ::-webkit-scrollbar {
-    width: 7px;
-    overflow: overlay;
-    right: 0;
+  width: 7px;
+  overflow: overlay;
+  right: 0;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: transparent;
+  background: transparent;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #424242;
-    border-radius: 5px;
+  background: #424242;
+  border-radius: 5px;
 }
 
-
-  /* work side nav text */
-.work-side-nav-text{
-    color: #808080b6;
+/* work side nav text */
+.work-side-nav-text {
+  color: #808080b6;
 }
 
 /* work bg translate */
-.work-bg-translate{
-    transition-property: width;
-    transition-duration: 2s;
+.work-bg-translate {
+  transition-property: width;
+  transition-duration: 2s;
 }
-
 
 /* hiding highlight color on phone on tab */
 input,
@@ -69,33 +67,36 @@ textarea,
 button,
 select,
 a {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-.marquee-container>.overlay{
-    /* hide */
-    display: none !important;
+.marquee-container > .overlay {
+  /* hide */
+  display: none !important;
 }
-
 
 /* animation  */
 @keyframes landing-page-text-animation {
-    0%{
-        transform: translate3d(0px, 10.8%, -14px) scale3d(1, 1, 1) rotateX(-12.3795deg) rotateY(0deg) rotateZ(0deg) skew(1.2048deg, -4.8192deg);
-        opacity: 0;
-    }
-    50%{
-        /* transform: translate3d(0px, 28.112%, -36.144px) scale3d(1, 1, 1) rotateX(-34.3795deg) rotateY(0deg) rotateZ(0deg) skew(1.2048deg, -4.8192deg); */
-        opacity: 0.5;
-    }
-    100%{
-        /* transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); */
-        transform: translate3d(0px, 28.112%, -36.144px) scale3d(1, 1, 1) rotateX(-34.3795deg) rotateY(0deg) rotateZ(0deg) skew(1.2048deg, -4.8192deg);
-        opacity: 1;
-    }
+  0% {
+    transform: translate3d(0px, -10.8%, 40px) scale3d(1, 1, 1)
+      rotateX(-12.3795deg) rotateY(0deg) rotateZ(0deg) skew(1.2048deg, 0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: translate3d(0px, -28.112%, 80.144px) scale3d(1, 1, 1)
+      rotateX(-34.3795deg) rotateY(0deg) rotateZ(0deg) skew(1.2048deg, 0deg);
+    opacity: 0.5;
+  }
+  100% {
+    /* transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); */
+    transform: translate3d(0px, -28.112%, 80.144px) scale3d(1, 1, 1)
+      rotateX(-34.3795deg) rotateY(0deg) rotateZ(0deg) skew(1.2048deg, 0deg);
+    opacity: 1;
+  }
 }
-.landing-page-text{
-    transform-style: preserve-3d;
-    transform: translate3d(0px, 28.112%, -36.144px) scale3d(1, 1, 1) rotateX(-34.3795deg) rotateY(0deg) rotateZ(0deg) skew(1.2048deg, -4.8192deg);
+.landing-page-text {
+  transform-style: preserve-3d;
+  /* transform: translate3d(0px, -28.112%, -36.144px) scale3d(1, 1, 1)
+    rotateX(-34.3795deg) rotateY(0deg) rotateZ(0deg) skew(1.2048deg, -4.8192deg); */
 
-    /* animation: landing-page-text-animation 2s ease-in-out forwards; */
+  animation: landing-page-text-animation 2s ease-in-out forwards;
 }

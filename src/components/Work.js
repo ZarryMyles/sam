@@ -15,38 +15,51 @@ import WorkVideo from "./WorkVideo";
 const works = [
   {
     id: 1,
-    title: "Project 1",
-    domain: "Architecture",
+    title: "BillEasy",
+    domain: "Research",
     description:
-      "Cal was first. The first public university in the great state of california. They're the pioneers.",
+      "Creating an efficient accounting process for evolving businesses and enhanced work systems.",
     gif: false,
     image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg",
     video:
       "https://res.cloudinary.com/genesiscloudimages/video/upload/v1660394170/work_gifs/C01_yqtldj.mp4",
-    link: "/",
+    link: "/billeasy",
   },
   {
     id: 2,
-    title: "Project 2",
-    domain: "Design",
+    title: "BillEasy",
+    domain: "Visual Design",
     description:
-      "Cal was first. The first public university in the great state of california. They're the pioneers.",
-    gif: true,
-    image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/2.jpg",
+      "Creating an efficient accounting process for evolving businesses and enhanced work systems.",
+    gif: false,
+    image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg",
     video:
-      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/Comp_1_tdwzlp.gif",
-    link: "/",
+      "https://res.cloudinary.com/genesiscloudimages/video/upload/v1660394170/work_gifs/C01_yqtldj.mp4",
+    link: "/billeasy-visual-design",
   },
   {
     id: 3,
-    title: "Project 3",
-    domain: "fadsfdasf",
+    title: "HappilyEver",
+    domain: "Branding",
     description:
-      "Cal was first. The first public university in the great state of california. They're the pioneers.",
+      "Designing brands to be more people Interactive : Adding value to future Brand Identities ",
     gif: true,
     image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/3.jpg",
     video:
       "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/render_s6dzdu.gif",
+    link: "/",
+  },
+
+  {
+    id: 4,
+    title: "Smart Vision",
+    domain: "Case Study",
+    description:
+      "Making smartphones simpler for users with impaired vision : A step towards an inclusive and consumer-centric approach",
+    gif: true,
+    image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/2.jpg",
+    video:
+      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/Comp_1_tdwzlp.gif",
     link: "/",
   },
 ];
@@ -220,7 +233,7 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
                 setActiveWork(works[works.indexOf(activeWork) + 1])
               }
               class={` ${
-                activeWork.id == 3 && "opacity-0 cursor-auto "
+                activeWork.id == 4 && "opacity-0 cursor-auto "
               }  p-0 md:p-3  text-2xl md:text-5xl cursor-pointer mx-5  rounded-full text-white`}
             />
           </div>
