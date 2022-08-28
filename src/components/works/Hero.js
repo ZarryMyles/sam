@@ -22,13 +22,13 @@ const Hero = ({ work, next }) => {
               {work.domain}
             </div>
           </div>
-          <div class="text-7xl md:text-8xl font-lato text-white">
+          <div class="text-7xl md:text-8xl font-lato text-white md:w-max">
             {work.title}
           </div>
           {next && (
             <a
               href={work.link}
-              class="text-xl md:text-3xl font-lato my-12 text-white tracking-1.5"
+              class="text-xl w-max md:text-3xl font-lato my-12 text-white tracking-1.5"
             >
               Next Project
             </a>
