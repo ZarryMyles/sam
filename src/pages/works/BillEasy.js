@@ -1,6 +1,6 @@
 import React from "react";
 import { WorkHero, WorkVideos, Navbar } from "../../components";
-
+import { BsArrowRightShort } from "react-icons/bs";
 import { ReactComponent as Quote } from "../../assets/icons/quotestart.svg";
 import insightsImg from "../../assets/works/billEasy/billEasyInsights.png";
 import usability1 from "../../assets/works/billEasy/billEasyUsabilityTesting1.png";
@@ -492,7 +492,13 @@ const BillEasy = () => {
       </div>
       {/* case studies */}
       <div class="py-5 md:py-24 ">
-        <div className="tracking-3 px-5 md:px-24  uppercase font-lato-bold">
+        <div className="tracking-3 px-5 flex items-center md:px-24  uppercase font-lato-bold">
+          <BsArrowRightShort
+            style={{
+              border: "2px solid black",
+            }}
+            class=" text-3xl p-1   mr-4  rounded-full  border-black  "
+          />{" "}
           read full case study ☕
         </div>
         <div class="px-5 my-5 grid   grid-cols-2 md:grid-cols-11 items-center ">

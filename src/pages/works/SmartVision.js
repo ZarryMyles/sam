@@ -1,9 +1,18 @@
 import React from "react";
-import { WorkHero } from "../../components";
+import { WorkHero, Navbar } from "../../components";
 import { ReactComponent as Quote } from "../../assets/icons/quotestart.svg";
 import Problem from "../../assets/works/smartvision/smartVisionProblem.png";
 import Problem2 from "../../assets/works/smartvision/smartVisionProblem2.png";
 import Problem3 from "../../assets/works/smartvision/smartVisionProblem3.png";
+import Phone1 from "../../assets/works/smartvision/smartVisionPhone1.png";
+import Phone2 from "../../assets/works/smartvision/smartVisionPhone2.png";
+import Phone3 from "../../assets/works/smartvision/smartVisionPhone3.png";
+import Phone4 from "../../assets/works/smartvision/smartVisionPhone4.png";
+import Phone5 from "../../assets/works/smartvision/smartVisionPhone5.png";
+import Phone6 from "../../assets/works/smartvision/smartVisionPhone6.png";
+import colorChecker from "../../assets/works/smartvision/smartVisionColorChecker.png";
+import fonts from "../../assets/works/smartvision/smartVisionFonts.png";
+import { BsArrowRightShort } from "react-icons/bs";
 
 const SmartVision = () => {
   const work = {
@@ -20,6 +29,7 @@ const SmartVision = () => {
   };
   return (
     <div>
+      <Navbar />
       <WorkHero work={work} />
       {/* project brief */}
       <div class=" p-5 md:p-24 flex flex-wrap justify-between ">
@@ -426,7 +436,7 @@ const SmartVision = () => {
         </div>
       </div>
       {/* features */}
-      <div class="bg-brand-black p-5 md:p-24 h-full">
+      <div class="bg-brand-black px-5 py-10 md:p-24 h-full">
         <div class="flex items-center mb-12">
           <div
             style={{
@@ -435,13 +445,309 @@ const SmartVision = () => {
             class="bg-brand-gray w-28 mr-4"
           />
           <div class=" text-brand-gray uppercase text-xl tracking-widest ">
-            Research
+            Solutions
           </div>
         </div>
-        <div class="text-white  text-2xl md:text-4xl my-8 tracking-1.5 font-lato-light font-bold ">
-          📐 Features
+        <div class="grid grid-cols-12 font-lato">
+          {/* 1 */}
+          <div class="col-span-12 md:col-span-7 flex  items-center justify-center text-white px-3 md:px-28 my-5">
+            <div>
+              <div className="my-8">1. Screen recorder</div>
+              <ul class="list-disc ml-4">
+                <li className="my-9">
+                  Screen readers speak what is on the screen as the finger
+                  explores. They are simple to understand and control.
+                </li>
+                <li className="my-9">
+                  At any moment,{" "}
+                  <b>double-tap the text to activate the screen</b>
+                  reader.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="md:col-span-5 col-span-12 hidden md:flex items-center justify-center">
+            <img
+              src={Phone1}
+              className=""
+              style={{
+                width: "290px",
+              }}
+              alt=""
+            />
+          </div>
+          <div class="md:col-span-5 col-span-12 flex md:hidden items-center justify-center">
+            <img src={Phone1} className="w-2/4" alt="" />
+          </div>
+          {/* 2 */}
+          <div class="hidden md:flex md:col-span-5 col-span-12  items-center justify-center">
+            <img
+              src={Phone2}
+              className=""
+              style={{
+                width: "290px",
+              }}
+              alt=""
+            />
+          </div>
+          <div class="col-span-12 md:col-span-7 flex  items-center justify-center text-white px-3 md:px-28 my-5">
+            <div>
+              <div className="my-8">2. Image description</div>
+              <ul class="list-disc ml-4">
+                <li className="my-9">
+                  Legally blind individuals can{" "}
+                  <b>understand the texts better than images.</b> Screen readers
+                  can't interpret images.
+                </li>
+                <li className="my-9">
+                  Hence, Image descriptions are used to{" "}
+                  <b>describe Information from images.</b> They can also
+                  generate <b>alt text automatically</b>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="md:col-span-5 col-span-12 flex md:hidden items-center justify-center">
+            <img src={Phone2} className="w-2/4" alt="" />
+          </div>
+          {/* 3 */}
+          <div class="col-span-12 md:col-span-7 flex  items-center justify-center text-white px-3 md:px-28 my-5">
+            <div>
+              <div className="my-8">3. Speech Recognition</div>
+              <ul class="list-disc ml-4">
+                <li className="my-9">
+                  It enables a program to{" "}
+                  <b>process human speech to readable text.</b>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="md:col-span-5 col-span-12 hidden md:flex items-center justify-center">
+            <img
+              src={Phone3}
+              className=""
+              style={{
+                width: "290px",
+              }}
+              alt=""
+            />
+          </div>
+          <div class="md:col-span-5 col-span-12 flex md:hidden items-center justify-center">
+            <img src={Phone3} className="w-2/4" alt="" />
+          </div>
+          {/* 4 */}
+          <div class="md:col-span-5 col-span-12 hidden md:flex items-center justify-center">
+            <img
+              src={Phone4}
+              className=""
+              style={{
+                width: "290px",
+              }}
+              alt=""
+            />
+          </div>
+          <div class="col-span-12 md:col-span-7 flex  items-center justify-center text-white px-3 md:px-28 my-5">
+            <div>
+              <div className="my-8">4. OCR</div>
+              <ul class="list-disc ml-4">
+                <li className="my-9">
+                  <b>
+                    Optical Character Recognition is the technology that detects
+                    text inside digital pictures whether typed or handwritten
+                  </b>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="md:col-span-5 col-span-12 flex md:hidden items-center justify-center">
+            <img src={Phone4} className="w-2/4" alt="" />
+          </div>
+          {/* 5 */}
+          <div class="col-span-12 md:col-span-7 flex  items-center justify-center text-white px-3 md:px-28 my-5">
+            <div>
+              <div className="my-8">5. Magnifier</div>
+              <ul class="list-disc ml-4">
+                <li className="my-9">
+                  The user will not always be pleased with the screen readers
+                  and their privacy may <b>be compromised</b>
+                </li>
+                <li className="my-9">
+                  The magnifier allows the user to have a <b>closer look</b> at
+                  the text or image while <b>respecting their privacy.</b>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="md:col-span-5 col-span-12 hidden md:flex items-center justify-center">
+            <img
+              src={Phone5}
+              className=""
+              style={{
+                width: "290px",
+              }}
+              alt=""
+            />
+          </div>
+          <div class="md:col-span-5 col-span-12 flex md:hidden items-center justify-center">
+            <img src={Phone5} className="w-2/4" alt="" />
+          </div>
+          {/* 6 */}
+          <div class="md:col-span-5 col-span-12 hidden md:flex items-center justify-center">
+            <img
+              src={Phone6}
+              className=""
+              style={{
+                height: "290px",
+              }}
+              alt=""
+            />
+          </div>
+          <div class="col-span-12 md:col-span-7 flex  items-center justify-center text-white px-3 md:px-28 my-5">
+            <div>
+              <div className="my-8">6. Braille keyboard</div>
+              <ul class="list-disc ml-4">
+                <li className="my-9">
+                  Braille keyboard that can be <b>calibrated to human touch.</b>{" "}
+                  Private and Alternative option to speech recognition.
+                </li>
+                <li class="my-9">
+                  Prerequisite : A person must be familiar with braille.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="md:col-span-5 col-span-12 flex md:hidden items-center justify-center">
+            <img src={Phone6} className="w-4/5" alt="" />
+          </div>
         </div>
       </div>
+      {/* ui guide system */}
+      <div class="p-5 md:p-24 h-full">
+        <div class="  text-2xl md:text-4xl my-8 tracking-1.5 font-lato-light font-bold ">
+          🦮 UI guide system
+        </div>
+        <ul class="ml-4 list-disc">
+          <li className="my-4 md:my-8">
+            The visual designs were made by considering the{" "}
+            <b>WCAG accessibility guidelines.</b>
+          </li>
+
+          <li className="my-4 md:my-8">
+            The goal was to use <b>contrasting yet relaxing hues</b> to help
+            readers read the <b>strain-free content.</b>
+          </li>
+
+          <li className="my-4 md:my-8">
+            Our users emphasized on having a <b>dark mode</b> to{" "}
+            <b>achieve maximum contrast.</b> Because pure black caused eye
+            strain, this was modified to
+            <b>#121212 with a high contrast ratio.</b>
+          </li>
+        </ul>
+        {/* color thingy */}
+        <div class="grid grid-cols-1 md:grid-cols-2">
+          <div class="col-span-1 my-4  ">
+            <div
+              class=" text-2xl font-google-sans"
+              style={{ color: "#72C3C4" }}
+            >
+              Color
+            </div>
+            <div class="flex items-center justify-center my-16">
+              <div className="flex flex-col items-center">
+                <div
+                  class="  rounded-full mx-3 md:mx-8 border-4 "
+                  style={{
+                    width: "68px",
+                    height: "68px",
+                    background: "#0A0A0A",
+                    boxShadow: "0px 2.08333px 2.60417px rgba(41, 41, 41, 0.32)",
+                  }}
+                />
+                <div className="my-6">#0A0A0A</div>
+              </div>
+              <div className="flex flex-col items-center">
+                <div
+                  class="  rounded-full mx-3 md:mx-8 border-4  "
+                  style={{
+                    width: "68px",
+                    height: "68px",
+                    background: "#FFFFFF",
+                    boxShadow:
+                      "0px 2.08333px 2.60417px rgba(41, 41, 41, 0.12) ",
+                  }}
+                />
+                <div className="my-6">#FFFFFF</div>
+              </div>
+              <div className="flex flex-col items-center">
+                <div
+                  class="  rounded-full mx-3 md:mx-8 border-4 "
+                  style={{
+                    width: "68px",
+                    height: "68px",
+                    background: "#7CCBCD",
+                    boxShadow: "0px 2.08333px 2.60417px rgba(41, 41, 41, 0.12)",
+                  }}
+                />
+                <div className="my-6">#7CCBCD</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-1 my-4 ">
+            <img src={colorChecker} alt="" />
+          </div>
+          <div class="col-span-1 my-4 ">
+            <div
+              class=" text-2xl font-google-sans"
+              style={{ color: "#72C3C4" }}
+            >
+              Typography
+            </div>
+
+            <div class="md:pl-20 font-google-sans ">
+              <div className="my-8">Google Sans</div>
+              <div class="flex items-center   font-google-sans">
+                <div className="mx-4 md:mr-24 font-bold">
+                  <div style={{ color: "#7CCBCD" }} class=" text-xl ">
+                    Aa
+                  </div>
+                  <div>Bold</div>
+                </div>
+                <div className="mx-4 md:mr-24 font-medium">
+                  <div style={{ color: "#7CCBCD" }} class=" text-xl ">
+                    Aa
+                  </div>
+                  <div>Medium</div>
+                </div>
+                <div className="mx-4 md:mx-0 font-normal">
+                  <div style={{ color: "#7CCBCD" }} class=" text-xl ">
+                    Aa
+                  </div>
+                  <div>Regular</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-1 my-4 md:py-20 ">
+            <img src={fonts} alt="" />
+          </div>
+        </div>
+
+        {/*  */}
+        <a
+          href="/"
+          class="flex items-center font-lato-bold text-base uppercase tracking-3"
+        >
+          <BsArrowRightShort
+            style={{
+              border: "2px solid black",
+            }}
+            class=" text-3xl p-1   mr-4  rounded-full  border-black  "
+          />
+          read full case study <span class="text-2xl">☕</span>
+        </a>
+      </div>
+      <WorkHero work={work} next={true} />
     </div>
   );
 };
