@@ -124,8 +124,8 @@ function App() {
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
-      // setLoading(false);
-    }, 10000);
+      setLoading(false);
+    }, 3500);
   }, []);
 
   return (
