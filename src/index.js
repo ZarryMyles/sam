@@ -10,6 +10,7 @@ import {
   WorkOverview,
   BillEasyPage,
   SmartVision,
+  BillEasyVisual,
 } from "./pages";
 // import Scrollbar from "./components/Scrollbar";
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -31,6 +32,7 @@ root.render(
       {/* works */}
       <Route path="billeasy" element={<BillEasyPage />} />
       <Route path="smart-vision" element={<SmartVision />} />
+      <Route path="billeasy-visual-design" element={<BillEasyVisual />} />
 
       <Route path="*" element={<Error />} />
     </Routes>

@@ -9,6 +9,7 @@ import {
   GetInTouch,
   Footer,
   LandingSection,
+  Loader,
 } from "./components/";
 import Navbar from "./components/NewNav";
 // import { ParallaxProvider } from "react-scroll-parallax";
@@ -19,6 +20,7 @@ function App() {
     y: 0,
   });
   const [cursorVariant, setcursorVariant] = useState("default");
+  const [loading, setLoading] = useState(true);
   let options = {
     root: document.querySelector("#sections"),
     rootMargin: "0px",
@@ -117,6 +119,11 @@ function App() {
     else if (activeSection === "footer-main") setTheme("dark");
     // else setTheme();
   }, [activeSection]);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
 
   return (
     <div className=" dark:bg-black duration-500 transition-colors select-none overflow-hidden">

@@ -176,3 +176,7 @@ path:nth-child(6) {
 .active path:nth-child(6) {
   transform: translateX(9px) translateY(1px) rotate(45deg);
 }
+
+.zed {
+  z-index: 100 !important;
+}

@@ -50,7 +50,6 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const controlNavbar = () => {
     if (typeof window !== "undefined") {
-      console.log(show);
       if (window.scrollY > lastScrollY) {
         // if scroll down hide the navbar
         setShow(true);
@@ -82,14 +81,14 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
   }
 
   return (
-    <div className="z-20 overflow-hidden w-screen bg-red-300">
+    <div className="overflow-hidden w-screen">
       <div
         style={{ color: defaultColor }}
-        className="w-full hidden md:flex absolute justify-between items-center mr-5"
+        className="w-full hidden md:flex zed absolute justify-between items-center mr-5"
       >
         <a href="/" className="flex items-center">
           <motion.div
-            className="font-lora text-4xl top-0 overflow-hidden p-5 flex flex-row items-center md:px-10"
+            className="font-lora text-4xl text-white top-0 overflow-hidden p-5 flex flex-row items-center md:px-10"
             onMouseEnter={textEnter}
             onMouseLeave={imageEnter}
             onMouseOver={() => setHov((hov) => !hov)}
@@ -140,7 +139,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
             </motion.span>
           </motion.div>
         </a>
-        <div className="flex flex-row">
+        <div className="flex flex-row md:mr-8">
           <Link
             activeClass="active"
             to="work"
@@ -148,12 +147,12 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
             smooth={true}
             offset={1}
             duration={500}
-            className="block cursor-pointer z-50 md:inline-block p-5 no-underline border-none"
+            className="block cursor-pointer md:inline-block p-5 no-underline border-none"
           >
             <div
               onMouseEnter={textEnter}
               onMouseLeave={imageEnter}
-              className="text-lg z-50 uppercase font-lato"
+              className="text-lg  font-lato"
             >
               Work
             </div>
@@ -163,7 +162,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
             onMouseLeave={imageEnter}
             href="/about"
             onClick={uncheckNav}
-            className="font-lato text-lg uppercase top-0 overflow-hidden p-5 flex flex-row items-center"
+            className="font-lato text-lg  top-0 overflow-hidden p-5 flex flex-row items-center"
           >
             About
           </a>
@@ -179,7 +178,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
             <button
               onMouseEnter={textEnter}
               onMouseLeave={imageEnter}
-              className="cursor-pointer font-lato text-lg uppercase"
+              className="cursor-pointer font-lato text-lg "
             >
               Contact
             </button>
@@ -189,19 +188,21 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
             onMouseLeave={imageEnter}
             href="/"
             onClick={uncheckNav}
-            className="font-lato text-lg uppercase top-0 overflow-hidden p-5 flex flex-row items-center"
+            className="font-lato text-lg  top-0 overflow-hidden p-5 flex flex-row items-center"
           >
             Resume
           </a>
         </div>
       </div>
 
+      {/* Scroll Up Navbar */}
       <div
         onMouseEnter={imageEnter}
         onMouseLeave={textLeave}
+        style={{ zIndex: "150 !important" }}
         className={`navContainer ${
           show && "md:hidden"
-        } text-white z-20 bg-brand-darkGrey hidden md:flex w-screen top-0 fixed  flex-row justify-between items-center md:px-10 md:py-5`}
+        } text-white bg-brand-darkGrey zed hidden md:flex w-screen top-0 fixed  flex-row justify-between items-center md:px-10 md:py-5`}
       >
         <div
           className="text-3xl font-normal"
@@ -211,7 +212,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
         >
           shradha
         </div>
-        <div className="flex flex-row text-white gap-4 font-lato text-lg uppercase">
+        <div className="flex flex-row text-white font-lato text-lg ">
           <Link
             activeClass="active"
             to="work"
@@ -225,12 +226,17 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
             <div
               onMouseEnter={textEnter}
               onMouseLeave={imageEnter}
-              className="text-lg z-50 uppercase font-lato"
+              className="text-lg px-5 font-lato"
             >
               Work
             </div>
           </Link>
-          <a href="/about" onMouseEnter={textEnter} onMouseLeave={imageEnter}>
+          <a
+            className="px-5"
+            href="/about"
+            onMouseEnter={textEnter}
+            onMouseLeave={imageEnter}
+          >
             About
           </a>
           <Link
@@ -246,17 +252,23 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
             <div
               onMouseEnter={textEnter}
               onMouseLeave={imageEnter}
-              className="text-lg z-50 uppercase font-lato"
+              className="text-lg px-5  font-lato"
             >
               Contact
             </div>
           </Link>
-          <a href="/" onMouseEnter={textEnter} onMouseLeave={imageEnter}>
+          <a
+            className="px-5"
+            href="/"
+            onMouseEnter={textEnter}
+            onMouseLeave={imageEnter}
+          >
             Resume
           </a>
         </div>
       </div>
 
+      {/* Mobile Navbar */}
       <div className="md:hidden bg-brand-darkGrey text-white overflow-hidden p-1 top-0 fixed z-50 w-full flex justify-between items-center h-auto">
         <a href="/" className="ml-5 font-laro text-2xl">
           Shradha
