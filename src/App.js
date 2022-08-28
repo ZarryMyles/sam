@@ -20,7 +20,6 @@ function App() {
     y: 0,
   });
   const [cursorVariant, setcursorVariant] = useState("default");
-  const [loading, setLoading] = useState(true);
   let options = {
     root: document.querySelector("#sections"),
     rootMargin: "0px",
@@ -119,68 +118,76 @@ function App() {
     else if (activeSection === "footer-main") setTheme("dark");
     // else setTheme();
   }, [activeSection]);
+
+  // Loader
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
+    setLoading(true);
     setTimeout(() => {
-      setLoading(false);
-    }, 1000);
+      // setLoading(false);
+    }, 10000);
   }, []);
 
   return (
     <div className=" dark:bg-black duration-500 transition-colors select-none overflow-hidden">
-      <>
-        <Navbar
-          imageEnter={imageEnter}
-          textLeave={textLeave}
-          textEnter={textEnter}
-          defaultColor={"white"}
-        />
-        <div
-          id="sections"
-          className="  flex flex-col items-center justify-center"
-        >
-          {/* <div className="h-screen bg-transparent -z-10"></div> */}
-          <LandingSection
+      {loading ? (
+        <Loader />
+      ) : (
+        <>
+          <Navbar
             imageEnter={imageEnter}
-            textEnter={textEnter}
             textLeave={textLeave}
-            largeEnter={largeEnter}
-          />
-          <Work
-            imageEnter={imageEnter}
             textEnter={textEnter}
-            textLeave={textLeave}
-            largeEnter={largeEnter}
+            defaultColor={"white"}
           />
-          <WorkLogos
-            imageEnter={imageEnter}
-            textEnter={textEnter}
-            textLeave={textLeave}
-          />
-          <SocialProof
-            imageEnter={imageEnter}
-            textEnter={textEnter}
-            textLeave={textLeave}
-          />
-          <GetInTouch
-            imageEnter={imageEnter}
-            textEnter={textEnter}
-            textLeave={textLeave}
-            largeEnter={largeEnter}
-          />
-          <Footer
-            imageEnter={imageEnter}
-            textEnter={textEnter}
-            textLeave={textLeave}
-          />
-          {/* other sections */}
+          <div
+            id="sections"
+            className="  flex flex-col items-center justify-center"
+          >
+            {/* <div className="h-screen bg-transparent -z-10"></div> */}
+            <LandingSection
+              imageEnter={imageEnter}
+              textEnter={textEnter}
+              textLeave={textLeave}
+              largeEnter={largeEnter}
+            />
+            <Work
+              imageEnter={imageEnter}
+              textEnter={textEnter}
+              textLeave={textLeave}
+              largeEnter={largeEnter}
+            />
+            <WorkLogos
+              imageEnter={imageEnter}
+              textEnter={textEnter}
+              textLeave={textLeave}
+            />
+            <SocialProof
+              imageEnter={imageEnter}
+              textEnter={textEnter}
+              textLeave={textLeave}
+            />
+            <GetInTouch
+              imageEnter={imageEnter}
+              textEnter={textEnter}
+              textLeave={textLeave}
+              largeEnter={largeEnter}
+            />
+            <Footer
+              imageEnter={imageEnter}
+              textEnter={textEnter}
+              textLeave={textLeave}
+            />
+            {/* other sections */}
 
-          <motion.div
-            className="cursor hidden md:flex"
-            variants={variants}
-            animate={cursorVariant}
-          />
-        </div>
-      </>
+            <motion.div
+              className="cursor hidden md:flex"
+              variants={variants}
+              animate={cursorVariant}
+            />
+          </div>
+        </>
+      )}
     </div>
   );
 }

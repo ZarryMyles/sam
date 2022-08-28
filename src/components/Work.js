@@ -47,7 +47,7 @@ const works = [
     image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/3.jpg",
     video:
       "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/render_s6dzdu.gif",
-    link: "/",
+    link: "/happilyever",
   },
 
   {
@@ -60,7 +60,7 @@ const works = [
     image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/2.jpg",
     video:
       "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/Comp_1_tdwzlp.gif",
-    link: "/",
+    link: "/smartvision",
   },
 ];
 const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
