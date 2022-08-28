@@ -180,3 +180,17 @@ path:nth-child(6) {
 .zed {
   z-index: 100 !important;
 }
+
+/* Loader animation */
+.loaderLine {
+  animation: loading 3s forwards cubic-bezier(0, 0, 0, 0);
+}
+
+@keyframes loading {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
