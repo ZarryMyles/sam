@@ -31,6 +31,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
   };
   const resize = () => {
     $("#sideMenu").addClass("translate-x-full");
+    $("#sideButton").toggleClass("active");
   };
 
   // For the bounce effect for logo
@@ -210,7 +211,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
           onMouseEnter={textEnter}
           onMouseLeave={imageEnter}
         >
-          shradha
+          <a href="/">shradha</a>
         </div>
         <div className="flex flex-row text-white font-lato text-lg ">
           <Link
