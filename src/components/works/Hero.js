@@ -3,9 +3,9 @@ import React from "react";
 const Hero = ({ work, next }) => {
   return (
     <div className="h-screen grid grid-cols-12">
-      <div class="col-span-3 z-20 relative bg-brand-black h-full flex flex-col justify-center items-center ">
+      <div class="col-span-3 z-20 relative bg-brand-black h-full flex flex-col justify-center w-full items-center ">
         <div
-          class="flex absolute h-full top-0  flex-col w-full justify-center pt-20  "
+          class="flex absolute h-full top-0   flex-col w-full justify-center pt-20  "
           style={{
             // right: "-100%",
             right: "-25%",

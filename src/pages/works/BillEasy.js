@@ -125,7 +125,7 @@ const BillEasy = () => {
             class="bg-brand-gray w-28 mr-4"
           />
           <div class=" text-brand-gray uppercase text-xl tracking-widest ">
-            Concept
+            Purpose
           </div>
         </div>
         <div class="grid grid-cols-12">
