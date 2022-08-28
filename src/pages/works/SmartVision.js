@@ -1,5 +1,9 @@
 import React from "react";
 import { WorkHero } from "../../components";
+import { ReactComponent as Quote } from "../../assets/icons/quotestart.svg";
+import Problem from "../../assets/works/smartvision/smartVisionProblem.png";
+import Problem2 from "../../assets/works/smartvision/smartVisionProblem2.png";
+import Problem3 from "../../assets/works/smartvision/smartVisionProblem3.png";
 
 const SmartVision = () => {
   const work = {
@@ -159,7 +163,9 @@ const SmartVision = () => {
             </ul>
           </div>
           {/* primary  */}
-          <div className=" text-base font-lato my-5">Primary User</div>
+          <div className=" text-base font-lato my-5 font-bold mt-8">
+            Primary User
+          </div>
           <div className="" style={{ letterSpacing: "0.5px" }}>
             <ul className="list-disc">
               <li className="">
@@ -173,9 +179,267 @@ const SmartVision = () => {
               <li className="my-5">
                 Examples : Teachers, Bloggers, Youtubers, Advocates etc.{" "}
               </li>
-              <li className="my-5">Age : 23 - 60 */ </li>
+              <li className="my-5">Age : 23 - 60 </li>
             </ul>
           </div>
+          {/* secondary  */}
+          <div className=" text-base font-lato my-5 font-bold mt-8">
+            Secondary User
+          </div>
+          <div className="" style={{ letterSpacing: "0.5px" }}>
+            <ul className="list-disc">
+              <li className="">People who use it for casual interactions.</li>
+              <li className="my-5">
+                Text messaging is the most common way for teenagers and young
+                adults to communicate.
+              </li>
+              <li className="my-5">
+                Examples : High school and College students.{" "}
+              </li>
+              <li class="my-5"> Age : 15+</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      {/* challenge */}
+      <div class="bg-brand-black  p-5 md:p-24 ">
+        <div class="flex items-center mb-12">
+          <div
+            style={{
+              height: "1px",
+            }}
+            class="bg-brand-gray w-28 mr-4"
+          />
+          <div class=" text-brand-gray uppercase text-xl tracking-widest ">
+            Challenge
+          </div>
+        </div>
+        <div class="grid grid-cols-12  items-center">
+          <div class="col-span-12 md:col-span-6 relative ">
+            <Quote
+              className="absolute -top-4 md:-top-5 -left-4 md:-left-5 w-6 h-6  "
+              stroke="none"
+            />
+            <div
+              className="font-lato-light tracking-widest"
+              style={{
+                color: "#FEFEFE",
+              }}
+            >
+              How might we design a Messaging app which is <b>Inclusive</b> to
+              people with impaired vision making their{" "}
+              <b>communication experience hassle -free and economical.</b>
+            </div>
+          </div>
+          <div class="hidden md:block col-span-1"></div>
+          <div
+            class="col-span-12 md:col-span-5 my-2 md:my-0  text-black p-5 md:p-10 rounded-md flex md:flex-row flex-col "
+            style={{
+              backgroundColor: "#EFFCF5",
+            }}
+          >
+            <div class="w-full md:w-1/2 text-center md:text-left my-5 md:my-0">
+              <div
+                style={{
+                  color: "#064925",
+                }}
+              >
+                <span className=" font-lato-bold mr-2 text-xl ">
+                  2.2 Billion
+                </span>
+              </div>
+              <div
+                class="text-gray-500 "
+                style={{
+                  color: "#2B6043",
+                }}
+              >
+                People are visually impaired globally
+              </div>
+            </div>
+            <div class="w-full md:w-1/2 text-center md:text-left my-5 md:my-0">
+              <div
+                style={{
+                  color: "#064925",
+                }}
+              >
+                <span className=" font-lato-bold mr-2 text-xl ">
+                  1.3 Million
+                </span>
+              </div>
+              <div
+                class="text-gray-500 "
+                style={{
+                  color: "#2B6043",
+                }}
+              >
+                Americans are legally blind (highest)
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* problem identification */}
+      <div class=" p-5 md:p-24   h-full">
+        <div class="   ">
+          <div class="flex items-center mb-12">
+            <div
+              style={{
+                height: "1px",
+              }}
+              class="bg-brand-gray w-28 mr-4"
+            />
+            <div class=" text-brand-gray uppercase text-xl tracking-widest ">
+              Research
+            </div>
+          </div>
+          <div class="  text-2xl md:text-4xl my-8 tracking-1.5 font-lato-light font-bold ">
+            🦮 Identifying the problem
+          </div>
+          <ul className="my-8 list-disc ml-5">
+            <li className="my-3">
+              While searching for users to interview, I couldn't find any
+              relevant people, thanks to the pandemic :') During which, I
+              discovered that people in India are unfamiliar of legal blindness
+            </li>
+            <li className="my-3">
+              I was able to interview two of the teammates with different levels
+              of work experience.
+            </li>{" "}
+            <li className="my-3">
+              As a result, I reached out to individuals on the internet and, to
+              my surprise, I was able to connect with global audience fitting
+              into the right category.
+            </li>
+            <li className="my-3">
+              I interviewed around 8 participants in total through
+              videoconferencing and Google forms.
+            </li>
+            <div class="px-0 md:px-5 w-full my-8">
+              <img src={Problem} className="w-full" alt="" />
+            </div>
+            <li className="my-3">
+              Next, I Grouped Insights based on similarity of cognitive patterns
+              and characteristics for the segmented users to create personas.
+            </li>
+            <div class="px-0 md:px-5 w-full my-8">
+              <img src={Problem2} className="w-full" alt="" />
+            </div>{" "}
+            <li className="my-3">
+              Finally, I developed a Journey map for prospective scenarios to
+              help me understand and analyze the problem in depth.
+            </li>
+            <div class="px-0 md:px-5 w-full my-8">
+              <img src={Problem3} className="w-full" alt="" />
+            </div>
+          </ul>
+        </div>
+      </div>
+      {/* key points */}
+      <div class="p-5 md:p-24 h-full">
+        <div class="  text-2xl md:text-4xl my-8 tracking-1.5 font-lato-light font-bold ">
+          🗝️ Key pain-points
+        </div>
+        <div class="px-3 grid grid-cols-1 md:grid-cols-2 ">
+          <div class="col-span-1 p-2 md:p-5">
+            <div
+              style={{
+                background: "#FAFAFA",
+                borderRadius: "4px",
+              }}
+              className="w-full p-5 rounded-md "
+            >
+              <div class="text-lg font-lato font-bold">Letters</div>
+              <ul class="my-0 md:my-8 list-decimal">
+                <li className="ml-4">Struggles while reading.</li>
+                <li class="ml-4">
+                  Prefers <b>bold and enlarged letters.</b>
+                </li>
+                <li class="ml-4">
+                  <b>Keyboard letters are not legible enough.</b> Feels time
+                  consuming with TTS unless you've mastered it.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-span-1 p-2 md:p-5">
+            <div
+              style={{
+                background: "#FAFAFA",
+                borderRadius: "4px",
+              }}
+              className="w-full p-5 rounded-md "
+            >
+              <div class="text-lg font-lato font-bold">TTS</div>
+              <ul class="my-0 md:my-8 list-decimal ml-4">
+                <li>
+                  <b>Cannot describe texts in images.</b>
+                </li>
+                <li>Over informative</li>
+                <li>
+                  It's a <b>pain texting in group chats since</b> most of the
+                  times
+                  <b>messages are read from the first</b> if a new external
+                  message pops up.
+                </li>
+                <li>Searching messages from long back is difficult.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-span-1 p-2 md:p-5 h-auto">
+            <div
+              style={{
+                background: "#FAFAFA",
+                borderRadius: "4px",
+              }}
+              className="w-full p-5 rounded-md "
+            >
+              <div class="text-lg font-lato font-bold">Images and Videos</div>
+              <ul class="my-0 md:my-8 ">
+                <li className="">
+                  Emojis and images are difficult to perceive.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-span-1 p-2 md:p-5 h-full">
+            <div
+              style={{
+                background: "#FAFAFA",
+                borderRadius: "4px",
+              }}
+              className="w-full p-5 rounded-md "
+            >
+              <div class="text-lg font-lato font-bold">Letters</div>
+              <ul class="my-0 md:my-8 list-decimal ml-4">
+                <li>Doesn't prefer people to hear their messages aloud.</li>
+                <li>Requests someone else to read it for him</li>
+                <li>
+                  Colors are either very bright or too dull, and Light mode
+                  strains eyes.
+                </li>
+                <li>Reads messages in the evening.</li>
+                <li>Quick way to connect with people is needed</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* features */}
+      <div class="bg-brand-black p-5 md:p-24 h-full">
+        <div class="flex items-center mb-12">
+          <div
+            style={{
+              height: "1px",
+            }}
+            class="bg-brand-gray w-28 mr-4"
+          />
+          <div class=" text-brand-gray uppercase text-xl tracking-widest ">
+            Research
+          </div>
+        </div>
+        <div class="text-white  text-2xl md:text-4xl my-8 tracking-1.5 font-lato-light font-bold ">
+          📐 Features
         </div>
       </div>
     </div>
