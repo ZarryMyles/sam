@@ -6,11 +6,11 @@ const LandingSection = ({ textEnter, imageEnter, textLeave, largeEnter }) => {
   return (
     <div
       id="landing-section"
-      className="md:px-32 h-screen w-full text-white from-brand-footerGrey  to-black to: bg-gradient-to-r  top-0 left-0 "
+      className="md:px-32 h-screen w-full text-white brand-black    top-0 left-0 "
       onMouseEnter={imageEnter}
       onMouseLeave={textLeave}
     >
-      <div class="md:px-0 px-5 flex flex-col z-20 relative  h-full md:mt-0 mt-60  md:py-36 w-9/10  md:w-3/4 ">
+      <div class="md:px-0 px-5 flex flex-col z-20 relative  md:h-full md:mt-0 mt-60  md:py-36 w-9/10  md:w-3/4 ">
         <div
           class="text-3xl md:text-5xl font-thin  w-full md:mt-20  font-lato-light-italic landing-page-text  "
           onMouseEnter={largeEnter}
@@ -21,13 +21,15 @@ const LandingSection = ({ textEnter, imageEnter, textLeave, largeEnter }) => {
           }}
         >
           Hello I’m <span className="font-lora-italic ml-1">Shradha</span>
-          <br />I work with designs driven by purpose that reaches{" "}
+          <br />I work with designs driven by{" "}
+          <span class="font-lora-italic">purpose</span> that reaches{" "}
           <span class=" font-lora-italic mr-1">beyond</span> modernity.
         </div>
-        <div class="flex flex-col md:flex-row md:items-center w-full">
+
+        <div class="flex flex-col md:flex-row md:items-center w-full work-landing-text">
           <a
             href="/"
-            class=" py-2 md:py-4 flex justify-center items-center mt-8 md:mt-0 rounded-l-full rounded-r-full text-white  max-w-max tracking-wider"
+            class=" py-2 md:py-4 flex justify-center items-center mt-2 md:mt-0 rounded-l-full rounded-r-full text-white  max-w-max tracking-wider"
           >
             <BsArrowRightShort
               style={{
@@ -42,7 +44,7 @@ const LandingSection = ({ textEnter, imageEnter, textLeave, largeEnter }) => {
                 letterSpacing: "0.2em",
                 color: "#FFC7D1",
               }}
-              class=" md:text-lg uppercase font-lato   "
+              class=" md:text-lg uppercase font-lato    "
             >
               Work with me
             </div>
@@ -64,10 +66,8 @@ const LandingSection = ({ textEnter, imageEnter, textLeave, largeEnter }) => {
           width: "325px",
           height: "190px",
           backgroundImage: `url(${HeroImage})`,
-          // left: "746px",
-          // top: "321px",
         }}
-        class="md:hidden absolute z-10 bg-gray-500 bottom-20 left-7 bg-cover bg-center bg-no-repeat"
+        class="md:hidden  z-10 bg-gray-500 float-right bg-cover bg-center bg-no-repeat"
       ></div>
     </div>
   );

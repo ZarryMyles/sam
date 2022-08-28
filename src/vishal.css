@@ -77,19 +77,19 @@ a {
 /* animation  */
 @keyframes landing-page-text-animation {
   0% {
-    transform: translate3d(0px, -10.8%, 40px) scale3d(1, 1, 1)
+    transform: translate3d(0px, 0.8%, 0px) scale3d(1, 1, 1)
       rotateX(-12.3795deg) rotateY(0deg) rotateZ(0deg) skew(1.2048deg, 0deg);
     opacity: 0;
   }
-  50% {
-    transform: translate3d(0px, -28.112%, 80.144px) scale3d(1, 1, 1)
-      rotateX(-34.3795deg) rotateY(0deg) rotateZ(0deg) skew(1.2048deg, 0deg);
+  /* 50% {
+    transform: translate3d(0px, 20%, 0px) scale3d(1, 1, 1)
+      rotateX(-6.3795deg) rotateY(0deg) rotateZ(0deg) skew(1.2048deg, 0deg);
     opacity: 0.5;
-  }
+  } */
   100% {
     /* transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); */
-    transform: translate3d(0px, -28.112%, 80.144px) scale3d(1, 1, 1)
-      rotateX(-34.3795deg) rotateY(0deg) rotateZ(0deg) skew(1.2048deg, 0deg);
+    transform: translate3d(0px, -35%, 0px) scale3d(1, 1, 1)
+      rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     opacity: 1;
   }
 }
@@ -100,7 +100,9 @@ a {
 
   animation: landing-page-text-animation 2s ease-in-out forwards;
 }
-
+.work-landing-text{
+  transform: translate3d(0px, -45%, 0px)
+}
 
 /* google sans font */
 @font-face {
