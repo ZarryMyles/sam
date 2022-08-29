@@ -6,7 +6,7 @@ const LandingSection = ({ textEnter, imageEnter, textLeave, largeEnter }) => {
   return (
     <div
       id="landing-section"
-      className="md:px-32 h-screen w-full text-white bg-brand-black    top-0 left-0 "
+      className="md:px-32 min-h-screen w-full text-white bg-brand-black    top-0 left-0 "
       onMouseEnter={imageEnter}
       onMouseLeave={textLeave}
     >
@@ -23,10 +23,14 @@ const LandingSection = ({ textEnter, imageEnter, textLeave, largeEnter }) => {
           Hello I’m <span className="font-lora-italic ml-1">Shradha</span>
           <br />I work with designs driven by{" "}
           <span class="font-lora-italic">purpose</span> that reaches{" "}
-          <span class=" font-lora-italic mr-1">beyond</span> modernity.
+          <span class=" font-lora-italic mr-1">beyond modernity.</span>
         </div>
 
-        <div class="flex flex-col md:flex-row md:items-center w-full work-landing-text">
+        <div
+          class="flex flex-col md:flex-row md:items-center w-full work-landing-text -mt-7"
+          onMouseEnter={largeEnter}
+          onMouseLeave={imageEnter}
+        >
           <a
             href="/"
             class=" py-2 md:py-4 flex justify-center items-center mt-2 md:mt-0 rounded-l-full rounded-r-full text-white  max-w-max tracking-wider"
@@ -43,8 +47,9 @@ const LandingSection = ({ textEnter, imageEnter, textLeave, largeEnter }) => {
               style={{
                 letterSpacing: "0.2em",
                 color: "#FFC7D1",
+                fontSize: "16px",
               }}
-              class=" md:text-lg uppercase font-lato    "
+              class="  uppercase font-lato    "
             >
               Work with me
             </div>
@@ -53,22 +58,22 @@ const LandingSection = ({ textEnter, imageEnter, textLeave, largeEnter }) => {
       </div>
       <div
         style={{
-          width: "580px",
+          width: "520px",
           height: "400px",
           backgroundImage: `url(${HeroImage})`,
           // left: "746px",
           // top: "321px",
         }}
-        class="hidden md:block absolute z-10 bg-gray-500  right-52 bottom-16 bg-cover bg-center bg-no-repeat"
+        class="hidden md:block absolute z-10 bg-gray-500  right-52 bottom-10 bg-cover bg-center bg-no-repeat"
       ></div>
-      <div
+      {/* <div
         style={{
           width: "325px",
           height: "190px",
           backgroundImage: `url(${HeroImage})`,
         }}
         class="md:hidden  z-10 bg-gray-500 float-right bg-cover bg-center bg-no-repeat"
-      ></div>
+      ></div> */}
     </div>
   );
 };

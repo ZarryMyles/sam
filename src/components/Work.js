@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 // import gsap from "gsap";
+import { BsArrowRightShort } from "react-icons/bs";
+
 import { motion } from "framer-motion";
 import { BsChevronRight as Right, BsChevronLeft as Left } from "react-icons/bs";
 import { FiChevronRight } from "react-icons/fi";
@@ -157,19 +159,27 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
         // onMouseEnter={imageEnter}
         // onMouseLeave={textLeave}
       >
-        <div class="w-full md:w-2/5">
-          <div class="flex items-center my-5 ">
-            <div class="w-32 bg-brand-gray h-0.5 mr-3" />
+        <div class="w-full md:w-full">
+          <div class="flex items-center my-12 ">
+            <div
+              style={{
+                width: "72px",
+              }}
+              class=" bg-brand-gray h-0.5 mr-3"
+            />
             <div
               // onMouseOver={() => setFlag((state) => !state)}
               // onMouseOut={() => setFlag((state) => !state)}
+              style={{
+                letterSpacing: "3px",
+              }}
               class="text-brand-gray text-xl font-lato "
             >
               {activeWork.domain}
             </div>
           </div>
           <div
-            className=" text-5xl md:text-7xl font-bold w-max font-lato text-white my-5 flex items-center"
+            className=" text-5xl md:text-5xl font-bold w-max font-lato text-brand-white  flex items-center my-12"
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
           >
@@ -187,7 +197,14 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
               ))}
             </motion.div> */}
           </div>
-          <div class="text-base font-lato-light text-white my-10 pr-5 md:pr-0">
+          <div
+            style={{
+              letterSpacing: "1px",
+              lineHeight: "32px",
+              fontSize: "22px",
+            }}
+            class=" font-lato  mt-12 mb-6 pr-5 md:pr-0 md:w-7/12 text-brand-white"
+          >
             {activeWork.description}
           </div>
           <a className="" href={activeWork.link}>
@@ -200,13 +217,24 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
               // }}
               class=" py-4 duration-100 transition-all  w-max  flex items-center my-3 rounded-l-full rounded-r-full text-white  max-w-max tracking-wider             "
             >
-              <FiChevronRight class=" text-3xl p-1  mr-4   rounded-full text-white border-2 border-white " />
+              <BsArrowRightShort
+                style={{
+                  border: "1px solid white",
+                  borderColor: "#fefefe",
+                  color: "#Fefefe",
+                }}
+                class=" text-3xl p-1  mr-4  rounded-full  border-white "
+              />
               <div
-                class={` text-lg 
+                class={` text-lg  font-lato
                    
                 `}
                 style={{
-                  letterSpacing: "0.2em",
+                  letterSpacing: "3px",
+                  color: "#fefefe",
+                  // letterSpacing: "0.2em",
+                  color: "#Fefefe",
+                  fontSize: "16px",
                 }}
               >
                 VIEW CASE
@@ -222,21 +250,36 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
                 works.indexOf(activeWork) > 0 &&
                 setActiveWork(works[works.indexOf(activeWork) - 1])
               }
+              style={{
+                color: "#fefefe",
+              }}
               class={` ${
                 activeWork.id == 1 && "opacity-0 cursor-auto "
               }  p-0 md:p-3  text-2xl md:text-5xl cursor-pointer mx-5  rounded-full text-white`}
             />
-            <div class=" text-stroke-white mb-4 font-lato">
+            <div
+              style={{
+                letterSpacing: "6px",
+                fontWeight: "500",
+                // color: "#fefefe",
+              }}
+              class=" text-stroke-white mb-4 font-lato  "
+            >
               0{activeWork.id}
             </div>
             <Right
+              onMouseEnter={textEnter}
+              onMouseLeave={textLeave}
               onClick={() =>
                 works.indexOf(activeWork) < works.length - 1 &&
                 setActiveWork(works[works.indexOf(activeWork) + 1])
               }
+              style={{
+                color: "#b5b5b5",
+              }}
               class={` ${
                 activeWork.id == 4 && "opacity-0 cursor-auto "
-              }  p-0 md:p-3  text-2xl md:text-5xl cursor-pointer mx-5  rounded-full text-white`}
+              }  p-0 md:p-3  text-2xl md:text-5xl   cursor-pointer mx-5  rounded-full text-white`}
             />
           </div>
         </div>
@@ -260,6 +303,15 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
       ))} */}
       {/* bg gif */}
       <div class={`w-full object-cover h-full absolute     left-0 top-0 z-0`}>
+        <div
+          class="bg-black w-full h-full absolute top-0 left-0"
+          style={
+            {
+              // background: rgba(13, 13, 13, 0.78),
+            }
+          }
+        ></div>
+
         {works.map((work) =>
           work.gif ? (
             <img
@@ -269,7 +321,7 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
                   : work.id > activeWork.id
                   ? " translate-x-[100%]  bg-center md:bg-right"
                   : "bg-center scale-125 "
-              }  w-full bg-cover bg-no-repeat ease-linear transition-all  duration-700 brightness-50 h-screen  object-cover  absolute
+              }  w-full bg-cover bg-no-repeat ease-linear transition-all  duration-700 brightness-20 h-screen  object-cover  absolute
              w-100 md:w-screen  md:opacity-100 opacity-100 md:object-cover  bg-red-100  `}
               src={work.video}
               alt="loading..."

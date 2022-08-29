@@ -13,6 +13,7 @@ module.exports = {
       xl: "1280px",
       "2xl": "1536px",
     },
+
     colors: {
       transparent: "transparent",
       current: "currentColor",
@@ -34,6 +35,7 @@ module.exports = {
         bgGrey: "#fcfffd",
         gray: "#B5B5B5",
         black: "#0D0D0D",
+        white: "#fefefe",
       },
     },
     fontFamily: {
@@ -189,7 +191,15 @@ module.exports = {
       1.5: "1.5px",
       3: "3px",
     },
-    extend: {},
+    extend: {
+      brightness: {
+        10: "10%",
+        20: "20%",
+        30: "30%",
+        40: "40%",
+        50: "50%",
+      },
+    },
   },
   plugins: [],
 };

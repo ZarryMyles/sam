@@ -271,13 +271,14 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
       </div>
 
       {/* Mobile Navbar */}
-      <div className="md:hidden bg-brand-darkGrey text-white overflow-hidden p-1 top-0 fixed z-50 w-full flex justify-between items-center h-auto">
-        <a href="/" className="ml-5 font-lora text-2xl">
-          Shradha
+
+      <div className="md:hidden bg-brand-black text-white overflow-hidden p-1 top-0 fixed z-50 w-full flex justify-between items-center h-auto">
+        <a href="/" className="ml-5 font-lora-italic text-2xl">
+          S
         </a>
         <nav
           id="sideMenu"
-          className="text-xl sideMenu fixed p-36 text-center bg-brand-darkGrey2 inset-y-0 right-0 transform transition items-center translate-x-full duration-500 ease-in-out uppercase min-h-screen w-full flex z-10 flex-col justify-around min-w-screen"
+          className="text-xl sideMenu fixed  p-36 text-center bg-brand-black inset-y-0 right-0 transform transition items-center translate-x-full duration-500 ease-in-out uppercase min-h-screen w-full flex z-10 flex-col justify-around min-w-screen"
         >
           {links.map((value, key) => (
             <div key={key} className="block" onClick={resize}>
