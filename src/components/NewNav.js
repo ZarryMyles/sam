@@ -35,15 +35,16 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
   };
 
   // For the bounce effect for logo
+  // TODO: disable bounce
   const [hov, setHov] = useState(false);
   const variants = {
     default: { opacity: 0, y: 50, zIndex: -10 },
     hover: { opacity: 1, y: 0, zIndex: 10 },
-    delay1: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.025 } },
-    delay2: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.05 } },
-    delay3: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.075 } },
-    delay4: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.1 } },
-    delay5: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.125 } },
+    delay1: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.0125 } },
+    delay2: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.025 } },
+    delay3: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.0325 } },
+    delay4: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.05 } },
+    delay5: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.0625 } },
   };
 
   // For Navbar to show up when scrolled up
@@ -203,7 +204,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
         style={{ zIndex: "150 !important" }}
         className={`navContainer ${
           show && "md:hidden"
-        } text-white bg-brand-darkGrey zed hidden md:flex w-screen top-0 fixed  flex-row justify-between items-center md:px-10 md:py-5`}
+        } text-white bg-brand-black zed hidden md:flex w-screen top-0 fixed  flex-row justify-between items-center md:px-10 md:py-5`}
       >
         <div
           className="text-3xl font-normal"
@@ -271,7 +272,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
 
       {/* Mobile Navbar */}
       <div className="md:hidden bg-brand-darkGrey text-white overflow-hidden p-1 top-0 fixed z-50 w-full flex justify-between items-center h-auto">
-        <a href="/" className="ml-5 font-laro text-2xl">
+        <a href="/" className="ml-5 font-lora text-2xl">
           Shradha
         </a>
         <nav

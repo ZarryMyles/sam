@@ -143,10 +143,31 @@ const BillEasy = () => {
               <div className="mr-16">Direct users</div>
               <div className="mr-16">Indirect users</div>
             </div>
-            <div className="flex w-full justify-between md:justify-start my-4  pl-0 md:pl-14 ">
-              <div className="mr-2 md:mr-16">Accounts team</div>
-              <div className="mr-2 md:mr-16">Stakeholders</div>
-              <div className="mr-2 md:mr-16">Business Intelligence</div>
+            <div className="flex w-full justify-between md:justify-start my-4   ">
+              <div
+                className="mr-2 md:mr-3 px-1 py-1 md:px-5 md:py-3"
+                style={{
+                  background: "#FAFAFA",
+                }}
+              >
+                Accounts team
+              </div>
+              <div
+                className="mr-2 md:mr-3 px-1 py-1 md:px-5 md:py-3"
+                style={{
+                  background: "#FAFAFA",
+                }}
+              >
+                Stakeholders
+              </div>
+              <div
+                className="mr-2 md:mr-3 px-1 py-1 md:px-5 md:py-3"
+                style={{
+                  background: "#FAFAFA",
+                }}
+              >
+                Business Intelligence
+              </div>
             </div>
           </div>
         </div>

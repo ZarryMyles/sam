@@ -146,7 +146,7 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
   );
   const cards = () => (
     <div
-      className="text-black relative  select-none   h-full overflow-hidden w-full    bg-cover bg-no-repeat bg-center   flex flex-col justify-center  top-0 left-0 px-5 md:px-32  "
+      className="text-black relative font-lato  select-none   h-full overflow-hidden w-full    bg-cover bg-no-repeat bg-center   flex flex-col justify-center  top-0 left-0 px-5 md:px-32  "
       onMouseEnter={imageEnter}
       onMouseLeave={textLeave}
     >
@@ -169,7 +169,7 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
             </div>
           </div>
           <div
-            className=" text-5xl md:text-7xl font-bold w-max font-lora text-white my-5 flex items-center"
+            className=" text-5xl md:text-7xl font-bold w-max font-lato text-white my-5 flex items-center"
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
           >
@@ -187,7 +187,7 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
               ))}
             </motion.div> */}
           </div>
-          <div class="text-base font-lato text-white my-10 pr-5 md:pr-0">
+          <div class="text-base font-lato-light text-white my-10 pr-5 md:pr-0">
             {activeWork.description}
           </div>
           <a className="" href={activeWork.link}>
@@ -226,7 +226,9 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
                 activeWork.id == 1 && "opacity-0 cursor-auto "
               }  p-0 md:p-3  text-2xl md:text-5xl cursor-pointer mx-5  rounded-full text-white`}
             />
-            <div class=" text-stroke-white mb-4">0{activeWork.id}</div>
+            <div class=" text-stroke-white mb-4 font-lato">
+              0{activeWork.id}
+            </div>
             <Right
               onClick={() =>
                 works.indexOf(activeWork) < works.length - 1 &&

@@ -48,7 +48,7 @@ const WorkLogos = ({ textEnter, textLeave, imageEnter }) => {
             <div
               onMouseEnter={textEnter}
               onMouseLeave={textLeave}
-              className="flex my-5 items-center font-semibold font-lora-medium-italic italic text-xl md:text-6xl mx-10 dark:text-brand-gray"
+              className="flex my-5 items-center  font-lora-italic italic text-xl md:text-6xl mx-10 dark:text-brand-gray"
             >
               {client.name}
             </div>

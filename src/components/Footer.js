@@ -6,7 +6,7 @@ const Footer = ({ textEnter, textLeave, imageEnter }) => {
   const socials = [
     {
       name: "Bengaluru",
-      link: "https://www.behance.net/",
+      link: "https://maps.google./maps?q=Bengaluru",
       icon: <HiOutlineLocationMarker />,
     },
     {
@@ -31,9 +31,9 @@ const Footer = ({ textEnter, textLeave, imageEnter }) => {
       onMouseEnter={imageEnter}
       onMouseLeave={textLeave}
       id="footer-main"
-      className="w-full flex flex-col"
+      className="w-full bg-brand-darkGrey2 flex flex-col"
     >
-      <div className="bg-brand-darkGrey2 flex flex-col md:flex-row md:items-end md:justify-between px-5 md:px-48 py-10 md:py-20 ">
+      <div className=" flex flex-col md:flex-row md:items-end md:justify-between px-5 md:px-48 py-10 md:py-20 ">
         <div
           className="flex text-gray-400 flex-col justify-center  md:w-2/6 mb-5 md:mb-0"
           style={{
@@ -101,7 +101,7 @@ const Footer = ({ textEnter, textLeave, imageEnter }) => {
           ))}
         </div>
       </div>
-      <div className=" bg-brand-footerGrey shadow-xl text-xs font-lato text-gray-400 flex items-center justify-center p-5 md:p-10">
+      <div className="  shadow-xl text-xs font-lato text-gray-400 flex items-center justify-center p-5 md:p-10">
         © {new Date().getFullYear()}. shradha.design . All Rights Reserved.
       </div>
     </div>

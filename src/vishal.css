@@ -6,7 +6,7 @@
 }
 .text-stroke-white {
   color: #24242475;
-  font-weight: bold;
+  /* font-weight: bold; */
   -webkit-text-stroke: 1px rgb(253, 253, 253);
   transition: all 0.4s ease;
   font-size: 6rem;

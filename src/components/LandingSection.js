@@ -6,11 +6,11 @@ const LandingSection = ({ textEnter, imageEnter, textLeave, largeEnter }) => {
   return (
     <div
       id="landing-section"
-      className="md:px-32 h-screen w-full text-white brand-black    top-0 left-0 "
+      className="md:px-32 h-screen w-full text-white bg-brand-black    top-0 left-0 "
       onMouseEnter={imageEnter}
       onMouseLeave={textLeave}
     >
-      <div class="md:px-0 px-5 flex flex-col z-20 relative  md:h-full md:mt-0 mt-60  md:py-36 w-9/10  md:w-3/4 ">
+      <div class="md:px-10 px-5 flex flex-col z-20 relative  md:h-full md:mt-0 mt-60  md:py-52 w-9/10  md:w-7/10 ">
         <div
           class="text-3xl md:text-5xl font-thin  w-full md:mt-20  font-lato-light-italic landing-page-text  "
           onMouseEnter={largeEnter}
@@ -53,13 +53,13 @@ const LandingSection = ({ textEnter, imageEnter, textLeave, largeEnter }) => {
       </div>
       <div
         style={{
-          width: "650px",
-          height: "380px",
+          width: "580px",
+          height: "400px",
           backgroundImage: `url(${HeroImage})`,
           // left: "746px",
           // top: "321px",
         }}
-        class="hidden md:block absolute z-10 bg-gray-500  right-40 bottom-24 bg-cover bg-center bg-no-repeat"
+        class="hidden md:block absolute z-10 bg-gray-500  right-52 bottom-16 bg-cover bg-center bg-no-repeat"
       ></div>
       <div
         style={{
