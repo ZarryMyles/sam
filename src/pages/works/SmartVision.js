@@ -29,7 +29,7 @@ const SmartVision = () => {
   };
   return (
     <div>
-      <Navbar />
+      <Navbar defaultColor={"white"} />
       <WorkHero work={work} />
       {/* project brief */}
       <div class=" p-5 md:p-24 flex flex-wrap justify-between ">

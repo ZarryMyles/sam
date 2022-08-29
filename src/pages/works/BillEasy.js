@@ -36,7 +36,7 @@ const BillEasy = () => {
   };
   return (
     <div>
-      <Navbar />
+      <Navbar defaultColor={"white"} />
       <WorkHero work={work} />
       <WorkVideos work={work} />
       {/* project brief */}
