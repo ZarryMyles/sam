@@ -4,16 +4,33 @@ const Loader = () => {
   const [value, setValue] = useState(0);
 
   return (
-    <div className="flex z-10 flex-col p-6 justify-center text-white items-center bg-brand-darkGrey w-screen h-screen">
-      <div className="font-lato-light text-4xl mb-4">Shradha</div>
+    <div className="flex z-10 text-brand-white flex-col p-6 justify-center text- items-center bg-brand-darkGrey w-screen h-screen">
+      <div className="font-lato-light text-4xl mb-8">Shradha</div>
       <div className="w-full h-auto flex justify-center items-center">
         <div
-          className="bg-gray-600"
-          style={{ width: "25%", height: "0.5px", borderRadius: "1px" }}
+          className="bg-gray-400 hidden md:block"
+          style={{ width: "300px", height: "0.5px", borderRadius: "1px" }}
         >
           <div
-            className="bg-white loaderLine"
-            style={{ height: "1.5px", borderRadius: "10px" }}
+            className="loaderLine"
+            style={{
+              height: "1.5px",
+              borderRadius: "10px",
+              bgColor: "#b5b5b5 !important",
+            }}
+          ></div>
+        </div>
+        <div
+          className="bg-gray-400 md:hidden"
+          style={{ width: "200px", height: "0.5px", borderRadius: "1px" }}
+        >
+          <div
+            className="loaderLine"
+            style={{
+              height: "1.5px",
+              borderRadius: "10px",
+              bgColor: "#b5b5b5 !important",
+            }}
           ></div>
         </div>
       </div>
