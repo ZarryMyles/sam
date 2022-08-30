@@ -1,16 +1,16 @@
 import React from "react";
 import { BsArrowRightShort } from "react-icons/bs";
-import { FiChevronRight } from "react-icons/fi";
+import { ArrowRightCircle } from "react-feather";
 import HeroImage from "../assets/landingpage/Rectangle.png";
 const LandingSection = ({ textEnter, imageEnter, textLeave, largeEnter }) => {
   return (
     <div
       id="landing-section"
-      className="md:px-32 min-h-screen w-full text-white bg-brand-black    top-0 left-0 "
+      className="md:px-44 min-h-screen w-full text-white bg-brand-black    top-0 left-0 "
       onMouseEnter={imageEnter}
       onMouseLeave={textLeave}
     >
-      <div class="md:px-10 px-5 flex flex-col z-20 relative  md:h-full md:mt-0 mt-60  md:py-52 w-9/10  md:w-7/10 ">
+      <div class=" px-5 flex flex-col z-20 relative  md:h-full md:mt-0 mt-60  md:py-52 w-9/10  md:w-7/10 ">
         <div
           class="text-3xl md:text-5xl font-thin  w-full md:mt-20  font-lato-light-italic landing-page-text  "
           onMouseEnter={largeEnter}
@@ -35,13 +35,12 @@ const LandingSection = ({ textEnter, imageEnter, textLeave, largeEnter }) => {
             href="/"
             class=" py-2 md:py-4 flex justify-center items-center mt-2 md:mt-0 rounded-l-full rounded-r-full text-white  max-w-max tracking-wider"
           >
-            <BsArrowRightShort
-              style={{
-                border: "1px solid white",
-                borderColor: "#FFC7D1",
-                color: "#FFC7D1",
-              }}
-              class=" text-3xl p-1  mr-4  rounded-full  border-white "
+            <ArrowRightCircle
+              color="#FFC7D1"
+              width={30}
+              height={30}
+              strokeWidth={1}
+              class=" text-3xl   mr-4  rounded-full   "
             />
             <div
               style={{

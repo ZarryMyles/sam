@@ -1,13 +1,13 @@
 import React from "react";
-import { TiDocumentText } from "react-icons/ti";
 import { FaBehanceSquare, FaDribbbleSquare, FaLinkedin } from "react-icons/fa";
+import { MapPin } from "react-feather";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 const Footer = ({ textEnter, textLeave, imageEnter }) => {
   const socials = [
     {
       name: "Bengaluru",
       link: "https://maps.google./maps?q=Bengaluru",
-      icon: <HiOutlineLocationMarker />,
+      icon: <MapPin strokeWidth={2} width={16} height={16} color="#7A2222" />,
     },
     {
       name: "Email",

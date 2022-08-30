@@ -1,18 +1,6 @@
 import React, { useState } from "react";
-// import gsap from "gsap";
-import { BsArrowRightShort } from "react-icons/bs";
-
-import { motion } from "framer-motion";
-import { BsChevronRight as Right, BsChevronLeft as Left } from "react-icons/bs";
-import { FiChevronRight } from "react-icons/fi";
+import { ChevronRight, ChevronLeft, ArrowRightCircle } from "react-feather";
 import WorkVideo from "./WorkVideo";
-// import { useGesture } from "react-use-gesture";
-// import { useSpring } from "@react-spring/web";
-
-// const calcX = (y, ly) => -(y - ly - window.innerHeight / 2) / 20;
-// const calcY = (x, lx) => (x - lx - window.innerWidth / 2) / 20;
-// import { useVideoConfig } from "remotion";
-// import { Gif } from "@remotion/gif";
 
 const works = [
   {
@@ -20,7 +8,7 @@ const works = [
     title: "BillEasy",
     domain: "Research",
     description:
-      "Creating an efficient accounting process for evolving businesses and enhanced work systems.",
+      "Creating an efficient accounting process for \n evolving businesses and enhanced work systems.",
     gif: false,
     image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg",
     video:
@@ -32,7 +20,7 @@ const works = [
     title: "BillEasy",
     domain: "Visual Design",
     description:
-      "Creating an efficient accounting process for evolving businesses and enhanced work systems.",
+      "Creating an efficient accounting process for \n evolving businesses and enhanced work systems.",
     gif: false,
     image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg",
     video:
@@ -44,7 +32,7 @@ const works = [
     title: "HappilyEver",
     domain: "Branding",
     description:
-      "Designing brands to be more people Interactive : Adding value to future Brand Identities ",
+      "Designing brands to be more people \n Interactive : Adding value to future Brand Identities ",
     gif: true,
     image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/3.jpg",
     video:
@@ -57,7 +45,7 @@ const works = [
     title: "Smart Vision",
     domain: "Case Study",
     description:
-      "Making smartphones simpler for users with impaired vision : A step towards an inclusive and consumer-centric approach",
+      "Making smartphones simpler for users with \n impaired vision : A step towards an inclusive and \n consumer-centric approach",
     gif: true,
     image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/2.jpg",
     video:
@@ -67,49 +55,6 @@ const works = [
 ];
 const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
   const [activeWork, setActiveWork] = useState(works[0]);
-  // useEffect(() => {
-  //   const preventDefault = (e) => e.preventDefault();
-  //   document.addEventListener("gesturestart", preventDefault);
-  //   document.addEventListener("gesturechange", preventDefault);
-
-  //   return () => {
-  //     document.removeEventListener("gesturestart", preventDefault);
-  //     document.removeEventListener("gesturechange", preventDefault);
-  //   };
-  // }, []);
-  // const domTarget = useRef(null);
-  // const [
-  //   { x, y, rotateX, rotateY, rotateZ, zoom, scale, translateY, translateX },
-  //   api,
-  // ] = useSpring(() => ({
-  //   rotateX: 0,
-  //   rotateY: 0,
-  //   rotateZ: 0,
-  //   translateY: 0,
-  //   translateX: 0,
-
-  //   scale: 1,
-  //   zoom: 0,
-  //   x: 0,
-  //   y: 0,
-  //   config: { mass: 5, tension: 350, friction: 40 },
-  // }));
-  // useGesture(
-  //   {
-  //     onMove: ({ xy: [px, py], dragging }) => {
-  //       console.log(calcX(py, y.get()));
-  //       return (
-  // //         !dragging &&
-  //         api({
-  //           translateX: calcX(px, y.get()),
-  //           translateY: calcY(py, x.get()),
-  //           // scale: 1,
-  //         })
-  //       );
-  //     },
-  //   },
-  //   { domTarget, eventOptions: { passive: false } }
-  // );
 
   const sideNav = () => (
     <div
@@ -148,7 +93,7 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
   );
   const cards = () => (
     <div
-      className="text-black relative font-lato  select-none   h-full overflow-hidden w-full    bg-cover bg-no-repeat bg-center   flex flex-col justify-center  top-0 left-0 px-5 md:px-32  "
+      className="text-black relative font-lato  select-none   h-full overflow-hidden w-full    bg-cover bg-no-repeat bg-center   flex flex-col justify-center  top-0 left-0 px-5 md:px-44  "
       onMouseEnter={imageEnter}
       onMouseLeave={textLeave}
     >
@@ -205,30 +150,32 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
             }}
             class=" font-lato  mt-12 mb-6 pr-5 md:pr-0 md:w-7/12 text-brand-white"
           >
-            {activeWork.description}
+            {activeWork.description.split("\n").map((line, index) => (
+              <span key={index}>
+                {line}
+                <br />
+              </span>
+            ))}
           </div>
-          <a className="" href={activeWork.link}>
+          <a
+            onMouseEnter={largeEnter}
+            onMouseLeave={imageEnter}
+            className=""
+            href={activeWork.link}
+          >
             <div
               href="/"
-              // ref={domTarget}
-              // style={{
-              //   translateX: `${translateX.get()}px`,
-              //   translateY: `${translateY.get()}px`,
-              // }}
               class=" py-4 duration-100 transition-all  w-max  flex items-center my-3 rounded-l-full rounded-r-full text-white  max-w-max tracking-wider             "
             >
-              <BsArrowRightShort
-                style={{
-                  border: "1px solid white",
-                  borderColor: "#fefefe",
-                  color: "#Fefefe",
-                }}
-                class=" text-3xl p-1  mr-4  rounded-full  border-white "
+              <ArrowRightCircle
+                color="#fefefe"
+                width={30}
+                height={30}
+                strokeWidth="1"
+                class="  mr-4    "
               />
               <div
-                class={` text-lg  font-lato
-                   
-                `}
+                class=" text-lg  font-lato"
                 style={{
                   letterSpacing: "3px",
                   color: "#fefefe",
@@ -243,19 +190,20 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
           </a>
         </div>
         {/* the no. with text stroke */}
-        <div class="absolute bottom-10   md:bottom-2 right-2 md:right-10 flex flex-col items-center">
+        <div class="absolute bottom-10   md:bottom-2 right-2 md:right-44 flex flex-col items-center">
           <div class="  flex items-center  ">
-            <Left
+            <ChevronLeft
+              color="#b5b5b5"
+              width={30}
+              height={30}
+              strokeWidth="1"
               onClick={() =>
                 works.indexOf(activeWork) > 0 &&
                 setActiveWork(works[works.indexOf(activeWork) - 1])
               }
-              style={{
-                color: "#fefefe",
-              }}
               class={` ${
                 activeWork.id == 1 && "opacity-0 cursor-auto "
-              }  p-0 md:p-3  text-2xl md:text-5xl cursor-pointer mx-5  rounded-full text-white`}
+              }    text-2xl md:text-5xl cursor-pointer mx-5  rounded-full text-white`}
             />
             <div
               style={{
@@ -267,9 +215,12 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
             >
               0{activeWork.id}
             </div>
-            <Right
+            <ChevronRight
+              color="#b5b5b5"
+              width={30}
+              height={30}
               onMouseEnter={textEnter}
-              onMouseLeave={textLeave}
+              onMouseLeave={imageEnter}
               onClick={() =>
                 works.indexOf(activeWork) < works.length - 1 &&
                 setActiveWork(works[works.indexOf(activeWork) + 1])
@@ -279,7 +230,7 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
               }}
               class={` ${
                 activeWork.id == 4 && "opacity-0 cursor-auto "
-              }  p-0 md:p-3  text-2xl md:text-5xl   cursor-pointer mx-5  rounded-full text-white`}
+              }  p-0 md:p-0  text-2xl md:text-5xl   cursor-pointer mx-5  rounded-full text-white`}
             />
           </div>
         </div>
