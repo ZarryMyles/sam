@@ -90,9 +90,10 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
       >
         <a href="/" className="flex items-center">
           <motion.div
-            className="font-lora text-4xl text-white top-0 overflow-hidden p-5 flex flex-row items-center md:px-10"
+            className="font-lora-italic text-2xl top-0 overflow-hidden p-5 flex flex-row items-center md:px-10"
             onMouseEnter={textEnter}
             onMouseLeave={imageEnter}
+            style={{ color: "#b5b5b5" }}
             onMouseOver={() => setHov((hov) => !hov)}
             onMouseOut={() => setHov((hov) => !hov)}
           >
@@ -141,7 +142,10 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
             </motion.span>
           </motion.div>
         </a>
-        <div className="flex flex-row md:mr-8">
+        <div
+          style={{ color: "#b5b5b5" }}
+          className="flex tracking-1.5 flex-row md:mr-8"
+        >
           <Link
             activeClass="active"
             to="work"
@@ -204,17 +208,61 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
         style={{ zIndex: "150 !important" }}
         className={`navContainer ${
           show && "md:hidden"
-        } text-white bg-brand-black zed hidden md:flex w-screen top-0 fixed  flex-row justify-between items-center md:px-10 md:py-5`}
+        } text-brand-gray bg-brand-black zed hidden md:flex w-screen top-0 fixed  flex-row justify-between items-center md:px-10 md:py-5`}
       >
-        <div
-          className="text-3xl font-normal"
-          style={{ fontFamily: "Arial" }}
+        <motion.div
+          className="font-lora-italic text-2xl top-0 overflow-hidden flex flex-row items-center md:px-5"
           onMouseEnter={textEnter}
           onMouseLeave={imageEnter}
+          onMouseOver={() => setHov((hov) => !hov)}
+          onMouseOut={() => setHov((hov) => !hov)}
         >
-          <a href="/">shradha</a>
-        </div>
-        <div className="flex flex-row text-white font-lato text-lg ">
+          S
+          <motion.span
+            animate={hov ? "hover" : "default"}
+            initial={{ opacity: 0, y: 50 }}
+            variants={variants}
+          >
+            h
+          </motion.span>
+          <motion.span
+            animate={hov ? "delay1" : "default"}
+            initial={{ opacity: 0, y: 50 }}
+            variants={variants}
+          >
+            r
+          </motion.span>
+          <motion.span
+            animate={hov ? "delay2" : "default"}
+            initial={{ opacity: 0, y: 50 }}
+            variants={variants}
+          >
+            a
+          </motion.span>
+          <motion.span
+            animate={hov ? "delay3" : "default"}
+            initial={{ opacity: 0, y: 50 }}
+            variants={variants}
+          >
+            d
+          </motion.span>
+          <motion.span
+            animate={hov ? "delay4" : "default"}
+            initial={{ opacity: 0, y: 50 }}
+            variants={variants}
+          >
+            h
+          </motion.span>
+          <motion.span
+            animate={hov ? "delay5" : "default"}
+            initial={{ opacity: 0, y: 50 }}
+            variants={variants}
+          >
+            a
+          </motion.span>
+        </motion.div>
+
+        <div className="flex flex-row text-brand-gray font-lato text-lg ">
           <Link
             activeClass="active"
             to="work"
@@ -272,7 +320,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
 
       {/* Mobile Navbar */}
 
-      <div className="md:hidden bg-brand-black text-white overflow-hidden p-1 top-0 fixed z-50 w-full flex justify-between items-center h-auto">
+      <div className="md:hidden bg-brand-black text-brand-gray overflow-hidden p-1 top-0 fixed z-50 w-full flex justify-between items-center h-auto">
         <a href="/" className="ml-5 font-lora-italic text-2xl">
           S
         </a>
@@ -289,7 +337,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
         <button onClick={handleToggle} className="z-50 flex" id="sideButton">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="70"
+            width="60"
             height="70"
             viewBox="0 0 200 200"
           >

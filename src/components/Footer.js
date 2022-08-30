@@ -33,7 +33,7 @@ const Footer = ({ textEnter, textLeave, imageEnter }) => {
       id="footer-main"
       className="w-full bg-brand-darkGrey2 flex flex-col"
     >
-      <div className=" flex flex-col md:flex-row md:items-end md:justify-between px-5 md:px-48 py-10 md:py-20 ">
+      <div className=" flex flex-col md:flex-row md:items-end md:justify-between px-5 md:px-48 py-10 md:py-24 ">
         <div
           className="flex text-gray-400 flex-col justify-center  md:w-2/6 mb-5 md:mb-0"
           style={{
@@ -74,7 +74,7 @@ const Footer = ({ textEnter, textLeave, imageEnter }) => {
               onMouseEnter={textEnter}
               onMouseLeave={imageEnter}
               href={social.link}
-              class="text-white   flex items-center  w-1/2 md:w-max  my-2 md:my-0"
+              class="text-brand-gray font-lato flex items-center  w-1/2 md:w-max  my-2 md:my-0"
             >
               {social.icon && (
                 <div
@@ -89,7 +89,7 @@ const Footer = ({ textEnter, textLeave, imageEnter }) => {
               {social.name}
               {social.icon && (
                 <div
-                  class="block md:hidden ml-1 text-xl "
+                  class="flock md:hidden ml-1 text-xl "
                   style={{
                     color: "#7A2222",
                   }}
@@ -101,7 +101,7 @@ const Footer = ({ textEnter, textLeave, imageEnter }) => {
           ))}
         </div>
       </div>
-      <div className="  shadow-xl text-xs font-lato text-gray-400 flex items-center justify-center p-5 md:p-10">
+      <div className="  shadow-xl text-xs font-lato text-brand-gray flex items-center justify-center p-5 md:p-10">
         © {new Date().getFullYear()}. shradha.design . All Rights Reserved.
       </div>
     </div>
