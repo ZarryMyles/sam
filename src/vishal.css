@@ -6,7 +6,6 @@
 }
 .text-stroke-white {
   color: #24242400;
-  /* font-weight: bold; */
   -webkit-text-stroke: 1px #b5b5b5;
   transition: all 0.4s ease;
   font-size: 80px;

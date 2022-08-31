@@ -93,7 +93,7 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
   );
   const cards = () => (
     <div
-      className="text-black relative font-lato  select-none   h-full overflow-hidden w-full    bg-cover bg-no-repeat bg-center   flex flex-col justify-center  top-0 left-0 px-5 md:px-44  "
+      className="text-black relative font-lato  select-none   h-full overflow-hidden w-full    bg-cover bg-no-repeat bg-center   flex flex-col justify-center  top-0 left-0 px-5 md:px-48  "
       onMouseEnter={imageEnter}
       onMouseLeave={textLeave}
     >
@@ -179,7 +179,6 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
                 style={{
                   letterSpacing: "3px",
                   color: "#fefefe",
-                  // letterSpacing: "0.2em",
                   color: "#Fefefe",
                   fontSize: "16px",
                 }}
@@ -190,13 +189,13 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
           </a>
         </div>
         {/* the no. with text stroke */}
-        <div class="absolute bottom-10   md:bottom-2 right-2 md:right-44 flex flex-col items-center">
+        <div class="absolute bottom-10 md:bottom-2 right-2 md:right-24 flex flex-col items-center">
           <div class="  flex items-center  ">
-            <ChevronLeft
+            {/* <ChevronLeft
               color="#b5b5b5"
               width={30}
               height={30}
-              strokeWidth="1"
+              strokeWidth="2"
               onClick={() =>
                 works.indexOf(activeWork) > 0 &&
                 setActiveWork(works[works.indexOf(activeWork) - 1])
@@ -204,33 +203,36 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
               class={` ${
                 activeWork.id == 1 && "opacity-0 cursor-auto "
               }    text-2xl md:text-5xl cursor-pointer mx-5  rounded-full text-white`}
-            />
+            /> */}
             <div
               style={{
                 letterSpacing: "6px",
-                fontWeight: "500",
+                // fontWeight: "500",
                 // color: "#fefefe",
               }}
-              class=" text-stroke-white mb-4 font-lato  "
+              class=" text-stroke-white mb-4 font-lato-bold  "
             >
               0{activeWork.id}
             </div>
             <ChevronRight
               color="#b5b5b5"
               width={30}
+              strokeWidth="2"
               height={30}
               onMouseEnter={textEnter}
               onMouseLeave={imageEnter}
-              onClick={() =>
-                works.indexOf(activeWork) < works.length - 1 &&
-                setActiveWork(works[works.indexOf(activeWork) + 1])
-              }
+              onClick={() => {
+                if (works.indexOf(activeWork) < works.length - 1)
+                  setActiveWork(works[works.indexOf(activeWork) + 1]);
+                else if (works.indexOf(activeWork) === works.length - 1)
+                  setActiveWork(works[0]);
+              }}
               style={{
                 color: "#b5b5b5",
               }}
-              class={` ${
-                activeWork.id == 4 && "opacity-0 cursor-auto "
-              }  p-0 md:p-0  text-2xl md:text-5xl   cursor-pointer mx-5  rounded-full text-white`}
+              // ${activeWork.id == 4 && "opacity-0 cursor-auto "}
+              class={`
+              p-0 md:p-0  text-2xl md:text-5xl   cursor-pointer mx-5  rounded-full text-white`}
             />
           </div>
         </div>
@@ -253,7 +255,7 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
         </div>
       ))} */}
       {/* bg gif */}
-      <div class={`w-full object-cover h-full absolute     left-0 top-0 z-0`}>
+      <div class={`w-full object-cover h-full absolute left-0 top-0 z-0`}>
         <div
           class="bg-black w-full h-full absolute top-0 left-0"
           style={

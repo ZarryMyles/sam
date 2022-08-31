@@ -6,11 +6,11 @@ const LandingSection = ({ textEnter, imageEnter, textLeave, largeEnter }) => {
   return (
     <div
       id="landing-section"
-      className="md:px-44 min-h-screen w-full text-white bg-brand-black    top-0 left-0 "
+      className="md:px-48 min-h-screen w-full text-white bg-brand-black    top-0 left-0 "
       onMouseEnter={imageEnter}
       onMouseLeave={textLeave}
     >
-      <div class=" px-5 flex flex-col z-20 relative  md:h-full md:mt-0 mt-60  md:py-52 w-9/10  md:w-7/10 ">
+      <div class=" flex-col z-20 relative  md:h-full md:mt-0 mt-60  md:py-52 w-9/10  md:w-7/10 ">
         <div
           class="text-3xl md:text-5xl font-thin  w-full md:mt-20  font-lato-light-italic landing-page-text  "
           onMouseEnter={largeEnter}

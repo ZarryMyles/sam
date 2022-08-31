@@ -11,12 +11,12 @@ const Footer = ({ textEnter, textLeave, imageEnter }) => {
     },
     {
       name: "Email",
-      link: "https://dribbble.com/",
+      link: "mailto:fake@mail.com",
       // icon: <FaDribbbleSquare />,
     },
     {
       name: "LinkedIn",
-      link: "https://www.linkedin.com/in/",
+      link: "https://www.linkedin.com/in/shradha-b-k",
       // icon: <FaLinkedin />,
     },
 

@@ -21,6 +21,54 @@ const WorkLogos = ({ textEnter, textLeave, imageEnter }) => {
       name: "NinjaasLabs",
       logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/1200px-Microsoft_logo.svg.png",
     },
+    {
+      name: "Google Developers",
+      logo: "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+    },
+    {
+      name: "HappilyEver",
+      logo: "https://www.facebook.com/images/fb_icon_325x325.png",
+    },
+    {
+      name: "REVA HACK </>2020",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png",
+    },
+    {
+      name: "NinjaasLabs",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/1200px-Microsoft_logo.svg.png",
+    },
+    {
+      name: "Google Developers",
+      logo: "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+    },
+    {
+      name: "HappilyEver",
+      logo: "https://www.facebook.com/images/fb_icon_325x325.png",
+    },
+    {
+      name: "REVA HACK </>2020",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png",
+    },
+    {
+      name: "NinjaasLabs",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/1200px-Microsoft_logo.svg.png",
+    },
+    {
+      name: "Google Developers",
+      logo: "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+    },
+    {
+      name: "HappilyEver",
+      logo: "https://www.facebook.com/images/fb_icon_325x325.png",
+    },
+    {
+      name: "REVA HACK </>2020",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png",
+    },
+    {
+      name: "NinjaasLabs",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/1200px-Microsoft_logo.svg.png",
+    },
   ];
 
   return (

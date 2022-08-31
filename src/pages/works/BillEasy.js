@@ -1,30 +1,33 @@
 import React from "react";
 import { WorkHero, WorkVideos, Navbar } from "../../components";
-import { BsArrowRightShort } from "react-icons/bs";
 import { ReactComponent as Quote } from "../../assets/icons/quotestart.svg";
-import insightsImg from "../../assets/works/billEasy/billEasyInsights.png";
-import usability1 from "../../assets/works/billEasy/billEasyUsabilityTesting1.png";
-import usability2 from "../../assets/works/billEasy/billEasyUsabilityTesting2.png";
-import usability3 from "../../assets/works/billEasy/billEasyUsabilityTesting3.png";
-import usability4 from "../../assets/works/billEasy/billEasyUsabilityTesting4.png";
-import usabilityMatrix from "../../assets/works/billEasy/billEasyUsabilityMatrix.png";
-import persona1 from "../../assets/works/billEasy/billEasyPersona1.png";
-import persona2 from "../../assets/works/billEasy/billEasyPersona2.png";
-import persona3 from "../../assets/works/billEasy/billEasyPersona3.png";
-import CaseStudy1 from "../../assets/works/billEasy/billEasybi1.png";
-import CaseStudy2 from "../../assets/works/billEasy/billEasybi2.png";
-import CaseStudy3 from "../../assets/works/billEasy/billEasybi3.png";
-import CaseStudy4 from "../../assets/works/billEasy/billEasybi4.png";
-import CaseStudy5 from "../../assets/works/billEasy/billEasybi5.png";
-import CaseStudy6 from "../../assets/works/billEasy/billEasybi6.png";
-import CaseStudy7 from "../../assets/works/billEasy/billEasybi7.png";
-import CaseStudy8 from "../../assets/works/billEasy/billEasybi8.png";
-import CaseStudy9 from "../../assets/works/billEasy/billEasybi9.png";
+import { ArrowRightCircle } from "react-feather";
 
-const BillEasy = () => {
+// images
+import Hero from "../../assets/works/billEasy/billEasyResearchpng.png";
+
+import insightsImg from "../../assets/works/billEasy/billEasyInsights.svg";
+import usability1 from "../../assets/works/billEasy/billEasyUsabilityTesting1.svg";
+import usability2 from "../../assets/works/billEasy/billEasyUsabilityTesting2.svg";
+import usability3 from "../../assets/works/billEasy/billEasyUsabilityTesting3.svg";
+import usability4 from "../../assets/works/billEasy/billEasyUsabilityTesting4.svg";
+import usabilityMatrix from "../../assets/works/billEasy/billEasyUsabilityMatrix.svg";
+import persona1 from "../../assets/works/billEasy/billEasyPersona1.svg";
+import persona2 from "../../assets/works/billEasy/billEasyPersona2.svg";
+import persona3 from "../../assets/works/billEasy/billEasyPersona3.svg";
+import CaseStudy1 from "../../assets/works/billEasy/billEasybi1.svg";
+import CaseStudy2 from "../../assets/works/billEasy/billEasybi2.svg";
+import CaseStudy3 from "../../assets/works/billEasy/billEasybi3.svg";
+import CaseStudy4 from "../../assets/works/billEasy/billEasybi4.svg";
+import CaseStudy5 from "../../assets/works/billEasy/billEasybi5.svg";
+import CaseStudy6 from "../../assets/works/billEasy/billEasybi6.svg";
+import CaseStudy7 from "../../assets/works/billEasy/billEasybi7.svg";
+import CaseStudy8 from "../../assets/works/billEasy/billEasybi8.svg";
+import CaseStudy9 from "../../assets/works/billEasy/billEasybi9.svg";
+
+const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
   const work = {
-    image:
-      "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+    image: Hero,
     video:
       "https://res.cloudinary.com/genesiscloudimages/video/upload/v1660394170/work_gifs/C01_yqtldj.mp4",
     title: "BillEasy",
@@ -139,34 +142,38 @@ const BillEasy = () => {
           </div>
           <div class="col-span-12 md:col-span-8 ">
             <div class="text-2xl font-lato ">👨‍👨‍👧‍👦 Target audience</div>
-            <div class="flex  font-lato-bold  my-4">
-              <div className="mr-16">Direct users</div>
-              <div className="mr-16">Indirect users</div>
-            </div>
-            <div className="flex w-full justify-between md:justify-start my-4   ">
-              <div
-                className="mr-2 md:mr-3 px-1 py-1 md:px-5 md:py-3"
-                style={{
-                  background: "#FAFAFA",
-                }}
-              >
-                Accounts team
+            <div class="flex    my-4">
+              <div className="mr-16">
+                <div className="font-lato-bold">Direct users</div>
+                <div
+                  className="mr-2 md:mr-3 px-1 py-1 md:px-3 md:py-3"
+                  style={{
+                    background: "#FAFAFA",
+                  }}
+                >
+                  Accounts team
+                </div>
               </div>
-              <div
-                className="mr-2 md:mr-3 px-1 py-1 md:px-5 md:py-3"
-                style={{
-                  background: "#FAFAFA",
-                }}
-              >
-                Stakeholders
-              </div>
-              <div
-                className="mr-2 md:mr-3 px-1 py-1 md:px-5 md:py-3"
-                style={{
-                  background: "#FAFAFA",
-                }}
-              >
-                Business Intelligence
+              <div className="mr-16">
+                <div className="font-lato-bold">Indirect users</div>
+                <div className="flex w-full justify-between md:justify-start    ">
+                  <div
+                    className="mr-2 md:mr-3 px-1 py-1 md:px-3 md:py-3"
+                    style={{
+                      background: "#FAFAFA",
+                    }}
+                  >
+                    Stakeholders
+                  </div>
+                  <div
+                    className="mr-2 md:mr-3 px-1 py-1 md:px-5 md:py-3"
+                    style={{
+                      background: "#FAFAFA",
+                    }}
+                  >
+                    Business Intelligence
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -265,7 +272,6 @@ const BillEasy = () => {
             </div>
           </div>
           <div class="flex items-center">
-            <div class="w-5 h-5 bg-red-400 mr-5" />
             <div class="  text-2xl md:text-4xl my-8 tracking-1.5 font-lato-light font-bold ">
               🦮 Identifying the problem
             </div>
@@ -289,7 +295,13 @@ const BillEasy = () => {
         <div class="hidden md:block col-span-1"></div>
         <div class="col-span-12 md:col-span-5 h-full flex flex-col items-center justify-center">
           <div class="flex items-center">
-            <div></div>
+            <ArrowRightCircle
+              width={30}
+              height={30}
+              color="#3D6BC5"
+              strokeWidth={1}
+              className="mr-4"
+            />
             <div
               style={{
                 color: "#3D6BC5",
@@ -513,15 +525,19 @@ const BillEasy = () => {
       </div>
       {/* case studies */}
       <div class="py-5 md:py-24 ">
-        <div className="tracking-3 px-5 flex items-center md:px-24  uppercase font-lato-bold">
-          <BsArrowRightShort
-            style={{
-              border: "2px solid black",
-            }}
-            class=" text-3xl p-1   mr-4  rounded-full  border-black  "
-          />{" "}
+        <a
+          href="/"
+          className="tracking-3 px-5 flex items-center md:px-24  uppercase font-lato-bold"
+        >
+          <ArrowRightCircle
+            width={30}
+            height={30}
+            color="black"
+            strokeWidth={1.5}
+            className="mr-4"
+          />
           read full case study ☕
-        </div>
+        </a>
         <div class="px-5 my-5 grid   grid-cols-2 md:grid-cols-11 items-center ">
           <div class="col-span-3  ">
             <img src={CaseStudy2} className="" alt="" />

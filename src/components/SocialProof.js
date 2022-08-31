@@ -37,10 +37,10 @@ const SocialProof = ({ textEnter, textLeave, imageEnter }) => {
       <div
         id="social-proof"
         onMouseEnter={imageEnter}
-        onMouseLeave={textLeave}
-        className="px-5 md:px-48 font-lato py-10 md:py-20 md:pt-0 flex items-center justify-center my-10 md:my-5 bg-white dark:bg-brand-black transition-all duration-500"
+        // onMouseLeave={textLeave}
+        className="px-5 md:px-24 font-lato py-10 md:py-20 md:pt-0 flex items-center justify-center my-10 md:my-5 bg-white dark:bg-brand-black transition-all duration-500"
       >
-        <div class=" bg-brand-lightGrey dark:bg-brand-darkGrey2 md:dark:bg-brand-darkGrey2 text-black dark:text-brand-gray w-full p-5 md:p-20  flex flex-col items-center justify-end relative">
+        <div class=" bg-brand-lightGrey dark:bg-brand-darkGrey2 md:dark:bg-brand-darkGrey2 text-black dark:text-brand-gray w-full p-5 md:p-24  flex flex-col items-center justify-end relative">
           {/* <Parallax
             class="text-4xl md:text-5xl w-full md:w-1/3 absolute -top-10 px-4 md:px-0 md:-top-12 md:left-12 font-bold"
             translateY={[-50, 20]}
@@ -99,6 +99,7 @@ const SocialProof = ({ textEnter, textLeave, imageEnter }) => {
                 </div>
               </div>
             </div>
+            {/* pagination */}
             <div class="flex justify-center items-center w-full">
               {feedbacks.map((item, index) => (
                 <div
@@ -119,7 +120,7 @@ const SocialProof = ({ textEnter, textLeave, imageEnter }) => {
                     }}
                     class={` transition-all duration-200 ${
                       item.name === feedback.name
-                        ? "bg-black dark:bg-white w-6 "
+                        ? "bg-black dark:bg-brand-pink w-6 "
                         : " bg-gray-500 w-4"
                     }   mx-1 `}
                   />

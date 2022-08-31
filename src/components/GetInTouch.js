@@ -9,8 +9,8 @@ const GetInTouch = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
       <div className=" text-black dark:text-brand-white px-5 md:px-48  py-10 md:py-40  w-full   left-0 top-0  z-20  ">
         <div
           className="flex flex-col-reverse md:flex-row items-center justify-between w-full"
-          onMouseEnter={largeEnter}
-          onMouseLeave={textLeave}
+          // onMouseEnter={imageEnter}
+          // onMouseLeave={textLeave}
         >
           <div
             // onMouseEnter={textEnter}
@@ -35,12 +35,15 @@ const GetInTouch = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
               LinkedIn
             </a>
           </div> */}
-          <div
+          <a
             className="font-lato-light text-center md:text-left   "
             style={{
               letterSpacing: "1px",
               fontSize: "22px",
             }}
+            href="http://www.linkedin.com/in/shradha-b-k"
+            onMouseEnter={largeEnter}
+            onMouseLeave={imageEnter}
           >
             Lets create more{" "}
             <span
@@ -51,7 +54,7 @@ const GetInTouch = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
             >
               soulful stories and delightful experiences
             </span>
-          </div>
+          </a>
         </div>
       </div>
       <div className="bg-brand-lightGrey w-full h-full absolute left-0 top-0 -z-10 getintouch-graybg" />

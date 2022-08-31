@@ -10,13 +10,13 @@ const Video = ({ work }) => {
       autoPlay
       muted
     >
-      <source
-        src={
-          "https://res.cloudinary.com/genesiscloudimages/video/upload/v1660394170/work_gifs/C01_yqtldj.mp4"
-        }
-        type="video/mp4"
-      />
+      <source src={work.video} type="video/mp4" />
     </video>
+    // <img
+    //   className="md:h-screen w-full object-contain md:object-cover  bg-cover bg-no-repeat bg-center"
+    //   src={work.video}
+    //   alt=""
+    // />
   );
 };
 

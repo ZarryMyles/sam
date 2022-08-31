@@ -1,6 +1,7 @@
 import React from "react";
 import { WorkHero, Navbar } from "../../components";
 import { ReactComponent as Quote } from "../../assets/icons/quotestart.svg";
+import { ArrowRightCircle } from "react-feather";
 import Problem from "../../assets/works/smartvision/smartVisionProblem.png";
 import Problem2 from "../../assets/works/smartvision/smartVisionProblem2.png";
 import Problem3 from "../../assets/works/smartvision/smartVisionProblem3.png";
@@ -16,10 +17,9 @@ import { BsArrowRightShort } from "react-icons/bs";
 
 const SmartVision = () => {
   const work = {
-    image:
-      "https://images.unsplash.com/photo-1484406566174-9da000fda645?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=389&q=80",
+    image: "../../assets/works/smartvision/smartVision.png",
     video:
-      "https://res.cloudinary.com/genesiscloudimages/video/upload/v1660394170/work_gifs/C01_yqtldj.mp4",
+      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/Comp_1_tdwzlp.gif",
     title: "Smart Vision",
     domain: "Case Study",
     subtitle: "A web app for managing your bills",
@@ -736,15 +736,16 @@ const SmartVision = () => {
         {/*  */}
         <a
           href="/"
-          class="flex items-center font-lato-bold text-base uppercase tracking-3 my-8"
+          className="tracking-3 px-5 flex items-center md:px-24  uppercase font-lato-bold"
         >
-          <BsArrowRightShort
-            style={{
-              border: "2px solid black",
-            }}
-            class=" text-3xl p-1   mr-4  rounded-full  border-black  "
+          <ArrowRightCircle
+            width={30}
+            height={30}
+            color="black"
+            strokeWidth={1.5}
+            className="mr-4"
           />
-          read full case study <span class="text-2xl">☕</span>
+          read full case study ☕
         </a>
       </div>
       <WorkHero
