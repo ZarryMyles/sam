@@ -39,7 +39,6 @@ const works = [
       "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/render_s6dzdu.gif",
     link: "/happilyever",
   },
-
   {
     id: 4,
     title: "Smart Vision",

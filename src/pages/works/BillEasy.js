@@ -38,7 +38,7 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
     linkText: "Visit BillEasy",
   };
   return (
-    <div>
+    <div className="text-justify">
       <Navbar defaultColor={"white"} />
       <WorkHero work={work} />
       <WorkVideos work={work} />
@@ -127,13 +127,13 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
             }}
             class="bg-brand-gray w-28 mr-4"
           />
-          <div class=" text-brand-gray uppercase text-xl tracking-widest ">
+          <div class=" text-brand-gray uppercase font-lato tracking-2 text-xl tracking-widest ">
             Purpose
           </div>
         </div>
-        <div class="grid grid-cols-12">
+        <div class="grid grid-cols-12 font-lato">
           <div class="col-span-12 md:col-span-4">
-            <div class="text-2xl">🎯 Goals</div>
+            <div class=" text-2xl  tracking-1.5">🎯 Goals</div>
             <div className="my-5 ">
               1. Optimize efficiency <br />
               2. Minimal learning curve <br />
@@ -141,7 +141,9 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
             </div>
           </div>
           <div class="col-span-12 md:col-span-8 ">
-            <div class="text-2xl font-lato ">👨‍👨‍👧‍👦 Target audience</div>
+            <div class="text-2xl font-lato tracking-1.5">
+              👨‍👨‍👧‍👦 Target audience
+            </div>
             <div class="flex    my-4">
               <div className="mr-16">
                 <div className="font-lato-bold">Direct users</div>
@@ -180,7 +182,7 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
         </div>
       </div>
       {/* challenge */}
-      <div class="bg-brand-black  p-5 md:p-24 ">
+      <div class="bg-brand-black font-lato  p-5 md:p-24 ">
         <div class="flex items-center mb-12">
           <div
             style={{
@@ -188,18 +190,16 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
             }}
             class="bg-brand-gray w-28 mr-4"
           />
-          <div class=" text-brand-gray uppercase text-xl tracking-widest ">
-            Challenge
-          </div>
+          <div class=" text-brand-gray uppercase  tracking-2 ">Challenge</div>
         </div>
         <div class="grid grid-cols-12  items-center">
           <div class="col-span-12 md:col-span-6 relative ">
             <Quote
-              className="absolute -top-4 md:-top-5 -left-4 md:-left-5 w-6 h-6  "
+              className="absolute -top-4 md:-top-7 -left-4 md:-left-7 w-7 h-6  "
               stroke="none"
             />
             <div
-              className="font-lato-light tracking-widest"
+              className="font-lato-light tracking-0.5 t "
               style={{
                 color: "#FEFEFE",
               }}
@@ -256,21 +256,20 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
           </div>
         </div>
       </div>
-      {/* TODO: icon */}
       {/* problem identification */}
       <div class=" p-5 md:p-24 grid grid-cols-12  h-full">
-        <div class="col-span-12 md:col-span-6 h-full  ">
-          <div class="flex items-center mb-12">
-            <div
-              style={{
-                height: "1px",
-              }}
-              class="bg-brand-gray w-28 mr-4"
-            />
-            <div class=" text-brand-gray uppercase text-xl tracking-widest ">
-              Research
-            </div>
+        <div class="flex col-span-12 items-center mb-12">
+          <div
+            style={{
+              height: "1px",
+            }}
+            class="bg-brand-gray w-28 mr-4"
+          />
+          <div class=" text-brand-gray uppercase text-xl tracking-widest ">
+            Research
           </div>
+        </div>
+        <div class="col-span-12 md:col-span-6 h-full  ">
           <div class="flex items-center">
             <div class="  text-2xl md:text-4xl my-8 tracking-1.5 font-lato-light font-bold ">
               🦮 Identifying the problem
@@ -280,20 +279,21 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
             <li className="my-3">
               Our initial priority was to design a solution for our company. To
               identify the core problems, I approached the core team responsible
-              for managing invoices The Accounts Department.
+              for managing invoices <b>The Accounts Department.</b>
             </li>
             <li className="my-3">
-              I was able to interview two of the teammates with different levels
-              of work experience.
+              I was able to interview <b>two of the teammates</b> with different
+              levels of work experience.
             </li>{" "}
             <li className="my-3">
-              Interview goals: To learn about their work life, specific problems
-              and motivations and gain behavioral understanding.
+              Interview goals: To learn about their{" "}
+              <b>work life, specific problems and motivations</b> and gain{" "}
+              <b>behavioral understanding.</b>
             </li>
           </ul>
         </div>
         <div class="hidden md:block col-span-1"></div>
-        <div class="col-span-12 md:col-span-5 h-full flex flex-col items-center justify-center">
+        <div class="col-span-12 md:col-span-5 h-full flex flex-col   items-center justify-center">
           <div class="flex items-center">
             <ArrowRightCircle
               width={30}
@@ -404,15 +404,22 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
           <div class="hidden md:block col-span-1" />
           <div class="col-span-12 md:col-span-5 h-full flex flex-col justify-center">
             <img className="w-full object-center" src={usability1} alt="" />
-            <div
+            <a
+              href="/"
               style={{
                 color: "#3D6BC5",
-                // letterSpacing: "3px",
               }}
-              class="uppercase text-base font-lato-light font-bold tracking-3 my-5 "
+              class="uppercase text-base flex items-center font-lato-light font-bold tracking-3 my-5 "
             >
+              <ArrowRightCircle
+                width={30}
+                height={30}
+                color="#3D6BC5"
+                strokeWidth={1}
+                className="mr-4"
+              />
               UT DOCUMENTS
-            </div>
+            </a>
           </div>
         </div>
         <div class=" text-brand-gray mt-10 mb-5">🌡️ Heat-map</div>

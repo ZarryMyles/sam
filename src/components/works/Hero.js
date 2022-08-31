@@ -18,7 +18,10 @@ const Hero = ({ work, next }) => {
               }}
               class="bg-brand-gray w-28 mr-4"
             />
-            <div class=" text-brand-gray uppercase text-xl tracking-widest ">
+            <div
+              style={{ letterSpacing: "2px" }}
+              class=" font-lato text-brand-gray uppercase text-xl tracking-widest "
+            >
               {work.domain}
             </div>
           </div>

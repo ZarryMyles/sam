@@ -190,7 +190,10 @@ module.exports = {
       wide: "0.025em",
       wider: "0.05em",
       widest: "0.1em",
+      0.5: "0.5px",
+      1: "1px",
       1.5: "1.5px",
+      2: "2px",
       3: "3px",
     },
     extend: {
