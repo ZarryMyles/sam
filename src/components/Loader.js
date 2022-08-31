@@ -8,15 +8,14 @@ const Loader = () => {
       <div className="font-lato-light text-4xl mb-8">Shradha</div>
       <div className="w-full h-auto flex justify-center items-center">
         <div
-          className="bg-gray-400 hidden md:block"
+          className="bg-brand-loaderGray hidden md:block"
           style={{ width: "300px", height: "0.5px", borderRadius: "1px" }}
         >
           <div
-            className="loaderLine"
+            className="loaderLine bg-brand-gray"
             style={{
               height: "1.5px",
               borderRadius: "10px",
-              bgColor: "#b5b5b5 !important",
             }}
           ></div>
         </div>
@@ -25,11 +24,10 @@ const Loader = () => {
           style={{ width: "200px", height: "0.5px", borderRadius: "1px" }}
         >
           <div
-            className="loaderLine"
+            className="loaderLine bg-brand-gray"
             style={{
               height: "1.5px",
               borderRadius: "10px",
-              bgColor: "#b5b5b5 !important",
             }}
           ></div>
         </div>
