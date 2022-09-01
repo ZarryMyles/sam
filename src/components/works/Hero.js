@@ -2,30 +2,38 @@ import React from "react";
 
 const Hero = ({ work, next }) => {
   return (
-    <div className="h-screen grid grid-cols-12">
-      <div class="col-span-3 z-20 relative bg-brand-black h-full flex flex-col justify-center w-full items-center ">
+    <div className="h-screen grid grid-cols-12  ">
+      <div class="col-span-3 z-20 relative bg-brand-black h-full flex flex-col justify-center w-full items-center px-5 md:px-48">
         <div
-          class="flex absolute h-full top-0   flex-col w-full justify-center pt-20  "
-          style={{
-            // right: "-100%",
-            right: "-25%",
-          }}
+          class="flex  h-full top-0   flex-col w-full justify-center pt-20  "
+          style={
+            {
+              // right: "-100%",
+              // right: "-2%",
+            }
+          }
         >
           <div class="flex items-center mb-12">
             <div
               style={{
                 height: "1px",
+                width: "72px",
               }}
-              class="bg-brand-gray w-28 mr-4"
+              class="bg-brand-gray  mr-4"
             />
             <div
               style={{ letterSpacing: "2px" }}
-              class=" font-lato text-brand-gray uppercase text-xl tracking-widest "
+              class=" font-lato-med text-brand-gray uppercase  tracking-widest "
             >
               {work.domain}
             </div>
           </div>
-          <div class="text-7xl md:text-8xl font-lato text-white md:w-max">
+          <div
+            style={{
+              fontSize: "64px",
+            }}
+            class="  font-semibold tracking-3   font-lato text-white md:w-max"
+          >
             {work.title}
           </div>
           {next && (
@@ -44,6 +52,7 @@ const Hero = ({ work, next }) => {
           backgroundImage: `url(${work.image})`,
         }}
       ></div>
+      {/* line animation */}
     </div>
   );
 };

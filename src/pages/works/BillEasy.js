@@ -101,7 +101,12 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
         </div>
         <div class="hidden md:block col-span-1"></div>
 
-        <div class="col-span-12 md:col-span-5 h-full flex flex-col items-center justify-center ">
+        <div
+          class="col-span-12 md:col-span-5 h-full flex flex-col items-center justify-center p-5 "
+          style={{
+            background: "#FAFAFA",
+          }}
+        >
           <div className="my-5">
             <div className="mb-3">✅ Results</div>
             <div>

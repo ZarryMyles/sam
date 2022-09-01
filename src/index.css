@@ -10,6 +10,14 @@
   font-family: "Lato";
 }
 @font-face {
+  font-family: "Lato Medium";
+  src: url("./fonts/lato/Lato-Medium.ttf");
+}
+.font-lato-med {
+  font-family: "Lato Medium";
+}
+
+@font-face {
   font-family: "Lato-Thin";
   src: url("./fonts/lato/Lato-Thin.ttf");
 }

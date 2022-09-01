@@ -7,8 +7,10 @@ const Video = ({ work }) => {
       className="md:h-screen w-full object-contain md:object-cover  bg-cover bg-no-repeat bg-center"
       alt="loading..."
       loop
-      autoPlay
-      muted
+      showControls
+
+      // autoPlay
+      // muted
     >
       <source src={work.video} type="video/mp4" />
     </video>
