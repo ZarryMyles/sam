@@ -281,13 +281,13 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
           </div> */}
           <img
             src={Challenges}
-            className="w-full h-full col-span-12 object-contain md:col-span-5 "
+            className="w-full h-full col-span-12 object-contain  object-center md:col-span-5 "
             alt=""
           />
         </div>
       </div>
       {/* problem identification */}
-      <div class=" p-5 md:p-24 grid grid-cols-12  h-full">
+      <div class=" p-5 md:px-24 md:pt-36 md:pb-36 grid grid-cols-12  h-full">
         <div class="flex col-span-12 items-center mb-10">
           <div
             style={{
@@ -300,13 +300,13 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
             Research
           </div>
         </div>
-        <div class="col-span-12 md:col-span-6 h-full  ">
+        <div class="col-span-12 md:col-span-6 h-full md:mb-8  ">
           <div class="flex items-center">
-            <div class="  text-2xl md:text-4xl my-8 tracking-1.5 font-lato-light font-bold ">
+            <div class="  text-2xl md:text-4xl   md:-ml-2  tracking-1.5 font-lato-light font-bold ">
               🦮 Identifying the problem
             </div>
           </div>
-          <ul className="my-8 list-disc">
+          <ul className="my-8 list-disc ml-4 text-justify tracking-0.5 leading-6">
             <li className="my-3">
               Our initial priority was to design a solution for our company. To
               identify the core problems, I approached the core team responsible
@@ -346,11 +346,11 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
         </div>
       </div>
       {/* insights */}
-      <div class="p-5 md:p-24 font-lato">
+      <div class="p-5 md:px-24 md:py-0 font-lato">
         <div className=" text-2xl">🗝️ Insights</div>
         <div class="grid grid-cols-12 ">
           <div class="col-span-12 md:col-span-6">
-            <ul className=" list-disc ml-5">
+            <ul className=" list-disc ml-5 tracking-0.5 leading-6">
               <li className="my-4">
                 {" "}
                 Ninjaaslabs holds two businesses, a consultancy and its venture.
