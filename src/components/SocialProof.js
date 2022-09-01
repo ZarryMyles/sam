@@ -67,7 +67,7 @@ const SocialProof = ({ textEnter, textLeave, imageEnter }) => {
 
           <div class=" text-brand-gray text-xs md:text-base  w-full  px-5 md:px-0 py-8 md:py-0 flex flex-col justify-center">
             <div
-              className={`italic my-14 letter-1.5 transition-opacity ease-linear duration-1000 font-lato-light leading-8 tracking-wider text-justify  ${
+              className={`font-lato-light-italic my-14 letter-1.5 transition-opacity ease-linear duration-1000 font-lato-light leading-8 tracking-wider text-justify  ${
                 fade ? "opacity-0" : ""
               } `}
             >

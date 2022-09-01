@@ -1,6 +1,6 @@
 import React from "react";
 import { WorkHero, Navbar } from "../../components";
-import { BsArrowRightShort } from "react-icons/bs";
+import { ArrowRightCircle } from "react-feather";
 // assets
 import invoiceGen from "../../assets/works/billEasyVisual/Page.png";
 import invoiceDis from "../../assets/works/billEasyVisual/Share.png";
@@ -345,15 +345,19 @@ const BillEasyVisual = () => {
             />
             <img src={matrix} width="100%" alt="visual" className="md:hidden" />
           </div>
-          <div className="tracking-3 pt-10  flex items-center  uppercase font-lato-bold">
-            <BsArrowRightShort
-              style={{
-                border: "2px solid black",
-              }}
-              class=" text-3xl p-1   mr-4  rounded-full  border-black  "
-            />{" "}
+          <a
+            href="/"
+            className="tracking-3 p-5 flex items-center md:p-20 uppercase font-lato-bold"
+          >
+            <ArrowRightCircle
+              width={30}
+              height={30}
+              color="black"
+              strokeWidth={1.5}
+              className="mr-4"
+            />
             read full case study ☕
-          </div>
+          </a>
         </div>
       </div>
       {/* Possibilities */}

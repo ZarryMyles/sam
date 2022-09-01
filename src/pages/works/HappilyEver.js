@@ -1,6 +1,6 @@
 import React from "react";
 import { WorkHero, Navbar } from "../../components";
-import { BsArrowRightShort } from "react-icons/bs";
+import { ArrowRightCircle } from "react-feather";
 // assets
 import one from "../../assets/works/happilyEver/1.png";
 import two from "../../assets/works/happilyEver/2.png";
@@ -23,7 +23,7 @@ const HappilyEver = () => {
     linkText: "Visit BillEasy",
   };
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden font-lato-light">
       <Navbar defaultColor={"white"} />
       <WorkHero work={work} />
       <div class=" p-5 md:p-24 flex flex-wrap justify-between ">
@@ -114,15 +114,12 @@ const HappilyEver = () => {
           <div class="col-span-12 md:col-span-4">
             <div class="text-2xl font-lato">🎯 Goals</div>
             <div className="my-5 ">
-              1. Allow them to <b>connect with people Independently.</b>
+              1. Strengthen brand direction.
               <br />
-              2. Provide essential <b>Accessibility features.</b>
+              2. <b>Improve focus</b> on purpose.
               <br />
-              3. Make it easier to <b>share information.</b>
-              <br />
-              4. Protect <b>privacy and security</b>.
-              <br />
-              5. <b>Promote awareness</b>
+              3. Identify{" "}
+              <b>alignment in user brand persuasion and brand vision.</b>
             </div>
           </div>
         </div>
@@ -353,6 +350,19 @@ const HappilyEver = () => {
           />
         </div>
       </div>
+      <a
+        href="/"
+        className="tracking-3 p-5 flex items-center md:p-20 uppercase font-lato-bold"
+      >
+        <ArrowRightCircle
+          width={30}
+          height={30}
+          color="black"
+          strokeWidth={1.5}
+          className="mr-4"
+        />
+        read full case study ☕
+      </a>
       {/* end screen */}
       <WorkHero
         work={{
