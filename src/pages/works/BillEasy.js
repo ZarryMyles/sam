@@ -24,6 +24,7 @@ import CaseStudy6 from "../../assets/works/billEasy/billEasybi6.svg";
 import CaseStudy7 from "../../assets/works/billEasy/billEasybi7.svg";
 import CaseStudy8 from "../../assets/works/billEasy/billEasybi8.svg";
 import CaseStudy9 from "../../assets/works/billEasy/billEasybi9.svg";
+import Challenges from "../../assets/works/billEasy/challenges.svg";
 
 const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
   const work = {
@@ -38,57 +39,67 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
     linkText: "Visit BillEasy",
   };
   return (
-    <div className="text-justify">
+    <div className="text-justify bg-brand-black text-brand-white">
       <Navbar defaultColor={"white"} />
       <WorkHero work={work} />
       <WorkVideos work={work} />
       {/* project brief */}
-      <div class=" p-5 md:p-24 flex flex-wrap justify-between ">
-        <div className=" w-1/2 md:w-auto my-5  ">
-          <div class="text-xl font-bold font-lato-bold flex items-center">
+      <div class=" p-5 md:px-24 md:my-20 flex flex-wrap justify-between  ">
+        <div className="  my-5   ">
+          <div class="text-xl font-bold font-lato-bold flex items-center -ml-1">
             👨‍👩‍👦 Project Type
           </div>
-          <div className="font-lato-light font-bold">In-house, Fin-Tech</div>
+          <div className="font-lato-light font-bold mt-2">
+            In-house, Fin-Tech
+          </div>
         </div>
         <div className=" w-1/2 md:w-auto my-5  ">
-          <div class="text-xl font-bold font-lato-bold flex items-center">
+          <div class="text-xl font-bold font-lato-bold flex items-center -ml-2">
             ⏱️ Timeline
           </div>
-          <div className="font-lato-light font-bold">3 months</div>
+          <div className="font-lato-light font-bold mt-2">3 months</div>
         </div>
         <div className=" w-1/2 md:w-auto my-5  ">
-          <div class="text-xl font-bold font-lato-bold flex items-center">
+          <div class="text-xl font-bold font-lato-bold flex items-center -ml-1">
             👩‍💻 My Role
           </div>
-          <div className="font-lato-light font-bold">UX & UI Design Intern</div>
+          <div className="font-lato-light font-bold mt-2">
+            UX & UI Design Intern
+          </div>
         </div>
         <div className=" w-1/2 md:w-auto my-5  ">
-          <div class="text-xl font-bold font-lato-bold flex items-center">
+          <div class="text-xl font-bold font-lato-bold flex items-center -ml-1">
             👥 Design Team
           </div>
-          <div className="font-lato-light font-bold">Myself</div>
+          <div className="font-lato-light font-bold mt-2">Myself</div>
         </div>
       </div>
       {/* project concept */}
-      <div class=" p-5 md:p-24 grid grid-cols-12  h-full">
-        <div class="col-span-12 md:col-span-6 h-full  ">
-          <div class="flex items-center mb-12">
+      <div class=" p-5 md:px-24 md:mb-36 md:pr-0 grid grid-cols-12  h-full">
+        <div class="flex items-center mb-10 col-span-12">
+          <div
+            style={{
+              height: "1px",
+              width: "72px",
+            }}
+            class="bg-brand-gray  mr-4"
+          />
+          <div class=" text-brand-gray uppercase text-xl tracking-widest ">
+            Concept
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-6 h-full flex flex-col    ">
+          <div class="flex items-center">
             <div
               style={{
-                height: "1px",
+                marginBottom: "30px",
               }}
-              class="bg-brand-gray w-28 mr-4"
-            />
-            <div class=" text-brand-gray uppercase text-xl tracking-widest ">
-              Concept
-            </div>
-          </div>
-          <div class="flex items-center">
-            <div class="  text-2xl md:text-4xl my-8 tracking-widest font-lato-light font-bold ">
+              class="  text-2xl md:text-4xl  tracking-widest font-lato-light font-bold "
+            >
               💡 BillEasy
             </div>
           </div>
-          <div className="my-8    ">
+          <div className="  leading-6 tracking-0.5   ">
             Introducing BillEasy. An Easy, Efficient and Convenient digital
             Invoicing experience. A solution designed to help accounting teams
             create, share, store, and track GST-compliant invoices in just a few
@@ -101,81 +112,79 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
         </div>
         <div class="hidden md:block col-span-1"></div>
 
-        <div
-          class="col-span-12 md:col-span-5 h-full flex flex-col items-center justify-center p-5 "
-          style={{
-            background: "#FAFAFA",
-          }}
-        >
-          <div className="my-5">
-            <div className="mb-3">✅ Results</div>
-            <div>
-              70% Increased user satisfaction. Estimated to Optimize
-              productivity by 3x and Increased transparency.
+        <div class="col-span-12 md:col-span-5  flex flex-col items-center justify-center pl-10 rounded-xl text-brand-white ">
+          <div className="  md:pr-24 rounded-l-lg flex flex-col justify-center bg-brand-darkGrey2 pl-14 py-14  ">
+            <div className=" mb-8">
+              <div className=" mb-2">✅ Results</div>
+              <div className=" leading-6 tracking-0.5">
+                70% Increased user satisfaction. Estimated to Optimize
+                productivity by 3x and Increased transparency.
+              </div>
             </div>
-          </div>
-          <div className=" my-5">
-            <div className="mb-3">💼 Contribution</div>
-            <div>
-              Interviews, Qualitative Research, Ethnographic Research,
-              Competitive Audit, Interface Designs, Testing.
+            <div className=" ">
+              <div className=" mb-2">💼 Contribution</div>
+              <div className=" leading-6 tracking-0.5">
+                Interviews, Qualitative Research, Ethnographic Research,
+                Competitive Audit, Interface Designs, Testing.
+              </div>
             </div>
           </div>
         </div>
       </div>
       {/* purpose */}
-      <div className="p-5 md:p-20">
-        <div class="flex items-center mb-12">
+      <div className="p-5 md:px-24 md:mb-24">
+        <div class="flex items-center mb-10">
           <div
             style={{
               height: "1px",
+              width: "72px",
             }}
             class="bg-brand-gray w-28 mr-4"
           />
-          <div class=" text-brand-gray uppercase font-lato tracking-2 text-xl tracking-widest ">
+          <div class=" text-brand-gray uppercase font-lato-med tracking-2 text-xl  ">
             Purpose
           </div>
         </div>
         <div class="grid grid-cols-12 font-lato">
           <div class="col-span-12 md:col-span-4">
-            <div class=" text-2xl  tracking-1.5">🎯 Goals</div>
-            <div className="my-5 ">
+            <div class=" text-2xl  tracking-1.5 mb-8">🎯 Goals</div>
+            <div className=" ">
               1. Optimize efficiency <br />
               2. Minimal learning curve <br />
               3. Save time
             </div>
           </div>
           <div class="col-span-12 md:col-span-8 ">
-            <div class="text-2xl font-lato tracking-1.5">
+            <div class="text-2xl font-lato tracking-1.5 mb-8">
               👨‍👨‍👧‍👦 Target audience
             </div>
-            <div class="flex    my-4">
-              <div className="mr-16">
-                <div className="font-lato-bold">Direct users</div>
+            <div class="flex    ">
+              <div className="mr-16 ">
+                <div className="font-lato-bold mb-2">Direct users</div>
                 <div
-                  className="mr-2 md:mr-3 px-1 py-1 md:px-3 md:py-3"
+                  className="mr-2 md:mr-3 px-1 py-1 md:px-6 md:py-3 text-brand-white"
                   style={{
-                    background: "#FAFAFA",
+                    background: "#111111",
                   }}
                 >
                   Accounts team
                 </div>
               </div>
               <div className="mr-16">
-                <div className="font-lato-bold">Indirect users</div>
+                <div className="font-lato-bold mb-2">Indirect users</div>
                 <div className="flex w-full justify-between md:justify-start    ">
                   <div
-                    className="mr-2 md:mr-3 px-1 py-1 md:px-3 md:py-3"
+                    className="mr-2 md:mr-3 px-1 py-1 md:px-6 md:py-3 text-brand-white"
                     style={{
-                      background: "#FAFAFA",
+                      background: "#111111",
                     }}
                   >
                     Stakeholders
                   </div>
                   <div
-                    className="mr-2 md:mr-3 px-1 py-1 md:px-5 md:py-3"
+                    className="mr-2 md:mr-3 px-1 py-1 md:px-6 md:py-3 text-brand-white"
                     style={{
-                      background: "#FAFAFA",
+                      background: "#111111",
                     }}
                   >
                     Business Intelligence
@@ -187,24 +196,27 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
         </div>
       </div>
       {/* challenge */}
-      <div class="bg-brand-black font-lato  p-5 md:p-24 ">
-        <div class="flex items-center mb-12">
+      <div class="bg-brand-darkGrey2 font-lato  p-5 md:px-24 md:py-24 ">
+        <div class="flex items-center mb-10">
           <div
             style={{
               height: "1px",
+              width: "72px",
             }}
             class="bg-brand-gray w-28 mr-4"
           />
-          <div class=" text-brand-gray uppercase  tracking-2 ">Challenge</div>
+          <div class=" text-brand-gray uppercase font-lato-med tracking-2 text-xl ">
+            Challenge
+          </div>
         </div>
         <div class="grid grid-cols-12  items-center">
           <div class="col-span-12 md:col-span-6 relative ">
             <Quote
-              className="absolute -top-4 md:-top-7 -left-4 md:-left-7 w-7 h-6  "
+              className="absolute -top-4 md:-top-7  w-7 h-6  "
               stroke="none"
             />
             <div
-              className="font-lato-light tracking-0.5 t "
+              className="font-lato-light tracking-0.5  ml-9"
               style={{
                 color: "#FEFEFE",
               }}
@@ -216,7 +228,7 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
             </div>
           </div>
           <div class="hidden md:block col-span-1"></div>
-          <div
+          {/* <div
             class="col-span-12 md:col-span-5 my-2 md:my-0  text-black p-5 md:p-10 rounded-md flex md:flex-row flex-col "
             style={{
               backgroundColor: "#EFFCF5",
@@ -247,30 +259,44 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
                 }}
               >
                 <span className=" font-lato-bold mr-2 text-xl ">30+</span>
-                minutes
+                hours
               </div>
+              <div
+                style={{
+                  backgroundColor: "#F3C05C",
+                  height: "3px",
+                  width: "102px",
+                }}
+                className=" -mt-1"
+              ></div>
               <div
                 class="text-gray-500 "
                 style={{
                   color: "#2B6043",
                 }}
               >
-                To prep a signle manually
+                To complete monthly report
               </div>
             </div>
-          </div>
+          </div> */}
+          <img
+            src={Challenges}
+            className="w-full h-full col-span-12 object-contain md:col-span-5 "
+            alt=""
+          />
         </div>
       </div>
       {/* problem identification */}
       <div class=" p-5 md:p-24 grid grid-cols-12  h-full">
-        <div class="flex col-span-12 items-center mb-12">
+        <div class="flex col-span-12 items-center mb-10">
           <div
             style={{
               height: "1px",
+              width: "72px",
             }}
             class="bg-brand-gray w-28 mr-4"
           />
-          <div class=" text-brand-gray uppercase text-xl tracking-widest ">
+          <div class=" text-brand-gray uppercase font-lato-med tracking-2 text-xl ">
             Research
           </div>
         </div>
@@ -376,7 +402,7 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
         </div>
       </div>
       {/* usability testing */}
-      <div class="p-5 md:p-24 font-lato bg-black w-full">
+      <div class="p-5 md:p-24 font-lato bg-brand-black w-full">
         <div className="grid-cols-12 grid ">
           <div class="col-span-12 md:col-span-6 h-full ">
             <div className=" text-white text-2xl md:text-4xl my-8 ">
@@ -457,10 +483,11 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
           <div
             style={{
               height: "1px",
+              width: "72px",
             }}
             class="bg-brand-gray w-28 mr-4"
           />
-          <div class=" text-brand-gray uppercase text-xl tracking-widest ">
+          <div class=" text-brand-gray uppercase font-lato-med tracking-2 text-xl ">
             Research
           </div>
         </div>

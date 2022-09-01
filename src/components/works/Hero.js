@@ -2,18 +2,15 @@ import React from "react";
 
 const Hero = ({ work, next }) => {
   return (
-    <div className="h-screen grid grid-cols-12  ">
-      <div class="col-span-3 z-20 relative bg-brand-black h-full flex flex-col justify-center w-full items-center px-5 md:px-48">
-        <div
-          class="flex  h-full top-0   flex-col w-full justify-center pt-20  "
-          style={
-            {
-              // right: "-100%",
-              // right: "-2%",
-            }
-          }
-        >
-          <div class="flex items-center mb-12">
+    <div className="h-screen  w-full flex  ">
+      <div
+        style={{
+          width: "19.5%",
+        }}
+        class="     z-20 relative bg-brand-black h-full flex flex-col justify-center w-full items-center px-5 md:px-24"
+      >
+        <div class="flex  h-full    flex-col w-full justify-center pt-20  ">
+          <div class="flex items-center mb-12 w-max">
             <div
               style={{
                 height: "1px",
@@ -47,8 +44,10 @@ const Hero = ({ work, next }) => {
         </div>
       </div>
       <div
-        class="col-span-9  z-10 bg-cover bg-center bg-no-repeat brightness-50 bg-brand-black"
+        class="  z-10 bg-cover bg-center bg-no-repeat brightness-50 bg-brand-black"
         style={{
+          width: "80.5%",
+
           backgroundImage: `url(${work.image})`,
         }}
       ></div>

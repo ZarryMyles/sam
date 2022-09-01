@@ -86,11 +86,11 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
     <div className="overflow-hidden w-screen">
       <div
         style={{ color: defaultColor }}
-        className="w-full hidden md:flex zed absolute justify-between items-center mr-5"
+        className="w-full hidden md:flex zed absolute justify-between items-center mr-5 p-5 md:px-24"
       >
         <a href="/" className="flex items-center">
           <motion.div
-            className="font-lora-italic text-2xl top-0 overflow-hidden p-5 flex flex-row items-center md:px-10"
+            className="font-lora-italic text-2xl top-0 overflow-hidden  flex flex-row items-center "
             onMouseEnter={textEnter}
             onMouseLeave={imageEnter}
             style={{ color: "#b5b5b5" }}
@@ -144,7 +144,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
         </a>
         <div
           style={{ color: "#b5b5b5" }}
-          className="flex tracking-1.5 flex-row md:mr-8"
+          className="flex tracking-1.5 flex-row "
         >
           <Link
             activeClass="active"
@@ -194,7 +194,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
             onMouseLeave={imageEnter}
             href="/"
             onClick={uncheckNav}
-            className="font-lato text-lg  top-0 overflow-hidden p-5 flex flex-row items-center"
+            className="font-lato text-lg  top-0 overflow-hidden pl-5 flex flex-row items-center"
           >
             Resume
           </a>
@@ -208,10 +208,10 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
         style={{ zIndex: "150 !important" }}
         className={`navContainer ${
           show && "md:hidden"
-        } text-brand-gray bg-brand-black zed hidden md:flex w-screen top-0 fixed  flex-row justify-between items-center md:px-10 md:py-5`}
+        } text-brand-gray bg-brand-black zed hidden md:flex w-screen top-0 fixed  flex-row justify-between items-center md:px-24 md:py-5`}
       >
         <motion.div
-          className="font-lora-italic text-2xl top-0 overflow-hidden flex flex-row items-center md:px-5"
+          className="font-lora-italic text-2xl top-0 overflow-hidden flex flex-row items-center "
           onMouseEnter={textEnter}
           onMouseLeave={imageEnter}
           onMouseOver={() => setHov((hov) => !hov)}
@@ -308,7 +308,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
             </div>
           </Link>
           <a
-            className="px-5"
+            className="pl-5"
             href="/"
             onMouseEnter={textEnter}
             onMouseLeave={imageEnter}
