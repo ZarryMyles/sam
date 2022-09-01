@@ -53,7 +53,7 @@ const Footer = ({ textEnter, textLeave, imageEnter }) => {
           <div
             onMouseEnter={textEnter}
             onMouseLeave={imageEnter}
-            className=" text-lg tracking-widest max-w-max font-lato-light   "
+            className=" text-lg tracking-widest max-w-max font-lato   "
             style={{
               color: "#B5B5B5",
               fontWeight: "300",
@@ -101,7 +101,12 @@ const Footer = ({ textEnter, textLeave, imageEnter }) => {
           ))}
         </div>
       </div>
-      <div className="  shadow-xl text-xs font-lato text-brand-gray flex items-center justify-center p-5 md:p-10">
+      <div
+        style={{
+          fontSize: "10px",
+        }}
+        className="  shadow-xl  font-lato text-brand-gray flex items-center justify-center p-5 md:p-10"
+      >
         © {new Date().getFullYear()}. shradha.design . All Rights Reserved.
       </div>
     </div>

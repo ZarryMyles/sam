@@ -196,7 +196,7 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
         </div>
       </div>
       {/* challenge */}
-      <div class="bg-brand-darkGrey2 font-lato  p-5 md:px-24 md:py-24 ">
+      <div class="bg-brand-darkGrey2 font-lato  p-5 md:px-24 md:py-32 ">
         <div class="flex items-center mb-10">
           <div
             style={{
@@ -287,7 +287,12 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
         </div>
       </div>
       {/* problem identification */}
-      <div class=" p-5 md:px-24 md:pt-36 md:pb-36 grid grid-cols-12  h-full">
+      <div
+        style={{
+          marginBottom: " 100px",
+        }}
+        class=" p-5 md:px-24 md:pt-36   grid grid-cols-12  h-full"
+      >
         <div class="flex col-span-12 items-center mb-10">
           <div
             style={{
@@ -300,7 +305,12 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
             Research
           </div>
         </div>
-        <div class="col-span-12 md:col-span-6 h-full md:mb-8  ">
+        <div
+          style={{
+            marginBottom: "30px",
+          }}
+          class="col-span-12 md:col-span-6 h-full  "
+        >
           <div class="flex items-center">
             <div class="  text-2xl md:text-4xl   md:-ml-2  tracking-1.5 font-lato-light font-bold ">
               🦮 Identifying the problem
@@ -346,13 +356,24 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
         </div>
       </div>
       {/* insights */}
-      <div class="p-5 md:px-24 md:py-0 font-lato">
-        <div className=" text-2xl">🗝️ Insights</div>
+      <div
+        class="p-5 md:px-24 md:py-0 font-lato"
+        style={{
+          marginBottom: " 130px",
+        }}
+      >
+        <div
+          className=" text-2xl "
+          style={{
+            marginBottom: "30px",
+          }}
+        >
+          🗝️ Insights
+        </div>
         <div class="grid grid-cols-12 ">
           <div class="col-span-12 md:col-span-6">
             <ul className=" list-disc ml-5 tracking-0.5 leading-6">
-              <li className="my-4">
-                {" "}
+              <li className="">
                 Ninjaaslabs holds two businesses, a consultancy and its venture.
                 <ol className=" list-decimal ml-5">
                   <li className="my-4">
@@ -402,10 +423,27 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
         </div>
       </div>
       {/* usability testing */}
-      <div class="p-5 md:p-24 font-lato bg-brand-black w-full">
-        <div className="grid-cols-12 grid ">
+      <div
+        style={{
+          paddingTop: " 130px",
+          // marginBottom: " 88px",
+        }}
+        class="p-5 md:px-24 font-lato bg-brand-darkGrey2 w-full"
+      >
+        <div
+          className="grid-cols-12 grid "
+          style={{
+            marginBottom: "88px",
+            // marginBottom: "88px",
+          }}
+        >
           <div class="col-span-12 md:col-span-6 h-full ">
-            <div className=" text-white text-2xl md:text-4xl my-8 ">
+            <div
+              className=" text-white text-2xl md:text-4xl   "
+              style={{
+                marginBottom: "30px",
+              }}
+            >
               🧐 Usability testing
             </div>
             <ul class="text-brand-gray list-disc ml-4 text-justify ">
@@ -430,39 +468,40 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
                 matrix obtained from <b class="text-white">excel sheets</b> (a
                 manual process).
               </li>
+              <a
+                href="/"
+                style={{
+                  color: "#3D6BC5",
+                  marginTop: "30px",
+                }}
+                class="uppercase text-base flex items-center font-lato-light font-bold tracking-3 my-5 "
+              >
+                <ArrowRightCircle
+                  width={30}
+                  height={30}
+                  color="#3D6BC5"
+                  strokeWidth={1}
+                  className="mr-4"
+                />
+                UT DOCUMENTATIOn
+              </a>
             </ul>
           </div>
           <div class="hidden md:block col-span-1" />
           <div class="col-span-12 md:col-span-5 h-full flex flex-col justify-center">
             <img className="w-full object-center" src={usability1} alt="" />
-            <a
-              href="/"
-              style={{
-                color: "#3D6BC5",
-              }}
-              class="uppercase text-base flex items-center font-lato-light font-bold tracking-3 my-5 "
-            >
-              <ArrowRightCircle
-                width={30}
-                height={30}
-                color="#3D6BC5"
-                strokeWidth={1}
-                className="mr-4"
-              />
-              UT DOCUMENTS
-            </a>
           </div>
         </div>
-        <div class=" text-brand-gray mt-10 mb-5">🌡️ Heat-map</div>
+        <div class=" text-brand-gray mb-5">🌡️ Heat-map</div>
         <div className="grid-cols-12 grid ">
-          <div class="col-span-12 md:col-span-6 h-full flex flex-col justify-center ">
+          <div class="col-span-12 md:col-span-6 h-full flex flex-col justify-start ">
             <img src={usability2} className="w-full   object-center" alt="" />
             <div class="my-3 text-brand-gray">Excel Sheet</div>
             <div class="hidden md:block col-span-1"></div>
           </div>
           <div class="hidden md:block col-span-1"></div>
 
-          <div className="col-span-12 md:col-span-5 h-full">
+          <div className="col-span-12 md:col-span-  h-full">
             <img
               src={usability3}
               className=" w-full col-span-12 md:col-span-5 my-3   object-center"

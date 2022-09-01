@@ -51,7 +51,7 @@ const SocialProof = ({ textEnter, textLeave, imageEnter }) => {
             <div
               className="font-lato tracking-3 text-base text-brand-gray"
               style={{
-                color: "#ffc7d1",
+                color: "#b5b5b5",
               }}
             >
               Testimonials
@@ -118,7 +118,7 @@ const SocialProof = ({ textEnter, textLeave, imageEnter }) => {
 
                       color: "#ffc7d1",
                     }}
-                    class={` transition-all duration-200 ${
+                    class={` transition-all duration-200 rounded-l-full rounded-r-full ${
                       item.name === feedback.name
                         ? "bg-black dark:bg-brand-pink w-6 "
                         : " bg-gray-500 w-4"

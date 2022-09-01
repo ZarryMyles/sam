@@ -36,7 +36,7 @@ const GetInTouch = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
             </a>
           </div> */}
           <a
-            className="font-lato-light text-center md:text-left   "
+            className="font-lato-light text-center md:text-left  text-brand-white  "
             style={{
               letterSpacing: "1px",
               fontSize: "22px",
