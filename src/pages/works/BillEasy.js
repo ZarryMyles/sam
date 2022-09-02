@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { WorkHero, WorkVideos, Navbar, WorkHeading } from "../../components";
+import {
+  WorkHero,
+  WorkVideos,
+  Navbar,
+  WorkHeading,
+  Loader,
+} from "../../components";
 import { ReactComponent as Quote } from "../../assets/icons/quotestart.svg";
 import { ArrowRightCircle } from "react-feather";
 import { motion } from "framer-motion";
-import { Loader } from "../../components";
+
 // images
 import Hero from "../../assets/works/billEasy/billEasyResearchpng.png";
 import collage from "../../assets/works/billEasy/billEasyCaseStudyCollage.png";
@@ -106,11 +112,11 @@ const BillEasy = () => {
   }, []);
   return (
     <div className="w-full overflow-clip">
-      {/* {loading && (
+      {loading && (
         <div class="fixed w-full h-full z-50">
           <Loader />
         </div>
-      )} */}
+      )}
       <div
         onMouseEnter={imageEnter}
         className="text-justify bg-brand-black text-brand-white"

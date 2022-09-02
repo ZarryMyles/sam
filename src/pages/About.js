@@ -82,7 +82,7 @@ const About = () => {
         className="w-full h-auto font-lato pt-10 bg-brand-black text-brand-white "
       >
         {/* landing section */}
-        <div class="h-auto md:h-screen  w-full  px-5 md:pr-0 md:pl-48 py-10 md:py-20 flex flex-col md:flex-row md:items-center md:justify-center">
+        <div class=" h-screen  w-full  px-5 md:pr-0 md:pl-48 py-10 md:py-20 flex flex-col md:flex-row md:items-center md:justify-center">
           <div class="w-full md:w-5/10 h-full flex flex-col justify-center items-start tracking-wide ">
             <div class="text-brand-white relative text-4xl  w-full ">
               <div
@@ -97,7 +97,7 @@ const About = () => {
               style={{
                 letterSpacing: "0.4px",
               }}
-              class="  text-lg leading-9  w-full md:w-3/4  my-10 "
+              class="  text-lg md:leading-9  w-full md:w-3/4  my-10 "
             >
               I’m Shradha, a fresh graduate looking to make my mark in the world
               of product design. <br /> A Product designer who works with the
@@ -138,11 +138,11 @@ const About = () => {
             />
           </div>
         </div>
-        <div class="bg-brand-darkGrey2 md:pt-16 pt-10 md:px-48">
+        <div class="bg-brand-darkGrey2 md:pt-16 md:mt-40 pt-10 px-5 md:px-48">
           <WorkHeading text={"about"} />
           <div class="text-4xl md:mb-8 mb-4">Principles I abide by</div>
-          <div class="flex w-full text-lg leading-9 text-justify md:pb-20">
-            <div class="w-full md:w-1/2 pr-16">
+          <div class="flex flex-col md:flex-row w-full text-lg md:leading-9 text-justify md:pb-20">
+            <div class="w-full md:w-1/2 md:pr-16 my-10 md:my-0">
               <div>Interests</div>
               <div>
                 Interests I enjoy gaining new experiences, my latest interest
@@ -156,7 +156,7 @@ const About = () => {
                 </span>
               </div>
             </div>
-            <div class="w-full md:w-1/2 pl-16">
+            <div class="w-full md:w-1/2 md:pl-16 my-10 md:my-0">
               <div>Skills</div>
               <div>
                 With strong insights in{" "}
@@ -174,15 +174,15 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div class="h-screen flex justify-center items-center">
+        <div class="h-screen flex justify-center items-center px-5 ">
           <div
-            class="  text-brand-pink text-xl relative"
+            class="  text-brand-pink text-xl relative text-center"
             style={{
               letterSpacing: "0.4px",
             }}
           >
             <Quote
-              className="absolute -top-4 md:-top-7 -left-4 md:-left-8  w-4 md:w-7 h-4 md:h-6  "
+              className="absolute -top-2 md:-top-7 -left-2 md:-left-8  w-4 md:w-7 h-4 md:h-6  "
               stroke="none"
             />
             Unhappy users are a source for learning, But the users who provide

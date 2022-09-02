@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-import { WorkHero, Navbar, WorkHeading } from "../../components";
+import { WorkHero, Navbar, WorkHeading, Loader } from "../../components";
 import { ReactComponent as Quote } from "../../assets/icons/quotestart.svg";
 import { ArrowRightCircle } from "react-feather";
 import Problem from "../../assets/works/smartvision/smartVisionProblem.png";
@@ -87,11 +87,24 @@ const SmartVision = () => {
     link: "https://billeasy.com",
     linkText: "Visit BillEasy",
   };
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+  }, []);
   return (
     <div
       onMouseEnter={imageEnter}
       className="text-justify bg-brand-black text-brand-white"
     >
+      {loading && (
+        <div class="fixed w-full h-full z-50">
+          <Loader />
+        </div>
+      )}
       <Navbar defaultColor={"white"} />
       <WorkHero
         largeEnter={largeEnter}
