@@ -4,7 +4,7 @@ const GetInTouch = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
   return (
     <div
       id="get-in-touch"
-      className="  w-full overflow-clip    mt-10 relative getintouch-root "
+      className="  w-full overflow-clip    mt-10 relative  "
     >
       <div className=" text-black dark:text-brand-white px-5 md:px-48  py-10 md:py-40  w-full   left-0 top-0  z-20  ">
         <div
@@ -13,8 +13,8 @@ const GetInTouch = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
           // onMouseLeave={textLeave}
         >
           <div
-            onMouseEnter={textEnter}
-            onMouseLeave={imageEnter}
+            // onMouseEnter={textEnter}
+            // onMouseLeave={imageEnter}
             // class name for text stroke : text-stroke-black
             style={{
               letterSpacing: ".08em",
@@ -23,41 +23,30 @@ const GetInTouch = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
           >
             Get In Touch
           </div>
-          {/* <div>
-            To create more soulful stories and delightful experiences,
-            <span className="font-bold"> connect to me on</span>{" "}
-            <a
-              href="/"
-              class="font-bold underline"
-              // onMouseEnter={textEnter}
-              // onMouseLeave={imageEnter}
-            >
-              LinkedIn
-            </a>
-          </div> */}
-          <a
+
+          <div
             className="font-lato-light text-center md:text-left  text-brand-white  "
             style={{
               letterSpacing: "1px",
               fontSize: "22px",
             }}
-            href="http://www.linkedin.com/in/shradha-b-k"
-            onMouseEnter={largeEnter}
-            onMouseLeave={imageEnter}
           >
             Lets create more{" "}
-            <span
+            <a
+              href="http://www.linkedin.com/in/shradha-b-k"
+              onMouseEnter={largeEnter}
+              onMouseLeave={imageEnter}
               style={{
                 color: "#FFC7D1",
               }}
               className=" font-lora-italic "
             >
               soulful stories and delightful experiences
-            </span>
-          </a>
+            </a>
+          </div>
         </div>
       </div>
-      <div className="bg-brand-lightGrey w-full h-full absolute left-0 top-0 -z-10 getintouch-graybg" />
+      {/* <div className="bg-brand-lightGrey w-full h-full absolute left-0 top-0 -z-10 getintouch-graybg" /> */}
     </div>
   );
 };

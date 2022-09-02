@@ -1,6 +1,6 @@
 import React from "react";
 
-const Hero = ({ work, next }) => {
+const Hero = ({ work, next, largeEnter, imageEnter }) => {
   return (
     <div className="h-screen  w-full flex  ">
       <div
@@ -26,6 +26,8 @@ const Hero = ({ work, next }) => {
             </div>
           </div>
           <div
+            // onMouseEnter={largeEnter}
+            // onMouseLeave={imageEnter}
             style={{
               fontSize: "64px",
             }}
@@ -35,6 +37,8 @@ const Hero = ({ work, next }) => {
           </div>
           {next && (
             <a
+              onMouseEnter={largeEnter}
+              onMouseLeave={imageEnter}
               style={{
                 fontSize: "24px",
               }}

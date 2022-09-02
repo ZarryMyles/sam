@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { WorkHero, WorkVideos, Navbar } from "../../components";
 import { ReactComponent as Quote } from "../../assets/icons/quotestart.svg";
 import { ArrowRightCircle } from "react-feather";
+import { motion } from "framer-motion";
 
 // images
 import Hero from "../../assets/works/billEasy/billEasyResearchpng.png";
@@ -27,7 +28,63 @@ import CaseStudy9 from "../../assets/works/billEasy/billEasybi9.svg";
 import Challenges from "../../assets/works/billEasy/challenges.svg";
 import HeatMap from "../../assets/works/billEasy/heatMap.svg";
 
-const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
+const BillEasy = () => {
+  const [mousePos, setMousePos] = useState({
+    x: 0,
+    y: 0,
+  });
+  const [cursorVariant, setcursorVariant] = useState("default");
+  useEffect(() => {
+    const mouseMove = (e) => {
+      setMousePos({
+        x: e.clientX,
+        y: e.clientY,
+      });
+    };
+    window.addEventListener("mousemove", mouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", mouseMove);
+    };
+  }, []);
+
+  const variants = {
+    default: {
+      x: mousePos.x - 10,
+      y: mousePos.y - 10,
+      bounce: 0,
+    },
+    text: {
+      height: 50,
+      width: 50,
+      x: mousePos.x - 25,
+      y: mousePos.y - 25,
+      backgroundColor: "#d1d5db",
+      mixBlendMode: "difference",
+      bounce: 0,
+    },
+    secondary: {
+      x: mousePos.x - 10,
+      y: mousePos.y - 10,
+      backgroundColor: "#d1d5db",
+      mixBlendMode: "difference",
+      bounce: 0,
+    },
+    large: {
+      height: 80,
+      width: 80,
+      x: mousePos.x - 25,
+      y: mousePos.y - 25,
+      backgroundColor: "#d1d5db",
+      mixBlendMode: "difference",
+      bounce: 0,
+    },
+  };
+
+  const textEnter = () => setcursorVariant("text");
+  const imageEnter = () => setcursorVariant("secondary");
+  const textLeave = () => setcursorVariant("default");
+  const largeEnter = () => setcursorVariant("large");
   const work = {
     image: Hero,
     video:
@@ -40,10 +97,25 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
     linkText: "Visit BillEasy",
   };
   return (
-    <div className="text-justify bg-brand-black text-brand-white">
+    <div
+      onMouseEnter={imageEnter}
+      className="text-justify bg-brand-black text-brand-white"
+    >
       <Navbar defaultColor={"white"} />
-      <WorkHero work={work} />
-      <WorkVideos work={work} />
+      <WorkHero
+        work={work}
+        largeEnter={largeEnter}
+        textEnter={textEnter}
+        textLeave={textLeave}
+        imageEnter={imageEnter}
+      />
+      <WorkVideos
+        textEnter={textEnter}
+        textLeave={textLeave}
+        largeEnter={largeEnter}
+        imageEnter={imageEnter}
+        work={work}
+      />
       {/* project brief */}
       <div class=" p-5 md:px-24 md:my-20 flex flex-wrap justify-between  ">
         <div className="  my-5   ">
@@ -336,7 +408,12 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
         </div>
         <div class="hidden md:block col-span-1"></div>
         <div class="col-span-12 md:col-span-5 h-full flex flex-col   items-center justify-center">
-          <div class="flex items-center">
+          <a
+            herf="https://www.notion.so/Interview-questions-f44bac2a862146ec90e5aa9c18827e86"
+            onMouseEnter={largeEnter}
+            onMouseLeave={imageEnter}
+            class="flex items-center"
+          >
             <ArrowRightCircle
               width={30}
               height={30}
@@ -353,7 +430,7 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
             >
               Interview questions
             </div>
-          </div>
+          </a>
         </div>
       </div>
       {/* insights */}
@@ -470,7 +547,9 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
                 manual process).
               </li>
               <a
-                href="/"
+                onMouseEnter={largeEnter}
+                onMouseLeave={imageEnter}
+                href="https://morning-jackrabbit-815.notion.site/UT-Detailed-Documentation-0c9b6fb704484844b6ebf1d113d81b53"
                 style={{
                   color: "#3D6BC5",
                   marginTop: "30px",
@@ -652,7 +731,9 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
         class="  "
       >
         <a
-          href="/"
+          onMouseEnter={largeEnter}
+          onMouseLeave={imageEnter}
+          href="https://www.notion.so/BillEasy-Research-eede878d31d8405dba2c5543dbb3da67"
           style={{
             marginBottom: " 80px",
           }}
@@ -697,6 +778,8 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
       </div>
       {/* end screen */}
       <WorkHero
+        largeEnter={largeEnter}
+        imageEnter={imageEnter}
         work={{
           domain: "visual design",
           title: "BillEasy",
@@ -707,6 +790,11 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
           link: "/billeasy-visual-design",
         }}
         next={true}
+      />
+      <motion.div
+        className="cursor hidden md:flex"
+        variants={variants}
+        animate={cursorVariant}
       />
     </div>
   );

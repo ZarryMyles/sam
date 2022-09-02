@@ -2,7 +2,7 @@ import React from "react";
 import { FaBehanceSquare, FaDribbbleSquare, FaLinkedin } from "react-icons/fa";
 import { MapPin } from "react-feather";
 import { HiOutlineLocationMarker } from "react-icons/hi";
-const Footer = ({ textEnter, textLeave, imageEnter }) => {
+const Footer = ({ textEnter, imageEnter }) => {
   const socials = [
     {
       name: "Bengaluru",
@@ -29,7 +29,7 @@ const Footer = ({ textEnter, textLeave, imageEnter }) => {
   return (
     <div
       onMouseEnter={imageEnter}
-      onMouseLeave={textLeave}
+      onMouseLeave={imageEnter}
       id="footer-main"
       className="w-full bg-brand-darkGrey2 flex flex-col"
     >
@@ -41,8 +41,8 @@ const Footer = ({ textEnter, textLeave, imageEnter }) => {
           }}
         >
           <div
-            onMouseEnter={textEnter}
-            onMouseLeave={imageEnter}
+            // onMouseEnter={textEnter}
+            // onMouseLeave={imageEnter}
             style={{
               fontSize: "32px",
             }}
@@ -51,8 +51,8 @@ const Footer = ({ textEnter, textLeave, imageEnter }) => {
             Shradha
           </div>
           <div
-            onMouseEnter={textEnter}
-            onMouseLeave={imageEnter}
+            // onMouseEnter={textEnter}
+            // onMouseLeave={imageEnter}
             className=" text-lg tracking-widest max-w-max font-lato   "
             style={{
               color: "#B5B5B5",
@@ -61,12 +61,6 @@ const Footer = ({ textEnter, textLeave, imageEnter }) => {
           >
             Product Designer
           </div>
-          {/* <div
-            style={{
-              height: "1px",
-            }}
-            class="w-14 mt-2 bg-white  block md:hidden"
-          /> */}
         </div>
         <div class="flex flex-wrap md:flex-nowrap md:flex-row md:justify-between md:items-center md:w-3/6">
           {socials.map((social, index) => (

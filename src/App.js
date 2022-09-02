@@ -12,7 +12,6 @@ import {
   Loader,
 } from "./components/";
 import Navbar from "./components/NewNav";
-// import { ParallaxProvider } from "react-scroll-parallax";
 
 function App() {
   const [mousePos, setMousePos] = useState({
@@ -20,11 +19,6 @@ function App() {
     y: 0,
   });
   const [cursorVariant, setcursorVariant] = useState("default");
-  // let options = {
-  //   root: document.querySelector("#sections"),
-  //   rootMargin: "0px",
-  //   threshold: 0.6, // percentage of the element that is visible for triggering the callback for nav
-  // };
   useEffect(() => {
     const mouseMove = (e) => {
       setMousePos({
@@ -77,13 +71,18 @@ function App() {
   const textLeave = () => setcursorVariant("default");
   const largeEnter = () => setcursorVariant("large");
 
+  // let options = {
+  //   root: document.querySelector("#sections"),
+  //   rootMargin: "0px",
+  //   threshold: 0.6, // percentage of the element that is visible for triggering the callback for nav
+  // };
   // setting dark or light theme
-  const setTheme = (theme = "light") => {
-    const html = document.querySelector("html").classList;
-    html.remove("dark");
-    html.remove("light");
-    html.add(theme);
-  };
+  // const setTheme = (theme = "light") => {
+  //   const html = document.querySelector("html").classList;
+  //   html.remove("dark");
+  //   html.remove("light");
+  //   html.add(theme);
+  // };
   // observing active section
   // const [activeSection, setActiveSection] = useState("home");
   // useEffect(() => {

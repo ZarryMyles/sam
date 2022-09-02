@@ -156,14 +156,11 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
               </span>
             ))}
           </div>
-          <a
-            onMouseEnter={largeEnter}
-            onMouseLeave={imageEnter}
-            className=""
-            href={activeWork.link}
-          >
-            <div
-              href="/"
+          <div className="">
+            <a
+              onMouseEnter={largeEnter}
+              onMouseLeave={imageEnter}
+              href={activeWork.link}
               class=" py-4 duration-100 transition-all  w-max  flex items-center my-3 rounded-l-full rounded-r-full text-white  max-w-max tracking-wider             "
             >
               <ArrowRightCircle
@@ -184,8 +181,8 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
               >
                 VIEW CASE
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
         {/* the no. with text stroke */}
         <div class="absolute bottom-10 md:bottom-2 right-2 md:right-24 flex flex-col items-center">

@@ -1,4 +1,7 @@
 /* * get in touch  */
+.cursor-pointer{
+  cursor: none
+}
 .text-stroke-black {
   color: transparent;
   -webkit-text-stroke: 1px #000;
