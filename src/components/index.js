@@ -18,3 +18,4 @@ export { default as WorkVideo } from "./WorkVideo";
 // works page
 export { default as WorkHero } from "./works/Hero";
 export { default as WorkVideos } from "./works/Video";
+export { default as WorkHeading } from "./works/Heading";

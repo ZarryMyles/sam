@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { WorkHero, WorkVideos, Navbar } from "../../components";
+import { WorkHero, WorkVideos, Navbar, WorkHeading } from "../../components";
 import { ReactComponent as Quote } from "../../assets/icons/quotestart.svg";
 import { ArrowRightCircle } from "react-feather";
 import { motion } from "framer-motion";
@@ -98,9 +98,6 @@ const BillEasy = () => {
   };
   const [loading, setLoading] = useState(true);
 
-  // const stuff = () => (
-
-  // );
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
@@ -167,18 +164,7 @@ const BillEasy = () => {
         </div>
         {/* project concept */}
         <div class=" px-5 py-10 md:px-24 md:mb-36 md:pr-0 grid grid-cols-12  h-full">
-          <div class="flex items-center mb-10 col-span-12">
-            <div
-              style={{
-                height: "1px",
-                width: "72px",
-              }}
-              class="bg-brand-gray  mr-4"
-            />
-            <div class=" text-brand-gray uppercase  tracking-3 text-base ">
-              Concept
-            </div>
-          </div>
+          <WorkHeading text={"concept"} />
           <div class="col-span-12 md:col-span-6 h-full flex flex-col    ">
             <div class="flex items-center">
               <div
@@ -224,18 +210,8 @@ const BillEasy = () => {
         </div>
         {/* purpose */}
         <div className="px-5 py-10 md:px-24 md:mb-24">
-          <div class="flex items-center mb-10">
-            <div
-              style={{
-                height: "1px",
-                width: "72px",
-              }}
-              class="bg-brand-gray w-28 mr-4"
-            />
-            <div class=" text-brand-gray uppercase font-lato-med text-base  ">
-              Purpose
-            </div>
-          </div>
+          <WorkHeading text={"purpose"} />
+
           <div class="grid grid-cols-12 font-lato">
             <div class="col-span-12 md:col-span-4">
               <div class=" text-2xl  tracking-1.5 mb-8">🎯 Goals</div>
@@ -288,18 +264,8 @@ const BillEasy = () => {
         </div>
         {/* challenge */}
         <div class="bg-brand-darkGrey2 font-lato  p-5 md:px-24 md:py-32 py-10 ">
-          <div class="flex items-center mb-10">
-            <div
-              style={{
-                height: "1px",
-                width: "72px",
-              }}
-              class="bg-brand-gray w-28 mr-4"
-            />
-            <div class=" text-brand-gray uppercase font-lato-med text-base ">
-              Challenge
-            </div>
-          </div>
+          <WorkHeading text={"challenge"} />
+
           <div class="grid grid-cols-12  items-center">
             <div class="col-span-12 md:col-span-6 relative ">
               <Quote
@@ -334,18 +300,8 @@ const BillEasy = () => {
           }}
           class=" p-5 md:px-24 md:pt-36   grid grid-cols-12  h-full"
         >
-          <div class="flex col-span-12 items-center mb-10">
-            <div
-              style={{
-                height: "1px",
-                width: "72px",
-              }}
-              class="bg-brand-gray w-28 mr-4"
-            />
-            <div class=" text-brand-gray uppercase font-lato-med text-base ">
-              Research
-            </div>
-          </div>
+          <WorkHeading text={"research"} />
+
           <div
             style={{
               marginBottom: "30px",
@@ -567,18 +523,8 @@ const BillEasy = () => {
         </div>
         {/* usability matrix */}
         <div class=" pt-150 md:px-24 font-lato">
-          <div class="flex items-center mb-10">
-            <div
-              style={{
-                height: "1px",
-                width: "72px",
-              }}
-              class="bg-brand-gray w-28 mr-4"
-            />
-            <div class=" text-brand-gray uppercase font-lato-med tracking-2 text-base ">
-              Outcome
-            </div>
-          </div>
+          <WorkHeading text={"outcome"} />
+
           <div
             class="text-2xl md:text-4xl  "
             style={{

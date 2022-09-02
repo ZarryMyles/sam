@@ -179,6 +179,9 @@ a {
 .pt-130{
   padding-top: 130px;
 }
+.pt-140{
+  padding-top: 140px;
+}
 .pt-150{
   padding-top: 150px;
 }
@@ -198,6 +201,9 @@ a {
   }
   .pt-130{
     padding-top: 20px;
+  }
+  .pt-140{
+    padding-top: 30px;
   }
   .pt-150{
     padding-top: 30px;

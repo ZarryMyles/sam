@@ -1,5 +1,7 @@
-import React from "react";
-import { WorkHero, Navbar } from "../../components";
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+
+import { WorkHero, Navbar, WorkHeading } from "../../components";
 import { ReactComponent as Quote } from "../../assets/icons/quotestart.svg";
 import { ArrowRightCircle } from "react-feather";
 import Problem from "../../assets/works/smartvision/smartVisionProblem.png";
@@ -11,16 +13,74 @@ import Phone3 from "../../assets/works/smartvision/smartVisionPhone3.png";
 import Phone4 from "../../assets/works/smartvision/smartVisionPhone4.png";
 import Phone5 from "../../assets/works/smartvision/smartVisionPhone5.png";
 import Phone6 from "../../assets/works/smartvision/smartVisionPhone6.png";
-import colorChecker from "../../assets/works/smartvision/smartVisionColorChecker.png";
-import fonts from "../../assets/works/smartvision/smartVisionFonts.png";
+import colorChecker from "../../assets/works/smartvision/smartVisionColorChecker.svg";
+import fonts from "../../assets/works/smartvision/smartVisionFonts.svg";
 import Hero from "../../assets/works/smartvision/smartVision.png";
 
+import Challenges from "../../assets/works/smartvision/smartvisionChallenge.svg";
+
 const SmartVision = () => {
+  const [mousePos, setMousePos] = useState({
+    x: 0,
+    y: 0,
+  });
+  const [cursorVariant, setcursorVariant] = useState("default");
+  useEffect(() => {
+    const mouseMove = (e) => {
+      setMousePos({
+        x: e.clientX,
+        y: e.clientY,
+      });
+    };
+    window.addEventListener("mousemove", mouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", mouseMove);
+    };
+  }, []);
+  const variants = {
+    default: {
+      x: mousePos.x - 10,
+      y: mousePos.y - 10,
+      bounce: 0,
+    },
+    text: {
+      height: 50,
+      width: 50,
+      x: mousePos.x - 25,
+      y: mousePos.y - 25,
+      backgroundColor: "#d1d5db",
+      mixBlendMode: "difference",
+      bounce: 0,
+    },
+    secondary: {
+      x: mousePos.x - 10,
+      y: mousePos.y - 10,
+      backgroundColor: "#d1d5db",
+      mixBlendMode: "difference",
+      bounce: 0,
+    },
+    large: {
+      height: 80,
+      width: 80,
+      x: mousePos.x - 25,
+      y: mousePos.y - 25,
+      backgroundColor: "#d1d5db",
+      mixBlendMode: "difference",
+      bounce: 0,
+    },
+  };
+
+  const textEnter = () => setcursorVariant("text");
+  const imageEnter = () => setcursorVariant("secondary");
+  const textLeave = () => setcursorVariant("default");
+  const largeEnter = () => setcursorVariant("large");
   const work = {
     image: Hero,
     video:
       "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/Comp_1_tdwzlp.gif",
     title: "Smart Vision",
+    gif: true,
     domain: "Case Study",
     subtitle: "A web app for managing your bills",
     description: "A web app for managing your bills",
@@ -28,9 +88,18 @@ const SmartVision = () => {
     linkText: "Visit BillEasy",
   };
   return (
-    <div className="text-justify bg-brand-black text-brand-white">
+    <div
+      onMouseEnter={imageEnter}
+      className="text-justify bg-brand-black text-brand-white"
+    >
       <Navbar defaultColor={"white"} />
-      <WorkHero work={work} />
+      <WorkHero
+        largeEnter={largeEnter}
+        textEnter={textEnter}
+        textLeave={textLeave}
+        imageEnter={imageEnter}
+        work={work}
+      />
       {/* project brief */}
       <div class=" p-5 md:px-24 md:my-20 flex flex-wrap justify-between  ">
         <div className="  my-5   ">
@@ -60,18 +129,8 @@ const SmartVision = () => {
       </div>
       {/* project concept */}
       <div class=" p-5 md:px-24 md:mb-36 md:pr-0 grid grid-cols-12  h-full">
-        <div class="flex items-center mb-10 col-span-12">
-          <div
-            style={{
-              height: "1px",
-              width: "72px",
-            }}
-            class="bg-brand-gray  mr-4"
-          />
-          <div class=" text-brand-gray uppercase  tracking-3 text-base ">
-            Concept
-          </div>
-        </div>
+        <WorkHeading text={"concept"} />
+
         <div class="col-span-12 md:col-span-6 h-full flex flex-col    ">
           <div class="flex items-center">
             <div
@@ -96,8 +155,8 @@ const SmartVision = () => {
         </div>
         <div class="hidden md:block col-span-1"></div>
 
-        <div class="col-span-12 md:col-span-5  flex flex-col items-center justify-center pl-10 rounded-xl text-brand-white ">
-          <div className="  md:pr-24 rounded-l-lg flex flex-col justify-center bg-brand-darkGrey2 pl-14 py-14  ">
+        <div class="col-span-12 md:col-span-5  flex flex-col items-center  justify-center md:pl-10 rounded-xl text-brand-white ">
+          <div className="  px-4 md:pr-24 rounded-l-lg flex flex-col justify-center bg-brand-darkGrey2 md:pl-14 py-14  ">
             <div className=" mb-8">
               <div className=" mb-2">✅ Results</div>
               <div className=" leading-6 tracking-0.5">
@@ -116,21 +175,10 @@ const SmartVision = () => {
           </div>
         </div>
       </div>
-
       {/* purpose */}
       <div className="p-5 md:p-20">
-        <div class="flex items-center mb-10">
-          <div
-            style={{
-              height: "1px",
-              width: "72px",
-            }}
-            class="bg-brand-gray w-28 mr-4"
-          />
-          <div class=" text-brand-gray uppercase font-lato-med text-base  ">
-            Purpose
-          </div>
-        </div>
+        <WorkHeading text={"purpose"} />
+
         <div class="grid grid-cols-12 font-lato">
           <div class="col-span-12 md:col-span-4">
             <div class="text-2xl font-lato">🎯 Goals</div>
@@ -223,26 +271,17 @@ const SmartVision = () => {
         </div>
       </div>
       {/* challenge */}
-      <div class="bg-brand-black  p-5 md:p-24 ">
-        <div class="flex items-center mb-12">
-          <div
-            style={{
-              height: "1px",
-            }}
-            class="bg-brand-gray w-28 mr-4"
-          />
-          <div class=" text-brand-gray uppercase text-xl tracking-widest ">
-            Challenge
-          </div>
-        </div>
+      <div class="bg-brand-darkGrey2 font-lato  p-5 md:px-24 md:py-32 py-10 ">
+        <WorkHeading text={"challenge"} />
+
         <div class="grid grid-cols-12  items-center">
           <div class="col-span-12 md:col-span-6 relative ">
             <Quote
-              className="absolute -top-4 md:-top-5 -left-4 md:-left-5 w-6 h-6  "
+              className="absolute -top-4 md:-top-7  w-4 md:w-7 h-4 md:h-6  "
               stroke="none"
             />
             <div
-              className="font-lato-light tracking-widest"
+              className="font-lato-light tracking-0.5  ml-4 md:ml-9"
               style={{
                 color: "#FEFEFE",
               }}
@@ -253,67 +292,19 @@ const SmartVision = () => {
             </div>
           </div>
           <div class="hidden md:block col-span-1"></div>
-          <div
-            class="col-span-12 md:col-span-5 my-2 md:my-0  text-black p-5 md:p-10 rounded-md flex md:flex-row flex-col "
-            style={{
-              backgroundColor: "#EFFCF5",
-            }}
-          >
-            <div class="w-full md:w-1/2 text-center md:text-left my-5 md:my-0">
-              <div
-                style={{
-                  color: "#064925",
-                }}
-              >
-                <span className=" font-lato-bold mr-2 text-xl ">
-                  2.2 Billion
-                </span>
-              </div>
-              <div
-                class="text-gray-500 "
-                style={{
-                  color: "#2B6043",
-                }}
-              >
-                People are visually impaired globally
-              </div>
-            </div>
-            <div class="w-full md:w-1/2 text-center md:text-left my-5 md:my-0">
-              <div
-                style={{
-                  color: "#064925",
-                }}
-              >
-                <span className=" font-lato-bold mr-2 text-xl ">
-                  1.3 Million
-                </span>
-              </div>
-              <div
-                class="text-gray-500 "
-                style={{
-                  color: "#2B6043",
-                }}
-              >
-                Americans are legally blind (highest)
-              </div>
-            </div>
-          </div>
+
+          <img
+            src={Challenges}
+            className="w-full h-full col-span-12 mt-4 md:mt-0 object-contain  object-center md:col-span-5 "
+            alt=""
+          />
         </div>
       </div>
       {/* problem identification */}
       <div class=" p-5 md:p-24   h-full">
         <div class="   ">
-          <div class="flex items-center mb-12">
-            <div
-              style={{
-                height: "1px",
-              }}
-              class="bg-brand-gray w-28 mr-4"
-            />
-            <div class=" text-brand-gray uppercase text-xl tracking-widest ">
-              Research
-            </div>
-          </div>
+          <WorkHeading text={"research"} />
+
           <div class="  text-2xl md:text-4xl my-8 tracking-1.5 font-lato-light font-bold ">
             🦮 Identifying the problem
           </div>
@@ -365,10 +356,10 @@ const SmartVision = () => {
           <div class="col-span-1 p-2 md:p-5">
             <div
               style={{
-                background: "#FAFAFA",
+                // background: "#FAFAFA",
                 borderRadius: "4px",
               }}
-              className="w-full p-5 rounded-md "
+              className="w-full p-5 h-full rounded-md bg-brand-darkGrey2 "
             >
               <div class="text-lg font-lato font-bold">Letters</div>
               <ul class="my-0 md:my-8 list-decimal">
@@ -386,10 +377,10 @@ const SmartVision = () => {
           <div class="col-span-1 p-2 md:p-5">
             <div
               style={{
-                background: "#FAFAFA",
+                // background: "#FAFAFA",
                 borderRadius: "4px",
               }}
-              className="w-full p-5 rounded-md "
+              className="w-full p-5 h-full rounded-md bg-brand-darkGrey2 "
             >
               <div class="text-lg font-lato font-bold">TTS</div>
               <ul class="my-0 md:my-8 list-decimal ml-4">
@@ -410,10 +401,10 @@ const SmartVision = () => {
           <div class="col-span-1 p-2 md:p-5 h-auto">
             <div
               style={{
-                background: "#FAFAFA",
+                // background: "#FAFAFA",
                 borderRadius: "4px",
               }}
-              className="w-full p-5 rounded-md "
+              className="w-full h-full p-5 rounded-md bg-brand-darkGrey2 "
             >
               <div class="text-lg font-lato font-bold">Images and Videos</div>
               <ul class="my-0 md:my-8 ">
@@ -426,10 +417,10 @@ const SmartVision = () => {
           <div class="col-span-1 p-2 md:p-5 h-full">
             <div
               style={{
-                background: "#FAFAFA",
+                // background: "#FAFAFA",
                 borderRadius: "4px",
               }}
-              className="w-full p-5 rounded-md "
+              className="w-full h-full p-5 rounded-md bg-brand-darkGrey2 "
             >
               <div class="text-lg font-lato font-bold">Letters</div>
               <ul class="my-0 md:my-8 list-decimal ml-4">
@@ -448,17 +439,8 @@ const SmartVision = () => {
       </div>
       {/* features */}
       <div class="bg-brand-black px-5 py-10 md:p-24 h-full">
-        <div class="flex items-center mb-12">
-          <div
-            style={{
-              height: "1px",
-            }}
-            class="bg-brand-gray w-28 mr-4"
-          />
-          <div class=" text-brand-gray uppercase text-xl tracking-widest ">
-            Solutions
-          </div>
-        </div>
+        <WorkHeading text={"solutions"} />
+
         <div class="grid grid-cols-12 font-lato">
           {/* 1 */}
           <div class="col-span-12 md:col-span-7 flex  items-center justify-center text-white px-3 md:px-28 my-5">
@@ -633,7 +615,7 @@ const SmartVision = () => {
         </div>
       </div>
       {/* ui guide system */}
-      <div class="p-5 md:p-24 h-full">
+      <div style={{}} class="p-5 md:px-24 h-full pt-140">
         <div class="  text-2xl md:text-4xl my-8 tracking-1.5 font-lato-light font-bold ">
           🦮 UI guide system
         </div>
@@ -659,15 +641,15 @@ const SmartVision = () => {
         <div class="grid grid-cols-1 md:grid-cols-2">
           <div class="col-span-1 my-4  ">
             <div
-              class=" text-2xl font-google-sans"
+              class=" text-2xl font-google-sans md:mb-10 mb-5"
               style={{ color: "#72C3C4" }}
             >
               Color
             </div>
-            <div class="flex items-center justify-center my-16">
+            <div class="flex items-center justify-center ">
               <div className="flex flex-col items-center">
                 <div
-                  class="  rounded-full mx-3 md:mx-8 border-4 "
+                  class="  rounded-full mx-3 md:mx-14 border-4 "
                   style={{
                     width: "68px",
                     height: "68px",
@@ -679,7 +661,7 @@ const SmartVision = () => {
               </div>
               <div className="flex flex-col items-center">
                 <div
-                  class="  rounded-full mx-3 md:mx-8 border-4  "
+                  class="  rounded-full mx-3 md:mx-14 border-4  "
                   style={{
                     width: "68px",
                     height: "68px",
@@ -692,7 +674,7 @@ const SmartVision = () => {
               </div>
               <div className="flex flex-col items-center">
                 <div
-                  class="  rounded-full mx-3 md:mx-8 border-4 "
+                  class="  rounded-full mx-3 md:mx-14 border-4 "
                   style={{
                     width: "68px",
                     height: "68px",
@@ -743,22 +725,22 @@ const SmartVision = () => {
             <img src={fonts} alt="" />
           </div>
         </div>
-
-        {/*  */}
-        <a
-          href="/"
-          className="tracking-3 px-5 flex items-center md:px-24  uppercase font-lato-bold"
-        >
-          <ArrowRightCircle
-            width={30}
-            height={30}
-            color="black"
-            strokeWidth={1.5}
-            className="mr-4"
-          />
-          read full case study ☕
-        </a>
       </div>
+      <a
+        onMouseEnter={largeEnter}
+        onMouseLeave={imageEnter}
+        href="/"
+        className="tracking-3 px-5 flex items-center md:ml-24 my-10 md:mb-40 md:mt-24  w-max uppercase font-lato-bold"
+      >
+        <ArrowRightCircle
+          width={30}
+          height={30}
+          color="white"
+          strokeWidth={1.5}
+          className="mr-4"
+        />
+        read full case study ☕
+      </a>
       <WorkHero
         work={{
           image:
@@ -773,6 +755,11 @@ const SmartVision = () => {
           linkText: "Visit BillEasy",
         }}
         next={true}
+      />{" "}
+      <motion.div
+        className="cursor hidden md:flex"
+        variants={variants}
+        animate={cursorVariant}
       />
     </div>
   );

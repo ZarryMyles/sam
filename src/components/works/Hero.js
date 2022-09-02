@@ -67,19 +67,29 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
           backgroundImage: `url(${work.image})`,
         }}
       ></div>
-      <video
-        style={{
-          height: "100vh",
-        }}
-        className=" z-10 bg-cover hidden md:block bg-center bg-no-repeat brightness-50 bg-brand-black"
-        alt="loading..."
-        loop
-        autoPlay
-        muted
-        disablePictureInPicture
-      >
-        <source src={work.video} type="video/mp4" />
-      </video>
+      {!work.gif ? (
+        <video
+          style={{
+            height: "100vh",
+          }}
+          className=" z-10 bg-cover hidden md:block bg-center bg-no-repeat brightness-50 bg-brand-black"
+          alt="loading..."
+          loop
+          autoPlay
+          muted
+          disablePictureInPicture
+        >
+          <source src={work.video} type="video/mp4" />
+        </video>
+      ) : (
+        <img
+          class="hidden md:block z-10 bg-cover bg-center bg-no-repeat brightness-50 bg-brand-gray"
+          style={{
+            width: "80.5%",
+          }}
+          src={work.video}
+        ></img>
+      )}
     </div>
   );
 };

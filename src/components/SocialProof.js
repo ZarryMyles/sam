@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ReactComponent as Quote } from "../assets/icons/quoteWhite.svg";
-import { Parallax, ParallaxProvider } from "react-scroll-parallax";
+// import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 
 // feedback
 const feedbacks = [
@@ -33,7 +33,7 @@ const SocialProof = ({ textEnter, textLeave, imageEnter }) => {
   const [fade, setFade] = useState(false);
 
   return (
-    <ParallaxProvider className="w-full h-full mx-auto">
+    <div className="w-full h-full mx-auto">
       <div
         id="social-proof"
         onMouseEnter={imageEnter}
@@ -65,9 +65,9 @@ const SocialProof = ({ textEnter, textLeave, imageEnter }) => {
             ></div>
           </div>
 
-          <div class=" text-brand-gray text-xs md:text-base  w-full  px-5 md:px-0 py-8 md:py-0 flex flex-col justify-center">
+          <div class=" text-brand-gray text-xs md:text-base  w-full  px-5 md:px-0 py-3 md:py-0 flex flex-col justify-center">
             <div
-              className={`font-lato-light italic my-14 letter-1.5 transition-opacity ease-linear duration-1000  leading-8 tracking-wider text-justify  ${
+              className={`font-lato-light italic my-5 md:my-14 letter-1.5 transition-opacity ease-linear duration-1000  leading-relaxed md:leading-8 tracking-wider text-justify  ${
                 fade ? "opacity-0" : ""
               } `}
             >
@@ -87,14 +87,14 @@ const SocialProof = ({ textEnter, textLeave, imageEnter }) => {
               } `}
             >
               <div
-                class="w-14 h-14 rounded-full  bg-brand-gray bg-cover bg-center bg-no-repeat mr-5 "
+                class="w-10 md:w-14 h-10 md:h-14 rounded-full  bg-brand-gray bg-cover bg-center bg-no-repeat mr-5 "
                 style={{
                   backgroundImage: `url(${feedback.image})`,
                 }}
               />
               <div class="flex flex-col  md:flex-row">
-                <div className="">{feedback.name}, </div>
-                <div className="text-sm md:text-xl pl-1">
+                <div className="text-base md:text-xl">{feedback.name}, </div>
+                <div className="text-sm md:text-xl md:pl-1">
                   {feedback.company}
                 </div>
               </div>
@@ -138,7 +138,7 @@ const SocialProof = ({ textEnter, textLeave, imageEnter }) => {
           />
         </div>
       </div>
-    </ParallaxProvider>
+    </div>
   );
 };
 
