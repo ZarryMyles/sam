@@ -20,7 +20,7 @@ const Hero = ({ work, next }) => {
             />
             <div
               style={{ letterSpacing: "2px" }}
-              class=" font-lato-med text-brand-gray uppercase  tracking-widest "
+              class=" font-lato-med text-brand-gray uppercase   tracking-widest "
             >
               {work.domain}
             </div>
@@ -35,8 +35,11 @@ const Hero = ({ work, next }) => {
           </div>
           {next && (
             <a
+              style={{
+                fontSize: "24px",
+              }}
               href={work.link}
-              class="text-xl w-max md:text-3xl font-lato my-12 text-white tracking-1.5"
+              class=" w-max md:text-3xl font-lato-med my-12 text-white tracking-1.5"
             >
               Next Project
             </a>

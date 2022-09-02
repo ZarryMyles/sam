@@ -25,6 +25,7 @@ import CaseStudy7 from "../../assets/works/billEasy/billEasybi7.svg";
 import CaseStudy8 from "../../assets/works/billEasy/billEasybi8.svg";
 import CaseStudy9 from "../../assets/works/billEasy/billEasybi9.svg";
 import Challenges from "../../assets/works/billEasy/challenges.svg";
+import HeatMap from "../../assets/works/billEasy/heatMap.svg";
 
 const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
   const work = {
@@ -84,7 +85,7 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
             }}
             class="bg-brand-gray  mr-4"
           />
-          <div class=" text-brand-gray uppercase text-xl tracking-widest ">
+          <div class=" text-brand-gray uppercase  tracking-3 text-base ">
             Concept
           </div>
         </div>
@@ -141,7 +142,7 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
             }}
             class="bg-brand-gray w-28 mr-4"
           />
-          <div class=" text-brand-gray uppercase font-lato-med tracking-2 text-xl  ">
+          <div class=" text-brand-gray uppercase font-lato-med text-base  ">
             Purpose
           </div>
         </div>
@@ -205,7 +206,7 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
             }}
             class="bg-brand-gray w-28 mr-4"
           />
-          <div class=" text-brand-gray uppercase font-lato-med tracking-2 text-xl ">
+          <div class=" text-brand-gray uppercase font-lato-med text-base ">
             Challenge
           </div>
         </div>
@@ -301,7 +302,7 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
             }}
             class="bg-brand-gray w-28 mr-4"
           />
-          <div class=" text-brand-gray uppercase font-lato-med tracking-2 text-xl ">
+          <div class=" text-brand-gray uppercase font-lato-med text-base ">
             Research
           </div>
         </div>
@@ -426,7 +427,7 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
       <div
         style={{
           paddingTop: " 130px",
-          // marginBottom: " 88px",
+          paddingBottom: " 130px",
         }}
         class="p-5 md:px-24 font-lato bg-brand-darkGrey2 w-full"
       >
@@ -493,12 +494,16 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
           </div>
         </div>
         <div class=" text-brand-gray mb-5">🌡️ Heat-map</div>
-        <div className="grid-cols-12 grid ">
+        <div class="grid-cols-12">
+          <img src={HeatMap} className="w-full" alt="" />
+        </div>
+        <div className="grid-cols-12 md:hidden grid ">
           <div class="col-span-12 md:col-span-6 h-full flex flex-col justify-start ">
             <img src={usability2} className="w-full   object-center" alt="" />
             <div class="my-3 text-brand-gray">Excel Sheet</div>
             <div class="hidden md:block col-span-1"></div>
           </div>
+
           <div class="hidden md:block col-span-1"></div>
 
           <div className="col-span-12 md:col-span-  h-full">
@@ -517,8 +522,13 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
         </div>
       </div>
       {/* usability matrix */}
-      <div class="p-5 md:p-24 font-lato">
-        <div class="flex items-center mb-12">
+      <div
+        style={{
+          paddingTop: " 150px",
+        }}
+        class="p-5 md:px-24 font-lato"
+      >
+        <div class="flex items-center mb-10">
           <div
             style={{
               height: "1px",
@@ -526,23 +536,41 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
             }}
             class="bg-brand-gray w-28 mr-4"
           />
-          <div class=" text-brand-gray uppercase font-lato-med tracking-2 text-xl ">
-            Research
+          <div class=" text-brand-gray uppercase font-lato-med tracking-2 text-base ">
+            Outcome
           </div>
         </div>
-        <div class="text-2xl md:text-4xl my-8  ">
+        <div
+          class="text-2xl md:text-4xl  "
+          style={{
+            marginBottom: "30px",
+          }}
+        >
           📐 Usability matrix results
         </div>
-        <div>
+        <div className=" mb-2">
           S1,S2 and S3 are the given scenarios to prepare invoices using Excel
           sheets and Clear one software.{" "}
         </div>
         <img src={usabilityMatrix} className="w-full" alt="" />
       </div>
       {/* crafting persona */}
-      <div class="p-5 md:p-24 font-lato">
-        <div className="text-2xl md:text-4xl mb-8">🖌️ Crafting persona</div>
-        <div class="grid grid-cols-12">
+      <div
+        style={{
+          marginTop: " 150px",
+          // marginBottom: " 130px",
+        }}
+        class="p-5 md:py-0 md:px-24 font-lato"
+      >
+        <div
+          className="text-2xl md:text-4xl "
+          style={{
+            marginBottom: "30px",
+          }}
+        >
+          🖌️ Crafting persona
+        </div>
+        <div class="grid grid-cols-12 leading-6">
           <div class="col-span-12 md:col-span-6 h-full flex flex-col justify-center ">
             <ul class="ml-4 list-disc">
               <li>
@@ -551,7 +579,7 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
               </li>
             </ul>
             <ol className="list-decimal ml-4">
-              <li className="my-5">
+              <li className=" my-6">
                 During the interview, Satish frequently mentioned that he's
                 satisfied with the ongoing process of managing reports and
                 invoices because he feels{" "}
@@ -560,7 +588,7 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
                 status quo bias as he was unwilling to adapt a new process to
                 <b> avoid stressful learning.</b>
               </li>
-              <li className="my-5">
+              <li className=" my-6">
                 However, Srinivas being a fresher was able to{" "}
                 <b> effectively communicate the pain-points </b> (some of which
                 were similar to Satish's).
@@ -569,54 +597,77 @@ const BillEasy = ({ textEnter, imageEnter, largeEnter }) => {
           </div>
           <div class="hidden md:block col-span-1"></div>
           <div class="col-span-12 md:col-span-5 h-full flex flex-col justify-center ">
-            <div class="flex w-full justify-between items-center my-5 md:my-10">
+            <div class="flex w-full justify-between items-center  md:my-3 bg-brand-darkGrey2 rounded-xl my py-3 px-4">
               <img
                 src={persona1}
                 className="w-10 md:w-14 h-10 md:h-14 mr-5"
                 alt=""
               />
               <div>
-                <div className="text-sm">
+                <div className="text-sm font-lato-italic ">
                   “ I’ve <b>no problem</b> with the process, I can perform same
                   tasks without external software 🙂 “
                 </div>
-                <div className="text-xs">Sateesh Grande , Lead Accountant</div>
+                <div
+                  style={{
+                    marginTop: "6px",
+                  }}
+                  className="text-xs "
+                >
+                  Sateesh Grande , Lead Accountant
+                </div>
               </div>
             </div>
-            <div class="flex w-full justify-between items-center my-5 md:my-10">
+            <div class="flex w-full justify- items-center  md:my-3 bg-brand-darkGrey2 rounded-xl my py-3 px-4">
               <img
                 src={persona2}
                 className="w-10 md:w-14 h-10 md:h-14 mr-5"
                 alt=""
               />
               <div>
-                <div className="text-sm">
+                <div className="text-sm font-lato-italic ">
                   “ Feels easy but I keep forgetting, I might’ve a{" "}
                   <b>bad memory Ha Ha Ha!</b> 🤷“
                 </div>
-                <div className="text-xs">Srinivas , Accountant</div>
+                <div
+                  style={{
+                    marginTop: "6px",
+                  }}
+                  className="text-xs "
+                >
+                  Srinivas , Accountant
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <img src={persona3} className="w-full" alt="" />
+        <img src={persona3} className="w-full mt-12" alt="" />
       </div>
       {/* case studies */}
-      <div class="py-5 md:py-24 ">
+      <div
+        style={{
+          paddingTop: " 130px",
+          paddingBottom: " 100px",
+        }}
+        class="  "
+      >
         <a
           href="/"
+          style={{
+            marginBottom: " 80px",
+          }}
           className="tracking-3 px-5 flex items-center md:px-24  uppercase font-lato-bold"
         >
           <ArrowRightCircle
             width={30}
             height={30}
-            color="black"
+            color="white"
             strokeWidth={1.5}
             className="mr-4"
           />
           read full case study ☕
         </a>
-        <div class="px-5 my-5 grid   grid-cols-2 md:grid-cols-11 items-center ">
+        <div class="px-5  grid   grid-cols-2 md:grid-cols-11 items-center ">
           <div class="col-span-3  ">
             <img src={CaseStudy2} className="" alt="" />
           </div>

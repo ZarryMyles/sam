@@ -33,18 +33,18 @@ const Principles = ({ textEnter, imageEnter, textLeave }) => {
           <GiHiveMind
             onMouseEnter={textEnter}
             onMouseLeave={imageEnter}
-            className="text-6xl text-black my-4"
+            className="text-6xl text-brand-white my-4"
           />
           <div class="text-2xl font-bold my-4">Understand</div>
           <div class="text-center leading-loose text-gray-500">
             The process of design is to <b>understand minds.</b>
           </div>
         </div>
-        <div class="w-full md:w-1/3 flex flex-col items-center px-5 md:px-10 py-5 md:py-14 md:shadow-none shadow-md my-5 bg-brand-lightGrey">
+        <div class="w-full md:w-1/3 flex flex-col items-center px-5 md:px-10 py-5 md:py-14 md:shadow-none shadow-md my-5 bg-brand-darkGrey2">
           <GiArcheryTarget
             onMouseEnter={textEnter}
             onMouseLeave={imageEnter}
-            className="text-6xl text-black my-4"
+            className="text-6xl text-brand-white my-4"
           />
           <div class="text-2xl font-bold my-4">Vision</div>
           <div class="text-center leading-loose text-gray-500">
@@ -56,7 +56,7 @@ const Principles = ({ textEnter, imageEnter, textLeave }) => {
           <TbPerspective
             onMouseEnter={textEnter}
             onMouseLeave={imageEnter}
-            className="text-6xl text-black my-4"
+            className="text-6xl text-brand-white my-4"
           />
           <div class="text-2xl font-bold my-4">Perspective</div>
           <div class="text-center leading-loose text-gray-500">

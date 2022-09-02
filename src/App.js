@@ -20,11 +20,11 @@ function App() {
     y: 0,
   });
   const [cursorVariant, setcursorVariant] = useState("default");
-  let options = {
-    root: document.querySelector("#sections"),
-    rootMargin: "0px",
-    threshold: 0.6, // percentage of the element that is visible for triggering the callback for nav
-  };
+  // let options = {
+  //   root: document.querySelector("#sections"),
+  //   rootMargin: "0px",
+  //   threshold: 0.6, // percentage of the element that is visible for triggering the callback for nav
+  // };
   useEffect(() => {
     const mouseMove = (e) => {
       setMousePos({
@@ -85,39 +85,39 @@ function App() {
     html.add(theme);
   };
   // observing active section
-  const [activeSection, setActiveSection] = useState("home");
-  useEffect(() => {
-    let callback = (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
-          // console.log(entry.target.id);
-        }
-      });
-    };
-    // targets
-    let observer = new IntersectionObserver(callback, options);
-    let landingSection = document.querySelector("#landing-section");
-    let work = document.querySelector("#work");
-    let socialProof = document.querySelector("#social-proof");
-    let getInTouch = document.querySelector("#get-in-touch");
-    let footer = document.querySelector("#footer-main");
-    // observers
-    observer.observe(landingSection);
-    observer.observe(work);
-    observer.observe(socialProof);
-    observer.observe(getInTouch);
-    observer.observe(footer);
-  }, []);
-  useEffect(() => {
-    // console.log(activeSection);
-    if (activeSection === "landing-section") setTheme("dark");
-    else if (activeSection === "work") setTheme("light");
-    else if (activeSection === "social-proof") setTheme("dark");
-    else if (activeSection === "get-in-touch") setTheme("dark");
-    else if (activeSection === "footer-main") setTheme("dark");
-    // else setTheme();
-  }, [activeSection]);
+  // const [activeSection, setActiveSection] = useState("home");
+  // useEffect(() => {
+  //   let callback = (entries, observer) => {
+  //     entries.forEach((entry) => {
+  //       if (entry.isIntersecting) {
+  //         setActiveSection(entry.target.id);
+  //         console.log(entry.target.id);
+  //       }
+  //     });
+  //   };
+  //   targets
+  //   let observer = new IntersectionObserver(callback, options);
+  //   let landingSection = document.querySelector("#landing-section");
+  //   let work = document.querySelector("#work");
+  //   let socialProof = document.querySelector("#social-proof");
+  //   let getInTouch = document.querySelector("#get-in-touch");
+  //   let footer = document.querySelector("#footer-main");
+  //   observers
+  //   observer.observe(landingSection);
+  //   observer.observe(work);
+  //   observer.observe(socialProof);
+  //   observer.observe(getInTouch);
+  //   observer.observe(footer);
+  // }, []);
+  // useEffect(() => {
+  // console.log(activeSection);
+  // if (activeSection === "landing-section") setTheme("dark");
+  // else if (activeSection === "work") setTheme("light");
+  // else if (activeSection === "social-proof") setTheme("dark");
+  // else if (activeSection === "get-in-touch") setTheme("dark");
+  // else if (activeSection === "footer-main") setTheme("dark");
+  // else setTheme();
+  // }, [activeSection]);
 
   // Loader
   const [loading, setLoading] = useState(false);

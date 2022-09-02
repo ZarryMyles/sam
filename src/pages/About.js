@@ -74,7 +74,7 @@ const About = () => {
         defaultColor={"black"}
       />
 
-      <div className="w-full h-auto pt-10 ">
+      <div className="w-full h-auto pt-10 bg-brand-black text-brand-white ">
         {/* landing section */}
         <div
           onMouseEnter={imageEnter}
@@ -114,20 +114,21 @@ const About = () => {
               <div
                 style={{
                   height: "1px",
+                  width: "72px",
                 }}
-                class="  ml-4 mr-1  w-20 bg-black"
+                class="  ml-4 mr-1  w-20 bg-brand-gray"
               />
               <BsDot className="text-2xl" />
             </div>
-            <div class="text-lg text-gray-500">Digital Artist</div>
+            <div class="text-lg text-brand-gray">Digital Artist</div>
           </div>
-          <div class=" md:w-5/10 h-92 md:h-full bg-brand-lightGrey flex justify-center items-center md:p-20">
+          <div class=" md:w-5/10 h-92 md:h-full bg-brand-darkGrey2 flex justify-center items-center md:p-20">
             <div
               style={{
                 backgroundImage: `url("https://images.unsplash.com/photo-1610398000003-1b2b2b2b2b2b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80")`,
                 // height: "120px",
               }}
-              class="bg-center bg-red-200 bg-no-repeat bg-cover    h-full  w-full"
+              class="bg-center  bg-no-repeat bg-cover    h-full  w-full"
             />
           </div>
         </div>

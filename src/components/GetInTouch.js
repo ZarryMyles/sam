@@ -4,7 +4,7 @@ const GetInTouch = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
   return (
     <div
       id="get-in-touch"
-      className="  w-full overflow-clip    my-10 relative getintouch-root "
+      className="  w-full overflow-clip    mt-10 relative getintouch-root "
     >
       <div className=" text-black dark:text-brand-white px-5 md:px-48  py-10 md:py-40  w-full   left-0 top-0  z-20  ">
         <div
@@ -13,8 +13,8 @@ const GetInTouch = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
           // onMouseLeave={textLeave}
         >
           <div
-            // onMouseEnter={textEnter}
-            // onMouseLeave={imageEnter}
+            onMouseEnter={textEnter}
+            onMouseLeave={imageEnter}
             // class name for text stroke : text-stroke-black
             style={{
               letterSpacing: ".08em",

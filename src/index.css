@@ -32,6 +32,14 @@
   font-family: "Lato-Light";
 }
 @font-face {
+  font-family: "Lato-Italic";
+  src: url("./fonts/lato/Lato-Italic.ttf");
+}
+.font-lato-italic {
+  font-family: "Lato-Italic";
+}
+
+@font-face {
   font-family: "Lato-Light-Italic";
   src: url("./fonts/lato/Lato-LightItalic.ttf");
 }

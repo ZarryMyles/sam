@@ -13,11 +13,11 @@ import Phone5 from "../../assets/works/smartvision/smartVisionPhone5.png";
 import Phone6 from "../../assets/works/smartvision/smartVisionPhone6.png";
 import colorChecker from "../../assets/works/smartvision/smartVisionColorChecker.png";
 import fonts from "../../assets/works/smartvision/smartVisionFonts.png";
-import { BsArrowRightShort } from "react-icons/bs";
+import Hero from "../../assets/works/smartvision/smartVision.png";
 
 const SmartVision = () => {
   const work = {
-    image: "../../assets/works/smartvision/smartVision.png",
+    image: Hero,
     video:
       "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/Comp_1_tdwzlp.gif",
     title: "Smart Vision",
@@ -28,56 +28,62 @@ const SmartVision = () => {
     linkText: "Visit BillEasy",
   };
   return (
-    <div>
+    <div className="text-justify bg-brand-black text-brand-white">
       <Navbar defaultColor={"white"} />
       <WorkHero work={work} />
       {/* project brief */}
-      <div class=" p-5 md:p-24 flex flex-wrap justify-between ">
-        <div className=" w-1/2 md:w-auto my-5  ">
-          <div class="text-xl font-bold font-lato-bold flex items-center">
+      <div class=" p-5 md:px-24 md:my-20 flex flex-wrap justify-between  ">
+        <div className="  my-5   ">
+          <div class="text-xl font-bold font-lato-bold flex items-center -ml-1">
             👨‍👩‍👦 Project Type
           </div>
-          <div className="font-lato-light font-bold">Personal Project</div>
+          <div className="font-lato-light font-bold mt-2">Personal Project</div>
         </div>
         <div className=" w-1/2 md:w-auto my-5  ">
-          <div class="text-xl font-bold font-lato-bold flex items-center">
+          <div class="text-xl font-bold font-lato-bold flex items-center -ml-2">
             ⏱️ Timeline
           </div>
-          <div className="font-lato-light font-bold">3 months</div>
+          <div className="font-lato-light font-bold mt-2">3 months</div>
         </div>
         <div className=" w-1/2 md:w-auto my-5  ">
-          <div class="text-xl font-bold font-lato-bold flex items-center">
+          <div class="text-xl font-bold font-lato-bold flex items-center -ml-1">
             👩‍💻 My Role
           </div>
-          <div className="font-lato-light font-bold">UX & UI Designer</div>
+          <div className="font-lato-light font-bold mt-2">UX & UI Designer</div>
         </div>
         <div className=" w-1/2 md:w-auto my-5  ">
-          <div class="text-xl font-bold font-lato-bold flex items-center">
+          <div class="text-xl font-bold font-lato-bold flex items-center -ml-1">
             👥 Design Team
           </div>
-          <div className="font-lato-light font-bold">Myself</div>
+          <div className="font-lato-light font-bold mt-2">Myself</div>
         </div>
       </div>
       {/* project concept */}
-      <div class=" p-5 md:p-24 grid grid-cols-12  h-full">
-        <div class="col-span-12 md:col-span-6 h-full  ">
-          <div class="flex items-center mb-12">
+      <div class=" p-5 md:px-24 md:mb-36 md:pr-0 grid grid-cols-12  h-full">
+        <div class="flex items-center mb-10 col-span-12">
+          <div
+            style={{
+              height: "1px",
+              width: "72px",
+            }}
+            class="bg-brand-gray  mr-4"
+          />
+          <div class=" text-brand-gray uppercase  tracking-3 text-base ">
+            Concept
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-6 h-full flex flex-col    ">
+          <div class="flex items-center">
             <div
               style={{
-                height: "1px",
+                marginBottom: "30px",
               }}
-              class="bg-brand-gray w-28 mr-4"
-            />
-            <div class=" text-brand-gray uppercase text-xl tracking-widest ">
-              Concept
-            </div>
-          </div>
-          <div class="flex items-center">
-            <div class="  text-2xl md:text-4xl my-8 tracking-widest font-lato-light font-bold ">
+              class="  text-2xl md:text-4xl  tracking-widest font-lato-light font-bold "
+            >
               💡 Smart Vision
             </div>
           </div>
-          <div className="my-8    ">
+          <div className="  leading-6 tracking-0.5   ">
             Smart Vision is an <b>Accessible, Independent and Secure</b>{" "}
             messaging App designed to make smartphones{" "}
             <b>more accessible for users with visual impairments.</b>
@@ -90,33 +96,38 @@ const SmartVision = () => {
         </div>
         <div class="hidden md:block col-span-1"></div>
 
-        <div class="col-span-12 md:col-span-5 h-full flex flex-col items-center justify-center ">
-          <div className="my-5">
-            <div className="mb-3">✅ Results</div>
-            <div>
-              Raised awareness, advanced accessibility features, Inclusive and
-              easy to use space.
+        <div class="col-span-12 md:col-span-5  flex flex-col items-center justify-center pl-10 rounded-xl text-brand-white ">
+          <div className="  md:pr-24 rounded-l-lg flex flex-col justify-center bg-brand-darkGrey2 pl-14 py-14  ">
+            <div className=" mb-8">
+              <div className=" mb-2">✅ Results</div>
+              <div className=" leading-6 tracking-0.5">
+                Raised awareness, advanced accessibility features, Inclusive and
+                easy to use space.
+              </div>
             </div>
-          </div>
-          <div className=" my-5">
-            <div className="mb-3">💼 Contribution</div>
-            <div>
-              Secondary Research, Brainstorming Business goals, User Interviews,
-              Journey Mapping, Ideation, Interface Design, Prototyping.
+            <div className=" ">
+              <div className=" mb-2">💼 Contribution</div>
+              <div className=" leading-6 tracking-0.5">
+                Secondary Research, Brainstorming Business goals, User
+                Interviews, Journey Mapping, Ideation, Interface Design,
+                Prototyping.
+              </div>
             </div>
           </div>
         </div>
       </div>
+
       {/* purpose */}
       <div className="p-5 md:p-20">
-        <div class="flex items-center mb-12">
+        <div class="flex items-center mb-10">
           <div
             style={{
               height: "1px",
+              width: "72px",
             }}
             class="bg-brand-gray w-28 mr-4"
           />
-          <div class=" text-brand-gray uppercase text-xl tracking-widest ">
+          <div class=" text-brand-gray uppercase font-lato-med text-base  ">
             Purpose
           </div>
         </div>
