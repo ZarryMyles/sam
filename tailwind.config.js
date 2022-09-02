@@ -196,6 +196,7 @@ module.exports = {
       2: "2px",
       3: "3px",
     },
+
     extend: {
       brightness: {
         10: "10%",

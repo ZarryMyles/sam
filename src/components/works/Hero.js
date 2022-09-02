@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = ({ work, next, largeEnter, imageEnter }) => {
   return (
-    <div className="h-screen  w-full flex  ">
+    <div className="h-screen w-full overflow-clip flex  ">
       <div
         style={{
           width: "19.5%",
@@ -35,6 +35,16 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
           >
             {work.title}
           </div>
+          {/* line animation */}
+          <div
+            style={{
+              width: "1.3px",
+              height: "32px",
+              backgroundColor: "#424242",
+              bottom: "70px",
+            }}
+            class="work-hero-vertical-line absolute  "
+          ></div>
           {next && (
             <a
               onMouseEnter={largeEnter}
@@ -51,14 +61,25 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
         </div>
       </div>
       <div
-        class="  z-10 bg-cover bg-center bg-no-repeat brightness-50 bg-brand-black"
+        class=" md:hidden z-10 bg-cover bg-center bg-no-repeat brightness-50 bg-brand-black"
         style={{
           width: "80.5%",
-
           backgroundImage: `url(${work.image})`,
         }}
       ></div>
-      {/* line animation */}
+      <video
+        style={{
+          height: "100vh",
+        }}
+        className=" z-10 bg-cover hidden md:block bg-center bg-no-repeat brightness-50 bg-brand-black"
+        alt="loading..."
+        loop
+        autoPlay
+        muted
+        disablePictureInPicture
+      >
+        <source src={work.video} type="video/mp4" />
+      </video>
     </div>
   );
 };
