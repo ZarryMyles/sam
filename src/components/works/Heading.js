@@ -7,10 +7,16 @@ const Heading = ({ text }) => {
         style={{
           height: "1px",
           width: "72px",
+          background: "#424242",
         }}
-        class="bg-brand-gray w-28 mr-4"
+        class=" w-28 mr-4"
       />
-      <div class="  tracking-2 text-brand-gray uppercase font-lato-med text-base ">
+      <div
+        style={{
+          color: "#424242",
+        }}
+        class="  tracking-2  uppercase font-lato-med text-base "
+      >
         {text}
       </div>
     </div>

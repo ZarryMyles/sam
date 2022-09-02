@@ -1,67 +1,70 @@
 import React from "react";
 // icons
 import { BsDot } from "react-icons/bs";
-// import { SiMinds } from "react-icons/si";
+import { Work, WorkHeading } from ".";
 import { GiArcheryTarget, GiHiveMind } from "react-icons/gi";
 import { TbPerspective } from "react-icons/tb";
+import { prin1, prin2, prin3 } from "../assets/emojis";
 const Principles = ({ textEnter, imageEnter, textLeave }) => {
   return (
     <div
       onMouseEnter={imageEnter}
       onMouseLeave={textLeave}
-      className="min-h-screen my-10 md:my-0 px-5 md:px-44 flex flex-col justify-center "
+      className="min-h-screen my-10 md:my-0 px-5 md:px-48 flex flex-col justify-center "
     >
-      <div class=" text-xl  flex items-center -ml-1 md:ml-16  text-gray-500">
-        <BsDot className="text-2xl text-black" />
-        <div
-          style={{
-            height: "1px",
-          }}
-          class="  mr-1  w-20 bg-gray-400"
-        />
-        <div className=" tracking-wider text-lg uppercase">Services</div>
-      </div>
-      <div
-        onMouseEnter={textEnter}
-        onMouseLeave={imageEnter}
-        class="text-5xl font-bold"
-      >
+      <WorkHeading text={"values"} />
+      <div onMouseEnter={textEnter} onMouseLeave={imageEnter} class="text-4xl">
         Principles I abide by
       </div>
       <div class="w-full flex flex-col md:flex-row items-center justify-between my-16">
-        <div class="w-full md:w-1/3 flex flex-col items-center px-5 md:px-10 py-5 md:py-14 md:shadow-none shadow-md my-5">
-          <GiHiveMind
-            onMouseEnter={textEnter}
-            onMouseLeave={imageEnter}
-            className="text-6xl text-brand-white my-4"
-          />
-          <div class="text-2xl font-bold my-4">Understand</div>
-          <div class="text-center leading-loose text-gray-500">
-            The process of design is to <b>understand minds.</b>
+        <div class="w-full md:w-1/3 px-8">
+          <div
+            style={{
+              paddingTop: "72px",
+              height: "365px",
+            }}
+            class="w-full  flex flex-col items-center px-5 md:px-10   md:shadow-none "
+          >
+            <img src={prin1} alt="" className=" w-16 h-16" />
+            <div class=" text-2xl  mt-12 mb-5">Understand</div>
+            <div class="text-center leading-6 text-base ">
+              The process of design is to{" "}
+              <span className="text-brand-pink">understand minds.</span>
+            </div>
           </div>
         </div>
-        <div class="w-full md:w-1/3 flex flex-col items-center px-5 md:px-10 py-5 md:py-14 md:shadow-none shadow-md my-5 bg-brand-darkGrey2">
-          <GiArcheryTarget
-            onMouseEnter={textEnter}
-            onMouseLeave={imageEnter}
-            className="text-6xl text-brand-white my-4"
-          />
-          <div class="text-2xl font-bold my-4">Vision</div>
-          <div class="text-center leading-loose text-gray-500">
-            A <b>clear vision</b> and <b>purpose</b> is a driving force for any
-            product.
+        <div class="w-full md:w-1/3 px-8">
+          <div
+            style={{
+              paddingTop: "72px",
+              height: "365px",
+            }}
+            class="w-full  flex flex-col items-center px-5 md:px-10   md:shadow-non bg-brand-darkGrey2"
+          >
+            <img src={prin2} alt="" className=" w-16 h-16" />
+            <div class=" text-2xl  mt-12 mb-5">Vision</div>
+            <div class="text-center leading-6 text-base ">
+              A <span className="text-brand-pink">clear vision</span> and{" "}
+              <span className="text-brand-pink">purpose</span> is a driving
+              force for any product.
+            </div>
           </div>
         </div>
-        <div class="w-full md:w-1/3 flex flex-col items-center px-5 md:px-10 py-5 md:py-14 md:shadow-none shadow-md my-5 ">
-          <TbPerspective
-            onMouseEnter={textEnter}
-            onMouseLeave={imageEnter}
-            className="text-6xl text-brand-white my-4"
-          />
-          <div class="text-2xl font-bold my-4">Perspective</div>
-          <div class="text-center leading-loose text-gray-500">
-            <b>Diverse perspectives</b> and <b>common goals</b> are the recipes
-            for fantastic teams.
+        <div class="w-full md:w-1/3 px-8">
+          <div
+            style={{
+              paddingTop: "72px",
+              height: "365px",
+            }}
+            class="w-full  flex flex-col items-center px-5 md:px-10   md:shadow-non "
+          >
+            <img src={prin3} alt="" className=" w-16 h-16" />
+            <div class=" text-2xl  mt-12 mb-5">Perspective</div>
+            <div class="text-center leading-6 text-base ">
+              <span className="text-brand-pink">Diverse perspectives</span> and{" "}
+              <span className="text-brand-pink">common goals</span> are the
+              recipes for fantastic teams.
+            </div>
           </div>
         </div>
       </div>

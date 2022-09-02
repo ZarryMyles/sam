@@ -143,14 +143,21 @@ const SmartVision = () => {
             </div>
           </div>
           <div className="  leading-6 tracking-0.5   ">
-            Smart Vision is an <b>Accessible, Independent and Secure</b>{" "}
+            Smart Vision is an{" "}
+            <span style={{ color: "#6AC296" }}>
+              Accessible, Independent and Secure
+            </span>{" "}
             messaging App designed to make smartphones{" "}
-            <b>more accessible for users with visual impairments.</b>
+            <span style={{ color: "#6AC296" }}>
+              more accessible for users with visual impairments.
+            </span>
             <br />
             <br />
             Allows people to engage in hassle-free conversations, Provides the
-            <b>finest accessibility features and secures privacy</b> to improve
-            the quality of life.
+            <span style={{ color: "#6AC296" }}>
+              finest accessibility features and secures privacy
+            </span>{" "}
+            to improve the quality of life.
           </div>
         </div>
         <div class="hidden md:block col-span-1"></div>
@@ -183,15 +190,21 @@ const SmartVision = () => {
           <div class="col-span-12 md:col-span-4">
             <div class="text-2xl font-lato">🎯 Goals</div>
             <div className="my-5 ">
-              1. Allow them to <b>connect with people Independently.</b>
+              1. Allow them to{" "}
+              <span style={{ color: "#6AC296" }}>
+                connect with people Independently.
+              </span>
               <br />
-              2. Provide essential <b>Accessibility features.</b>
+              2. Provide essential{" "}
+              <span style={{ color: "#6AC296" }}>Accessibility features.</span>
               <br />
-              3. Make it easier to <b>share information.</b>
+              3. Make it easier to{" "}
+              <span style={{ color: "#6AC296" }}>share information.</span>
               <br />
-              4. Protect <b>privacy and security</b>.
+              4. Protect{" "}
+              <span style={{ color: "#6AC296" }}>privacy and security</span>.
               <br />
-              5. <b>Promote awareness</b>
+              5. <span style={{ color: "#6AC296" }}>Promote awareness</span>
             </div>
           </div>
           <div class="col-span-12 md:col-span-8 hidden ">
@@ -216,18 +229,24 @@ const SmartVision = () => {
         <div class="ml-3">
           <div className=" text-base font-lato my-5">User Type</div>
           <div className="" style={{ letterSpacing: "0.5px" }}>
-            <b>Legally blind</b>
+            <span style={{ color: "#6AC296" }}>Legally blind</span>
             <ul className="list-disc">
               <li className="">
                 A legally blind individual is considered sightless if contact
-                lenses or <b>eyeglasses cannot correct their vision.</b>
+                lenses or{" "}
+                <span style={{ color: "#6AC296" }}>
+                  eyeglasses cannot correct their vision.
+                </span>
               </li>
               <li className="my-5">
-                The <b>normal vision is 20/20</b>. That means an object can be
-                seen correctly 20 feet away. But the vision of a{" "}
-                <b>legally blind</b> is
-                <b>20/200 or less</b>. This means if an object is 200 feet away,
-                they have to stand 20 feet away to see it evidently.
+                The{" "}
+                <span style={{ color: "#6AC296" }}>normal vision is 20/20</span>
+                . That means an object can be seen correctly 20 feet away. But
+                the vision of a{" "}
+                <span style={{ color: "#6AC296" }}>legally blind</span> is
+                <span style={{ color: "#6AC296" }}>20/200 or less</span>. This
+                means if an object is 200 feet away, they have to stand 20 feet
+                away to see it evidently.
               </li>
             </ul>
           </div>
@@ -286,9 +305,12 @@ const SmartVision = () => {
                 color: "#FEFEFE",
               }}
             >
-              How might we design a Messaging app which is <b>Inclusive</b> to
-              people with impaired vision making their{" "}
-              <b>communication experience hassle -free and economical.</b>
+              How might we design a Messaging app which is{" "}
+              <span style={{ color: "#6AC296" }}>Inclusive</span> to people with
+              impaired vision making their{" "}
+              <span style={{ color: "#6AC296" }}>
+                communication experience hassle -free and economical.
+              </span>
             </div>
           </div>
           <div class="hidden md:block col-span-1"></div>
@@ -365,11 +387,16 @@ const SmartVision = () => {
               <ul class="my-0 md:my-8 list-decimal">
                 <li className="ml-4">Struggles while reading.</li>
                 <li class="ml-4">
-                  Prefers <b>bold and enlarged letters.</b>
+                  Prefers{" "}
+                  <span style={{ color: "#6AC296" }}>
+                    bold and enlarged letters.
+                  </span>
                 </li>
                 <li class="ml-4">
-                  <b>Keyboard letters are not legible enough.</b> Feels time
-                  consuming with TTS unless you've mastered it.
+                  <span style={{ color: "#6AC296" }}>
+                    Keyboard letters are not legible enough.
+                  </span>{" "}
+                  Feels time consuming with TTS unless you've mastered it.
                 </li>
               </ul>
             </div>
@@ -385,14 +412,21 @@ const SmartVision = () => {
               <div class="text-lg font-lato font-bold">TTS</div>
               <ul class="my-0 md:my-8 list-decimal ml-4">
                 <li>
-                  <b>Cannot describe texts in images.</b>
+                  <span style={{ color: "#6AC296" }}>
+                    Cannot describe texts in images.
+                  </span>
                 </li>
                 <li>Over informative</li>
                 <li>
-                  It's a <b>pain texting in group chats since</b> most of the
-                  times
-                  <b>messages are read from the first</b> if a new external
-                  message pops up.
+                  It's a{" "}
+                  <span style={{ color: "#6AC296" }}>
+                    pain texting in group chats since
+                  </span>{" "}
+                  most of the times
+                  <span style={{ color: "#6AC296" }}>
+                    messages are read from the first
+                  </span>{" "}
+                  if a new external message pops up.
                 </li>
                 <li>Searching messages from long back is difficult.</li>
               </ul>
@@ -438,179 +472,227 @@ const SmartVision = () => {
         </div>
       </div>
       {/* features */}
-      <div class="bg-brand-black px-5 py-10 md:p-24 h-full">
+      <div class="bg-brand-black md:pt-24  h-full">
         <WorkHeading text={"solutions"} />
 
         <div class="grid grid-cols-12 font-lato">
           {/* 1 */}
-          <div class="col-span-12 md:col-span-7 flex  items-center justify-center text-white px-3 md:px-28 my-5">
-            <div>
-              <div className="my-8">1. Screen recorder</div>
-              <ul class="list-disc ml-4">
-                <li className="my-9">
-                  Screen readers speak what is on the screen as the finger
-                  explores. They are simple to understand and control.
-                </li>
-                <li className="my-9">
-                  At any moment,{" "}
-                  <b>double-tap the text to activate the screen</b>
-                  reader.
-                </li>
-              </ul>
+          <div class="col-span-12 grid grid-cols-12  px-5 md:px-24">
+            <div class="col-span-12 md:col-span-7 flex bg-brand-black  items-center justify-center text-brand-white  ">
+              <div className="h-full w-full">
+                <div class="text-4xl">📐 Features</div>
+                <div className="mt-130 flex  md:pl-24">
+                  <div className="">
+                    <div className="my-8">1. Screen recorder</div>
+                    <ul class="list-disc ml-4">
+                      <li className="my-9">
+                        Screen readers speak what is on the screen as the finger
+                        explores. <br /> They are simple to understand and
+                        control.
+                      </li>
+                      <li className="my-9">
+                        At any moment,{" "}
+                        <span style={{ color: "#6AC296" }}>
+                          double-tap the text to activate the screen reader.
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="md:col-span-5 col-span-12 hidden md:flex items-center justify-center">
-            <img
-              src={Phone1}
-              className=""
-              style={{
-                width: "290px",
-              }}
-              alt=""
-            />
-          </div>
-          <div class="md:col-span-5 col-span-12 flex md:hidden items-center justify-center">
-            <img src={Phone1} className="w-2/4" alt="" />
+            <div class="md:col-span-5 col-span-12 hidden md:flex -mt-10 mb-130  md:pr-24 justify-end">
+              <img
+                src={Phone1}
+                className=""
+                style={{
+                  width: "290px",
+                }}
+                alt=""
+              />
+            </div>
+            <div class="md:col-span-5 col-span-12 flex md:hidden items-center justify-center">
+              <img src={Phone1} className="w-2/4" alt="" />
+            </div>
           </div>
           {/* 2 */}
-          <div class="hidden md:flex md:col-span-5 col-span-12  items-center justify-center">
-            <img
-              src={Phone2}
-              className=""
-              style={{
-                width: "290px",
-              }}
-              alt=""
-            />
-          </div>
-          <div class="col-span-12 md:col-span-7 flex  items-center justify-center text-white px-3 md:px-28 my-5">
-            <div>
-              <div className="my-8">2. Image description</div>
-              <ul class="list-disc ml-4">
-                <li className="my-9">
-                  Legally blind individuals can{" "}
-                  <b>understand the texts better than images.</b> Screen readers
-                  can't interpret images.
-                </li>
-                <li className="my-9">
-                  Hence, Image descriptions are used to{" "}
-                  <b>describe Information from images.</b> They can also
-                  generate <b>alt text automatically</b>
-                </li>
-              </ul>
+          <div className="col-span-12 grid grid-cols-12  px-5 md:px-24 bg-brand-darkGrey2">
+            <div class="hidden md:flex md:col-span-5 col-span-12  -mt-32 items-center md:pl-24">
+              <img
+                src={Phone2}
+                className=""
+                style={{
+                  width: "290px",
+                }}
+                alt=""
+              />
+            </div>
+            <div class="col-span-12 md:col-span-7 flex   justify-end text-brand-white px-3 md:pr-24  mt-10 md:mt-24">
+              <div>
+                <div className="">2. Image description</div>
+                <ul class="list-disc ml-4">
+                  <li className="my-9">
+                    Legally blind individuals can{" "}
+                    <span style={{ color: "#6AC296" }}>
+                      understand the texts better than <br />
+                      images.
+                    </span>{" "}
+                    Screen readers can't interpret images.
+                  </li>
+                  <li className="my-9">
+                    Hence, Image descriptions are used to{" "}
+                    <span style={{ color: "#6AC296" }}>
+                      describe Information from <br />
+                      images.
+                    </span>{" "}
+                    They can also generate{" "}
+                    <span style={{ color: "#6AC296" }}>
+                      alt text automatically
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="md:col-span-5 col-span-12 flex md:hidden items-center justify-center">
+              <img src={Phone2} className="w-2/4" alt="" />
+            </div>
+            <div class="col-span-12 grid grid-cols-12">
+              <div class="col-span-12 md:col-span-7 flex md:mb-20   md:pl-24 text-white md:mt-32">
+                <div>
+                  <div className="my-8">3. Speech Recognition</div>
+                  <ul class="list-disc ml-4">
+                    <li className="mt-9">
+                      It enables a program to{" "}
+                      <span style={{ color: "#6AC296" }}>
+                        process human speech to readable text.
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="md:col-span-5 col-span-12 hidden md:flex -mt-10 absolute   right-48 justify-end">
+                <img
+                  src={Phone3}
+                  className=""
+                  style={{
+                    width: "290px",
+                  }}
+                  alt=""
+                />
+              </div>
+              <div class="md:col-span-5 col-span-12 flex md:hidden items-center justify-center">
+                <img src={Phone3} className="w-2/4" alt="" />
+              </div>
             </div>
           </div>
-          <div class="md:col-span-5 col-span-12 flex md:hidden items-center justify-center">
-            <img src={Phone2} className="w-2/4" alt="" />
-          </div>
+
           {/* 3 */}
-          <div class="col-span-12 md:col-span-7 flex  items-center justify-center text-white px-3 md:px-28 my-5">
-            <div>
-              <div className="my-8">3. Speech Recognition</div>
-              <ul class="list-disc ml-4">
-                <li className="my-9">
-                  It enables a program to{" "}
-                  <b>process human speech to readable text.</b>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="md:col-span-5 col-span-12 hidden md:flex items-center justify-center">
-            <img
-              src={Phone3}
-              className=""
-              style={{
-                width: "290px",
-              }}
-              alt=""
-            />
-          </div>
-          <div class="md:col-span-5 col-span-12 flex md:hidden items-center justify-center">
-            <img src={Phone3} className="w-2/4" alt="" />
-          </div>
+
           {/* 4 */}
-          <div class="md:col-span-5 col-span-12 hidden md:flex items-center justify-center">
-            <img
-              src={Phone4}
-              className=""
-              style={{
-                width: "290px",
-              }}
-              alt=""
-            />
-          </div>
-          <div class="col-span-12 md:col-span-7 flex  items-center justify-center text-white px-3 md:px-28 my-5">
-            <div>
-              <div className="my-8">4. OCR</div>
-              <ul class="list-disc ml-4">
-                <li className="my-9">
-                  <b>
-                    Optical Character Recognition is the technology that detects
-                    text inside digital pictures whether typed or handwritten
-                  </b>
-                </li>
-              </ul>
+          <div class="col-span-12 md:px-24 px-5 grid grid-cols-12">
+            <div class="md:col-span-5 mt-36 col-span-12 hidden md:flex md:pl-24 ">
+              <img
+                src={Phone4}
+                className=""
+                style={{
+                  width: "290px",
+                }}
+                alt=""
+              />
             </div>
-          </div>
-          <div class="md:col-span-5 col-span-12 flex md:hidden items-center justify-center">
-            <img src={Phone4} className="w-2/4" alt="" />
+            <div class="col-span-12 md:col-span-7 flex   justify-end text-white px-3 md:pr-24  md:mt-96">
+              <div>
+                <div className="my-8">4. OCR</div>
+                <ul class="list-disc ml-4">
+                  <li className="my-9">
+                    <span style={{ color: "#6AC296" }}>
+                      Optical Character Recognition
+                    </span>{" "}
+                    is the technology that detects{" "}
+                    <span style={{ color: "#6AC296" }}>
+                      text <br /> inside digital pictures{" "}
+                    </span>
+                    whether typed or handwritten
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="md:col-span-5 col-span-12 flex md:hidden items-center justify-center">
+              <img src={Phone4} className="w-2/4" alt="" />
+            </div>
           </div>
           {/* 5 */}
-          <div class="col-span-12 md:col-span-7 flex  items-center justify-center text-white px-3 md:px-28 my-5">
-            <div>
-              <div className="my-8">5. Magnifier</div>
-              <ul class="list-disc ml-4">
-                <li className="my-9">
-                  The user will not always be pleased with the screen readers
-                  and their privacy may <b>be compromised</b>
-                </li>
-                <li className="my-9">
-                  The magnifier allows the user to have a <b>closer look</b> at
-                  the text or image while <b>respecting their privacy.</b>
-                </li>
-              </ul>
+          <div class="col-span-12 md:px-24 grid grid-cols-12 px-5 relative">
+            <div class="col-span-12 md:col-span-7 flex   text-white px-3 md:pl-24 md:mt-36 ">
+              <div>
+                <div className="">5. Magnifier</div>
+                <ul class="list-disc ml-4">
+                  <li className="my-9">
+                    The user will not always be pleased with the screen readers
+                    and <br /> their privacy may{" "}
+                    <span style={{ color: "#6AC296" }}>be compromised</span>
+                  </li>
+                  <li className="my-9">
+                    The magnifier allows the user to have a{" "}
+                    <span style={{ color: "#6AC296" }}>closer look</span> at the
+                    text or <br />
+                    image while{" "}
+                    <span style={{ color: "#6AC296" }}>
+                      respecting their privacy.
+                    </span>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="md:col-span-5 col-span-12 hidden md:flex items-center justify-center">
-            <img
-              src={Phone5}
-              className=""
-              style={{
-                width: "290px",
-              }}
-              alt=""
-            />
-          </div>
-          <div class="md:col-span-5 col-span-12 flex md:hidden items-center justify-center">
-            <img src={Phone5} className="w-2/4" alt="" />
+            <div class="md:col-span-5 col-span-12 hidden md:flex -mt-10 absolute  right-48">
+              <img
+                src={Phone5}
+                className=""
+                style={{
+                  width: "290px",
+                }}
+                alt=""
+              />
+            </div>
+            <div class="md:col-span-5 col-span-12 flex md:hidden items-center justify-center">
+              <img src={Phone5} className="w-2/4" alt="" />
+            </div>
           </div>
           {/* 6 */}
-          <div class="md:col-span-5 col-span-12 hidden md:flex items-center justify-center">
-            <img
-              src={Phone6}
-              className=""
-              style={{
-                height: "290px",
-              }}
-              alt=""
-            />
-          </div>
-          <div class="col-span-12 md:col-span-7 flex  items-center justify-center text-white px-3 md:px-28 my-5">
-            <div>
-              <div className="my-8">6. Braille keyboard</div>
-              <ul class="list-disc ml-4">
-                <li className="my-9">
-                  Braille keyboard that can be <b>calibrated to human touch.</b>{" "}
-                  Private and Alternative option to speech recognition.
-                </li>
-                <li class="my-9">
-                  Prerequisite : A person must be familiar with braille.
-                </li>
-              </ul>
+          <div class="col-span-12 grid grid-cols-12 md:px-24 px-5 bg-brand-darkGrey2 md:pt-80">
+            <div class="md:col-span-6 col-span-12 hidden md:flex  md:pl-24 md:mb-48">
+              <img
+                src={Phone6}
+                className=""
+                style={{
+                  height: "290px",
+                }}
+                alt=""
+              />
             </div>
-          </div>
-          <div class="md:col-span-5 col-span-12 flex md:hidden items-center justify-center">
-            <img src={Phone6} className="w-4/5" alt="" />
+            <div class="col-span-12 md:col-span-6 flex   justify-end text-white px-3 md:pr-28 my-5">
+              <div>
+                <div className="">6. Braille keyboard</div>
+                <ul class="list-disc ml-4">
+                  <li className="my-9">
+                    Braille keyboard that can be{" "}
+                    <span style={{ color: "#6AC296" }}>
+                      calibrated to human touch.
+                    </span>{" "}
+                    Private <br /> and Alternative option to speech recognition.
+                  </li>
+                  <li class="my-9">
+                    Prerequisite : A person must be{" "}
+                    <span style={{ color: "#6AC296" }}>
+                      familiar with braille.
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="md:col-span-5 col-span-12 flex md:hidden items-center justify-center">
+              <img src={Phone6} className="w-4/5" alt="" />
+            </div>
           </div>
         </div>
       </div>
@@ -622,19 +704,28 @@ const SmartVision = () => {
         <ul class="ml-4 list-disc">
           <li className="my-4 md:my-8">
             The visual designs were made by considering the{" "}
-            <b>WCAG accessibility guidelines.</b>
+            <span style={{ color: "#6AC296" }}>
+              WCAG accessibility guidelines.
+            </span>
           </li>
 
           <li className="my-4 md:my-8">
-            The goal was to use <b>contrasting yet relaxing hues</b> to help
-            readers read the <b>strain-free content.</b>
+            The goal was to use{" "}
+            <span style={{ color: "#6AC296" }}>
+              contrasting yet relaxing hues
+            </span>{" "}
+            to help readers read the{" "}
+            <span style={{ color: "#6AC296" }}>strain-free content.</span>
           </li>
 
           <li className="my-4 md:my-8">
-            Our users emphasized on having a <b>dark mode</b> to{" "}
-            <b>achieve maximum contrast.</b> Because pure black caused eye
-            strain, this was modified to
-            <b>#121212 with a high contrast ratio.</b>
+            Our users emphasized on having a{" "}
+            <span style={{ color: "#6AC296" }}>dark mode</span> to{" "}
+            <span style={{ color: "#6AC296" }}>achieve maximum contrast.</span>{" "}
+            Because pure black caused eye strain, this was modified to
+            <span style={{ color: "#6AC296" }}>
+              #121212 with a high contrast ratio.
+            </span>
           </li>
         </ul>
         {/* color thingy */}
@@ -742,6 +833,8 @@ const SmartVision = () => {
         read full case study ☕
       </a>
       <WorkHero
+        largeEnter={largeEnter}
+        imageEnter={imageEnter}
         work={{
           image:
             "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",

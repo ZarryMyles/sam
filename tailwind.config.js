@@ -30,6 +30,7 @@ module.exports = {
       brand: {
         darkGrey: "#090909",
         darkGrey2: "#111111",
+        darkGrey3: "#424242",
         lightGrey: "#e6e6e6",
         footerGrey: "#1f1f1f",
         bgGrey: "#fcfffd",
