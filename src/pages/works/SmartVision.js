@@ -256,7 +256,7 @@ const SmartVision = () => {
         <div class="ml-3">
           <div className=" text-base font-lato my-5">User Type</div>
           <div className="" style={{ letterSpacing: "0.5px" }}>
-            <span style={{ color: "#6AC296" }}>Legally blind</span>
+            Legally blind
             <ul className="list-disc">
               <li className="">
                 A legally blind individual is considered sightless if contact
@@ -284,17 +284,28 @@ const SmartVision = () => {
           <div className="" style={{ letterSpacing: "0.5px" }}>
             <ul className="list-disc">
               <li className="">
-                These are the users who require messaging apps the most.
+                These are the users who{" "}
+                <span style={{ color: "#6AC296" }}>
+                  require messaging apps the most.
+                </span>
               </li>
               <li className="my-5">
-                They mostly utilize the app to share work-related information,
+                They mostly utilize the app to{" "}
+                <span style={{ color: "#6AC296" }}>
+                  share work-related information,
+                </span>
                 promote their business, share valuable data, and have a shared
                 platform for professional discussions, meetings, and so on.
               </li>
               <li className="my-5">
-                Examples : Teachers, Bloggers, Youtubers, Advocates etc.{" "}
+                Examples :{" "}
+                <span style={{ color: "#6AC296" }}>
+                  Teachers, Bloggers, Youtubers, Advocates etc.
+                </span>{" "}
               </li>
-              <li className="my-5">Age : 23 - 60 </li>
+              <li className="my-5">
+                Age : <span style={{ color: "#6AC296" }}>23 - 60</span>{" "}
+              </li>
             </ul>
           </div>
           {/* secondary  */}
@@ -303,15 +314,25 @@ const SmartVision = () => {
           </div>
           <div className="" style={{ letterSpacing: "0.5px" }}>
             <ul className="list-disc">
-              <li className="">People who use it for casual interactions.</li>
-              <li className="my-5">
-                Text messaging is the most common way for teenagers and young
-                adults to communicate.
+              <li className="">
+                People who use it for{" "}
+                <span style={{ color: "#6AC296" }}>casual interactions.</span>
               </li>
               <li className="my-5">
-                Examples : High school and College students.{" "}
+                Text messaging is the most common way for{" "}
+                <span style={{ color: "#6AC296" }}>
+                  teenagers and young adults
+                </span>{" "}
+                to communicate.
               </li>
-              <li class="my-5"> Age : 15+</li>
+              <li className="my-5">
+                Examples : High school and{" "}
+                <span style={{ color: "#6AC296" }}>College students. </span>
+              </li>
+              <li class="my-5">
+                {" "}
+                Age : <span style={{ color: "#6AC296" }}>15+</span>
+              </li>
             </ul>
           </div>
         </div>
@@ -362,20 +383,27 @@ const SmartVision = () => {
             <li className="my-3">
               While searching for users to interview, I couldn't find any
               relevant people, thanks to the pandemic :') During which, I
-              discovered that people in India are unfamiliar of legal blindness
+              discovered that{" "}
+              <span style={{ color: "#6AC296" }}>
+                people in India are unfamiliar of legal <br /> blindness
+              </span>
             </li>
+            <br />
             <li className="my-3">
               I was able to interview two of the teammates with different levels
               of work experience.
             </li>{" "}
             <li className="my-3">
               As a result, I reached out to individuals on the internet and, to
-              my surprise, I was able to connect with global audience fitting
+              my surprise, I was able to connect with{" "}
+              <span style={{ color: "#6AC296" }}>global audience </span>fitting
               into the right category.
             </li>
             <li className="my-3">
-              I interviewed around 8 participants in total through
-              videoconferencing and Google forms.
+              I interviewed around 8 participants in total through{" "}
+              <span style={{ color: "#6AC296" }}>
+                videoconferencing and Google forms.
+              </span>
             </li>
             <div class="px-0 md:px-5 w-full my-8">
               <img src={Problem} className="w-full" alt="" />
@@ -726,8 +754,8 @@ const SmartVision = () => {
       </div>
       {/* ui guide system */}
       <div style={{}} class="p-5 md:px-24 h-full pt-140">
-        <div class="  text-2xl md:text-4xl my-8 tracking-1.5 font-lato-light font-bold ">
-          🦮 UI guide system
+        <div class="flex items-center  text-2xl md:text-4xl my-8 tracking-1.5 font-lato-light font-bold ">
+          <img src={GuideDog} alt="" class="w-9 mr-2" /> UI guide system
         </div>
         <ul class="ml-4 list-disc">
           <li className="my-4 md:my-8">
@@ -848,8 +876,8 @@ const SmartVision = () => {
       <a
         onMouseEnter={largeEnter}
         onMouseLeave={imageEnter}
-        href="/"
-        className="tracking-3 px-5 flex items-center md:ml-24 my-10 md:mb-40 md:mt-24  w-max uppercase font-lato-bold"
+        href="https://www.notion.so/BillEasy-Research-eede878d31d8405dba2c5543dbb3da67"
+        className="tracking-3 mb-10 md:mb-20 px-5 flex items-center md:px-24 text-sm md:text-base  uppercase font-lato-bold"
       >
         <ArrowRightCircle
           width={30}
@@ -858,7 +886,7 @@ const SmartVision = () => {
           strokeWidth={1.5}
           className="mr-4"
         />
-        read full case study ☕
+        read full case study <img src={Teacup} alt="" class="w-9 ml-2" />
       </a>
       <WorkHero
         largeEnter={largeEnter}
@@ -872,7 +900,7 @@ const SmartVision = () => {
           domain: "Research",
           subtitle: "A web app for managing your bills",
           description: "A web app for managing your bills",
-          link: "https://billeasy.com",
+          link: "/billeasy",
           linkText: "Visit BillEasy",
         }}
         next={true}

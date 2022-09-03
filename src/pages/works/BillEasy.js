@@ -227,7 +227,6 @@ const BillEasy = () => {
               </div>
               <div className=" ">
                 <div className=" mb-2 flex items-center">
-                  
                   <img src={BriefCase} className="mr-2 w-5 " alt="" />{" "}
                   <div>Contribution</div>
                 </div>
@@ -313,9 +312,13 @@ const BillEasy = () => {
                 }}
               >
                 How might we design a B2B invoicing experience which is{" "}
-                <b>intuitive</b> and helps our team to fasten up the process by
-                completing tasks, resulting in{" "}
-                <b>increased productivity and time savings</b> ?
+                <span style={{ color: "#6AC296" }}>intuitive</span> and helps
+                our team to fasten up the process by completing tasks, resulting
+                in{" "}
+                <span style={{ color: "#6AC296" }}>
+                  increased productivity and time savings
+                </span>{" "}
+                ?
               </div>
             </div>
             <div class="hidden md:block col-span-1"></div>
@@ -353,16 +356,24 @@ const BillEasy = () => {
                 Our initial priority was to design a solution for our company.
                 To identify the core problems, I approached the core team
                 responsible for managing invoices{" "}
-                <b>The Accounts Department.</b>
+                <span style={{ color: "#6AC296" }}>
+                  The Accounts Department.
+                </span>
               </li>
               <li className="my-3">
-                I was able to interview <b>two of the teammates</b> with
-                different levels of work experience.
+                I was able to interview{" "}
+                <span style={{ color: "#6AC296" }}>two of the teammates</span>{" "}
+                with different levels of work experience.
               </li>{" "}
               <li className="my-3">
                 Interview goals: To learn about their{" "}
-                <b>work life, specific problems and motivations</b> and gain{" "}
-                <b>behavioral understanding.</b>
+                <span style={{ color: "#6AC296" }}>
+                  work life, specific problems and motivations
+                </span>{" "}
+                and gain{" "}
+                <span style={{ color: "#6AC296" }}>
+                  behavioral understanding.
+                </span>
               </li>
             </ul>
           </div>
@@ -412,11 +423,15 @@ const BillEasy = () => {
                   <ol className=" list-decimal ml-5">
                     <li className="my-4">
                       Ninjaaslabs operates on the B2B model, and generates{" "}
-                      <b>B2B invoices</b> for services.
+                      <span style={{ color: "#6AC296" }}>B2B invoices</span> for
+                      services.
                     </li>{" "}
                     <li className="my-4">
                       Jumkey (venture) is a marketplace that generates{" "}
-                      <b>B2C as well as B2B invoices</b> for goods and services.
+                      <span style={{ color: "#6AC296" }}>
+                        B2C as well as B2B invoices
+                      </span>{" "}
+                      for goods and services.
                     </li>
                   </ol>
                 </li>
@@ -424,8 +439,11 @@ const BillEasy = () => {
                   {" "}
                   It was found that B2C invoices for Jumkey were automatically
                   generated through amazon seller central, but{" "}
-                  <b>B2B invoices</b> for either of the businesses were{" "}
-                  <b>prepared manually using sheets.</b>
+                  <span style={{ color: "#6AC296" }}>B2B invoices</span> for
+                  either of the businesses were{" "}
+                  <span style={{ color: "#6AC296" }}>
+                    prepared manually using sheets.
+                  </span>
                 </li>
                 <li className="my-4">
                   {" "}
@@ -433,18 +451,27 @@ const BillEasy = () => {
                   invoice creation and report preparation.
                 </li>{" "}
                 <li className="my-4">
-                  Multiple steps to store the invoice. (From <b>Sheet’s</b> → To{" "}
-                  <b>Internal System</b> → <b>Drive</b> (folders) → <b>Mail</b>{" "}
-                  (share))
+                  Multiple steps to store the invoice. (From{" "}
+                  <span style={{ color: "#6AC296" }}>Sheet’s</span> → To{" "}
+                  <span style={{ color: "#6AC296" }}>Internal System</span> →{" "}
+                  <span style={{ color: "#6AC296" }}>Drive</span> (folders) →{" "}
+                  <span style={{ color: "#6AC296" }}>Mail</span> (share))
                 </li>{" "}
                 <li className="my-4">
-                  An <b>experienced employee</b> required roughly{" "}
-                  <b>15+ minutes</b> to prepare a manual invoice, but a fresher
-                  took <b>more than 30 minutes</b> to make the same invoice.
+                  An{" "}
+                  <span style={{ color: "#6AC296" }}>experienced employee</span>{" "}
+                  required roughly{" "}
+                  <span style={{ color: "#6AC296" }}>15+ minutes</span> to
+                  prepare a manual invoice, but a fresher took{" "}
+                  <span style={{ color: "#6AC296" }}>more than 30 minutes</span>{" "}
+                  to make the same invoice.
                 </li>
                 <li>
                   {" "}
-                  It took them anything from <b>1-5 days to finish a report.</b>
+                  It took them anything from{" "}
+                  <span style={{ color: "#6AC296" }}>
+                    1-5 days to finish a report.
+                  </span>
                 </li>
               </ul>
             </div>
@@ -486,22 +513,34 @@ const BillEasy = () => {
                   The purpose of usability testing was to determine whether
                   existing solutions in the market truly addresses the problem
                   better than the current manual approach,{" "}
-                  <b class="text-white">meets users’ expectations</b> and help
-                  us in making{" "}
-                  <b class="text-white">fact- based design decisions.</b>
+                  <span style={{ color: "#6AC296" }} class="text-white">
+                    meets users’ expectations
+                  </span>{" "}
+                  and help us in making{" "}
+                  <span style={{ color: "#6AC296" }} class="text-white">
+                    fact- based design decisions.
+                  </span>
                 </li>
 
                 <li className="my-4">
                   We chose to run a test on{" "}
-                  <b class="text-white">Clear one software</b> through our
-                  competitors' study since it was close to our vision.
+                  <span style={{ color: "#6AC296" }} class="text-white">
+                    Clear one software
+                  </span>{" "}
+                  through our competitors' study since it was close to our
+                  vision.
                 </li>
 
                 <li className="my-4">
                   After establishing usability matrix, we{" "}
-                  <b class="text-white">compared Clear one</b> matrix to the
-                  matrix obtained from <b class="text-white">excel sheets</b> (a
-                  manual process).
+                  <span style={{ color: "#6AC296" }} class="text-white">
+                    compared Clear one
+                  </span>{" "}
+                  matrix to the matrix obtained from{" "}
+                  <span style={{ color: "#6AC296" }} class="text-white">
+                    excel sheets
+                  </span>{" "}
+                  (a manual process).
                 </li>
                 <a
                   onMouseEnter={largeEnter}
@@ -602,16 +641,25 @@ const BillEasy = () => {
                   During the interview, Satish frequently mentioned that he's
                   satisfied with the ongoing process of managing reports and
                   invoices because he feels{" "}
-                  <b> confident about honing the skill, </b>
+                  <span style={{ color: "#6AC296" }}>
+                    {" "}
+                    confident about honing the skill,{" "}
+                  </span>
                   despite the shortcomings of sheets. Which led him to exhibit
                   the status quo bias as he was unwilling to adapt a new process
                   to
-                  <b> avoid stressful learning.</b>
+                  <span style={{ color: "#6AC296" }}>
+                    {" "}
+                    avoid stressful learning.
+                  </span>
                 </li>
                 <li className=" my-6">
                   However, Srinivas being a fresher was able to{" "}
-                  <b> effectively communicate the pain-points </b> (some of
-                  which were similar to Satish's).
+                  <span style={{ color: "#6AC296" }}>
+                    {" "}
+                    effectively communicate the pain-points{" "}
+                  </span>{" "}
+                  (some of which were similar to Satish's).
                 </li>
               </ol>
             </div>
@@ -625,8 +673,9 @@ const BillEasy = () => {
                 />
                 <div>
                   <div className="text-sm font-lato-italic ">
-                    “ I’ve <b>no problem</b> with the process, I can perform
-                    same tasks without external software 🙂 “
+                    “ I’ve <span style={{ color: "#6AC296" }}>no problem</span>{" "}
+                    with the process, I can perform same tasks without external
+                    software 🙂 “
                   </div>
                   <div
                     style={{
@@ -647,7 +696,10 @@ const BillEasy = () => {
                 <div>
                   <div className="text-sm font-lato-italic ">
                     “ Feels easy but I keep forgetting, I might’ve a{" "}
-                    <b>bad memory Ha Ha Ha!</b> 🤷“
+                    <span style={{ color: "#6AC296" }}>
+                      bad memory Ha Ha Ha!
+                    </span>{" "}
+                    🤷“
                   </div>
                   <div
                     style={{
