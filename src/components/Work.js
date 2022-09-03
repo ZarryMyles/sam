@@ -23,7 +23,8 @@ const works = [
       "Creating an efficient accounting process for \n evolving businesses and enhanced work systems.",
     gif: false,
     image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg",
-    video: "../assets/work_gifs/BillEasy_Visual.mp4",
+    video:
+      "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662218697/work_gifs/BillEasy-Visual_t37pia.mp4",
     link: "/billeasy-visual-design",
   },
   {

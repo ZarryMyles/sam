@@ -732,13 +732,14 @@ const BillEasy = () => {
           <a
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
+            style={{ color: "#6AC296" }}
             href="https://www.notion.so/BillEasy-Research-eede878d31d8405dba2c5543dbb3da67"
             className="tracking-3 mb-10 md:mb-20 px-5 flex items-center md:px-24 text-sm md:text-base  uppercase font-lato-bold"
           >
             <ArrowRightCircle
               width={30}
               height={30}
-              color="white"
+              color="#6AC296"
               strokeWidth={1.5}
               className="mr-4"
             />
@@ -796,7 +797,6 @@ const BillEasy = () => {
           next={true}
           imageEnter={imageEnter}
           work={{
-            // replace with your link
             video: "../assets/work_gifs/BillEasy-Visual.mp4",
             domain: "visual design",
             title: "BillEasy",
