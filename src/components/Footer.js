@@ -2,7 +2,7 @@ import React from "react";
 import { FaBehanceSquare, FaDribbbleSquare, FaLinkedin } from "react-icons/fa";
 import { MapPin } from "react-feather";
 import { HiOutlineLocationMarker } from "react-icons/hi";
-const Footer = ({ textEnter, imageEnter }) => {
+const Footer = ({ textEnter, imageEnter, largeEnter }) => {
   const socials = [
     {
       name: "Bengaluru",
@@ -33,7 +33,7 @@ const Footer = ({ textEnter, imageEnter }) => {
       id="footer-main"
       className="w-full bg-brand-darkGrey2 flex flex-col"
     >
-      <div className=" flex flex-col md:flex-row md:items-end md:justify-between px-5 md:px-48 py-10 md:py-24 ">
+      <div className=" footerDiv flex flex-col md:flex-row md:items-end md:justify-between px-5 md:px-48 py-10 md:py-24 ">
         <div
           className="flex text-gray-400 flex-col justify-center  md:w-2/6 mb-5 md:mb-0"
           style={{
@@ -65,7 +65,7 @@ const Footer = ({ textEnter, imageEnter }) => {
         <div class="flex flex-wrap md:flex-nowrap md:flex-row md:justify-between md:items-center md:w-3/6">
           {socials.map((social, index) => (
             <a
-              onMouseEnter={textEnter}
+              onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
               href={social.link}
               class="text-brand-gray font-lato flex items-center  w-1/2 md:w-max  my-2 md:my-0"
@@ -99,7 +99,7 @@ const Footer = ({ textEnter, imageEnter }) => {
         style={{
           fontSize: "10px",
         }}
-        className="  shadow-xl  font-lato text-brand-gray flex items-center justify-center p-5 md:p-10"
+        className=" footerDiv2  shadow-xl  font-lato text-brand-gray flex items-center justify-center p-5 md:p-10"
       >
         © {new Date().getFullYear()}. shradha.design . All Rights Reserved.
       </div>

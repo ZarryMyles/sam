@@ -58,8 +58,8 @@ function App() {
     large: {
       height: 80,
       width: 80,
-      x: mousePos.x - 25,
-      y: mousePos.y - 25,
+      x: mousePos.x - 40,
+      y: mousePos.y - 40,
       backgroundColor: "#d1d5db",
       mixBlendMode: "difference",
       bounce: 0,
@@ -129,64 +129,67 @@ function App() {
 
   return (
     <div className=" dark:bg-brand-black duration-500 transition-colors select-none overflow-hidden tracking-1.5">
-      {loading ? (
-        <Loader />
-      ) : (
-        <>
-          <Navbar
-            imageEnter={imageEnter}
-            textLeave={textLeave}
-            textEnter={textEnter}
-            defaultColor={"white"}
-          />
-          <div
-            id="sections"
-            className="  flex flex-col items-center justify-center"
-          >
-            {/* <div className="h-screen bg-transparent -z-10"></div> */}
-            <LandingSection
-              imageEnter={imageEnter}
-              textEnter={textEnter}
-              textLeave={textLeave}
-              largeEnter={largeEnter}
-            />
-            <Work
-              imageEnter={imageEnter}
-              textEnter={textEnter}
-              textLeave={textLeave}
-              largeEnter={largeEnter}
-            />
-            <WorkLogos
-              imageEnter={imageEnter}
-              textEnter={textEnter}
-              textLeave={textLeave}
-            />
-            <SocialProof
-              imageEnter={imageEnter}
-              textEnter={textEnter}
-              textLeave={textLeave}
-            />
-            <GetInTouch
-              imageEnter={imageEnter}
-              textEnter={textEnter}
-              textLeave={textLeave}
-              largeEnter={largeEnter}
-            />
-            <Footer
-              imageEnter={imageEnter}
-              textEnter={textEnter}
-              textLeave={textLeave}
-            />
-            {/* other sections */}
-
-            <motion.div
-              className="cursor hidden md:flex"
-              variants={variants}
-              animate={cursorVariant}
-            />
-          </div>
-        </>
+      {loading && (
+        <div class="fixed w-full h-full">
+          <Loader />
+        </div>
       )}
+      <>
+        <Navbar
+          imageEnter={imageEnter}
+          textLeave={textLeave}
+          textEnter={textEnter}
+          largeEnter={largeEnter}
+          defaultColor={"white"}
+        />
+        <div
+          id="sections"
+          className="  flex flex-col items-center justify-center"
+        >
+          {/* <div className="h-screen bg-transparent -z-10"></div> */}
+          <LandingSection
+            imageEnter={imageEnter}
+            textEnter={textEnter}
+            textLeave={textLeave}
+            largeEnter={largeEnter}
+          />
+          <Work
+            imageEnter={imageEnter}
+            textEnter={textEnter}
+            textLeave={textLeave}
+            largeEnter={largeEnter}
+          />
+          <WorkLogos
+            imageEnter={imageEnter}
+            textEnter={textEnter}
+            textLeave={textLeave}
+          />
+          <SocialProof
+            imageEnter={imageEnter}
+            textEnter={textEnter}
+            textLeave={textLeave}
+          />
+          <GetInTouch
+            imageEnter={imageEnter}
+            textEnter={textEnter}
+            textLeave={textLeave}
+            largeEnter={largeEnter}
+          />
+          <Footer
+            imageEnter={imageEnter}
+            textEnter={textEnter}
+            textLeave={textLeave}
+            largeEnter={largeEnter}
+          />
+          {/* other sections */}
+
+          <motion.div
+            className="cursor hidden md:flex"
+            variants={variants}
+            animate={cursorVariant}
+          />
+        </div>
+      </>
     </div>
   );
 }

@@ -1,7 +1,8 @@
-import React from "react";
-import { WorkHero, Navbar } from "../../components";
+import React, { useEffect, useState } from "react";
+import { WorkHero, Navbar, Loader } from "../../components";
 import { ArrowRightCircle } from "react-feather";
 // assets
+import hero from "../../assets/works/billEasyVisual/HeroVisual.jpg";
 import invoiceGen from "../../assets/works/billEasyVisual/Page.png";
 import invoiceDis from "../../assets/works/billEasyVisual/Share.png";
 import invoiceStor from "../../assets/works/billEasyVisual/Cloud.png";
@@ -16,11 +17,75 @@ import buttons from "../../assets/works/billEasyVisual/Buttons.svg";
 import matrix from "../../assets/works/billEasyVisual/Matrix.svg";
 
 const BillEasyVisual = () => {
+  const [mousePos, setMousePos] = useState({
+    x: 0,
+    y: 0,
+  });
+  const [cursorVariant, setcursorVariant] = useState("default");
+  useEffect(() => {
+    const mouseMove = (e) => {
+      setMousePos({
+        x: e.clientX,
+        y: e.clientY,
+      });
+    };
+    window.addEventListener("mousemove", mouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", mouseMove);
+    };
+  }, []);
+
+  const variants = {
+    default: {
+      x: mousePos.x - 10,
+      y: mousePos.y - 10,
+      bounce: 0,
+    },
+    text: {
+      height: 50,
+      width: 50,
+      x: mousePos.x - 25,
+      y: mousePos.y - 25,
+      backgroundColor: "#d1d5db",
+      mixBlendMode: "difference",
+      bounce: 0,
+    },
+    secondary: {
+      x: mousePos.x - 10,
+      y: mousePos.y - 10,
+      backgroundColor: "#d1d5db",
+      mixBlendMode: "difference",
+      bounce: 0,
+    },
+    large: {
+      height: 80,
+      width: 80,
+      x: mousePos.x - 25,
+      y: mousePos.y - 25,
+      backgroundColor: "#d1d5db",
+      mixBlendMode: "difference",
+      bounce: 0,
+    },
+  };
+
+  const textEnter = () => setcursorVariant("text");
+  const imageEnter = () => setcursorVariant("secondary");
+  const textLeave = () => setcursorVariant("default");
+  const largeEnter = () => setcursorVariant("large");
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+  }, []);
+
   const work = {
-    image:
-      "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-    video:
-      "https://res.cloudinary.com/genesiscloudimages/video/upload/v1660394170/work_gifs/C01_yqtldj.mp4",
+    image: hero,
+    video: "../../assets/work_gifs/billEasy2.gif",
     title: "BillEasy",
     domain: "Visual Design",
     subtitle: "A web app for managing your bills",
