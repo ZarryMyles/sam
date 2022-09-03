@@ -54,7 +54,7 @@ const BillEasyVisual = () => {
     secondary: {
       x: mousePos.x - 10,
       y: mousePos.y - 10,
-      backgroundColor: "#d1d5db",
+      backgroundColor: "#ffc7d1",
       mixBlendMode: "difference",
       bounce: 0,
     },
@@ -63,7 +63,7 @@ const BillEasyVisual = () => {
       width: 80,
       x: mousePos.x - 40,
       y: mousePos.y - 40,
-      backgroundColor: "#d1d5db",
+      backgroundColor: "#ffc7d1",
       mixBlendMode: "difference",
       bounce: 0,
     },
