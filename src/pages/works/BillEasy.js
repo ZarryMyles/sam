@@ -9,7 +9,24 @@ import {
 import { ReactComponent as Quote } from "../../assets/icons/quotestart.svg";
 import { ArrowRightCircle } from "react-feather";
 import { motion } from "framer-motion";
-
+import {
+  Teacup,
+  BriefCase,
+  Bullseye,
+  Check,
+  Clipboard,
+  MonocleFace,
+  Family,
+  LightBulb,
+  OldKey,
+  Paintbrush,
+  Fist,
+  Calendar,
+  Thermometer,
+  TippingHand,
+  TriangularRuler,
+  GuideDog,
+} from "../../assets/icons/fluent";
 // images
 import Hero from "../../assets/works/billEasy/billEasyResearchpng.png";
 import collage from "../../assets/works/billEasy/billEasyCaseStudyCollage.png";
@@ -94,7 +111,9 @@ const BillEasy = () => {
   const work = {
     image: Hero,
     video:
-      "https://res.cloudinary.com/genesiscloudimages/video/upload/v1660394170/work_gifs/C01_yqtldj.mp4",
+      "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662181482/work_gifs/BillEasy-short_yhhk58.mp4",
+    // "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662180400/work_gifs/billEasyShort_wzcud4.gif",
+    // gif: true,
     title: "BillEasy",
     domain: "Research",
     subtitle: "A web app for managing your bills",
@@ -139,31 +158,31 @@ const BillEasy = () => {
         />
         {/* project brief */}
         <div class=" px-5 py-10 md:px-24 md:my-20 flex flex-wrap justify-between  ">
-          <div className="  my-5   ">
+          <div className="  my-5    ">
             <div class="text-xl font-bold font-lato-bold flex items-center -ml-1">
-              👨‍👩‍👦 Project Type
+              <img src={Clipboard} className="mr-2 w-5 " alt="" /> Project Type
             </div>
             <div className="font-lato-light font-bold mt-2">
               In-house, Fin-Tech
             </div>
           </div>
-          <div className=" w-1/2 md:w-auto my-5  ">
+          <div className=" w-1/2 md:w-auto my-5   ">
             <div class="text-xl font-bold font-lato-bold flex items-center -ml-2">
-              ⏱️ Timeline
+              <img src={Calendar} className="mr-2 w-5 " alt="" /> Timeline
             </div>
             <div className="font-lato-light font-bold mt-2">3 months</div>
           </div>
-          <div className=" w-1/2 md:w-auto my-5  ">
+          <div className=" w-1/2 md:w-auto my-5   ">
             <div class="text-xl font-bold font-lato-bold flex items-center -ml-1">
-              👩‍💻 My Role
+              <img src={TippingHand} className="mr-2 w-5 " alt="" /> My Role
             </div>
             <div className="font-lato-light font-bold mt-2">
               UX & UI Design Intern
             </div>
           </div>
-          <div className=" w-1/2 md:w-auto my-5  ">
+          <div className=" w-1/2 md:w-auto my-5   ">
             <div class="text-xl font-bold font-lato-bold flex items-center -ml-1">
-              👥 Design Team
+              <img src={Fist} className="mr-2 w-5 " alt="" /> Design Team
             </div>
             <div className="font-lato-light font-bold mt-2">Myself</div>
           </div>
@@ -177,9 +196,9 @@ const BillEasy = () => {
                 style={{
                   marginBottom: "30px",
                 }}
-                class="  text-2xl md:text-4xl  tracking-widest font-lato-light font-bold "
+                class="  text-2xl md:text-4xl  tracking-widest font-lato-light font-bold flex items-center"
               >
-                💡 BillEasy
+                <img src={LightBulb} className="mr-2 w-9 " alt="" /> BillEasy
               </div>
             </div>
             <div className="  leading-6 tracking-0.5   ">
@@ -198,14 +217,20 @@ const BillEasy = () => {
           <div class="col-span-12 md:col-span-5  flex flex-col items-center  justify-center md:pl-10 rounded-xl text-brand-white ">
             <div className="  px-4 md:pr-24 rounded-l-lg flex flex-col justify-center bg-brand-darkGrey2 md:pl-14 py-14  ">
               <div className=" mb-8">
-                <div className=" mb-2">✅ Results</div>
+                <div className=" mb-2 flex items-center">
+                  <img src={Check} className="mr-2 w-5 " alt="" /> Results
+                </div>
                 <div className=" leading-6 tracking-0.5">
                   70% Increased user satisfaction. Estimated to Optimize
                   productivity by 3x and Increased transparency.
                 </div>
               </div>
               <div className=" ">
-                <div className=" mb-2">💼 Contribution</div>
+                <div className=" mb-2 flex items-center">
+                  {" "}
+                  <img src={BriefCase} className="mr-2 w-5 " alt="" />{" "}
+                  <div>Contribution</div>
+                </div>
                 <div className=" leading-6 tracking-0.5">
                   Interviews, Qualitative Research, Ethnographic Research,
                   Competitive Audit, Interface Designs, Testing.
@@ -220,7 +245,9 @@ const BillEasy = () => {
 
           <div class="grid grid-cols-12 font-lato">
             <div class="col-span-12 md:col-span-4">
-              <div class=" text-2xl  tracking-1.5 mb-8">🎯 Goals</div>
+              <div class=" text-2xl  tracking-1.5 mb-8 flex items-center">
+                <img src={Bullseye} className="mr-2 w-6 " alt="" /> Goals
+              </div>
               <div className=" ">
                 1. Optimize efficiency <br />
                 2. Minimal learning curve <br />
@@ -228,8 +255,9 @@ const BillEasy = () => {
               </div>
             </div>
             <div class="col-span-12 md:col-span-8 ">
-              <div class="text-2xl font-lato tracking-1.5 mb-8">
-                👨‍👨‍👧‍👦 Target audience
+              <div class="text-2xl font-lato tracking-1.5 mb-8 flex items-center">
+                <img src={Family} className="mr-2 w-6 " alt="" /> Target
+                audience
               </div>
               <div class="flex flex-col md:flex-row   ">
                 <div className="mr-16 ">
@@ -315,8 +343,9 @@ const BillEasy = () => {
             class="col-span-12 md:col-span-6 h-full  "
           >
             <div class="flex items-center">
-              <div class="  text-2xl md:text-4xl   md:-ml-2  tracking-1.5 font-lato-light font-bold ">
-                🦮 Identifying the problem
+              <div class="  text-2xl md:text-4xl flex items-center  md:-ml-2  tracking-1.5 font-lato-light font-bold ">
+                <img src={GuideDog} alt="" class="w-9 mr-2" /> Identifying the
+                problem
               </div>
             </div>
             <ul className="my-8 list-disc ml-4 text-justify tracking-0.5 leading-6">
@@ -367,12 +396,12 @@ const BillEasy = () => {
         {/* insights */}
         <div class="p-5 md:px-24 md:py-0 font-lato mb-130 ">
           <div
-            className=" text-2xl "
+            className=" text-2xl flex items-center"
             style={{
               marginBottom: "30px",
             }}
           >
-            🗝️ Insights
+            <img src={OldKey} alt="" class="w-6 mr-2" /> Insights
           </div>
           <div class="text-sm md:text-base grid grid-cols-12 ">
             <div class="col-span-12 md:col-span-6">
@@ -444,12 +473,13 @@ const BillEasy = () => {
           >
             <div class="col-span-12 md:col-span-6 h-full ">
               <div
-                className=" text-white text-2xl md:text-4xl   "
+                className=" text-white text-2xl md:text-4xl  flex items-center "
                 style={{
                   marginBottom: "30px",
                 }}
               >
-                🧐 Usability testing
+                <img src={MonocleFace} alt="" class="mr-2 w-9" /> Usability
+                testing
               </div>
               <ul class="text-brand-gray list-disc ml-4 text-justify ">
                 <li className="my-4">
@@ -499,7 +529,10 @@ const BillEasy = () => {
               <img className="w-full object-center" src={usability1} alt="" />
             </div>
           </div>
-          <div class=" text-brand-gray mb-5">🌡️ Heat-map</div>
+          <div class=" text-brand-gray mb-5 flex  items-center">
+            <img src={Thermometer} alt="" class="w-5 mr-2" />
+            Heat-map
+          </div>
           <div class="hidden md:block grid-cols-12">
             <img src={HeatMap} className="w-full" alt="" />
           </div>
@@ -528,16 +561,17 @@ const BillEasy = () => {
           </div>
         </div>
         {/* usability matrix */}
-        <div class=" pt-150 md:px-24 font-lato">
+        <div class=" pt-150 px-5 md:px-24 font-lato">
           <WorkHeading text={"outcome"} />
 
           <div
-            class="text-2xl md:text-4xl  "
+            class="text-2xl md:text-4xl flex items-center "
             style={{
               marginBottom: "30px",
             }}
           >
-            📐 Usability matrix results
+            <img src={TriangularRuler} alt="" class="w-9 mr-2" /> Usability
+            matrix results
           </div>
           <div className=" mb-2">
             S1,S2 and S3 are the given scenarios to prepare invoices using Excel
@@ -548,12 +582,12 @@ const BillEasy = () => {
         {/* crafting persona */}
         <div class="p-5 md:py-0 mt-150 md:px-24 font-lato">
           <div
-            className="text-2xl md:text-4xl "
+            className="text-2xl md:text-4xl flex items-center"
             style={{
               marginBottom: "30px",
             }}
           >
-            🖌️ Crafting persona
+            <img src={Paintbrush} alt="" class="w-9 mr-2" /> Crafting persona
           </div>
           <div class="grid grid-cols-12 leading-6">
             <div class="col-span-12 md:col-span-6 h-full flex flex-col justify-center ">
@@ -643,7 +677,7 @@ const BillEasy = () => {
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
             href="https://www.notion.so/BillEasy-Research-eede878d31d8405dba2c5543dbb3da67"
-            className="tracking-3 mb-10 md:mb-20 px-5 flex items-center md:px-24  uppercase font-lato-bold"
+            className="tracking-3 mb-10 md:mb-20 px-5 flex items-center md:px-24 text-sm md:text-base  uppercase font-lato-bold"
           >
             <ArrowRightCircle
               width={30}
@@ -652,7 +686,7 @@ const BillEasy = () => {
               strokeWidth={1.5}
               className="mr-4"
             />
-            read full case study ☕
+            read full case study <img src={Teacup} alt="" class="w-9 ml-2" />
           </a>
           <div class="px-5 hidden md:block">
             <img src={collage} className="w-full" alt="" />

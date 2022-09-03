@@ -1,7 +1,7 @@
 import React from "react";
-import { FaBehanceSquare, FaDribbbleSquare, FaLinkedin } from "react-icons/fa";
 import { MapPin } from "react-feather";
-import { HiOutlineLocationMarker } from "react-icons/hi";
+import { motion } from "framer-motion";
+
 const Footer = ({ textEnter, imageEnter }) => {
   const socials = [
     {
@@ -26,6 +26,25 @@ const Footer = ({ textEnter, imageEnter }) => {
       // icon: <TiDocumentText />,
     },
   ];
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { y: 20, opacity: 1 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
   return (
     <div
       onMouseEnter={imageEnter}
@@ -40,27 +59,38 @@ const Footer = ({ textEnter, imageEnter }) => {
             color: "#FFC7D1",
           }}
         >
-          <div
-            // onMouseEnter={textEnter}
-            // onMouseLeave={imageEnter}
-            style={{
-              fontSize: "32px",
-            }}
-            className=" max-w-max font-lora-italic"
+          <motion.ul
+            className="container"
+            variants={container}
+            initial="hidden"
+            animate="visible"
           >
-            Shradha
-          </div>
-          <div
-            // onMouseEnter={textEnter}
-            // onMouseLeave={imageEnter}
-            className=" text-lg tracking-widest max-w-max font-lato   "
-            style={{
-              color: "#B5B5B5",
-              fontWeight: "300",
-            }}
-          >
-            Product Designer
-          </div>
+            <motion.li className=" " variants={item}>
+              <>
+                <div
+                  // onMouseEnter={textEnter}
+                  // onMouseLeave={imageEnter}
+                  style={{
+                    fontSize: "32px",
+                  }}
+                  className=" max-w-max font-lora-italic"
+                >
+                  Shradha
+                </div>
+                <div
+                  // onMouseEnter={textEnter}
+                  // onMouseLeave={imageEnter}
+                  className=" text-lg tracking-widest max-w-max font-lato   "
+                  style={{
+                    color: "#B5B5B5",
+                    fontWeight: "300",
+                  }}
+                >
+                  Product Designer
+                </div>
+              </>
+            </motion.li>
+          </motion.ul>
         </div>
         <div class="flex flex-wrap md:flex-nowrap md:flex-row md:justify-between md:items-center md:w-3/6">
           {socials.map((social, index) => (

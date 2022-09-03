@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ChevronRight, ChevronLeft, ArrowRightCircle } from "react-feather";
 import WorkVideo from "./WorkVideo";
-
+import billEzVid from "../assets/work_gifs/06.gif";
 const works = [
   {
     id: 1,
@@ -13,6 +13,7 @@ const works = [
     image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg",
     video:
       "https://res.cloudinary.com/genesiscloudimages/video/upload/v1660394170/work_gifs/C01_yqtldj.mp4",
+    // billEzVid,
     link: "/billeasy",
   },
   {
@@ -273,7 +274,7 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
               }  w-full bg-cover bg-no-repeat ease-linear transition-all  duration-700 brightness-20 h-screen  object-cover  absolute
              w-100 md:w-screen  md:opacity-100 opacity-100 md:object-cover  bg-red-100  `}
               src={work.video}
-              alt="loading..."
+              // alt="loading..."
             />
           ) : (
             <video

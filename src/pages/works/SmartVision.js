@@ -16,7 +16,6 @@ import Phone6 from "../../assets/works/smartvision/smartVisionPhone6.png";
 import colorChecker from "../../assets/works/smartvision/smartVisionColorChecker.svg";
 import fonts from "../../assets/works/smartvision/smartVisionFonts.svg";
 import Hero from "../../assets/works/smartvision/smartVision.png";
-
 import Challenges from "../../assets/works/smartvision/smartvisionChallenge.svg";
 
 const SmartVision = () => {
