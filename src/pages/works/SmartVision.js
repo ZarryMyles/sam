@@ -24,16 +24,12 @@ import {
   Bullseye,
   Check,
   Clipboard,
-  MonocleFace,
   Family,
   LightBulb,
   OldKey,
-  Paintbrush,
   Fist,
   Calendar,
-  Thermometer,
   TippingHand,
-  TriangularRuler,
   GuideDog,
   Eye,
 } from "../../assets/icons/fluent";
@@ -171,7 +167,7 @@ const SmartVision = () => {
               }}
               class="  text-2xl md:text-4xl  tracking-widest font-lato-light font-bold flex items-center"
             >
-              <img src={LightBulb} className="mr-2 w-9 " alt="" /> Smart Vision
+              <img src={Eye} className="mr-2 w-9 " alt="" /> Smart Vision
             </div>
           </div>
           <div className="  leading-6 tracking-0.5   ">
@@ -185,7 +181,7 @@ const SmartVision = () => {
             </span>
             <br />
             <br />
-            Allows people to engage in hassle-free conversations, Provides the
+            Allows people to engage in hassle-free conversations, Provides the{" "}
             <span style={{ color: "#6AC296" }}>
               finest accessibility features and secures privacy
             </span>{" "}
@@ -292,7 +288,7 @@ const SmartVision = () => {
               <li className="my-5">
                 They mostly utilize the app to{" "}
                 <span style={{ color: "#6AC296" }}>
-                  share work-related information,
+                  share work-related information,{" "}
                 </span>
                 promote their business, share valuable data, and have a shared
                 platform for professional discussions, meetings, and so on.
@@ -478,7 +474,7 @@ const SmartVision = () => {
                   <span style={{ color: "#6AC296" }}>
                     pain texting in group chats since
                   </span>{" "}
-                  most of the times
+                  most of the times{" "}
                   <span style={{ color: "#6AC296" }}>
                     messages are read from the first
                   </span>{" "}

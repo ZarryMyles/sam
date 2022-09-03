@@ -792,6 +792,9 @@ const BillEasy = () => {
           next={true}
           imageEnter={imageEnter}
           work={{
+            // replace with your link
+            video:
+              "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662181482/work_gifs/BillEasy-short_yhhk58.mp4",
             domain: "visual design",
             title: "BillEasy",
             image:
