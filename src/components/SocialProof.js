@@ -67,7 +67,7 @@ const SocialProof = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
 
           <div class=" text-brand-gray text-xs md:text-base  w-full  px-5 md:px-0 py-3 md:py-0 flex flex-col justify-center">
             <div
-              className={`font-lato-light italic my-5 md:my-14 letter-1.5 transition-opacity ease-linear duration-1000  leading-relaxed md:leading-8 tracking-wider text-justify  ${
+              className={`font-lato-light-italic2 my-5 md:my-14 letter-1.5 transition-opacity ease-linear duration-1000  leading-relaxed md:leading-8 tracking-wider text-justify  ${
                 fade ? "opacity-0" : ""
               } `}
             >
@@ -113,8 +113,8 @@ const SocialProof = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
                   }}
                 >
                   <div
-                    onMouseEnter={textEnter}
-                    onMouseLeave={imageEnter}
+                    // onMouseEnter={textEnter}
+                    // onMouseLeave={imageEnter}
                     style={{
                       height: "2px",
                       color: "#ffc7d1",

@@ -46,6 +46,21 @@
 .font-lato-light-italic {
   font-family: "Lato-Light-Italic";
 }
+
+@font-face {
+  font-family: "Lato-Light-Italic1";
+  src: url("./fonts/lato/Lato-LightItalic (1).ttf");
+}
+.font-lato-light-italic1 {
+  font-family: "Lato-Light-Italic1";
+}
+@font-face {
+  font-family: "Lato-Light-Italic2";
+  src: url("./fonts/lato/Lato-LightItalic(2).ttf");
+}
+.font-lato-light-italic2 {
+  font-family: "Lato-Light-Italic2";
+}
 .font-lato-bold {
   font-family: "Lato-Bold";
 }

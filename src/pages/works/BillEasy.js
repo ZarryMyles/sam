@@ -114,6 +114,8 @@ const BillEasy = () => {
       "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662181482/work_gifs/BillEasy-short_yhhk58.mp4",
     // "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662180400/work_gifs/billEasyShort_wzcud4.gif",
     // gif: true,
+    video2:
+      "https://res.cloudinary.com/genesiscloudimages/video/upload/v1660394170/work_gifs/C01_yqtldj.mp4",
     title: "BillEasy",
     domain: "Research",
     subtitle: "A web app for managing your bills",

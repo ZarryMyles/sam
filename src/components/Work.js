@@ -94,7 +94,7 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
     <div
       className="text-black relative font-lato  select-none   h-full overflow-hidden w-full    bg-cover bg-no-repeat bg-center   flex flex-col justify-center  top-0 left-0 px-5 md:px-48  "
       onMouseEnter={imageEnter}
-      onMouseLeave={textLeave}
+      // onMouseLeave={textLeave}
     >
       <div
         style={{
