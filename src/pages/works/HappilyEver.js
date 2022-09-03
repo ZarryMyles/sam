@@ -1,6 +1,7 @@
-import React from "react";
-import { WorkHero, Navbar } from "../../components";
+import React, { useEffect, useState } from "react";
+import { WorkHero, WorkHeading, Navbar, Loader } from "../../components";
 import { ArrowRightCircle } from "react-feather";
+import { motion } from "framer-motion";
 // assets
 import one from "../../assets/works/happilyEver/1.png";
 import two from "../../assets/works/happilyEver/2.png";
@@ -8,12 +9,79 @@ import three from "../../assets/works/happilyEver/3.png";
 import four from "../../assets/works/happilyEver/4.svg";
 import five from "../../assets/works/happilyEver/5.png";
 
+// Icons
+import {
+  Clipboard,
+  Calendar,
+  TippingHand,
+  Fist,
+  GrinningFace,
+  Check,
+  BriefCase,
+} from "../../assets/icons/fluent";
+
 const HappilyEver = () => {
+  const [mousePos, setMousePos] = useState({
+    x: 0,
+    y: 0,
+  });
+  const [cursorVariant, setcursorVariant] = useState("default");
+  useEffect(() => {
+    const mouseMove = (e) => {
+      setMousePos({
+        x: e.clientX,
+        y: e.clientY,
+      });
+    };
+    window.addEventListener("mousemove", mouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", mouseMove);
+    };
+  }, []);
+
+  const variants = {
+    default: {
+      x: mousePos.x - 10,
+      y: mousePos.y - 10,
+      bounce: 0,
+    },
+    text: {
+      height: 50,
+      width: 50,
+      x: mousePos.x - 25,
+      y: mousePos.y - 25,
+      backgroundColor: "#d1d5db",
+      mixBlendMode: "difference",
+      bounce: 0,
+    },
+    secondary: {
+      x: mousePos.x - 10,
+      y: mousePos.y - 10,
+      backgroundColor: "#d1d5db",
+      mixBlendMode: "difference",
+      bounce: 0,
+    },
+    large: {
+      height: 80,
+      width: 80,
+      x: mousePos.x - 40,
+      y: mousePos.y - 40,
+      backgroundColor: "#d1d5db",
+      mixBlendMode: "difference",
+      bounce: 0,
+    },
+  };
+
+  const textEnter = () => setcursorVariant("text");
+  const imageEnter = () => setcursorVariant("secondary");
+  const textLeave = () => setcursorVariant("default");
+  const largeEnter = () => setcursorVariant("large");
+
   const work = {
     image:
       "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-    video:
-      "https://res.cloudinary.com/genesiscloudimages/video/upload/v1660394170/work_gifs/C01_yqtldj.mp4",
+    video: "../assets/work_gifs/happilyEver.mp4",
     title: "Happily Ever",
     domain: "Branding",
     subtitle: "",
@@ -22,83 +90,123 @@ const HappilyEver = () => {
     link: "https://billeasy.com",
     linkText: "Visit BillEasy",
   };
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+  }, []);
+
   return (
-    <div className="overflow-hidden font-lato-light">
-      <Navbar defaultColor={"white"} />
-      <WorkHero work={work} />
-      <div class=" p-5 md:p-24 flex flex-wrap justify-between ">
-        <div className=" w-1/2 md:w-auto my-5  ">
-          <div class="text-xl font-bold font-lato-bold flex items-center">
-            👨‍👩‍👦 Project Type
-          </div>
-          <div className="font-lato-light font-bold">Proof of concept</div>
+    <div
+      onMouseEnter={imageEnter}
+      className="overflow-hidden font-lato font-normal text-justify bg-brand-black text-brand-white"
+    >
+      {/* {loading && (
+        <div class="fixed w-full h-full z-50">
+          <Loader />
         </div>
-        <div className=" w-1/2 md:w-auto my-5  ">
-          <div class="text-xl font-bold font-lato-bold flex items-center">
-            ⏱️ Timeline
+      )} */}
+
+      <Navbar
+        largeEnter={largeEnter}
+        imageEnter={imageEnter}
+        defaultColor={"white"}
+      />
+      <WorkHero
+        work={work}
+        largeEnter={largeEnter}
+        textEnter={textEnter}
+        textLeave={textLeave}
+        imageEnter={imageEnter}
+      />
+      {/* project brief */}
+      <div class=" px-5 pt-10 md:px-24 md:mt-20 flex flex-wrap justify-between  ">
+        <div className="my-5">
+          <div class="text-xl font-bold font-lato-bold flex items-center -ml-1">
+            <img src={Clipboard} className="mr-2 w-5 " alt="" /> Project Type
           </div>
-          <div className="font-lato-light font-bold">1 months</div>
+          <div className="font-lato-light font-bold mt-2">Proof of concept</div>
         </div>
-        <div className=" w-1/2 md:w-auto my-5  ">
-          <div class="text-xl font-bold font-lato-bold flex items-center">
-            👩‍💻 My Role
+        <div className=" w-1/2 md:w-auto my-5   ">
+          <div class="text-xl font-bold font-lato-bold flex items-center -ml-2">
+            <img src={Calendar} className="mr-2 w-5 " alt="" /> Timeline
           </div>
-          <div className="font-lato-light font-bold">Product Design Intern</div>
+          <div className="font-lato-light font-bold mt-2">1 month</div>
         </div>
-        <div className=" w-1/2 md:w-auto my-5  ">
-          <div class="text-xl font-bold font-lato-bold flex items-center">
-            👥 Design Team
+        <div className=" w-1/2 md:w-auto my-5   ">
+          <div class="text-xl font-bold font-lato-bold flex items-center -ml-1">
+            <img src={TippingHand} className="mr-2 w-5 " alt="" /> My Role
           </div>
-          <div className="font-lato-light font-bold">Three</div>
+          <div className="font-lato-light font-bold mt-2">
+            Product Design Intern
+          </div>
+        </div>
+        <div className=" w-1/2 md:w-auto my-5   ">
+          <div class="text-xl font-bold font-lato-bold flex items-center -ml-1">
+            <img src={Fist} className="mr-2 w-5 " alt="" /> Design Team
+          </div>
+          <div className="font-lato-light font-bold mt-2">Three</div>
         </div>
       </div>
       {/* project about */}
-      <div class=" p-5 md:p-24 grid grid-cols-12  h-full">
-        <div class="col-span-12 md:col-span-6 h-full  ">
-          <div class="flex items-center mb-12">
+      <div class=" px-5 py-10 md:px-24 md:mb-36 md:pr-0 grid grid-cols-12  h-full">
+        <WorkHeading text={"About"} />
+        <div class="col-span-12 md:col-span-6 h-full flex flex-col    ">
+          <div class="flex items-center">
             <div
               style={{
-                height: "1px",
+                marginBottom: "30px",
               }}
-              class="bg-brand-gray w-28 mr-4"
-            />
-            <div class=" text-brand-gray uppercase text-xl tracking-widest ">
-              About
+              class="  text-2xl md:text-4xl  tracking-widest font-lato-light font-bold flex items-center"
+            >
+              <img src={GrinningFace} className="mr-2 w-9 " alt="" />{" "}
+              HappilyEver
             </div>
           </div>
-          <div class="flex items-center">
-            <div class="  text-2xl md:text-4xl my-8 tracking-widest font-lato-light font-bold ">
-              😀 HappilyEver
-            </div>
-          </div>
-          <div className="my-8    ">
+          <div className="  leading-6 tracking-0.5   ">
             Happily Ever, aka HAE, is an Match-making service. It is strongly
-            aimed at helping people in fostering deep and meaningful
-            connections, potentially leading to the discovery of companions,
-            bestfriends, or even a soulmate.
+            aimed at helping people in{" "}
+            <span style={{ color: "#ED9D9D" }}>
+              fostering deep and meaningful connections,
+            </span>{" "}
+            potentially leading to the discovery of companions, bestfriends, or
+            even a soulmate.
           </div>
         </div>
         <div class="hidden md:block col-span-1"></div>
 
-        <div class="col-span-12 md:col-span-5 h-full flex flex-col items-center justify-center ">
-          <div className="my-5">
-            <div className="mb-3">✅ Results</div>
-            <div>
-              Strengthened brand direction, Estimated to Improve user
-              engagement.
+        <div class="col-span-12 md:col-span-5  flex flex-col items-center  justify-center md:pl-10 rounded-xl text-brand-white ">
+          <div className="  px-4 md:pr-24 rounded-l-lg flex flex-col justify-center bg-brand-darkGrey2 md:pl-14 py-14  ">
+            <div className=" mb-8">
+              <div className=" mb-2 flex items-center">
+                <img src={Check} className="mr-2 w-5 " alt="" /> Results
+              </div>
+              <div className=" leading-6 tracking-0.5">
+                Strengthened brand direction, Estimated to{" "}
+                <span style={{ color: "#ED9D9D" }}>
+                  Improve user engagement.
+                </span>
+              </div>
             </div>
-          </div>
-          <div className=" my-5">
-            <div className="mb-3">💼 Contribution</div>
-            <div>
-              Interviews, Secondary research, Usability testing, Competitive
-              analysis
+            <div className=" ">
+              <div className=" mb-2 flex items-center">
+                <img src={BriefCase} className="mr-2 w-5 " alt="" />{" "}
+                <div>Contribution</div>
+              </div>
+              <div className=" leading-6 tracking-0.5">
+                Interviews, Secondary research, Usability testing, Competitive
+                analysis
+              </div>
             </div>
           </div>
         </div>
       </div>
       {/* purpose */}
-      <div className="p-5 md:p-20">
+      <div className="p-5 md:p-0">
         <div class="flex items-center mb-12">
           <div
             style={{
@@ -375,6 +483,11 @@ const HappilyEver = () => {
           link: "/billeasy",
         }}
         next={true}
+      />
+      <motion.div
+        className="cursor hidden md:flex"
+        variants={variants}
+        animate={cursorVariant}
       />
     </div>
   );

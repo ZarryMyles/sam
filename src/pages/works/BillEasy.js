@@ -96,8 +96,8 @@ const BillEasy = () => {
     large: {
       height: 80,
       width: 80,
-      x: mousePos.x - 25,
-      y: mousePos.y - 25,
+      x: mousePos.x - 40,
+      y: mousePos.y - 40,
       backgroundColor: "#d1d5db",
       mixBlendMode: "difference",
       bounce: 0,
@@ -140,7 +140,11 @@ const BillEasy = () => {
         onMouseEnter={imageEnter}
         className="text-justify bg-brand-black text-brand-white"
       >
-        <Navbar defaultColor={"white"} />
+        <Navbar
+          largeEnter={largeEnter}
+          imageEnter={imageEnter}
+          defaultColor={"white"}
+        />
         <WorkHero
           work={work}
           largeEnter={largeEnter}
@@ -380,7 +384,7 @@ const BillEasy = () => {
           <div class="hidden md:block col-span-1"></div>
           <div class="col-span-12 md:col-span-5 h-full flex flex-col   items-center justify-center">
             <a
-              herf="https://www.notion.so/Interview-questions-f44bac2a862146ec90e5aa9c18827e86"
+              href="https://www.notion.so/Interview-questions-f44bac2a862146ec90e5aa9c18827e86"
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
               class="flex items-center"
@@ -793,8 +797,7 @@ const BillEasy = () => {
           imageEnter={imageEnter}
           work={{
             // replace with your link
-            video:
-              "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662181482/work_gifs/BillEasy-short_yhhk58.mp4",
+            video: "../assets/work_gifs/BillEasy-Visual.mp4",
             domain: "visual design",
             title: "BillEasy",
             image:

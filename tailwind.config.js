@@ -39,6 +39,7 @@ module.exports = {
         white: "#fefefe",
         pink: "#ffc7d1",
         loaderGray: "#323232",
+        boxWhite: "#fafafa",
       },
     },
     fontFamily: {
