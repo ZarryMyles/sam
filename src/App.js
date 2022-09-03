@@ -163,6 +163,7 @@ function App() {
             imageEnter={imageEnter}
             textEnter={textEnter}
             textLeave={textLeave}
+            largeEnter={largeEnter}
           />
           <SocialProof
             imageEnter={imageEnter}

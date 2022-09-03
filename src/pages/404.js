@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useTitle } from "../hooks/useTitle";
-
+import { Navbar } from "../components";
 const Error = () => {
   useTitle("404");
   const [mousePos, setMousePos] = useState({
@@ -26,12 +26,27 @@ const Error = () => {
 
   const variants = {
     default: {
-      x: mousePos.x - 14,
-      y: mousePos.y - 14,
-      backgroundColor: "#d1d5db",
+      x: mousePos.x - 10,
+      y: mousePos.y - 10,
       bounce: 0,
     },
     text: {
+      height: 50,
+      width: 50,
+      x: mousePos.x - 25,
+      y: mousePos.y - 25,
+      backgroundColor: "#d1d5db",
+      mixBlendMode: "difference",
+      bounce: 0,
+    },
+    secondary: {
+      x: mousePos.x - 10,
+      y: mousePos.y - 10,
+      backgroundColor: "#d1d5db",
+      mixBlendMode: "difference",
+      bounce: 0,
+    },
+    large: {
       height: 80,
       width: 80,
       x: mousePos.x - 40,
@@ -40,36 +55,39 @@ const Error = () => {
       mixBlendMode: "difference",
       bounce: 0,
     },
-    secondary: {
-      x: mousePos.x - 14,
-      y: mousePos.y - 14,
-      bounce: 0,
-      backgroundColor: "#d1d5db",
-      mixBlendMode: "difference",
-    },
   };
 
   const textEnter = () => setcursorVariant("text");
   const imageEnter = () => setcursorVariant("secondary");
+  const textLeave = () => setcursorVariant("default");
+  const largeEnter = () => setcursorVariant("large");
   return (
     <>
-      <div className=" h-screen w-full bg-brand-darkGrey text-white flex flex-col justify-center items-center">
-        <div
-          className="text-base md:text-8xl"
-          onMouseLeave={imageEnter}
-          onMouseEnter={textEnter}
-        >
-          404
-        </div>
-        <div
-          className="text-xl my-4"
-          onMouseLeave={imageEnter}
-          onMouseEnter={textEnter}
-        >
+      <Navbar
+        imageEnter={imageEnter}
+        textLeave={textLeave}
+        textEnter={textEnter}
+        largeEnter={largeEnter}
+        defaultColor={"white"}
+      />
+      <div
+        style={{
+          cursor: "none",
+        }}
+        onMouseEnter={imageEnter}
+        className="  font-lato h-screen w-full bg-brand-black text-brand-white flex flex-col justify-center items-center"
+      >
+        <div className="text-base md:text-8xl tracking-3">404</div>
+        <div className="text-xl my-4 tracking-1.5">
           Page Not Found. Go back to the{" "}
           <a
+            style={{
+              cursor: "none",
+            }}
+            onMouseEnter={largeEnter}
+            onMouseLeave={imageEnter}
             href="/"
-            className="rounded-md  mx-2 bg-white text-brand-darkGrey px-4 py-1"
+            className="rounded-md my-10  w-max text-brand-pink  mx-2 bg-brand-darkGrey2 px-4 py-1"
           >
             Home
           </a>
