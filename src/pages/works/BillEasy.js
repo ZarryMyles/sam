@@ -802,7 +802,7 @@ const BillEasy = () => {
           imageEnter={imageEnter}
           work={{
             video:
-              "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662218697/work_gifs/BillEasy-Visual_t37pia.mp4",
+              "https://res.cloudinary.com/ahum/video/upload/v1662232035/BillEasy_Visual_hzrwgo.mp4",
             domain: "visual design",
             title: "BillEasy",
             image:

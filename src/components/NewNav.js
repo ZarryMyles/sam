@@ -25,7 +25,7 @@ const Navbar = ({
     },
     {
       name: "Resume",
-      link: "/",
+      link: "https://drive.google.com/file/d/1gdC7zdeDq_ZZZVhfR79LOOZrqUFiqytM/view?usp=sharing",
     },
   ];
 
@@ -95,24 +95,14 @@ const Navbar = ({
           style={{ color: "#b5b5b5" }}
           className="flex tracking-1.5 flex-row "
         >
-          <Link
-            activeClass="active"
-            to="work"
-            spy={true}
-            smooth={true}
-            offset={1}
-            duration={500}
-            className="block cursor-pointer md:inline-block p-5 no-underline border-none"
+          <a
+            href="/#work"
+            onMouseEnter={largeEnter}
+            onMouseLeave={imageEnter}
+            className="text-lg font-lato cursor-pointer block md:inline-block p-5 no-underline border-none"
           >
-            <a
-              href="/#work"
-              onMouseEnter={largeEnter}
-              onMouseLeave={imageEnter}
-              className="text-lg font-lato"
-            >
-              Work
-            </a>
-          </Link>
+            Work
+          </a>
           <a
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
@@ -122,28 +112,20 @@ const Navbar = ({
           >
             About
           </a>
-          {/* <Link
-            activeClass="active"
-            to="get-in-touch"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}
-            className="block md:inline-block p-5 no-underline border-none"
-          > */}
           <a
             href="/#get-in-touch"
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
-            className="cursor-pointer font-lato text-lg "
+            className="cursor-pointer font-lato text-lg block md:inline-block p-5 no-underline border-none"
           >
             Contact
           </a>
-          {/* </Link> */}
           <a
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
-            href="/"
+            target="_blank"
+            rel="noreferrer"
+            href="https://drive.google.com/file/d/1gdC7zdeDq_ZZZVhfR79LOOZrqUFiqytM/view?usp=sharing"
             onClick={uncheckNav}
             className="font-lato text-lg  top-0 overflow-hidden pl-5 flex flex-row items-center"
           >
@@ -172,22 +154,14 @@ const Navbar = ({
         </a>
 
         <div className="flex flex-row text-brand-gray font-lato text-lg ">
-          <Link
-            activeClass="active"
-            to="work"
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={500}
+          <a
+            href="/#work"
+            onMouseEnter={largeEnter}
+            onMouseLeave={imageEnter}
+            className="text-lg font-lato cursor-pointer block md:inline-block p-5 no-underline border-none"
           >
-            <div
-              onMouseEnter={largeEnter}
-              onMouseLeave={imageEnter}
-              className="text-lg px-5 font-lato"
-            >
-              Work
-            </div>
-          </Link>
+            Work
+          </a>{" "}
           <a
             className="px-5"
             href="/about"
@@ -196,25 +170,22 @@ const Navbar = ({
           >
             About
           </a>
-          <Link
-            activeClass="active"
-            to="get-in-touch"
-            spy={true}
-            smooth={true}
-            offset={-100}
-            duration={500}
+          <a
+            onMouseEnter={largeEnter}
+            onMouseLeave={imageEnter}
+            target="_blank"
+            rel="noreferrer"
+            href="https://drive.google.com/file/d/1gdC7zdeDq_ZZZVhfR79LOOZrqUFiqytM/view?usp=sharing"
+            onClick={uncheckNav}
+            className="font-lato text-lg  top-0 overflow-hidden pl-5 flex flex-row items-center"
           >
-            <div
-              onMouseEnter={largeEnter}
-              onMouseLeave={imageEnter}
-              className="text-lg px-5  font-lato"
-            >
-              Contact
-            </div>
-          </Link>
+            Resume
+          </a>
           <a
             className="pl-5"
-            href="/"
+            target="_blank"
+            rel="noreferrer"
+            href="https://drive.google.com/file/d/1gdC7zdeDq_ZZZVhfR79LOOZrqUFiqytM/view?usp=sharing"
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
           >
