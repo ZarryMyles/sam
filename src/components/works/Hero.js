@@ -36,15 +36,17 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
             {work.title}
           </div>
           {/* line animation */}
-          <div
-            style={{
-              width: "1.3px",
-              height: "32px",
-              backgroundColor: "#424242",
-              bottom: "70px",
-            }}
-            class="work-hero-vertical-line absolute  "
-          ></div>
+          {!next && (
+            <div
+              style={{
+                width: "1.3px",
+                height: "32px",
+                backgroundColor: "#424242",
+                bottom: "70px",
+              }}
+              class="work-hero-vertical-line absolute  "
+            ></div>
+          )}
           {next && (
             <a
               onMouseEnter={largeEnter}

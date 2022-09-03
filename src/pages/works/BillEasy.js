@@ -134,9 +134,7 @@ const BillEasy = () => {
   return (
     <div className="w-full overflow-clip">
       {loading && (
-        <div class="fixed w-full h-full z-50">
-          <Loader />
-        </div>
+        <div class="fixed w-full h-full z-50">{/* <Loader /> */}</div>
       )}
       <div
         onMouseEnter={imageEnter}
@@ -165,32 +163,28 @@ const BillEasy = () => {
         {/* project brief */}
         <div class=" px-5 py-10 md:px-24 md:my-20 flex flex-wrap justify-between  ">
           <div className="  my-5    ">
-            <div class="text-xl font-bold font-lato-bold flex items-center -ml-1">
+            <div class="text-xl  font-lato flex items-center -ml-1">
               <img src={Clipboard} className="mr-2 w-5 " alt="" /> Project Type
             </div>
-            <div className="font-lato-light font-bold mt-2">
-              In-house, Fin-Tech
-            </div>
+            <div className="font-lato  mt-2">In-house, Fin-Tech</div>
           </div>
           <div className=" w-1/2 md:w-auto my-5   ">
-            <div class="text-xl font-bold font-lato-bold flex items-center -ml-2">
+            <div class="text-xl  font-lato flex items-center -ml-2">
               <img src={Calendar} className="mr-2 w-5 " alt="" /> Timeline
             </div>
-            <div className="font-lato-light font-bold mt-2">3 months</div>
+            <div className="font-lato  mt-2">3 months</div>
           </div>
           <div className=" w-1/2 md:w-auto my-5   ">
-            <div class="text-xl font-bold font-lato-bold flex items-center -ml-1">
+            <div class="text-xl  font-lato flex items-center -ml-1">
               <img src={TippingHand} className="mr-2 w-5 " alt="" /> My Role
             </div>
-            <div className="font-lato-light font-bold mt-2">
-              UX & UI Design Intern
-            </div>
+            <div className="font-lato  mt-2">UX & UI Design Intern</div>
           </div>
           <div className=" w-1/2 md:w-auto my-5   ">
-            <div class="text-xl font-bold font-lato-bold flex items-center -ml-1">
+            <div class="text-xl  font-lato flex items-center -ml-1">
               <img src={Fist} className="mr-2 w-5 " alt="" /> Design Team
             </div>
-            <div className="font-lato-light font-bold mt-2">Myself</div>
+            <div className="font-lato  mt-2">Myself</div>
           </div>
         </div>
         {/* project concept */}
@@ -202,7 +196,7 @@ const BillEasy = () => {
                 style={{
                   marginBottom: "30px",
                 }}
-                class="  text-2xl md:text-4xl  tracking-widest font-lato-light font-bold flex items-center"
+                class="  text-2xl md:text-4xl  tracking-widest font-lato  flex items-center"
               >
                 <img src={LightBulb} className="mr-2 w-9 " alt="" /> BillEasy
               </div>
@@ -312,7 +306,7 @@ const BillEasy = () => {
                 stroke="none"
               />
               <div
-                className="font-lato-light tracking-0.5  ml-4 md:ml-9"
+                className="font-lato  tracking-0.5  ml-4 md:ml-9"
                 style={{
                   color: "#FEFEFE",
                 }}
@@ -352,7 +346,7 @@ const BillEasy = () => {
             class="col-span-12 md:col-span-6 h-full  "
           >
             <div class="flex items-center">
-              <div class="  text-2xl md:text-4xl flex items-center  md:-ml-2  tracking-1.5 font-lato-light font-bold ">
+              <div class="  text-2xl md:text-4xl flex items-center  md:-ml-2  tracking-1.5 font-lato ">
                 <img src={GuideDog} alt="" class="w-9 mr-2" /> Identifying the
                 problem
               </div>
@@ -403,7 +397,7 @@ const BillEasy = () => {
                   color: "#3D6BC5",
                   // letterSpacing: "3px",
                 }}
-                class="uppercase text-base font-lato-light font-bold tracking-3"
+                class="uppercase text-base font-lato-bold tracking-3"
               >
                 Interview questions
               </div>
@@ -506,7 +500,7 @@ const BillEasy = () => {
           >
             <div class="col-span-12 md:col-span-6 h-full ">
               <div
-                className=" text-white text-2xl md:text-4xl  flex items-center "
+                className=" text-brand-white text-2xl md:text-4xl  flex items-center "
                 style={{
                   marginBottom: "30px",
                 }}
@@ -514,39 +508,33 @@ const BillEasy = () => {
                 <img src={MonocleFace} alt="" class="mr-2 w-9" /> Usability
                 testing
               </div>
-              <ul class="text-brand-gray list-disc ml-4 text-justify ">
+              <ul class="text-brand-white list-disc ml-4 text-justify ">
                 <li className="my-4">
                   The purpose of usability testing was to determine whether
                   existing solutions in the market truly addresses the problem
                   better than the current manual approach,{" "}
-                  <span style={{ color: "#6AC296" }} class="text-white">
+                  <span style={{ color: "#6AC296" }}>
                     meets users’ expectations
                   </span>{" "}
                   and help us in making{" "}
-                  <span style={{ color: "#6AC296" }} class="text-white">
+                  <span style={{ color: "#6AC296" }}>
                     fact- based design decisions.
                   </span>
                 </li>
 
                 <li className="my-4">
                   We chose to run a test on{" "}
-                  <span style={{ color: "#6AC296" }} class="text-white">
-                    Clear one software
-                  </span>{" "}
+                  <span style={{ color: "#6AC296" }}>Clear one software</span>{" "}
                   through our competitors' study since it was close to our
                   vision.
                 </li>
 
                 <li className="my-4">
                   After establishing usability matrix, we{" "}
-                  <span style={{ color: "#6AC296" }} class="text-white">
-                    compared Clear one
-                  </span>{" "}
+                  <span style={{ color: "#6AC296" }}>compared Clear one</span>{" "}
                   matrix to the matrix obtained from{" "}
-                  <span style={{ color: "#6AC296" }} class="text-white">
-                    excel sheets
-                  </span>{" "}
-                  (a manual process).
+                  <span style={{ color: "#6AC296" }}>excel sheets</span> (a
+                  manual process).
                 </li>
                 <a
                   onMouseEnter={largeEnter}
@@ -556,7 +544,7 @@ const BillEasy = () => {
                     color: "#3D6BC5",
                     marginTop: "30px",
                   }}
-                  class="uppercase text-base flex items-center font-lato-light font-bold tracking-3 my-10 md:my-5 "
+                  class="uppercase text-base flex items-center font-lato-bold tracking-3 my-10 md:my-5 "
                 >
                   <ArrowRightCircle
                     width={30}
@@ -619,8 +607,22 @@ const BillEasy = () => {
             matrix results
           </div>
           <div className=" mb-2">
-            S1,S2 and S3 are the given scenarios to prepare invoices using Excel
-            sheets and Clear one software.{" "}
+            <span
+              style={{
+                color: "#6AC296",
+              }}
+            >
+              S1,S2 and S3
+            </span>{" "}
+            are the given scenarios to prepare invoices using{" "}
+            <span
+              style={{
+                color: "#6AC296",
+              }}
+            >
+              Excel sheets and Clear one{" "}
+            </span>
+            software.{" "}
           </div>
           <img src={usabilityMatrix} className="w-full" alt="" />
         </div>
