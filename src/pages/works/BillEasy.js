@@ -797,7 +797,8 @@ const BillEasy = () => {
           next={true}
           imageEnter={imageEnter}
           work={{
-            video: "../assets/work_gifs/BillEasy-Visual.mp4",
+            video:
+              "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662218697/work_gifs/BillEasy-Visual_t37pia.mp4",
             domain: "visual design",
             title: "BillEasy",
             image:

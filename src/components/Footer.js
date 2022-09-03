@@ -52,11 +52,7 @@ const Footer = ({ textEnter, imageEnter, largeEnter }) => {
       id="footer-main"
       className="w-full bg-brand-darkGrey2 flex flex-col"
     >
-      <AnimationOnScroll
-        animateIn="animate__fadeInUp"
-        animateOnce={true}
-        duration={1}
-      >
+      <AnimationOnScroll animateIn="animate__fadeInUp" duration={2}>
         <div className=" footerDiv flex flex-col md:flex-row md:items-end md:justify-between px-5 md:px-48 py-10 md:py-24 ">
           <div
             className="flex text-gray-400 flex-col justify-center  md:w-2/6 mb-5 md:mb-0"
