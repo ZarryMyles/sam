@@ -163,7 +163,7 @@ const Navbar = ({
             Work
           </a>{" "}
           <a
-            className="px-5"
+            className="p-5"
             href="/about"
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
@@ -182,7 +182,7 @@ const Navbar = ({
             Resume
           </a>
           <a
-            className="pl-5"
+            className="pl-5 p-5"
             target="_blank"
             rel="noreferrer"
             href="https://drive.google.com/file/d/1gdC7zdeDq_ZZZVhfR79LOOZrqUFiqytM/view?usp=sharing"
