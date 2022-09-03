@@ -22,4 +22,8 @@ export { default as FramedPicture } from "./FramedPicture.svg";
 export { default as PartyingFace } from "./PartyingFace.svg";
 export { default as ClinkingGlasses } from "./ClinkingGlasses.svg";
 export { default as InLotusPosition } from "./InLotusPosition.svg";
+export { default as Nerd } from "./NerdFace.svg";
+export { default as Ladder } from "./Ladder.svg";
+export { default as Placard } from "./Placard.svg";
+export { default as Pointer } from "./Pointer.svg";
 export { default as GrinningFace } from "./GrinningFace.svg";

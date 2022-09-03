@@ -18,6 +18,13 @@ import {
   GrinningFace,
   Check,
   BriefCase,
+  GuideDog,
+  Nerd,
+  Placard,
+  Pointer,
+  Teacup,
+  ClinkingGlasses,
+  Ladder,
 } from "../../assets/icons/fluent";
 
 const HappilyEver = () => {
@@ -110,7 +117,6 @@ const HappilyEver = () => {
           <Loader />
         </div>
       )} */}
-
       <Navbar
         largeEnter={largeEnter}
         imageEnter={imageEnter}
@@ -207,46 +213,27 @@ const HappilyEver = () => {
       </div>
       {/* purpose */}
       <div className="p-5 md:p-0">
-        <div class="flex items-center mb-12">
-          <div
-            style={{
-              height: "1px",
-            }}
-            class="bg-brand-gray w-28 mr-4"
-          />
-          <div class=" text-brand-gray uppercase text-xl tracking-widest ">
-            Purpose
-          </div>
+        <div className="md:px-24 px-5 w-full">
+          <WorkHeading text={"purpose"} />
         </div>
-        <div class="grid grid-cols-12 font-lato">
-          <div class="col-span-12 md:col-span-4">
+        <div class="grid grid-cols-12 font-lato md:pb-56">
+          <div class="col-span-12 md:col-span-4 bg-brand-darkGrey2 md:py-5 md:px-24 rounded-r-lg">
             <div class="text-2xl font-lato">🎯 Goals</div>
             <div className="my-5 ">
               1. Strengthen brand direction.
               <br />
-              2. <b>Improve focus</b> on purpose.
+              2. Improve focus on purpose.
               <br />
-              3. Identify{" "}
-              <b>alignment in user brand persuasion and brand vision.</b>
+              3. Identify alignment in user brand persuasion and brand vision.
             </div>
           </div>
         </div>
       </div>
       {/* Challenge */}
-      <div className="p-5 bg-black text-brand-white md:p-20 md:pb-10">
-        <div class="flex items-center mb-12">
-          <div
-            style={{
-              height: "1px",
-            }}
-            class="bg-brand-gray w-28 mr-4"
-          />
-          <div class=" text-brand-gray uppercase text-xl tracking-widest ">
-            Challenge
-          </div>
-        </div>
+      <div className="p-5 bg-brand-black text-brand-white md:px-24 md:pb-10">
+        <WorkHeading text={"Challenge"} />
         <div class="flex items-center md:items-start md:flex-row flex-col font-lato">
-          <div>
+          <div className="md:w-2/3">
             <svg
               width="24"
               className="absolute md:left-8 left-3 md:w-16 -mt-10 md:-mt-5 "
@@ -260,19 +247,28 @@ const HappilyEver = () => {
                 fill="#424242"
               />
             </svg>
-            <div class="md:pr-10">
+            <div class="md:pr-10 leading-6 tracking-0.5 font-lato font-normal">
               <div className="py-3">
-                1. The product's vision is to "fosters meaningful connections".
-                However the current product provided matrimonial services. As a
-                result, the primary users included young adults and singles,
+                1. The product's vision is to "
+                <span style={{ color: "#ED9D9D" }}>
+                  fosters meaningful connections
+                </span>
+                ". However the current product provided matrimonial services. As
+                a result, the primary users included young adults and singles,
                 each with their own set of expectations and mental models.
               </div>
               <div className="py-3">
-                2. In this situation, it was my advice to remain aligned with
-                the core vision to avoid any complexities.
+                2. In this situation, it was my advice to remain{" "}
+                <span style={{ color: "#ED9D9D" }}>
+                  aligned with the core vision
+                </span>{" "}
+                to avoid any complexities.
               </div>
               <div className="py-3">
-                3. Communicating these changes itself was a challenge.
+                3.{" "}
+                <span style={{ color: "#ED9D9D" }}>
+                  Communicating these changes itself was a challenge.
+                </span>
               </div>
             </div>
           </div>
@@ -284,35 +280,43 @@ const HappilyEver = () => {
         </div>
       </div>
       {/* Research and Analyzing product */}
-      <div className="p-5 md:p-20 ">
-        <div class="flex items-center mb-12">
-          <div
-            style={{
-              height: "1px",
-            }}
-            class="bg-brand-gray w-28 mr-4"
-          />
-          <div class=" text-brand-gray uppercase text-xl tracking-widest ">
-            Research
-          </div>
-        </div>
+      <div className="p-5 md:p-24 ">
+        <WorkHeading text={"Research"} />
         {/* Analyzing */}
         <div class="flex items-center md:items-start md:flex-row flex-col font-lato">
-          <div class="md:pr-10">
-            <div class="text-3xl font-lato">🦮 Analyzing The Product</div>
-            <div className="mt-10 font-lato-bold">Stakeholder Interview</div>
-            <div className="py-3">
-              1. The product's vision is to "fosters meaningful connections".
-              However the current product provided matrimonial services. As a
-              result, the primary users included young adults and singles, each
-              with their own set of expectations and mental models.
+          <div class="md:pr-10 w-2/3">
+            <div
+              style={{
+                marginBottom: "30px",
+              }}
+              class="  text-2xl md:text-4xl md:my-0 my-8 tracking-widest font-lato-light font-bold flex items-center"
+            >
+              <img src={GuideDog} className="mr-2 w-9 " alt="" /> Analyzing The
+              Product
             </div>
-            <div className="py-3">
-              2. In this situation, it was my advice to remain aligned with the
-              core vision to avoid any complexities.
-            </div>
-            <div className="py-3">
-              3. Communicating these changes itself was a challenge.
+            <div className="mt-10 md:mb-16 font-lato font-normal leading-6 tracking-widest">
+              Stakeholder Interview <br />
+              <br />
+              <span className="text-lg">•</span> The first step in{" "}
+              <span style={{ color: "#ED9D9D" }}>
+                {" "}
+                understanding brand values
+              </span>{" "}
+              was to know the product's mission and motive. This interview
+              helped the stakeholder in developing a{" "}
+              <span style={{ color: "#ED9D9D" }}>clear vision.</span>
+              <br />
+              <br /> <span className="text-lg">•</span> He was asked a series of
+              <span style={{ color: "#ED9D9D" }}>
+                {" "}
+                open-ended questions,
+              </span>{" "}
+              such as : <br />
+              1. What inspired you to create this product? <br />
+              2. Why should people use this product? <br />
+              3. What are the objectives? <br />
+              4. How do you visualize your brand? <br />
+              and many more..
             </div>
           </div>
           <img
@@ -323,20 +327,45 @@ const HappilyEver = () => {
         </div>
         {/* Key Insights */}
         <div class="flex items-center md:items-start md:flex-row flex-col font-lato">
-          <div class="md:pr-10">
-            <div className="mt-5 font-lato-bold">Key Insights</div>
-            <div className="py-3">
-              1. The product's vision is to "fosters meaningful connections".
-              However the current product provided matrimonial services. As a
-              result, the primary users included young adults and singles, each
-              with their own set of expectations and mental models.
-            </div>
-            <div className="py-3">
-              2. In this situation, it was my advice to remain aligned with the
-              core vision to avoid any complexities.
-            </div>
-            <div className="py-3">
-              3. Communicating these changes itself was a challenge.
+          <div class="md:pr-10 w-2/3">
+            <div className="mt-10 md:mb-16 font-lato font-normal leading-5 tracking-widest">
+              Key Insights <br />
+              <br />
+              <br />
+              <span className="text-lg">•</span> A platform where{" "}
+              <span style={{ color: "#ED9D9D" }}>
+                meaningful connections are fostered.
+              </span>
+              <br />
+              <br />
+              <span className="text-lg">•</span>{" "}
+              <span style={{ color: "#ED9D9D" }}>
+                Fine-tuning communication{" "}
+              </span>
+              encourages people to talk to others because, All relations start
+              with a conversation. It is observed, people avoid confrontations
+              due to fear of rejection.
+              <br />
+              <br /> <span className="text-lg">•</span> Building relationships,
+              <span style={{ color: "#ED9D9D" }}> expressing empathy,</span> and
+              having long-lasting conversations.
+              <br />
+              <br /> <span className="text-lg">•</span> Creating a connection
+              must be a celebration.
+              <br />
+              <br />
+              <span className="text-lg">•</span> Platform to explore based on
+              <span style={{ color: "#ED9D9D" }}> matching interests</span>{" "}
+              while <span style={{ color: "#ED9D9D" }}>staying authentic.</span>{" "}
+              <br />
+              <br />
+              <span className="text-lg">•</span> Online, It is possible to put
+              up a façade, meeting in person reveals true selves and true
+              connections can only be made outdoors. <br />
+              <br />
+              <span className="text-lg">•</span>{" "}
+              <span style={{ color: "#ED9D9D" }}>Stories</span> create
+              meaningful connection & curiosity.
             </div>
           </div>
         </div>
@@ -346,19 +375,33 @@ const HappilyEver = () => {
         <div class="flex items-center md:items-start md:flex-row flex-col font-lato">
           <div>
             <div class="md:pr-10">
-              <div class="text-3xl font-lato">🤓 Competitive analysis</div>
-              <div className="py-3 mt-10">
-                1. The product's vision is to "fosters meaningful connections".
-                However the current product provided matrimonial services. As a
-                result, the primary users included young adults and singles,
-                each with their own set of expectations and mental models.
+              <div
+                style={{
+                  marginBottom: "30px",
+                }}
+                class="  text-2xl md:text-4xl md:my-0 my-8 tracking-widest font-lato-light font-bold flex items-center"
+              >
+                <img src={Nerd} className="mr-2 w-9 " alt="" />
+                Competitive Analysis
               </div>
-              <div className="py-3">
-                2. In this situation, it was my advice to remain aligned with
-                the core vision to avoid any complexities.
+              <div className="py-3 mt-10 font-lato font-normal leading-5 tracking-widest">
+                <span className="text-lg">•</span> The product being developed
+                was a matrimonial service with a{" "}
+                <span style={{ color: "#ED9D9D" }}>
+                  completely different mental model
+                </span>{" "}
+                of the users altogether. The vision was partially aligned, and
+                further, the team was planning to integrate other user bases as
+                well, which was confusing!
               </div>
-              <div className="py-3">
-                3. Communicating these changes itself was a challenge.
+              <div className="py-3 font-lato font-normal leading-5 tracking-widest">
+                <span className="text-lg">•</span> But, before jumping onto
+                conclusions, I conducted in-depth{" "}
+                <span style={{ color: "#ED9D9D" }}>research</span> on similar
+                products existing in market, Like{" "}
+                <span style={{ color: "#ED9D9D" }}>
+                  Shaadi, Bumble, Jeevansaathi and bharat matrimony.
+                </span>
               </div>
             </div>
           </div>
@@ -374,19 +417,37 @@ const HappilyEver = () => {
         <div class="flex items-center md:items-start md:flex-row flex-col font-lato">
           <div>
             <div class="md:pr-10">
-              <div class="text-3xl font-lato">🪧 Usability testing</div>
-              <div className="py-3 mt-10">
-                1. The product's vision is to "fosters meaningful connections".
-                However the current product provided matrimonial services. As a
-                result, the primary users included young adults and singles,
-                each with their own set of expectations and mental models.
+              <div
+                style={{
+                  marginBottom: "30px",
+                }}
+                class="  text-2xl md:text-4xl md:my-0 my-8 tracking-widest font-lato-light font-bold flex items-center"
+              >
+                <img src={Placard} className="mr-2 w-9 " alt="" />
+                Usability testing
               </div>
-              <div className="py-3">
-                2. In this situation, it was my advice to remain aligned with
-                the core vision to avoid any complexities.
+              <div className="py-3 mt-10 font-lato font-normal leading-5 tracking-widest">
+                <span className="text-lg">•</span> Users do not necessarily use
+                and perceive our products the same way we wish them to.
               </div>
-              <div className="py-3">
-                3. Communicating these changes itself was a challenge.
+              <div className="py-3 font-lato font-normal leading-5 tracking-widest">
+                <span className="text-lg">•</span> Therefore, I ran a usability
+                test to better understand{" "}
+                <span style={{ color: "#ED9D9D" }}>
+                  user needs and expectations.
+                </span>
+              </div>
+              <div className="py-3 font-lato font-normal leading-5 tracking-widest">
+                <span className="text-lg">•</span> This greatly helped the
+                stakeholders to know of the{" "}
+                <span style={{ color: "#ED9D9D" }}>
+                  gaps in their current methods.
+                </span>
+              </div>
+              <div className="py-3 font-lato font-normal leading-5 tracking-widest">
+                <span className="text-lg">•</span> I was able to conduct the
+                tests with{" "}
+                <span style={{ color: "#ED9D9D" }}>5 users via Zoom.</span>
               </div>
             </div>
           </div>
@@ -397,79 +458,182 @@ const HappilyEver = () => {
         <div class="flex items-center md:items-start md:flex-row flex-col font-lato">
           <div>
             <div class="md:pr-10">
-              <div class="text-3xl font-lato">🪜 Approach</div>
-              <div className="py-3 mt-10">
-                1. The product's vision is to "fosters meaningful connections".
-                However the current product provided matrimonial services. As a
-                result, the primary users included young adults and singles,
-                each with their own set of expectations and mental models.
+              <div
+                style={{
+                  marginBottom: "30px",
+                }}
+                class="  text-2xl md:text-4xl md:my-0 my-8 tracking-widest font-lato-light font-bold flex items-center"
+              >
+                <img src={Ladder} className="mr-2 w-9 " alt="" />
+                Approach
               </div>
-              <div className="py-3">
-                2. In this situation, it was my advice to remain aligned with
-                the core vision to avoid any complexities.
+              <div className="py-3 mt-10 font-lato font-normal leading-5 tracking-widest">
+                <span className="text-lg">•</span> Through analysis of both
+                competitive and usability tests results, I developed a{" "}
+                <span style={{ color: "#ED9D9D" }}>Venn Diagram</span> to
+                demonstrate difference between the{" "}
+                <span style={{ color: "#ED9D9D" }}>product which he aimed</span>{" "}
+                to develop <span style={{ color: "#ED9D9D" }}>vs</span> the one
+                he is{" "}
+                <span style={{ color: "#ED9D9D" }}>currently developing.</span>
               </div>
-              <div className="py-3">
-                3. Communicating these changes itself was a challenge.
+              <div className="py-3 font-lato font-normal leading-5 tracking-widest">
+                <span className="text-lg">•</span> As shown in the figure, The
+                mental model of the users is completely different, thus having
+                them both in a single platform would yield no positive outcomes,
+                rather would lead to{" "}
+                <span style={{ color: "#ED9D9D" }}>
+                  complications in the match-making algorithm.
+                </span>
               </div>
             </div>
           </div>
           <img
             src={four}
             alt="logo"
-            className="w-full md:w-1/2 md:left-0 left-1/4"
+            className="w-1/2 md:w-1/3 md:left-0 left-1/4"
           />
         </div>
-      </div>
+      </div>{" "}
       {/* Solutions */}
-      <div className="p-5 md:p-20 ">
-        <div class="flex items-center mb-12">
-          <div
-            style={{
-              height: "1px",
-            }}
-            class="bg-brand-gray w-28 mr-4"
-          />
-          <div class=" text-brand-gray uppercase text-xl tracking-widest ">
-            Solutions
-          </div>
-        </div>
+      <div className="p-5 md:p-24">
+        <WorkHeading text={"Solutions"} />
         <div class="flex items-center md:items-start md:flex-row flex-col font-lato">
-          <div className="md:pr-10">
-            <div className="text-3xl font-lato">🥂 Solutions</div>
-            <div className="mt-10 font-lato-bold">Stakeholder Interview</div>
-            <div className="py-3">
-              1. The product's vision is to "fosters meaningful connections".
-              However the current product provided matrimonial services. As a
-              result, the primary users included young adults and singles, each
-              with their own set of expectations and mental models.
-            </div>
-            <div className="py-3">
-              2. In this situation, it was my advice to remain aligned with the
-              core vision to avoid any complexities.
-            </div>
-            <div className="py-3">
-              3. Communicating these changes itself was a challenge.
+          <div>
+            <div class="md:pr-10">
+              <div
+                style={{
+                  marginBottom: "30px",
+                }}
+                class="  text-2xl md:text-4xl md:my-0 my-8 tracking-widest font-lato-light font-bold flex items-center"
+              >
+                <img src={ClinkingGlasses} className="mr-2 w-9 " alt="" />
+                Solutions
+              </div>
+              <div className="py-3 mt-10 font-lato font-normal leading-5 tracking-widest">
+                <span className="text-lg">•</span> Since HappilyEver was an
+                <span style={{ color: "#ED9D9D" }}>
+                  {" "}
+                  early stage start-up
+                </span>{" "}
+                my aim was to create a{" "}
+                <span style={{ color: "#ED9D9D" }}>clear roadmap</span> and help
+                the team stay on similar target.
+                <br />
+                <span className="text-lg">•</span> What defines the brand is
+                what it values the most,{" "}
+                <span style={{ color: "#ED9D9D" }}>Giving logo a purpose.</span>
+                <br />
+                <br />
+                <br />
+                <br />{" "}
+                <div className="flex flex-row items-center mb-2">
+                  <img
+                    src={Pointer}
+                    alt="logo"
+                    className="inline h-6 pr-3 mt-1"
+                  />{" "}
+                  Product
+                </div>
+                <span className="text-lg">•</span> Providing a general platform
+                for all people to find meaningful connections based on their
+                personal preferences. <br />
+                <br />
+                <br />
+                <br />
+                <div className="flex flex-row items-center mb-2">
+                  <img
+                    src={Pointer}
+                    alt="logo"
+                    className="inline h-6 pr-3 mt-1"
+                  />{" "}
+                  Purpose
+                </div>
+                <span className="text-lg">•</span>{" "}
+                <span style={{ color: "#ED9D9D" }}>
+                  What does Happilyever do?
+                </span>{" "}
+                <br />
+                Fosters deep and meaningful connections.
+                <br />
+                <br /> <span className="text-lg">•</span> Challenging the
+                vision,{" "}
+                <span style={{ color: "#ED9D9D" }}>
+                  "Why do we need deep connections?"
+                </span>{" "}
+                <br />
+                In the world of "nobody knows me," people seek individuals who
+                "understand them", people who are empathetic, supportive and
+                loyal. <br />
+                <br />
+                <br />
+                <br />
+                <div className="flex flex-row items-center mb-2">
+                  <img
+                    src={Pointer}
+                    alt="logo"
+                    className="inline h-6 pr-3 mt-1"
+                  />{" "}
+                  Brand Recognition
+                </div>
+                <span className="text-lg">•</span>{" "}
+                <span style={{ color: "#ED9D9D" }}>
+                  Authenticity, personalized connections and joy.
+                </span>
+                <br /> <span className="text-lg">•</span> How is it different?
+                <br /> <span className="text-lg">•</span> Encourages real
+                <span style={{ color: "#ED9D9D" }}>
+                  meet-ups, limits choice paralysis and icebreakers.
+                </span>{" "}
+                <br />
+                <br />
+                <br />
+                <br />
+                <div className="flex flex-row items-center mb-2">
+                  <img
+                    src={Pointer}
+                    alt="logo"
+                    className="inline h-6 pr-3 mt-1"
+                  />{" "}
+                  Defining audience
+                </div>
+                <span className="text-lg">•</span> Our primary users aged
+                between <span style={{ color: "#ED9D9D" }}>20 to 35yrs</span>
+                <br /> <span className="text-lg">•</span> Why?
+                <br /> Since, this was the age group that began looking for{" "}
+                <span style={{ color: "#ED9D9D" }}>
+                  long term relationships.
+                </span>{" "}
+                <br />
+                However, because our stakeholders were adamant about providing
+                matrimonial matches, we all agreed that it would be better to
+                have two separate services with the similar vision forming
+                different target audiences.
+              </div>
             </div>
           </div>
           <img
             src={five}
             alt="logo"
-            className="w-1/2 md:mt-10 md:w-1/3 md:left-0 left-1/4"
+            className="w-1/2 md:w-1/3 md:left-0 left-1/4"
           />
         </div>
       </div>
       <a
-        href="/"
-        className="tracking-3 p-5 flex items-center md:p-20 uppercase font-lato-bold"
+        onMouseEnter={largeEnter}
+        onMouseLeave={imageEnter}
+        style={{ color: "#ED9D9D" }}
+        href="https://www.notion.so/BillEasy-Research-eede878d31d8405dba2c5543dbb3da67"
+        className="tracking-3 md:mt-20 md:px-24 mb-10 md:mb-40 flex items-center text-sm md:text-base uppercase font-lato-bold"
       >
         <ArrowRightCircle
           width={30}
           height={30}
-          color="black"
+          color="#ED9D9D"
           strokeWidth={1.5}
           className="mr-4"
         />
-        read full case study ☕
+        read full case study <img src={Teacup} alt="" class="w-9 ml-2" />
       </a>
       {/* end screen */}
       <WorkHero
