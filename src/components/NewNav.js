@@ -122,7 +122,7 @@ const Navbar = ({
           >
             About
           </a>
-          <Link
+          {/* <Link
             activeClass="active"
             to="get-in-touch"
             spy={true}
@@ -130,16 +130,16 @@ const Navbar = ({
             offset={-100}
             duration={500}
             className="block md:inline-block p-5 no-underline border-none"
+          > */}
+          <a
+            href="/#get-in-touch"
+            onMouseEnter={largeEnter}
+            onMouseLeave={imageEnter}
+            className="cursor-pointer font-lato text-lg "
           >
-            <a
-              href="/#get-in-touch"
-              onMouseEnter={largeEnter}
-              onMouseLeave={imageEnter}
-              className="cursor-pointer font-lato text-lg "
-            >
-              Contact
-            </a>
-          </Link>
+            Contact
+          </a>
+          {/* </Link> */}
           <a
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
