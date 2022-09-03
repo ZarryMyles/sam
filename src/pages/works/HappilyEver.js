@@ -132,30 +132,28 @@ const HappilyEver = () => {
       {/* project brief */}
       <div class=" px-5 pt-10 md:px-24 md:mt-20 flex flex-wrap justify-between  ">
         <div className="my-5">
-          <div class="text-xl font-bold font-lato-bold flex items-center -ml-1">
+          <div class="text-xl font-bold font-lato flex items-center -ml-1">
             <img src={Clipboard} className="mr-2 w-5 " alt="" /> Project Type
           </div>
-          <div className="font-lato-light font-bold mt-2">Proof of concept</div>
+          <div className="font-lato font mt-2">Proof of concept</div>
         </div>
         <div className=" w-1/2 md:w-auto my-5   ">
-          <div class="text-xl font-bold font-lato-bold flex items-center -ml-2">
+          <div class="text-xl font-bold font-lato flex items-center -ml-2">
             <img src={Calendar} className="mr-2 w-5 " alt="" /> Timeline
           </div>
-          <div className="font-lato-light font-bold mt-2">1 month</div>
+          <div className="font-lato font-bold mt-2">1 month</div>
         </div>
         <div className=" w-1/2 md:w-auto my-5   ">
-          <div class="text-xl font-bold font-lato-bold flex items-center -ml-1">
+          <div class="text-xl font-bold font-lato flex items-center -ml-1">
             <img src={TippingHand} className="mr-2 w-5 " alt="" /> My Role
           </div>
-          <div className="font-lato-light font-bold mt-2">
-            Product Design Intern
-          </div>
+          <div className="font-lato  mt-2">Product Design Intern</div>
         </div>
         <div className=" w-1/2 md:w-auto my-5   ">
           <div class="text-xl font-bold font-lato-bold flex items-center -ml-1">
             <img src={Fist} className="mr-2 w-5 " alt="" /> Design Team
           </div>
-          <div className="font-lato-light font-bold mt-2">Three</div>
+          <div className="font-lato mt-2">Three</div>
         </div>
       </div>
       {/* project about */}
@@ -167,13 +165,13 @@ const HappilyEver = () => {
               style={{
                 marginBottom: "30px",
               }}
-              class="  text-2xl md:text-4xl  tracking-widest font-lato-light font-bold flex items-center"
+              class="  text-2xl md:text-4xl  tracking-widest font-lato flex items-center"
             >
               <img src={GrinningFace} className="mr-2 w-9 " alt="" />{" "}
               HappilyEver
             </div>
           </div>
-          <div className="  leading-6 tracking-0.5   ">
+          <div className="  leading-6 tracking-0.5  font-lato ">
             Happily Ever, aka HAE, is an Match-making service. It is strongly
             aimed at helping people in{" "}
             <span style={{ color: "#ED9D9D" }}>
@@ -289,7 +287,7 @@ const HappilyEver = () => {
               style={{
                 marginBottom: "30px",
               }}
-              class="  text-2xl md:text-4xl md:my-0 my-8 tracking-widest font-lato-light font-bold flex items-center"
+              class="  text-2xl md:text-4xl md:my-0 my-8 tracking-widest font-lato flex items-center"
             >
               <img src={GuideDog} className="mr-2 w-9 " alt="" /> Analyzing The
               Product
@@ -379,7 +377,7 @@ const HappilyEver = () => {
                 style={{
                   marginBottom: "30px",
                 }}
-                class="  text-2xl md:text-4xl md:my-0 my-8 tracking-widest font-lato-light font-bold flex items-center"
+                class="  text-2xl md:text-4xl md:my-0 my-8 tracking-widest font-lato flex items-center"
               >
                 <img src={Nerd} className="mr-2 w-9 " alt="" />
                 Competitive Analysis
@@ -421,7 +419,7 @@ const HappilyEver = () => {
                 style={{
                   marginBottom: "30px",
                 }}
-                class="  text-2xl md:text-4xl md:my-0 my-8 tracking-widest font-lato-light font-bold flex items-center"
+                class="  text-2xl md:text-4xl md:my-0 my-8 tracking-widest font-lato flex items-center"
               >
                 <img src={Placard} className="mr-2 w-9 " alt="" />
                 Usability testing
@@ -462,7 +460,7 @@ const HappilyEver = () => {
                 style={{
                   marginBottom: "30px",
                 }}
-                class="  text-2xl md:text-4xl md:my-0 my-8 tracking-widest font-lato-light font-bold flex items-center"
+                class="  text-2xl md:text-4xl md:my-0 my-8 tracking-widest font-lato flex items-center"
               >
                 <img src={Ladder} className="mr-2 w-9 " alt="" />
                 Approach
@@ -505,7 +503,7 @@ const HappilyEver = () => {
                 style={{
                   marginBottom: "30px",
                 }}
-                class="  text-2xl md:text-4xl md:my-0 my-8 tracking-widest font-lato-light font-bold flex items-center"
+                class="  text-2xl md:text-4xl md:my-0 my-8 tracking-widest font-lato flex items-center"
               >
                 <img src={ClinkingGlasses} className="mr-2 w-9 " alt="" />
                 Solutions
