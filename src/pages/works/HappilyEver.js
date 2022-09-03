@@ -112,11 +112,11 @@ const HappilyEver = () => {
       onMouseEnter={imageEnter}
       className="overflow-hidden font-lato font-normal text-justify bg-brand-black text-brand-white"
     >
-      {/* {loading && (
+      {loading && (
         <div class="fixed w-full h-full z-50">
           <Loader />
         </div>
-      )} */}
+      )}
       <Navbar
         largeEnter={largeEnter}
         imageEnter={imageEnter}

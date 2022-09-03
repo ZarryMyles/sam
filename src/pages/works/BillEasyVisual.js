@@ -51,20 +51,6 @@ const BillEasyVisual = () => {
   }, []);
 
   const variants = {
-    default: {
-      x: mousePos.x - 10,
-      y: mousePos.y - 10,
-      bounce: 0,
-    },
-    text: {
-      height: 50,
-      width: 50,
-      x: mousePos.x - 25,
-      y: mousePos.y - 25,
-      backgroundColor: "#d1d5db",
-      mixBlendMode: "difference",
-      bounce: 0,
-    },
     secondary: {
       x: mousePos.x - 10,
       y: mousePos.y - 10,
@@ -75,8 +61,8 @@ const BillEasyVisual = () => {
     large: {
       height: 80,
       width: 80,
-      x: mousePos.x - 25,
-      y: mousePos.y - 25,
+      x: mousePos.x - 40,
+      y: mousePos.y - 40,
       backgroundColor: "#d1d5db",
       mixBlendMode: "difference",
       bounce: 0,
@@ -107,11 +93,11 @@ const BillEasyVisual = () => {
   };
   return (
     <div className="overflow-hidden leading-6 bg-brand-black text-brand-white">
-      {/* {loading && (
+      {loading && (
         <div class="fixed loaderDiv w-screen h-screen">
           <Loader />
         </div>
-      )} */}
+      )}
       <Navbar
         largeEnter={largeEnter}
         imageEnter={imageEnter}
@@ -271,12 +257,18 @@ const BillEasyVisual = () => {
             <div className="pt-10 md:mt-32 font-lato font-normal md:pb-0 pb-3 md:px-24 px-5 text-lg md:py-5">
               2. Invoice Generation
             </div>
-            <div className="flex md:flex-row w-full overflow-hidden md:mt-5 md:px-24 px-5 py-5 flex-col bg-brand-darkGrey2 items-center justify-between">
+            <div className="flex md:flex-row w-full overflow-hidden md:mt-5 md:px-24 px-5 py-5 flex-col bg-brand-darkGrey2 items-center">
               {" "}
               <div className="md:w-7/10 md:pr-10 md:pb-0 pb-5 flex flex-col text-lg">
                 <div className="font-lato md:py-5 py-3">
-                  ⭐ <span className="font-lato font-normal ">Process</span> of
-                  creating GST complaint invoices : <br /> <br />
+                  ⭐{" "}
+                  <span
+                    className="font-lato font-normal "
+                    style={{ color: "#6AC296" }}
+                  >
+                    Process
+                  </span>{" "}
+                  of creating GST complaint invoices : <br /> <br />
                   <span className="text-lg">•</span> We collected a bunch of
                   invoices (From NinjaasLabs as well as other sellers/service
                   providers) and prioritized its most important and relevant
@@ -432,8 +424,8 @@ const BillEasyVisual = () => {
             <img src={PartyingFace} className="mr-2 w-9 " alt="" /> Result
             Matrix
           </div>
-          <div className="font-lato font-normal flex md:flex-row flex-col">
-            <div className="md:w-2/3 md:pr-10 md:pb-0 pb-5 flex flex-col text-lg">
+          <div className="font-lato font-normal flex md:flex-row flex-col justify-between">
+            <div className="md:w-1/3 md:pr-10 md:pb-0 pb-5 flex flex-col  text-lg">
               <div className="mb-5">
                 After developing the product we estimated the following results:
                 <br />
@@ -453,9 +445,9 @@ const BillEasyVisual = () => {
             </div>
             <img
               src={matrix}
-              width="50%"
+              width="55%"
               alt="visual"
-              className="hidden md:block"
+              className="hidden md:block -mt-10"
             />
             <img src={matrix} width="100%" alt="visual" className="md:hidden" />
           </div>
