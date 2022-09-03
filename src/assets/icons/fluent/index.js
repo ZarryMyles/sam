@@ -14,3 +14,4 @@ export { default as TippingHand } from "./Tipping hand.svg";
 export { default as TriangularRuler } from "./Triangular ruler.svg";
 export { default as MonocleFace } from "./Face with monocleface.svg";
 export { default as GuideDog } from "./Guide dog.svg";
+export { default as Eye } from "./Eye.svg";

@@ -18,6 +18,26 @@ import fonts from "../../assets/works/smartvision/smartVisionFonts.svg";
 import Hero from "../../assets/works/smartvision/smartVision.png";
 import Challenges from "../../assets/works/smartvision/smartvisionChallenge.svg";
 
+import {
+  Teacup,
+  BriefCase,
+  Bullseye,
+  Check,
+  Clipboard,
+  MonocleFace,
+  Family,
+  LightBulb,
+  OldKey,
+  Paintbrush,
+  Fist,
+  Calendar,
+  Thermometer,
+  TippingHand,
+  TriangularRuler,
+  GuideDog,
+  Eye,
+} from "../../assets/icons/fluent";
+
 const SmartVision = () => {
   const [mousePos, setMousePos] = useState({
     x: 0,
@@ -116,25 +136,25 @@ const SmartVision = () => {
       <div class=" p-5 md:px-24 md:my-20 flex flex-wrap justify-between  ">
         <div className="  my-5   ">
           <div class="text-xl font-bold font-lato-bold flex items-center -ml-1">
-            👨‍👩‍👦 Project Type
+            <img src={Clipboard} className="mr-2 w-5 " alt="" /> Project Type
           </div>
           <div className="font-lato-light font-bold mt-2">Personal Project</div>
         </div>
         <div className=" w-1/2 md:w-auto my-5  ">
           <div class="text-xl font-bold font-lato-bold flex items-center -ml-2">
-            ⏱️ Timeline
+            <img src={Calendar} className="mr-2 w-5 " alt="" /> Timeline
           </div>
           <div className="font-lato-light font-bold mt-2">3 months</div>
         </div>
         <div className=" w-1/2 md:w-auto my-5  ">
           <div class="text-xl font-bold font-lato-bold flex items-center -ml-1">
-            👩‍💻 My Role
+            <img src={TippingHand} className="mr-2 w-5 " alt="" /> My Role
           </div>
           <div className="font-lato-light font-bold mt-2">UX & UI Designer</div>
         </div>
         <div className=" w-1/2 md:w-auto my-5  ">
           <div class="text-xl font-bold font-lato-bold flex items-center -ml-1">
-            👥 Design Team
+            <img src={Fist} className="mr-2 w-5 " alt="" /> Design Team
           </div>
           <div className="font-lato-light font-bold mt-2">Myself</div>
         </div>
@@ -149,9 +169,9 @@ const SmartVision = () => {
               style={{
                 marginBottom: "30px",
               }}
-              class="  text-2xl md:text-4xl  tracking-widest font-lato-light font-bold "
+              class="  text-2xl md:text-4xl  tracking-widest font-lato-light font-bold flex items-center"
             >
-              💡 Smart Vision
+              <img src={LightBulb} className="mr-2 w-9 " alt="" /> Smart Vision
             </div>
           </div>
           <div className="  leading-6 tracking-0.5   ">
@@ -177,14 +197,19 @@ const SmartVision = () => {
         <div class="col-span-12 md:col-span-5  flex flex-col items-center  justify-center md:pl-10 rounded-xl text-brand-white ">
           <div className="  px-4 md:pr-24 rounded-l-lg flex flex-col justify-center bg-brand-darkGrey2 md:pl-14 py-14  ">
             <div className=" mb-8">
-              <div className=" mb-2">✅ Results</div>
+              <div className=" mb-2 flex items-center">
+                <img src={Check} className="mr-2 w-5 " alt="" /> Results
+              </div>
               <div className=" leading-6 tracking-0.5">
                 Raised awareness, advanced accessibility features, Inclusive and
                 easy to use space.
               </div>
             </div>
             <div className=" ">
-              <div className=" mb-2">💼 Contribution</div>
+              <div className=" mb-2 flex items-center">
+                <img src={BriefCase} className="mr-2 w-5 " alt="" />{" "}
+                <div>Contribution</div>
+              </div>
               <div className=" leading-6 tracking-0.5">
                 Secondary Research, Brainstorming Business goals, User
                 Interviews, Journey Mapping, Ideation, Interface Design,
@@ -200,7 +225,9 @@ const SmartVision = () => {
 
         <div class="grid grid-cols-12 font-lato">
           <div class="col-span-12 md:col-span-4">
-            <div class="text-2xl font-lato">🎯 Goals</div>
+            <div class=" text-2xl  tracking-1.5 mb-8 flex items-center">
+              <img src={Bullseye} className="mr-2 w-6 " alt="" /> Goals
+            </div>
             <div className="my-5 ">
               1. Allow them to{" "}
               <span style={{ color: "#6AC296" }}>
@@ -219,24 +246,12 @@ const SmartVision = () => {
               5. <span style={{ color: "#6AC296" }}>Promote awareness</span>
             </div>
           </div>
-          <div class="col-span-12 md:col-span-8 hidden ">
-            <div class="text-2xl font-lato ">👨‍👨‍👧‍👦 Target audience</div>
-            <div class="flex  font-lato-bold  my-4">
-              <div className="mr-16">Direct users</div>
-              <div className="mr-16">Indirect users</div>
-            </div>
-            <div className="flex w-full justify-between md:justify-start my-4  pl-0 md:pl-14 ">
-              <div className="mr-2 md:mr-16">Accounts team</div>
-              <div className="mr-2 md:mr-16">Stakeholders</div>
-              <div className="mr-2 md:mr-16">Business Intelligence</div>
-            </div>
-          </div>
         </div>
       </div>
       {/* user segmentation */}
       <div className="p-5 md:p-20 font-lato">
-        <div className="text-2xl md:text-4xl mb-8 tracking-1.5">
-          👨‍👨‍👧‍👦 User segmentation
+        <div className="text-2xl md:text-4xl mb-8 tracking-1.5 flex items-center">
+          <img src={Family} className="mr-2 w-8 " alt="" /> User segmentation
         </div>
         <div class="ml-3">
           <div className=" text-base font-lato my-5">User Type</div>
@@ -339,8 +354,9 @@ const SmartVision = () => {
         <div class="   ">
           <WorkHeading text={"research"} />
 
-          <div class="  text-2xl md:text-4xl my-8 tracking-1.5 font-lato-light font-bold ">
-            🦮 Identifying the problem
+          <div class="  text-2xl md:text-4xl flex items-center  md:-ml-2  tracking-1.5 font-lato-light font-bold ">
+            <img src={GuideDog} alt="" class="w-9 mr-2" /> Identifying the
+            problem
           </div>
           <ul className="my-8 list-disc ml-5">
             <li className="my-3">
@@ -383,8 +399,8 @@ const SmartVision = () => {
       </div>
       {/* key points */}
       <div class="p-5 md:p-24 h-full">
-        <div class="  text-2xl md:text-4xl my-8 tracking-1.5 font-lato-light font-bold ">
-          🗝️ Key pain-points
+        <div class="  text-2xl flex items-center md:text-4xl my-8 tracking-1.5 font-lato-light font-bold ">
+          <img src={OldKey} alt="" class="w-8 mr-2" /> Key pain-points
         </div>
         <div class="px-3 grid grid-cols-1 md:grid-cols-2 ">
           <div class="col-span-1 p-2 md:p-5">

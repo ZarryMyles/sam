@@ -227,7 +227,7 @@ const BillEasy = () => {
               </div>
               <div className=" ">
                 <div className=" mb-2 flex items-center">
-                  {" "}
+                  
                   <img src={BriefCase} className="mr-2 w-5 " alt="" />{" "}
                   <div>Contribution</div>
                 </div>
@@ -742,7 +742,6 @@ const BillEasy = () => {
           work={{
             domain: "visual design",
             title: "BillEasy",
-            // dog image from unsplash
             image:
               "https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
 

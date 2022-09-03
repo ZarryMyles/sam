@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { ChevronRight, ChevronLeft, ArrowRightCircle } from "react-feather";
-import WorkVideo from "./WorkVideo";
-import billEzVid from "../assets/work_gifs/06.gif";
+
 const works = [
   {
     id: 1,
@@ -12,7 +11,7 @@ const works = [
     gif: false,
     image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg",
     video:
-      "https://res.cloudinary.com/genesiscloudimages/video/upload/v1660394170/work_gifs/C01_yqtldj.mp4",
+      "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662181482/work_gifs/BillEasy-short_yhhk58.mp4",
     // billEzVid,
     link: "/billeasy",
   },
