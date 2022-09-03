@@ -31,7 +31,7 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
             style={{
               fontSize: "64px",
             }}
-            class="  font-semibold tracking-3   font-lato text-white md:w-max"
+            class="  font-semibold tracking-3   font-lato text-brand-white md:w-max"
           >
             {work.title}
           </div>
@@ -61,7 +61,7 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
         </div>
       </div>
       <div
-        class=" md:hidden z-10 bg-cover bg-center bg-no-repeat brightness-50 bg-brand-black"
+        class=" md:hidden z-10 bg-contain bg-center bg-no-repeat brightness-50 bg-brand-black"
         style={{
           width: "80.5%",
           backgroundImage: `url(${work.image})`,
@@ -70,9 +70,10 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
       {!work.gif ? (
         <video
           style={{
-            height: "100vh",
+            // height: "100vh",
+            width: "100vw",
           }}
-          className=" z-10 bg-cover hidden md:block bg-center bg-no-repeat brightness-50 bg-brand-black"
+          className=" z-10 bg-contain hidden md:block object-cover bg-center bg-no-repeat brightness-50 bg-brand-black"
           alt="loading..."
           loop
           autoPlay
@@ -88,6 +89,7 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
             width: "80.5%",
           }}
           src={work.video}
+          alt="hi"
         ></img>
       )}
     </div>

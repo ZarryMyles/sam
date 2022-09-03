@@ -83,8 +83,7 @@ const BillEasyVisual = () => {
 
   const work = {
     image: hero,
-    video:
-      "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662218697/work_gifs/BillEasy-Visual_t37pia.mp4",
+    video: "../assets/work_gifs/BillEasy_Visual.mp4",
     title: "BillEasy",
     domain: "Visual Design",
     subtitle: "A web app for managing your bills",

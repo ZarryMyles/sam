@@ -264,6 +264,7 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
         {works.map((work) =>
           work.gif ? (
             <img
+              alt="hi"
               class={`${
                 work.id < activeWork.id
                   ? "-translate-x-full  bg-center md:bg-left"
