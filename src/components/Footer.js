@@ -1,6 +1,7 @@
 import React from "react";
 import { MapPin } from "react-feather";
 import { HiOutlineLocationMarker } from "react-icons/hi";
+import { motion } from "framer-motion";
 const Footer = ({ textEnter, imageEnter, largeEnter }) => {
   const socials = [
     {
