@@ -61,7 +61,7 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
         </div>
       </div>
       <div
-        class=" md:hidden z-10 bg-contain bg-center bg-no-repeat brightness-50 bg-brand-black"
+        class=" md:hidden z-10 bg-contain bg-center bg-no-repeat brightness-20 bg-brand-black"
         style={{
           width: "80.5%",
           backgroundImage: `url(${work.image})`,

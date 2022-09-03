@@ -104,13 +104,14 @@ const Navbar = ({
             duration={500}
             className="block cursor-pointer md:inline-block p-5 no-underline border-none"
           >
-            <div
+            <a
+              href="/#work"
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
-              className="text-lg  font-lato"
+              className="text-lg font-lato"
             >
               Work
-            </div>
+            </a>
           </Link>
           <a
             onMouseEnter={largeEnter}
@@ -130,13 +131,14 @@ const Navbar = ({
             duration={500}
             className="block md:inline-block p-5 no-underline border-none"
           >
-            <button
+            <a
+              href="/#get-in-touch"
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
               className="cursor-pointer font-lato text-lg "
             >
               Contact
-            </button>
+            </a>
           </Link>
           <a
             onMouseEnter={largeEnter}
