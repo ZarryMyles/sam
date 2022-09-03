@@ -130,7 +130,7 @@ function App() {
   return (
     <div className=" dark:bg-brand-black duration-500 transition-colors select-none overflow-hidden tracking-1.5">
       {loading && (
-        <div class="fixed w-full h-full">
+        <div class="fixed loaderDiv w-screen h-screen">
           <Loader />
         </div>
       )}
