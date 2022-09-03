@@ -277,27 +277,30 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
               // alt="loading..."
             />
           ) : (
-            <video
-              // className=""
-              class={`${
-                work.id < activeWork.id
-                  ? "-translate-x-full  bg-center md:bg-left"
-                  : work.id > activeWork.id
-                  ? " translate-x-[100%]  bg-center md:bg-right"
-                  : "bg-center scale-125 "
-              }  w-full bg-cover bg-no-repeat ease-linear transition-all  duration-700 brightness-50 h-screen  object-cover  absolute
-               w-100 md:w-screen  md:opacity-100 opacity-100 md:object-cover  bg-red-100  `}
-              loop
-              autoPlay={activeWork.id == work.id ? true : false}
-              muted
-              // onLoadedData={toggleLoading}
-            >
-              <source
-                // Changing source of video depending on size of the screen
-                src={work.video}
-                type="video/mp4"
-              />
-            </video>
+            <div class="w-full h-full relative">
+              <video
+                // className=""
+                class={`${
+                  work.id < activeWork.id
+                    ? "-translate-x-full  bg-center md:bg-left"
+                    : work.id > activeWork.id
+                    ? " translate-x-[100%]  bg-center md:bg-right"
+                    : "bg-center scale-125 "
+                }  w-full bg-cover bg-no-repeat ease-linear transition-all  duration-700    h-screen  object-cover  absolute
+               w-100 md:w-screen  md:opacity-100 opacity-100 md:object-cover   `}
+                loop
+                autoPlay={activeWork.id == work.id ? true : false}
+                muted
+                // onLoadedData={toggleLoading}
+              >
+                <source
+                  // Changing source of video depending on size of the screen
+                  src={work.video}
+                  type="video/mp4"
+                />
+              </video>
+              <div class="absolute bg-black opacity-50  transition-all duration-300 w-full h-full top-0 left-0 "></div>
+            </div>
             // <WorkVideo work={work.video} activeWork={activeWork} />
           )
         )}
