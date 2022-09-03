@@ -1,6 +1,6 @@
 /* * get in touch  */
-.cursor-pointer{
-  cursor: none
+.cursor-pointer {
+  cursor: none;
 }
 .text-stroke-black {
   color: transparent;
@@ -43,7 +43,7 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: #0d0d0d;
 }
 
 /* Handle */
@@ -79,8 +79,8 @@ a {
 /* animation  */
 @keyframes landing-page-text-animation {
   0% {
-    transform: translate3d(0px, 0.8%, 0px) scale3d(1, 1, 1)
-      rotateX(-12.3795deg) rotateY(0deg) rotateZ(0deg) skew(1.2048deg, 0deg);
+    transform: translate3d(0px, 0.8%, 0px) scale3d(1, 1, 1) rotateX(-12.3795deg)
+      rotateY(0deg) rotateZ(0deg) skew(1.2048deg, 0deg);
     opacity: 0;
   }
   /* 50% {
@@ -90,8 +90,8 @@ a {
   } */
   100% {
     /* transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); */
-    transform: translate3d(0px, -35%, 0px) scale3d(1, 1, 1)
-      rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform: translate3d(0px, -35%, 0px) scale3d(1, 1, 1) rotateX(0deg)
+      rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     opacity: 1;
   }
 }
@@ -102,8 +102,8 @@ a {
 
   animation: landing-page-text-animation 2s ease-in-out forwards;
 }
-.work-landing-text{
-  transform: translate3d(0px, -45%, 0px)
+.work-landing-text {
+  transform: translate3d(0px, -45%, 0px);
 }
 
 /* google sans font */
@@ -146,9 +146,7 @@ a {
   font-family: "Google Sans", sans-serif;
 }
 
-
-
-.work-hero-vertical-line{
+.work-hero-vertical-line {
   animation: lineanim infinite 5s linear;
 }
 /* animate increasing and decreasing height of line */
@@ -164,49 +162,48 @@ a {
   }
 }
 
-.mb-130{
+.mb-130 {
   margin-bottom: 130px;
 }
-.mt-130{
+.mt-130 {
   margin-top: 130px;
 }
-.mt-150{
+.mt-150 {
   margin-top: 150px;
 }
-.pb-130{
+.pb-130 {
   padding-bottom: 130px;
 }
-.pt-130{
+.pt-130 {
   padding-top: 130px;
 }
-.pt-140{
+.pt-140 {
   padding-top: 140px;
 }
-.pt-150{
+.pt-150 {
   padding-top: 150px;
 }
 /* media query */
 @media only screen and (max-width: 600px) {
-  .mb-130{
+  .mb-130 {
     margin-bottom: 20px;
   }
-  .mt-130{
+  .mt-130 {
     margin-top: 20px;
   }
-  .mt-150{
+  .mt-150 {
     margin-top: 30px;
   }
-  .pb-130{
+  .pb-130 {
     padding-bottom: 20px;
   }
-  .pt-130{
+  .pt-130 {
     padding-top: 20px;
   }
-  .pt-140{
+  .pt-140 {
     padding-top: 30px;
   }
-  .pt-150{
+  .pt-150 {
     padding-top: 30px;
   }
-
 }

@@ -1,10 +1,15 @@
 import { useState, useEffect } from "react";
 // import { Link } from "react-router-dom";
 import { Link } from "react-scroll";
-import { motion } from "framer-motion";
 import $ from "jquery";
 
-const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
+const Navbar = ({
+  textEnter,
+  largeEnter,
+  textLeave,
+  imageEnter,
+  defaultColor,
+}) => {
   const links = [
     {
       name: "Work",
@@ -32,19 +37,6 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
   const resize = () => {
     $("#sideMenu").addClass("translate-x-full");
     $("#sideButton").toggleClass("active");
-  };
-
-  // For the bounce effect for logo
-  // TODO: disable bounce
-  const [hov, setHov] = useState(false);
-  const variants = {
-    default: { opacity: 0, y: 50, zIndex: -10 },
-    hover: { opacity: 1, y: 0, zIndex: 10 },
-    delay1: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.0125 } },
-    delay2: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.025 } },
-    delay3: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.0325 } },
-    delay4: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.05 } },
-    delay5: { opacity: 1, y: 0, zIndex: 10, transition: { delay: 0.0625 } },
   };
 
   // For Navbar to show up when scrolled up
@@ -86,61 +78,18 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
     <div className="overflow-hidden w-screen">
       <div
         style={{ color: defaultColor }}
+        onMouseEnter={imageEnter}
         className="w-full hidden md:flex zed absolute justify-between items-center mr-5 p-5 md:px-24"
       >
         <a href="/" className="flex items-center">
-          <motion.div
+          <div
             className="font-lora-italic text-2xl top-0 overflow-hidden  flex flex-row items-center "
-            onMouseEnter={textEnter}
+            onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
             style={{ color: "#b5b5b5" }}
-            onMouseOver={() => setHov((hov) => !hov)}
-            onMouseOut={() => setHov((hov) => !hov)}
           >
             S
-            <motion.span
-              animate={hov ? "hover" : "default"}
-              initial={{ opacity: 0, y: 50 }}
-              variants={variants}
-            >
-              h
-            </motion.span>
-            <motion.span
-              animate={hov ? "delay1" : "default"}
-              initial={{ opacity: 0, y: 50 }}
-              variants={variants}
-            >
-              r
-            </motion.span>
-            <motion.span
-              animate={hov ? "delay2" : "default"}
-              initial={{ opacity: 0, y: 50 }}
-              variants={variants}
-            >
-              a
-            </motion.span>
-            <motion.span
-              animate={hov ? "delay3" : "default"}
-              initial={{ opacity: 0, y: 50 }}
-              variants={variants}
-            >
-              d
-            </motion.span>
-            <motion.span
-              animate={hov ? "delay4" : "default"}
-              initial={{ opacity: 0, y: 50 }}
-              variants={variants}
-            >
-              h
-            </motion.span>
-            <motion.span
-              animate={hov ? "delay5" : "default"}
-              initial={{ opacity: 0, y: 50 }}
-              variants={variants}
-            >
-              a
-            </motion.span>
-          </motion.div>
+          </div>
         </a>
         <div
           style={{ color: "#b5b5b5" }}
@@ -156,7 +105,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
             className="block cursor-pointer md:inline-block p-5 no-underline border-none"
           >
             <div
-              onMouseEnter={textEnter}
+              onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
               className="text-lg  font-lato"
             >
@@ -164,7 +113,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
             </div>
           </Link>
           <a
-            onMouseEnter={textEnter}
+            onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
             href="/about"
             onClick={uncheckNav}
@@ -182,7 +131,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
             className="block md:inline-block p-5 no-underline border-none"
           >
             <button
-              onMouseEnter={textEnter}
+              onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
               className="cursor-pointer font-lato text-lg "
             >
@@ -190,7 +139,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
             </button>
           </Link>
           <a
-            onMouseEnter={textEnter}
+            onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
             href="/"
             onClick={uncheckNav}
@@ -204,63 +153,21 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
       {/* Scroll Up Navbar */}
       <div
         onMouseEnter={imageEnter}
-        onMouseLeave={textLeave}
         style={{ zIndex: "150 !important" }}
         className={`navContainer ${
           show && "md:hidden"
         } text-brand-gray bg-brand-black zed hidden md:flex w-screen top-0 fixed  flex-row justify-between items-center md:px-24 md:py-5`}
       >
-        <motion.div
-          className="font-lora-italic text-2xl top-0 overflow-hidden flex flex-row items-center "
-          onMouseEnter={textEnter}
-          onMouseLeave={imageEnter}
-          onMouseOver={() => setHov((hov) => !hov)}
-          onMouseOut={() => setHov((hov) => !hov)}
-        >
-          S
-          <motion.span
-            animate={hov ? "hover" : "default"}
-            initial={{ opacity: 0, y: 50 }}
-            variants={variants}
+        <a href="/" className="flex items-center">
+          <div
+            className="font-lora-italic text-2xl top-0 overflow-hidden  flex flex-row items-center "
+            onMouseEnter={largeEnter}
+            onMouseLeave={imageEnter}
+            style={{ color: "#b5b5b5" }}
           >
-            h
-          </motion.span>
-          <motion.span
-            animate={hov ? "delay1" : "default"}
-            initial={{ opacity: 0, y: 50 }}
-            variants={variants}
-          >
-            r
-          </motion.span>
-          <motion.span
-            animate={hov ? "delay2" : "default"}
-            initial={{ opacity: 0, y: 50 }}
-            variants={variants}
-          >
-            a
-          </motion.span>
-          <motion.span
-            animate={hov ? "delay3" : "default"}
-            initial={{ opacity: 0, y: 50 }}
-            variants={variants}
-          >
-            d
-          </motion.span>
-          <motion.span
-            animate={hov ? "delay4" : "default"}
-            initial={{ opacity: 0, y: 50 }}
-            variants={variants}
-          >
-            h
-          </motion.span>
-          <motion.span
-            animate={hov ? "delay5" : "default"}
-            initial={{ opacity: 0, y: 50 }}
-            variants={variants}
-          >
-            a
-          </motion.span>
-        </motion.div>
+            S
+          </div>
+        </a>
 
         <div className="flex flex-row text-brand-gray font-lato text-lg ">
           <Link
@@ -270,11 +177,9 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
             smooth={true}
             offset={-70}
             duration={500}
-            onMouseEnter={textEnter}
-            onMouseLeave={imageEnter}
           >
             <div
-              onMouseEnter={textEnter}
+              onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
               className="text-lg px-5 font-lato"
             >
@@ -284,7 +189,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
           <a
             className="px-5"
             href="/about"
-            onMouseEnter={textEnter}
+            onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
           >
             About
@@ -296,11 +201,9 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
             smooth={true}
             offset={-100}
             duration={500}
-            onMouseEnter={textEnter}
-            onMouseLeave={imageEnter}
           >
             <div
-              onMouseEnter={textEnter}
+              onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
               className="text-lg px-5  font-lato"
             >
@@ -310,7 +213,7 @@ const Navbar = ({ textEnter, textLeave, imageEnter, defaultColor }) => {
           <a
             className="pl-5"
             href="/"
-            onMouseEnter={textEnter}
+            onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
           >
             Resume

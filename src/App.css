@@ -1,5 +1,5 @@
-*{
-  cursor: none
+* {
+  cursor: none;
 }
 
 .cursor {
@@ -7,7 +7,7 @@
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  z-index: 999 !important;
+  z-index: 200 !important;
   position: fixed;
   top: 0;
   left: 0;
@@ -181,7 +181,11 @@ path:nth-child(6) {
   z-index: 100 !important;
 }
 
-/* Loader animation */
+/* Loader */
+.loaderDiv {
+  z-index: 999 !important;
+}
+
 .loaderLine {
   animation: loading 3s forwards cubic-bezier(0, 0, 0, 0);
 }
@@ -199,4 +203,8 @@ path:nth-child(6) {
   100% {
     width: 100%;
   }
+}
+
+/* Footer Text Animation */
+.footerDiv {
 }
