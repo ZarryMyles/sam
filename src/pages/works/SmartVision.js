@@ -17,6 +17,9 @@ import colorChecker from "../../assets/works/smartvision/smartVisionColorChecker
 import fonts from "../../assets/works/smartvision/smartVisionFonts.svg";
 import Hero from "../../assets/works/smartvision/smartVision.png";
 import Challenges from "../../assets/works/smartvision/smartvisionChallenge.svg";
+import colorGuide from "../../assets/works/smartvision/colorGuide.svg";
+import typography from "../../assets/works/smartvision/typography.svg";
+import colorGuides from "../../assets/works/smartvision/colorGuides.svg";
 
 import {
   Teacup,
@@ -97,10 +100,6 @@ const SmartVision = () => {
     title: "Smart Vision",
     gif: true,
     domain: "Case Study",
-    subtitle: "A web app for managing your bills",
-    description: "A web app for managing your bills",
-    link: "https://billeasy.com",
-    linkText: "Visit BillEasy",
   };
   const [loading, setLoading] = useState(true);
 
@@ -117,7 +116,8 @@ const SmartVision = () => {
     >
       {loading && (
         <div class="fixed w-full h-full z-50">
-          <Loader />
+          {" "}
+          <Loader />{" "}
         </div>
       )}
       <Navbar defaultColor={"white"} />
@@ -129,30 +129,30 @@ const SmartVision = () => {
         work={work}
       />
       {/* project brief */}
-      <div class=" p-5 md:px-24 md:my-20 flex flex-wrap justify-between  ">
+      <div class=" p-5 md:px-24 md:my-20 flex flex-wrap justify-between   ">
         <div className="  my-5   ">
           <div class="text-xl font-bold font-lato-bold flex items-center -ml-1">
             <img src={Clipboard} className="mr-2 w-5 " alt="" /> Project Type
           </div>
-          <div className="font-lato-light font-bold mt-2">Personal Project</div>
+          <div className="font-lato  mt-2">Personal Project</div>
         </div>
         <div className=" w-1/2 md:w-auto my-5  ">
           <div class="text-xl font-bold font-lato-bold flex items-center -ml-2">
             <img src={Calendar} className="mr-2 w-5 " alt="" /> Timeline
           </div>
-          <div className="font-lato-light font-bold mt-2">3 months</div>
+          <div className="font-lato  mt-2">3 months</div>
         </div>
         <div className=" w-1/2 md:w-auto my-5  ">
           <div class="text-xl font-bold font-lato-bold flex items-center -ml-1">
             <img src={TippingHand} className="mr-2 w-5 " alt="" /> My Role
           </div>
-          <div className="font-lato-light font-bold mt-2">UX & UI Designer</div>
+          <div className="font-lato  mt-2">UX & UI Designer</div>
         </div>
         <div className=" w-1/2 md:w-auto my-5  ">
           <div class="text-xl font-bold font-lato-bold flex items-center -ml-1">
             <img src={Fist} className="mr-2 w-5 " alt="" /> Design Team
           </div>
-          <div className="font-lato-light font-bold mt-2">Myself</div>
+          <div className="font-lato  mt-2">Myself</div>
         </div>
       </div>
       {/* project concept */}
@@ -165,24 +165,25 @@ const SmartVision = () => {
               style={{
                 marginBottom: "30px",
               }}
-              class="  text-2xl md:text-4xl  tracking-widest font-lato-light font-bold flex items-center"
+              class="  text-2xl md:text-4xl  tracking-1.5 font-lato flex items-center"
             >
               <img src={Eye} className="mr-2 w-9 " alt="" /> Smart Vision
             </div>
           </div>
           <div className="  leading-6 tracking-0.5   ">
             Smart Vision is an{" "}
-            <span style={{ color: "#6AC296" }}>
+            <span style={{ color: "#7CCBCD" }}>
               Accessible, Independent and Secure
             </span>{" "}
-            messaging App designed to make smartphones{" "}
-            <span style={{ color: "#6AC296" }}>
-              more accessible for users with visual impairments.
-            </span>
+            messaging App designed to make smartphones more accessible for users
+            with visual impairments.
             <br />
             <br />
-            Allows people to engage in hassle-free conversations, Provides the{" "}
-            <span style={{ color: "#6AC296" }}>
+            <span style={{ color: "#7CCBCD" }}>
+              Allows people to engage in hassle-free conversations,
+            </span>{" "}
+            Provides the{" "}
+            <span style={{ color: "#7CCBCD" }}>
               finest accessibility features and secures privacy
             </span>{" "}
             to improve the quality of life.
@@ -197,8 +198,11 @@ const SmartVision = () => {
                 <img src={Check} className="mr-2 w-5 " alt="" /> Results
               </div>
               <div className=" leading-6 tracking-0.5">
-                Raised awareness, advanced accessibility features, Inclusive and
-                easy to use space.
+                Raised awareness,{" "}
+                <span style={{ color: "#7CCBCD" }}>
+                  advanced accessibility features, Inclusive and easy to use
+                  space.
+                </span>
               </div>
             </div>
             <div className=" ">
@@ -225,21 +229,21 @@ const SmartVision = () => {
               <img src={Bullseye} className="mr-2 w-6 " alt="" /> Goals
             </div>
             <div className="my-5 ">
-              1. Allow them to{" "}
-              <span style={{ color: "#6AC296" }}>
-                connect with people Independently.
-              </span>
+              1. Allow them to connect with people{" "}
+              <span style={{ color: "#7CCBCD" }}>Independently.</span>
               <br />
               2. Provide essential{" "}
-              <span style={{ color: "#6AC296" }}>Accessibility features.</span>
+              <span style={{ color: "#7CCBCD" }}>Accessibility features.</span>
               <br />
-              3. Make it easier to{" "}
-              <span style={{ color: "#6AC296" }}>share information.</span>
+              3. Make it easier to share information.
               <br />
-              4. Protect{" "}
-              <span style={{ color: "#6AC296" }}>privacy and security</span>.
+              4.{" "}
+              <span style={{ color: "#7CCBCD" }}>
+                Protect privacy and security
+              </span>
+              .
               <br />
-              5. <span style={{ color: "#6AC296" }}>Promote awareness</span>
+              5. <span style={{ color: "#7CCBCD" }}>Promote awareness</span>
             </div>
           </div>
         </div>
@@ -250,44 +254,46 @@ const SmartVision = () => {
           <img src={Family} className="mr-2 w-8 " alt="" /> User segmentation
         </div>
         <div class="ml-3">
-          <div className=" text-base font-lato my-5">User Type</div>
+          <div className=" text-base font-lato-bold my-5 bg-brand-darkGrey2 px-5 py-3 w-max rounded-lg -ml-5 ">
+            User Type
+          </div>
           <div className="" style={{ letterSpacing: "0.5px" }}>
             Legally blind
             <ul className="list-disc">
               <li className="">
                 A legally blind individual is considered sightless if contact
                 lenses or{" "}
-                <span style={{ color: "#6AC296" }}>
+                <span style={{ color: "#7CCBCD" }}>
                   eyeglasses cannot correct their vision.
                 </span>
               </li>
               <li className="my-5">
                 The{" "}
-                <span style={{ color: "#6AC296" }}>normal vision is 20/20</span>
+                <span style={{ color: "#7CCBCD" }}>normal vision is 20/20</span>
                 . That means an object can be seen correctly 20 feet away. But
                 the vision of a{" "}
-                <span style={{ color: "#6AC296" }}>legally blind</span> is
-                <span style={{ color: "#6AC296" }}>20/200 or less</span>. This
+                <span style={{ color: "#7CCBCD" }}>legally blind</span> is
+                <span style={{ color: "#7CCBCD" }}>20/200 or less</span>. This
                 means if an object is 200 feet away, they have to stand 20 feet
                 away to see it evidently.
               </li>
             </ul>
           </div>
           {/* primary  */}
-          <div className=" text-base font-lato my-5 font-bold mt-8">
+          <div className=" text-base font-lato-bold my-5  mt-8 bg-brand-darkGrey2 px-5 py-3 w-max rounded-lg -ml-5 ">
             Primary User
           </div>
           <div className="" style={{ letterSpacing: "0.5px" }}>
             <ul className="list-disc">
               <li className="">
                 These are the users who{" "}
-                <span style={{ color: "#6AC296" }}>
+                <span style={{ color: "#7CCBCD" }}>
                   require messaging apps the most.
                 </span>
               </li>
               <li className="my-5">
                 They mostly utilize the app to{" "}
-                <span style={{ color: "#6AC296" }}>
+                <span style={{ color: "#7CCBCD" }}>
                   share work-related information,{" "}
                 </span>
                 promote their business, share valuable data, and have a shared
@@ -295,39 +301,39 @@ const SmartVision = () => {
               </li>
               <li className="my-5">
                 Examples :{" "}
-                <span style={{ color: "#6AC296" }}>
+                <span style={{ color: "#7CCBCD" }}>
                   Teachers, Bloggers, Youtubers, Advocates etc.
                 </span>{" "}
               </li>
               <li className="my-5">
-                Age : <span style={{ color: "#6AC296" }}>23 - 60</span>{" "}
+                Age : <span style={{ color: "#7CCBCD" }}>23 - 60</span>{" "}
               </li>
             </ul>
           </div>
           {/* secondary  */}
-          <div className=" text-base font-lato my-5 font-bold mt-8">
+          <div className=" text-base font-lato-bold my-5  mt-8 bg-brand-darkGrey2 px-5 py-3 w-max rounded-lg -ml-5 ">
             Secondary User
           </div>
           <div className="" style={{ letterSpacing: "0.5px" }}>
             <ul className="list-disc">
               <li className="">
                 People who use it for{" "}
-                <span style={{ color: "#6AC296" }}>casual interactions.</span>
+                <span style={{ color: "#7CCBCD" }}>casual interactions.</span>
               </li>
               <li className="my-5">
                 Text messaging is the most common way for{" "}
-                <span style={{ color: "#6AC296" }}>
+                <span style={{ color: "#7CCBCD" }}>
                   teenagers and young adults
                 </span>{" "}
                 to communicate.
               </li>
               <li className="my-5">
                 Examples : High school and{" "}
-                <span style={{ color: "#6AC296" }}>College students. </span>
+                <span style={{ color: "#7CCBCD" }}>College students. </span>
               </li>
               <li class="my-5">
                 {" "}
-                Age : <span style={{ color: "#6AC296" }}>15+</span>
+                Age : <span style={{ color: "#7CCBCD" }}>15+</span>
               </li>
             </ul>
           </div>
@@ -350,9 +356,9 @@ const SmartVision = () => {
               }}
             >
               How might we design a Messaging app which is{" "}
-              <span style={{ color: "#6AC296" }}>Inclusive</span> to people with
+              <span style={{ color: "#7CCBCD" }}>Inclusive</span> to people with
               impaired vision making their{" "}
-              <span style={{ color: "#6AC296" }}>
+              <span style={{ color: "#7CCBCD" }}>
                 communication experience hassle -free and economical.
               </span>
             </div>
@@ -371,7 +377,7 @@ const SmartVision = () => {
         <div class="   ">
           <WorkHeading text={"research"} />
 
-          <div class="  text-2xl md:text-4xl flex items-center  md:-ml-2  tracking-1.5 font-lato-light font-bold ">
+          <div class="  text-2xl md:text-4xl flex items-center  md:-ml-2  tracking-1.5 font-lato ">
             <img src={GuideDog} alt="" class="w-9 mr-2" /> Identifying the
             problem
           </div>
@@ -380,7 +386,7 @@ const SmartVision = () => {
               While searching for users to interview, I couldn't find any
               relevant people, thanks to the pandemic :') During which, I
               discovered that{" "}
-              <span style={{ color: "#6AC296" }}>
+              <span style={{ color: "#7CCBCD" }}>
                 people in India are unfamiliar of legal <br /> blindness
               </span>
             </li>
@@ -392,12 +398,12 @@ const SmartVision = () => {
             <li className="my-3">
               As a result, I reached out to individuals on the internet and, to
               my surprise, I was able to connect with{" "}
-              <span style={{ color: "#6AC296" }}>global audience </span>fitting
+              <span style={{ color: "#7CCBCD" }}>global audience </span>fitting
               into the right category.
             </li>
             <li className="my-3">
               I interviewed around 8 participants in total through{" "}
-              <span style={{ color: "#6AC296" }}>
+              <span style={{ color: "#7CCBCD" }}>
                 videoconferencing and Google forms.
               </span>
             </li>
@@ -405,15 +411,21 @@ const SmartVision = () => {
               <img src={Problem} className="w-full" alt="" />
             </div>
             <li className="my-3">
-              Next, I Grouped Insights based on similarity of cognitive patterns
-              and characteristics for the segmented users to create personas.
+              Next, I Grouped Insights based on{" "}
+              <span style={{ color: "#7CCBCD" }}>
+                similarity of cognitive patterns and characteristics{" "}
+              </span>
+              for the segmented users to create personas.
             </li>
             <div class="px-0 md:px-5 w-full my-8">
               <img src={Problem2} className="w-full" alt="" />
             </div>{" "}
             <li className="my-3">
-              Finally, I developed a Journey map for prospective scenarios to
-              help me understand and analyze the problem in depth.
+              Finally, I developed a{" "}
+              <span style={{ color: "#7CCBCD" }}>
+                Journey map for prospective scenarios
+              </span>{" "}
+              to help me understand and analyze the problem in depth.
             </li>
             <div class="px-0 md:px-5 w-full my-8">
               <img src={Problem3} className="w-full" alt="" />
@@ -423,7 +435,7 @@ const SmartVision = () => {
       </div>
       {/* key points */}
       <div class="p-5 md:p-24 h-full">
-        <div class="  text-2xl flex items-center md:text-4xl my-8 tracking-1.5 font-lato-light font-bold ">
+        <div class="  text-2xl flex items-center md:text-4xl my-8 tracking-1.5 font-lato  ">
           <img src={OldKey} alt="" class="w-8 mr-2" /> Key pain-points
         </div>
         <div class="px-3 grid grid-cols-1 md:grid-cols-2 ">
@@ -440,15 +452,15 @@ const SmartVision = () => {
                 <li className="ml-4">Struggles while reading.</li>
                 <li class="ml-4">
                   Prefers{" "}
-                  <span style={{ color: "#6AC296" }}>
+                  <span style={{ color: "#7CCBCD" }}>
                     bold and enlarged letters.
                   </span>
                 </li>
                 <li class="ml-4">
-                  <span style={{ color: "#6AC296" }}>
-                    Keyboard letters are not legible enough.
-                  </span>{" "}
-                  Feels time consuming with TTS unless you've mastered it.
+                  Keyboard letters are{" "}
+                  <span style={{ color: "#7CCBCD" }}>not legible enough.</span>{" "}
+                  Feels <span style={{ color: "#7CCBCD" }}>time consuming</span>{" "}
+                  with TTS unless you've mastered it.
                 </li>
               </ul>
             </div>
@@ -464,21 +476,18 @@ const SmartVision = () => {
               <div class="text-lg font-lato font-bold">TTS</div>
               <ul class="my-0 md:my-8 list-decimal ml-4">
                 <li>
-                  <span style={{ color: "#6AC296" }}>
+                  <span style={{ color: "#7CCBCD" }}>
                     Cannot describe texts in images.
                   </span>
                 </li>
                 <li>Over informative</li>
                 <li>
                   It's a{" "}
-                  <span style={{ color: "#6AC296" }}>
+                  <span style={{ color: "#7CCBCD" }}>
                     pain texting in group chats since
                   </span>{" "}
-                  most of the times{" "}
-                  <span style={{ color: "#6AC296" }}>
-                    messages are read from the first
-                  </span>{" "}
-                  if a new external message pops up.
+                  most of the times messages are read from the first if a new
+                  external message pops up.
                 </li>
                 <li>Searching messages from long back is difficult.</li>
               </ul>
@@ -495,7 +504,10 @@ const SmartVision = () => {
               <div class="text-lg font-lato font-bold">Images and Videos</div>
               <ul class="my-0 md:my-8 ">
                 <li className="">
-                  Emojis and images are difficult to perceive.
+                  Emojis and images are{" "}
+                  <span style={{ color: "#7CCBCD" }}>
+                    difficult to perceive.
+                  </span>
                 </li>
               </ul>
             </div>
@@ -510,11 +522,18 @@ const SmartVision = () => {
             >
               <div class="text-lg font-lato font-bold">Letters</div>
               <ul class="my-0 md:my-8 list-decimal ml-4">
-                <li>Doesn't prefer people to hear their messages aloud.</li>
+                <li>
+                  Doesn't prefer people to{" "}
+                  <span style={{ color: "#7CCBCD" }}>
+                    hear their messages aloud.
+                  </span>
+                </li>
                 <li>Requests someone else to read it for him</li>
                 <li>
-                  Colors are either very bright or too dull, and Light mode
-                  strains eyes.
+                  Colors are either very bright or too dull, and{" "}
+                  <span style={{ color: "#7CCBCD" }}>
+                    Light mode strains eyes.
+                  </span>
                 </li>
                 <li>Reads messages in the evening.</li>
                 <li>Quick way to connect with people is needed</li>
@@ -544,7 +563,7 @@ const SmartVision = () => {
                       </li>
                       <li className="my-9">
                         At any moment,{" "}
-                        <span style={{ color: "#6AC296" }}>
+                        <span style={{ color: "#7CCBCD" }}>
                           double-tap the text to activate the screen reader.
                         </span>
                       </li>
@@ -585,7 +604,7 @@ const SmartVision = () => {
                 <ul class="list-disc ml-4">
                   <li className="my-9">
                     Legally blind individuals can{" "}
-                    <span style={{ color: "#6AC296" }}>
+                    <span style={{ color: "#7CCBCD" }}>
                       understand the texts better than <br />
                       images.
                     </span>{" "}
@@ -593,12 +612,12 @@ const SmartVision = () => {
                   </li>
                   <li className="my-9">
                     Hence, Image descriptions are used to{" "}
-                    <span style={{ color: "#6AC296" }}>
+                    <span style={{ color: "#7CCBCD" }}>
                       describe Information from <br />
                       images.
                     </span>{" "}
                     They can also generate{" "}
-                    <span style={{ color: "#6AC296" }}>
+                    <span style={{ color: "#7CCBCD" }}>
                       alt text automatically
                     </span>
                   </li>
@@ -614,9 +633,9 @@ const SmartVision = () => {
                   <div className="my-8">3. Speech Recognition</div>
                   <ul class="list-disc ml-4">
                     <li className="mt-9">
-                      It enables a program to{" "}
-                      <span style={{ color: "#6AC296" }}>
-                        process human speech to readable text.
+                      It enables a program to process{" "}
+                      <span style={{ color: "#7CCBCD" }}>
+                        human speech to readable text.
                       </span>
                     </li>
                   </ul>
@@ -657,11 +676,11 @@ const SmartVision = () => {
                 <div className="my-8">4. OCR</div>
                 <ul class="list-disc ml-4">
                   <li className="my-9">
-                    <span style={{ color: "#6AC296" }}>
+                    <span style={{ color: "#7CCBCD" }}>
                       Optical Character Recognition
                     </span>{" "}
                     is the technology that detects{" "}
-                    <span style={{ color: "#6AC296" }}>
+                    <span style={{ color: "#7CCBCD" }}>
                       text <br /> inside digital pictures{" "}
                     </span>
                     whether typed or handwritten
@@ -681,15 +700,16 @@ const SmartVision = () => {
                 <ul class="list-disc ml-4">
                   <li className="my-9">
                     The user will not always be pleased with the screen readers
-                    and <br /> their privacy may{" "}
-                    <span style={{ color: "#6AC296" }}>be compromised</span>
+                    and <br /> their{" "}
+                    <span style={{ color: "#7CCBCD" }}>
+                      privacy may be compromised
+                    </span>
                   </li>
                   <li className="my-9">
-                    The magnifier allows the user to have a{" "}
-                    <span style={{ color: "#6AC296" }}>closer look</span> at the
+                    The magnifier allows the user to have a closer look at the
                     text or <br />
                     image while{" "}
-                    <span style={{ color: "#6AC296" }}>
+                    <span style={{ color: "#7CCBCD" }}>
                       respecting their privacy.
                     </span>
                   </li>
@@ -728,14 +748,14 @@ const SmartVision = () => {
                 <ul class="list-disc ml-4">
                   <li className="my-9">
                     Braille keyboard that can be{" "}
-                    <span style={{ color: "#6AC296" }}>
+                    <span style={{ color: "#7CCBCD" }}>
                       calibrated to human touch.
                     </span>{" "}
                     Private <br /> and Alternative option to speech recognition.
                   </li>
                   <li class="my-9">
                     Prerequisite : A person must be{" "}
-                    <span style={{ color: "#6AC296" }}>
+                    <span style={{ color: "#7CCBCD" }}>
                       familiar with braille.
                     </span>
                   </li>
@@ -750,38 +770,39 @@ const SmartVision = () => {
       </div>
       {/* ui guide system */}
       <div style={{}} class="p-5 md:px-24 h-full pt-140">
-        <div class="flex items-center  text-2xl md:text-4xl my-8 tracking-1.5 font-lato-light font-bold ">
+        <div class="flex items-center  text-2xl md:text-4xl my-8 tracking-1.5 font-lato ">
           <img src={GuideDog} alt="" class="w-9 mr-2" /> UI guide system
         </div>
         <ul class="ml-4 list-disc">
           <li className="my-4 md:my-8">
             The visual designs were made by considering the{" "}
-            <span style={{ color: "#6AC296" }}>
+            <span style={{ color: "#7CCBCD" }}>
               WCAG accessibility guidelines.
             </span>
           </li>
 
           <li className="my-4 md:my-8">
             The goal was to use{" "}
-            <span style={{ color: "#6AC296" }}>
+            <span style={{ color: "#7CCBCD" }}>
               contrasting yet relaxing hues
             </span>{" "}
-            to help readers read the{" "}
-            <span style={{ color: "#6AC296" }}>strain-free content.</span>
+            to help readers read the strain-free content.
           </li>
 
           <li className="my-4 md:my-8">
             Our users emphasized on having a{" "}
-            <span style={{ color: "#6AC296" }}>dark mode</span> to{" "}
-            <span style={{ color: "#6AC296" }}>achieve maximum contrast.</span>{" "}
-            Because pure black caused eye strain, this was modified to
-            <span style={{ color: "#6AC296" }}>
-              #121212 with a high contrast ratio.
-            </span>
+            <span style={{ color: "#7CCBCD" }}>
+              dark mode to achieve maximum contrast.
+            </span>{" "}
+            Because pure black caused eye strain, this was modified to #121212
+            with a high contrast ratio.
           </li>
         </ul>
         {/* color thingy */}
-        <div class="grid grid-cols-1 md:grid-cols-2">
+        <div className="w-full">
+          <img src={colorGuides} className="w-full" alt="" />
+        </div>
+        {/* <div class="grid grid-cols-1 md:grid-cols-2">
           <div class="col-span-1 my-4  ">
             <div
               class=" text-2xl font-google-sans md:mb-10 mb-5"
@@ -789,7 +810,7 @@ const SmartVision = () => {
             >
               Color
             </div>
-            <div class="flex items-center justify-center ">
+            <div class="flex items-center justify-center  ">
               <div className="flex flex-col items-center">
                 <div
                   class="  rounded-full mx-3 md:mx-14 border-4 "
@@ -828,11 +849,14 @@ const SmartVision = () => {
                 <div className="my-6">#7CCBCD</div>
               </div>
             </div>
+            <img src={colorGuide} className="w-10/12" alt="" />
           </div>
           <div class="col-span-1 my-4 ">
             <img src={colorChecker} alt="" />
           </div>
-          <div class="col-span-1 my-4 ">
+          <div class="col-span-1 md:-mt-20">
+            <img src={typography} className="w-10/12" alt="" />
+
             <div
               class=" text-2xl font-google-sans"
               style={{ color: "#72C3C4" }}
@@ -864,22 +888,23 @@ const SmartVision = () => {
               </div>
             </div>
           </div>
-          <div class="col-span-1 my-4 md:py-20 ">
+          <div class="col-span-1  md:py-20 ">
             <img src={fonts} alt="" />
           </div>
-        </div>
+        </div> */}
       </div>
       <a
         onMouseEnter={largeEnter}
         onMouseLeave={imageEnter}
-        style={{ color: "#6AC296" }}
+        style={{ color: "#7CCBCD" }}
         href="https://www.notion.so/BillEasy-Research-eede878d31d8405dba2c5543dbb3da67"
-        className="tracking-3 mb-10 md:mb-20 px-5 flex items-center md:px-24 text-sm md:text-base  uppercase font-lato-bold"
+        target="_blank"
+        className="tracking-3 mb-10 md:mb-40 md:mt-24 px-5 flex items-center md:px-24 text-sm md:text-base  uppercase font-lato-bold"
       >
         <ArrowRightCircle
           width={30}
           height={30}
-          color="#6AC296"
+          color="#7CCBCD"
           strokeWidth={1.5}
           className="mr-4"
         />
@@ -889,16 +914,13 @@ const SmartVision = () => {
         largeEnter={largeEnter}
         imageEnter={imageEnter}
         work={{
+          domain: "Branding",
+          title: "HappilyEver",
+          video: "../assets/work_gifs/happilyEver.mp4",
           image:
-            "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-          video:
-            "https://res.cloudinary.com/genesiscloudimages/video/upload/v1660394170/work_gifs/C01_yqtldj.mp4",
-          title: "BillEasy",
-          domain: "Research",
-          subtitle: "A web app for managing your bills",
-          description: "A web app for managing your bills",
-          link: "/billeasy",
-          linkText: "Visit BillEasy",
+            "https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+
+          link: "/happilyever",
         }}
         next={true}
       />{" "}

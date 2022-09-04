@@ -73,6 +73,7 @@ const About = () => {
         textEnter={textEnter}
         textLeave={textLeave}
         imageEnter={imageEnter}
+        largeEnter={largeEnter}
         defaultColor={"black"}
       />
 
@@ -128,7 +129,7 @@ const About = () => {
             </div>
             <div class="text-lg  ">Product Designer</div>
           </div>
-          <div class=" md:w-5/10 h-92 md:h-full bg-brand-darkGrey2 flex justify-center items-center md:p-20">
+          <div class=" md:w-5/10 h-92 md:h-full bg-brand-darkGrey2 rounded-lg flex justify-center items-center md:p-20">
             <div
               style={{
                 backgroundImage: `url("https://images.unsplash.com/photo-1610398000003-1b2b2b2b2b2b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80")`,
@@ -138,18 +139,22 @@ const About = () => {
             />
           </div>
         </div>
-        <div class="bg-brand-darkGrey2 md:pt-16 md:mt-40 pt-10 px-5 md:px-48">
+        <div class="bg-brand-darkGrey2 md:pt-16 md:mt-40 pt-10 px-5 md:px-48  ">
           <WorkHeading text={"about"} />
           <div class="text-4xl md:mb-8 mb-4">Principles I abide by</div>
-          <div class="flex flex-col md:flex-row w-full text-lg md:leading-9 text-justify md:pb-20">
+          <div
+            style={{
+              letterSpacing: "0.4px",
+            }}
+            class="flex flex-col md:flex-row w-full text-lg md:leading-9 text-justify md:pb-20"
+          >
             <div class="w-full md:w-1/2 md:pr-16 my-10 md:my-0">
               <div>Interests</div>
               <div>
-                Interests I enjoy gaining new experiences, my latest interest
-                has been in learning to play the guitar. In my spare time, I
-                like to put my artistic interest to use. On a regular basis, I
-                am keen on going for{" "}
-                <span class="text-brand-pink">nature walks</span> and{" "}
+                I enjoy gaining new experiences, my latest interest has been in
+                learning to play the guitar. In my spare time, I like to put my
+                artistic interest to use. On a regular basis, I am keen on going
+                for <span class="text-brand-pink">nature walks</span> and{" "}
                 <span class="text-brand-pink">
                   {" "}
                   meeting my four-legged furry friends 🐕‍🦺
@@ -192,7 +197,7 @@ const About = () => {
 
         <Principles
           textEnter={textEnter}
-          textLeave={textLeave}
+          // textLeave={textLeave}
           imageEnter={imageEnter}
         />
         {/* <Skills

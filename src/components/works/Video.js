@@ -10,21 +10,37 @@ const Video = ({ work, largeEnter, imageEnter, setLoading }) => {
     if (videoswitch) {
       video.current.pause();
       setvideo(false);
+      setplay(false);
     } else {
       video.current.play();
       setvideo(true);
+      setplay(true);
     }
   };
   const toggleOverlay = () => {
     setShowOverlay(true);
     setTimeout(() => {
       setShowOverlay(false);
-    }, 2000);
+    }, 1000);
   };
+  // on pressing spacebar without jquery
+  document.addEventListener("keydown", function (e) {
+    if (e.keyCode == 32) {
+      e.preventDefault();
+      handleVideo();
+    }
+  });
+  useEffect(() => {
+    play ? toggleOverlay() : setShowOverlay(true);
+  }, [play]);
+
   return (
     <div className="w-full h-full relative">
       <video
-        onClick={toggleOverlay}
+        onClick={() => {
+          // toggleOverlay();
+          handleVideo();
+        }}
         className="md:h-screen relative w-full object-contain md:object-cover  bg-cover bg-no-repeat bg-center"
         alt="loading..."
         ref={video}
@@ -36,10 +52,10 @@ const Video = ({ work, largeEnter, imageEnter, setLoading }) => {
         />
       </video>
       <div
-        // onClick={() => {
-        //   handleVideo();
-        //   setShowOverlay(false);
-        // }}
+        onClick={() => {
+          handleVideo();
+          // setShowOverlay(false);
+        }}
         class={`absolute bg-black  transition-all duration-300 w-full h-full top-0 left-0 ${
           !showOverlay ? " hidden" : "opacity-50"
         }`}
@@ -52,7 +68,7 @@ const Video = ({ work, largeEnter, imageEnter, setLoading }) => {
             onMouseLeave={imageEnter}
             onClick={() => {
               handleVideo();
-              setShowOverlay(true);
+              // setShowOverlay(true);
             }}
             className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-5xl  ${
               videoswitch && "  "
@@ -67,7 +83,7 @@ const Video = ({ work, largeEnter, imageEnter, setLoading }) => {
             onMouseLeave={imageEnter}
             onClick={() => {
               handleVideo();
-              setShowOverlay(false);
+              // setShowOverlay(false);
             }}
             className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-5xl  ${
               videoswitch && " "

@@ -9,7 +9,7 @@ const Principles = ({ textEnter, imageEnter, textLeave }) => {
   return (
     <div
       onMouseEnter={imageEnter}
-      onMouseLeave={textLeave}
+      // onMouseLeave={textLeave}
       className="min-h-screen my-10 md:my-0 px-5 md:px-48 flex flex-col justify-center "
     >
       <WorkHeading text={"values"} />

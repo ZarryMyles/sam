@@ -112,16 +112,10 @@ const BillEasy = () => {
     image: Hero,
     video:
       "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662181482/work_gifs/BillEasy-short_yhhk58.mp4",
-    // "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662180400/work_gifs/billEasyShort_wzcud4.gif",
-    // gif: true,
     video2:
       "https://res.cloudinary.com/genesiscloudimages/video/upload/v1660394170/work_gifs/C01_yqtldj.mp4",
     title: "BillEasy",
     domain: "Research",
-    subtitle: "A web app for managing your bills",
-    description: "A web app for managing your bills",
-    link: "https://billeasy.com",
-    linkText: "Visit BillEasy",
   };
   const [loading, setLoading] = useState(true);
 
@@ -129,13 +123,14 @@ const BillEasy = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 1500);
+    }, 2500);
   }, []);
   return (
     <div className="w-full overflow-clip">
       {loading && (
         <div class="fixed w-full h-full z-50">
-          <Loader />
+          {" "}
+          <Loader />{" "}
         </div>
       )}
       <div
@@ -165,32 +160,28 @@ const BillEasy = () => {
         {/* project brief */}
         <div class=" px-5 py-10 md:px-24 md:my-20 flex flex-wrap justify-between  ">
           <div className="  my-5    ">
-            <div class="text-xl font-bold font-lato-bold flex items-center -ml-1">
+            <div class="text-xl  font-lato flex items-center -ml-1">
               <img src={Clipboard} className="mr-2 w-5 " alt="" /> Project Type
             </div>
-            <div className="font-lato-light font-bold mt-2">
-              In-house, Fin-Tech
-            </div>
+            <div className="font-lato  mt-2">In-house, Fin-Tech</div>
           </div>
-          <div className=" w-1/2 md:w-auto my-5   ">
-            <div class="text-xl font-bold font-lato-bold flex items-center -ml-2">
+          <div className=" w-1/2 md:w-auto my-5   pl-4 md:pl-0">
+            <div class="text-xl  font-lato flex items-center -ml-2">
               <img src={Calendar} className="mr-2 w-5 " alt="" /> Timeline
             </div>
-            <div className="font-lato-light font-bold mt-2">3 months</div>
+            <div className="font-lato  mt-2">3 months</div>
           </div>
           <div className=" w-1/2 md:w-auto my-5   ">
-            <div class="text-xl font-bold font-lato-bold flex items-center -ml-1">
+            <div class="text-xl  font-lato flex items-center -ml-1">
               <img src={TippingHand} className="mr-2 w-5 " alt="" /> My Role
             </div>
-            <div className="font-lato-light font-bold mt-2">
-              UX & UI Design Intern
-            </div>
+            <div className="font-lato  mt-2">UX & UI Design Intern</div>
           </div>
-          <div className=" w-1/2 md:w-auto my-5   ">
-            <div class="text-xl font-bold font-lato-bold flex items-center -ml-1">
+          <div className=" w-1/2 md:w-auto my-5   pl-4 md:pl-0">
+            <div class="text-xl  font-lato flex items-center -ml-1">
               <img src={Fist} className="mr-2 w-5 " alt="" /> Design Team
             </div>
-            <div className="font-lato-light font-bold mt-2">Myself</div>
+            <div className="font-lato  mt-2">Myself</div>
           </div>
         </div>
         {/* project concept */}
@@ -202,7 +193,7 @@ const BillEasy = () => {
                 style={{
                   marginBottom: "30px",
                 }}
-                class="  text-2xl md:text-4xl  tracking-widest font-lato-light font-bold flex items-center"
+                class="  text-2xl md:text-4xl  tracking-widest font-lato  flex items-center"
               >
                 <img src={LightBulb} className="mr-2 w-9 " alt="" /> BillEasy
               </div>
@@ -312,7 +303,7 @@ const BillEasy = () => {
                 stroke="none"
               />
               <div
-                className="font-lato-light tracking-0.5  ml-4 md:ml-9"
+                className="font-lato  tracking-0.5  ml-4 md:ml-9"
                 style={{
                   color: "#FEFEFE",
                 }}
@@ -352,7 +343,7 @@ const BillEasy = () => {
             class="col-span-12 md:col-span-6 h-full  "
           >
             <div class="flex items-center">
-              <div class="  text-2xl md:text-4xl flex items-center  md:-ml-2  tracking-1.5 font-lato-light font-bold ">
+              <div class="  text-2xl md:text-4xl flex items-center  md:-ml-2  tracking-1.5 font-lato ">
                 <img src={GuideDog} alt="" class="w-9 mr-2" /> Identifying the
                 problem
               </div>
@@ -387,6 +378,7 @@ const BillEasy = () => {
           <div class="col-span-12 md:col-span-5 h-full flex flex-col   items-center justify-center">
             <a
               href="https://www.notion.so/Interview-questions-f44bac2a862146ec90e5aa9c18827e86"
+              target="_blank"
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
               class="flex items-center"
@@ -403,7 +395,7 @@ const BillEasy = () => {
                   color: "#3D6BC5",
                   // letterSpacing: "3px",
                 }}
-                class="uppercase text-base font-lato-light font-bold tracking-3"
+                class="uppercase text-base font-lato-bold tracking-3"
               >
                 Interview questions
               </div>
@@ -506,7 +498,7 @@ const BillEasy = () => {
           >
             <div class="col-span-12 md:col-span-6 h-full ">
               <div
-                className=" text-white text-2xl md:text-4xl  flex items-center "
+                className=" text-brand-white text-2xl md:text-4xl  flex items-center "
                 style={{
                   marginBottom: "30px",
                 }}
@@ -514,49 +506,44 @@ const BillEasy = () => {
                 <img src={MonocleFace} alt="" class="mr-2 w-9" /> Usability
                 testing
               </div>
-              <ul class="text-brand-gray list-disc ml-4 text-justify ">
+              <ul class="text-brand-white list-disc ml-4 text-justify ">
                 <li className="my-4">
                   The purpose of usability testing was to determine whether
                   existing solutions in the market truly addresses the problem
                   better than the current manual approach,{" "}
-                  <span style={{ color: "#6AC296" }} class="text-white">
+                  <span style={{ color: "#6AC296" }}>
                     meets users’ expectations
                   </span>{" "}
                   and help us in making{" "}
-                  <span style={{ color: "#6AC296" }} class="text-white">
+                  <span style={{ color: "#6AC296" }}>
                     fact- based design decisions.
                   </span>
                 </li>
 
                 <li className="my-4">
                   We chose to run a test on{" "}
-                  <span style={{ color: "#6AC296" }} class="text-white">
-                    Clear one software
-                  </span>{" "}
+                  <span style={{ color: "#6AC296" }}>Clear one software</span>{" "}
                   through our competitors' study since it was close to our
                   vision.
                 </li>
 
                 <li className="my-4">
                   After establishing usability matrix, we{" "}
-                  <span style={{ color: "#6AC296" }} class="text-white">
-                    compared Clear one
-                  </span>{" "}
+                  <span style={{ color: "#6AC296" }}>compared Clear one</span>{" "}
                   matrix to the matrix obtained from{" "}
-                  <span style={{ color: "#6AC296" }} class="text-white">
-                    excel sheets
-                  </span>{" "}
-                  (a manual process).
+                  <span style={{ color: "#6AC296" }}>excel sheets</span> (a
+                  manual process).
                 </li>
                 <a
                   onMouseEnter={largeEnter}
                   onMouseLeave={imageEnter}
                   href="https://morning-jackrabbit-815.notion.site/UT-Detailed-Documentation-0c9b6fb704484844b6ebf1d113d81b53"
+                  target="_blank"
                   style={{
                     color: "#3D6BC5",
                     marginTop: "30px",
                   }}
-                  class="uppercase text-base flex items-center font-lato-light font-bold tracking-3 my-10 md:my-5 "
+                  class="uppercase text-base flex items-center font-lato-bold tracking-3 my-10 md:my-5 "
                 >
                   <ArrowRightCircle
                     width={30}
@@ -619,8 +606,22 @@ const BillEasy = () => {
             matrix results
           </div>
           <div className=" mb-2">
-            S1,S2 and S3 are the given scenarios to prepare invoices using Excel
-            sheets and Clear one software.{" "}
+            <span
+              style={{
+                color: "#6AC296",
+              }}
+            >
+              S1,S2 and S3
+            </span>{" "}
+            are the given scenarios to prepare invoices using{" "}
+            <span
+              style={{
+                color: "#6AC296",
+              }}
+            >
+              Excel sheets and Clear one{" "}
+            </span>
+            software.{" "}
           </div>
           <img src={usabilityMatrix} className="w-full" alt="" />
         </div>
@@ -736,6 +737,7 @@ const BillEasy = () => {
             onMouseLeave={imageEnter}
             style={{ color: "#6AC296" }}
             href="https://www.notion.so/BillEasy-Research-eede878d31d8405dba2c5543dbb3da67"
+            target="_blank"
             className="tracking-3 mb-10 md:mb-20 px-5 flex items-center md:px-24 text-sm md:text-base  uppercase font-lato-bold"
           >
             <ArrowRightCircle
@@ -750,38 +752,7 @@ const BillEasy = () => {
           <div class="px-5 hidden md:block">
             <img src={collage} className="w-full" alt="" />
           </div>
-          {/* <div class=" hidden md:grid px-5    grid-cols-2 md:grid-cols-11 items-center ">
-            <div class="col-span-2 md:col-span-3  ">
-              <img src={CaseStudy2} className="" alt="" />
-            </div>
-            <div class="col-span-2 md:px-4 h-full flex flex-col justify-between">
-              <img src={CaseStudy3} className="my-2" alt="" />
-              <div class="md:px-2">
-                <img src={CaseStudy1} className="w-full" alt="" />
-              </div>
-            </div>
-            <div class="col-span-2  h-full flex flex-col justify-center items-center">
-              <div class="md:px-4">
-                <img src={CaseStudy8} className="my-2 " alt="" />
-              </div>
-              <img src={CaseStudy9} className="my-2 w-full" alt="" />
-            </div>
-            <div class="col-span-2 md:px-2 h-full flex flex-col justify-center items-center">
-              <div class="md:px-4">
-                <img src={CaseStudy5} className="my-2 w-full" alt="" />
-              </div>
-              <img src={CaseStudy7} className="my-2" alt="" />
-            </div>
-            <div class="col-span-2 md:pl-4 h-full flex flex-col justify-center items-center">
-              <img
-                // onLoad={() => console.log("loading")}
-                src={CaseStudy6}
-                className="my-2"
-                alt=""
-              />
-              <img src={CaseStudy4} className="my-2" alt="" />
-            </div>
-          </div> */}
+
           <div class="md:hidden px-5 flex flex-col justify-center items-center">
             <img src={CaseStudy2} className="  " alt="" />
             <img src={CaseStudy3} className="my-2  " alt="" />{" "}
@@ -803,9 +774,6 @@ const BillEasy = () => {
               "https://res.cloudinary.com/ahum/video/upload/v1662232035/BillEasy_Visual_hzrwgo.mp4",
             domain: "visual design",
             title: "BillEasy",
-            image:
-              "https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-
             link: "/billeasy-visual-design",
           }}
         />

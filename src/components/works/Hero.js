@@ -2,12 +2,12 @@ import React from "react";
 
 const Hero = ({ work, next, largeEnter, imageEnter }) => {
   return (
-    <div className="h-screen w-full overflow-clip flex  ">
+    <div className="h-screen w-full overflow-clip flex leading-0  ">
       <div
         style={{
           width: "19.5%",
         }}
-        class="     z-20 relative bg-brand-black h-full flex flex-col justify-center w-full items-center px-5 md:px-24"
+        class="     z-20 relative bg-brand-black h-full flex flex-col w-full  px-5 md:px-24"
       >
         <div class="flex  h-full    flex-col w-full justify-center pt-20  ">
           <div class="flex items-center mb-12 w-max">
@@ -20,7 +20,7 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
             />
             <div
               style={{ letterSpacing: "2px" }}
-              class=" font-lato-med text-brand-gray uppercase   tracking-widest "
+              class=" font-lato-med text-brand-gray uppercase   "
             >
               {work.domain}
             </div>
@@ -36,15 +36,31 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
             {work.title}
           </div>
           {/* line animation */}
-          <div
-            style={{
-              width: "1.3px",
-              height: "32px",
-              backgroundColor: "#424242",
-              bottom: "70px",
-            }}
-            class="work-hero-vertical-line absolute  "
-          ></div>
+          {!next && (
+            <div
+              className="vertical-line-parent "
+              style={{
+                // paddingTop: "206px",
+                width: "1.3px",
+                height: "32px",
+                bottom: "73px",
+                // backgroundColor: "#424242",
+              }}
+              // className
+            >
+              <div
+                style={
+                  {
+                    // width: "1.3px",
+                    // height: "32px",
+                    // backgroundColor: "#424242",
+                  }
+                }
+                class="work-hero-vertical-line   "
+              ></div>
+            </div>
+          )}
+
           {next && (
             <a
               onMouseEnter={largeEnter}
@@ -61,7 +77,7 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
         </div>
       </div>
       <div
-        class=" md:hidden z-10 bg-contain bg-center bg-no-repeat brightness-20 bg-brand-black"
+        class=" md:hidden z-10  h-full bg-cover  bg-center bg-no-repeat brightness-20 bg-brand-black"
         style={{
           width: "80.5%",
           backgroundImage: `url(${work.image})`,
@@ -84,7 +100,7 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
         </video>
       ) : (
         <img
-          class="hidden md:block z-10 bg-cover bg-center bg-no-repeat brightness-50 bg-brand-gray"
+          class="hidden md:block z-10 object-cover object-center bg-no-repeat brightness-50 bg-brand-gray"
           style={{
             width: "80.5%",
           }}
