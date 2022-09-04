@@ -620,8 +620,10 @@ const HappilyEver = () => {
       <a
         largeEnter={largeEnter}
         imageEnter={imageEnter}
+        target="_blank"
+        rel="noreferrer"
         style={{ color: "#ED9D9D" }}
-        href="https://www.notion.so/BillEasy-Research-eede878d31d8405dba2c5543dbb3da67"
+        href="https://www.notion.so/Branding-752204234b2b42f09ccd93144504ac5a"
         className="tracking-3 md:mt-20 md:px-24 mb-10 md:mb-40 flex items-center text-sm md:text-base uppercase font-lato-bold"
       >
         <ArrowRightCircle

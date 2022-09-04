@@ -897,8 +897,9 @@ const SmartVision = () => {
         onMouseEnter={largeEnter}
         onMouseLeave={imageEnter}
         style={{ color: "#7CCBCD" }}
-        href="https://www.notion.so/BillEasy-Research-eede878d31d8405dba2c5543dbb3da67"
+        href="https://www.notion.so/Smart-Vision-c7010846836246598e1c49aba44640eb"
         target="_blank"
+        rel="noreferrer"
         className="tracking-3 mb-10 md:mb-40 md:mt-24 px-5 flex items-center md:px-24 text-sm md:text-base  uppercase font-lato-bold"
       >
         <ArrowRightCircle

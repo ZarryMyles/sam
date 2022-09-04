@@ -95,14 +95,23 @@ const Navbar = ({
           style={{ color: "#b5b5b5" }}
           className="flex tracking-1.5 flex-row "
         >
-          <a
-            href="/#work"
-            onMouseEnter={largeEnter}
-            onMouseLeave={imageEnter}
-            className="text-lg font-lato cursor-pointer block md:inline-block p-5 no-underline border-none"
+          <Link
+            activeClass="active"
+            to="work"
+            spy={true}
+            smooth={true}
+            duration={500}
+            className="block md:inline-block p-5 no-underline border-none"
           >
-            Work
-          </a>
+            <a
+              href="/#work"
+              onMouseEnter={largeEnter}
+              onMouseLeave={imageEnter}
+              className="text-lg font-lato cursor-pointer block md:inline-block p-5 no-underline border-none"
+            >
+              Work
+            </a>
+          </Link>
           <a
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
@@ -112,14 +121,23 @@ const Navbar = ({
           >
             About
           </a>
-          <a
-            href="/#get-in-touch"
-            onMouseEnter={largeEnter}
-            onMouseLeave={imageEnter}
-            className="cursor-pointer font-lato text-lg block md:inline-block p-5 no-underline border-none"
+          <Link
+            activeClass="active"
+            to="get-in-touch"
+            spy={true}
+            smooth={true}
+            duration={500}
+            className="block md:inline-block p-5 no-underline border-none"
           >
-            Contact
-          </a>
+            <a
+              href="/#get-in-touch"
+              onMouseEnter={largeEnter}
+              onMouseLeave={imageEnter}
+              className="cursor-pointer font-lato text-lg block md:inline-block p-5 no-underline border-none"
+            >
+              Contact
+            </a>
+          </Link>
           <a
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
@@ -154,35 +172,50 @@ const Navbar = ({
         </a>
 
         <div className="flex flex-row text-brand-gray font-lato text-lg ">
-          <a
-            href="/#work"
-            onMouseEnter={largeEnter}
-            onMouseLeave={imageEnter}
-            className="text-lg font-lato cursor-pointer block md:inline-block p-5 no-underline border-none"
+          <Link
+            activeClass="active"
+            to="work"
+            spy={true}
+            smooth={true}
+            duration={500}
+            className="block md:inline-block p-2 no-underline border-none"
           >
-            Work
-          </a>{" "}
+            <a
+              href="/#work"
+              onMouseEnter={largeEnter}
+              onMouseLeave={imageEnter}
+              className="text-lg font-lato cursor-pointer block md:inline-block no-underline border-none"
+            >
+              Work
+            </a>
+          </Link>{" "}
           <a
-            className="p-5"
+            className="p-2"
             href="/about"
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
           >
             About
           </a>
-          <a
-            onMouseEnter={largeEnter}
-            onMouseLeave={imageEnter}
-            target="_blank"
-            rel="noreferrer"
-            href="https://drive.google.com/file/d/1gdC7zdeDq_ZZZVhfR79LOOZrqUFiqytM/view?usp=sharing"
-            onClick={uncheckNav}
-            className="font-lato text-lg  top-0 overflow-hidden pl-5 flex flex-row items-center"
+          <Link
+            activeClass="active"
+            to="get-in-touch"
+            spy={true}
+            smooth={true}
+            duration={500}
+            className="block md:inline-block p-2 no-underline border-none"
           >
-            Resume
-          </a>
+            <a
+              href="/#get-in-touch"
+              onMouseEnter={largeEnter}
+              onMouseLeave={imageEnter}
+              className="cursor-pointer font-lato text-lg block md:inline-block no-underline border-none"
+            >
+              Contact
+            </a>
+          </Link>
           <a
-            className="pl-5 p-5"
+            className="pl-5 p-2"
             target="_blank"
             rel="noreferrer"
             href="https://drive.google.com/file/d/1gdC7zdeDq_ZZZVhfR79LOOZrqUFiqytM/view?usp=sharing"

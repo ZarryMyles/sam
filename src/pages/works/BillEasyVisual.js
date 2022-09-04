@@ -457,7 +457,9 @@ const BillEasyVisual = () => {
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
             style={{ color: "#6AC296" }}
-            href="https://www.notion.so/BillEasy-Research-eede878d31d8405dba2c5543dbb3da67"
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.notion.so/Interface-design-b0ea7648c51243dd9ff5f3c6500742b8"
             className="tracking-3 md:mt-20 mb-10 md:mb-20 flex items-center text-sm md:text-base uppercase font-lato-bold"
           >
             <ArrowRightCircle

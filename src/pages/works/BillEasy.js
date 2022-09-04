@@ -738,6 +738,7 @@ const BillEasy = () => {
             style={{ color: "#6AC296" }}
             href="https://www.notion.so/BillEasy-Research-eede878d31d8405dba2c5543dbb3da67"
             target="_blank"
+            rel="noreferrer"
             className="tracking-3 mb-10 md:mb-20 px-5 flex items-center md:px-24 text-sm md:text-base  uppercase font-lato-bold"
           >
             <ArrowRightCircle
