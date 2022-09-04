@@ -100,10 +100,6 @@ const SmartVision = () => {
     title: "Smart Vision",
     gif: true,
     domain: "Case Study",
-    subtitle: "A web app for managing your bills",
-    description: "A web app for managing your bills",
-    link: "https://billeasy.com",
-    linkText: "Visit BillEasy",
   };
   const [loading, setLoading] = useState(true);
 
@@ -255,7 +251,9 @@ const SmartVision = () => {
           <img src={Family} className="mr-2 w-8 " alt="" /> User segmentation
         </div>
         <div class="ml-3">
-          <div className=" text-base font-lato my-5">User Type</div>
+          <div className=" text-base font-lato-bold my-5 bg-brand-darkGrey2 px-5 py-3 w-max rounded-lg -ml-5 ">
+            User Type
+          </div>
           <div className="" style={{ letterSpacing: "0.5px" }}>
             Legally blind
             <ul className="list-disc">
@@ -279,7 +277,7 @@ const SmartVision = () => {
             </ul>
           </div>
           {/* primary  */}
-          <div className=" text-base font-lato my-5 font-bold mt-8">
+          <div className=" text-base font-lato-bold my-5  mt-8 bg-brand-darkGrey2 px-5 py-3 w-max rounded-lg -ml-5 ">
             Primary User
           </div>
           <div className="" style={{ letterSpacing: "0.5px" }}>
@@ -310,7 +308,7 @@ const SmartVision = () => {
             </ul>
           </div>
           {/* secondary  */}
-          <div className=" text-base font-lato my-5 font-bold mt-8">
+          <div className=" text-base font-lato-bold my-5  mt-8 bg-brand-darkGrey2 px-5 py-3 w-max rounded-lg -ml-5 ">
             Secondary User
           </div>
           <div className="" style={{ letterSpacing: "0.5px" }}>
@@ -410,15 +408,21 @@ const SmartVision = () => {
               <img src={Problem} className="w-full" alt="" />
             </div>
             <li className="my-3">
-              Next, I Grouped Insights based on similarity of cognitive patterns
-              and characteristics for the segmented users to create personas.
+              Next, I Grouped Insights based on{" "}
+              <span style={{ color: "#7CCBCD" }}>
+                similarity of cognitive patterns and characteristics{" "}
+              </span>
+              for the segmented users to create personas.
             </li>
             <div class="px-0 md:px-5 w-full my-8">
               <img src={Problem2} className="w-full" alt="" />
             </div>{" "}
             <li className="my-3">
-              Finally, I developed a Journey map for prospective scenarios to
-              help me understand and analyze the problem in depth.
+              Finally, I developed a{" "}
+              <span style={{ color: "#7CCBCD" }}>
+                Journey map for prospective scenarios
+              </span>{" "}
+              to help me understand and analyze the problem in depth.
             </li>
             <div class="px-0 md:px-5 w-full my-8">
               <img src={Problem3} className="w-full" alt="" />
@@ -450,10 +454,10 @@ const SmartVision = () => {
                   </span>
                 </li>
                 <li class="ml-4">
-                  <span style={{ color: "#7CCBCD" }}>
-                    Keyboard letters are not legible enough.
-                  </span>{" "}
-                  Feels time consuming with TTS unless you've mastered it.
+                  Keyboard letters are{" "}
+                  <span style={{ color: "#7CCBCD" }}>not legible enough.</span>{" "}
+                  Feels <span style={{ color: "#7CCBCD" }}>time consuming</span>{" "}
+                  with TTS unless you've mastered it.
                 </li>
               </ul>
             </div>
@@ -479,11 +483,8 @@ const SmartVision = () => {
                   <span style={{ color: "#7CCBCD" }}>
                     pain texting in group chats since
                   </span>{" "}
-                  most of the times{" "}
-                  <span style={{ color: "#7CCBCD" }}>
-                    messages are read from the first
-                  </span>{" "}
-                  if a new external message pops up.
+                  most of the times messages are read from the first if a new
+                  external message pops up.
                 </li>
                 <li>Searching messages from long back is difficult.</li>
               </ul>
@@ -500,7 +501,10 @@ const SmartVision = () => {
               <div class="text-lg font-lato font-bold">Images and Videos</div>
               <ul class="my-0 md:my-8 ">
                 <li className="">
-                  Emojis and images are difficult to perceive.
+                  Emojis and images are{" "}
+                  <span style={{ color: "#7CCBCD" }}>
+                    difficult to perceive.
+                  </span>
                 </li>
               </ul>
             </div>
@@ -515,11 +519,18 @@ const SmartVision = () => {
             >
               <div class="text-lg font-lato font-bold">Letters</div>
               <ul class="my-0 md:my-8 list-decimal ml-4">
-                <li>Doesn't prefer people to hear their messages aloud.</li>
+                <li>
+                  Doesn't prefer people to{" "}
+                  <span style={{ color: "#7CCBCD" }}>
+                    hear their messages aloud.
+                  </span>
+                </li>
                 <li>Requests someone else to read it for him</li>
                 <li>
-                  Colors are either very bright or too dull, and Light mode
-                  strains eyes.
+                  Colors are either very bright or too dull, and{" "}
+                  <span style={{ color: "#7CCBCD" }}>
+                    Light mode strains eyes.
+                  </span>
                 </li>
                 <li>Reads messages in the evening.</li>
                 <li>Quick way to connect with people is needed</li>
@@ -619,9 +630,9 @@ const SmartVision = () => {
                   <div className="my-8">3. Speech Recognition</div>
                   <ul class="list-disc ml-4">
                     <li className="mt-9">
-                      It enables a program to{" "}
+                      It enables a program to process{" "}
                       <span style={{ color: "#7CCBCD" }}>
-                        process human speech to readable text.
+                        human speech to readable text.
                       </span>
                     </li>
                   </ul>
@@ -686,12 +697,13 @@ const SmartVision = () => {
                 <ul class="list-disc ml-4">
                   <li className="my-9">
                     The user will not always be pleased with the screen readers
-                    and <br /> their privacy may{" "}
-                    <span style={{ color: "#7CCBCD" }}>be compromised</span>
+                    and <br /> their{" "}
+                    <span style={{ color: "#7CCBCD" }}>
+                      privacy may be compromised
+                    </span>
                   </li>
                   <li className="my-9">
-                    The magnifier allows the user to have a{" "}
-                    <span style={{ color: "#7CCBCD" }}>closer look</span> at the
+                    The magnifier allows the user to have a closer look at the
                     text or <br />
                     image while{" "}
                     <span style={{ color: "#7CCBCD" }}>
@@ -771,18 +783,16 @@ const SmartVision = () => {
             <span style={{ color: "#7CCBCD" }}>
               contrasting yet relaxing hues
             </span>{" "}
-            to help readers read the{" "}
-            <span style={{ color: "#7CCBCD" }}>strain-free content.</span>
+            to help readers read the strain-free content.
           </li>
 
           <li className="my-4 md:my-8">
             Our users emphasized on having a{" "}
-            <span style={{ color: "#7CCBCD" }}>dark mode</span> to{" "}
-            <span style={{ color: "#7CCBCD" }}>achieve maximum contrast.</span>{" "}
-            Because pure black caused eye strain, this was modified to
             <span style={{ color: "#7CCBCD" }}>
-              #121212 with a high contrast ratio.
-            </span>
+              dark mode to achieve maximum contrast.
+            </span>{" "}
+            Because pure black caused eye strain, this was modified to #121212
+            with a high contrast ratio.
           </li>
         </ul>
         {/* color thingy */}
@@ -885,6 +895,7 @@ const SmartVision = () => {
         onMouseLeave={imageEnter}
         style={{ color: "#7CCBCD" }}
         href="https://www.notion.so/BillEasy-Research-eede878d31d8405dba2c5543dbb3da67"
+        target="_blank"
         className="tracking-3 mb-10 md:mb-40 md:mt-24 px-5 flex items-center md:px-24 text-sm md:text-base  uppercase font-lato-bold"
       >
         <ArrowRightCircle
@@ -900,16 +911,13 @@ const SmartVision = () => {
         largeEnter={largeEnter}
         imageEnter={imageEnter}
         work={{
+          domain: "Branding",
+          title: "HappilyEver",
+          video: "../assets/work_gifs/happilyEver.mp4",
           image:
-            "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-          video:
-            "https://res.cloudinary.com/genesiscloudimages/video/upload/v1660394170/work_gifs/C01_yqtldj.mp4",
-          title: "BillEasy",
-          domain: "Research",
-          subtitle: "A web app for managing your bills",
-          description: "A web app for managing your bills",
-          link: "/billeasy",
-          linkText: "Visit BillEasy",
+            "https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+
+          link: "/happilyever",
         }}
         next={true}
       />{" "}

@@ -552,17 +552,19 @@ const BillEasyVisual = () => {
       {/* end screen */}
       <div className="leading-0">
         <WorkHero
-          onMouseEnter={largeEnter}
-          onMouseLeave={imageEnter}
+          largeEnter={largeEnter}
+          imageEnter={imageEnter}
           work={{
-            domain: "Branding",
-            title: "HappilyEver",
-            video: "../assets/work_gifs/happilyEver.mp4",
-            // dog image from unsplash
-            image:
-              "https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-
-            link: "/happilyever",
+            // image: Hero,
+            video:
+              "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/Comp_1_tdwzlp.gif",
+            title: "Smart Vision",
+            gif: true,
+            domain: "Case Study",
+            subtitle: "A web app for managing your bills",
+            description: "A web app for managing your bills",
+            link: "/smart-vision",
+            linkText: "Visit BillEasy",
           }}
           next={true}
         />

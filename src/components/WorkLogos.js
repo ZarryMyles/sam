@@ -95,7 +95,9 @@ const WorkLogos = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
       <div class="w-full ">
         <Marquee speed={60} direction="right">
           {clients.map((client, index) => (
-            <div
+            <a
+              href={client.link}
+              target="_blank"
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
               style={{
@@ -104,18 +106,20 @@ const WorkLogos = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
               className="px-10 flex my-7 items-center text-xl md:text-4xl tracking-1.5  dark:text-brand-gray font-lato-light   md:mx-3"
             >
               {client.name}
-            </div>
+            </a>
           ))}
         </Marquee>
         <Marquee speed={60} direction="left">
           {clients.map((client, index) => (
-            <div
+            <a
+              href={client.link}
+              target="_blank"
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
               className="px-10 flex mb-5 items-center  font-lora-italic  text-xl md:text-4xl tracking-1.5  dark:text-brand-gray md:mx-3"
             >
               {client.name}
-            </div>
+            </a>
           ))}
         </Marquee>
       </div>

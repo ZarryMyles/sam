@@ -112,16 +112,12 @@ const BillEasy = () => {
     image: Hero,
     video:
       "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662181482/work_gifs/BillEasy-short_yhhk58.mp4",
-    // "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662180400/work_gifs/billEasyShort_wzcud4.gif",
-    // gif: true,
     video2:
       "https://res.cloudinary.com/genesiscloudimages/video/upload/v1660394170/work_gifs/C01_yqtldj.mp4",
     title: "BillEasy",
     domain: "Research",
     subtitle: "A web app for managing your bills",
     description: "A web app for managing your bills",
-    link: "https://billeasy.com",
-    linkText: "Visit BillEasy",
   };
   const [loading, setLoading] = useState(true);
 
@@ -168,7 +164,7 @@ const BillEasy = () => {
             </div>
             <div className="font-lato  mt-2">In-house, Fin-Tech</div>
           </div>
-          <div className=" w-1/2 md:w-auto my-5   ">
+          <div className=" w-1/2 md:w-auto my-5   pl-4 md:pl-0">
             <div class="text-xl  font-lato flex items-center -ml-2">
               <img src={Calendar} className="mr-2 w-5 " alt="" /> Timeline
             </div>
@@ -180,7 +176,7 @@ const BillEasy = () => {
             </div>
             <div className="font-lato  mt-2">UX & UI Design Intern</div>
           </div>
-          <div className=" w-1/2 md:w-auto my-5   ">
+          <div className=" w-1/2 md:w-auto my-5   pl-4 md:pl-0">
             <div class="text-xl  font-lato flex items-center -ml-1">
               <img src={Fist} className="mr-2 w-5 " alt="" /> Design Team
             </div>
@@ -381,6 +377,7 @@ const BillEasy = () => {
           <div class="col-span-12 md:col-span-5 h-full flex flex-col   items-center justify-center">
             <a
               href="https://www.notion.so/Interview-questions-f44bac2a862146ec90e5aa9c18827e86"
+              target="_blank"
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
               class="flex items-center"
@@ -540,6 +537,7 @@ const BillEasy = () => {
                   onMouseEnter={largeEnter}
                   onMouseLeave={imageEnter}
                   href="https://morning-jackrabbit-815.notion.site/UT-Detailed-Documentation-0c9b6fb704484844b6ebf1d113d81b53"
+                  target="_blank"
                   style={{
                     color: "#3D6BC5",
                     marginTop: "30px",
@@ -738,6 +736,7 @@ const BillEasy = () => {
             onMouseLeave={imageEnter}
             style={{ color: "#6AC296" }}
             href="https://www.notion.so/BillEasy-Research-eede878d31d8405dba2c5543dbb3da67"
+            target="_blank"
             className="tracking-3 mb-10 md:mb-20 px-5 flex items-center md:px-24 text-sm md:text-base  uppercase font-lato-bold"
           >
             <ArrowRightCircle

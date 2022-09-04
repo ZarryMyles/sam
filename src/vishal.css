@@ -146,21 +146,42 @@ a {
 .font-google-sans {
   font-family: "Google Sans", sans-serif;
 }
-
+.vertical-line-parent{
+    display: block;
+    position: absolute;
+}
 .work-hero-vertical-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(218, 218, 218, 0.24);
+    -webkit-animation: lineanim 5s infinite;
   animation: lineanim infinite 5s linear;
 }
 /* animate increasing and decreasing height of line */
 @keyframes lineanim {
   0% {
-    height: 0px;
-  }
-  50% {
-    height: 32px;
-  }
-  100% {
-    height: 0px;
-  }
+    -webkit-transform: translateY(0) scaleY(1);
+    transform: translateY(0) scaleY(1);
+}
+50% {
+    -webkit-transform: translateY(0) scaleY(1);
+    transform: translateY(0) scaleY(1);
+}
+75% {
+    -webkit-transform: translateY(30px) scaleY(0);
+    transform: translateY(30px) scaleY(0);
+}
+76% {
+    -webkit-transform: translateY(-20px) scaleY(0);
+    transform: translateY(-20px) scaleY(0);
+}
+93% {
+    -webkit-transform: translateY(0) scaleY(1);
+    transform: translateY(0) scaleY(1);
+}
 }
 
 .mb-130 {

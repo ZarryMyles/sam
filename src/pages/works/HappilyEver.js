@@ -616,8 +616,8 @@ const HappilyEver = () => {
         </div>
       </div>
       <a
-        onMouseEnter={largeEnter}
-        onMouseLeave={imageEnter}
+        largeEnter={largeEnter}
+        imageEnter={imageEnter}
         style={{ color: "#ED9D9D" }}
         href="https://www.notion.so/BillEasy-Research-eede878d31d8405dba2c5543dbb3da67"
         className="tracking-3 md:mt-20 md:px-24 mb-10 md:mb-40 flex items-center text-sm md:text-base uppercase font-lato-bold"
@@ -633,13 +633,15 @@ const HappilyEver = () => {
       </a>
       {/* end screen */}
       <WorkHero
+        largeEnter={largeEnter}
+        imageEnter={imageEnter}
         work={{
           domain: "Research",
           title: "BillEasy",
-          // dog image from unsplash
           image:
             "https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-
+          video:
+            "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662181482/work_gifs/BillEasy-short_yhhk58.mp4",
           link: "/billeasy",
         }}
         next={true}
