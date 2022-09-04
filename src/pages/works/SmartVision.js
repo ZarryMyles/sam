@@ -115,7 +115,10 @@ const SmartVision = () => {
       className="text-justify bg-brand-black text-brand-white"
     >
       {loading && (
-        <div class="fixed w-full h-full z-50">{/* <Loader /> */}</div>
+        <div class="fixed w-full h-full z-50">
+          {" "}
+          <Loader />{" "}
+        </div>
       )}
       <Navbar defaultColor={"white"} />
       <WorkHero

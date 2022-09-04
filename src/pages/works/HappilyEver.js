@@ -113,7 +113,9 @@ const HappilyEver = () => {
       className="overflow-hidden font-lato font-normal text-justify bg-brand-black text-brand-white"
     >
       {loading && (
-        <div class="fixed w-full h-full z-50">{/* <Loader /> */}</div>
+        <div class="fixed w-full h-full z-50">
+          <Loader />
+        </div>
       )}
       <Navbar
         largeEnter={largeEnter}

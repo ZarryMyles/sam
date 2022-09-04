@@ -116,8 +116,6 @@ const BillEasy = () => {
       "https://res.cloudinary.com/genesiscloudimages/video/upload/v1660394170/work_gifs/C01_yqtldj.mp4",
     title: "BillEasy",
     domain: "Research",
-    subtitle: "A web app for managing your bills",
-    description: "A web app for managing your bills",
   };
   const [loading, setLoading] = useState(true);
 
@@ -125,12 +123,15 @@ const BillEasy = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 1500);
+    }, 2500);
   }, []);
   return (
     <div className="w-full overflow-clip">
       {loading && (
-        <div class="fixed w-full h-full z-50">{/* <Loader /> */}</div>
+        <div class="fixed w-full h-full z-50">
+          {" "}
+          <Loader />{" "}
+        </div>
       )}
       <div
         onMouseEnter={imageEnter}
@@ -751,38 +752,7 @@ const BillEasy = () => {
           <div class="px-5 hidden md:block">
             <img src={collage} className="w-full" alt="" />
           </div>
-          {/* <div class=" hidden md:grid px-5    grid-cols-2 md:grid-cols-11 items-center ">
-            <div class="col-span-2 md:col-span-3  ">
-              <img src={CaseStudy2} className="" alt="" />
-            </div>
-            <div class="col-span-2 md:px-4 h-full flex flex-col justify-between">
-              <img src={CaseStudy3} className="my-2" alt="" />
-              <div class="md:px-2">
-                <img src={CaseStudy1} className="w-full" alt="" />
-              </div>
-            </div>
-            <div class="col-span-2  h-full flex flex-col justify-center items-center">
-              <div class="md:px-4">
-                <img src={CaseStudy8} className="my-2 " alt="" />
-              </div>
-              <img src={CaseStudy9} className="my-2 w-full" alt="" />
-            </div>
-            <div class="col-span-2 md:px-2 h-full flex flex-col justify-center items-center">
-              <div class="md:px-4">
-                <img src={CaseStudy5} className="my-2 w-full" alt="" />
-              </div>
-              <img src={CaseStudy7} className="my-2" alt="" />
-            </div>
-            <div class="col-span-2 md:pl-4 h-full flex flex-col justify-center items-center">
-              <img
-                // onLoad={() => console.log("loading")}
-                src={CaseStudy6}
-                className="my-2"
-                alt=""
-              />
-              <img src={CaseStudy4} className="my-2" alt="" />
-            </div>
-          </div> */}
+
           <div class="md:hidden px-5 flex flex-col justify-center items-center">
             <img src={CaseStudy2} className="  " alt="" />
             <img src={CaseStudy3} className="my-2  " alt="" />{" "}
@@ -804,9 +774,6 @@ const BillEasy = () => {
               "https://res.cloudinary.com/ahum/video/upload/v1662232035/BillEasy_Visual_hzrwgo.mp4",
             domain: "visual design",
             title: "BillEasy",
-            image:
-              "https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-
             link: "/billeasy-visual-design",
           }}
         />
