@@ -93,11 +93,9 @@ const BillEasyVisual = () => {
     linkText: "Visit BillEasy",
   };
   return (
-    <div className="overflow-hidden leading-6 bg-brand-black text-brand-white">
+    <div className="overflow-hidden  bg-brand-black text-brand-white">
       {loading && (
-        <div class="fixed loaderDiv w-screen h-screen">
-          <Loader />
-        </div>
+        <div class="fixed loaderDiv w-screen h-screen">{/* <Loader /> */}</div>
       )}
       <Navbar
         largeEnter={largeEnter}
@@ -115,7 +113,7 @@ const BillEasyVisual = () => {
           style={{
             marginBottom: "30px",
           }}
-          class="  text-2xl md:text-4xl md:my-0 my-8 tracking-widest font-lato-light font-bold flex items-center"
+          class="  text-2xl md:text-4xl md:my-0 my-8 tracking-1.5 font-lato flex items-center"
         >
           <img src={MagicWand} className="mr-2 w-9 " alt="" /> Design principles
         </div>
@@ -123,26 +121,26 @@ const BillEasyVisual = () => {
           style={{
             marginBottom: "30px",
           }}
-          className="font-lato-light font-bold text-base"
+          className="font-lato  text-base ml-4 list-disc"
         >
           <li>
-            <span>•</span> We created four{" "}
+            We created four{" "}
             <span style={{ color: "#6AC296" }}>design principles</span> that
             served as a core value of our UI design related to{" "}
             <span style={{ color: "#6AC296" }}>user pain points.</span>
           </li>
         </ul>
         <div className="px-5 flex flex-wrap font-lato font-normal text-brand-black md:text-base text-sm justify-between items-center">
-          <div className="p-3 m-2 bg-brand-boxWhite w-1/3 md:w-2/12 rounded">
+          <div className="px-6 py-5 m-2 bg-brand-darkGrey2 text-brand-white rounded-lg w-1/3 md:w-2/12 ">
             1. Intuitive
           </div>
-          <div className="p-3 m-2 bg-brand-boxWhite w-1/2 md:w-2/12 rounded">
+          <div className="px-6 py-5 m-2 bg-brand-darkGrey2 text-brand-white rounded-lg w-1/2 md:w-2/12 ">
             2. Time Efficient
           </div>
-          <div className="p-3 m-2 bg-brand-boxWhite w-1/3 md:w-2/12 rounded">
+          <div className="px-6 py-5 m-2 bg-brand-darkGrey2 text-brand-white rounded-lg w-1/3 md:w-2/12 ">
             3. Empathy
           </div>
-          <div className="p-3 m-2 bg-brand-boxWhite w-1/2 md:w-2/12 rounded">
+          <div className="px-6 py-5 m-2 bg-brand-darkGrey2 text-brand-white rounded-lg w-1/2 md:w-2/12 ">
             4. Safe
           </div>
         </div>
@@ -153,20 +151,20 @@ const BillEasyVisual = () => {
           style={{
             marginBottom: "30px",
           }}
-          class="  text-2xl md:text-4xl md:my-0 my-8 tracking-widest font-lato-light font-bold flex items-center"
+          class="  text-2xl md:text-4xl md:my-0 my-8 tracking-1.5 font-lato-light font-bold flex items-center"
         >
-          <img src={SmallBlueDiamond} className="mr-2 w-9 " alt="" /> Use Cases
+          <img src={SmallBlueDiamond} className=" mr-3 w-9 " alt="" /> Use cases
         </div>
         <div className="p-5 md:pt-0 text-brand-black font-lato font-normal flex flex-wrap md:text-base text-sm justify-between items-center">
-          <div className="p-3 m-2 flex justify-start items-center flex-row bg-gray-200 w-full md:w-2/12 rounded">
+          <div className="p-3 py-5 m-2 flex justify-start items-center flex-row bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
             <img src={invoiceGen} width="30px" alt="page" className="mr-2" />{" "}
             Invoice Generation
           </div>
-          <div className="p-3 m-2 flex justify-start items-center flex-row bg-gray-200 w-full md:w-2/12 rounded">
+          <div className="p-3 py-5 m-2 flex justify-start items-center flex-row bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
             <img src={invoiceDis} width="30px" alt="page" className="mr-2" />{" "}
             Invoice Distribution
           </div>
-          <div className="p-3 m-2 flex justify-start items-center flex-row bg-gray-200 w-full md:w-2/12 rounded">
+          <div className="p-3 py-5 m-2 flex justify-start items-center flex-row bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
             <div
               style={{ backgroundColor: "#5CCBFF", width: "30px" }}
               className="rounded-3xl mr-2 p-0.5"
@@ -175,7 +173,7 @@ const BillEasyVisual = () => {
             </div>
             Invoice Storage
           </div>
-          <div className="p-3 m-2 flex justify-start items-center flex-row bg-gray-200 w-full md:w-2/12 rounded">
+          <div className="p-3 py-5 m-2 flex justify-start items-center flex-row bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
             <img src={reportTrack} width="30px" alt="page" className="mr-2" />{" "}
             Report Tracking
           </div>{" "}
@@ -211,7 +209,7 @@ const BillEasyVisual = () => {
           style={{
             marginBottom: "30px",
           }}
-          class="  text-2xl md:px-24 px-5 md:text-4xl md:my-0 my-8 tracking-widest font-lato-light font-bold flex items-center"
+          class="  text-2xl md:px-24 px-5 md:text-4xl md:my-0 my-8 tracking-1.5 font-lato   flex items-center"
         >
           <img src={Eyes} className="mr-2 w-9 " alt="" /> Visual Design
         </div>
@@ -420,7 +418,7 @@ const BillEasyVisual = () => {
             style={{
               marginBottom: "30px",
             }}
-            class=" text-2xl md:text-4xl md:my-0 my-8 tracking-widest font-lato font-normal flex items-center"
+            class=" text-2xl md:text-4xl md:my-0 my-8 tracking-1.5 font-lato font-normal flex items-center"
           >
             <img src={PartyingFace} className="mr-2 w-9 " alt="" /> Result
             Matrix
@@ -446,7 +444,7 @@ const BillEasyVisual = () => {
             </div>
             <img
               src={matrix}
-              width="55%"
+              width="67%"
               alt="visual"
               className="hidden md:block -mt-10"
             />
@@ -477,7 +475,7 @@ const BillEasyVisual = () => {
             style={{
               marginBottom: "30px",
             }}
-            class=" text-2xl md:text-4xl md:my-0 my-8 tracking-widest font-lato font-normal flex items-center"
+            class=" text-2xl md:text-4xl md:my-0 my-8 tracking-1.5 font-lato font-normal flex items-center"
           >
             <img src={ClinkingGlasses} className="mr-2 w-9 " alt="" />{" "}
             Possibilities
@@ -504,7 +502,7 @@ const BillEasyVisual = () => {
                 tax calculators and more.
                 <br />
                 <br />
-                <span className="text-lg">•</span>
+                <span className="text-lg">•</span>{" "}
                 <span style={{ color: "#6AC296" }}>
                   Improving and iterating
                 </span>{" "}
@@ -522,7 +520,7 @@ const BillEasyVisual = () => {
             style={{
               marginBottom: "30px",
             }}
-            class=" text-2xl md:text-4xl md:my-0 my-8 tracking-widest font-lato font-normal flex items-center"
+            class=" text-2xl md:text-4xl md:my-0 my-8 tracking-1.5 font-lato font-normal flex items-center"
           >
             <img src={InLotusPosition} className="mr-2 w-9 " alt="" /> Learnings
             and Retrospect
@@ -552,19 +550,23 @@ const BillEasyVisual = () => {
         </div>
       </div>
       {/* end screen */}
-      <WorkHero
-        work={{
-          domain: "Branding",
-          title: "HappilyEver",
-          video: "../assets/work_gifs/happilyEver.mp4",
-          // dog image from unsplash
-          image:
-            "https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      <div className="leading-0">
+        <WorkHero
+          onMouseEnter={largeEnter}
+          onMouseLeave={imageEnter}
+          work={{
+            domain: "Branding",
+            title: "HappilyEver",
+            video: "../assets/work_gifs/happilyEver.mp4",
+            // dog image from unsplash
+            image:
+              "https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
 
-          link: "/happilyever",
-        }}
-        next={true}
-      />
+            link: "/happilyever",
+          }}
+          next={true}
+        />
+      </div>
       <motion.div
         className="cursor hidden md:flex"
         variants={variants}

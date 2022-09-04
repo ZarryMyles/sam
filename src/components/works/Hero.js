@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = ({ work, next, largeEnter, imageEnter }) => {
   return (
-    <div className="h-screen w-full overflow-clip flex  ">
+    <div className="h-screen w-full overflow-clip flex leading-0  ">
       <div
         style={{
           width: "19.5%",
@@ -20,7 +20,7 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
             />
             <div
               style={{ letterSpacing: "2px" }}
-              class=" font-lato-med text-brand-gray uppercase   tracking-widest "
+              class=" font-lato-med text-brand-gray uppercase   "
             >
               {work.domain}
             </div>
@@ -47,6 +47,7 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
               class="work-hero-vertical-line absolute  "
             ></div>
           )}
+
           {next && (
             <a
               onMouseEnter={largeEnter}

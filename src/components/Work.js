@@ -24,7 +24,7 @@ const works = [
     gif: false,
     image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg",
     video:
-      "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662218697/work_gifs/BillEasy-Visual_t37pia.mp4",
+      "https://res.cloudinary.com/ahum/video/upload/v1662232035/BillEasy_Visual_hzrwgo.mp4",
     link: "/billeasy-visual-design",
   },
   {
@@ -32,7 +32,7 @@ const works = [
     title: "HappilyEver",
     domain: "Branding",
     description:
-      "Designing brands to be more people \n Interactive : Adding value to future Brand Identities ",
+      "Designing brands to be more people \n Interactive : Adding value to future Brand \n Identities ",
     gif: true,
     image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/3.jpg",
     video:
@@ -92,7 +92,7 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
   );
   const cards = () => (
     <div
-      className="text-black relative font-lato  select-none   h-full overflow-hidden w-full    bg-cover bg-no-repeat bg-center   flex flex-col justify-center  top-0 left-0 px-5 md:px-48  "
+      className="text-black relative font-lato  select-none   h-full overflow-hidden w-full    bg-cover bg-no-repeat bg-center   flex flex-col justify-center md:justify-start md:pt-56  top-0 left-0 px-5 md:px-48  "
       onMouseEnter={imageEnter}
       // onMouseLeave={textLeave}
     >
@@ -104,7 +104,7 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
         // onMouseLeave={textLeave}
       >
         <div class="w-full md:w-full">
-          <div class="flex items-center my-12 ">
+          <div class="flex items-center mb-12 ">
             <div
               style={{
                 width: "72px",
@@ -187,19 +187,19 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
         {/* the no. with text stroke */}
         <div class="absolute bottom-10 md:bottom-2 right-2 md:right-24 flex flex-col items-center">
           <div class="  flex items-center  ">
-            {/* <ChevronLeft
+            <ChevronLeft
               color="#b5b5b5"
               width={30}
               height={30}
               strokeWidth="2"
+              onMouseEnter={largeEnter}
+              onMouseLeave={imageEnter}
               onClick={() =>
                 works.indexOf(activeWork) > 0 &&
                 setActiveWork(works[works.indexOf(activeWork) - 1])
               }
-              class={` ${
-                activeWork.id == 1 && "opacity-0 cursor-auto "
-              }    text-2xl md:text-5xl cursor-pointer mx-5  rounded-full text-white`}
-            /> */}
+              class={`    text-2xl md:text-5xl cursor-pointer mx-5  rounded-full text-white`}
+            />
             <div
               style={{
                 letterSpacing: "6px",
@@ -215,7 +215,7 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
               width={30}
               strokeWidth="2"
               height={30}
-              onMouseEnter={textEnter}
+              onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
               onClick={() => {
                 if (works.indexOf(activeWork) < works.length - 1)
@@ -227,8 +227,7 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
                 color: "#b5b5b5",
               }}
               // ${activeWork.id == 4 && "opacity-0 cursor-auto "}
-              class={`
-              p-0 md:p-0  text-2xl md:text-5xl   cursor-pointer mx-5  rounded-full text-white`}
+              class={` p-0 md:p-0  text-2xl md:text-5xl   cursor-pointer mx-5  rounded-full text-white`}
             />
           </div>
         </div>
@@ -263,31 +262,38 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
 
         {works.map((work) =>
           work.gif ? (
-            <img
-              alt="hi"
+            <div
               class={`${
                 work.id < activeWork.id
                   ? "-translate-x-full  bg-center md:bg-left"
                   : work.id > activeWork.id
                   ? " translate-x-[100%]  bg-center md:bg-right"
                   : "bg-center scale-125 "
-              }  w-full bg-cover bg-no-repeat ease-linear transition-all  duration-700 brightness-20 h-screen  object-cover  absolute
-             w-100 md:w-screen  md:opacity-100 opacity-100 md:object-cover  bg-red-100  `}
-              src={work.video}
-              // alt="loading..."
-            />
+              }  w-full bg-cover bg-no-repeat ease-linear transition-all  duration-700  h-screen    absolute
+             w-100 md:w-screen   md:object-cover  bg-red-100  `}
+            >
+              <img
+                alt="hi"
+                className="w-full h-full object-cover object-right"
+                src={work.video}
+                // alt="loading..."
+              />
+              <div class="absolute w-full h-full bg-black opacity-50 left-0 top-0"></div>
+            </div>
           ) : (
-            <div class="w-full h-full relative">
+            <div
+              class={`${
+                work.id < activeWork.id
+                  ? "-translate-x-full  bg-center md:bg-left"
+                  : work.id > activeWork.id
+                  ? " translate-x-[100%]  bg-center md:bg-right"
+                  : "bg-center scale-125 "
+              }  w-full bg-cover bg-no-repeat ease-linear transition-all  duration-700    h-screen   absolute
+               w-100 md:w-screen  md:opacity-100 opacity-100 md:object-cover   `}
+            >
               <video
                 // className=""
-                class={`${
-                  work.id < activeWork.id
-                    ? "-translate-x-full  bg-center md:bg-left"
-                    : work.id > activeWork.id
-                    ? " translate-x-[100%]  bg-center md:bg-right"
-                    : "bg-center scale-125 "
-                }  w-full bg-cover bg-no-repeat ease-linear transition-all  duration-700    h-screen  object-cover  absolute
-               w-100 md:w-screen  md:opacity-100 opacity-100 md:object-cover   `}
+                className="w-full h-full object-cover "
                 loop
                 autoPlay={activeWork.id == work.id ? true : false}
                 muted
@@ -299,14 +305,19 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
                   type="video/mp4"
                 />
               </video>
-              <div class="absolute bg-black opacity-50  transition-all duration-300 w-full h-full top-0 left-0 "></div>
+              <div class="absolute w-full h-full bg-black opacity-50 left-0 top-0"></div>
             </div>
+
             // <WorkVideo work={work.video} activeWork={activeWork} />
           )
         )}
       </div>
     </div>
   );
+  // <div class="w-full h-full relative">
+
+  // <div class="absolute bg-black opacity-50  transition-all duration-300 w-full h-full top-0 left-0 "></div>
+  //           </div>
 
   return (
     <div
