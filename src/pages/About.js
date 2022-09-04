@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { GetInTouch, Principles, Skills, Navbar } from "../components";
+import { GetInTouch, Principles, Navbar } from "../components";
 import { ReactComponent as Quote } from "../assets/icons/quotestart.svg";
-
-import { BsDot } from "react-icons/bs";
 import { useTitle } from "../hooks/useTitle";
 import { WorkHeading } from "../components";
 const About = () => {

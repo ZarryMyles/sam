@@ -40,24 +40,12 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
             <div
               className="vertical-line-parent "
               style={{
-                // paddingTop: "206px",
                 width: "1.3px",
                 height: "32px",
                 bottom: "73px",
-                // backgroundColor: "#424242",
               }}
-              // className
             >
-              <div
-                style={
-                  {
-                    // width: "1.3px",
-                    // height: "32px",
-                    // backgroundColor: "#424242",
-                  }
-                }
-                class="work-hero-vertical-line   "
-              ></div>
+              <div class="work-hero-vertical-line "></div>
             </div>
           )}
 
@@ -89,7 +77,7 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
             // height: "100vh",
             width: "100vw",
           }}
-          className=" z-10 bg-contain hidden md:block object-cover bg-center bg-no-repeat brightness-50 bg-brand-black"
+          className=" z-10 bg-contain block object-cover bg-center bg-no-repeat brightness-50 bg-brand-black"
           alt="loading..."
           loop
           autoPlay
@@ -100,7 +88,7 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
         </video>
       ) : (
         <img
-          class="hidden md:block z-10 object-cover object-center bg-no-repeat brightness-50 bg-brand-gray"
+          class=" block z-10 object-cover object-center bg-no-repeat brightness-50 bg-brand-gray"
           style={{
             width: "80.5%",
           }}

@@ -1,9 +1,6 @@
 import React from "react";
-// import Ticker from "react-ticker";
-import { AiOutlineMinus } from "react-icons/ai";
-import { GoDash } from "react-icons/go";
 import Marquee from "react-fast-marquee";
-const WorkLogos = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
+const WorkLogos = ({ imageEnter, largeEnter }) => {
   const clients = [
     {
       name: "Google Developers",
@@ -98,6 +95,7 @@ const WorkLogos = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
             <a
               href={client.link}
               target="_blank"
+              rel="noopener noreferrer"
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
               style={{
@@ -114,6 +112,7 @@ const WorkLogos = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
             <a
               href={client.link}
               target="_blank"
+              rel="noopener noreferrer"
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
               className="px-10 flex mb-5 items-center  font-lora-italic  text-xl md:text-4xl tracking-1.5  dark:text-brand-gray md:mx-3"

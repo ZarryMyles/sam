@@ -12,7 +12,6 @@ const works = [
     image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg",
     video:
       "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662181482/work_gifs/BillEasy-short_yhhk58.mp4",
-    // billEzVid,
     link: "/billeasy",
   },
   {
@@ -52,7 +51,7 @@ const works = [
     link: "/smartvision",
   },
 ];
-const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
+const LandingSection = ({ imageEnter, largeEnter }) => {
   const [activeWork, setActiveWork] = useState(works[0]);
 
   const sideNav = () => (
@@ -94,14 +93,11 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
     <div
       className="text-black relative font-lato  select-none   h-full overflow-hidden w-full    bg-cover bg-no-repeat bg-center   flex flex-col justify-center md:justify-start md:pt-56  top-0 left-0 px-5 md:px-48  "
       onMouseEnter={imageEnter}
-      // onMouseLeave={textLeave}
     >
       <div
         style={{
           zIndex: "1",
         }}
-        // onMouseEnter={imageEnter}
-        // onMouseLeave={textLeave}
       >
         <div class="w-full md:w-full">
           <div class="flex items-center mb-12 ">
@@ -112,8 +108,6 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
               class=" bg-brand-gray h-0.5 mr-3"
             />
             <div
-              // onMouseOver={() => setFlag((state) => !state)}
-              // onMouseOut={() => setFlag((state) => !state)}
               style={{
                 letterSpacing: "3px",
               }}
@@ -128,18 +122,6 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
             onMouseLeave={imageEnter}
           >
             {activeWork.title}
-            {/* <motion.div>
-              {activeWork.title.split("").map((letter, index) => (
-                <motion.span
-                  animate={flag ? `delay${index + 1}` : "default"}
-                  variants={trailVariants}
-                  key={index}
-                  initial={{ opacity: 0, y: -50 }}
-                >
-                  {letter}
-                </motion.span>
-              ))}
-            </motion.div> */}
           </div>
           <div
             style={{
@@ -175,7 +157,6 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
                 style={{
                   letterSpacing: "3px",
                   color: "#fefefe",
-                  color: "#Fefefe",
                   fontSize: "16px",
                 }}
               >
@@ -203,8 +184,6 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
             <div
               style={{
                 letterSpacing: "6px",
-                // fontWeight: "500",
-                // color: "#fefefe",
               }}
               class=" text-stroke-white mb-4 font-lato-bold  "
             >
@@ -232,34 +211,9 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
           </div>
         </div>
       </div>
-      {/* bg image */}
-      {/* {works.map((work) => (
-        <div class="w-full h-full absolute    left-0 top-0 z-0">
-          <div
-            style={{
-              backgroundImage: `url(${work.image})`,
-            }}
-            class={`${
-              work.id < activeWork.id
-                ? "-translate-x-full  bg-center md:bg-left"
-                : work.id > activeWork.id
-                ? " translate-x-[100%]  bg-center md:bg-right"
-                : "bg-center scale-125 "
-            }  w-full bg-cover bg-no-repeat ease-linear transition-all  duration-700 brightness-50 h-full `}
-          />
-        </div>
-      ))} */}
+
       {/* bg gif */}
       <div class={`w-full object-cover h-full absolute left-0 top-0 z-0`}>
-        <div
-          class="bg-black w-full h-full absolute top-0 left-0"
-          style={
-            {
-              // background: rgba(13, 13, 13, 0.78),
-            }
-          }
-        ></div>
-
         {works.map((work) =>
           work.gif ? (
             <div
@@ -292,33 +246,20 @@ const LandingSection = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
                w-100 md:w-screen  md:opacity-100 opacity-100 md:object-cover   `}
             >
               <video
-                // className=""
                 className="w-full h-full object-cover "
                 loop
-                autoPlay={activeWork.id == work.id ? true : false}
+                autoPlay={activeWork.id === work.id ? true : false}
                 muted
-                // onLoadedData={toggleLoading}
               >
-                <source
-                  // Changing source of video depending on size of the screen
-                  src={work.video}
-                  type="video/mp4"
-                />
+                <source src={work.video} type="video/mp4" />
               </video>
               <div class="absolute w-full h-full bg-black opacity-50 left-0 top-0"></div>
             </div>
-
-            // <WorkVideo work={work.video} activeWork={activeWork} />
           )
         )}
       </div>
     </div>
   );
-  // <div class="w-full h-full relative">
-
-  // <div class="absolute bg-black opacity-50  transition-all duration-300 w-full h-full top-0 left-0 "></div>
-  //           </div>
-
   return (
     <div
       id="work"

@@ -1,8 +1,8 @@
 import React from "react";
-import { BsArrowRightShort } from "react-icons/bs";
+
 import { ArrowRightCircle } from "react-feather";
 import HeroImage from "../assets/landingpage/Rectangle.png";
-const LandingSection = ({ textEnter, imageEnter, textLeave, largeEnter }) => {
+const LandingSection = ({ imageEnter, textLeave, largeEnter }) => {
   return (
     <div
       id="landing-section"

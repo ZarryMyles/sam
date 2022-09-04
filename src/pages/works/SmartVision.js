@@ -13,12 +13,8 @@ import Phone3 from "../../assets/works/smartvision/smartVisionPhone3.png";
 import Phone4 from "../../assets/works/smartvision/smartVisionPhone4.png";
 import Phone5 from "../../assets/works/smartvision/smartVisionPhone5.png";
 import Phone6 from "../../assets/works/smartvision/smartVisionPhone6.png";
-import colorChecker from "../../assets/works/smartvision/smartVisionColorChecker.svg";
-import fonts from "../../assets/works/smartvision/smartVisionFonts.svg";
 import Hero from "../../assets/works/smartvision/smartVision.png";
 import Challenges from "../../assets/works/smartvision/smartvisionChallenge.svg";
-import colorGuide from "../../assets/works/smartvision/colorGuide.svg";
-import typography from "../../assets/works/smartvision/typography.svg";
 import colorGuides from "../../assets/works/smartvision/colorGuides.svg";
 
 import {
@@ -28,7 +24,6 @@ import {
   Check,
   Clipboard,
   Family,
-  LightBulb,
   OldKey,
   Fist,
   Calendar,
@@ -917,10 +912,9 @@ const SmartVision = () => {
         work={{
           domain: "Branding",
           title: "HappilyEver",
-          video: "../assets/work_gifs/happilyEver.mp4",
-          image:
-            "https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-
+          video:
+            "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/render_s6dzdu.gif",
+          gif: true,
           link: "/happilyever",
         }}
         next={true}

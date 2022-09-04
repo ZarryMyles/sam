@@ -29,6 +29,7 @@ import {
 } from "../../assets/icons/fluent";
 // images
 import Hero from "../../assets/works/billEasy/billEasyResearchpng.png";
+import nextHero from "../../assets/works/billEasyVisual/HeroVisual.png";
 import collage from "../../assets/works/billEasy/billEasyCaseStudyCollage.png";
 import insightsImg from "../../assets/works/billEasy/billEasyInsights.svg";
 import usability1 from "../../assets/works/billEasy/billEasyUsabilityTesting1.svg";
@@ -39,7 +40,7 @@ import usabilityMatrix from "../../assets/works/billEasy/billEasyUsabilityMatrix
 import persona1 from "../../assets/works/billEasy/billEasyPersona1.svg";
 import persona2 from "../../assets/works/billEasy/billEasyPersona2.svg";
 import persona3 from "../../assets/works/billEasy/billEasyPersona3.svg";
-import CaseStudy1 from "../../assets/works/billEasy/billEasybi1.svg";
+// import CaseStudy1 from "../../assets/works/billEasy/billEasybi1.svg";
 import CaseStudy2 from "../../assets/works/billEasy/billEasybi2.svg";
 import CaseStudy3 from "../../assets/works/billEasy/billEasybi3.svg";
 import CaseStudy4 from "../../assets/works/billEasy/billEasybi4.svg";
@@ -379,6 +380,7 @@ const BillEasy = () => {
             <a
               href="https://www.notion.so/Interview-questions-f44bac2a862146ec90e5aa9c18827e86"
               target="_blank"
+              rel="noreferrer"
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
               class="flex items-center"
@@ -539,6 +541,7 @@ const BillEasy = () => {
                   onMouseLeave={imageEnter}
                   href="https://morning-jackrabbit-815.notion.site/UT-Detailed-Documentation-0c9b6fb704484844b6ebf1d113d81b53"
                   target="_blank"
+                  rel="noreferrer"
                   style={{
                     color: "#3D6BC5",
                     marginTop: "30px",
@@ -771,6 +774,7 @@ const BillEasy = () => {
           next={true}
           imageEnter={imageEnter}
           work={{
+            image: nextHero,
             video:
               "https://res.cloudinary.com/ahum/video/upload/v1662232035/BillEasy_Visual_hzrwgo.mp4",
             domain: "visual design",

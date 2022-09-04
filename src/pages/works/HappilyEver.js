@@ -286,7 +286,7 @@ const HappilyEver = () => {
         <WorkHeading text={"Research"} />
         {/* Analyzing */}
         <div class="flex items-center md:items-start md:flex-row flex-col font-lato">
-          <div class="md:pr-10 w-6/10">
+          <div class="md:pr-10 md:w-6/10">
             <div
               style={{
                 marginBottom: "30px",
@@ -329,7 +329,7 @@ const HappilyEver = () => {
         </div>
         {/* Key Insights */}
         <div class="flex items-center md:items-start md:flex-row flex-col font-lato">
-          <div class="md:pr-10 w-6/10">
+          <div class="md:pr-10 md:w-6/10">
             <div className="mt-10 md:mb-16 font-lato font-normal leading-5 tracking-1.5">
               Key Insights <br />
               <br />
@@ -375,7 +375,7 @@ const HappilyEver = () => {
       {/* Competitive Analysis */}
       <div className="p-5 md:p-20 ">
         <div class="flex items-center md:items-center justify-between md:flex-row flex-col font-lato">
-          <div className=" w-6/10 md:pr-4">
+          <div className=" md:w-6/10 md:pr-4">
             <div class=" ">
               <div
                 style={{

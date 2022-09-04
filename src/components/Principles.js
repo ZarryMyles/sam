@@ -1,15 +1,13 @@
 import React from "react";
 // icons
-import { BsDot } from "react-icons/bs";
-import { Work, WorkHeading } from ".";
-import { GiArcheryTarget, GiHiveMind } from "react-icons/gi";
-import { TbPerspective } from "react-icons/tb";
+
+import { WorkHeading } from ".";
+
 import { prin1, prin2, prin3 } from "../assets/emojis";
-const Principles = ({ textEnter, imageEnter, textLeave }) => {
+const Principles = ({ textEnter, imageEnter }) => {
   return (
     <div
       onMouseEnter={imageEnter}
-      // onMouseLeave={textLeave}
       className="min-h-screen my-10 md:my-0 px-5 md:px-48 flex flex-col justify-center "
     >
       <WorkHeading text={"values"} />

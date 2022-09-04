@@ -1,8 +1,7 @@
 import React from "react";
 import { MapPin } from "react-feather";
 import { AnimationOnScroll } from "react-animation-on-scroll";
-import { motion } from "framer-motion";
-const Footer = ({ textEnter, imageEnter, largeEnter }) => {
+const Footer = ({ imageEnter, largeEnter }) => {
   const socials = [
     {
       name: "Bengaluru",

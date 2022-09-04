@@ -1,6 +1,6 @@
 import React from "react";
 
-const GetInTouch = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
+const GetInTouch = ({ imageEnter, largeEnter }) => {
   return (
     <div
       id="get-in-touch"

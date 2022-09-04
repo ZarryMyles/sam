@@ -1,7 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
-// import vid from "../../assets/work_gifs/CO1.mp4";
 import { PlayCircle, PauseCircle } from "react-feather";
-const Video = ({ work, largeEnter, imageEnter, setLoading }) => {
+const Video = ({ work, largeEnter, imageEnter }) => {
   const video = useRef(null);
   const [videoswitch, setvideo] = useState(false);
   const [play, setplay] = useState(false);
@@ -25,7 +24,7 @@ const Video = ({ work, largeEnter, imageEnter, setLoading }) => {
   };
   // on pressing spacebar without jquery
   document.addEventListener("keydown", function (e) {
-    if (e.keyCode == 32) {
+    if (e.keyCode === 32) {
       e.preventDefault();
       handleVideo();
     }
