@@ -51,7 +51,10 @@ const HappilyEver = () => {
     default: {
       x: mousePos.x - 10,
       y: mousePos.y - 10,
-      bounce: 0,
+      transition: {
+        type: "spring",
+        mass: 0.1,
+      },
     },
     text: {
       height: 50,
@@ -60,14 +63,20 @@ const HappilyEver = () => {
       y: mousePos.y - 25,
       backgroundColor: "#ffc7d1",
       mixBlendMode: "difference",
-      bounce: 0,
+      transition: {
+        type: "spring",
+        mass: 0.1,
+      },
     },
     secondary: {
       x: mousePos.x - 10,
       y: mousePos.y - 10,
       backgroundColor: "#ffc7d1",
       mixBlendMode: "difference",
-      bounce: 0,
+      transition: {
+        type: "spring",
+        mass: 0.1,
+      },
     },
     large: {
       height: 80,
@@ -76,7 +85,10 @@ const HappilyEver = () => {
       y: mousePos.y - 40,
       backgroundColor: "#ffc7d1",
       mixBlendMode: "difference",
-      bounce: 0,
+      transition: {
+        type: "spring",
+        mass: 0.1,
+      },
     },
   };
 

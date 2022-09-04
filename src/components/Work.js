@@ -179,7 +179,11 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
                 works.indexOf(activeWork) > 0 &&
                 setActiveWork(works[works.indexOf(activeWork) - 1])
               }
-              class={`    text-2xl md:text-5xl cursor-pointer mx-5  rounded-full text-white`}
+              class={
+                works.indexOf(activeWork) === 0
+                  ? `hidden`
+                  : ` text-2xl md:text-5xl cursor-pointer mx-5  rounded-full text-white`
+              }
             />
             <div
               style={{
