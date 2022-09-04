@@ -53,7 +53,10 @@ function App() {
       y: mousePos.y - 10,
       backgroundColor: "#ffc7d1",
       mixBlendMode: "difference",
-      bounce: 0,
+      transition: {
+        type: "spring",
+        mass: 0.1,
+      },
     },
     large: {
       height: 80,
@@ -62,7 +65,10 @@ function App() {
       y: mousePos.y - 40,
       backgroundColor: "#ffc7d1",
       mixBlendMode: "difference",
-      bounce: 0,
+      transition: {
+        type: "spring",
+        mass: 0.1,
+      },
     },
   };
 

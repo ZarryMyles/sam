@@ -101,13 +101,13 @@ const Navbar = ({
             spy={true}
             smooth={true}
             duration={500}
-            className="block md:inline-block p-5 no-underline border-none"
+            className="block md:inline-block p-2 no-underline border-none"
           >
             <a
               href="/#work"
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
-              className="text-lg font-lato cursor-pointer block md:inline-block p-5 no-underline border-none"
+              className="text-lg font-lato cursor-pointer block md:inline-block p-2 no-underline border-none"
             >
               Work
             </a>
@@ -117,7 +117,7 @@ const Navbar = ({
             onMouseLeave={imageEnter}
             href="/about"
             onClick={uncheckNav}
-            className="font-lato text-lg  top-0 overflow-hidden p-5 flex flex-row items-center"
+            className="font-lato text-lg  top-0 overflow-hidden p-2 flex flex-row items-center"
           >
             About
           </a>
@@ -127,13 +127,13 @@ const Navbar = ({
             spy={true}
             smooth={true}
             duration={500}
-            className="block md:inline-block p-5 no-underline border-none"
+            className="block md:inline-block p-2 no-underline border-none"
           >
             <a
               href="/#get-in-touch"
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
-              className="cursor-pointer font-lato text-lg block md:inline-block p-5 no-underline border-none"
+              className="cursor-pointer font-lato text-lg block md:inline-block p-2 no-underline border-none"
             >
               Contact
             </a>
@@ -145,7 +145,7 @@ const Navbar = ({
             rel="noreferrer"
             href="https://drive.google.com/file/d/1gdC7zdeDq_ZZZVhfR79LOOZrqUFiqytM/view?usp=sharing"
             onClick={uncheckNav}
-            className="font-lato text-lg  top-0 overflow-hidden pl-5 flex flex-row items-center"
+            className="font-lato text-lg  top-0 overflow-hidden pl-2 flex flex-row items-center"
           >
             Resume
           </a>
