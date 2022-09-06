@@ -100,12 +100,12 @@ const BillEasyVisual = () => {
   };
   return (
     <div className="overflow-hidden  bg-brand-black text-brand-white">
-      {loading && (
+      {/* {loading && (
         <div class="fixed loaderDiv w-screen h-screen">
           {" "}
           <Loader />{" "}
         </div>
-      )}
+      )} */}
       <Navbar
         largeEnter={largeEnter}
         imageEnter={imageEnter}
@@ -113,11 +113,11 @@ const BillEasyVisual = () => {
       />
       <WorkHero work={work} largeEnter={largeEnter} imageEnter={imageEnter} />
       {/* Process */}
-      <div class="font-lato pt-20 px-5 md:pt-32 md:px-24 w-full h-full">
+      <div class="font-lato px-7 pt-32  md:px-24 w-full h-full">
         <WorkHeading text={"Process"} />
       </div>
       {/* Design Principles */}
-      <div class="font-lato h-full flex w-full flex-col md:px-24 px-5">
+      <div class="font-lato h-full flex w-full flex-col md:px-24 px-7">
         <div
           style={{
             marginBottom: "30px",
@@ -130,7 +130,7 @@ const BillEasyVisual = () => {
           style={{
             marginBottom: "30px",
           }}
-          className="font-lato  text-base ml-4 list-disc"
+          className="font-lato md:block hidden text-base ml-4 list-disc"
         >
           <li>
             We created four{" "}
@@ -139,41 +139,41 @@ const BillEasyVisual = () => {
             <span style={{ color: "#6AC296" }}>user pain points.</span>
           </li>
         </ul>
-        <div className="px-5 flex flex-wrap font-lato font-normal text-brand-black md:text-base text-sm justify-between items-center">
-          <div className="px-6 py-5 m-2 bg-brand-darkGrey2 text-brand-white rounded-lg w-1/3 md:w-2/12 ">
+        <div className="md:px-7 flex md:flex-row flex-col font-lato font-normal text-brand-black w-full md:auto md:text-base text-base justify-between md:items-center">
+          <div className="px-5 py-6 md:py-5 md:m-2 my-3 md:my-0 bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
             1. Intuitive
           </div>
-          <div className="px-6 py-5 m-2 bg-brand-darkGrey2 text-brand-white rounded-lg w-1/2 md:w-2/12 ">
+          <div className="px-5 py-6 md:py-5 md:m-2 my-3 md:my-0 bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
             2. Time Efficient
           </div>
-          <div className="px-6 py-5 m-2 bg-brand-darkGrey2 text-brand-white rounded-lg w-1/3 md:w-2/12 ">
+          <div className="px-5 py-6 md:py-5 md:m-2 my-3 md:my-0 bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
             3. Empathy
           </div>
-          <div className="px-6 py-5 m-2 bg-brand-darkGrey2 text-brand-white rounded-lg w-1/2 md:w-2/12 ">
+          <div className="px-5 py-6 md:py-5 md:m-2 mt-3 md:mt-0 bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
             4. Safe
           </div>
         </div>
       </div>
       {/* Use Cases */}
-      <div class="font-lato h-full flex w-full flex-col md:px-24 px-5 pt-10 md:pt-32">
+      <div class="font-lato h-full flex w-full flex-col md:px-24 px-7 pt-32">
         <div
           style={{
             marginBottom: "30px",
           }}
-          class="  text-2xl md:text-4xl md:my-0 my-8 tracking-1.5 font-lato-light font-bold flex items-center"
+          class="  text-2xl md:text-4xl md:my-0 my-8 tracking-1.5 font-lato flex items-center"
         >
-          <img src={SmallBlueDiamond} className=" mr-3 w-9 " alt="" /> Use cases
+          <img src={SmallBlueDiamond} className="mr-2 w-9 " alt="" /> Use Cases
         </div>
-        <div className="p-5 md:pt-0 text-brand-black font-lato font-normal flex flex-wrap md:text-base text-sm justify-between items-center">
-          <div className="p-3 py-5 m-2 flex justify-start items-center flex-row bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
+        <div className="md:px-7 flex md:flex-row flex-col font-lato font-normal text-brand-black w-full md:auto md:text-base text-base justify-between md:items-center">
+          <div className="px-5 py-6 flex justify-start items-center md:py-5 md:m-2 my-3 md:my-0 bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
             <img src={invoiceGen} width="30px" alt="page" className="mr-2" />{" "}
             Invoice Generation
           </div>
-          <div className="p-3 py-5 m-2 flex justify-start items-center flex-row bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
+          <div className="px-5 py-6 flex justify-start items-center md:py-5 md:m-2 my-3 md:my-0 bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
             <img src={invoiceDis} width="30px" alt="page" className="mr-2" />{" "}
             Invoice Distribution
           </div>
-          <div className="p-3 py-5 m-2 flex justify-start items-center flex-row bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
+          <div className="px-5 py-6 flex justify-start items-center md:py-5 md:m-2 my-3 md:my-0 bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
             <div
               style={{ backgroundColor: "#5CCBFF", width: "30px" }}
               className="rounded-3xl mr-2 p-0.5"
@@ -182,10 +182,10 @@ const BillEasyVisual = () => {
             </div>
             Invoice Storage
           </div>
-          <div className="p-3 py-5 m-2 flex justify-start items-center flex-row bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
+          <div className="px-5 py-6 flex justify-start items-center md:py-5 md:m-2 mt-3 md:mt-0 bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
             <img src={reportTrack} width="30px" alt="page" className="mr-2" />{" "}
             Report Tracking
-          </div>{" "}
+          </div>
         </div>
       </div>
       {/* Ideas to life */}
@@ -194,7 +194,7 @@ const BillEasyVisual = () => {
           style={{
             marginBottom: "30px",
           }}
-          class="  text-2xl md:text-4xl md:my-0 my-8 tracking-widest font-lato-light font-bold flex items-center"
+          className="  text-2xl md:text-4xl md:my-0 my-8 tracking-widest font-lato-light font-bold flex items-center"
         >
           <img src={FramedPicture} className="mr-2 w-9 " alt="" /> Bringing
           Ideas To Life

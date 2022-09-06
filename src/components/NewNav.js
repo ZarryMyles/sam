@@ -79,7 +79,7 @@ const Navbar = ({
       <div
         style={{ color: defaultColor }}
         onMouseEnter={imageEnter}
-        className="w-full hidden md:flex zed absolute justify-between items-center mr-5 p-5 md:px-24"
+        className="w-full hidden zed md:flex  absolute justify-between items-center md:px-24 md:py-5"
       >
         <a href="/" className="flex items-center">
           <div
@@ -133,7 +133,7 @@ const Navbar = ({
               href="/#get-in-touch"
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
-              className="cursor-pointer font-lato text-lg block md:inline-block p-2 no-underline border-none"
+              className="text-lg font-lato cursor-pointer block md:inline-block p-2 no-underline border-none"
             >
               Contact
             </a>
@@ -170,30 +170,33 @@ const Navbar = ({
             S
           </div>
         </a>
-
-        <div className="flex flex-row text-brand-gray font-lato text-lg ">
+        <div
+          style={{ color: "#b5b5b5" }}
+          className="flex tracking-1.5 flex-row "
+        >
           <Link
             activeClass="active"
             to="work"
             spy={true}
             smooth={true}
             duration={500}
-            className="block md:inline-block p-2 no-underline border-none"
+            className="block md:inline-block px-2 no-underline border-none"
           >
             <a
               href="/#work"
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
-              className="text-lg font-lato cursor-pointer block md:inline-block no-underline border-none"
+              className="text-lg font-lato cursor-pointer block md:inline-block px-2 no-underline border-none"
             >
               Work
             </a>
-          </Link>{" "}
+          </Link>
           <a
-            className="p-2"
-            href="/about"
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
+            href="/about"
+            onClick={uncheckNav}
+            className="font-lato text-lg  top-0 overflow-hidden px-2 flex flex-row items-center"
           >
             About
           </a>
@@ -203,24 +206,25 @@ const Navbar = ({
             spy={true}
             smooth={true}
             duration={500}
-            className="block md:inline-block p-2 no-underline border-none"
+            className="block md:inline-block px-2 no-underline border-none"
           >
             <a
               href="/#get-in-touch"
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
-              className="cursor-pointer font-lato text-lg block md:inline-block no-underline border-none"
+              className="text-lg font-lato cursor-pointer block md:inline-block px-2 no-underline border-none"
             >
               Contact
             </a>
           </Link>
           <a
-            className="pl-5 p-2"
+            onMouseEnter={largeEnter}
+            onMouseLeave={imageEnter}
             target="_blank"
             rel="noreferrer"
             href="https://drive.google.com/file/d/1gdC7zdeDq_ZZZVhfR79LOOZrqUFiqytM/view?usp=sharing"
-            onMouseEnter={largeEnter}
-            onMouseLeave={imageEnter}
+            onClick={uncheckNav}
+            className="font-lato text-lg  top-0 overflow-hidden pl-2 flex flex-row items-center"
           >
             Resume
           </a>
