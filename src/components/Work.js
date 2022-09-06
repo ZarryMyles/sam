@@ -47,7 +47,7 @@ const works = [
     gif: true,
     image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/2.jpg",
     video:
-      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/Comp_1_tdwzlp.gif",
+      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662486989/work_gifs/smartvision_ewgu7t.gif",
     link: "/smartvision",
   },
 ];
@@ -91,7 +91,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
   );
   const cards = () => (
     <div
-      className="text-black relative font-lato  select-none   h-full overflow-hidden w-full    bg-cover bg-no-repeat bg-center   flex flex-col justify-center md:justify-start md:pt-56  top-0 left-0 px-5 md:px-48  "
+      className="text-black relative font-lato  select-none   h-full overflow-hidden w-full    bg-cover bg-no-repeat bg-center   flex flex-col  md:justify-start md:pt-56  top-0 left-0 px-5 md:px-48  "
       onMouseEnter={imageEnter}
     >
       <div
@@ -99,43 +99,44 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
           zIndex: "1",
         }}
       >
-        <div class="w-full md:w-full">
-          <div class="flex items-center mb-12 ">
+        <div class=" mt-16 w-full md:w-full">
+          <div
+            style={{
+              letterSpacing: "6px",
+            }}
+            class=" block md:hidden text-stroke-white mb-16 font-lato-bold  "
+          >
+            0{activeWork.id}
+          </div>
+          <div class="flex items-center mb-8 md:mb-12 ">
             <div
               style={{
                 width: "72px",
               }}
               class=" bg-brand-gray h-0.5 mr-3"
             />
-            <div
-              style={{
-                letterSpacing: "3px",
-              }}
-              class="text-brand-gray text-xl font-lato "
-            >
+            <div class="text-brand-gray uppercase text-sm tracking-2 md:tracking-3 md:text-xl font-lato ">
               {activeWork.domain}
             </div>
           </div>
           <div
-            className=" text-5xl md:text-5xl font-bold w-max font-lato text-brand-white  flex items-center my-12"
+            className=" text-5xl md:text-5xl font-bold w-max font-lato text-brand-white  flex items-center mb-4 md:my-12"
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
           >
             {activeWork.title}
           </div>
-          <div
-            style={{
-              letterSpacing: "1px",
-              lineHeight: "32px",
-              fontSize: "22px",
-            }}
-            class=" font-lato  mt-12 mb-6 pr-5 md:pr-0 md:w-7/12 text-brand-white"
-          >
+          <div class=" font-lato tracking-0.5 md:tracking-1 hidden md:block text-[14px] md:text-[22px] leading-[19px] md:leading-[32px]  md:mt-12 mb-6 pr-5 md:pr-0 w-9/10 md:w-7/12 text-brand-white">
             {activeWork.description.split("\n").map((line, index) => (
               <span key={index}>
                 {line}
                 <br />
               </span>
+            ))}
+          </div>
+          <div class=" font-lato tracking-0.5 md:tracking-1 block md:hidden text-[14px] md:text-[22px] leading-[19px] md:leading-[32px]  md:mt-12 mb-6 pr-5 md:pr-0 w-9/10 md:w-7/12 text-brand-white">
+            {activeWork.description.split("\n").map((line, index) => (
+              <span key={index}>{line}</span>
             ))}
           </div>
           <div className="">
@@ -153,7 +154,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
                 class="  mr-4    "
               />
               <div
-                class=" text-lg  font-lato"
+                class=" text-sm md:text-lg tracking-3  font-lato"
                 style={{
                   letterSpacing: "3px",
                   color: "#fefefe",
@@ -166,8 +167,8 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
           </div>
         </div>
         {/* the no. with text stroke */}
-        <div class="absolute bottom-10 md:bottom-2 right-2 md:right-24 flex flex-col items-center">
-          <div class="  flex items-center  ">
+        <div class="flex absolute bottom-10 md:bottom-2  md:right-24  flex-col items-center">
+          <div class="  hidden md:flex items-center  ">
             <ChevronLeft
               color="#b5b5b5"
               width={30}
@@ -212,6 +213,21 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
               // ${activeWork.id == 4 && "opacity-0 cursor-auto "}
               class={` p-0 md:p-0  text-2xl md:text-5xl   cursor-pointer mx-5  rounded-full text-white`}
             />
+          </div>
+          {/* pagination */}
+          <div class=" md:hidden  flex items-center justify-center w-screen ">
+            {works.map((work, index) => (
+              <div
+                key={index}
+                onClick={() => setActiveWork(work)}
+                class="  transition-all rounded-full duration-100 mx-2  "
+                style={{
+                  background: activeWork.id === work.id ? "#D9D9D9" : "#4E4E4E",
+                  width: "6px",
+                  height: "6px",
+                }}
+              />
+            ))}
           </div>
         </div>
       </div>

@@ -86,7 +86,7 @@ const WorkLogos = ({ imageEnter, largeEnter }) => {
 
   return (
     <div
-      className=" md:pt-48 md:pb-52 flex justify-center items-center w-full  dark:bg-brand-black"
+      className=" pt-16 mb-10 md:pt-48 md:pb-52 flex justify-center items-center w-full  dark:bg-brand-black"
       id="work-logo-container "
     >
       <div class="w-full ">

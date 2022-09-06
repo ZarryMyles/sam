@@ -2,14 +2,13 @@ import React from "react";
 
 const Heading = ({ text }) => {
   return (
-    <div class="flex items-center mb-10 col-span-12">
+    <div class="flex items-center mb-[30px] md:mb-10 col-span-12">
       <div
         style={{
           height: "1px",
-          width: "72px",
           background: "#424242",
         }}
-        class=" w-28 mr-4"
+        class="  w-[40px] md:w-[72px] mr-4"
       />
       <div
         style={{

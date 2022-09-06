@@ -10,9 +10,9 @@ const LandingSection = ({ imageEnter, textLeave, largeEnter }) => {
       onMouseEnter={imageEnter}
       onMouseLeave={textLeave}
     >
-      <div class=" flex-col z-20 relative  md:h-full md:mt-0 mt-60  md:py-52 w-9/10  md:w-7/10 ">
+      <div class="  z-20 relative  md:h-full md:mt-0   md:py-52 w-full ">
         <div
-          class="text-3xl md:text-5xl font-thin  w-full md:mt-20  font-lato-light-italic landing-page-text  "
+          class="text-3xl md:text-5xl font-thin mt-60  md:mt-20 w-9/10  md:w-7/10 font-lato-light-italic landing-page-text  "
           onMouseEnter={largeEnter}
           onMouseLeave={imageEnter}
           style={{
@@ -25,9 +25,18 @@ const LandingSection = ({ imageEnter, textLeave, largeEnter }) => {
           <span class="font-lora-italic">purpose</span> that reaches{" "}
           <span class=" font-lora-italic mr-1">beyond modernity.</span>
         </div>
-
         <div
-          class="flex flex-col md:flex-row md:items-center w-full work-landing-text -mt-7"
+          style={{
+            // width: "520px",
+            height: "260px",
+            backgroundImage: `url(${HeroImage})`,
+            // left: "746px",
+            // top: "321px",
+          }}
+          class="block md:hidden  w-full z-10 bg-gray-500  -mt-28   bg-cover bg-center bg-no-repeat"
+        />
+        <div
+          class="flex flex-col md:flex-row md:items-center w-full work-landing-text mt-8 md:-mt-7"
           onMouseEnter={largeEnter}
           onMouseLeave={imageEnter}
         >
@@ -64,15 +73,7 @@ const LandingSection = ({ imageEnter, textLeave, largeEnter }) => {
           // top: "321px",
         }}
         class="hidden md:block absolute z-10 bg-gray-500  right-52 bottom-10 bg-cover bg-center bg-no-repeat"
-      ></div>
-      {/* <div
-        style={{
-          width: "325px",
-          height: "190px",
-          backgroundImage: `url(${HeroImage})`,
-        }}
-        class="md:hidden  z-10 bg-gray-500 float-right bg-cover bg-center bg-no-repeat"
-      ></div> */}
+      />
     </div>
   );
 };

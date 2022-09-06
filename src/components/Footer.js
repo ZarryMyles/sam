@@ -71,20 +71,13 @@ const Footer = ({ imageEnter, largeEnter }) => {
             >
               <li className=" " variants={item}>
                 <>
-                  <div
-                    // onMouseEnter={textEnter}
-                    // onMouseLeave={imageEnter}
-                    style={{
-                      fontSize: "32px",
-                    }}
-                    className=" max-w-max font-lora-italic"
-                  >
+                  <div className=" max-w-max text-base md:text-[32px] tracking-[0.04em] font-lora-italic">
                     Shradha
                   </div>
                   <div
                     // onMouseEnter={textEnter}
                     // onMouseLeave={imageEnter}
-                    className=" text-lg tracking-widest max-w-max font-lato   "
+                    className=" text-sm md:text-lg tracking-widest max-w-max font-lato   "
                     style={{
                       color: "#B5B5B5",
                       fontWeight: "300",
@@ -96,17 +89,17 @@ const Footer = ({ imageEnter, largeEnter }) => {
               </li>
             </ul>
           </div>
-          <div class="flex flex-wrap md:flex-nowrap md:flex-row md:justify-between md:items-center md:w-3/6">
+          <div class="flex  flex-row justify-between tracking-[0.01em] items-center md:w-3/6 w-full ">
             {socials.map((social, index) => (
               <a
                 onMouseEnter={largeEnter}
                 onMouseLeave={imageEnter}
                 href={social.link}
-                class="text-brand-gray font-lato flex items-center  w-1/2 md:w-max  my-2 md:my-0"
+                class="text-brand-gray font-lato flex items-center  text-sm md:text-base     md:w-max  my-2 md:my-0"
               >
                 {social.icon && (
                   <div
-                    class="hidden md:block mr-2 text-xl "
+                    class=" mr-2 text-xl "
                     style={{
                       color: "#7A2222",
                     }}
@@ -115,16 +108,6 @@ const Footer = ({ imageEnter, largeEnter }) => {
                   </div>
                 )}
                 {social.name}
-                {social.icon && (
-                  <div
-                    class="flock md:hidden ml-1 text-xl "
-                    style={{
-                      color: "#7A2222",
-                    }}
-                  >
-                    {social.icon}
-                  </div>
-                )}
               </a>
             ))}
           </div>
@@ -133,7 +116,7 @@ const Footer = ({ imageEnter, largeEnter }) => {
           style={{
             fontSize: "10px",
           }}
-          className=" footerDiv2 shadow-xl text-base  font-lato text-brand-gray flex items-center justify-center p-5 md:p-10"
+          className=" footerDiv2 shadow-xl text-sm md:text-base  font-lato text-brand-gray flex items-center justify-center p-5 md:p-10"
         >
           © {new Date().getFullYear()}. shradha.design . All Rights Reserved.
         </div>
