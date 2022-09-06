@@ -105,6 +105,8 @@ const SmartVision = () => {
     video:
       "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/Comp_1_tdwzlp.gif",
     title: "Smart Vision",
+    mobVideo:
+      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662489091/work_gifs/Mob_Smart_Vision_seddok.gif",
     gif: true,
     domain: "Case Study",
   };
@@ -136,27 +138,27 @@ const SmartVision = () => {
         work={work}
       />
       {/* project brief */}
-      <div class=" p-5 md:px-24 md:my-20 flex flex-wrap justify-between   ">
-        <div className="  my-5   ">
-          <div class="text-xl font-bold font-lato-bold flex items-center -ml-1">
+      <div class=" px-5 pt-[105px] md:py-10 md:px-24 md:my-20 flex flex-wrap justify-between  ">
+        <div className="  my-5    ">
+          <div class="text-xl  font-lato flex items-center -ml-1">
             <img src={Clipboard} className="mr-2 w-5 " alt="" /> Project Type
           </div>
-          <div className="font-lato  mt-2">Personal Project</div>
+          <div className="font-lato  mt-2">Personal project</div>
         </div>
-        <div className=" w-1/2 md:w-auto my-5  ">
-          <div class="text-xl font-bold font-lato-bold flex items-center -ml-2">
+        <div className=" w-1/2 md:w-auto my-5   pl-4 md:pl-0">
+          <div class="text-xl  font-lato flex items-center -ml-2">
             <img src={Calendar} className="mr-2 w-5 " alt="" /> Timeline
           </div>
           <div className="font-lato  mt-2">3 months</div>
         </div>
-        <div className=" w-1/2 md:w-auto my-5  ">
-          <div class="text-xl font-bold font-lato-bold flex items-center -ml-1">
+        <div className=" w-1/2 md:w-auto my-5   ">
+          <div class="text-xl  font-lato flex items-center -ml-1">
             <img src={TippingHand} className="mr-2 w-5 " alt="" /> My Role
           </div>
           <div className="font-lato  mt-2">UX & UI Designer</div>
         </div>
-        <div className=" w-1/2 md:w-auto my-5  ">
-          <div class="text-xl font-bold font-lato-bold flex items-center -ml-1">
+        <div className=" w-1/2 md:w-auto my-5   pl-4 md:pl-0">
+          <div class="text-xl  font-lato flex items-center -ml-1">
             <img src={Fist} className="mr-2 w-5 " alt="" /> Design Team
           </div>
           <div className="font-lato  mt-2">Myself</div>

@@ -12,6 +12,8 @@ const works = [
     image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg",
     video:
       "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662181482/work_gifs/BillEasy-short_yhhk58.mp4",
+    mobVideo:
+      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662489092/work_gifs/Mob_BillEasy_Research_xys1wq.gif",
     link: "/billeasy",
   },
   {
@@ -24,6 +26,8 @@ const works = [
     image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg",
     video:
       "https://res.cloudinary.com/ahum/video/upload/v1662232035/BillEasy_Visual_hzrwgo.mp4",
+    mobVideo:
+      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662494455/work_gifs/Mob_BillEasy_Visual_v1xkni.gif",
     link: "/billeasy-visual-design",
   },
   {
@@ -36,6 +40,8 @@ const works = [
     image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/3.jpg",
     video:
       "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/render_s6dzdu.gif",
+    mobVideo:
+      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662489092/work_gifs/Mob_Happilyever_iqkfoo.gif",
     link: "/happilyever",
   },
   {
@@ -48,6 +54,8 @@ const works = [
     image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/2.jpg",
     video:
       "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662486989/work_gifs/smartvision_ewgu7t.gif",
+    mobVideo:
+      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662489091/work_gifs/Mob_Smart_Vision_seddok.gif",
     link: "/smartvision",
   },
 ];
@@ -167,7 +175,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
           </div>
         </div>
         {/* the no. with text stroke */}
-        <div class="flex absolute bottom-10 md:bottom-2  md:right-24  flex-col items-center">
+        <div class="hidden md:flex w-full md:w-auto absolute bottom-10  md:bottom-2  md:right-24   flex-col items-center ">
           <div class="  hidden md:flex items-center  ">
             <ChevronLeft
               color="#b5b5b5"
@@ -215,7 +223,24 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
             />
           </div>
           {/* pagination */}
-          <div class=" md:hidden  flex items-center justify-center w-screen ">
+          {/* <div class=" md:hidden  w-full  flex items-center justify-center ">
+            {works.map((work, index) => (
+              <div
+                key={index}
+                onClick={() => setActiveWork(work)}
+                class="  transition-all rounded-full duration-100 mx-2  "
+                style={{
+                  background: activeWork.id === work.id ? "#D9D9D9" : "#4E4E4E",
+                  width: "6px",
+                  height: "6px",
+                }}
+              />
+            ))}
+          </div> */}
+        </div>
+        <div class="flex md:hidden w-full md:w-auto absolute bottom-10  md:bottom-2  md:right-24 left-0  flex-col items-center md:justify-end justify-center">
+          {/* pagination */}
+          <div class=" md:hidden  w-full  flex items-center justify-center ">
             {works.map((work, index) => (
               <div
                 key={index}
@@ -237,7 +262,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
         {works.map((work) =>
           work.gif ? (
             <div
-              class={`${
+              class={`hidden md:block ${
                 work.id < activeWork.id
                   ? "-translate-x-full  bg-center md:bg-left"
                   : work.id > activeWork.id
@@ -256,7 +281,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
             </div>
           ) : (
             <div
-              class={`${
+              class={`hidden md:block ${
                 work.id < activeWork.id
                   ? "-translate-x-full  bg-center md:bg-left"
                   : work.id > activeWork.id
@@ -278,8 +303,35 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
           )
         )}
       </div>
+      {/* gifs for mobiles */}
+      <div class="md:hidden w-full h-full absolute left-0 top-0 z-0">
+        {works.map((work) => (
+          <div
+            class={` block md:hidden ${
+              work.id < activeWork.id
+                ? "-translate-x-full  bg-bottom md:bg-left"
+                : work.id > activeWork.id
+                ? " translate-x-[100%]  bg-bottom md:bg-right"
+                : work.id == 4
+                ? "bg-center"
+                : "bg-center  "
+            }  w-full bg-cover bg-no-repeat ease-linear transition-all  duration-700  h-screen    absolute
+             w-100 md:w-screen    object-center object-cover  bg-red-100  `}
+          >
+            <img
+              alt="hi"
+              className="w-full h-full object-cover object-center"
+              src={work.mobVideo}
+              // alt="loading..."
+            />
+            <div class="absolute w-full h-full bg-black opacity-50 left-0 top-0"></div>
+          </div>
+        ))}
+      </div>
     </div>
   );
+
+  //
   return (
     <div
       id="work"

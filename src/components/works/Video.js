@@ -34,7 +34,7 @@ const Video = ({ work, largeEnter, imageEnter }) => {
   }, [play]);
 
   return (
-    <div className="w-full h-full relative">
+    <div className="w-full h-full relative mt-4 md:mt-0">
       <video
         onClick={() => {
           // toggleOverlay();
