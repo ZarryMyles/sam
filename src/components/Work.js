@@ -303,8 +303,53 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
           )
         )}
       </div>
+      <div class={`w-full object-cover h-full absolute left-0 top-0 z-0`}>
+        {works.map((work) =>
+          work.gif ? (
+            <div
+              class={` md:hidden ${
+                work.id < activeWork.id
+                  ? "-translate-x-full  bg-center md:bg-left"
+                  : work.id > activeWork.id
+                  ? " translate-x-[100%]  bg-center md:bg-right"
+                  : "bg-center  "
+              }  w-full bg-cover bg-no-repeat ease-linear transition-all  duration-700  h-screen    absolute
+             w-100 md:w-screen   md:object-contain  bg-red-100  `}
+            >
+              <img
+                alt="hi"
+                className="w-full h-full object-contain object-bottom"
+                src={work.video}
+                // alt="loading..."
+              />
+              <div class="absolute w-full h-full bg-black opacity-50 left-0 top-0"></div>
+            </div>
+          ) : (
+            <div
+              class={` md:hidden ${
+                work.id < activeWork.id
+                  ? "-translate-x-full  bg-center md:bg-left"
+                  : work.id > activeWork.id
+                  ? " translate-x-[100%]  bg-center md:bg-right"
+                  : "bg-bottom  "
+              }  w-full bg-cover bg-no-repeat ease-linear transition-all  duration-700    h-screen   absolute
+               w-100 md:w-screen  md:opacity-100 opacity-100 md:object-cover   `}
+            >
+              <video
+                className="w-full h-full object-contain object-bottom "
+                loop
+                autoPlay={activeWork.id === work.id ? true : false}
+                muted
+              >
+                <source src={work.video} type="video/mp4" />
+              </video>
+              <div class="absolute w-full h-full bg-black opacity-50 left-0 top-0"></div>
+            </div>
+          )
+        )}
+      </div>
       {/* gifs for mobiles */}
-      <div class="md:hidden w-full h-full absolute left-0 top-0 z-0">
+      {/* <div class="md:hidden w-full h-full absolute left-0 top-0 z-0">
         {works.map((work) => (
           <div
             class={` block md:hidden ${
@@ -320,14 +365,14 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
           >
             <img
               alt="hi"
-              className="w-full h-full object-cover object-center"
-              src={work.mobVideo}
-              // alt="loading..."
+              className="w-full h-full object-bottom bg-bottom"
+              src={work.video}
+              
             />
             <div class="absolute w-full h-full bg-black opacity-50 left-0 top-0"></div>
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 
