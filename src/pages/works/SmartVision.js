@@ -351,7 +351,7 @@ const SmartVision = () => {
         </div>
       </div>
       {/* challenge */}
-      <div class="bg-brand-darkGrey2 font-lato  p-5 md:px-24 md:py-32 py-10 ">
+      <div class="bg-brand-darkGrey2 font-lato my-[130px] md:my-0  p-5 md:px-24 md:py-32 py-10 ">
         <WorkHeading text={"challenge"} />
 
         <div class="grid grid-cols-12  items-center">
