@@ -16,6 +16,10 @@ import Phone6 from "../../assets/works/smartvision/smartVisionPhone6.png";
 import Hero from "../../assets/works/smartvision/smartVision.png";
 import Challenges from "../../assets/works/smartvision/smartvisionChallenge.svg";
 import colorGuides from "../../assets/works/smartvision/colorGuides.svg";
+import mobColor1 from "../../assets/works/smartvision/mobColor1.svg";
+import mobColor2 from "../../assets/works/smartvision/mobColor2.svg";
+import mobColor3 from "../../assets/works/smartvision/mobColor3.svg";
+import mobColor4 from "../../assets/works/smartvision/mobColor4.svg";
 
 import {
   Teacup,
@@ -124,10 +128,7 @@ const SmartVision = () => {
       className="text-justify bg-brand-black text-brand-white"
     >
       {loading && (
-        <div class="fixed w-full h-full z-50">
-          {" "}
-          <Loader />{" "}
-        </div>
+        <div class="fixed w-full h-full z-50"> {/* <Loader />{" "} */}</div>
       )}
       <Navbar defaultColor={"white"} />
       <WorkHero
@@ -165,10 +166,10 @@ const SmartVision = () => {
         </div>
       </div>
       {/* project concept */}
-      <div class=" p-5 md:px-24 md:mb-36 md:pr-0 grid grid-cols-12  h-full">
+      <div class=" md:px-24 md:mb-36 md:pr-0 grid grid-cols-12  h-full">
         <WorkHeading text={"concept"} />
 
-        <div class="col-span-12 md:col-span-6 h-full flex flex-col    ">
+        <div class="px-5 md:px-0 col-span-12 md:col-span-6 h-full flex flex-col    ">
           <div class="flex items-center">
             <div
               style={{
@@ -179,7 +180,7 @@ const SmartVision = () => {
               <img src={Eye} className="mr-2 w-9 " alt="" /> Smart Vision
             </div>
           </div>
-          <div className="  leading-6 tracking-0.5   ">
+          <div className=" px-5 md:px-0 leading-6 tracking-0.5   ">
             Smart Vision is an{" "}
             <span style={{ color: "#7CCBCD" }}>
               Accessible, Independent and Secure
@@ -201,7 +202,7 @@ const SmartVision = () => {
         <div class="hidden md:block col-span-1"></div>
 
         <div class="col-span-12 md:col-span-5  flex flex-col items-center  justify-center md:pl-10 rounded-xl text-brand-white ">
-          <div className="  px-4 md:pr-24 rounded-l-lg flex flex-col justify-center bg-brand-darkGrey2 md:pl-14 py-14  ">
+          <div className="  px-5 md:px-0 md:pr-24 md:rounded-l-lg flex flex-col justify-center bg-brand-darkGrey2 md:pl-14 py-10  ">
             <div className=" mb-8">
               <div className=" mb-2 flex items-center">
                 <img src={Check} className="mr-2 w-5 " alt="" /> Results
@@ -229,11 +230,11 @@ const SmartVision = () => {
         </div>
       </div>
       {/* purpose */}
-      <div className="p-5 md:p-20">
+      <div className=" pt-[136px] ">
         <WorkHeading text={"purpose"} />
 
         <div class="grid grid-cols-12 font-lato">
-          <div class="col-span-12 md:col-span-4">
+          <div class="p-5 md:px-24 col-span-12 md:col-span-5 bg-brand-darkGrey2 leading-7 ">
             <div class=" text-2xl  tracking-1.5 mb-8 flex items-center">
               <img src={Bullseye} className="mr-2 w-6 " alt="" /> Goals
             </div>
@@ -258,15 +259,16 @@ const SmartVision = () => {
         </div>
       </div>
       {/* user segmentation */}
-      <div className="p-5 md:p-20 font-lato">
+      <div className="p-5 md:p-20 font-lato leading-7">
         <div className="text-2xl md:text-4xl mb-8 tracking-1.5 flex items-center">
           <img src={Family} className="mr-2 w-8 " alt="" /> User segmentation
         </div>
         <div class="ml-3">
-          <div className=" text-base font-lato-bold my-5 bg-brand-darkGrey2 px-5 py-3 w-max rounded-lg -ml-5 ">
+          <div className=" text-base font-lato-bold my-5 bg-brand-darkGrey2 px-5 py-3 w-max rounded-lg  ">
             User Type
           </div>
-          <div className="" style={{ letterSpacing: "0.5px" }}>
+
+          <div className="block" style={{ letterSpacing: "0.5px" }}>
             Legally blind
             <ul className="list-disc">
               <li className="">
@@ -289,7 +291,7 @@ const SmartVision = () => {
             </ul>
           </div>
           {/* primary  */}
-          <div className=" text-base font-lato-bold my-5  mt-8 bg-brand-darkGrey2 px-5 py-3 w-max rounded-lg -ml-5 ">
+          <div className=" text-base font-lato-bold my-5  mt-8 bg-brand-darkGrey2 px-5 py-3 w-max rounded-lg  ">
             Primary User
           </div>
           <div className="" style={{ letterSpacing: "0.5px" }}>
@@ -320,7 +322,7 @@ const SmartVision = () => {
             </ul>
           </div>
           {/* secondary  */}
-          <div className=" text-base font-lato-bold my-5  mt-8 bg-brand-darkGrey2 px-5 py-3 w-max rounded-lg -ml-5 ">
+          <div className=" text-base font-lato-bold my-5  mt-8 bg-brand-darkGrey2 px-5 py-3 w-max rounded-lg  ">
             Secondary User
           </div>
           <div className="" style={{ letterSpacing: "0.5px" }}>
@@ -382,15 +384,16 @@ const SmartVision = () => {
         </div>
       </div>
       {/* problem identification */}
-      <div class=" p-5 md:p-24   h-full">
-        <div class="   ">
+      <div class="    h-full">
+        <div class=" px-5 md:p-24  ">
           <WorkHeading text={"research"} />
-
-          <div class="  text-2xl md:text-4xl flex items-center  md:-ml-2  tracking-1.5 font-lato ">
+        </div>
+        <div class="   ">
+          <div class=" px-5 md:px-24 text-2xl md:text-4xl flex items-center  md:-ml-2  tracking-1.5 font-lato ">
             <img src={GuideDog} alt="" class="w-9 mr-2" /> Identifying the
             problem
           </div>
-          <ul className="my-8 list-disc ml-5">
+          <ul className="  list-disc ml-5 px-5 md:px-24">
             <li className="my-3">
               While searching for users to interview, I couldn't find any
               relevant people, thanks to the pandemic :') During which, I
@@ -416,9 +419,11 @@ const SmartVision = () => {
                 videoconferencing and Google forms.
               </span>
             </li>
-            <div class="px-0 md:px-5 w-full my-8">
-              <img src={Problem} className="w-full" alt="" />
-            </div>
+          </ul>
+          <div class="px-0 md:px-24 w-full my-8">
+            <img src={Problem} className="w-full" alt="" />
+          </div>
+          <ul class="  list-disc ml-5 px-5 md:px-24 md:pt-24">
             <li className="my-3">
               Next, I Grouped Insights based on{" "}
               <span style={{ color: "#7CCBCD" }}>
@@ -426,9 +431,11 @@ const SmartVision = () => {
               </span>
               for the segmented users to create personas.
             </li>
-            <div class="px-0 md:px-5 w-full my-8">
-              <img src={Problem2} className="w-full" alt="" />
-            </div>{" "}
+          </ul>
+          <div class="px-0 md:px-24 w-full my-8">
+            <img src={Problem2} className="w-full" alt="" />
+          </div>{" "}
+          <ul class="mb-8 list-disc ml-5 px-5 md:px-24 md:pb-24">
             <li className="my-3">
               Finally, I developed a{" "}
               <span style={{ color: "#7CCBCD" }}>
@@ -436,10 +443,10 @@ const SmartVision = () => {
               </span>{" "}
               to help me understand and analyze the problem in depth.
             </li>
-            <div class="px-0 md:px-5 w-full my-8">
-              <img src={Problem3} className="w-full" alt="" />
-            </div>
           </ul>
+          <div class="px-0 md:px-24 w-full my-8">
+            <img src={Problem3} className="w-full" alt="" />
+          </div>
         </div>
       </div>
       {/* key points */}
@@ -447,8 +454,8 @@ const SmartVision = () => {
         <div class="  text-2xl flex items-center md:text-4xl my-8 tracking-1.5 font-lato  ">
           <img src={OldKey} alt="" class="w-8 mr-2" /> Key pain-points
         </div>
-        <div class="px-3 grid grid-cols-1 md:grid-cols-2 ">
-          <div class="col-span-1 p-2 md:p-5">
+        <div class="md:px-3 grid grid-cols-1 md:grid-cols-2 ">
+          <div class="col-span-1 py-3 px-0 md:p-5">
             <div
               style={{
                 // background: "#FAFAFA",
@@ -474,7 +481,7 @@ const SmartVision = () => {
               </ul>
             </div>
           </div>
-          <div class="col-span-1 p-2 md:p-5">
+          <div class="col-span-1 py-3 px-0 md:p-5">
             <div
               style={{
                 // background: "#FAFAFA",
@@ -502,7 +509,7 @@ const SmartVision = () => {
               </ul>
             </div>
           </div>
-          <div class="col-span-1 p-2 md:p-5 h-auto">
+          <div class="col-span-1 py-3 px-0 md:p-5 h-auto">
             <div
               style={{
                 // background: "#FAFAFA",
@@ -521,7 +528,7 @@ const SmartVision = () => {
               </ul>
             </div>
           </div>
-          <div class="col-span-1 p-2 md:p-5 h-full">
+          <div class="col-span-1 py-3 px-0 md:p-5 h-full">
             <div
               style={{
                 // background: "#FAFAFA",
@@ -553,9 +560,11 @@ const SmartVision = () => {
       </div>
       {/* features */}
       <div class="bg-brand-black md:pt-24  h-full">
-        <WorkHeading text={"solutions"} />
+        <div className="px-5 md:px-24">
+          <WorkHeading text={"solutions"} />
+        </div>
 
-        <div class="grid grid-cols-12 font-lato">
+        <div class="grid grid-cols-12 font-lato mt-[130px] md:mt-0">
           {/* 1 */}
           <div class="col-span-12 grid grid-cols-12  px-5 md:px-24">
             <div class="col-span-12 md:col-span-7 flex bg-brand-black  items-center justify-center text-brand-white  ">
@@ -564,6 +573,9 @@ const SmartVision = () => {
                 <div className="mt-130 flex  md:pl-24">
                   <div className="">
                     <div className="my-8">1. Screen recorder</div>
+                    <div class="md:col-span-5 col-span-12 px-4 flex md:hidden items-center justify-center">
+                      <img src={Phone1} className="w-full" alt="" />
+                    </div>
                     <ul class="list-disc ml-4">
                       <li className="my-9">
                         Screen readers speak what is on the screen as the finger
@@ -584,19 +596,16 @@ const SmartVision = () => {
             <div class="md:col-span-5 col-span-12 hidden md:flex -mt-10 mb-130  md:pr-24 justify-end">
               <img
                 src={Phone1}
-                className=""
+                className="  "
                 style={{
                   width: "290px",
                 }}
                 alt=""
               />
             </div>
-            <div class="md:col-span-5 col-span-12 flex md:hidden items-center justify-center">
-              <img src={Phone1} className="w-2/4" alt="" />
-            </div>
           </div>
           {/* 2 */}
-          <div className="col-span-12 grid grid-cols-12  px-5 md:px-24 bg-brand-darkGrey2">
+          <div className="col-span-12 grid grid-cols-12  px-5 md:px-24  mt-[130px] md:mt-0 pb-10 md:pb-0 bg-brand-darkGrey2">
             <div class="hidden md:flex md:col-span-5 col-span-12  -mt-32 items-center md:pl-24">
               <img
                 src={Phone2}
@@ -607,9 +616,12 @@ const SmartVision = () => {
                 alt=""
               />
             </div>
-            <div class="col-span-12 md:col-span-7 flex   justify-end text-brand-white px-3 md:pr-24  mt-10 md:mt-24">
+            <div class="col-span-12 md:col-span-7 flex    justify-end text-brand-white px-3 md:pr-24 pt-10 md:pt-0  md:mt-24">
               <div>
                 <div className="">2. Image description</div>
+                <div class="md:col-span-5 px-4 col-span-12 flex md:hidden items-center my-4 justify-center">
+                  <img src={Phone2} className="w-full" alt="" />
+                </div>
                 <ul class="list-disc ml-4">
                   <li className="my-9">
                     Legally blind individuals can{" "}
@@ -633,13 +645,14 @@ const SmartVision = () => {
                 </ul>
               </div>
             </div>
-            <div class="md:col-span-5 col-span-12 flex md:hidden items-center justify-center">
-              <img src={Phone2} className="w-2/4" alt="" />
-            </div>
-            <div class="col-span-12 grid grid-cols-12">
+
+            <div class="col-span-12 grid grid-cols-12 mt-[130px] md:mt-0">
               <div class="col-span-12 md:col-span-7 flex md:mb-20   md:pl-24 text-white md:mt-32">
                 <div>
                   <div className="my-8">3. Speech Recognition</div>
+                  <div class="md:col-span-5 px-4 col-span-12 flex md:hidden my-4 items-center justify-center">
+                    <img src={Phone3} className="w-full" alt="" />
+                  </div>
                   <ul class="list-disc ml-4">
                     <li className="mt-9">
                       It enables a program to process{" "}
@@ -660,16 +673,13 @@ const SmartVision = () => {
                   alt=""
                 />
               </div>
-              <div class="md:col-span-5 col-span-12 flex md:hidden items-center justify-center">
-                <img src={Phone3} className="w-2/4" alt="" />
-              </div>
             </div>
           </div>
 
           {/* 3 */}
 
           {/* 4 */}
-          <div class="col-span-12 md:px-24 px-5 grid grid-cols-12">
+          <div class="col-span-12 md:px-24 px-5 grid grid-cols-12 mt-[80px] md:mt-0">
             <div class="md:col-span-5 mt-36 col-span-12 hidden md:flex md:pl-24 ">
               <img
                 src={Phone4}
@@ -683,6 +693,9 @@ const SmartVision = () => {
             <div class="col-span-12 md:col-span-7 flex   justify-end text-white px-3 md:pr-24  md:mt-96">
               <div>
                 <div className="my-8">4. OCR</div>
+                <div class="md:col-span-5 px-4 col-span-12 flex md:hidden my-4 items-center justify-center">
+                  <img src={Phone4} className="w-full" alt="" />
+                </div>
                 <ul class="list-disc ml-4">
                   <li className="my-9">
                     <span style={{ color: "#7CCBCD" }}>
@@ -697,15 +710,15 @@ const SmartVision = () => {
                 </ul>
               </div>
             </div>
-            <div class="md:col-span-5 col-span-12 flex md:hidden items-center justify-center">
-              <img src={Phone4} className="w-2/4" alt="" />
-            </div>
           </div>
           {/* 5 */}
-          <div class="col-span-12 md:px-24 grid grid-cols-12 px-5 relative">
+          <div class="col-span-12 md:px-24 grid grid-cols-12 px-5 relative mt-[130px] md:mt-0">
             <div class="col-span-12 md:col-span-7 flex   text-white px-3 md:pl-24 md:mt-36 ">
               <div>
                 <div className="">5. Magnifier</div>
+                <div class="md:col-span-5 px-4 col-span-12 my-4 flex md:hidden items-center justify-center">
+                  <img src={Phone5} className="w-full" alt="" />
+                </div>
                 <ul class="list-disc ml-4">
                   <li className="my-9">
                     The user will not always be pleased with the screen readers
@@ -735,12 +748,9 @@ const SmartVision = () => {
                 alt=""
               />
             </div>
-            <div class="md:col-span-5 col-span-12 flex md:hidden items-center justify-center">
-              <img src={Phone5} className="w-2/4" alt="" />
-            </div>
           </div>
           {/* 6 */}
-          <div class="col-span-12 grid grid-cols-12 md:px-24 px-5 bg-brand-darkGrey2 md:pt-80">
+          <div class="col-span-12 grid grid-cols-12 md:px-24 px-5 mt-[130px] md:mt-0 bg-brand-darkGrey2 md:pt-80">
             <div class="md:col-span-6 col-span-12 hidden md:flex  md:pl-24 md:mb-48">
               <img
                 src={Phone6}
@@ -754,6 +764,9 @@ const SmartVision = () => {
             <div class="col-span-12 md:col-span-6 flex   justify-end text-white px-3 md:pr-28 my-5">
               <div>
                 <div className="">6. Braille keyboard</div>
+                <div class="md:col-span-5 px-4 my-4 col-span-12 flex md:hidden items-center justify-center">
+                  <img src={Phone6} className="w-full" alt="" />
+                </div>
                 <ul class="list-disc ml-4">
                   <li className="my-9">
                     Braille keyboard that can be{" "}
@@ -771,14 +784,11 @@ const SmartVision = () => {
                 </ul>
               </div>
             </div>
-            <div class="md:col-span-5 col-span-12 flex md:hidden items-center justify-center">
-              <img src={Phone6} className="w-4/5" alt="" />
-            </div>
           </div>
         </div>
       </div>
       {/* ui guide system */}
-      <div style={{}} class="p-5 md:px-24 h-full pt-140">
+      <div style={{}} class="p-5 md:px-24 h-full pt-140 md:mt-0 mt-[100px]">
         <div class="flex items-center  text-2xl md:text-4xl my-8 tracking-1.5 font-lato ">
           <img src={GuideDog} alt="" class="w-9 mr-2" /> UI guide system
         </div>
@@ -808,99 +818,21 @@ const SmartVision = () => {
           </li>
         </ul>
         {/* color thingy */}
-        <div className="w-full">
+        <div className="w-full hidden md:block">
           <img src={colorGuides} className="w-full" alt="" />
         </div>
-        {/* <div class="grid grid-cols-1 md:grid-cols-2">
-          <div class="col-span-1 my-4  ">
-            <div
-              class=" text-2xl font-google-sans md:mb-10 mb-5"
-              style={{ color: "#72C3C4" }}
-            >
-              Color
-            </div>
-            <div class="flex items-center justify-center  ">
-              <div className="flex flex-col items-center">
-                <div
-                  class="  rounded-full mx-3 md:mx-14 border-4 "
-                  style={{
-                    width: "68px",
-                    height: "68px",
-                    background: "#0A0A0A",
-                    boxShadow: "0px 2.08333px 2.60417px rgba(41, 41, 41, 0.32)",
-                  }}
-                />
-                <div className="my-6">#0A0A0A</div>
-              </div>
-              <div className="flex flex-col items-center">
-                <div
-                  class="  rounded-full mx-3 md:mx-14 border-4  "
-                  style={{
-                    width: "68px",
-                    height: "68px",
-                    background: "#FFFFFF",
-                    boxShadow:
-                      "0px 2.08333px 2.60417px rgba(41, 41, 41, 0.12) ",
-                  }}
-                />
-                <div className="my-6">#FFFFFF</div>
-              </div>
-              <div className="flex flex-col items-center">
-                <div
-                  class="  rounded-full mx-3 md:mx-14 border-4 "
-                  style={{
-                    width: "68px",
-                    height: "68px",
-                    background: "#7CCBCD",
-                    boxShadow: "0px 2.08333px 2.60417px rgba(41, 41, 41, 0.12)",
-                  }}
-                />
-                <div className="my-6">#7CCBCD</div>
-              </div>
-            </div>
-            <img src={colorGuide} className="w-10/12" alt="" />
-          </div>
-          <div class="col-span-1 my-4 ">
-            <img src={colorChecker} alt="" />
-          </div>
-          <div class="col-span-1 md:-mt-20">
-            <img src={typography} className="w-10/12" alt="" />
-
-            <div
-              class=" text-2xl font-google-sans"
-              style={{ color: "#72C3C4" }}
-            >
-              Typography
-            </div>
-
-            <div class="md:pl-20 font-google-sans ">
-              <div className="my-8">Google Sans</div>
-              <div class="flex items-center   font-google-sans">
-                <div className="mx-4 md:mr-24 font-bold">
-                  <div style={{ color: "#7CCBCD" }} class=" text-xl ">
-                    Aa
-                  </div>
-                  <div>Bold</div>
-                </div>
-                <div className="mx-4 md:mr-24 font-medium">
-                  <div style={{ color: "#7CCBCD" }} class=" text-xl ">
-                    Aa
-                  </div>
-                  <div>Medium</div>
-                </div>
-                <div className="mx-4 md:mx-0 font-normal">
-                  <div style={{ color: "#7CCBCD" }} class=" text-xl ">
-                    Aa
-                  </div>
-                  <div>Regular</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-span-1  md:py-20 ">
-            <img src={fonts} alt="" />
-          </div>
-        </div> */}
+        <div className="w-full my-4 md:hidden block">
+          <img src={mobColor1} className="w-full" alt="" />
+        </div>
+        <div className="w-full my-4 md:hidden block">
+          <img src={mobColor2} className="w-full" alt="" />
+        </div>
+        <div className="w-full my-4 md:hidden block">
+          <img src={mobColor3} className="w-full" alt="" />
+        </div>
+        <div className="w-full my-4 md:hidden block">
+          <img src={mobColor4} className="w-full" alt="" />
+        </div>
       </div>
       <a
         onMouseEnter={largeEnter}
@@ -909,7 +841,7 @@ const SmartVision = () => {
         href="https://www.notion.so/Smart-Vision-c7010846836246598e1c49aba44640eb"
         target="_blank"
         rel="noreferrer"
-        className="tracking-3 mb-10 md:mb-40 md:mt-24 px-5 flex items-center md:px-24 text-sm md:text-base  uppercase font-lato-bold"
+        className="tracking-3 mb-[126px] md:mb-40 mt-20 md:mt-24 px-5 flex items-center md:px-24 text-sm md:text-base  uppercase font-lato-bold"
       >
         <ArrowRightCircle
           width={30}
@@ -924,12 +856,19 @@ const SmartVision = () => {
         largeEnter={largeEnter}
         imageEnter={imageEnter}
         work={{
-          domain: "Branding",
-          title: "HappilyEver",
+          id: 1,
+          title: "BillEasy",
+          domain: "Research",
+          description:
+            "Creating an efficient accounting process for \n evolving businesses and enhanced work systems.",
+          gif: false,
+          image:
+            "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg",
           video:
-            "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/render_s6dzdu.gif",
-          gif: true,
-          link: "/happilyever",
+            "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662181482/work_gifs/BillEasy-short_yhhk58.mp4",
+          mobVideo:
+            "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662489092/work_gifs/Mob_BillEasy_Research_xys1wq.gif",
+          link: "/billeasy",
         }}
         next={true}
       />{" "}
