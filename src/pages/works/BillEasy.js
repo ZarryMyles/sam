@@ -801,10 +801,13 @@ const BillEasy = () => {
             />
             read full case study <img src={Teacup} alt="" class="w-9 ml-2" />
           </a>
-          <div class="md:px-5 block w-overflow-x-scroll">
+          <div class="md:px-5 hidden md:block w-overflow-x-scroll my-10 md:my-0">
             <img src={collage} className="w-[1000px] md:w-full" alt="" />
           </div>
-
+          {/* mobile vertical scroll thingy */}
+          <div class="md:px-5 block md:hidden w-overflow-x-scroll my-10 md:my-0">
+            <img src={collage} className="h-[600x] md:w-full" alt="" />
+          </div>
           {/* <div class="md:hidden px-5 flex flex-col justify-center items-center">
             <img src={CaseStudy2} className="  " alt="" />
             <img src={CaseStudy3} className="my-2  " alt="" />{" "}
