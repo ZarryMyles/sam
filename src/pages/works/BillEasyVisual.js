@@ -92,6 +92,8 @@ const BillEasyVisual = () => {
     video:
       "https://res.cloudinary.com/ahum/video/upload/v1662232035/BillEasy_Visual_hzrwgo.mp4",
     title: "BillEasy",
+    mobVideo:
+      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662494455/work_gifs/Mob_BillEasy_Visual_v1xkni.gif",
     domain: "Visual Design",
     subtitle: "A web app for managing your bills",
     description: "A web app for managing your bills",
@@ -99,7 +101,7 @@ const BillEasyVisual = () => {
     linkText: "Visit BillEasy",
   };
   return (
-    <div className="overflow-hidden  bg-brand-black text-brand-white">
+    <div className="overflow-x-hidden  bg-brand-black text-brand-white">
       {/* {loading && (
         <div class="fixed loaderDiv w-screen h-screen">
           {" "}
@@ -126,12 +128,7 @@ const BillEasyVisual = () => {
         >
           <img src={MagicWand} className="mr-2 w-9 " alt="" /> Design principles
         </div>
-        <ul
-          style={{
-            marginBottom: "30px",
-          }}
-          className="font-lato md:block hidden text-base ml-4 list-disc"
-        >
+        <ul className="font-lato text-base md:mb-[30px] ml-4 list-disc md:tracking-normal tracking-0.5">
           <li>
             We created four{" "}
             <span style={{ color: "#6AC296" }}>design principles</span> that
@@ -139,12 +136,12 @@ const BillEasyVisual = () => {
             <span style={{ color: "#6AC296" }}>user pain points.</span>
           </li>
         </ul>
-        <div className="md:px-7 flex md:flex-row flex-col font-lato font-normal text-brand-black w-full md:auto md:text-base text-base justify-between md:items-center">
+        <div className="md:px-7 md:tracking-normal tracking-widest flex md:flex-row flex-col font-lato font-normal text-brand-black w-full md:auto md:text-base text-base justify-between md:items-center">
           <div className="px-5 py-6 md:py-5 md:m-2 my-3 md:my-0 bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
             1. Intuitive
           </div>
           <div className="px-5 py-6 md:py-5 md:m-2 my-3 md:my-0 bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
-            2. Time Efficient
+            2. Time efficient
           </div>
           <div className="px-5 py-6 md:py-5 md:m-2 my-3 md:my-0 bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
             3. Empathy
@@ -164,7 +161,7 @@ const BillEasyVisual = () => {
         >
           <img src={SmallBlueDiamond} className="mr-2 w-9 " alt="" /> Use Cases
         </div>
-        <div className="md:px-7 flex md:flex-row flex-col font-lato font-normal text-brand-black w-full md:auto md:text-base text-base justify-between md:items-center">
+        <div className="md:px-7 md:tracking-normal tracking-widest  flex md:flex-row flex-col font-lato font-normal text-brand-black w-full md:auto md:text-base text-base justify-between md:items-center">
           <div className="px-5 py-6 flex justify-start items-center md:py-5 md:m-2 my-3 md:my-0 bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
             <img src={invoiceGen} width="30px" alt="page" className="mr-2" />{" "}
             Invoice Generation
@@ -189,13 +186,8 @@ const BillEasyVisual = () => {
         </div>
       </div>
       {/* Ideas to life */}
-      <div class="font-lato h-full flex w-full flex-col md:px-24 px-5 pt-10 md:pt-32">
-        <div
-          style={{
-            marginBottom: "30px",
-          }}
-          className="  text-2xl md:text-4xl md:my-0 my-8 tracking-widest font-lato-light font-bold flex items-center"
-        >
+      <div class="font-lato h-full flex w-full flex-col md:px-24 px-0 pt-0 md:mt-0 mt-[136px] md:pt-32">
+        <div className="  text-2xl md:text-4xl md:my-0 md:mb-[30px] my-8 md:px-0 px-7 tracking-widest font-lato-light font-bold flex items-center">
           <img src={FramedPicture} className="mr-2 w-9 " alt="" /> Bringing
           Ideas To Life
         </div>
@@ -213,17 +205,17 @@ const BillEasyVisual = () => {
         />
       </div>
       {/* Visual Design */}
-      <div class="font-lato h-full flex w-screen flex-col pt-10 md:pt-36">
+      <div class="font-lato h-full flex w-screen flex-col pt-0 md:mt-0 mt-[150px] md:pt-36">
         <div
           style={{
             marginBottom: "30px",
           }}
-          class="  text-2xl md:px-24 px-5 md:text-4xl md:my-0 my-8 tracking-1.5 font-lato   flex items-center"
+          class="  text-2xl md:px-24 px-7 md:text-4xl md:my-0 my-8 md:mb-0 mb-6 tracking-1.5 font-lato   flex items-center"
         >
           <img src={Eyes} className="mr-2 w-9 " alt="" /> Visual Design
         </div>
         <div>
-          <div className="text-base my-5 font-lato font-normal md:my-0 text-justify md:px-24 px-5">
+          <div className="text-base my-5 md:tracking-normal tracking-0.5 font-lato font-normal md:my-0 text-justify md:px-24 px-7">
             <span className="text-lg">•</span> Due to limited time frame, I
             moved right into creating rough paper wireframes. During this phase
             of prototyping, We closely{" "}
@@ -234,12 +226,25 @@ const BillEasyVisual = () => {
             <span style={{ color: "#6AC296" }}>2-3 rounds of iteration</span> ,
             we were able to finalize the UI Designs.
           </div>
+          <div className="text-base font-lato md:tracking-normal tracking-0.5 font-semibold md:hidden px-7 mt-12 mb-10">
+            <span className="text-lg">•</span> Features
+          </div>
           {/* Invoice Storage */}
-          <div className="flex md:flex-row font-lato font-normal md:px-24 px-5 md:mt-24 flex-col">
-            <div className="md:w-3/5 md:pr-10 md:pb-0 pb-5 flex flex-col text-lg">
+          <div className="flex md:flex-row md:tracking-normal tracking-0.5 font-lato font-normal  md:mt-24 flex-col">
+            <div className=" md:hidden  px-7 text-base">1. Invoice Storage</div>
+            <img
+              src={visual}
+              className="md:hidden my-4"
+              width="100%"
+              alt="visual"
+            />
+            <div className="md:w-3/5 md:px-24 px-7 md:pr-10 md:pb-0 pb-5 flex flex-col">
               <div className=" md:py-5">
-                1. Invoice Storage <br />
-                <br /> a. Providing{" "}
+                <span className="md:block hidden">
+                  1. Invoice Storage <br />
+                  <br />{" "}
+                </span>
+                a. Providing{" "}
                 <span style={{ color: "#6AC296" }}>cloud storage</span> to
                 access invoices from anywhere at any time.
                 <br />
@@ -258,17 +263,22 @@ const BillEasyVisual = () => {
                 <span style={{ color: "#6AC296" }}>save time.</span>
               </div>
             </div>
-            <img src={visual} width="100%" alt="visual" />
+            <img
+              src={visual}
+              className="hidden md:px-24 px-5 md:block"
+              width="100%"
+              alt="visual"
+            />
           </div>
           {/* Invoice Generation */}
-          <div className="flex flex-col">
-            <div className="pt-10 md:mt-32 font-lato font-normal md:pb-0 pb-3 md:px-24 px-5 text-lg md:py-5">
+          <div className="flex flex-col ">
+            <div className="pt-10 md:mt-32 font-lato font-normal md:pb-0 pb-3 md:px-24 px-7 md:tracking-normal tracking-0.5 md:py-5">
               2. Invoice Generation
             </div>
-            <div className="flex md:flex-row w-full overflow-hidden md:mt-5 md:px-24 px-5 py-5 flex-col bg-brand-darkGrey2 items-center">
+            <div className="flex md:flex-row w-full leading-7 overflow-hidden md:mt-5 md:px-24 px-7 py-5 flex-col bg-brand-darkGrey2 items-center">
               {" "}
-              <div className="md:w-7/10 md:pr-10 md:pb-0 pb-5 flex flex-col text-lg">
-                <div className="font-lato md:py-5 py-3">
+              <div className="md:w-7/10 md:pr-10 md:pb-0 pb-5 flex flex-col ">
+                <ul className="font-lato list-disc list-inside text-justify  md:py-5 py-3">
                   ⭐{" "}
                   <span
                     className="font-lato font-normal "
@@ -277,22 +287,39 @@ const BillEasyVisual = () => {
                     Process
                   </span>{" "}
                   of creating GST complaint invoices : <br /> <br />
-                  <span className="text-lg">•</span> We collected a bunch of
-                  invoices (From NinjaasLabs as well as other sellers/service
-                  providers) and prioritized its most important and relevant
-                  sections to design an invoice page, creating more
-                  GST-compliant return tax filing.
-                </div>{" "}
+                  <li>
+                    We collected a bunch of invoices (From NinjaasLabs as well
+                    as other sellers/service providers) and prioritized its most
+                    important and relevant sections to design an invoice page,
+                    creating more GST-compliant return tax filing.
+                  </li>
+                </ul>{" "}
               </div>
-              <img src={invoiceG1} height="118px" width="208px" alt="visual" />
+              <img
+                src={invoiceG1}
+                height="118px"
+                width="208px"
+                alt="visual"
+                className="hidden md:block"
+              />
+              <img
+                src={invoiceG1}
+                className="md:hidden mt-4 mb-10"
+                width="100%"
+                alt="visual"
+              />
             </div>
-            <div className="flex md:flex-row md:px-24 px-5 mt-10 flex-col items-start justify-between">
+            <div className="flex md:flex-row  mt-10 flex-col items-start justify-between">
               {" "}
-              <div className="md:w-7/10 md:pr-10 md:pb-0 text-justify pb-5 flex flex-col text-lg">
+              <img src={invoiceG2} alt="visual" className="my-6 md:hidden " />
+              <div className="md:w-7/10 md:px-24 px-7 tracking-0.5 leading-7 md:pr-10 md:pb-0 text-justify pb-5 flex flex-col ">
                 <div className="font-lato font-normal md:py-5 py-3">
-                  2. Invoice Generation
-                  <br />
-                  <br /> a. Simple way to create{" "}
+                  <span className="hidden md:block">
+                    2. Invoice Generation
+                    <br />
+                    <br />
+                  </span>
+                  a. Simple way to create{" "}
                   <span style={{ color: "#6AC296" }}>
                     GST compliant invoices.
                   </span>{" "}
@@ -316,18 +343,27 @@ const BillEasyVisual = () => {
                   its own interface with meticulously organized invoices .
                 </div>
               </div>
-              <img src={invoiceG2} alt="visual" />
+              <img
+                src={invoiceG2}
+                alt="visual"
+                className="md:px-24 px-5 hidden md:block"
+              />
             </div>
           </div>
           {/* Invoice Distribution and Report Tracking */}
-          <div className="flex flex-col md:px-24 p-5 mt-24 text-justify bg-brand-darkGrey text-white">
-            <div className="flex md:flex-row flex-col md:mt-24 mt-10">
+          <div className="flex flex-col md:px-24 mt-24 text-justify bg-brand-darkGrey2 text-white">
+            <div className="flex md:flex-row flex-col md:mt-24 md:mb-0 ">
+              <div className="pt-10 md:hidden md:px-0 px-7 text-base font-lato font-normal pb-4 tracking-0.5">
+                3. Invoice Distribution
+              </div>
               <img src={invDist} width="100%" alt="visual" />
-              <div className="md:w-1/2 md:ml-10 md:pr-10 md:pb-0 pb-5 flex flex-col text-lg">
-                <div className="font-lato font-normal md:py-5 md:pt-0 pt-5">
-                  3. Invoice Distribution
-                  <br />
-                  <br />
+              <div className="md:w-1/2 md:ml-10 md:px-0 px-7 md:pr-10 md:pb-0 pb-5 flex flex-col">
+                <div className="font-lato font-normal md:py-5 md:pb-0 pb-[136px] md:pt-0 pt-5">
+                  <span className="md:block hidden">
+                    3. Invoice Distribution
+                    <br />
+                    <br />
+                  </span>
                   Share your invoices with your clients in{" "}
                   <span style={{ color: "#6AC296" }}>single click!</span>
                 </div>
@@ -335,26 +371,39 @@ const BillEasyVisual = () => {
             </div>
             {/* Mobile */}
             <div className="flex md:hidden mt-10 flex-col">
+              <div className="font-lato px-7 pb-4 tracking-0.5 font-normal ">
+                4. Report Tracking
+              </div>
               <img src={report} width="100%" alt="visual" />
-              <div className="pb-5 flex flex-col text-lg pt-5">
-                <div className="font-lato-bold ">4. Report Tracking</div>
-                <div className="font-lato py-3">
+              <div className="pb-10 px-7 tracking-0.5 leading-7 text-justify flex flex-col pt-5">
+                <div className="font-lato font-normal py-3">
                   a.{" "}
-                  <span className="font-lato-bold ">
-                    Instant generation of reports
+                  <span className="font-lato font-normal ">
+                    <span style={{ color: "#6AC296" }}>Instant generation</span>{" "}
+                    of reports
                   </span>
                   .
                 </div>
                 <div className="font-lato py-3">
-                  b. No more manual tracking, simply click for{" "}
-                  <span className="font-lato-bold ">
+                  b.{" "}
+                  <span style={{ color: "#6AC296" }}>
+                    No more manual tracking
+                  </span>
+                  , simply click for{" "}
+                  <span className="font-lato font-normal ">
                     weekly, monthly or annual results with ease of tracking
                     invoice status.
                   </span>
                 </div>
                 <div className="font-lato py-3">
                   c.{" "}
-                  <span className="font-lato-bold ">Comparison made easy</span>.
+                  <span
+                    style={{ color: "#6AC296" }}
+                    className="font-lato font-normal "
+                  >
+                    Comparison made easy
+                  </span>
+                  .
                 </div>
               </div>
             </div>
@@ -390,17 +439,17 @@ const BillEasyVisual = () => {
         </div>
       </div>
       {/* Style Guide */}
-      <div class="font-lato h-full flex w-screen flex-col pt-10">
-        <div className=" md:px-24 px-5 mb-10 text-justify">
+      <div class="font-lato h-full flex w-screen flex-col md:pt-10 md:mt-0 mt-[136px]">
+        <div className=" md:px-24 px-7 mb-10 text-justify">
           <div
             style={{
               marginBottom: "30px",
             }}
-            class=" text-2xl md:text-4xl md:my-0 my-8 tracking-widest font-lato font-normal flex items-center"
+            class=" text-2xl md:text-4xl md:my-0 my-8 tracking-widest leading-7 font-lato font-normal flex items-center"
           >
             <img src={GuideDog} className="mr-2 w-9 " alt="" /> Style Guide
           </div>
-          <ul className="font-lato font-normal">
+          <ul className="font-lato font-normal leading-7 md:leading-normal tracking-">
             <li>
               <span className="font-lato font-normal">•</span> Meanwhile, we
               designed a{" "}
@@ -413,27 +462,40 @@ const BillEasyVisual = () => {
             </li>
           </ul>
         </div>
-        <img
-          src={buttons}
-          width="100%"
-          alt="visual"
-          className="md:border-none border"
-        />
+        {/* <div
+          style={{ backgroundImage: `url(${buttons})` }}
+          className="bg-scroll mx-7 bg-no-repeat whitespace-nowrap overflow-x-scroll h-[200px]"
+        ></div> */}
+        <div className="w-full h-[200px] overflow-visible whitespace-nowrap">
+          {" "}
+          <img
+            src={buttons}
+            width="100%"
+            alt="visual"
+            className="inline-block"
+          />
+          <img
+            src={buttons}
+            width="100%"
+            alt="visual"
+            className="inline-block"
+          />
+        </div>
       </div>
       {/* Result Matrix */}
-      <div class="font-lato h-full flex w-screen flex-col pt-10 md:pt-40">
-        <div className=" md:px-24 px-5 mb-10 text-justify">
+      <div class="font-lato h-full flex w-screen flex-col pt-[136px] md:pt-40">
+        <div className=" md:px-24 px-0 mb-10 text-justify">
           <div
             style={{
               marginBottom: "30px",
             }}
-            class=" text-2xl md:text-4xl md:my-0 my-8 tracking-1.5 font-lato font-normal flex items-center"
+            class=" text-2xl md:px-0 px-7 md:text-4xl md:my-0 my-8 tracking-1.5 leading-7 font-lato font-normal flex items-center"
           >
             <img src={PartyingFace} className="mr-2 w-9 " alt="" /> Result
             Matrix
           </div>
-          <div className="font-lato font-normal flex md:flex-row flex-col justify-between">
-            <div className="md:w-1/3 md:pr-10 md:pb-0 pb-5 flex flex-col  text-lg">
+          <div className="font-lato  font-normal tracking-0.5 leading-7 flex md:flex-row flex-col justify-between">
+            <div className="md:w-1/3 md:px-0 px-7 md:pr-10 md:pb-0 pb-5 flex flex-col ">
               <div className="mb-5">
                 After developing the product we estimated the following results:
                 <br />
@@ -465,8 +527,8 @@ const BillEasyVisual = () => {
             style={{ color: "#6AC296" }}
             target="_blank"
             rel="noreferrer"
-            href="https://www.notion.so/Interface-design-b0ea7648c51243dd9ff5f3c6500742b8"
-            className="tracking-3 md:mt-20 mb-10 md:mb-20 flex items-center text-sm md:text-base uppercase font-lato-bold"
+            href="https://morning-jackrabbit-815.notion.site/Interface-design-b0ea7648c51243dd9ff5f3c6500742b8"
+            className="tracking-3 md:mt-20 mt-[80px] mb-[136] pl-6 md:pl-0 md:mb-20 flex items-center text-sm md:text-base uppercase font-lato-bold"
           >
             <ArrowRightCircle
               width={30}
@@ -481,7 +543,7 @@ const BillEasyVisual = () => {
       </div>
       {/* Possibilities */}
       <div class="font-lato h-full flex w-screen flex-col pt-10">
-        <div className=" md:px-24 px-5 mb-10 text-justify">
+        <div className=" md:px-24 px-7 mb-10 text-justify">
           <div
             style={{
               marginBottom: "30px",
@@ -492,7 +554,7 @@ const BillEasyVisual = () => {
             Possibilities
           </div>
           <div className="flex md:flex-row flex-col">
-            <div className="md:pr-10 font-lato font-normal md:pb-0 pb-5 flex flex-col text-lg">
+            <div className="md:pr-10 font-lato tracking-0.5 leading-7 font-normal md:pb-0 pb-5 flex flex-col">
               <div className="mb-5">
                 The next step will be to push the{" "}
                 <span style={{ color: "#6AC296" }}>
@@ -525,19 +587,19 @@ const BillEasyVisual = () => {
         </div>
       </div>
       {/* Learnings and Retrospect */}
-      <div class="font-lato h-full flex w-screen flex-col pt-10 mb-10">
-        <div className=" md:px-24 px-5 mb-10 text-justify">
+      <div class="font-lato h-full flex w-screen flex-col pt-10 md:mb-10 mb-[124px]">
+        <div className=" md:px-24 px-7 mb-10 text-justify">
           <div
             style={{
               marginBottom: "30px",
             }}
-            class=" text-2xl md:text-4xl md:my-0 my-8 tracking-1.5 font-lato font-normal flex items-center"
+            class=" text-2xl text-start md:text-4xl md:my-0 my-8 tracking-1.5 font-lato font-normal flex items-center"
           >
             <img src={InLotusPosition} className="mr-2 w-9 " alt="" /> Learnings
             and Retrospect
           </div>
-          <div className="flex font-lato font-normal md:flex-row flex-col">
-            <div className="md:pr-10 md:pb-0 pb-5 flex flex-col text-lg">
+          <div className="flex font-lato tracking-0.5 leading-7 font-normal md:flex-row flex-col">
+            <div className="md:pr-10 md:pb-0 pb-5 flex flex-col ">
               <div className="py-3">
                 <span className="text-lg">•</span> Realized the role of{" "}
                 <span style={{ color: "#6AC296" }}>engaging stakeholders</span>{" "}
@@ -570,6 +632,8 @@ const BillEasyVisual = () => {
             video:
               "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/Comp_1_tdwzlp.gif",
             title: "Smart Vision",
+            mobVideo:
+              "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662489091/work_gifs/Mob_Smart_Vision_seddok.gif",
             gif: true,
             domain: "Case Study",
             subtitle: "A web app for managing your bills",

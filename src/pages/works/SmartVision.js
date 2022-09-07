@@ -856,19 +856,12 @@ const SmartVision = () => {
         largeEnter={largeEnter}
         imageEnter={imageEnter}
         work={{
-          id: 1,
-          title: "BillEasy",
-          domain: "Research",
-          description:
-            "Creating an efficient accounting process for \n evolving businesses and enhanced work systems.",
-          gif: false,
-          image:
-            "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg",
-          video:
-            "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662181482/work_gifs/BillEasy-short_yhhk58.mp4",
+          domain: "Branding",
+          title: "Happily Ever",
+          video: "../assets/work_gifs/happilyEver.mp4",
           mobVideo:
-            "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662489092/work_gifs/Mob_BillEasy_Research_xys1wq.gif",
-          link: "/billeasy",
+            "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662489092/work_gifs/Mob_Happilyever_iqkfoo.gif",
+          link: "/happilyever",
         }}
         next={true}
       />{" "}

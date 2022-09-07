@@ -101,6 +101,8 @@ const HappilyEver = () => {
     image:
       "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
     video: "../assets/work_gifs/happilyEver.mp4",
+    mobVideo:
+      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662489092/work_gifs/Mob_Happilyever_iqkfoo.gif",
     title: "Happily Ever",
     domain: "Branding",
     subtitle: "",
@@ -124,11 +126,11 @@ const HappilyEver = () => {
       onMouseEnter={imageEnter}
       className="overflow-hidden font-lato font-normal text-justify bg-brand-black text-brand-white"
     >
-      {loading && (
+      {/* {loading && (
         <div class="fixed w-full h-full z-50">
           <Loader />
         </div>
-      )}
+      )} */}
       <Navbar
         largeEnter={largeEnter}
         imageEnter={imageEnter}
@@ -142,14 +144,14 @@ const HappilyEver = () => {
         imageEnter={imageEnter}
       />
       {/* project brief */}
-      <div class=" px-5 pt-10 md:px-24 md:mt-20 flex flex-wrap justify-between  ">
+      <div class=" px-5 pt-[105px] md:py-10 md:px-24 md:mt-20 flex flex-wrap justify-between  ">
         <div className="my-5">
           <div class="text-xl  font-lato flex items-center -ml-1">
             <img src={Clipboard} className="mr-2 w-5 " alt="" /> Project Type
           </div>
           <div className="font-lato font mt-2">Proof of concept</div>
         </div>
-        <div className=" w-1/2 md:w-auto my-5   ">
+        <div className=" w-1/2 md:w-auto my-5   pl-4 md:pl-0">
           <div class="text-xl  font-lato flex items-center -ml-2">
             <img src={Calendar} className="mr-2 w-5 " alt="" /> Timeline
           </div>
@@ -161,7 +163,7 @@ const HappilyEver = () => {
           </div>
           <div className="font-lato  mt-2">Product Design Intern</div>
         </div>
-        <div className=" w-1/2 md:w-auto my-5   ">
+        <div className=" w-1/2 md:w-auto my-5   pl-4 md:pl-0">
           <div class="text-xl  font-lato flex items-center -ml-1">
             <img src={Fist} className="mr-2 w-5 " alt="" /> Design Team
           </div>
@@ -169,7 +171,7 @@ const HappilyEver = () => {
         </div>
       </div>
       {/* project about */}
-      <div class=" px-5 py-10 md:px-24 md:mb-36 md:pr-0 grid grid-cols-12  h-full">
+      <div class=" px-7 py-10 md:px-24 md:mb-36 md:pr-0 grid grid-cols-12  h-full">
         <WorkHeading text={"About"} />
         <div class="col-span-12 md:col-span-6 h-full flex flex-col    ">
           <div class="flex items-center">
@@ -183,7 +185,7 @@ const HappilyEver = () => {
               HappilyEver
             </div>
           </div>
-          <div className="  leading-6 tracking-0.5  font-lato ">
+          <div className="  leading-7 tracking-0.5 text-justify  font-lato ">
             Happily Ever, aka HAE, is an Match-making service. It is strongly
             aimed at helping people in{" "}
             <span style={{ color: "#ED9D9D" }}>
@@ -196,7 +198,7 @@ const HappilyEver = () => {
         <div class="hidden md:block col-span-1"></div>
 
         <div class="col-span-12 md:col-span-5  flex flex-col items-center  justify-center md:pl-10 rounded-xl text-brand-white ">
-          <div className="  px-4 md:pr-24 rounded-l-lg flex flex-col justify-center bg-brand-darkGrey2 md:pl-14 py-14  ">
+          <div className=" -md:mx-0 -mx-7 tracking-0.5 px-7 md:px-4 md:pr-24 md:rounded-l-lg flex flex-col justify-center bg-brand-darkGrey2 md:pl-14 py-14  ">
             <div className=" mb-8">
               <div className=" mb-2 flex items-center">
                 <img src={Check} className="mr-2 w-5 " alt="" /> Results
@@ -222,14 +224,14 @@ const HappilyEver = () => {
         </div>
       </div>
       {/* purpose */}
-      <div className="p-5 md:p-0">
-        <div className="md:px-24 px-5 w-full">
+      <div className="px-7 md:p-0 md:py-0 py-[136px]">
+        <div className="md:px-24 w-full">
           <WorkHeading text={"purpose"} />
         </div>
         <div class=" font-lato md:pb-56">
-          <div class=" w-max bg-brand-darkGrey2 md:pt-5 md:pb-16 md:pl-24 rounded-r-lg">
-            <div class="text-2xl font-lato">🎯 Goals</div>
-            <div className=" mt-8 text-left w-max pr-28">
+          <div class=" md:w-max md:bg-brand-darkGrey2 md:pt-5 md:pb-16 md:pl-24 md:rounded-r-lg">
+            <div class="text-2xl tracking-1.5 font-lato">🎯 Goals</div>
+            <div className=" md:mt-8 mt-6 font-lato font-normal tracking-0.5 text-justify md:text-left md:w-max md:pr-28">
               1. Strengthen brand direction.
               <br />
               2. Improve focus on purpose.
@@ -241,33 +243,19 @@ const HappilyEver = () => {
         </div>
       </div>
       {/* Challenge */}
-      <div className="px-5 bg-brand-black text-brand-white md:px-24 md:pb-10">
+      <div className="px-7 md:py-0 py-10 bg-brand-darkGrey2 md:bg-brand-black text-brand-white md:px-24 md:pb-10">
         <WorkHeading text={"Challenge"} />
         <div class="flex items-center md:items-center md:flex-row flex-col font-lato ">
-          {/* <svg
-            width="24"
-            className=" absolute ml-10 md:left-8 left-3 md:w-16 -mt-10 md:-mt-5 "
-            height="22"
-            viewBox="0 0 24 22"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M5.576 21.376C3.848 21.376 2.552 20.8 1.688 19.648C0.824 18.448 0.392 16.936 0.392 15.112C0.44 13.816 0.704 12.328 1.184 10.648C1.664 8.92 2.36 7.168 3.272 5.392C4.232 3.616 5.408 1.912 6.8 0.279996L8.888 1.936C8.168 2.8 7.496 3.88 6.872 5.176C6.248 6.424 5.72 7.768 5.288 9.208C4.904 10.648 4.688 12.04 4.64 13.384C4.928 13.288 5.216 13.216 5.504 13.168C5.792 13.12 6.08 13.096 6.368 13.096C7.424 13.096 8.312 13.456 9.032 14.176C9.752 14.848 10.088 15.76 10.04 16.912C10.04 18.256 9.608 19.336 8.744 20.152C7.88 20.968 6.824 21.376 5.576 21.376ZM18.536 21.376C16.856 21.376 15.56 20.8 14.648 19.648C13.784 18.448 13.376 16.936 13.424 15.112C13.472 13.816 13.712 12.328 14.144 10.648C14.624 8.92 15.344 7.168 16.304 5.392C17.264 3.616 18.44 1.912 19.832 0.279996L21.92 1.936C21.2 2.8 20.504 3.88 19.832 5.176C19.208 6.424 18.68 7.768 18.248 9.208C17.864 10.648 17.672 12.04 17.672 13.384C17.96 13.288 18.224 13.216 18.464 13.168C18.752 13.12 19.064 13.096 19.4 13.096C20.408 13.096 21.272 13.456 21.992 14.176C22.76 14.848 23.12 15.76 23.072 16.912C23.072 18.256 22.616 19.336 21.704 20.152C20.84 20.968 19.784 21.376 18.536 21.376Z"
-              fill="#424242"
-            />
-          </svg> */}
+          <img src={one} alt="logo" className="w-2/3 md:hidden left-1/4" />
           <div className="md:w-6/10  ">
-            <div class="md:pr-10 leading-6 ml-10 tracking-0.5 font-lato font-normal">
+            <div class="md:pr-10 md:leading-6 md:ml-10 tracking-0.5 leading-7 font-lato font-normal">
               <div className=" ">
                 1. The product's vision is to "
                 <span style={{ color: "#ED9D9D" }}>
-                  fosters meaningful connections
+                  foster meaningful connections
                 </span>
-                ". However the current product <br /> provided matrimonial
-                services. As a result, the primary users included young adults
-                and singles,
-                <br />
+                ". However the current product provided matrimonial services. As
+                a result, the primary users included young adults and singles,
                 each with their own set of expectations and mental models.
               </div>
               <div className="py-3">
@@ -275,8 +263,7 @@ const HappilyEver = () => {
                 <span style={{ color: "#ED9D9D" }}>
                   aligned with the core vision
                 </span>{" "}
-                to avoid any <br />
-                complexities.
+                to avoid any complexities.
               </div>
               <div className="py-3">
                 3.{" "}
@@ -286,29 +273,21 @@ const HappilyEver = () => {
               </div>
             </div>
           </div>
-          <img
-            src={one}
-            alt="logo"
-            className="w-1/2 md:w-4/10 md:left-0 left-1/4 mt-9"
-          />
+          <img src={one} alt="logo" className="md:block hidden w-4/10 left-0" />
         </div>
       </div>
       {/* Research and Analyzing product */}
-      <div className="p-5 md:p-24 ">
+      <div className="p-0 md:px-24 px-7 md:py-0 py-[136px] md:p-24 ">
         <WorkHeading text={"Research"} />
         {/* Analyzing */}
         <div class="flex items-center md:items-start md:flex-row flex-col font-lato">
           <div class="md:pr-10 md:w-6/10">
-            <div
-              style={{
-                marginBottom: "30px",
-              }}
-              class="  text-2xl md:text-4xl md:my-0 my-8 tracking-1.5 font-lato flex items-center"
-            >
+            <div class="  text-2xl md:text-4xl md:mb-[30px] md:my-0 my-6 tracking-1.5 font-lato flex items-center">
               <img src={GuideDog} className="mr-2 w-9 " alt="" /> Analyzing The
               Product
             </div>
-            <div className="mt-10 md:mb-16 font-lato font-normal leading-6 tracking-1.5">
+            <img src={two} alt="logo" className="w-full px-16 md:hidden" />
+            <div className="md:mt-10 mt-2 md:mb-16 font-lato font-normal leading-7 tracking-0.5">
               Stakeholder Interview <br />
               <br />
               <span className="text-lg">•</span> The first step in{" "}
@@ -336,13 +315,13 @@ const HappilyEver = () => {
           <img
             src={two}
             alt="logo"
-            className="w-1/2 md:mt-10 md:w-4/10 md:left-0 left-1/4"
+            className="hidden md:block mt-10 w-4/10 left-0"
           />
         </div>
         {/* Key Insights */}
         <div class="flex items-center md:items-start md:flex-row flex-col font-lato">
           <div class="md:pr-10 md:w-6/10">
-            <div className="mt-10 md:mb-16 font-lato font-normal leading-5 tracking-1.5">
+            <div className="md:mt-10 mt-20 md:mb-16 font-lato font-normal leading-7 tracking-0.5">
               Key Insights <br />
               <br />
               <br />
@@ -385,20 +364,16 @@ const HappilyEver = () => {
         </div>
       </div>
       {/* Competitive Analysis */}
-      <div className="p-5 md:p-20 ">
+      <div className="p-7 py-0 pb-[136px] md:my-20 md:pb-20 md:p-20 ">
         <div class="flex items-center md:items-center justify-between md:flex-row flex-col font-lato">
           <div className=" md:w-6/10 md:pr-4">
             <div class=" ">
-              <div
-                style={{
-                  marginBottom: "30px",
-                }}
-                class="  text-2xl md:text-4xl md:my-0 my-8 tracking-1.5 font-lato flex items-center"
-              >
+              <div class="  text-2xl md:mb-[30px] md:text-4xl md:my-0 my-8 tracking-1.5 font-lato flex items-center">
                 <img src={Nerd} className="mr-2 w-9 " alt="" />
                 Competitive Analysis
               </div>
-              <div className="py-3 mt-10  font-lato font-normal leading-5 tracking-1.5">
+              <img src={three} alt="logo" className="w-full  md:hidden " />
+              <div className="py-3 mt-10  font-lato font-normal leading-7 tracking-0.5">
                 <span className="text-lg">•</span> The product being developed
                 was a matrimonial service with a{" "}
                 <span style={{ color: "#ED9D9D" }}>
@@ -422,43 +397,38 @@ const HappilyEver = () => {
           <img
             src={three}
             alt="logo"
-            className="w-1/2 md:w-4/10 p-8  md:left-0 left-1/4"
+            className="w-1/2 hidden md:block md:w-4/10 p-8  md:left-0 left-1/4"
           />
         </div>
       </div>
       {/* Usability Testing */}
-      <div className="p-5 md:p-20">
+      <div className="p-7 py-0 md:py-20 md:p-20">
         <div class="flex items-center md:items-start md:flex-row flex-col font-lato">
           <div>
             <div class="md:pr-10">
-              <div
-                style={{
-                  marginBottom: "30px",
-                }}
-                class="  text-2xl md:text-4xl md:my-0 my-8 tracking-1.5 font-lato flex items-center"
-              >
+              <div class=" md:mb-[30px] mb-6 text-2xl md:text-4xl md:my-0 my-8 tracking-1.5 font-lato flex items-center">
                 <img src={Placard} className="mr-2 w-9 " alt="" />
                 Usability testing
               </div>
-              <div className="py-3 mt-10 font-lato font-normal leading-5 tracking-1.5">
+              <div className="py-3 md:mt-10 font-lato font-normal leading-7 tracking-0.5">
                 <span className="text-lg">•</span> Users do not necessarily use
                 and perceive our products the same way we wish them to.
               </div>
-              <div className="py-3 font-lato font-normal leading-5 tracking-1.5">
+              <div className="py-3 font-lato font-normal leading-7 tracking-0.5">
                 <span className="text-lg">•</span> Therefore, I ran a usability
                 test to better understand{" "}
                 <span style={{ color: "#ED9D9D" }}>
                   user needs and expectations.
                 </span>
               </div>
-              <div className="py-3 font-lato font-normal leading-5 tracking-1.5">
+              <div className="py-3 font-lato font-normal leading-7 tracking-0.5">
                 <span className="text-lg">•</span> This greatly helped the
                 stakeholders to know of the{" "}
                 <span style={{ color: "#ED9D9D" }}>
                   gaps in their current methods.
                 </span>
               </div>
-              <div className="py-3 font-lato font-normal leading-5 tracking-1.5">
+              <div className="py-3 font-lato font-normal leading-7 tracking-1.5">
                 <span className="text-lg">•</span> I was able to conduct the
                 tests with{" "}
                 <span style={{ color: "#ED9D9D" }}>5 users via Zoom.</span>
@@ -468,7 +438,7 @@ const HappilyEver = () => {
         </div>
       </div>
       {/* Approach */}
-      <div className="p-5 md:p-20">
+      <div className="p-0 py-0 md:py-20 md:mt-0 mt-[136px] md:p-20">
         <div class="flex items-center md:items-center justify-between md:flex-row flex-col font-lato">
           <div className="md:w-6/10">
             <div class="md:pr-10">
@@ -476,12 +446,13 @@ const HappilyEver = () => {
                 style={{
                   marginBottom: "30px",
                 }}
-                class="  text-2xl md:text-4xl md:my-0 my-8 tracking-1.5 font-lato flex items-center"
+                class="  text-2xl px-7 md:px-0 md:text-4xl md:my-0 my-8 tracking-1.5 font-lato flex items-center"
               >
                 <img src={Ladder} className="mr-2 w-9 " alt="" />
                 Approach
               </div>
-              <div className="py-3 mt-10 font-lato font-normal leading-5 tracking-1.5">
+              <img src={four} alt="logo" className="w-screen  mt-6 md:hidden" />
+              <div className="py-3 px-7 md:px-0 mt-10 font-lato font-normal leading-7 tracking-0.5">
                 <span className="text-lg">•</span> Through analysis of both
                 competitive and usability tests results, I developed a{" "}
                 <span style={{ color: "#ED9D9D" }}>Venn Diagram</span> to
@@ -491,7 +462,7 @@ const HappilyEver = () => {
                 he is{" "}
                 <span style={{ color: "#ED9D9D" }}>currently developing.</span>
               </div>
-              <div className="py-3 font-lato font-normal leading-5 tracking-1.5">
+              <div className="py-3 px-7 md:px-0 font-lato font-normal leading-5 tracking-1.5">
                 <span className="text-lg">•</span> As shown in the figure, The
                 mental model of the users is completely different, thus having
                 them both in a single platform would yield no positive outcomes,
@@ -502,25 +473,25 @@ const HappilyEver = () => {
               </div>
             </div>
           </div>
-          <img src={four} alt="logo" className="w-1/2 md:w-4/10 mt-8 " />
+          <img
+            src={four}
+            alt="logo"
+            className="w-1/2 md:w-4/10 px-7 md:px-0 mt-8 hidden md:block"
+          />
         </div>
       </div>{" "}
       {/* Solutions */}
-      <div className="p-5 md:p-24">
+      <div className="p-7 py-0 md:py-24 md:mt-0 mt-[136px] md:p-24">
         <WorkHeading text={"Solutions"} />
         <div class="flex items-center md:items-center md:flex-row flex-col font-lato">
           <div className="md:w-6/10">
             <div class="md:pr-10">
-              <div
-                style={{
-                  marginBottom: "30px",
-                }}
-                class="  text-2xl md:text-4xl md:my-0 my-8 tracking-1.5 font-lato flex items-center"
-              >
+              <div class="  text-2xl md:mb-[30px] md:text-4xl mb-6 tracking-1.5 font-lato flex items-center">
                 <img src={ClinkingGlasses} className="mr-2 w-9 " alt="" />
                 Solutions
               </div>
-              <div className="py-3 mt-10 font-lato font-normal leading-5 tracking-1.5">
+              <img src={five} alt="logo" className="md:hidden w-full " />
+              <div className="py-3 md:mt-10 font-lato font-normal leading-7 tracking-0.5">
                 <span className="text-lg">•</span> Since HappilyEver was an
                 <span style={{ color: "#ED9D9D" }}>
                   {" "}
@@ -590,8 +561,10 @@ const HappilyEver = () => {
                 <span style={{ color: "#ED9D9D" }}>
                   Authenticity, personalized connections and joy.
                 </span>
+                <br />
                 <br /> <span className="text-lg">•</span> How is it different?
-                <br /> <span className="text-lg">•</span> Encourages real
+                <br /> <br />
+                <span className="text-lg">•</span> Encourages real
                 <span style={{ color: "#ED9D9D" }}>
                   meet-ups, limits choice paralysis and icebreakers.
                 </span>{" "}
@@ -609,6 +582,7 @@ const HappilyEver = () => {
                 </div>
                 <span className="text-lg">•</span> Our primary users aged
                 between <span style={{ color: "#ED9D9D" }}>20 to 35yrs</span>
+                <br />
                 <br /> <span className="text-lg">•</span> Why?
                 <br /> Since, this was the age group that began looking for{" "}
                 <span style={{ color: "#ED9D9D" }}>
@@ -622,11 +596,7 @@ const HappilyEver = () => {
               </div>
             </div>
           </div>
-          <img
-            src={five}
-            alt="logo"
-            className="w-1/2 md:w-1/3 md:left-0 left-1/4"
-          />
+          <img src={five} alt="logo" className="hidden md:block w-1/3 left-0" />
         </div>
       </div>
       <a
@@ -636,7 +606,7 @@ const HappilyEver = () => {
         rel="noreferrer"
         style={{ color: "#ED9D9D" }}
         href="https://www.notion.so/Branding-752204234b2b42f09ccd93144504ac5a"
-        className="tracking-3 md:mt-20 md:px-24 mb-10 md:mb-40 flex items-center text-sm md:text-base uppercase font-lato-bold"
+        className="tracking-3 mt-20 px-7 md:px-24 mb-32 md:mb-40 flex items-center text-sm md:text-base uppercase font-lato-bold"
       >
         <ArrowRightCircle
           width={30}
@@ -656,6 +626,8 @@ const HappilyEver = () => {
           title: "BillEasy",
           image:
             "https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+          mobVideo:
+            "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662489092/work_gifs/Mob_BillEasy_Research_xys1wq.gif",
           video:
             "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662181482/work_gifs/BillEasy-short_yhhk58.mp4",
           link: "/billeasy",
