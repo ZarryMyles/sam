@@ -10,7 +10,7 @@ const Footer = ({ imageEnter, largeEnter }) => {
     },
     {
       name: "Email",
-      link: "mailto:fake@mail.com",
+      link: "mailto:shradhabkaba@gmail.com",
       // icon: <FaDribbbleSquare />,
     },
     {
@@ -21,7 +21,7 @@ const Footer = ({ imageEnter, largeEnter }) => {
 
     {
       name: "Resume",
-      link: "/",
+      link: "https://drive.google.com/file/d/1gdC7zdeDq_ZZZVhfR79LOOZrqUFiqytM/view?usp=sharing",
       // icon: <TiDocumentText />,
     },
   ];
@@ -95,6 +95,8 @@ const Footer = ({ imageEnter, largeEnter }) => {
                 onMouseEnter={largeEnter}
                 onMouseLeave={imageEnter}
                 href={social.link}
+                target="_blank"
+                rel="noreferrer"
                 class="text-brand-gray font-lato flex items-center  text-sm md:text-base     md:w-max  my-2 md:my-0"
               >
                 {social.icon && (

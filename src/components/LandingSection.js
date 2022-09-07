@@ -41,7 +41,9 @@ const LandingSection = ({ imageEnter, textLeave, largeEnter }) => {
           onMouseLeave={imageEnter}
         >
           <a
-            href="#get-in-touch"
+            href="https://www.linkedin.com/in/shradha-b-k/"
+            target="_blank"
+            rel="noreferrer"
             class=" py-2 md:py-4 flex justify-center items-center mt-2 md:mt-0 rounded-l-full rounded-r-full text-white  max-w-max tracking-wider"
           >
             <ArrowRightCircle

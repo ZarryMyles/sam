@@ -158,11 +158,11 @@ const Navbar = ({
         style={{ zIndex: "150 !important" }}
         className={`navContainer ${
           show && "md:hidden"
-        } text-brand-gray bg-brand-black zed hidden md:flex w-screen top-0 fixed  flex-row justify-between items-center md:px-24 md:py-5`}
+        } text-brand-gray bg-brand-black zed hidden md:flex w-full top-0 fixed  flex-row justify-between items-center md:px-24 md:py-5`}
       >
         <a href="/" className="flex items-center">
           <div
-            className="font-lora-italic text-2xl top-0 overflow-hidden  flex flex-row items-center "
+            className="font-lora-italic  text-2xl top-0 overflow-hidden  flex flex-row items-center "
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
             style={{ color: "#b5b5b5" }}
@@ -243,7 +243,9 @@ const Navbar = ({
         >
           {links.map((value, key) => (
             <div key={key} className="block" onClick={resize}>
-              <a href={value.link}>{value.name}</a>
+              <a href={value.link} target="_blank" rel="noreferrer">
+                {value.name}
+              </a>
             </div>
           ))}
         </nav>
