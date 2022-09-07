@@ -218,20 +218,20 @@ const BillEasy = () => {
                 Easy, Efficient and Convenient
               </span>{" "}
               digital Invoicing experience. A solution designed to help
-              accounting teams
+              accounting teams{" "}
               <span style={{ color: "#6AC296" }}>
                 create, share, store, and track GST-compliant invoices
               </span>{" "}
-              in just a few clicks, from
+              in just a few clicks, from{" "}
               <span style={{ color: "#6AC296" }}>
                 anywhere and at any time!
               </span>{" "}
               <br /> <br /> No more manual entries, tedious work processes, data
               loss or struggle to recall complex Excel shortcuts. From
-              fast-tracking and organizing data to
+              fast-tracking and organizing data to{" "}
               <span style={{ color: "#6AC296" }}>streamlining</span> your work
-              processes to
-              <span style={{ color: "#6AC296" }}>improve productivity</span> ,
+              processes to{" "}
+              <span style={{ color: "#6AC296" }}>improve productivity</span>,
               BillEasy has you covered 😎
             </div>
           </div>
@@ -247,11 +247,9 @@ const BillEasy = () => {
                   <span style={{ color: "#6AC296" }}>
                     70% Increased user satisfaction.
                   </span>{" "}
-                  Estimated to Optimize
-                  <span style={{ color: "#6AC296" }}>
-                    productivity by 3x
-                  </span>{" "}
-                  and
+                  Estimated to Optimize{" "}
+                  <span style={{ color: "#6AC296" }}>productivity by 3x</span>{" "}
+                  and{" "}
                   <span style={{ color: "#6AC296" }}>
                     Increased transparency.
                   </span>{" "}
