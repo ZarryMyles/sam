@@ -40,8 +40,7 @@ const Video = ({ work, largeEnter, imageEnter }) => {
           // toggleOverlay();
           handleVideo();
         }}
-        className="md:h-screen relative w-full object-contain md:object-cover  bg-cover bg-no-repeat bg-center"
-        alt="loading..."
+        className="md:h-screen relative w-full bg-brand-white object-contain md:object-cover  bg-cover bg-no-repeat bg-center"
         ref={video}
       >
         <source

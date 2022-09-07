@@ -24,7 +24,7 @@ const GetInTouch = ({ imageEnter, largeEnter }) => {
             Get In Touch
           </div>
 
-          <div className="font-lato-light w-3/4 leading-6 md:w-full text-left tracking-[0.01em] md:tracking-1  text-base md:text-[22px]  text-brand-white  ">
+          <div className="font-lato-light w-3/4 leading-6 md:w-auto text-left tracking-[0.01em] md:tracking-1  text-base md:text-[22px]  text-brand-white  ">
             Lets create more{" "}
             <a
               href="http://www.linkedin.com/in/shradha-b-k"

@@ -180,7 +180,7 @@ const SmartVision = () => {
               <img src={Eye} className="mr-2 w-9 " alt="" /> Smart Vision
             </div>
           </div>
-          <div className=" px-5 md:px-0 leading-6 tracking-0.5   ">
+          <div className=" md:px-0 leading-6 tracking-0.5   ">
             Smart Vision is an{" "}
             <span style={{ color: "#7CCBCD" }}>
               Accessible, Independent and Secure

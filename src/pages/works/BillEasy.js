@@ -6,6 +6,8 @@ import {
   WorkHeading,
   Loader,
 } from "../../components";
+import Marquee from "react-fast-marquee";
+
 import { ReactComponent as Quote } from "../../assets/icons/quotestart.svg";
 import { ArrowRightCircle } from "react-feather";
 import { motion } from "framer-motion";
@@ -510,7 +512,7 @@ const BillEasy = () => {
           </div>
         </div>
         {/* usability testing */}
-        <div class="p-5 md:px-24  py-10 md:py-130 font-lato bg-brand-darkGrey2 w-full">
+        <div class="p-5 md:px-24  py-10 md:py-[130px] mt-[130px] font-lato bg-brand-darkGrey2 w-full">
           <div
             className="grid-cols-12 grid "
             style={{
@@ -801,12 +803,17 @@ const BillEasy = () => {
             />
             read full case study <img src={Teacup} alt="" class="w-9 ml-2" />
           </a>
-          <div class="md:px-5 hidden md:block w-overflow-x-scroll my-10 md:my-0">
-            <img src={collage} className="w-[1000px] md:w-full" alt="" />
+          <div class="md:px-5 hidden md:block  my-10 md:my-0">
+            <img src={collage} className="  md:w-full" alt="" />
           </div>
           {/* mobile vertical scroll thingy */}
-          <div class="md:px-5 block md:hidden w-overflow-x-scroll my-10 md:my-0">
-            <img src={collage} className="h-[600x] md:w-full" alt="" />
+          <div class="md:px-5 block md:hidden relative my-10 md:my-0  ">
+            <Marquee speed={40} direction="left">
+              <img src={collage} className="  md:w-full" alt="" />
+              <img src={collage} className="  md:w-full" alt="" />
+              <img src={collage} className="  md:w-full" alt="" />
+              <img src={collage} className="  md:w-full" alt="" />
+            </Marquee>
           </div>
           {/* <div class="md:hidden px-5 flex flex-col justify-center items-center">
             <img src={CaseStudy2} className="  " alt="" />
