@@ -248,7 +248,7 @@ const HappilyEver = () => {
         <div class="flex items-center md:items-center md:flex-row flex-col font-lato ">
           <img src={one} alt="logo" className="w-2/3 md:hidden left-1/4" />
           <div className="md:w-6/10  ">
-            <div class="md:pr-10 md:leading-6 md:ml-10 tracking-0.5 leading-7 font-lato font-normal">
+            <div class="md:pr-10 md:leading-6 tracking-0.5 leading-7 font-lato font-normal">
               <div className=" ">
                 1. The product's vision is to "
                 <span style={{ color: "#ED9D9D" }}>
