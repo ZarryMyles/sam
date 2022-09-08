@@ -3,11 +3,11 @@ import { WorkHero, WorkHeading, Navbar, Loader } from "../../components";
 import { ArrowRightCircle } from "react-feather";
 import { motion } from "framer-motion";
 // assets
-import one from "../../assets/works/happilyEver/1.png";
-import two from "../../assets/works/happilyEver/2.png";
-import three from "../../assets/works/happilyEver/3.png";
+import one from "../../assets/works/happilyEver/1.svg";
+import two from "../../assets/works/happilyEver/2.svg";
+import three from "../../assets/works/happilyEver/3.svg";
 import four from "../../assets/works/happilyEver/4.svg";
-import five from "../../assets/works/happilyEver/5.png";
+import five from "../../assets/works/happilyEver/5.svg";
 
 // Icons
 import {

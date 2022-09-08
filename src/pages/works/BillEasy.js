@@ -12,7 +12,7 @@ import { ReactComponent as Quote } from "../../assets/icons/quotestart.svg";
 import { ArrowRightCircle } from "react-feather";
 import { motion } from "framer-motion";
 import {
-  Teacup,
+  OldTeacup as Teacup,
   BriefCase,
   Bullseye,
   Check,
