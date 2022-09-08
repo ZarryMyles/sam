@@ -103,12 +103,12 @@ const BillEasyVisual = () => {
   };
   return (
     <div className="overflow-x-hidden  bg-brand-black text-brand-white">
-      {/* {loading && (
+      {loading && (
         <div class="fixed loaderDiv w-screen h-screen">
           {" "}
           <Loader />{" "}
         </div>
-      )} */}
+      )}
       <Navbar
         largeEnter={largeEnter}
         imageEnter={imageEnter}
@@ -468,9 +468,9 @@ const BillEasyVisual = () => {
           className="bg-scroll mx-7 bg-no-repeat whitespace-nowrap overflow-x-scroll h-[200px]"
         ></div> */}
         <div>
-          {/* <Marquee speed={40} direction="left"> */}
-          <img src={buttons} height="550px" alt="visual" />
-          {/* </Marquee> */}
+          <Marquee speed={40} direction="left">
+            <img src={buttons} height="550px" alt="visual" />
+          </Marquee>
         </div>
         <div className="w-full h-full md:block hidden">
           {" "}
