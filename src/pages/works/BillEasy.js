@@ -200,7 +200,9 @@ const BillEasy = () => {
         </div>
         {/* project concept */}
         <div class="  pt-[96px] md:py-10 md:px-24 md:mb-36 md:pr-0 grid grid-cols-12  h-full">
-          <WorkHeading text={"concept"} />
+          <div class="px-5 md:px-0 col-span-12">
+            <WorkHeading text={"concept"} />
+          </div>
           <div class="px-5 md:px-0 col-span-12 md:col-span-6 h-full flex flex-col    ">
             <div class="flex items-center">
               <div
@@ -292,7 +294,7 @@ const BillEasy = () => {
                 <div className="mr-16 ">
                   <div className="font-lato-bold mb-2">Direct users</div>
                   <div
-                    className="mr-2 md:mr-3 px-1 py-1 md:px-6 md:py-3 text-brand-white"
+                    className="mr-2 md:mr-3 px-3 py-1 text-center  rounded md:px-6 md:py-3 w-max text-brand-white"
                     style={{
                       background: "#111111",
                     }}
@@ -304,7 +306,7 @@ const BillEasy = () => {
                   <div className="font-lato-bold mb-2">Indirect users</div>
                   <div className="flex w-full justify-between md:justify-start    ">
                     <div
-                      className="mr-2 md:mr-3 px-1 py-1 md:px-6 md:py-3 text-brand-white"
+                      className="mr-2 md:mr-3 px-3 py-1 text-center  rounded md:px-6 md:py-3 text-brand-white"
                       style={{
                         background: "#111111",
                       }}
@@ -312,7 +314,7 @@ const BillEasy = () => {
                       Stakeholders
                     </div>
                     <div
-                      className="mr-2 md:mr-3 px-1 py-1 md:px-6 md:py-3 text-brand-white"
+                      className="mr-2 md:mr-3 px-2 text-center rounded min-w-max py-1 md:px-6 md:py-3 text-brand-white"
                       style={{
                         background: "#111111",
                       }}
@@ -372,7 +374,7 @@ const BillEasy = () => {
             class="col-span-12 md:col-span-6 h-full  "
           >
             <div class="flex items-center">
-              <div class="  text-2xl md:text-4xl flex items-center  md:-ml-2  tracking-1.5 font-lato ">
+              <div class="  text-2xl md:text-4xl flex items-center  md:-ml-2  tracking-1 md:tracking-1.5 font-lato ">
                 <img src={GuideDog} alt="" class="w-9 mr-2" /> Identifying the
                 problem
               </div>
@@ -404,7 +406,7 @@ const BillEasy = () => {
             </ul>
           </div>
           <div class="hidden md:block col-span-1"></div>
-          <div class="col-span-12 md:col-span-5 h-full flex flex-col   items-center justify-center">
+          <div class="col-span-12 md:col-span-5 h-full flex flex-col   md:items-center justify-center">
             <a
               href="https://www.notion.so/Interview-questions-f44bac2a862146ec90e5aa9c18827e86"
               target="_blank"

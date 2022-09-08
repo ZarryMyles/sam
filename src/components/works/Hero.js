@@ -20,8 +20,6 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
             </div>
           </div>
           <div
-            // onMouseEnter={largeEnter}
-            // onMouseLeave={imageEnter}
             style={{
               fontSize: "64px",
             }}
