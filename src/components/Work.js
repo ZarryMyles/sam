@@ -37,22 +37,6 @@ const works = [
   },
   {
     id: 3,
-    title: "HappilyEver",
-    domain: "Branding",
-    bgColor: "#EB9B9B",
-    description:
-      "Designing brands to be more people \n Interactive : Adding value to future Brand \n Identities ",
-    gif: true,
-    mobGif: true,
-    image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/3.jpg",
-    video:
-      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/render_s6dzdu.gif",
-    mobVideo:
-      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/render_s6dzdu.gif",
-    link: "/happilyever",
-  },
-  {
-    id: 4,
     title: "Smart Vision",
     domain: "Case Study",
     bgColor: "#F7FCFF",
@@ -66,6 +50,22 @@ const works = [
     mobVideo:
       "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/Comp_1_tdwzlp.gif",
     link: "/smartvision",
+  },
+  {
+    id: 4,
+    title: "HappilyEver",
+    domain: "Branding",
+    bgColor: "#EB9B9B",
+    description:
+      "Designing brands to be more people \n Interactive : Adding value to future Brand \n Identities ",
+    gif: true,
+    mobGif: true,
+    image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/3.jpg",
+    video:
+      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/render_s6dzdu.gif",
+    mobVideo:
+      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/render_s6dzdu.gif",
+    link: "/happilyever",
   },
 ];
 const LandingSection = ({ imageEnter, largeEnter }) => {

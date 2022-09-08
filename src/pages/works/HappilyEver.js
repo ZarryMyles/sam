@@ -98,7 +98,7 @@ const HappilyEver = () => {
   const largeEnter = () => setcursorVariant("large");
 
   const work = {
-    id: 3,
+    id: 4,
     title: "HappilyEver",
     domain: "Branding",
     bgColor: "#EB9B9B",
@@ -624,21 +624,23 @@ const HappilyEver = () => {
         largeEnter={largeEnter}
         imageEnter={imageEnter}
         work={{
-          id: 4,
-          title: "Smart Vision",
-          domain: "Case Study",
+          id: 1,
+          title: "BillEasy",
+          domain: "Research",
           bgColor: "#F7FCFF",
           description:
-            "Making smartphones simpler for users with \n impaired vision : A step towards an inclusive and \n consumer-centric approach",
-          gif: true,
-          mobGif: true,
+            "Creating an efficient accounting process for \n evolving businesses and enhanced work systems.",
+          gif: false,
+          mobGif: false,
           image:
-            "http://theme.dsngrid.com/droow-l/assets/img/project/project5/2.jpg",
+            "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg",
           video:
-            "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662486989/work_gifs/smartvision_ewgu7t.gif",
+            "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662181482/work_gifs/BillEasy-short_yhhk58.mp4",
+          video2:
+            "https://res.cloudinary.com/genesiscloudimages/video/upload/v1660394170/work_gifs/C01_yqtldj.mp4",
           mobVideo:
-            "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/Comp_1_tdwzlp.gif",
-          link: "/smartvision",
+            "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662181482/work_gifs/BillEasy-short_yhhk58.mp4",
+          link: "/billeasy",
         }}
         next={true}
       />
