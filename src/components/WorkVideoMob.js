@@ -1,5 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper";
+
 import { ChevronRight, ChevronLeft, ArrowRightCircle } from "react-feather";
 import "swiper/css";
 const WorkVideoMob = ({ imageEnter, largeEnter }) => {
@@ -76,7 +78,13 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
   ];
   return (
     <div className="w-full h-full">
-      <Swiper pagination={true} className="mySwiper">
+      <Swiper
+        modules={[Pagination]}
+        pagination={{
+          clickable: true,
+        }}
+        className="mySwiper"
+      >
         {works.map((work) => (
           <SwiperSlide className="h-screen w-full">
             <div
@@ -220,7 +228,7 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
               <div
                 class={`w-full object-cover h-screen absolute left-0 top-0 z-0`}
               >
-                {work.mobGif ? (
+                {work.gif ? (
                   <div
                     class={`   w-full bg-cover bg-no-repeat ease-linear transition-all  duration-700  h-screen 
                 `}
@@ -228,17 +236,22 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
                     <img
                       alt="hi"
                       className={`w-full h-full ${
-                        work.id === 2 ? "object-cover" : "object-contain"
-                      } object-bottom`}
-                      src={work.mobVideo}
+                        work.id === 2
+                          ? "object-cover object-center"
+                          : "object-contain object-bottom"
+                      } `}
+                      src={work.video}
                       // alt="loading..."
                     />
                     <div class="absolute w-full h-full bg-black opacity-50 left-0 top-0"></div>
                   </div>
                 ) : (
                   <div
-                    class={`    w-full bg-cover bg-no-repeat ease-linear transition-all  duration-700    h-screen   absolute
-               w-100 md:w-screen  md:opacity-100 opacity-100 md:object-cover   `}
+                    className={`w-full h-full ${
+                      work.id === 2
+                        ? "object-cover object-center"
+                        : "object-contain object-bottom"
+                    } `}
                   >
                     <video
                       className="w-full h-full object-contain object-bottom "
@@ -246,7 +259,7 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
                       autoPlay={true}
                       muted
                     >
-                      <source src={work.mobVideo} type="video/mp4" />
+                      <source src={work.video} type="video/mp4" />
                     </video>
                     <div class="absolute w-full h-full bg-black opacity-50 left-0 top-0"></div>
                   </div>
