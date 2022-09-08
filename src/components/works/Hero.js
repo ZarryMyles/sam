@@ -1,8 +1,13 @@
 import React from "react";
 const Hero = ({ work, next, largeEnter, imageEnter }) => {
   return (
-    <div className="  h-screen w-full relative overflow-clip flex leading-0  ">
-      <div class="  md:w-[19.5%]    z-20 relative md:bg-brand-black h-full hidden md:flex flex-col   px-5 md:px-24">
+    <div className=" bg-brand-black  h-screen w-full relative overflow-clip flex leading-0  ">
+      <div
+        class="  md:w-[19.5%] bg-brand-black   z-20 relative  h-full hidden md:flex flex-col   px-5 md:px-24"
+        // style={{
+        //   background: work.bgColor,
+        // }}
+      >
         <div class="flex  h-full    flex-col w-full justify-center pt-20  ">
           <div class="flex items-center mb-12 w-max">
             <div
@@ -56,13 +61,7 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
           )}
         </div>
       </div>
-      <div
-        class=" md:hidden z-10  h-full bg-cover  bg-center bg-no-repeat brightness-20 bg-brand-black"
-        // style={{
-        //   width: "80.5%",
-        //   backgroundImage: `url(${work.image})`,
-        // }}
-      ></div>
+      {/* <div class=" md:hidden z-10  h-full bg-cover  bg-center bg-no-repeat brightness-20 bg-brand-black"></div> */}
       {!next && (
         <div class="block z-20 text-4xl md:hidden absolute px-5 left-0 top-0 pt-[230px]  text-brand-white w-full h-full">
           <div class="flex items-center  mb-6 col-span-12">
@@ -123,7 +122,7 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
             // height: "100vh",
             width: "100vw",
           }}
-          className=" z-10 bg-contain hidden md:block object-cover bg-center bg-no-repeat brightness-50 bg-brand-black"
+          className=" z-10  hidden md:block object-contain md:object-cover bg-center bg-no-repeat brightness-50 bg-brand-black"
           alt="loading..."
           loop
           autoPlay
@@ -142,11 +141,40 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
           alt="hi"
         ></img>
       )}
-      <img
-        class=" block md:hidden z-10 w-full object-center  bg-no-repeat brightness-50 bg-brand-gray"
-        src={work.mobVideo}
-        alt="hi"
-      ></img>
+      {!work.gif ? (
+        <video
+          style={{
+            background: work.bgColor,
+            // width: "100vw",
+          }}
+          className={` z-10 w-full  md:hidden ${
+            work.id === 2
+              ? "object-cover object-left"
+              : "object-contain object-bottom"
+          }   bg-no-repeat brightness-50 `}
+          alt="loading..."
+          loop
+          autoPlay
+          muted
+          disablePictureInPicture
+        >
+          <source src={work.mobVideo} type="video/mp4" />
+        </video>
+      ) : (
+        <img
+          className={` z-10   md:hidden ${
+            work.id === 2
+              ? "object-cover object-center"
+              : "object-contain object-bottom"
+          }   bg-no-repeat brightness-50 `}
+          style={{
+            // width: "80.5%",
+            background: work.bgColor,
+          }}
+          src={work.mobVideo}
+          alt="hi"
+        ></img>
+      )}
     </div>
   );
 };

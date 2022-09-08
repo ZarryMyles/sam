@@ -124,15 +124,22 @@ const BillEasy = () => {
   const textLeave = () => setcursorVariant("default");
   const largeEnter = () => setcursorVariant("large");
   const work = {
-    image: Hero,
+    id: 1,
+    title: "BillEasy",
+    domain: "Research",
+    bgColor: "#F7FCFF",
+    description:
+      "Creating an efficient accounting process for \n evolving businesses and enhanced work systems.",
+    gif: false,
+    mobGif: false,
+    image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg",
     video:
       "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662181482/work_gifs/BillEasy-short_yhhk58.mp4",
     video2:
       "https://res.cloudinary.com/genesiscloudimages/video/upload/v1660394170/work_gifs/C01_yqtldj.mp4",
     mobVideo:
-      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662489092/work_gifs/Mob_BillEasy_Research_xys1wq.gif",
-    title: "BillEasy",
-    domain: "Research",
+      "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662181482/work_gifs/BillEasy-short_yhhk58.mp4",
+    link: "/billeasy",
   };
   const [loading, setLoading] = useState(true);
 
@@ -145,7 +152,10 @@ const BillEasy = () => {
   return (
     <div className="w-full overflow-clip">
       {loading && (
-        <div class="fixed w-full h-full z-50"> {/* <Loader />{" "} */}</div>
+        <div class="fixed w-full h-full z-50">
+          {" "}
+          <Loader />{" "}
+        </div>
       )}
       <div
         onMouseEnter={imageEnter}
@@ -832,13 +842,21 @@ const BillEasy = () => {
           next={true}
           imageEnter={imageEnter}
           work={{
-            image: nextHero,
+            id: 2,
+            title: "BillEasy",
+            domain: "Visual Design",
+            bgColor: "#fasd",
+            description:
+              "Creating an efficient accounting process for \n evolving businesses and enhanced work systems.",
+            gif: false,
+            mobGif: true,
+            image:
+              "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg",
             video:
               "https://res.cloudinary.com/ahum/video/upload/v1662232035/BillEasy_Visual_hzrwgo.mp4",
             mobVideo:
               "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662494455/work_gifs/Mob_BillEasy_Visual_v1xkni.gif",
-            domain: "visual design",
-            title: "BillEasy",
+
             link: "/billeasy-visual-design",
           }}
         />

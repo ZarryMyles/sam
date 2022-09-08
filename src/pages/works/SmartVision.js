@@ -105,14 +105,19 @@ const SmartVision = () => {
   const textLeave = () => setcursorVariant("default");
   const largeEnter = () => setcursorVariant("large");
   const work = {
-    image: Hero,
-    video:
-      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/Comp_1_tdwzlp.gif",
+    id: 4,
     title: "Smart Vision",
-    mobVideo:
-      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662489091/work_gifs/Mob_Smart_Vision_seddok.gif",
-    gif: true,
     domain: "Case Study",
+    bgColor: "#F7FCFF",
+    description:
+      "Making smartphones simpler for users with \n impaired vision : A step towards an inclusive and \n consumer-centric approach",
+    gif: true,
+    mobGif: true,
+    video:
+      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662486989/work_gifs/smartvision_ewgu7t.gif",
+    mobVideo:
+      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/Comp_1_tdwzlp.gif",
+    link: "/smartvision",
   };
   const [loading, setLoading] = useState(true);
 
@@ -128,9 +133,16 @@ const SmartVision = () => {
       className="text-justify bg-brand-black text-brand-white"
     >
       {loading && (
-        <div class="fixed w-full h-full z-50"> {/* <Loader />{" "} */}</div>
+        <div class="fixed w-full h-full z-50">
+          {" "}
+          <Loader />{" "}
+        </div>
       )}
-      <Navbar defaultColor={"white"} />
+      <Navbar
+        largeEnter={largeEnter}
+        imageEnter={imageEnter}
+        defaultColor={"white"}
+      />
       <WorkHero
         largeEnter={largeEnter}
         textEnter={textEnter}
@@ -166,8 +178,10 @@ const SmartVision = () => {
         </div>
       </div>
       {/* project concept */}
-      <div class=" md:px-24 md:mb-36 md:pr-0 grid grid-cols-12  h-full">
-        <WorkHeading text={"concept"} />
+      <div class=" pt-[96px] md:pt-0 md:px-24 md:mb-36 md:pr-0 grid grid-cols-12  h-full">
+        <div class="px-5 md:px-0 col-span-12">
+          <WorkHeading text={"concept"} />
+        </div>
 
         <div class="px-5 md:px-0 col-span-12 md:col-span-6 h-full flex flex-col    ">
           <div class="flex items-center">
@@ -231,7 +245,9 @@ const SmartVision = () => {
       </div>
       {/* purpose */}
       <div className=" pt-[136px] ">
-        <WorkHeading text={"purpose"} />
+        <div class="px-5 md:px-0 col-span-12">
+          <WorkHeading text={"purpose"} />
+        </div>
 
         <div class="grid grid-cols-12 font-lato">
           <div class="p-5 md:px-24 col-span-12 md:col-span-5 bg-brand-darkGrey2 leading-7 ">

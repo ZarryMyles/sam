@@ -89,24 +89,27 @@ const BillEasyVisual = () => {
   }, []);
 
   const work = {
-    image: hero,
+    id: 2,
+    title: "BillEasy",
+    domain: "Visual Design",
+    bgColor: "#fasd",
+    description:
+      "Creating an efficient accounting process for \n evolving businesses and enhanced work systems.",
+    gif: false,
+    mobGif: true,
+    image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg",
     video:
       "https://res.cloudinary.com/ahum/video/upload/v1662232035/BillEasy_Visual_hzrwgo.mp4",
-    title: "BillEasy",
     mobVideo:
       "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662494455/work_gifs/Mob_BillEasy_Visual_v1xkni.gif",
-    domain: "Visual Design",
-    subtitle: "A web app for managing your bills",
-    description: "A web app for managing your bills",
-    link: "https://billeasy.com",
-    linkText: "Visit BillEasy",
+
+    link: "/billeasy-visual-design",
   };
   return (
     <div className="overflow-x-hidden  bg-brand-black text-brand-white">
       {loading && (
         <div class="fixed loaderDiv w-screen h-screen">
-          {" "}
-          <Loader />{" "}
+          <Loader />
         </div>
       )}
       <Navbar
@@ -467,8 +470,8 @@ const BillEasyVisual = () => {
           style={{ backgroundImage: `url(${buttons})` }}
           className="bg-scroll mx-7 bg-no-repeat whitespace-nowrap overflow-x-scroll h-[200px]"
         ></div> */}
-        <div>
-          <Marquee speed={40} direction="left">
+        <div className="w-full h-full md:hidden">
+          <Marquee speed={10} direction="left">
             <img src={buttons} height="550px" alt="visual" />
           </Marquee>
         </div>
@@ -626,18 +629,21 @@ const BillEasyVisual = () => {
           largeEnter={largeEnter}
           imageEnter={imageEnter}
           work={{
-            // image: Hero,
-            video:
-              "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/Comp_1_tdwzlp.gif",
-            title: "Smart Vision",
-            mobVideo:
-              "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662489091/work_gifs/Mob_Smart_Vision_seddok.gif",
+            id: 3,
+            title: "HappilyEver",
+            domain: "Branding",
+            bgColor: "#EB9B9B",
+            description:
+              "Designing brands to be more people \n Interactive : Adding value to future Brand \n Identities ",
             gif: true,
-            domain: "Case Study",
-            subtitle: "A web app for managing your bills",
-            description: "A web app for managing your bills",
-            link: "/smart-vision",
-            linkText: "Visit BillEasy",
+            mobGif: true,
+            image:
+              "http://theme.dsngrid.com/droow-l/assets/img/project/project5/3.jpg",
+            video:
+              "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/render_s6dzdu.gif",
+            mobVideo:
+              "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/render_s6dzdu.gif",
+            link: "/happilyever",
           }}
           next={true}
         />

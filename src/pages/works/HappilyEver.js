@@ -98,18 +98,20 @@ const HappilyEver = () => {
   const largeEnter = () => setcursorVariant("large");
 
   const work = {
-    image:
-      "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
-    video: "../assets/work_gifs/happilyEver.mp4",
-    mobVideo:
-      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662489092/work_gifs/Mob_Happilyever_iqkfoo.gif",
-    title: "Happily Ever",
+    id: 3,
+    title: "HappilyEver",
     domain: "Branding",
-    subtitle: "",
+    bgColor: "#EB9B9B",
     description:
-      "Designing brands to be more people \n Interactive : Adding value to future Brand Identities ",
-    link: "https://billeasy.com",
-    linkText: "Visit BillEasy",
+      "Designing brands to be more people \n Interactive : Adding value to future Brand \n Identities ",
+    gif: true,
+    mobGif: true,
+    image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/3.jpg",
+    video:
+      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/render_s6dzdu.gif",
+    mobVideo:
+      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/render_s6dzdu.gif",
+    link: "/happilyever",
   };
 
   const [loading, setLoading] = useState(true);
@@ -622,15 +624,21 @@ const HappilyEver = () => {
         largeEnter={largeEnter}
         imageEnter={imageEnter}
         work={{
-          domain: "Research",
-          title: "BillEasy",
+          id: 4,
+          title: "Smart Vision",
+          domain: "Case Study",
+          bgColor: "#F7FCFF",
+          description:
+            "Making smartphones simpler for users with \n impaired vision : A step towards an inclusive and \n consumer-centric approach",
+          gif: true,
+          mobGif: true,
           image:
-            "https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-          mobVideo:
-            "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662489092/work_gifs/Mob_BillEasy_Research_xys1wq.gif",
+            "http://theme.dsngrid.com/droow-l/assets/img/project/project5/2.jpg",
           video:
-            "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662181482/work_gifs/BillEasy-short_yhhk58.mp4",
-          link: "/billeasy",
+            "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662486989/work_gifs/smartvision_ewgu7t.gif",
+          mobVideo:
+            "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/Comp_1_tdwzlp.gif",
+          link: "/smartvision",
         }}
         next={true}
       />

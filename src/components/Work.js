@@ -64,7 +64,7 @@ const works = [
     video:
       "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662486989/work_gifs/smartvision_ewgu7t.gif",
     mobVideo:
-      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662489091/work_gifs/Mob_Smart_Vision_seddok.gif",
+      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/Comp_1_tdwzlp.gif",
     link: "/smartvision",
   },
 ];

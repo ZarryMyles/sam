@@ -15,8 +15,7 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
         "Creating an efficient accounting process for \n evolving businesses and enhanced work systems.",
       gif: false,
       mobGif: false,
-      image:
-        "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg",
+
       video:
         "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662181482/work_gifs/BillEasy-short_yhhk58.mp4",
       mobVideo:
@@ -31,9 +30,8 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
       description:
         "Creating an efficient accounting process for \n evolving businesses and enhanced work systems.",
       gif: false,
-      mobGif: true,
-      image:
-        "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg",
+      mobGif: false,
+
       video:
         "https://res.cloudinary.com/ahum/video/upload/v1662232035/BillEasy_Visual_hzrwgo.mp4",
       mobVideo:
@@ -50,8 +48,7 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
         "Designing brands to be more people \n Interactive : Adding value to future Brand \n Identities ",
       gif: true,
       mobGif: true,
-      image:
-        "http://theme.dsngrid.com/droow-l/assets/img/project/project5/3.jpg",
+
       video:
         "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/render_s6dzdu.gif",
       mobVideo:
@@ -67,12 +64,11 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
         "Making smartphones simpler for users with \n impaired vision : A step towards an inclusive and \n consumer-centric approach",
       gif: true,
       mobGif: true,
-      image:
-        "http://theme.dsngrid.com/droow-l/assets/img/project/project5/2.jpg",
+
       video:
         "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662486989/work_gifs/smartvision_ewgu7t.gif",
       mobVideo:
-        "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662489091/work_gifs/Mob_Smart_Vision_seddok.gif",
+        "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/Comp_1_tdwzlp.gif",
       link: "/smartvision",
     },
   ];
@@ -240,7 +236,7 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
                           ? "object-cover object-left"
                           : "object-contain object-bottom"
                       } `}
-                      src={work.video}
+                      src={work.mobVideo}
                       // alt="loading..."
                     />
                     <div class="absolute w-full h-full bg-black opacity-50 left-0 top-0"></div>
@@ -263,7 +259,7 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
                       autoPlay={true}
                       muted
                     >
-                      <source src={work.video} type="video/mp4" />
+                      <source src={work.mobVideo} type="video/mp4" />
                     </video>
                     <div class="absolute w-full h-full bg-black opacity-50 left-0 top-0"></div>
                   </div>
