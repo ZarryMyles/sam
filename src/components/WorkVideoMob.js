@@ -237,7 +237,7 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
                       alt="hi"
                       className={`w-full h-full ${
                         work.id === 2
-                          ? "object-cover object-center"
+                          ? "object-cover object-left"
                           : "object-contain object-bottom"
                       } `}
                       src={work.video}
@@ -249,12 +249,16 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
                   <div
                     className={`w-full h-full ${
                       work.id === 2
-                        ? "object-cover object-center"
+                        ? "object-cover object-left"
                         : "object-contain object-bottom"
                     } `}
                   >
                     <video
-                      className="w-full h-full object-contain object-bottom "
+                      className={`w-full h-full ${
+                        work.id === 2
+                          ? "object-cover object-left"
+                          : "object-contain object-bottom"
+                      } `}
                       loop
                       autoPlay={true}
                       muted
