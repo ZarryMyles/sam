@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { WorkHero, WorkHeading, Navbar, Loader } from "../../components";
 import { ArrowRightCircle } from "react-feather";
 import { motion } from "framer-motion";
+import Marquee from "react-fast-marquee";
 // assets
 import hero from "../../assets/works/billEasy/billEasyResearchpng.png";
 import invoiceGen from "../../assets/works/billEasyVisual/Page.png";
@@ -25,7 +26,7 @@ import {
   Eyes,
   GuideDog,
   PartyingFace,
-  Teacup,
+  OldTeacup as Teacup,
   ClinkingGlasses,
   InLotusPosition,
 } from "../../assets/icons/fluent";
@@ -466,20 +467,17 @@ const BillEasyVisual = () => {
           style={{ backgroundImage: `url(${buttons})` }}
           className="bg-scroll mx-7 bg-no-repeat whitespace-nowrap overflow-x-scroll h-[200px]"
         ></div> */}
-        <div className="w-full h-[200px] overflow-visible whitespace-nowrap">
+        <div>
+          {/* <Marquee speed={40} direction="left"> */}
+          <img src={buttons} height="550px" alt="visual" />
+          {/* </Marquee> */}
+        </div>
+        <div className="w-full h-full md:block hidden">
           {" "}
-          <img
-            src={buttons}
-            width="100%"
-            alt="visual"
-            className="inline-block"
-          />
-          <img
-            src={buttons}
-            width="100%"
-            alt="visual"
-            className="inline-block"
-          />
+          <Marquee speed={30} direction="left">
+            {" "}
+            <img src={buttons} alt="visual" />
+          </Marquee>{" "}
         </div>
       </div>
       {/* Result Matrix */}

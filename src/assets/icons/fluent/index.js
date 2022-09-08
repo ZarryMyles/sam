@@ -8,6 +8,7 @@ export { default as OldKey } from "./Old key.svg";
 export { default as Paintbrush } from "./Paintbrush.svg";
 export { default as Fist } from "./Right-facing fist.svg";
 export { default as Teacup } from "./Teacup without handle.svg";
+export { default as OldTeacup } from "./Teacup.svg";
 export { default as Calendar } from "./Tear-off calendar.svg";
 export { default as Thermometer } from "./Thermometer.svg";
 export { default as TippingHand } from "./Tipping hand.svg";
