@@ -4,6 +4,8 @@ import { Pagination } from "swiper";
 
 import { ChevronRight, ChevronLeft, ArrowRightCircle } from "react-feather";
 import "swiper/css";
+import "swiper/css/pagination";
+
 const WorkVideoMob = ({ imageEnter, largeEnter }) => {
   const works = [
     {
@@ -15,7 +17,8 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
         "Creating an efficient accounting process for \n evolving businesses and enhanced work systems.",
       gif: false,
       mobGif: false,
-
+      image:
+        "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg",
       video:
         "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662181482/work_gifs/BillEasy-short_yhhk58.mp4",
       mobVideo:
@@ -30,12 +33,13 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
       description:
         "Creating an efficient accounting process for \n evolving businesses and enhanced work systems.",
       gif: false,
-      mobGif: false,
-
+      mobGif: true,
+      image:
+        "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg",
       video:
         "https://res.cloudinary.com/ahum/video/upload/v1662232035/BillEasy_Visual_hzrwgo.mp4",
       mobVideo:
-        "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662494455/work_gifs/Mob_BillEasy_Visual_v1xkni.gif",
+        "https://res.cloudinary.com/ahum/video/upload/v1662232035/BillEasy_Visual_hzrwgo.mp4",
 
       link: "/billeasy-visual-design",
     },
@@ -48,7 +52,8 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
         "Designing brands to be more people \n Interactive : Adding value to future Brand \n Identities ",
       gif: true,
       mobGif: true,
-
+      image:
+        "http://theme.dsngrid.com/droow-l/assets/img/project/project5/3.jpg",
       video:
         "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/render_s6dzdu.gif",
       mobVideo:
@@ -64,7 +69,8 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
         "Making smartphones simpler for users with \n impaired vision : A step towards an inclusive and \n consumer-centric approach",
       gif: true,
       mobGif: true,
-
+      image:
+        "http://theme.dsngrid.com/droow-l/assets/img/project/project5/2.jpg",
       video:
         "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662486989/work_gifs/smartvision_ewgu7t.gif",
       mobVideo:
@@ -72,13 +78,17 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
       link: "/smartvision",
     },
   ];
+  const pagination = {
+    clickable: true,
+    // renderBullet: function (index, className) {
+    //   return <span class="w-2 h-2 bg-brand-gray" />;
+    // },
+  };
   return (
     <div className="w-full h-full">
       <Swiper
+        pagination={pagination}
         modules={[Pagination]}
-        pagination={{
-          clickable: true,
-        }}
         className="mySwiper"
       >
         {works.map((work) => (
@@ -201,23 +211,7 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
                     />
                   </div>
                 </div>
-                <div class="flex md:hidden w-full md:w-auto absolute bottom-10  md:bottom-2  md:right-24 left-0  flex-col items-center md:justify-end justify-center">
-                  {/* pagination */}
-                  {/* <div class=" md:hidden  w-full  flex items-center justify-center ">
-                    {works.map((work, index) => (
-                      <div
-                        key={index}
-                        class="  transition-all rounded-full duration-100 mx-2  "
-                        style={{
-                          background:
-                            work.id === work.id ? "#D9D9D9" : "#4E4E4E",
-                          width: "6px",
-                          height: "6px",
-                        }}
-                      />
-                    ))}
-                  </div> */}
-                </div>
+                <div class="flex md:hidden w-full md:w-auto absolute bottom-10  md:bottom-2  md:right-24 left-0  flex-col items-center md:justify-end justify-center"></div>
               </div>
 
               {/* bg gif */}
@@ -236,6 +230,7 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
                           ? "object-cover object-left"
                           : "object-contain object-bottom"
                       } `}
+                      autoPlay={true}
                       src={work.mobVideo}
                       // alt="loading..."
                     />

@@ -282,7 +282,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
             >
               <img
                 alt="hi"
-                className="w-full h-full object-cover object-right"
+                className="w-full h-full object-cover bg-cover object-right"
                 src={work.video}
                 // alt="loading..."
               />
@@ -300,7 +300,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
                w-100 md:w-screen  md:opacity-100 opacity-100 md:object-cover   `}
             >
               <video
-                className="w-full h-full object-cover "
+                className="w-full h-full object-cover  "
                 loop
                 autoPlay={activeWork.id === work.id ? true : false}
                 muted
