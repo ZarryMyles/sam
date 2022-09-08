@@ -36,7 +36,7 @@ const LandingSection = ({ imageEnter, textLeave, largeEnter }) => {
           class="block md:hidden  w-full z-10 bg-gray-500  -mt-28   bg-cover bg-center bg-no-repeat"
         />
         <div
-          class="flex flex-col md:flex-row md:items-center w-full work-landing-text mt-8 md:-mt-7"
+          class="flex flex-col md:flex-row md:items-center w-full work-landing-text mt-[39px] md:mt-0"
           onMouseEnter={largeEnter}
           onMouseLeave={imageEnter}
         >

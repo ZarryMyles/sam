@@ -1,56 +1,65 @@
 import React, { useState } from "react";
 import { ChevronRight, ChevronLeft, ArrowRightCircle } from "react-feather";
-
+import WorkVideoMob from "./WorkVideoMob";
 const works = [
   {
     id: 1,
     title: "BillEasy",
     domain: "Research",
+    bgColor: "#F7FCFF",
     description:
       "Creating an efficient accounting process for \n evolving businesses and enhanced work systems.",
     gif: false,
+    mobGif: false,
     image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg",
     video:
       "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662181482/work_gifs/BillEasy-short_yhhk58.mp4",
     mobVideo:
-      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662489092/work_gifs/Mob_BillEasy_Research_xys1wq.gif",
+      "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662181482/work_gifs/BillEasy-short_yhhk58.mp4",
     link: "/billeasy",
   },
   {
     id: 2,
     title: "BillEasy",
     domain: "Visual Design",
+    bgColor: "#fasd",
     description:
       "Creating an efficient accounting process for \n evolving businesses and enhanced work systems.",
     gif: false,
+    mobGif: true,
     image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg",
     video:
       "https://res.cloudinary.com/ahum/video/upload/v1662232035/BillEasy_Visual_hzrwgo.mp4",
     mobVideo:
       "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662494455/work_gifs/Mob_BillEasy_Visual_v1xkni.gif",
+
     link: "/billeasy-visual-design",
   },
   {
     id: 3,
     title: "HappilyEver",
     domain: "Branding",
+    bgColor: "#EB9B9B",
     description:
       "Designing brands to be more people \n Interactive : Adding value to future Brand \n Identities ",
     gif: true,
+    mobGif: true,
     image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/3.jpg",
     video:
       "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/render_s6dzdu.gif",
     mobVideo:
-      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662489092/work_gifs/Mob_Happilyever_iqkfoo.gif",
+      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/render_s6dzdu.gif",
     link: "/happilyever",
   },
   {
     id: 4,
     title: "Smart Vision",
     domain: "Case Study",
+    bgColor: "#F7FCFF",
     description:
       "Making smartphones simpler for users with \n impaired vision : A step towards an inclusive and \n consumer-centric approach",
     gif: true,
+    mobGif: true,
     image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/2.jpg",
     video:
       "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662486989/work_gifs/smartvision_ewgu7t.gif",
@@ -99,7 +108,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
   );
   const cards = () => (
     <div
-      className="text-black relative font-lato  select-none   h-full overflow-hidden w-full    bg-cover bg-no-repeat bg-center   flex flex-col  md:justify-start md:pt-56  top-0 left-0 px-5 md:px-48  "
+      className="text-black relative font-lato  select-none   h-full overflow-hidden w-full    bg-cover bg-no-repeat bg-center   flex flex-col  md:justify-start md:pt-[127px]  top-0 left-0 px-5 md:px-48  "
       onMouseEnter={imageEnter}
     >
       <div
@@ -303,10 +312,14 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
           )
         )}
       </div>
-      <div class={`w-full object-cover h-full absolute left-0 top-0 z-0`}>
+      {/* mob video */}
+      {/* <div class={`w-full object-cover h-full absolute left-0 top-0 z-0`}>
         {works.map((work) =>
-          work.gif ? (
+          work.mobGif ? (
             <div
+              style={{
+                background: `${work.bgColor}`,
+              }}
               class={` md:hidden ${
                 work.id < activeWork.id
                   ? "-translate-x-full  bg-center md:bg-left"
@@ -314,18 +327,22 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
                   ? " translate-x-[100%]  bg-center md:bg-right"
                   : "bg-center  "
               }  w-full bg-cover bg-no-repeat ease-linear transition-all  duration-700  h-screen    absolute
-             w-100 md:w-screen   md:object-contain  bg-red-100  `}
+             w-100 md:w-screen   md:object-contain  
+             
+             `}
             >
               <img
                 alt="hi"
                 className="w-full h-full object-contain object-bottom"
-                src={work.video}
-                // alt="loading..."
+                src={work.mobVideo}
               />
               <div class="absolute w-full h-full bg-black opacity-50 left-0 top-0"></div>
             </div>
           ) : (
             <div
+              style={{
+                background: `${work.bgColor}`,
+              }}
               class={` md:hidden ${
                 work.id < activeWork.id
                   ? "-translate-x-full  bg-center md:bg-left"
@@ -338,16 +355,16 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
               <video
                 className="w-full h-full object-contain object-bottom "
                 loop
-                autoPlay={activeWork.id === work.id ? true : false}
+                autoPlay={true}
                 muted
               >
-                <source src={work.video} type="video/mp4" />
+                <source src={work.mobVideo} type="video/mp4" />
               </video>
               <div class="absolute w-full h-full bg-black opacity-50 left-0 top-0"></div>
             </div>
           )
         )}
-      </div>
+      </div> */}
       {/* gifs for mobiles */}
       {/* <div class="md:hidden w-full h-full absolute left-0 top-0 z-0">
         {works.map((work) => (
@@ -380,9 +397,12 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
   return (
     <div
       id="work"
-      className="h-screen overflow-y-hidden  flex bg-white w-full relative"
+      className="h-screen overflow-y-hidden  flex  w-full relative"
     >
-      {cards()}
+      <div class="w-full h-full hidden md:block">{cards()}</div>
+      <div class="w-full h-full md:hidden">
+        <WorkVideoMob largeEnter={largeEnter} imageEnter={imageEnter} />{" "}
+      </div>
       {/* {sideNav()} */}
     </div>
   );

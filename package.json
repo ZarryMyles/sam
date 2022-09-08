@@ -26,6 +26,7 @@
     "react-scroll-parallax": "^3.2.0",
     "remotion": "^3.2.3",
     "smooth-scrollbar": "^8.7.4",
+    "swiper": "^8.3.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
