@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ChevronRight, ChevronLeft, ArrowRightCircle } from "react-feather";
 import WorkVideoMob from "./WorkVideoMob";
+
 const works = [
   {
     id: 1,
@@ -11,32 +12,15 @@ const works = [
       "Creating an efficient accounting process for \n evolving businesses and enhanced work systems.",
     gif: false,
     mobGif: false,
-    image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg",
     video:
       "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662181482/work_gifs/BillEasy-short_yhhk58.mp4",
     mobVideo:
       "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662181482/work_gifs/BillEasy-short_yhhk58.mp4",
     link: "/billeasy",
   },
+
   {
     id: 2,
-    title: "BillEasy",
-    domain: "Visual Design",
-    bgColor: "#fasd",
-    description:
-      "Creating an efficient accounting process for \n evolving businesses and enhanced work systems.",
-    gif: false,
-    mobGif: true,
-    image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg",
-    video:
-      "https://res.cloudinary.com/ahum/video/upload/v1662232035/BillEasy_Visual_hzrwgo.mp4",
-    mobVideo:
-      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662494455/work_gifs/Mob_BillEasy_Visual_v1xkni.gif",
-
-    link: "/billeasy-visual-design",
-  },
-  {
-    id: 3,
     title: "Smart Vision",
     domain: "Case Study",
     bgColor: "#F7FCFF",
@@ -44,12 +28,28 @@ const works = [
       "Making smartphones simpler for users with \n impaired vision : A step towards an inclusive and \n consumer-centric approach",
     gif: true,
     mobGif: true,
-    image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/2.jpg",
     video:
       "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662486989/work_gifs/smartvision_ewgu7t.gif",
     mobVideo:
       "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/Comp_1_tdwzlp.gif",
     link: "/smartvision",
+  },
+  {
+    id: 3,
+    title: "BillEasy",
+    domain: "Visual Design",
+    bgColor: "black",
+    description:
+      "Creating an efficient accounting process for \n evolving businesses and enhanced work systems.",
+    gif: false,
+    mobGif: true,
+    video:
+      "https://res.cloudinary.com/ahum/video/upload/v1662232035/BillEasy_Visual_hzrwgo.mp4",
+
+    mobVideo:
+      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662494455/work_gifs/Mob_BillEasy_Visual_v1xkni.gif",
+
+    link: "/billeasy-visual-design",
   },
   {
     id: 4,
@@ -60,7 +60,6 @@ const works = [
       "Designing brands to be more people \n Interactive : Adding value to future Brand \n Identities ",
     gif: true,
     mobGif: true,
-    image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/3.jpg",
     video:
       "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/render_s6dzdu.gif",
     mobVideo:
@@ -283,7 +282,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
               <img
                 alt="hi"
                 className="w-full h-full object-cover bg-cover object-right"
-                autoplay
+                autoPlay
                 src={work.video}
                 // alt="loading..."
               />
@@ -301,9 +300,10 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
                w-100 md:w-screen  md:opacity-100 opacity-100 md:object-cover   `}
             >
               <video
-                className="w-full h-full object-cover  "
+                className="w-full h-full object-cover object-center  "
                 loop
-                autoPlay={activeWork.id === work.id ? true : false}
+                // autoPlay={activeWork.id === work.id ? true : false}
+                autoPlay
                 muted
               >
                 <source src={work.video} type="video/mp4" />
