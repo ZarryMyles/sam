@@ -147,7 +147,7 @@ const BillEasy = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 2500);
+    }, 3500);
   }, []);
   return (
     <div className="w-full overflow-clip">
@@ -849,13 +849,13 @@ const BillEasy = () => {
             description:
               "Creating an efficient accounting process for \n evolving businesses and enhanced work systems.",
             gif: false,
-            mobGif: true,
+            mobGif: false,
             image:
               "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg",
             video:
               "https://res.cloudinary.com/ahum/video/upload/v1662232035/BillEasy_Visual_hzrwgo.mp4",
             mobVideo:
-              "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662494455/work_gifs/Mob_BillEasy_Visual_v1xkni.gif",
+              "https://res.cloudinary.com/ahum/video/upload/v1662232035/BillEasy_Visual_hzrwgo.mp4",
 
             link: "/billeasy-visual-design",
           }}

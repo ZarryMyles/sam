@@ -630,20 +630,18 @@ const BillEasyVisual = () => {
           imageEnter={imageEnter}
           work={{
             id: 3,
-            title: "HappilyEver",
-            domain: "Branding",
-            bgColor: "#EB9B9B",
+            title: "Smart Vision",
+            domain: "Case Study",
+            bgColor: "#F7FCFF",
             description:
-              "Designing brands to be more people \n Interactive : Adding value to future Brand \n Identities ",
+              "Making smartphones simpler for users with \n impaired vision : A step towards an inclusive and \n consumer-centric approach",
             gif: true,
             mobGif: true,
-            image:
-              "http://theme.dsngrid.com/droow-l/assets/img/project/project5/3.jpg",
             video:
-              "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/render_s6dzdu.gif",
+              "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662486989/work_gifs/smartvision_ewgu7t.gif",
             mobVideo:
-              "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/render_s6dzdu.gif",
-            link: "/happilyever",
+              "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/Comp_1_tdwzlp.gif",
+            link: "/smartvision",
           }}
           next={true}
         />

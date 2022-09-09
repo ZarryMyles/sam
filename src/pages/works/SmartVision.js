@@ -105,7 +105,7 @@ const SmartVision = () => {
   const textLeave = () => setcursorVariant("default");
   const largeEnter = () => setcursorVariant("large");
   const work = {
-    id: 4,
+    id: 3,
     title: "Smart Vision",
     domain: "Case Study",
     bgColor: "#F7FCFF",
@@ -125,7 +125,7 @@ const SmartVision = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 1500);
+    }, 3500);
   }, []);
   return (
     <div
@@ -872,11 +872,20 @@ const SmartVision = () => {
         largeEnter={largeEnter}
         imageEnter={imageEnter}
         work={{
+          id: 4,
+          title: "HappilyEver",
           domain: "Branding",
-          title: "Happily Ever",
-          video: "../assets/work_gifs/happilyEver.mp4",
+          bgColor: "#EB9B9B",
+          description:
+            "Designing brands to be more people \n Interactive : Adding value to future Brand \n Identities ",
+          gif: true,
+          mobGif: true,
+          image:
+            "http://theme.dsngrid.com/droow-l/assets/img/project/project5/3.jpg",
+          video:
+            "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/render_s6dzdu.gif",
           mobVideo:
-            "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662489092/work_gifs/Mob_Happilyever_iqkfoo.gif",
+            "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/render_s6dzdu.gif",
           link: "/happilyever",
         }}
         next={true}
