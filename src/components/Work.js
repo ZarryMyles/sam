@@ -283,6 +283,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
               <img
                 alt="hi"
                 className="w-full h-full object-cover bg-cover object-right"
+                autoplay
                 src={work.video}
                 // alt="loading..."
               />
