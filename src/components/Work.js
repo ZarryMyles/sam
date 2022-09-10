@@ -21,21 +21,6 @@ const works = [
 
   {
     id: 2,
-    title: "Smart Vision",
-    domain: "Case Study",
-    bgColor: "#F7FCFF",
-    description:
-      "Making smartphones simpler for users with \n impaired vision : A step towards an inclusive and \n consumer-centric approach",
-    gif: true,
-    mobGif: true,
-    video:
-      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662486989/work_gifs/smartvision_ewgu7t.gif",
-    mobVideo:
-      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/Comp_1_tdwzlp.gif",
-    link: "/smartvision",
-  },
-  {
-    id: 3,
     title: "BillEasy",
     domain: "Visual Design",
     bgColor: "black",
@@ -50,6 +35,22 @@ const works = [
       "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662494455/work_gifs/Mob_BillEasy_Visual_v1xkni.gif",
 
     link: "/billeasy-visual-design",
+  },
+
+  {
+    id: 3,
+    title: "Smart Vision",
+    domain: "Case Study",
+    bgColor: "#F7FCFF",
+    description:
+      "Making smartphones simpler for users with \n impaired vision : A step towards an inclusive and \n consumer-centric approach",
+    gif: true,
+    mobGif: true,
+    video:
+      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662486989/work_gifs/smartvision_ewgu7t.gif",
+    mobVideo:
+      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/Comp_1_tdwzlp.gif",
+    link: "/smartvision",
   },
   {
     id: 4,
