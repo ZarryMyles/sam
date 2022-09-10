@@ -158,7 +158,7 @@ const SocialProof = ({ imageEnter, largeEnter }) => {
         loop
       >
         {feedbacks.map((feedback, index) => (
-          <SwiperSlide className="md:hidden w-full h-full">
+          <SwiperSlide className="md:hidden w-full h-full socSwip">
             <div
               id="social-proof"
               className="px-5 md:px-24 font-lato py-10 md:py-20 md:pt-0 flex items-center justify-center my-10 md:my-5 bg-white dark:bg-brand-black transition-all duration-500"
