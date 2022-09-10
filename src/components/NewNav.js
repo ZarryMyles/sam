@@ -14,17 +14,21 @@ const Navbar = ({
     {
       name: "Work",
       link: "/#work",
+      targ: "",
     },
     {
       name: "About",
       link: "/about",
+      targ: "",
     },
     {
       name: "Contact",
       link: "/#get-in-touch",
+      targ: "",
     },
     {
       name: "Resume",
+      targ: "_blank",
       link: "https://drive.google.com/file/d/1gdC7zdeDq_ZZZVhfR79LOOZrqUFiqytM/view?usp=sharing",
     },
   ];
@@ -243,7 +247,7 @@ const Navbar = ({
         >
           {links.map((value, key) => (
             <div key={key} className="block" onClick={resize}>
-              <a href={value.link} target="_blank" rel="noreferrer">
+              <a href={value.link} target={value.targ} rel="noreferrer">
                 {value.name}
               </a>
             </div>

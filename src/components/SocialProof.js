@@ -35,10 +35,6 @@ const feedbacks = [
 const SocialProof = ({ imageEnter, largeEnter }) => {
   const pagination = {
     clickable: true,
-
-    // renderBullet: function (index, className) {
-    //   return '<div class="transition-all duration-200 rounded-l-full rounded-r-full w-4 h-1 bg-brand-pink "/>';
-    // },
   };
   const [feedback, setFeedback] = useState(feedbacks[0]);
   const [fade, setFade] = useState(false);
@@ -46,18 +42,10 @@ const SocialProof = ({ imageEnter, largeEnter }) => {
   return (
     <div id="social-proof" className="w-full h-full mx-auto">
       <div
-        // id="social-proof"
         onMouseEnter={imageEnter}
-        // onMouseLeave={textLeave}
         className=" hidden px-5 md:px-24 font-lato py-10 md:py-20 md:pt-0 md:flex items-center justify-center my-10 md:my-5 bg-white dark:bg-brand-black transition-all duration-500"
       >
         <div class="  flex   bg-brand-darkGrey2  text-brand-gray w-full p-5 md:p-24   flex-col md:items-center justify-end relative">
-          {/* <Parallax
-            class="text-4xl md:text-5xl w-full md:w-1/3 absolute -top-10 px-4 md:px-0 md:-top-12 md:left-12 font-bold"
-            translateY={[-50, 20]}
-          >
-            <div>Feedback from my clients.</div>
-          </Parallax> */}
           <div class=" flex items-center text-brand-gray w-full text-xl uppercase tracking-widest">
             <div
               className="font-lato tracking-2 md:tracking-3 text-xs md:text-base text-brand-gray"
@@ -70,7 +58,6 @@ const SocialProof = ({ imageEnter, largeEnter }) => {
             <div
               style={{
                 height: "2px",
-                // width: "85px",
               }}
               class="bg-brand-gray w-[40px] md:w-[85px] ml-4 rounded-l-full rounded-r-full md:ml-6"
             ></div>
@@ -125,8 +112,6 @@ const SocialProof = ({ imageEnter, largeEnter }) => {
                   }}
                 >
                   <div
-                    // onMouseEnter={textEnter}
-                    // onMouseLeave={imageEnter}
                     style={{
                       height: "2px",
                       color: "#ffc7d1",
@@ -173,7 +158,6 @@ const SocialProof = ({ imageEnter, largeEnter }) => {
                   <div
                     style={{
                       height: "2px",
-                      // width: "85px",
                     }}
                     class="bg-brand-gray w-[40px] md:w-[85px] ml-4 rounded-l-full rounded-r-full md:ml-6"
                   ></div>
@@ -217,8 +201,6 @@ const SocialProof = ({ imageEnter, largeEnter }) => {
                     </div>
                   </div>
                 </div>
-                {/*  */}
-
                 <Quote
                   className="absolute -bottom-5 md:-bottom-6 right-6 md:right-10 w-10 md:w-14 h-10 md:h-14 fill-black dark:fill-white "
                   stroke="none"
