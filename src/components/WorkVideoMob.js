@@ -86,6 +86,7 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
       <Swiper
         pagination={pagination}
         modules={[Pagination]}
+        loop
         className="mySwiper"
       >
         {works.map((work) => (
