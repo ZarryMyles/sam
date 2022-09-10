@@ -28,11 +28,11 @@ module.exports = {
       purple: colors.violet,
       pink: colors.pink,
       brand: {
-        darkGrey: "#090909",
+        darkGrey: "#0d0d0d",
         darkGrey2: "#111111",
         darkGrey3: "#424242",
         lightGrey: "#e6e6e6",
-        footerGrey: "#1f1f1f",
+        footerGrey: "#111111",
         bgGrey: "#fcfffd",
         gray: "#B5B5B5",
         black: "#0D0D0D",

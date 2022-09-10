@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { ReactComponent as Quote } from "../assets/icons/quoteWhite.svg";
-// import { Parallax, ParallaxProvider } from "react-scroll-parallax";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper";
+
+import "swiper/css";
+import "swiper/css/pagination";
 
 // feedback
 const feedbacks = [
@@ -28,7 +32,14 @@ const feedbacks = [
       "Shradha is one of the colleagues who has immense dedication towards her work and art. Her knowledge in the field of design is impeccable. Shradha would be a great asset to any organization that she works with.fake:123  Her keen eye for details and strong work ethic added elegance and simplicity to all of our applications. She showed initiative in building the design architecture from scratch, which resulted in a rich user experience and helped advance our projects from a design and usability perspective.  She has been a brilliant leader to work with, and I wholeheartedly endorse her as an invaluable team member!",
   },
 ];
-const SocialProof = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
+const SocialProof = ({ imageEnter, largeEnter }) => {
+  const pagination = {
+    clickable: true,
+
+    // renderBullet: function (index, className) {
+    //   return '<div class="transition-all duration-200 rounded-l-full rounded-r-full w-4 h-1 bg-brand-pink "/>';
+    // },
+  };
   const [feedback, setFeedback] = useState(feedbacks[0]);
   const [fade, setFade] = useState(false);
 
@@ -38,9 +49,9 @@ const SocialProof = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
         id="social-proof"
         onMouseEnter={imageEnter}
         // onMouseLeave={textLeave}
-        className="px-5 md:px-24 font-lato py-10 md:py-20 md:pt-0 flex items-center justify-center my-10 md:my-5 bg-white dark:bg-brand-black transition-all duration-500"
+        className=" hidden px-5 md:px-24 font-lato py-10 md:py-20 md:pt-0 md:flex items-center justify-center my-10 md:my-5 bg-white dark:bg-brand-black transition-all duration-500"
       >
-        <div class=" bg-brand-lightGrey dark:bg-brand-darkGrey2 md:dark:bg-brand-darkGrey2 text-black dark:text-brand-gray w-full p-5 md:p-24  flex flex-col md:items-center justify-end relative">
+        <div class="  flex   bg-brand-darkGrey2  text-brand-gray w-full p-5 md:p-24   flex-col md:items-center justify-end relative">
           {/* <Parallax
             class="text-4xl md:text-5xl w-full md:w-1/3 absolute -top-10 px-4 md:px-0 md:-top-12 md:left-12 font-bold"
             translateY={[-50, 20]}
@@ -140,6 +151,88 @@ const SocialProof = ({ textEnter, textLeave, imageEnter, largeEnter }) => {
           />
         </div>
       </div>
+      <Swiper
+        pagination={pagination}
+        modules={[Pagination]}
+        className="mySwiper"
+        loop
+      >
+        {feedbacks.map((feedback, index) => (
+          <SwiperSlide className="md:hidden w-full h-full">
+            <div
+              id="social-proof"
+              className="px-5 md:px-24 font-lato py-10 md:py-20 md:pt-0 flex items-center justify-center my-10 md:my-5 bg-white dark:bg-brand-black transition-all duration-500"
+            >
+              <div class="  flex   bg-brand-darkGrey2  text-brand-gray w-full px-5 pt-5 pb-[125px] md:p-24   flex-col md:items-center justify-end relative">
+                <div class=" flex items-center text-brand-gray w-full text-xl uppercase tracking-widest">
+                  <div
+                    className="font-lato tracking-2 md:tracking-3 text-xs md:text-base text-brand-gray"
+                    style={{
+                      color: "#b5b5b5",
+                    }}
+                  >
+                    Testimonials
+                  </div>
+                  <div
+                    style={{
+                      height: "2px",
+                      // width: "85px",
+                    }}
+                    class="bg-brand-gray w-[40px] md:w-[85px] ml-4 rounded-l-full rounded-r-full md:ml-6"
+                  ></div>
+                </div>
+
+                <div class=" text-brand-gray text-base  w-full   md:px-0 py-3 md:py-0 flex flex-col justify-center">
+                  <div
+                    className={`font-lato-light-italic2 my-5 md:my-14 tracking-1 md:tracking-1.5 transition-opacity ease-linear duration-1000  leading-[30px] md:leading-8  text-justify  ${
+                      fade ? "opacity-0" : ""
+                    } `}
+                  >
+                    {feedback.feedback.split("fake:123")[0]}{" "}
+                    <span
+                      style={{
+                        MozWindowDragging: "none",
+                      }}
+                      class={`text-transparent select-none    `}
+                    >
+                      {feedback.feedback.split("fake:123")[1]}
+                    </span>
+                  </div>
+                  {/* name */}
+                  <div
+                    class={`text-black font-lato-light flex items-center dark:text-white tracking-wider text-xl   ease-linear duration-1000 transition-opacity  ${
+                      fade ? "opacity-0" : ""
+                    } `}
+                  >
+                    <div
+                      class="w-10 md:w-14 h-10 md:h-14 rounded-full  bg-brand-gray bg-cover bg-center bg-no-repeat mr-5 "
+                      style={{
+                        backgroundImage: `url(${feedback.image})`,
+                      }}
+                    />
+                    <div class="flex tracking-1 md:tracking-3 ">
+                      <div className="text-xs md:text-xl">
+                        {feedback.name},{" "}
+                      </div>
+                      <div className="text-xs md:text-xl pl-1">
+                        {feedback.company}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <Quote
+                  className="absolute -bottom-5 md:-bottom-6 right-6 md:right-10 w-10 md:w-14 h-10 md:h-14 fill-black dark:fill-white "
+                  stroke="none"
+                  style={{
+                    fill: "#ffc7d1",
+                  }}
+                />
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 };

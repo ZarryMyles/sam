@@ -128,13 +128,13 @@ const About = () => {
             <div
               onMouseEnter={textEnter}
               onMouseLeave={imageEnter}
-              class="text-brand-darkGrey3 text-xl  flex items-center "
+              class="text-brand-darkGrey3 text-xl mb-1  flex items-center "
             >
-              <div>Shradha</div>
+              <div className="font-lora-italic">Shradha</div>
               <div
                 style={{
                   height: "1px",
-                  width: "72px",
+                  width: "40px",
                 }}
                 class="  ml-4 mr-1  w-20 bg-brand-darkGrey3"
               />
@@ -155,14 +155,14 @@ const About = () => {
         {/* principles abide */}
         <div class="bg-brand-darkGrey2 md:pt-16 md:mt-40 py-10 px-5 md:px-48  ">
           <WorkHeading text={"about"} />
-          <div class="text-4xl mb-8">Principles I abide by</div>
+          <div class=" text-2xl -mt-[14px] mb-8">Principles I abide by</div>
           <div
             style={{
               letterSpacing: "0.4px",
             }}
             class="flex flex-col md:flex-row w-full text-lg leading-[28px] tracking-[0.4px] md:leading-9 text-justify md:pb-20"
           >
-            <div class="w-full md:w-1/2 md:pr-16 mB-10 md:my-0 ">
+            <div class="w-full md:w-1/2 md:pr-16 mb-10 md:my-0 ">
               <div>Interests</div>
               <div>
                 I enjoy gaining new experiences, my latest interest has been in
@@ -175,7 +175,7 @@ const About = () => {
                 </span>
               </div>
             </div>
-            <div class="w-full md:w-1/2 md:pl-16 my-10 md:my-0">
+            <div class="w-full md:w-1/2 md:pl-16  md:my-0">
               <div>Skills</div>
               <div>
                 With strong insights in{" "}
@@ -194,7 +194,7 @@ const About = () => {
           </div>
         </div>
         {/* quote */}
-        <div class="md:h-screen flex mt-[200px] mb-[136px] md:mt-0 md:mb-0 justify-center items-center px-5 ">
+        <div class="md:h-screen flex mt-[200px] mb-[200px] md:mt-0 md:mb-0 justify-center items-center px-5 ">
           <div
             class="  text-brand-pink text-xl relative text-justify md:text-center leading-[30px]"
             style={{
@@ -202,7 +202,7 @@ const About = () => {
             }}
           >
             <Quote
-              className="absolute -top-14 md:-top-7 left-0 md:-left-8  w-7 md:w-7 h-6   "
+              className="absolute -top-12 md:-top-7 left-0 md:-left-8  w-7 md:w-7 h-6   "
               stroke="none"
             />
             Unhappy users are a source for learning, But the users who provide

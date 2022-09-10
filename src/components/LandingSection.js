@@ -71,8 +71,6 @@ const LandingSection = ({ imageEnter, textLeave, largeEnter }) => {
           width: "520px",
           height: "400px",
           backgroundImage: `url(${HeroImage})`,
-          // left: "746px",
-          // top: "321px",
         }}
         class="hidden md:block absolute z-10 bg-gray-500  right-52 bottom-10 bg-cover bg-center bg-no-repeat"
       />

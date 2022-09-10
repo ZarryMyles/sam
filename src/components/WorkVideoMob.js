@@ -1,8 +1,8 @@
 import React from "react";
+import { ChevronRight, ChevronLeft, ArrowRightCircle } from "react-feather";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 
-import { ChevronRight, ChevronLeft, ArrowRightCircle } from "react-feather";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -80,9 +80,6 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
   ];
   const pagination = {
     clickable: true,
-    // renderBullet: function (index, className) {
-    //   return <span class="w-2 h-2 bg-brand-gray" />;
-    // },
   };
   return (
     <div className="w-full h-full">
