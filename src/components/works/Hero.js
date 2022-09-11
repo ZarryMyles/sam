@@ -9,7 +9,7 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
         // }}
       >
         <div class="flex  h-full    flex-col w-full justify-center pt-20  ">
-          <div class="flex items-center mb-12 w-max">
+          <div class="flex items-center mb-6 md:mb-12 w-max">
             <div
               style={{
                 height: "1px",
@@ -54,7 +54,7 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
                 fontSize: "24px",
               }}
               href={work.link}
-              class=" w-max md:text-3xl font-lato-med my-12 text-white tracking-1.5"
+              class=" w-max md:text-3xl font-lato-med my-6 text-white tracking-1.5"
             >
               Next Project
             </a>
@@ -110,7 +110,7 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
             href={work.link}
-            class=" w-max text-[20px] font-lato-med   text-brand-white tracking-1"
+            class=" w-max text-[20px] font-lato-med  text-brand-white tracking-1"
           >
             Next Project
           </a>

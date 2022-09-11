@@ -155,7 +155,7 @@ const About = () => {
         {/* principles abide */}
         <div class="bg-brand-darkGrey2 md:pt-16 md:mt-40 py-10 px-5 md:px-48  ">
           <WorkHeading text={"about"} />
-          <div class=" text-2xl -mt-[14px] mb-8">Principles I abide by</div>
+          <div class=" text-2xl -mt-[14px] mb-8">Motivations</div>
           <div
             style={{
               letterSpacing: "0.4px",
@@ -220,12 +220,14 @@ const About = () => {
           textLeave={textLeave}
           imageEnter={imageEnter}
         /> */}
-        <GetInTouch
-          textEnter={textEnter}
-          textLeave={textLeave}
-          imageEnter={imageEnter}
-          largeEnter={largeEnter}
-        />
+        <div className="mt-[130px] md:mt-0">
+          <GetInTouch
+            textEnter={textEnter}
+            textLeave={textLeave}
+            imageEnter={imageEnter}
+            largeEnter={largeEnter}
+          />
+        </div>
         <motion.div
           className="cursor hidden md:flex"
           variants={variants}

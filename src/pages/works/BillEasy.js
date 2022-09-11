@@ -181,28 +181,29 @@ const BillEasy = () => {
           imageEnter={imageEnter}
           work={work}
         />
+
         {/* project brief */}
         <div class=" px-5 pt-[105px] md:py-10 md:px-24 md:my-20 flex flex-wrap justify-between  ">
           <div className="  my-5    ">
-            <div class="text-xl  font-lato flex items-center -ml-1">
+            <div class=" text-base md:text-xl  font-lato flex items-center md:-ml-1">
               <img src={Clipboard} className="mr-2 w-5 " alt="" /> Project Type
             </div>
             <div className="font-lato  mt-2">In-house, Fin-Tech</div>
           </div>
-          <div className=" w-1/2 md:w-auto my-5   pl-4 md:pl-0">
-            <div class="text-xl  font-lato flex items-center -ml-2">
+          <div className=" w-1/2 md:w-auto my-5 pl-7 md:pl-0">
+            <div class=" text-base md:text-xl  font-lato flex items-center md:-ml-2">
               <img src={Calendar} className="mr-2 w-5 " alt="" /> Timeline
             </div>
             <div className="font-lato  mt-2">3 months</div>
           </div>
           <div className=" w-1/2 md:w-auto my-5   ">
-            <div class="text-xl  font-lato flex items-center -ml-1">
+            <div class=" text-base md:text-xl  font-lato flex items-center md:-ml-1">
               <img src={TippingHand} className="mr-2 w-5 " alt="" /> My Role
             </div>
             <div className="font-lato  mt-2">UX & UI Design Intern</div>
           </div>
-          <div className=" w-1/2 md:w-auto my-5   pl-4 md:pl-0">
-            <div class="text-xl  font-lato flex items-center -ml-1">
+          <div className=" w-1/2 md:w-auto my-5 pl-7 md:pl-0">
+            <div class=" text-base md:text-xl  font-lato flex items-center md:-ml-1">
               <img src={Fist} className="mr-2 w-5 " alt="" /> Design Team
             </div>
             <div className="font-lato  mt-2">Myself</div>
@@ -250,7 +251,7 @@ const BillEasy = () => {
           <div class="px-5 md:px-0 hidden md:block col-span-1"></div>
 
           <div class=" col-span-12 md:col-span-5  flex flex-col items-center  justify-center md:pl-10 rounded-xl text-brand-white ">
-            <div className="  px-5 md:px-0 md:pr-24 rounded-l-lg flex flex-col justify-center bg-brand-darkGrey2 md:pl-14 py-14  ">
+            <div className="  px-5 md:px-0 md:pr-24 rounded-l-lg flex flex-col justify-center mt-[32px] md:mt-0 bg-brand-darkGrey2 md:pl-14 py-10  ">
               <div className=" mb-8">
                 <div className=" mb-2 flex items-center">
                   <img src={Check} className="mr-2 w-5 " alt="" /> Results
@@ -281,7 +282,7 @@ const BillEasy = () => {
           </div>
         </div>
         {/* purpose */}
-        <div className="px-5 pb-[136px] md:pb-10 pt-[96px] md:pt-10 md:px-24 md:mb-24">
+        <div className="px-5 pb-[136px] text-brand-white md:pb-10 pt-[96px] md:pt-10 md:px-24 md:mb-24">
           <WorkHeading text={"purpose"} />
 
           <div class="grid grid-cols-12 font-lato">
@@ -289,7 +290,7 @@ const BillEasy = () => {
               <div class=" text-2xl  tracking-1.5 mb-8 flex items-center">
                 <img src={Bullseye} className="mr-2 w-6 " alt="" /> Goals
               </div>
-              <div className=" ">
+              <div className=" tracking-0.5 leading-7 ">
                 1. Optimize efficiency <br />
                 2. Minimal learning curve <br />
                 3. Save time
@@ -304,7 +305,7 @@ const BillEasy = () => {
                 <div className="mr-16 ">
                   <div className="font-lato-bold mb-2">Direct users</div>
                   <div
-                    className="mr-2 md:mr-3 px-3 py-1 text-center  rounded md:px-6 md:py-3 w-max text-brand-white"
+                    className="mr-2 md:mr-3 px-[16px] py-[10px] text-center  rounded md:px-6 md:py-3 w-max text-brand-white"
                     style={{
                       background: "#111111",
                     }}
@@ -316,7 +317,7 @@ const BillEasy = () => {
                   <div className="font-lato-bold mb-2">Indirect users</div>
                   <div className="flex w-full justify-between md:justify-start    ">
                     <div
-                      className="mr-2 md:mr-3 px-3 py-1 text-center  rounded md:px-6 md:py-3 text-brand-white"
+                      className="mr-2 md:mr-3 px-[16px] py-[10px] text-center  rounded md:px-6 md:py-3 text-brand-white"
                       style={{
                         background: "#111111",
                       }}
@@ -324,7 +325,7 @@ const BillEasy = () => {
                       Stakeholders
                     </div>
                     <div
-                      className="mr-2 md:mr-3 px-2 text-center rounded min-w-max py-1 md:px-6 md:py-3 text-brand-white"
+                      className="mr-2 md:mr-3 px-[16px] text-center rounded min-w-max py-[10px] md:px-6 md:py-3 text-brand-white"
                       style={{
                         background: "#111111",
                       }}
@@ -408,10 +409,7 @@ const BillEasy = () => {
                 <span style={{ color: "#6AC296" }}>
                   work life, specific problems and motivations
                 </span>{" "}
-                and gain{" "}
-                <span style={{ color: "#6AC296" }}>
-                  behavioral understanding.
-                </span>
+                and gain behavioral understanding.
               </li>
             </ul>
           </div>
@@ -454,7 +452,7 @@ const BillEasy = () => {
           >
             <img src={OldKey} alt="" class="w-6 mr-2" /> Insights
           </div>
-          <div class="text-sm md:text-base grid grid-cols-12 ">
+          <div class=" text-base grid grid-cols-12 ">
             <div class="col-span-12 md:col-span-6">
               <ul className=" list-disc ml-3 md:ml-5 tracking-0.5 leading-7 md:leading-6">
                 <li className="">
@@ -478,8 +476,7 @@ const BillEasy = () => {
                 <li className="my-6 md:my-4">
                   {" "}
                   It was found that B2C invoices for Jumkey were automatically
-                  generated through amazon seller central, but{" "}
-                  <span style={{ color: "#6AC296" }}>B2B invoices</span> for
+                  generated through amazon seller central, but B2B invoices for
                   either of the businesses were{" "}
                   <span style={{ color: "#6AC296" }}>
                     prepared manually using sheets.
@@ -487,21 +484,20 @@ const BillEasy = () => {
                 </li>
                 <li className="my-6 md:my-4">
                   {" "}
-                  One major pain-point was time-killing and manual process of
-                  invoice creation and report preparation.
+                  One major pain-point was{" "}
+                  <span style={{ color: "#6AC296" }}>
+                    {" "}
+                    time-killing and manual process
+                  </span>{" "}
+                  of invoice creation and report preparation.
                 </li>{" "}
                 <li className="my-6 md:my-4">
-                  Multiple steps to store the invoice. (From{" "}
-                  <span style={{ color: "#6AC296" }}>Sheet’s</span> → To{" "}
-                  <span style={{ color: "#6AC296" }}>Internal System</span> →{" "}
-                  <span style={{ color: "#6AC296" }}>Drive</span> (folders) →{" "}
-                  <span style={{ color: "#6AC296" }}>Mail</span> (share))
+                  <span style={{ color: "#6AC296" }}> Multiple steps </span> to
+                  store the invoice. (From Sheet’s → To Internal System → Drive
+                  (folders) → Mail (share))
                 </li>{" "}
                 <li className="my-6 md:my-4">
-                  An{" "}
-                  <span style={{ color: "#6AC296" }}>experienced employee</span>{" "}
-                  required roughly{" "}
-                  <span style={{ color: "#6AC296" }}>15+ minutes</span> to
+                  An experienced employee required roughly 15+ minutes to
                   prepare a manual invoice, but a fresher took{" "}
                   <span style={{ color: "#6AC296" }}>more than 30 minutes</span>{" "}
                   to make the same invoice.
@@ -516,19 +512,17 @@ const BillEasy = () => {
               </ul>
             </div>
             <div class="hidden md:block col-span-1"></div>
-            <div class="col-span-12 md:col-span-5 mt-4 md:mt-0 flex items-center justify-center">
+            <div class=" col-span-12 md:col-span-5 mt-4 md:mt-0 hidden md:flex items-center justify-center">
               <img className="w-full object-center" src={insightsImg} alt="" />
             </div>
           </div>
         </div>
+        <div class=" mt-7 flex items-center justify-center">
+          <img className="w-full object-center" src={insightsImg} alt="" />
+        </div>
         {/* usability testing */}
         <div class="p-5 md:px-24  py-10 md:py-[130px] mt-[130px] font-lato bg-brand-darkGrey2 w-full">
-          <div
-            className="grid-cols-12 grid "
-            style={{
-              marginBottom: "88px",
-            }}
-          >
+          <div className="grid-cols-12 grid mb-[48px] md:mb-[88px] ">
             <div class="col-span-12 md:col-span-6 h-full ">
               <div
                 className=" text-brand-white text-2xl md:text-4xl  flex items-center "
@@ -577,7 +571,7 @@ const BillEasy = () => {
                     color: "#3D6BC5",
                     marginTop: "30px",
                   }}
-                  class="uppercase text-base hidden md:flex items-center font-lato-bold tracking-3 my-10 md:my-5 "
+                  class="uppercase text-base hidden md:flex items-center font-lato-bold tracking-3 mt-10 md:my-5 "
                 >
                   <ArrowRightCircle
                     width={30}
@@ -586,7 +580,7 @@ const BillEasy = () => {
                     strokeWidth={1}
                     className="mr-4"
                   />
-                  UT DOCUMENTATIOn
+                  UT DOCUMENTATION
                 </a>
               </ul>
             </div>
@@ -650,7 +644,7 @@ const BillEasy = () => {
         </div>
         {/* usability matrix */}
         <div class=" pt-[150px] px-5 md:px-24 font-lato">
-          <WorkHeading text={"outcome"} />
+          <WorkHeading text={"outcomes"} />
 
           <div
             class="text-2xl md:text-4xl flex items-center "
@@ -714,8 +708,10 @@ const BillEasy = () => {
                     confident about honing the skill,{" "}
                   </span>
                   despite the shortcomings of sheets. Which led him to exhibit
-                  the status quo bias as he was unwilling to adapt a new process
-                  to
+                  the <span style={{ color: "#6AC296" }}>
+                    status quo bias
+                  </span>{" "}
+                  as he was unwilling to adapt a new process to
                   <span style={{ color: "#6AC296" }}>
                     {" "}
                     avoid stressful learning.
@@ -783,18 +779,17 @@ const BillEasy = () => {
           </div>
           <img src={persona3} className="hidden md:block w-full mt-12" alt="" />
         </div>
-        <img src={persona3} className="block md:hidden w-full mt-12" alt="" />
+        <img
+          src={persona3}
+          style={{
+            transform: "scale(107%)",
+          }}
+          className="block md:hidden w-full mt-12  object-center"
+          alt=""
+        />
 
         {/* case studies */}
-        <div
-          style={
-            {
-              // paddingTop: " 130px",
-              // paddingBottom: " 100px",
-            }
-          }
-          class="pt-130 md:pb-24"
-        >
+        <div class="pt-130 md:pb-24 ">
           <a
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
@@ -802,7 +797,7 @@ const BillEasy = () => {
             href="https://www.notion.so/BillEasy-Research-eede878d31d8405dba2c5543dbb3da67"
             target="_blank"
             rel="noreferrer"
-            className="tracking-3 mb-10 md:mb-20 px-5 flex items-center md:px-24 text-sm md:text-base  uppercase font-lato-bold"
+            className="tracking-3 mb-[96px] md:mb-20 px-5 flex items-center md:px-24 text-sm md:text-base mt-16 md:mt-0   uppercase font-lato-bold"
           >
             <ArrowRightCircle
               width={30}
@@ -817,7 +812,7 @@ const BillEasy = () => {
             <img src={collage} className="  md:w-full" alt="" />
           </div>
           {/* mobile vertical scroll thingy */}
-          <div class="md:px-5 block md:hidden relative my-10 md:my-0  ">
+          <div class="md:px-5 block md:hidden relative mt-10 mb-[124px] md:my-0  ">
             <Marquee speed={10} direction="left">
               <img src={collage} className="  md:w-full" alt="" />
               <img src={collage} className="  md:w-full" alt="" />

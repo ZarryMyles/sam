@@ -6,7 +6,7 @@ const GetInTouch = ({ imageEnter, largeEnter }) => {
       id="get-in-touch"
       className="  w-full overflow-clip    mt-10 relative  "
     >
-      <div className="  text-brand-white px-5 md:px-48  pb-20 pt-10 md:py-40  w-full   left-0 top-0  z-20  ">
+      <div className="  text-brand-white px-5 md:px-48  pb-10 md:pb-20 pt-10 md:py-40  w-full   left-0 top-0  z-20  ">
         <div
           className="flex flex-col  md:flex-row md:items-center justify-between w-full"
           // onMouseEnter={imageEnter}

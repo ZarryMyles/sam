@@ -109,6 +109,7 @@ const BillEasyVisual = () => {
     <div className="overflow-x-hidden  bg-brand-black text-brand-white">
       {loading && (
         <div class="fixed loaderDiv w-screen h-screen">
+          {" "}
           <Loader />
         </div>
       )}
@@ -124,15 +125,10 @@ const BillEasyVisual = () => {
       </div>
       {/* Design Principles */}
       <div class="font-lato h-full flex w-full flex-col md:px-24 px-7">
-        <div
-          style={{
-            marginBottom: "30px",
-          }}
-          class="  text-2xl md:text-4xl md:my-0 my-8 tracking-1.5 font-lato flex items-center"
-        >
+        <div class="  text-2xl md:text-4xl md:mb-[30px] mb-6 md:my-0 tracking-1.5 font-lato flex items-center">
           <img src={MagicWand} className="mr-2 w-9 " alt="" /> Design principles
         </div>
-        <ul className="font-lato text-base md:mb-[30px] ml-4 list-disc md:tracking-normal tracking-0.5">
+        <ul className="font-lato text-base mb-6 md:mb-[30px] ml-4 list-disc md:tracking-normal tracking-0.5">
           <li>
             We created four{" "}
             <span style={{ color: "#6AC296" }}>design principles</span> that
@@ -141,16 +137,16 @@ const BillEasyVisual = () => {
           </li>
         </ul>
         <div className="md:px-7 md:tracking-normal tracking-widest flex md:flex-row flex-col font-lato font-normal text-brand-black w-full md:auto md:text-base text-base justify-between md:items-center">
-          <div className="px-5 py-6 md:py-5 md:m-2 my-3 md:my-0 bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
+          <div className="px-5 py-6 md:py-5 md:m-2 mb-3 md:my-0 bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
             1. Intuitive
           </div>
-          <div className="px-5 py-6 md:py-5 md:m-2 my-3 md:my-0 bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
+          <div className="px-5 py-6 md:py-5 md:m-2 mb-3 md:my-0 bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
             2. Time efficient
           </div>
-          <div className="px-5 py-6 md:py-5 md:m-2 my-3 md:my-0 bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
+          <div className="px-5 py-6 md:py-5 md:m-2 mb-3 md:my-0 bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
             3. Empathy
           </div>
-          <div className="px-5 py-6 md:py-5 md:m-2 mt-3 md:mt-0 bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
+          <div className="px-5 py-6 md:py-5 md:m-2 mb-3 md:mt-0 bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
             4. Safe
           </div>
         </div>
@@ -166,15 +162,15 @@ const BillEasyVisual = () => {
           <img src={SmallBlueDiamond} className="mr-2 w-9 " alt="" /> Use Cases
         </div>
         <div className="md:px-7 md:tracking-normal tracking-widest  flex md:flex-row flex-col font-lato font-normal text-brand-black w-full md:auto md:text-base text-base justify-between md:items-center">
-          <div className="px-5 py-6 flex justify-start items-center md:py-5 md:m-2 my-3 md:my-0 bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
+          <div className="px-5 py-6 flex justify-start items-center md:py-5 md:m-2 mb-3 md:my-0 bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
             <img src={invoiceGen} width="30px" alt="page" className="mr-2" />{" "}
             Invoice Generation
           </div>
-          <div className="px-5 py-6 flex justify-start items-center md:py-5 md:m-2 my-3 md:my-0 bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
+          <div className="px-5 py-6 flex justify-start items-center md:py-5 md:m-2 mb-3 md:my-0 bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
             <img src={invoiceDis} width="30px" alt="page" className="mr-2" />{" "}
             Invoice Distribution
           </div>
-          <div className="px-5 py-6 flex justify-start items-center md:py-5 md:m-2 my-3 md:my-0 bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
+          <div className="px-5 py-6 flex justify-start items-center md:py-5 md:m-2 mb-3 md:my-0 bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
             <div
               style={{ backgroundColor: "#5CCBFF", width: "30px" }}
               className="rounded-3xl mr-2 p-0.5"
@@ -183,7 +179,7 @@ const BillEasyVisual = () => {
             </div>
             Invoice Storage
           </div>
-          <div className="px-5 py-6 flex justify-start items-center md:py-5 md:m-2 mt-3 md:mt-0 bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
+          <div className="px-5 py-6 flex justify-start items-center md:py-5 md:m-2 mb-3 md:mt-0 bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
             <img src={reportTrack} width="30px" alt="page" className="mr-2" />{" "}
             Report Tracking
           </div>
@@ -219,7 +215,7 @@ const BillEasyVisual = () => {
           <img src={Eyes} className="mr-2 w-9 " alt="" /> Visual Design
         </div>
         <div>
-          <div className="text-base my-5 md:tracking-normal tracking-0.5 font-lato font-normal md:my-0 text-justify md:px-24 px-7">
+          <div className="text-base mb-5 md:tracking-normal tracking-0.5 font-lato font-normal md:my-0 text-justify md:px-24 px-7">
             <span className="text-lg">•</span> Due to limited time frame, I
             moved right into creating rough paper wireframes. During this phase
             of prototyping, We closely{" "}
@@ -276,12 +272,12 @@ const BillEasyVisual = () => {
           </div>
           {/* Invoice Generation */}
           <div className="flex flex-col ">
-            <div className="pt-10 md:mt-32 font-lato font-normal md:pb-0 pb-3 md:px-24 px-7 md:tracking-normal tracking-0.5 md:py-5">
+            <div className="pt-10 mt-[130px] md:mt-32 font-lato font-normal md:pb-0 pb-4 md:px-24 px-7 md:tracking-normal tracking-0.5 md:py-5">
               2. Invoice Generation
             </div>
-            <div className="flex md:flex-row w-full leading-7 overflow-hidden md:mt-5 md:px-24 px-7 py-5 flex-col bg-brand-darkGrey2 items-center">
+            <div className="flex md:flex-row w-full leading-7 overflow-hidden md:mt-5 md:px-24 px-7 pt-5 flex-col bg-brand-darkGrey2 items-center">
               {" "}
-              <div className="md:w-7/10 md:pr-10 md:pb-0 pb-5 flex flex-col ">
+              <div className="md:w-7/10 md:pr-10 md:pb-0  flex flex-col ">
                 <ul className="font-lato list-disc list-inside text-justify  md:py-5 py-3">
                   ⭐{" "}
                   <span
@@ -306,16 +302,22 @@ const BillEasyVisual = () => {
                 alt="visual"
                 className="hidden md:block"
               />
+            </div>
+            <div className="px-2 bg-brand-darkGrey2 pt-4 pb-10">
               <img
                 src={invoiceG1}
-                className="md:hidden mt-4 mb-10"
+                className="md:hidden "
                 width="100%"
                 alt="visual"
               />
             </div>
-            <div className="flex md:flex-row  mt-10 flex-col items-start justify-between">
+            <div className="flex md:flex-row  mt-[24px] md:mt-10 flex-col items-start justify-between">
               {" "}
-              <img src={invoiceG2} alt="visual" className="my-6 md:hidden " />
+              <img
+                src={invoiceG2}
+                alt="visual"
+                className="md:my-6 md:hidden "
+              />
               <div className="md:w-7/10 md:px-24 px-7 tracking-0.5 leading-7 md:pr-10 md:pb-0 text-justify pb-5 flex flex-col ">
                 <div className="font-lato font-normal md:py-5 py-3">
                   <span className="hidden md:block">
@@ -471,7 +473,7 @@ const BillEasyVisual = () => {
           className="bg-scroll mx-7 bg-no-repeat whitespace-nowrap overflow-x-scroll h-[200px]"
         ></div> */}
         <div className="w-full h-full md:hidden">
-          <Marquee speed={10} direction="left">
+          <Marquee speed={5} direction="left">
             <img src={buttons} height="550px" alt="visual" />
           </Marquee>
         </div>
@@ -529,7 +531,7 @@ const BillEasyVisual = () => {
             target="_blank"
             rel="noreferrer"
             href="https://morning-jackrabbit-815.notion.site/Interface-design-b0ea7648c51243dd9ff5f3c6500742b8"
-            className="tracking-3 md:mt-20 mt-[80px] mb-[136] pl-6 md:pl-0 md:mb-20 flex items-center text-sm md:text-base uppercase font-lato-bold"
+            className="tracking-3 md:mt-20 mt-[88px] mb-[136] pl-6 md:pl-0 md:mb-20 flex items-center text-sm md:text-base uppercase font-lato-bold"
           >
             <ArrowRightCircle
               width={30}
@@ -590,14 +592,23 @@ const BillEasyVisual = () => {
       {/* Learnings and Retrospect */}
       <div class="font-lato h-full flex w-screen flex-col pt-10 md:mb-10 mb-[124px]">
         <div className=" md:px-24 px-7 mb-10 text-justify">
+          <div class=" text-2xl text-start  md:text-4xl md:my-0 mt-8 tracking-1.5 font-lato font-normal flex  items-end">
+            <img
+              src={InLotusPosition}
+              className=" inline-block mr-2 w-9 "
+              alt=""
+            />{" "}
+            Learnings and <br className="" />{" "}
+            <span class="hidden md:block">Retrospect</span>
+          </div>
           <div
             style={{
               marginBottom: "30px",
             }}
-            class=" text-2xl text-start md:text-4xl md:my-0 my-8 tracking-1.5 font-lato font-normal flex items-center"
+            class="text-2xl md:text-4xl mb-8 font-lato font-normal md:hidden "
           >
-            <img src={InLotusPosition} className="mr-2 w-9 " alt="" /> Learnings
-            and Retrospect
+            {" "}
+            Retrospect
           </div>
           <div className="flex font-lato tracking-0.5 leading-7 font-normal md:flex-row flex-col">
             <div className="md:pr-10 md:pb-0 pb-5 flex flex-col ">

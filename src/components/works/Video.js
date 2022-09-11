@@ -43,6 +43,7 @@ const Video = ({ work, largeEnter, imageEnter }) => {
         className="md:h-screen relative w-full bg-brand-white object-contain md:object-cover  bg-cover bg-no-repeat bg-center"
         ref={video}
         loop
+        controls
       >
         <source
           onLoad={() => console.log("l")}
