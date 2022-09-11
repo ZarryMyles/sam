@@ -148,7 +148,7 @@ const HappilyEver = () => {
         imageEnter={imageEnter}
       />
       {/* project brief */}
-      <div class=" px-5 pt-[105px] md:py-10 md:px-24 md:my-20 flex flex-wrap justify-between  ">
+      <div class=" px-5 pt-[105px] md:py-10 md:px-24 md:my-20 hidden md:flex  justify-between  ">
         <div className="  my-5    ">
           <div class=" text-base md:text-xl  font-lato flex items-center md:-ml-1">
             <img src={Clipboard} className="mr-2 w-5 " alt="" /> Project Type
@@ -174,8 +174,39 @@ const HappilyEver = () => {
           <div className="font-lato  mt-2">Three</div>
         </div>
       </div>
+      {/* phone brief */}
+      <div class=" px-5 pt-[105px] md:py-10 md:px-24 md:my-20 flex md:hidden  justify-between  ">
+        <div>
+          <div className="  my-5    ">
+            <div class=" text-base md:text-xl  font-lato flex items-center md:-ml-1">
+              <img src={Clipboard} className="mr-2 w-5 " alt="" /> Project Type
+            </div>
+            <div className="font-lato  mt-2">Proof of concept</div>
+          </div>
+          <div className=" w-max md:w-auto my-5   ">
+            <div class=" text-base md:text-xl  font-lato flex items-center md:-ml-1">
+              <img src={TippingHand} className="mr-2 w-5 " alt="" /> My Role
+            </div>
+            <div className="font-lato  mt-2">Product Design Intern</div>
+          </div>
+        </div>
+        <div className="w-max flex flex-col items-start">
+          <div className=" w-full  md:w-auto my-5  md:pl-0">
+            <div class=" text-base md:text-xl  font-lato flex items-center md:-ml-2">
+              <img src={Calendar} className="mr-2 w-5 " alt="" /> Timeline
+            </div>
+            <div className="font-lato  mt-2">1 month</div>
+          </div>
+          <div className=" w-max md:w-auto  md:pl-0">
+            <div class=" text-base md:text-xl  font-lato flex items-center md:-ml-1">
+              <img src={Fist} className="mr-2 w-5 " alt="" /> Design Team
+            </div>
+            <div className="font-lato  mt-2">Three</div>
+          </div>
+        </div>
+      </div>
       {/* project about */}
-      <div class=" px-7 py-10 md:px-24 md:mb-36 md:pr-0 grid grid-cols-12  h-full">
+      <div class=" px-5 py-10 md:px-24 md:mb-36 md:pr-0 grid grid-cols-12  h-full">
         <WorkHeading text={"About"} />
         <div class="col-span-12 md:col-span-6 h-full flex flex-col    ">
           <div class="flex items-center">
@@ -202,7 +233,7 @@ const HappilyEver = () => {
         <div class="hidden md:block col-span-1"></div>
 
         <div class="col-span-12 md:col-span-5  flex flex-col items-center  justify-center md:pl-10 rounded-xl text-brand-white ">
-          <div className=" -md:mx-0 -mx-7 tracking-0.5 px-7 md:px-4 md:pr-24 md:rounded-l-lg flex flex-col justify-center md:mt-0 mt-8 bg-brand-darkGrey2 md:pl-14 py-14  ">
+          <div className=" -md:mx-0 -mx-7 tracking-0.5 px-5 md:px-4 md:pr-24 md:rounded-l-lg flex flex-col justify-center md:mt-0 mt-8 bg-brand-darkGrey2 md:pl-14 py-14  ">
             <div className=" mb-8">
               <div className=" mb-2 flex items-center">
                 <img src={Check} className="mr-2 w-5 " alt="" /> Results
@@ -228,7 +259,7 @@ const HappilyEver = () => {
         </div>
       </div>
       {/* purpose */}
-      <div className="px-7 md:p-0 md:py-0 py-[136px]">
+      <div className="px-5 md:p-0 md:py-0 py-[136px]">
         <div className="md:px-24 w-full">
           <WorkHeading text={"purpose"} />
         </div>
@@ -246,7 +277,7 @@ const HappilyEver = () => {
         </div>
       </div>
       {/* Challenge */}
-      <div className="px-7 md:py-0 py-10 bg-brand-darkGrey2 md:bg-brand-black text-brand-white md:px-24 md:pb-10">
+      <div className="px-5 md:py-0 py-10 bg-brand-darkGrey2 md:bg-brand-black text-brand-white md:px-24 md:pb-10">
         <WorkHeading text={"Challenge"} />
         <div class="flex items-center md:items-center md:flex-row flex-col font-lato ">
           <img src={one} alt="logo" className="w-2/3 md:hidden left-1/4" />
@@ -280,7 +311,7 @@ const HappilyEver = () => {
         </div>
       </div>
       {/* Research and Analyzing product */}
-      <div className="p-0 md:px-24 px-7 md:py-0 py-[136px] md:p-24 ">
+      <div className="p-0 md:px-24 px-5 md:py-0 py-[136px] md:p-24 ">
         <WorkHeading text={"Research"} />
         {/* Analyzing */}
         <div class="flex items-center md:items-start md:flex-row flex-col font-lato">
@@ -398,7 +429,7 @@ const HappilyEver = () => {
         </div>
       </div>
       {/* Competitive Analysis */}
-      <div className="px-7 py-0 pb-[136px] md:my-20 md:pb-20 md:p-20 ">
+      <div className="px-5 py-0 pb-[136px] md:my-20 md:pb-20 md:p-20 ">
         <div class="flex items-center md:items-center justify-between md:flex-row flex-col font-lato">
           <div className=" md:w-6/10 md:pr-4">
             <div class=" ">
@@ -436,7 +467,7 @@ const HappilyEver = () => {
         </div>
       </div>
       {/* Usability Testing */}
-      <div className="px-7  md:py-20 md:p-20">
+      <div className="px-5  md:py-20 md:p-20">
         <div class="flex items-center md:items-start md:flex-row flex-col font-lato">
           <div>
             <div class="md:pr-10">
@@ -479,13 +510,13 @@ const HappilyEver = () => {
                 style={{
                   marginBottom: "30px",
                 }}
-                class="  text-2xl px-7 md:px-0 md:text-4xl md:my-0 my-8 tracking-1.5 font-lato flex items-center"
+                class="  text-2xl px-5 md:px-0 md:text-4xl md:my-0 my-8 tracking-1.5 font-lato flex items-center"
               >
                 <img src={Ladder} className="mr-2 w-9 " alt="" />
                 Approach
               </div>
               <img src={four} alt="logo" className="w-screen  mt-6 md:hidden" />
-              <ul class="list-disc ml-5 px-7 md:px-0">
+              <ul class="list-disc ml-5 px-5 md:px-0">
                 {" "}
                 <li className=" mt-10 font-lato font-normal leading-7 tracking-0.5">
                   Through analysis of both competitive and usability tests
@@ -516,7 +547,7 @@ const HappilyEver = () => {
           <img
             src={four}
             alt="logo"
-            className="w-1/2 md:w-4/10 px-7 md:px-0 mt-8 hidden md:block"
+            className="w-1/2 md:w-4/10 px-5 md:px-0 mt-8 hidden md:block"
           />
         </div>
       </div>{" "}
@@ -653,7 +684,7 @@ const HappilyEver = () => {
         rel="noreferrer"
         style={{ color: "#424242" }}
         href="https://www.notion.so/Branding-752204234b2b42f09ccd93144504ac5a"
-        className="tracking-3 mt-20 px-7 md:px-24 mb-32 md:mb-40 flex items-center text-sm md:text-base uppercase font-lato-bold"
+        className="tracking-3 mt-20 px-5 md:px-24 mb-32 md:mb-40 flex items-center text-sm md:text-base uppercase font-lato-bold"
       >
         <ArrowRightCircle
           width={30}

@@ -2,14 +2,10 @@ import React from "react";
 const Hero = ({ work, next, largeEnter, imageEnter }) => {
   return (
     <div className=" bg-brand-black  h-screen w-full relative overflow-clip flex leading-0  ">
-      <div
-        class="  md:w-[19.5%] bg-brand-black   z-20 relative  h-full hidden md:flex flex-col   px-5 md:px-24"
-        // style={{
-        //   background: work.bgColor,
-        // }}
-      >
+      {/* desktop  */}
+      <div class="  md:w-[19.5%] bg-brand-black   z-20 relative  h-full hidden md:flex flex-col   px-5 md:px-24">
         <div class="flex  h-full    flex-col w-full justify-center pt-20  ">
-          <div class="flex items-center mb-6 md:mb-12 w-max">
+          <div class="flex items-center   w-max">
             <div
               style={{
                 height: "1px",
@@ -28,7 +24,7 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
             style={{
               fontSize: "64px",
             }}
-            class="  font-semibold tracking-3   font-lato text-brand-white md:w-max"
+            class="  font-semibold tracking-3  my-[48px] font-lato text-brand-white md:w-max"
           >
             {work.title}
           </div>
@@ -54,7 +50,7 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
                 fontSize: "24px",
               }}
               href={work.link}
-              class=" w-max md:text-3xl font-lato-med my-6 text-white tracking-1.5"
+              class=" w-max md:text-3xl font-lato-med  text-white tracking-1.5"
             >
               Next Project
             </a>
@@ -86,7 +82,7 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
       )}
       {next && (
         <div class="block z-20 text-4xl md:hidden absolute px-5 left-0 top-0 pt-[230px]  text-brand-white w-full h-full">
-          <div class="flex items-center  mb-6 col-span-12">
+          <div class="flex items-center   col-span-12">
             <div
               style={{
                 height: "1px",
@@ -103,17 +99,19 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
               {work.domain}
             </div>
           </div>
-          <div className=" text-[32px] text-brand-white my-[24px]">
+          <div className=" text-[32px] text-brand-white mt-[24px] mb-[20px] ">
             {work.title}
           </div>
-          <a
-            onMouseEnter={largeEnter}
-            onMouseLeave={imageEnter}
-            href={work.link}
-            class=" w-max text-[20px] font-lato-med  text-brand-white tracking-1"
-          >
-            Next Project
-          </a>
+          <div>
+            <a
+              onMouseEnter={largeEnter}
+              onMouseLeave={imageEnter}
+              href={work.link}
+              className="w-max text-brand-white tracking-1 text-[20px] font-lato-med "
+            >
+              Next Project
+            </a>
+          </div>
         </div>
       )}
       {!work.gif ? (

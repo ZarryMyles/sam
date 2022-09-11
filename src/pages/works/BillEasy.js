@@ -153,8 +153,9 @@ const BillEasy = () => {
     <div className="w-full overflow-clip">
       {loading && (
         <div class="fixed w-full h-full z-50">
-          {" "}
-          <Loader />{" "}
+          <br />
+          {/* <Loader />  */}
+          <br />
         </div>
       )}
       <div
@@ -183,7 +184,7 @@ const BillEasy = () => {
         />
 
         {/* project brief */}
-        <div class=" px-5 pt-[105px] md:py-10 md:px-24 md:my-20 flex flex-wrap justify-between  ">
+        <div class=" px-5 pt-[105px] md:py-10 md:px-24 md:my-20 hidden md:flex flex-wrap justify-between  ">
           <div className="  my-5    ">
             <div class=" text-base md:text-xl  font-lato flex items-center md:-ml-1">
               <img src={Clipboard} className="mr-2 w-5 " alt="" /> Project Type
@@ -196,17 +197,49 @@ const BillEasy = () => {
             </div>
             <div className="font-lato  mt-2">3 months</div>
           </div>
-          <div className=" w-1/2 md:w-auto my-5   ">
+          <div className=" w-max md:w-auto my-5   ">
             <div class=" text-base md:text-xl  font-lato flex items-center md:-ml-1">
               <img src={TippingHand} className="mr-2 w-5 " alt="" /> My Role
             </div>
             <div className="font-lato  mt-2">UX & UI Design Intern</div>
           </div>
-          <div className=" w-1/2 md:w-auto my-5 pl-7 md:pl-0">
+          <div className=" w-max md:w-auto my-5  md:pl-0">
             <div class=" text-base md:text-xl  font-lato flex items-center md:-ml-1">
               <img src={Fist} className="mr-2 w-5 " alt="" /> Design Team
             </div>
             <div className="font-lato  mt-2">Myself</div>
+          </div>
+        </div>
+        {/* phone brief */}
+        <div class=" px-5 pt-[105px] md:py-10 md:px-24 md:my-20 flex md:hidden  justify-between  ">
+          <div>
+            <div className="  my-5    ">
+              <div class=" text-base md:text-xl  font-lato flex items-center md:-ml-1">
+                <img src={Clipboard} className="mr-2 w-5 " alt="" /> Project
+                Type
+              </div>
+              <div className="font-lato  mt-2">In-house, Fin-Tech</div>
+            </div>
+            <div className=" w-max md:w-auto my-5   ">
+              <div class=" text-base md:text-xl  font-lato flex items-center md:-ml-1">
+                <img src={TippingHand} className="mr-2 w-5 " alt="" /> My Role
+              </div>
+              <div className="font-lato  mt-2">UX & UI Design Intern</div>
+            </div>
+          </div>
+          <div className="w-max flex flex-col items-start">
+            <div className=" w-full  md:w-auto my-5  md:pl-0">
+              <div class=" text-base md:text-xl  font-lato flex items-center md:-ml-2">
+                <img src={Calendar} className="mr-2 w-5 " alt="" /> Timeline
+              </div>
+              <div className="font-lato  mt-2">3 months</div>
+            </div>
+            <div className=" w-max md:w-auto  md:pl-0">
+              <div class=" text-base md:text-xl  font-lato flex items-center md:-ml-1">
+                <img src={Fist} className="mr-2 w-5 " alt="" /> Design Team
+              </div>
+              <div className="font-lato  mt-2">Myself</div>
+            </div>
           </div>
         </div>
         {/* project concept */}
@@ -517,7 +550,7 @@ const BillEasy = () => {
             </div>
           </div>
         </div>
-        <div class=" mt-7 flex items-center justify-center">
+        <div class=" mt-7 flex items-center md:hidden justify-center">
           <img className="w-full object-center" src={insightsImg} alt="" />
         </div>
         {/* usability testing */}
@@ -813,7 +846,7 @@ const BillEasy = () => {
           </div>
           {/* mobile vertical scroll thingy */}
           <div class="md:px-5 block md:hidden relative mt-10 mb-[124px] md:my-0  ">
-            <Marquee speed={10} direction="left">
+            <Marquee speed={5} direction="left">
               <img src={collage} className="  md:w-full" alt="" />
               <img src={collage} className="  md:w-full" alt="" />
               <img src={collage} className="  md:w-full" alt="" />

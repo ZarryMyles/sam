@@ -120,11 +120,11 @@ const BillEasyVisual = () => {
       />
       <WorkHero work={work} largeEnter={largeEnter} imageEnter={imageEnter} />
       {/* Process */}
-      <div class="font-lato px-7 pt-32  md:px-24 w-full h-full">
+      <div class="font-lato px-5 pt-32  md:px-24 w-full h-full">
         <WorkHeading text={"Process"} />
       </div>
       {/* Design Principles */}
-      <div class="font-lato h-full flex w-full flex-col md:px-24 px-7">
+      <div class="font-lato h-full flex w-full flex-col md:px-24 px-5">
         <div class="  text-2xl md:text-4xl md:mb-[30px] mb-6 md:my-0 tracking-1.5 font-lato flex items-center">
           <img src={MagicWand} className="mr-2 w-9 " alt="" /> Design principles
         </div>
@@ -136,7 +136,7 @@ const BillEasyVisual = () => {
             <span style={{ color: "#6AC296" }}>user pain points.</span>
           </li>
         </ul>
-        <div className="md:px-7 md:tracking-normal tracking-widest flex md:flex-row flex-col font-lato font-normal text-brand-black w-full md:auto md:text-base text-base justify-between md:items-center">
+        <div className="md:px-5 md:tracking-normal tracking-widest flex md:flex-row flex-col font-lato font-normal text-brand-black w-full md:auto md:text-base text-base justify-between md:items-center">
           <div className="px-5 py-6 md:py-5 md:m-2 mb-3 md:my-0 bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
             1. Intuitive
           </div>
@@ -152,7 +152,7 @@ const BillEasyVisual = () => {
         </div>
       </div>
       {/* Use Cases */}
-      <div class="font-lato h-full flex w-full flex-col md:px-24 px-7 pt-32">
+      <div class="font-lato h-full flex w-full flex-col md:px-24 px-5 pt-32">
         <div
           style={{
             marginBottom: "30px",
@@ -161,7 +161,7 @@ const BillEasyVisual = () => {
         >
           <img src={SmallBlueDiamond} className="mr-2 w-9 " alt="" /> Use Cases
         </div>
-        <div className="md:px-7 md:tracking-normal tracking-widest  flex md:flex-row flex-col font-lato font-normal text-brand-black w-full md:auto md:text-base text-base justify-between md:items-center">
+        <div className="md:px-5 md:tracking-normal tracking-widest  flex md:flex-row flex-col font-lato font-normal text-brand-black w-full md:auto md:text-base text-base justify-between md:items-center">
           <div className="px-5 py-6 flex justify-start items-center md:py-5 md:m-2 mb-3 md:my-0 bg-brand-darkGrey2 text-brand-white rounded-lg w-full md:w-2/12 ">
             <img src={invoiceGen} width="30px" alt="page" className="mr-2" />{" "}
             Invoice Generation
@@ -187,7 +187,7 @@ const BillEasyVisual = () => {
       </div>
       {/* Ideas to life */}
       <div class="font-lato h-full flex w-full flex-col md:px-24 px-0 pt-0 md:mt-0 mt-[136px] md:pt-32">
-        <div className="  text-2xl md:text-4xl md:my-0 md:mb-[30px] my-8 md:px-0 px-7 tracking-widest font-lato-light font-bold flex items-center">
+        <div className="  text-2xl md:text-4xl md:my-0 md:mb-[30px] my-8 md:px-0 px-5 tracking-widest font-lato-light font-bold flex items-center">
           <img src={FramedPicture} className="mr-2 w-9 " alt="" /> Bringing
           Ideas To Life
         </div>
@@ -210,12 +210,12 @@ const BillEasyVisual = () => {
           style={{
             marginBottom: "30px",
           }}
-          class="  text-2xl md:px-24 px-7 md:text-4xl md:my-0 my-8 md:mb-0 mb-6 tracking-1.5 font-lato   flex items-center"
+          class="  text-2xl md:px-24 px-5 md:text-4xl md:my-0 my-8 md:mb-0 mb-6 tracking-1.5 font-lato   flex items-center"
         >
           <img src={Eyes} className="mr-2 w-9 " alt="" /> Visual Design
         </div>
         <div>
-          <div className="text-base mb-5 md:tracking-normal tracking-0.5 font-lato font-normal md:my-0 text-justify md:px-24 px-7">
+          <div className="text-base mb-5 md:tracking-normal tracking-0.5 font-lato font-normal md:my-0 text-justify md:px-24 px-5">
             <span className="text-lg">•</span> Due to limited time frame, I
             moved right into creating rough paper wireframes. During this phase
             of prototyping, We closely{" "}
@@ -226,19 +226,19 @@ const BillEasyVisual = () => {
             <span style={{ color: "#6AC296" }}>2-3 rounds of iteration</span> ,
             we were able to finalize the UI Designs.
           </div>
-          <div className="text-base font-lato md:tracking-normal tracking-0.5 font-semibold md:hidden px-7 mt-12 mb-10">
+          <div className="text-base font-lato md:tracking-normal tracking-0.5 font-semibold md:hidden px-5 mt-12 mb-10">
             <span className="text-lg">•</span> Features
           </div>
           {/* Invoice Storage */}
           <div className="flex md:flex-row md:tracking-normal tracking-0.5 font-lato font-normal  md:mt-24 flex-col">
-            <div className=" md:hidden  px-7 text-base">1. Invoice Storage</div>
+            <div className=" md:hidden  px-5 text-base">1. Invoice Storage</div>
             <img
               src={visual}
               className="md:hidden my-4"
               width="100%"
               alt="visual"
             />
-            <div className="md:w-3/5 md:px-24 px-7 md:pr-10 md:pb-0 pb-5 flex flex-col">
+            <div className="md:w-3/5 md:px-24 px-5 md:pr-10 md:pb-0 pb-5 flex flex-col">
               <div className=" md:py-5">
                 <span className="md:block hidden">
                   1. Invoice Storage <br />
@@ -272,10 +272,10 @@ const BillEasyVisual = () => {
           </div>
           {/* Invoice Generation */}
           <div className="flex flex-col ">
-            <div className="pt-10 mt-[130px] md:mt-32 font-lato font-normal md:pb-0 pb-4 md:px-24 px-7 md:tracking-normal tracking-0.5 md:py-5">
+            <div className="pt-10 mt-[130px] md:mt-32 font-lato font-normal md:pb-0 pb-4 md:px-24 px-5 md:tracking-normal tracking-0.5 md:py-5">
               2. Invoice Generation
             </div>
-            <div className="flex md:flex-row w-full leading-7 overflow-hidden md:mt-5 md:px-24 px-7 pt-5 flex-col bg-brand-darkGrey2 items-center">
+            <div className="flex md:flex-row w-full leading-7 overflow-hidden md:mt-5 md:px-24 px-5 pt-5 flex-col bg-brand-darkGrey2 items-center">
               {" "}
               <div className="md:w-7/10 md:pr-10 md:pb-0  flex flex-col ">
                 <ul className="font-lato list-disc list-inside text-justify  md:py-5 py-3">
@@ -318,7 +318,7 @@ const BillEasyVisual = () => {
                 alt="visual"
                 className="md:my-6 md:hidden "
               />
-              <div className="md:w-7/10 md:px-24 px-7 tracking-0.5 leading-7 md:pr-10 md:pb-0 text-justify pb-5 flex flex-col ">
+              <div className="md:w-7/10 md:px-24 px-5 tracking-0.5 leading-7 md:pr-10 md:pb-0 text-justify pb-5 flex flex-col ">
                 <div className="font-lato font-normal md:py-5 py-3">
                   <span className="hidden md:block">
                     2. Invoice Generation
@@ -357,13 +357,13 @@ const BillEasyVisual = () => {
             </div>
           </div>
           {/* Invoice Distribution and Report Tracking */}
-          <div className="flex flex-col md:px-24 mt-24 text-justify bg-brand-darkGrey2 text-white">
+          <div className="flex flex-col md:px-24 mt-24 text-justify pt-[90px] pb-[120px] bg-brand-darkGrey2 text-white">
             <div className="flex md:flex-row flex-col md:mt-24 md:mb-0 ">
-              <div className="pt-10 md:hidden md:px-0 px-7 text-base font-lato font-normal pb-4 tracking-0.5">
+              <div className="  md:hidden md:px-0 px-5 text-base font-lato font-normal pb-4 tracking-0.5">
                 3. Invoice Distribution
               </div>
               <img src={invDist} width="100%" alt="visual" />
-              <div className="md:w-1/2 md:ml-10 md:px-0 px-7 md:pr-10 md:pb-0 pb-5 flex flex-col">
+              <div className="md:w-1/2 md:ml-10 md:px-0 px-5 md:pr-10 md:pb-0 pb-5 flex flex-col">
                 <div className="font-lato font-normal md:py-5 md:pb-0 pb-[136px] md:pt-0 pt-5">
                   <span className="md:block hidden">
                     3. Invoice Distribution
@@ -377,11 +377,11 @@ const BillEasyVisual = () => {
             </div>
             {/* Mobile */}
             <div className="flex md:hidden mt-10 flex-col">
-              <div className="font-lato px-7 pb-4 tracking-0.5 font-normal ">
+              <div className="font-lato px-5 pb-4 tracking-0.5 font-normal ">
                 4. Report Tracking
               </div>
               <img src={report} width="100%" alt="visual" />
-              <div className="pb-10 px-7 tracking-0.5 leading-7 text-justify flex flex-col pt-5">
+              <div className="pb-10 px-5 tracking-0.5 leading-7 text-justify flex flex-col pt-5">
                 <div className="font-lato font-normal py-3">
                   a.{" "}
                   <span className="font-lato font-normal ">
@@ -445,13 +445,13 @@ const BillEasyVisual = () => {
         </div>
       </div>
       {/* Style Guide */}
-      <div class="font-lato h-full flex w-screen flex-col md:pt-10 md:mt-0 mt-[136px]">
-        <div className=" md:px-24 px-7 mb-10 text-justify">
+      <div class="font-lato h-full flex w-screen flex-col md:pt-10 md:mt-[160px] mt-[136px]">
+        <div className=" md:px-24 px-5 mb-10 text-justify">
           <div
             style={{
               marginBottom: "30px",
             }}
-            class=" text-2xl md:text-4xl md:my-0 my-8 tracking-widest leading-7 font-lato font-normal flex items-center"
+            class=" text-2xl md:text-4xl md:my-0 mb-8 tracking-widest leading-7 font-lato font-normal flex items-center"
           >
             <img src={GuideDog} className="mr-2 w-9 " alt="" /> Style Guide
           </div>
@@ -492,13 +492,13 @@ const BillEasyVisual = () => {
             style={{
               marginBottom: "30px",
             }}
-            class=" text-2xl md:px-0 px-7 md:text-4xl md:my-0 my-8 tracking-1.5 leading-7 font-lato font-normal flex items-center"
+            class=" text-2xl md:px-0 px-5 md:text-4xl md:my-0 my-8 tracking-1.5 leading-7 font-lato font-normal flex items-center"
           >
             <img src={PartyingFace} className="mr-2 w-9 " alt="" /> Result
             Matrix
           </div>
           <div className="font-lato  font-normal tracking-0.5 leading-7 flex md:flex-row flex-col justify-between">
-            <div className="md:w-1/3 md:px-0 px-7 md:pr-10 md:pb-0 pb-5 flex flex-col ">
+            <div className="md:w-1/3 md:px-0 px-5 md:pr-10 md:pb-0 pb-5 flex flex-col ">
               <div className="mb-5">
                 After developing the product we estimated the following results:
                 <br />
@@ -546,7 +546,7 @@ const BillEasyVisual = () => {
       </div>
       {/* Possibilities */}
       <div class="font-lato h-full flex w-screen flex-col pt-10">
-        <div className=" md:px-24 px-7 mb-10 text-justify">
+        <div className=" md:px-24 px-5 mb-10 text-justify">
           <div
             style={{
               marginBottom: "30px",
@@ -591,7 +591,7 @@ const BillEasyVisual = () => {
       </div>
       {/* Learnings and Retrospect */}
       <div class="font-lato h-full flex w-screen flex-col pt-10 md:mb-10 mb-[124px]">
-        <div className=" md:px-24 px-7 mb-10 text-justify">
+        <div className=" md:px-24 px-5 mb-10 text-justify">
           <div class=" text-2xl text-start  md:text-4xl md:my-0 mt-8 tracking-1.5 font-lato font-normal flex  items-end">
             <img
               src={InLotusPosition}

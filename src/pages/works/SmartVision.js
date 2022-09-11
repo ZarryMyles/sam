@@ -151,7 +151,7 @@ const SmartVision = () => {
         work={work}
       />
       {/* project brief */}
-      <div class=" px-5 pt-[105px] md:py-10 md:px-24 md:my-20 flex flex-wrap justify-between  ">
+      <div class=" px-5 pt-[105px] md:py-10 md:px-24 md:my-20 hidden md:flex  justify-between  ">
         <div className="  my-5    ">
           <div class=" text-base md:text-xl  font-lato flex items-center md:-ml-1">
             <img src={Clipboard} className="mr-2 w-5 " alt="" /> Project Type
@@ -175,6 +175,37 @@ const SmartVision = () => {
             <img src={Fist} className="mr-2 w-5 " alt="" /> Design Team
           </div>
           <div className="font-lato  mt-2">Myself</div>
+        </div>
+      </div>
+      {/* phone brief */}
+      <div class=" px-5 pt-[105px] md:py-10 md:px-24 md:my-20 flex md:hidden  justify-between  ">
+        <div>
+          <div className="  my-5    ">
+            <div class=" text-base md:text-xl  font-lato flex items-center md:-ml-1">
+              <img src={Clipboard} className="mr-2 w-5 " alt="" /> Project Type
+            </div>
+            <div className="font-lato  mt-2">Personal Project</div>
+          </div>
+          <div className=" w-max md:w-auto my-5   ">
+            <div class=" text-base md:text-xl  font-lato flex items-center md:-ml-1">
+              <img src={TippingHand} className="mr-2 w-5 " alt="" /> My Role
+            </div>
+            <div className="font-lato  mt-2">UX & UI Designer</div>
+          </div>
+        </div>
+        <div className="w-max flex flex-col items-start">
+          <div className=" w-full  md:w-auto my-5  md:pl-0">
+            <div class=" text-base md:text-xl  font-lato flex items-center md:-ml-2">
+              <img src={Calendar} className="mr-2 w-5 " alt="" /> Timeline
+            </div>
+            <div className="font-lato  mt-2">3 months</div>
+          </div>
+          <div className=" w-max md:w-auto  md:pl-0">
+            <div class=" text-base md:text-xl  font-lato flex items-center md:-ml-1">
+              <img src={Fist} className="mr-2 w-5 " alt="" /> Design Team
+            </div>
+            <div className="font-lato  mt-2">Myself</div>
+          </div>
         </div>
       </div>
       {/* project concept */}
@@ -573,7 +604,7 @@ const SmartVision = () => {
         </div>
       </div>
       {/* features */}
-      <div class="bg-brand-black pt-[136px] md:pt-24  h-full">
+      <div class="bg-brand-black pt-[136px] md:pt-24 hidden md:block h-full">
         <div className="px-5 md:px-24">
           <WorkHeading text={"solutions"} />
         </div>
@@ -587,9 +618,6 @@ const SmartVision = () => {
                 <div className="mt-130 flex  md:pl-24">
                   <div className="">
                     <div className="my-8">1. Screen recorder</div>
-                    <div class="md:col-span-5 col-span-12 px-4 flex md:hidden items-center justify-center">
-                      <img src={Phone1} className="w-full" alt="" />
-                    </div>
                     <ul class="list-disc ml-4">
                       <li className="my-9">
                         Screen readers speak what is on the screen as the finger
@@ -633,9 +661,6 @@ const SmartVision = () => {
             <div class="col-span-12 md:col-span-7 flex    justify-end text-brand-white px-3 md:pr-24 pt-10 md:pt-0  md:mt-24">
               <div>
                 <div className="">2. Image description</div>
-                <div class="md:col-span-5 px-4 col-span-12 flex md:hidden items-center my-4 justify-center">
-                  <img src={Phone2} className="w-full" alt="" />
-                </div>
                 <ul class="list-disc ml-4">
                   <li className="my-9">
                     Legally blind individuals can{" "}
@@ -664,9 +689,6 @@ const SmartVision = () => {
               <div class="col-span-12 md:col-span-7 flex md:mb-20   md:pl-24 text-white md:mt-32">
                 <div>
                   <div className="my-8">3. Speech Recognition</div>
-                  <div class="md:col-span-5 px-4 col-span-12 flex md:hidden my-4 items-center justify-center">
-                    <img src={Phone3} className="w-full" alt="" />
-                  </div>
                   <ul class="list-disc ml-4">
                     <li className="mt-9">
                       It enables a program to process{" "}
@@ -707,9 +729,6 @@ const SmartVision = () => {
             <div class="col-span-12 md:col-span-7 flex   justify-end text-white px-3 md:pr-24  md:mt-96">
               <div>
                 <div className="my-8">4. OCR</div>
-                <div class="md:col-span-5 px-4 col-span-12 flex md:hidden my-4 items-center justify-center">
-                  <img src={Phone4} className="w-full" alt="" />
-                </div>
                 <ul class="list-disc ml-4">
                   <li className="my-9">
                     <span style={{ color: "#7CCBCD" }}>
@@ -730,9 +749,6 @@ const SmartVision = () => {
             <div class="col-span-12 md:col-span-7 flex   text-white px-3 md:pl-24 md:mt-36 ">
               <div>
                 <div className="">5. Magnifier</div>
-                <div class="md:col-span-5 px-4 col-span-12 my-4 flex md:hidden items-center justify-center">
-                  <img src={Phone5} className="w-full" alt="" />
-                </div>
                 <ul class="list-disc ml-4">
                   <li className="my-9">
                     The user will not always be pleased with the screen readers
@@ -775,12 +791,9 @@ const SmartVision = () => {
                 alt=""
               />
             </div>
-            <div class="col-span-12 md:col-span-6 flex   justify-end text-white px-3 md:pr-28 my-5">
+            <div class="col-span-12 md:col-span-6 flex  justify-end text-white px-3 md:pr-28 my-14">
               <div>
                 <div className="">6. Braille keyboard</div>
-                <div class="md:col-span-5 scale-110 px-0 my-4 col-span-12 flex md:hidden items-center justify-center">
-                  <img src={Phone6} className="w-full" alt="" />
-                </div>
                 <ul class="list-disc ml-4">
                   <li className="my-9">
                     Braille keyboard that can be{" "}
@@ -801,8 +814,138 @@ const SmartVision = () => {
           </div>
         </div>
       </div>
+      {/* features phone */}
+      <div class="bg-brand-black pt-[136px] md:hidden md:pt-24  h-full">
+        <div className="px-5 md:px-24">
+          <WorkHeading text={"solutions"} />
+        </div>
+        <div class="text-4xl mb-10">📐 Features</div>
+        {/* 1 */}
+        <div class="px-5 ">
+          <div className="mb-4">1. Screen recorder</div>
+          <div class="  px-4 flex items-center w-full mb-6 justify-center">
+            <img src={Phone1} className="w-full" alt="" />
+          </div>
+          <ul class="list-disc ml-4">
+            <li className="my-9">
+              Screen readers speak what is on the screen as the finger explores.{" "}
+              <br /> They are simple to understand and control.
+            </li>
+            <li className="my-9">
+              At any moment,{" "}
+              <span style={{ color: "#7CCBCD" }}>
+                double-tap the text to activate the screen reader.
+              </span>
+            </li>
+          </ul>
+        </div>
+        {/* 2 */}
+        <div class="px-5 mt-[136px] bg-brand-darkGrey2 py-10 ">
+          <div className="mb-4">2. Image description</div>
+          <div class="  px-4 flex items-center w-full mb-6 justify-center">
+            <img src={Phone2} className="w-full" alt="" />
+          </div>
+          <ul class="list-disc ml-4">
+            <li className="my-9">
+              Legally blind individuals can{" "}
+              <span style={{ color: "#7CCBCD" }}>
+                understand the texts better than <br />
+                images.
+              </span>{" "}
+              Screen readers can't interpret images.
+            </li>
+            <li className="my-9">
+              Hence, Image descriptions are used to{" "}
+              <span style={{ color: "#7CCBCD" }}>
+                describe Information from <br />
+                images.
+              </span>{" "}
+              They can also generate{" "}
+              <span style={{ color: "#7CCBCD" }}>alt text automatically</span>
+            </li>
+          </ul>
+        </div>
+        {/* 3 */}
+        <div class="px-5 mt-[136px]   ">
+          <div className="mb-4">3. Speech Recognition</div>
+          <div class="  px-4 flex items-center w-full mb-6 justify-center">
+            <img src={Phone3} className="w-full" alt="" />
+          </div>
+          <ul class="list-disc ml-4">
+            <li className="mt-9">
+              It enables a program to process{" "}
+              <span style={{ color: "#7CCBCD" }}>
+                human speech to readable text.
+              </span>
+            </li>
+          </ul>
+        </div>
+        {/* 4 */}
+        <div class="px-5 mt-[136px] bg-brand-darkGrey2 py-10 ">
+          <div className="mb-4">4. OCR</div>
+          <div class="  px-4 flex items-center w-full mb-6 justify-center">
+            <img src={Phone4} className="w-full" alt="" />
+          </div>
+          <ul class="list-disc ml-4">
+            <li className="my-9">
+              <span style={{ color: "#7CCBCD" }}>
+                Optical Character Recognition
+              </span>{" "}
+              is the technology that detects{" "}
+              <span style={{ color: "#7CCBCD" }}>
+                text <br /> inside digital pictures{" "}
+              </span>
+              whether typed or handwritten
+            </li>
+          </ul>
+        </div>
+        {/* 5*/}
+        <div class="px-5 mt-[136px]  ">
+          <div className="mb-4">5. Magnifier</div>
+          <div class="  px-4 flex items-center w-full mb-6 justify-center">
+            <img src={Phone5} className="w-full" alt="" />
+          </div>
+          <ul class="list-disc ml-4">
+            <li className="my-9">
+              The user will not always be pleased with the screen readers and{" "}
+              <br /> their{" "}
+              <span style={{ color: "#7CCBCD" }}>
+                privacy may be compromised
+              </span>
+            </li>
+            <li className="my-9">
+              The magnifier allows the user to have a closer look at the text or{" "}
+              <br />
+              image while{" "}
+              <span style={{ color: "#7CCBCD" }}>
+                respecting their privacy.
+              </span>
+            </li>
+          </ul>
+        </div>
+        {/* 6*/}
+        <div class="px-5 mt-[136px]   ">
+          <div className="mb-4">6. Braille keyboard</div>
+          <div class="  px-4 flex items-center w-full mb-6 justify-center">
+            <img src={Phone6} className="w-full" alt="" />
+          </div>
+          <ul class="list-disc ml-4">
+            <li className="my-9">
+              Braille keyboard that can be{" "}
+              <span style={{ color: "#7CCBCD" }}>
+                calibrated to human touch.
+              </span>{" "}
+              Private <br /> and Alternative option to speech recognition.
+            </li>
+            <li class="my-9">
+              Prerequisite : A person must be{" "}
+              <span style={{ color: "#7CCBCD" }}>familiar with braille.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
       {/* ui guide system */}
-      <div style={{}} class="px-5 md:px-24 h-full pt-140 md:mt-0 mt-[100px]">
+      <div style={{}} class="px-5 md:px-24 h-full pt-[130px]  ">
         <div class="flex items-center  text-2xl md:text-4xl my-8 tracking-1.5 font-lato ">
           <img src={GuideDog} alt="" class="w-9 mr-2" /> UI guide system
         </div>

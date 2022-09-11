@@ -38,7 +38,7 @@ const Video = ({ work, largeEnter, imageEnter }) => {
       <video
         onClick={() => {
           // toggleOverlay();
-          handleVideo();
+          // handleVideo();
         }}
         className="md:h-screen relative w-full bg-brand-white object-contain md:object-cover  bg-cover bg-no-repeat bg-center"
         ref={video}
@@ -53,8 +53,9 @@ const Video = ({ work, largeEnter, imageEnter }) => {
       </video>
       <div
         onClick={() => {
-          handleVideo();
-          // setShowOverlay(false);
+          // handleVideo();
+          video.current.play();
+          setShowOverlay(false);
         }}
         class={`absolute bg-black  transition-all duration-300 w-full h-full top-0 left-0 ${
           !showOverlay ? " hidden" : "opacity-50"
