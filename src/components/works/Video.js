@@ -44,7 +44,7 @@ const Video = ({ work, largeEnter, imageEnter }) => {
         controls
       >
         <source
-          onLoad={() => console.log("l")}
+          // onLoad={() => console.log("l")}
           src={work.video2}
           type="video/mp4"
         />

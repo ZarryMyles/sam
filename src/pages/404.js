@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useTitle } from "../hooks/useTitle";
 import { Navbar } from "../components";
 const Error = () => {
-  useTitle("404");
+  useTitle("page not found");
   const [mousePos, setMousePos] = useState({
     x: 0,
     y: 0,

@@ -11,7 +11,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
       onMouseLeave={imageEnter}
     >
       <div class="  z-20 relative  md:h-full md:mt-0   md:py-52 w-full ">
-        <div
+        <h1
           class="text-3xl md:text-5xl font-thin mt-60  md:mt-20 w-9/10  md:w-7/10 font-lato-light-italic landing-page-text  "
           onMouseEnter={largeEnter}
           onMouseLeave={imageEnter}
@@ -24,7 +24,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
           <br />I work with designs driven by{" "}
           <span class="font-lora-italic">purpose</span> that reaches{" "}
           <span class=" font-lora-italic mr-1">beyond modernity.</span>
-        </div>
+        </h1>
         <div
           style={{
             // width: "520px",
