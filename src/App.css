@@ -2,13 +2,6 @@
   cursor: none;
 }
 
-/* Del this before final deployment */
-@media (max-width: 767px) {
-  * {
-    cursor: auto;
-  }
-}
-
 .cursor {
   background-color: #ffc7d1;
   height: 20px;

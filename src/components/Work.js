@@ -71,41 +71,6 @@ const works = [
 const LandingSection = ({ imageEnter, largeEnter }) => {
   const [activeWork, setActiveWork] = useState(works[0]);
 
-  const sideNav = () => (
-    <div
-      class="hidden md:flex flex-col absolute "
-      style={{
-        top: "30%",
-        left: "0",
-      }}
-      onMouseEnter={imageEnter}
-      onMouseLeave={imageEnter}
-    >
-      {works.map((work) => (
-        <div
-          onClick={() => setActiveWork(work)}
-          style={{
-            backgroundImage: `url(${work.image})`,
-          }}
-          class={`${
-            work.id === activeWork.id
-              ? "w-24"
-              : activeWork.id + 1 === work.id || work.id + 1 === activeWork.id
-              ? "w-10 brightness-50 hover:brightness-75"
-              : "w-0 brightness-75"
-          } cursor-pointer  hover:w-24 relative h-16 bg-cover bg-center bg-no-repeat my-2 transition-all duration-500 ease-in-out rounded-r-md`}
-        >
-          <div
-            class={`${
-              work.id !== activeWork.id && "opacity-0"
-            } transition-all duration-500 text-lg absolute right-0 -top-4 work-side-nav-text font-bold tracking-wider`}
-          >
-            0{work.id}
-          </div>
-        </div>
-      ))}
-    </div>
-  );
   const cards = () => (
     <div
       className="text-black relative font-lato  select-none   h-full overflow-hidden w-full    bg-cover bg-no-repeat bg-center   flex flex-col  md:justify-start md:pt-[127px]  top-0 left-0 px-5 md:px-48  "

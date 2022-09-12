@@ -31,7 +31,8 @@ const Error = () => {
       transition: {
         type: "spring",
         mass: 0.1,
-      },    },
+      },
+    },
     text: {
       height: 50,
       width: 50,
@@ -42,7 +43,8 @@ const Error = () => {
       transition: {
         type: "spring",
         mass: 0.1,
-      },    },
+      },
+    },
     secondary: {
       x: mousePos.x - 10,
       y: mousePos.y - 10,
@@ -51,7 +53,8 @@ const Error = () => {
       transition: {
         type: "spring",
         mass: 0.1,
-      },    },
+      },
+    },
     large: {
       height: 80,
       width: 80,
@@ -62,7 +65,8 @@ const Error = () => {
       transition: {
         type: "spring",
         mass: 0.1,
-      },    },
+      },
+    },
   };
 
   const textEnter = () => setcursorVariant("text");
@@ -87,7 +91,7 @@ const Error = () => {
       >
         <div className="text-base md:text-8xl tracking-3">404</div>
         <div className="text-xl my-4 tracking-1.5">
-          Page Not Found. Go back to the{" "}
+          Page Not Found. Return to{" "}
           <a
             style={{
               cursor: "none",
@@ -95,7 +99,7 @@ const Error = () => {
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
             href="/"
-            className="rounded-md my-10  w-max text-brand-pink  mx-2 bg-brand-darkGrey2 px-4 py-1"
+            className="text-brand-pink "
           >
             Home
           </a>

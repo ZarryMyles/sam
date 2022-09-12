@@ -4,7 +4,6 @@ import { ArrowRightCircle } from "react-feather";
 import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
 // assets
-import hero from "../../assets/works/billEasy/billEasyResearchpng.png";
 import invoiceGen from "../../assets/works/billEasyVisual/Page.png";
 import invoiceDis from "../../assets/works/billEasyVisual/Share.png";
 import invoiceStor from "../../assets/works/billEasyVisual/Cloud.png";

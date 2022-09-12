@@ -15,8 +15,6 @@ const About = () => {
   const [cursorVariant, setcursorVariant] = useState("default");
 
   useEffect(() => {
-    // scroll to top
-    // window.scrollTo(0, 0);
     const mouseMove = (e) => {
       setMousePos({
         x: e.clientX,
@@ -215,11 +213,6 @@ const About = () => {
           // textLeave={textLeave}
           imageEnter={imageEnter}
         />
-        {/* <Skills
-          textEnter={textEnter}
-          textLeave={textLeave}
-          imageEnter={imageEnter}
-        /> */}
         <div className="mt-[130px] md:mt-0">
           <GetInTouch
             textEnter={textEnter}

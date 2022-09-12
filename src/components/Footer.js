@@ -1,28 +1,26 @@
 import React from "react";
 import { MapPin } from "react-feather";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+
 const Footer = ({ imageEnter, largeEnter }) => {
   const socials = [
     {
       name: "Bengaluru",
-      link: "https://maps.google./maps?q=Bengaluru",
+      link: "https://goo.gl/maps/81bSbpJiwa8DrD219",
       icon: <MapPin strokeWidth={2} width={16} height={16} color="#7A2222" />,
     },
     {
       name: "Email",
       link: "mailto:shradhabkaba@gmail.com",
-      // icon: <FaDribbbleSquare />,
     },
     {
       name: "LinkedIn",
       link: "https://www.linkedin.com/in/shradha-b-k",
-      // icon: <FaLinkedin />,
     },
 
     {
       name: "Resume",
       link: "https://drive.google.com/file/d/1gdC7zdeDq_ZZZVhfR79LOOZrqUFiqytM/view?usp=sharing",
-      // icon: <TiDocumentText />,
     },
   ];
   const container = {
@@ -75,8 +73,6 @@ const Footer = ({ imageEnter, largeEnter }) => {
                     Shradha
                   </div>
                   <div
-                    // onMouseEnter={textEnter}
-                    // onMouseLeave={imageEnter}
                     className=" text-sm md:text-lg tracking-widest max-w-max font-lato   "
                     style={{
                       color: "#B5B5B5",

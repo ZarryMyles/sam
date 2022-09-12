@@ -204,7 +204,6 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
                       style={{
                         color: "#b5b5b5",
                       }}
-                      // ${work.id == 4 && "opacity-0 cursor-auto "}
                       class={` p-0 md:p-0  text-2xl md:text-5xl   cursor-pointer mx-5  rounded-full text-white`}
                     />
                   </div>
@@ -230,7 +229,6 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
                       } `}
                       autoPlay={true}
                       src={work.mobVideo}
-                      // alt="loading..."
                     />
                     <div class="absolute w-full h-full bg-black opacity-50 left-0 top-0"></div>
                   </div>

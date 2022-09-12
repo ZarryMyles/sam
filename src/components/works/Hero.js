@@ -1,4 +1,5 @@
 import React from "react";
+
 const Hero = ({ work, next, largeEnter, imageEnter }) => {
   return (
     <div className=" bg-brand-black  h-screen w-full relative overflow-clip flex leading-0  ">
@@ -57,7 +58,6 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
           )}
         </div>
       </div>
-      {/* <div class=" md:hidden z-10  h-full bg-cover  bg-center bg-no-repeat brightness-20 bg-brand-black"></div> */}
       {!next && (
         <div class="block z-20 text-4xl md:hidden absolute px-5 left-0 top-0 pt-[230px]  text-brand-white w-full h-full">
           <div class="flex items-center  mb-6 col-span-12">
@@ -117,7 +117,6 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
       {!work.gif ? (
         <video
           style={{
-            // height: "100vh",
             width: "100vw",
           }}
           className=" z-10  hidden md:block object-contain md:object-cover bg-center bg-no-repeat brightness-50 bg-brand-black"
@@ -143,7 +142,6 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
         <video
           style={{
             background: work.bgColor,
-            // width: "100vw",
           }}
           className={` z-10 w-full  md:hidden ${
             work.id === 2
@@ -166,7 +164,6 @@ const Hero = ({ work, next, largeEnter, imageEnter }) => {
               : "object-contain object-bottom"
           }   bg-no-repeat brightness-50 `}
           style={{
-            // width: "80.5%",
             background: work.bgColor,
           }}
           src={work.mobVideo}

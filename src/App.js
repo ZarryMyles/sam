@@ -10,8 +10,8 @@ import {
   Footer,
   LandingSection,
   Loader,
+  Navbar,
 } from "./components/";
-import Navbar from "./components/NewNav";
 
 function App() {
   const [mousePos, setMousePos] = useState({
@@ -72,57 +72,8 @@ function App() {
     },
   };
 
-  const textEnter = () => setcursorVariant("text");
   const imageEnter = () => setcursorVariant("secondary");
-  const textLeave = () => setcursorVariant("default");
   const largeEnter = () => setcursorVariant("large");
-
-  // let options = {
-  //   root: document.querySelector("#sections"),
-  //   rootMargin: "0px",
-  //   threshold: 0.6, // percentage of the element that is visible for triggering the callback for nav
-  // };
-  // setting dark or light theme
-  // const setTheme = (theme = "light") => {
-  //   const html = document.querySelector("html").classList;
-  //   html.remove("dark");
-  //   html.remove("light");
-  //   html.add(theme);
-  // };
-  // observing active section
-  // const [activeSection, setActiveSection] = useState("home");
-  // useEffect(() => {
-  //   let callback = (entries, observer) => {
-  //     entries.forEach((entry) => {
-  //       if (entry.isIntersecting) {
-  //         setActiveSection(entry.target.id);
-  //         console.log(entry.target.id);
-  //       }
-  //     });
-  //   };
-  //   targets
-  //   let observer = new IntersectionObserver(callback, options);
-  //   let landingSection = document.querySelector("#landing-section");
-  //   let work = document.querySelector("#work");
-  //   let socialProof = document.querySelector("#social-proof");
-  //   let getInTouch = document.querySelector("#get-in-touch");
-  //   let footer = document.querySelector("#footer-main");
-  //   observers
-  //   observer.observe(landingSection);
-  //   observer.observe(work);
-  //   observer.observe(socialProof);
-  //   observer.observe(getInTouch);
-  //   observer.observe(footer);
-  // }, []);
-  // useEffect(() => {
-  // console.log(activeSection);
-  // if (activeSection === "landing-section") setTheme("dark");
-  // else if (activeSection === "work") setTheme("light");
-  // else if (activeSection === "social-proof") setTheme("dark");
-  // else if (activeSection === "get-in-touch") setTheme("dark");
-  // else if (activeSection === "footer-main") setTheme("dark");
-  // else setTheme();
-  // }, [activeSection]);
 
   // Loader
   const [loading, setLoading] = useState(false);
@@ -143,8 +94,6 @@ function App() {
       <>
         <Navbar
           imageEnter={imageEnter}
-          textLeave={textLeave}
-          textEnter={textEnter}
           largeEnter={largeEnter}
           defaultColor={"white"}
         />
@@ -152,42 +101,12 @@ function App() {
           id="sections"
           className="  flex flex-col items-center justify-center"
         >
-          {/* <div className="h-screen bg-transparent -z-10"></div> */}
-          <LandingSection
-            imageEnter={imageEnter}
-            textEnter={textEnter}
-            textLeave={textLeave}
-            largeEnter={largeEnter}
-          />
-          <Work
-            imageEnter={imageEnter}
-            textEnter={textEnter}
-            textLeave={textLeave}
-            largeEnter={largeEnter}
-          />
-          <WorkLogos
-            imageEnter={imageEnter}
-            textEnter={textEnter}
-            textLeave={textLeave}
-            largeEnter={largeEnter}
-          />
-          <SocialProof
-            imageEnter={imageEnter}
-            textEnter={textEnter}
-            textLeave={textLeave}
-          />
-          <GetInTouch
-            imageEnter={imageEnter}
-            textEnter={textEnter}
-            textLeave={textLeave}
-            largeEnter={largeEnter}
-          />
-          <Footer
-            imageEnter={imageEnter}
-            textEnter={textEnter}
-            textLeave={textLeave}
-            largeEnter={largeEnter}
-          />
+          <LandingSection imageEnter={imageEnter} largeEnter={largeEnter} />
+          <Work imageEnter={imageEnter} largeEnter={largeEnter} />
+          <WorkLogos imageEnter={imageEnter} largeEnter={largeEnter} />
+          <SocialProof imageEnter={imageEnter} largeEnter={largeEnter} />
+          <GetInTouch imageEnter={imageEnter} largeEnter={largeEnter} />
+          <Footer imageEnter={imageEnter} largeEnter={largeEnter} />
           {/* other sections */}
 
           <motion.div

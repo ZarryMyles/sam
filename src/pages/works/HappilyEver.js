@@ -25,7 +25,6 @@ import {
   Teacup,
   ClinkingGlasses,
   Ladder,
-  OldKey,
 } from "../../assets/icons/fluent";
 
 const HappilyEver = () => {

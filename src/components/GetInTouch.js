@@ -7,15 +7,8 @@ const GetInTouch = ({ imageEnter, largeEnter }) => {
       className="  w-full overflow-clip    mt-10 relative  "
     >
       <div className="  text-brand-white px-5 md:px-48  pb-10 md:pb-20 pt-10 md:py-40  w-full   left-0 top-0  z-20  ">
-        <div
-          className="flex flex-col  md:flex-row md:items-center justify-between w-full"
-          // onMouseEnter={imageEnter}
-          // onMouseLeave={textLeave}
-        >
+        <div className="flex flex-col  md:flex-row md:items-center justify-between w-full">
           <div
-            // onMouseEnter={textEnter}
-            // onMouseLeave={imageEnter}
-            // class name for text stroke : text-stroke-black
             style={{
               letterSpacing: ".08em",
             }}
@@ -40,7 +33,6 @@ const GetInTouch = ({ imageEnter, largeEnter }) => {
           </div>
         </div>
       </div>
-      {/* <div className="bg-brand-lightGrey w-full h-full absolute left-0 top-0 -z-10 getintouch-graybg" /> */}
     </div>
   );
 };

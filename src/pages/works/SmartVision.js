@@ -13,7 +13,6 @@ import Phone3 from "../../assets/works/smartvision/smartVisionPhone3.png";
 import Phone4 from "../../assets/works/smartvision/smartVisionPhone4.png";
 import Phone5 from "../../assets/works/smartvision/smartVisionPhone5.png";
 import Phone6 from "../../assets/works/smartvision/smartVisionPhone6.png";
-import Hero from "../../assets/works/smartvision/smartVision.png";
 import Challenges from "../../assets/works/smartvision/smartvisionChallenge.svg";
 import colorGuides from "../../assets/works/smartvision/colorGuides.svg";
 import mobColor1 from "../../assets/works/smartvision/mobColor1.svg";

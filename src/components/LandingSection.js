@@ -2,13 +2,13 @@ import React from "react";
 
 import { ArrowRightCircle } from "react-feather";
 import HeroImage from "../assets/landingpage/Rectangle.png";
-const LandingSection = ({ imageEnter, textLeave, largeEnter }) => {
+const LandingSection = ({ imageEnter, largeEnter }) => {
   return (
     <div
       id="landing-section"
       className="px-5 md:px-48 min-h-screen w-full text-white bg-brand-black    top-0 left-0 "
       onMouseEnter={imageEnter}
-      onMouseLeave={textLeave}
+      onMouseLeave={imageEnter}
     >
       <div class="  z-20 relative  md:h-full md:mt-0   md:py-52 w-full ">
         <div
@@ -35,11 +35,7 @@ const LandingSection = ({ imageEnter, textLeave, largeEnter }) => {
           }}
           class="block md:hidden  w-full z-10 bg-gray-500  -mt-28   bg-cover bg-center bg-no-repeat"
         />
-        <div
-          class="flex flex-col md:flex-row md:items-center w-full work-landing-text mb-[200px] md:mb-0 mt-[40px] md:mt-0"
-          onMouseEnter={largeEnter}
-          onMouseLeave={imageEnter}
-        >
+        <div class="flex flex-col md:flex-row md:items-center w-full work-landing-text mb-[200px] md:mb-0 mt-[40px] md:mt-0">
           <a
             href="https://www.linkedin.com/in/shradha-b-k/"
             target="_blank"
@@ -50,6 +46,8 @@ const LandingSection = ({ imageEnter, textLeave, largeEnter }) => {
               color="#FFC7D1"
               width={30}
               height={30}
+              onMouseEnter={largeEnter}
+              onMouseLeave={imageEnter}
               strokeWidth={1}
               class=" text-3xl   mr-4  rounded-full   "
             />
@@ -59,7 +57,9 @@ const LandingSection = ({ imageEnter, textLeave, largeEnter }) => {
                 color: "#FFC7D1",
                 fontSize: "16px",
               }}
-              class="  uppercase font-lato    "
+              onMouseEnter={largeEnter}
+              onMouseLeave={imageEnter}
+              class="uppercase font-lato"
             >
               Work with me
             </div>

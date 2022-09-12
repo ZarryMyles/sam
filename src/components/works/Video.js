@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { PlayCircle, PauseCircle } from "react-feather";
+
 const Video = ({ work, largeEnter, imageEnter }) => {
   const video = useRef(null);
   const [videoswitch, setvideo] = useState(false);
@@ -36,10 +37,7 @@ const Video = ({ work, largeEnter, imageEnter }) => {
   return (
     <div className="w-full h-full relative mt-4 md:mt-0">
       <video
-        onClick={() => {
-          // toggleOverlay();
-          // handleVideo();
-        }}
+        onClick={() => {}}
         className="md:h-screen relative w-full bg-brand-white object-contain md:object-cover  bg-cover bg-no-repeat bg-center"
         ref={video}
         loop
@@ -53,7 +51,6 @@ const Video = ({ work, largeEnter, imageEnter }) => {
       </video>
       <div
         onClick={() => {
-          // handleVideo();
           video.current.play();
           setShowOverlay(false);
         }}
@@ -69,7 +66,6 @@ const Video = ({ work, largeEnter, imageEnter }) => {
             onMouseLeave={imageEnter}
             onClick={() => {
               handleVideo();
-              // setShowOverlay(true);
             }}
             className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-5xl  ${
               videoswitch && "  "
@@ -84,7 +80,6 @@ const Video = ({ work, largeEnter, imageEnter }) => {
             onMouseLeave={imageEnter}
             onClick={() => {
               handleVideo();
-              // setShowOverlay(false);
             }}
             className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-5xl  ${
               videoswitch && " "
@@ -94,12 +89,6 @@ const Video = ({ work, largeEnter, imageEnter }) => {
         )}
       </div>
     </div>
-
-    // <img
-    //   className="md:h-screen w-full object-contain md:object-cover  bg-cover bg-no-repeat bg-center"
-    //   src={work.video}
-    //   alt=""
-    // />
   );
 };
 

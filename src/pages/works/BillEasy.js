@@ -30,8 +30,6 @@ import {
   GuideDog,
 } from "../../assets/icons/fluent";
 // images
-import Hero from "../../assets/works/billEasy/billEasyResearchpng.png";
-import nextHero from "../../assets/works/billEasyVisual/HeroVisual.png";
 import collage from "../../assets/works/billEasy/billEasyCaseStudyCollage.png";
 import insightsImg from "../../assets/works/billEasy/billEasyInsights.svg";
 import usability1 from "../../assets/works/billEasy/billEasyUsabilityTesting1.svg";
@@ -42,15 +40,6 @@ import usabilityMatrix from "../../assets/works/billEasy/billEasyUsabilityMatrix
 import persona1 from "../../assets/works/billEasy/billEasyPersona1.svg";
 import persona2 from "../../assets/works/billEasy/billEasyPersona2.svg";
 import persona3 from "../../assets/works/billEasy/billEasyPersona3.svg";
-// import CaseStudy1 from "../../assets/works/billEasy/billEasybi1.svg";
-import CaseStudy2 from "../../assets/works/billEasy/billEasybi2.svg";
-import CaseStudy3 from "../../assets/works/billEasy/billEasybi3.svg";
-import CaseStudy4 from "../../assets/works/billEasy/billEasybi4.svg";
-import CaseStudy5 from "../../assets/works/billEasy/billEasybi5.svg";
-import CaseStudy6 from "../../assets/works/billEasy/billEasybi6.svg";
-import CaseStudy7 from "../../assets/works/billEasy/billEasybi7.svg";
-import CaseStudy8 from "../../assets/works/billEasy/billEasybi8.svg";
-import CaseStudy9 from "../../assets/works/billEasy/billEasybi9.svg";
 import Challenges from "../../assets/works/billEasy/challenges.svg";
 import HeatMap from "../../assets/works/billEasy/heatMap.svg";
 
@@ -154,7 +143,7 @@ const BillEasy = () => {
       {loading && (
         <div class="fixed w-full h-full z-50">
           <br />
-          {/* <Loader />  */}
+          <Loader />
           <br />
         </div>
       )}
@@ -853,16 +842,6 @@ const BillEasy = () => {
               <img src={collage} className="  md:w-full" alt="" />
             </Marquee>
           </div>
-          {/* <div class="md:hidden px-5 flex flex-col justify-center items-center">
-            <img src={CaseStudy2} className="  " alt="" />
-            <img src={CaseStudy3} className="my-2  " alt="" />{" "}
-            <img src={CaseStudy8} className="my-2   " alt="" />{" "}
-            <img src={CaseStudy9} className="my-2   w-full" alt="" />{" "}
-            <img src={CaseStudy5} className="my-2   w-full" alt="" />
-            <img src={CaseStudy7} className="my-2  " alt="" />
-            <img src={CaseStudy6} className="my-2  " alt="" />
-            <img src={CaseStudy4} className="my-2  " alt="" />
-          </div> */}
         </div>
         {/* end screen */}
         <WorkHero
