@@ -4,7 +4,7 @@ import { GetInTouch, Principles, Navbar } from "../components";
 import { ReactComponent as Quote } from "../assets/icons/quotestart.svg";
 import { useTitle } from "../hooks/useTitle";
 import { WorkHeading } from "../components";
-import HeroImage from "../assets/landingpage/Rectangle.png";
+import HeroImage from "../assets/landingpage/sam.jpg";
 
 const About = () => {
   useTitle("About");
@@ -142,9 +142,9 @@ const About = () => {
           <div class=" md:w-5/10 h-92 md:h-full bg-brand-darkGrey2 rounded-lg hidden md:flex justify-center items-center md:p-20">
             <div
               style={{
-                backgroundImage: `url("https://images.unsplash.com/photo-1610398000003-1b2b2b2b2b2b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80")`,
+                backgroundImage: `url(${HeroImage})`,
               }}
-              class="bg-center  bg-no-repeat bg-cover bg-black    h-full  w-full"
+              class="bg-center  bg-no-repeat bg-cover h-full  w-full"
             />
           </div>
         </div>

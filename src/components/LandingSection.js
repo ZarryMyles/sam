@@ -1,7 +1,7 @@
 import React from "react";
-
 import { ArrowRightCircle } from "react-feather";
-import HeroImage from "../assets/landingpage/Rectangle.png";
+import HeroImage from "../assets/landingpage/sam.jpg";
+
 const LandingSection = ({ imageEnter, largeEnter }) => {
   return (
     <div
