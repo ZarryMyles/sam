@@ -20,9 +20,9 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
       image:
         "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg",
       video:
-        "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662181482/work_gifs/BillEasy-short_yhhk58.mp4",
+        "https://res.cloudinary.com/samydoo/video/upload/v1663015598/SamWebsite/Work/Desktop/BillEasy-short_yhhk58_vip9ml.webm",
       mobVideo:
-        "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662181482/work_gifs/BillEasy-short_yhhk58.mp4",
+        "https://res.cloudinary.com/samydoo/video/upload/v1663015598/SamWebsite/Work/Desktop/BillEasy-short_yhhk58_vip9ml.webm",
       link: "/billeasy",
     },
     {
@@ -37,9 +37,9 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
       image:
         "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg",
       video:
-        "https://res.cloudinary.com/ahum/video/upload/v1662232035/BillEasy_Visual_hzrwgo.mp4",
+        "https://res.cloudinary.com/samydoo/video/upload/v1663017008/SamWebsite/Work/Desktop/BillEasy_Visual_hzrwgo_rmmpq4.webm",
       mobVideo:
-        "https://res.cloudinary.com/ahum/video/upload/v1662232035/BillEasy_Visual_hzrwgo.mp4",
+        "https://res.cloudinary.com/samydoo/video/upload/v1663017008/SamWebsite/Work/Desktop/BillEasy_Visual_hzrwgo_rmmpq4.webm",
 
       link: "/billeasy-visual-design",
     },

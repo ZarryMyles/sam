@@ -13,9 +13,9 @@ const works = [
     gif: false,
     mobGif: false,
     video:
-      "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662181482/work_gifs/BillEasy-short_yhhk58.mp4",
+      "https://res.cloudinary.com/samydoo/video/upload/v1663015598/SamWebsite/Work/Desktop/BillEasy-short_yhhk58_vip9ml.webm",
     mobVideo:
-      "https://res.cloudinary.com/genesiscloudimages/video/upload/v1662181482/work_gifs/BillEasy-short_yhhk58.mp4",
+      "https://res.cloudinary.com/samydoo/video/upload/v1663015598/SamWebsite/Work/Desktop/BillEasy-short_yhhk58_vip9ml.webm",
     link: "/billeasy",
   },
 
@@ -27,12 +27,12 @@ const works = [
     description:
       "Creating an efficient accounting process for \n evolving businesses and enhanced work systems.",
     gif: false,
-    mobGif: true,
+    mobGif: false,
     video:
-      "https://res.cloudinary.com/ahum/video/upload/v1662232035/BillEasy_Visual_hzrwgo.mp4",
+      "https://res.cloudinary.com/samydoo/video/upload/v1663017008/SamWebsite/Work/Desktop/BillEasy_Visual_hzrwgo_rmmpq4.webm",
 
     mobVideo:
-      "https://res.cloudinary.com/genesiscloudimages/image/upload/v1662494455/work_gifs/Mob_BillEasy_Visual_v1xkni.gif",
+      "https://res.cloudinary.com/samydoo/video/upload/v1663016142/SamWebsite/Work/Mobile/Mob_BillEasy_Visual_v1xkni_njlrpg.webm",
 
     link: "/billeasy-visual-design",
   },
@@ -196,21 +196,6 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
               class={` p-0 md:p-0  text-2xl md:text-5xl   cursor-pointer mx-5  rounded-full text-white`}
             />
           </div>
-          {/* pagination */}
-          {/* <div class=" md:hidden  w-full  flex items-center justify-center ">
-            {works.map((work, index) => (
-              <div
-                key={index}
-                onClick={() => setActiveWork(work)}
-                class="  transition-all rounded-full duration-100 mx-2  "
-                style={{
-                  background: activeWork.id === work.id ? "#D9D9D9" : "#4E4E4E",
-                  width: "6px",
-                  height: "6px",
-                }}
-              />
-            ))}
-          </div> */}
         </div>
         <div class="flex md:hidden w-full md:w-auto absolute bottom-10  md:bottom-2  md:right-24 left-0  flex-col items-center md:justify-end justify-center">
           {/* pagination */}
@@ -279,84 +264,6 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
           )
         )}
       </div>
-      {/* mob video */}
-      {/* <div class={`w-full object-cover h-full absolute left-0 top-0 z-0`}>
-        {works.map((work) =>
-          work.mobGif ? (
-            <div
-              style={{
-                background: `${work.bgColor}`,
-              }}
-              class={` md:hidden ${
-                work.id < activeWork.id
-                  ? "-translate-x-full  bg-center md:bg-left"
-                  : work.id > activeWork.id
-                  ? " translate-x-[100%]  bg-center md:bg-right"
-                  : "bg-center  "
-              }  w-full bg-cover bg-no-repeat ease-linear transition-all  duration-700  h-screen    absolute
-             w-100 md:w-screen   md:object-contain  
-             
-             `}
-            >
-              <img
-                alt="hi"
-                className="w-full h-full object-contain object-bottom"
-                src={work.mobVideo}
-              />
-              <div class="absolute w-full h-full bg-black opacity-50 left-0 top-0"></div>
-            </div>
-          ) : (
-            <div
-              style={{
-                background: `${work.bgColor}`,
-              }}
-              class={` md:hidden ${
-                work.id < activeWork.id
-                  ? "-translate-x-full  bg-center md:bg-left"
-                  : work.id > activeWork.id
-                  ? " translate-x-[100%]  bg-center md:bg-right"
-                  : "bg-bottom  "
-              }  w-full bg-cover bg-no-repeat ease-linear transition-all  duration-700    h-screen   absolute
-               w-100 md:w-screen  md:opacity-100 opacity-100 md:object-cover   `}
-            >
-              <video
-                className="w-full h-full object-contain object-bottom "
-                loop
-                autoPlay={true}
-                muted
-              >
-                <source src={work.mobVideo} type="video/mp4" />
-              </video>
-              <div class="absolute w-full h-full bg-black opacity-50 left-0 top-0"></div>
-            </div>
-          )
-        )}
-      </div> */}
-      {/* gifs for mobiles */}
-      {/* <div class="md:hidden w-full h-full absolute left-0 top-0 z-0">
-        {works.map((work) => (
-          <div
-            class={` block md:hidden ${
-              work.id < activeWork.id
-                ? "-translate-x-full  bg-bottom md:bg-left"
-                : work.id > activeWork.id
-                ? " translate-x-[100%]  bg-bottom md:bg-right"
-                : work.id == 4
-                ? "bg-center"
-                : "bg-center  "
-            }  w-full bg-cover bg-no-repeat ease-linear transition-all  duration-700  h-screen    absolute
-             w-100 md:w-screen    object-center object-cover  bg-red-100  `}
-          >
-            <img
-              alt="hi"
-              className="w-full h-full object-bottom bg-bottom"
-              src={work.video}
-              
-            />
-            <div class="absolute w-full h-full bg-black opacity-50 left-0 top-0"></div>
-          </div>
-        ))}
-      </div> */}
     </div>
   );
 
