@@ -23,7 +23,7 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor }) => {
     {
       name: "Resume",
       targ: "_blank",
-      link: "resume.shradha.design",
+      link: "/shradha.pdf",
     },
   ];
 
