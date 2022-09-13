@@ -351,11 +351,13 @@ const HappilyEver = () => {
                   such as : <br />
                 </li>
               </ol>
-              1. What inspired you to create this product? <br />
-              2. Why should people use this product? <br />
-              3. What are the objectives? <br />
-              4. How do you visualize your brand? <br />
-              and many more..
+              <div class="ml-2">
+                1. What inspired you to create this product? <br />
+                2. Why should people use this product? <br />
+                3. What are the objectives? <br />
+                4. How do you visualize your brand? <br />
+                and many more..
+              </div>
             </div>
           </div>
           <img
