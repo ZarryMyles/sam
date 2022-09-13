@@ -123,11 +123,11 @@ const BillEasy = () => {
     mobGif: false,
     image: "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg",
     video:
-      "https://res.cloudinary.com/samydoo/video/upload/v1663015598/SamWebsite/Work/Desktop/BillEasy-short_yhhk58_vip9ml.webm",
+      "https://res.cloudinary.com/samydoo/video/upload/v1663049954/SamWebsite/Work/Desktop/BillEasy-short_yhhk58_kyqft8.webm",
     video2:
       "https://res.cloudinary.com/samydoo/video/upload/v1663016727/SamWebsite/Work/Desktop/C01_yqtldj_byvhkv.webm",
     mobVideo:
-      "https://res.cloudinary.com/samydoo/video/upload/v1663015598/SamWebsite/Work/Desktop/BillEasy-short_yhhk58_vip9ml.webm",
+      "https://res.cloudinary.com/samydoo/video/upload/v1663049954/SamWebsite/Work/Desktop/BillEasy-short_yhhk58_kyqft8.webm",
     link: "/billeasy",
   };
   const [loading, setLoading] = useState(true);

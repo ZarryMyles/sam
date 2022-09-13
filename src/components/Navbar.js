@@ -231,7 +231,7 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor }) => {
 
       {/* Mobile Navbar */}
 
-      <div className="md:hidden md:bg-brand-black text-brand-gray overflow-hidden pl-5 py-1 top-0 fixed z-50 w-full flex justify-between items-center h-auto">
+      <div className="md:hidden bg-brand-black text-brand-gray overflow-hidden pl-5 py-1 top-0 fixed z-50 w-full flex justify-between items-center h-auto">
         <a href="/" className="  font-lora-italic text-2xl">
           S
         </a>

@@ -20,9 +20,9 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
       image:
         "http://theme.dsngrid.com/droow-l/assets/img/project/project5/1.jpg",
       video:
-        "https://res.cloudinary.com/samydoo/video/upload/v1663015598/SamWebsite/Work/Desktop/BillEasy-short_yhhk58_vip9ml.webm",
+        "https://res.cloudinary.com/samydoo/video/upload/v1663049954/SamWebsite/Work/Desktop/BillEasy-short_yhhk58_kyqft8.webm",
       mobVideo:
-        "https://res.cloudinary.com/samydoo/video/upload/v1663015598/SamWebsite/Work/Desktop/BillEasy-short_yhhk58_vip9ml.webm",
+        "https://res.cloudinary.com/samydoo/video/upload/v1663049954/SamWebsite/Work/Desktop/BillEasy-short_yhhk58_kyqft8.webm",
       link: "/billeasy",
     },
     {

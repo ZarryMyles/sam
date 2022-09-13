@@ -4,7 +4,7 @@ import React from "react";
 import { WorkHeading } from ".";
 
 import { prin1, prin2, prin3 } from "../assets/emojis";
-const Principles = ({ textEnter, imageEnter }) => {
+const Principles = ({ largeEnter, imageEnter }) => {
   return (
     <div
       onMouseEnter={imageEnter}
@@ -12,7 +12,7 @@ const Principles = ({ textEnter, imageEnter }) => {
     >
       <WorkHeading text={"values"} />
       <div
-        onMouseEnter={textEnter}
+        onMouseEnter={largeEnter}
         onMouseLeave={imageEnter}
         class="text-2xl md:text-4xl -mt-[14px] md:mt-0"
       >

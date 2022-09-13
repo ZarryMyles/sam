@@ -29,26 +29,6 @@ const About = () => {
   }, []);
 
   const variants = {
-    default: {
-      x: mousePos.x - 10,
-      y: mousePos.y - 10,
-      transition: {
-        type: "spring",
-        mass: 0.1,
-      },
-    },
-    text: {
-      height: 50,
-      width: 50,
-      x: mousePos.x - 25,
-      y: mousePos.y - 25,
-      backgroundColor: "#ffc7d1",
-      mixBlendMode: "difference",
-      transition: {
-        type: "spring",
-        mass: 0.1,
-      },
-    },
     secondary: {
       x: mousePos.x - 10,
       y: mousePos.y - 10,
@@ -73,15 +53,11 @@ const About = () => {
     },
   };
 
-  const textEnter = () => setcursorVariant("text");
   const imageEnter = () => setcursorVariant("secondary");
-  const textLeave = () => setcursorVariant("default");
   const largeEnter = () => setcursorVariant("large");
   return (
     <>
       <Navbar
-        textEnter={textEnter}
-        textLeave={textLeave}
         imageEnter={imageEnter}
         largeEnter={largeEnter}
         defaultColor={"black"}
@@ -124,7 +100,7 @@ const About = () => {
               </span>
             </div>
             <div
-              onMouseEnter={textEnter}
+              onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
               class="text-brand-darkGrey3 text-xl mb-1  flex items-center "
             >
@@ -208,18 +184,9 @@ const About = () => {
           </div>
         </div>
 
-        <Principles
-          textEnter={textEnter}
-          // textLeave={textLeave}
-          imageEnter={imageEnter}
-        />
+        <Principles imageEnter={imageEnter} largeEnter={largeEnter} />
         <div className="mt-[130px] md:mt-0">
-          <GetInTouch
-            textEnter={textEnter}
-            textLeave={textLeave}
-            imageEnter={imageEnter}
-            largeEnter={largeEnter}
-          />
+          <GetInTouch imageEnter={imageEnter} largeEnter={largeEnter} />
         </div>
         <motion.div
           className="cursor hidden md:flex"
