@@ -336,9 +336,9 @@ const HappilyEver = () => {
                     understanding brand values
                   </span>{" "}
                   was to know the product's mission and motive. This interview
+                  helped the stakeholder in developing a{" "}
+                  <span style={{ color: "#ED9D9D" }}>clear vision.</span>
                 </li>
-                helped the stakeholder in developing a{" "}
-                <span style={{ color: "#ED9D9D" }}>clear vision.</span>
                 <br />
                 <br />{" "}
                 <li>
@@ -367,7 +367,7 @@ const HappilyEver = () => {
         {/* Key Insights */}
         <div class="flex items-center md:items-start md:flex-row flex-col font-lato">
           <div class="md:pr-10 md:w-6/10">
-            <div className="md:mt-10 mt-0 md:mb-16 font-lato font-normal leading-7 tracking-0.5">
+            <div className="md:mt-10 mt-[80px] md:mb-16 font-lato font-normal leading-7 tracking-0.5">
               Key Insights <br />
               <br className="hidden md:block" />
               <br />

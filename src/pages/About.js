@@ -154,10 +154,10 @@ const About = () => {
               <div>
                 With strong insights in{" "}
                 <span class="text-brand-pink">Research</span> and{" "}
-                <span class="text-brand-pink">Analytical skills,</span> I <br />{" "}
-                have been able to develop{" "}
+                <span class="text-brand-pink">Analytical skills,</span> I{" "}
+                <br className="hidden md:block" /> have been able to develop{" "}
                 <span class="text-brand-pink">Interactive prototypes</span> and{" "}
-                <br />{" "}
+                <br className="hidden md:block" />{" "}
                 <span class="text-brand-pink">Consumer-centric designs.</span>
                 <ul class="ml-4 list-disc">
                   <li>UI & UX Design </li>
