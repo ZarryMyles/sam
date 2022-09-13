@@ -23,7 +23,7 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor }) => {
     {
       name: "Resume",
       targ: "_blank",
-      link: "https://drive.google.com/file/d/1gdC7zdeDq_ZZZVhfR79LOOZrqUFiqytM/view?usp=sharing",
+      link: "resume.shradha.design",
     },
   ];
 
@@ -141,7 +141,7 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor }) => {
             onMouseLeave={imageEnter}
             target="_blank"
             rel="noreferrer"
-            href="https://drive.google.com/file/d/1gdC7zdeDq_ZZZVhfR79LOOZrqUFiqytM/view?usp=sharing"
+            href="https://resume.shradha.design"
             onClick={uncheckNav}
             className="font-lato text-lg  top-0 overflow-hidden pl-2 flex flex-row items-center"
           >
@@ -220,7 +220,7 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor }) => {
             onMouseLeave={imageEnter}
             target="_blank"
             rel="noreferrer"
-            href="https://drive.google.com/file/d/1gdC7zdeDq_ZZZVhfR79LOOZrqUFiqytM/view?usp=sharing"
+            href="resume.shradha.design"
             onClick={uncheckNav}
             className="font-lato text-lg  top-0 overflow-hidden pl-2 flex flex-row items-center"
           >

@@ -975,7 +975,7 @@ const SmartVision = () => {
         </ul>
         {/* color thingy */}
       </div>
-      <div className="w-full hidden md:block">
+      <div className="w-full md:px-24 hidden md:block">
         <img src={colorGuides} className="w-full" alt="" />
       </div>
       <div className="w-full my-4 md:hidden block">
