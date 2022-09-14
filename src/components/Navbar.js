@@ -141,7 +141,7 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor }) => {
             onMouseLeave={imageEnter}
             target="_blank"
             rel="noreferrer"
-            href="https://resume.shradha.design"
+            href="/shradha.pdf"
             onClick={uncheckNav}
             className="font-lato text-lg  top-0 overflow-hidden pl-2 flex flex-row items-center"
           >
@@ -220,7 +220,7 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor }) => {
             onMouseLeave={imageEnter}
             target="_blank"
             rel="noreferrer"
-            href="resume.shradha.design"
+            href="/shradha.pdf"
             onClick={uncheckNav}
             className="font-lato text-lg  top-0 overflow-hidden pl-2 flex flex-row items-center"
           >
