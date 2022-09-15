@@ -107,7 +107,10 @@ const BillEasyVisual = () => {
   return (
     <div className="overflow-x-hidden  bg-brand-black text-brand-white">
       {loading && (
-        <div class="fixed loaderDiv w-screen h-screen"> {/* <Loader /> */}</div>
+        <div class="fixed loaderDiv w-screen h-screen">
+          {" "}
+          <Loader />{" "}
+        </div>
       )}
       <Navbar
         largeEnter={largeEnter}
