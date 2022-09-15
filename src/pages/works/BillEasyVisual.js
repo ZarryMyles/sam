@@ -261,7 +261,7 @@ const BillEasyVisual = () => {
             </div>
             <img
               src={visual}
-              className="hidden md:px-24 px-5 md:block"
+              className="hidden md:w-5/10 md:mr-24 md:block"
               width="100%"
               alt="visual"
             />
@@ -348,7 +348,7 @@ const BillEasyVisual = () => {
               <img
                 src={invoiceG2}
                 alt="visual"
-                className="md:px-24 px-5 hidden md:block"
+                className="px-5 md:w-5/10 md:mr-24 hidden md:block"
               />
             </div>
           </div>
@@ -411,7 +411,7 @@ const BillEasyVisual = () => {
             </div>
             {/* Desktop */}
             <div className="md:flex flex-row mt-20 hidden">
-              <div className="w-1/2 ml-10 pr-10 ">
+              <div className="w-7/10 pr-10 ">
                 <div className="font-lato font-normal py-5">
                   4. Report Tracking <br />
                   <br />
@@ -434,7 +434,7 @@ const BillEasyVisual = () => {
                   </span>
                 </div>
               </div>{" "}
-              <img src={report} width="100%" alt="visual" />
+              <img src={report} className="w-6/10" alt="visual" />
             </div>
             <div></div>
           </div>
