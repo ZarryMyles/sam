@@ -283,7 +283,7 @@ const BillEasy = () => {
                     70% Increased user satisfaction.
                   </span>{" "}
                   Estimated to Optimize{" "}
-                  <span style={{ color: "#6AC296" }}>productivity by 3x</span>{" "}
+                  <span style={{ color: "#6AC296" }}>productivity by 5x</span>{" "}
                   and{" "}
                   <span style={{ color: "#6AC296" }}>
                     Increased transparency.

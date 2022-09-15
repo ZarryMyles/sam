@@ -107,10 +107,7 @@ const BillEasyVisual = () => {
   return (
     <div className="overflow-x-hidden  bg-brand-black text-brand-white">
       {loading && (
-        <div class="fixed loaderDiv w-screen h-screen">
-          {" "}
-          <Loader />
-        </div>
+        <div class="fixed loaderDiv w-screen h-screen"> {/* <Loader /> */}</div>
       )}
       <Navbar
         largeEnter={largeEnter}
@@ -591,14 +588,14 @@ const BillEasyVisual = () => {
       {/* Learnings and Retrospect */}
       <div class="font-lato h-full flex w-screen flex-col pt-10 md:mb-10 mb-[124px]">
         <div className=" md:px-24 px-5 mb-10 text-justify">
-          <div class=" text-2xl text-start  md:text-4xl md:my-0 mt-8 tracking-1.5 font-lato font-normal flex  items-end">
+          <div class=" text-2xl text-start mb-0 md:mb-[30px] md:text-4xl md:my-0 mt-8 tracking-1.5 font-lato font-normal flex  items-end">
             <img
               src={InLotusPosition}
               className=" inline-block mr-2 w-9 "
               alt=""
             />{" "}
-            Learnings and <br className="" />{" "}
-            <span class="hidden md:block">Retrospect</span>
+            Learnings and{" "}
+            <span class="hidden md:block md:ml-[8px]">Retrospect</span>
           </div>
           <div
             style={{
