@@ -3,7 +3,7 @@ import { MapPin } from "react-feather";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
 const Footer = ({ imageEnter, largeEnter }) => {
-  const resumeLink = process.env.Resume_URL;
+  const resumeLink = process.env.REACT_APP_RESUME_URL;
   const socials = [
     {
       name: "Bengaluru",
