@@ -3,6 +3,7 @@ import { MapPin } from "react-feather";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
 const Footer = ({ imageEnter, largeEnter }) => {
+  const resumeLink = process.env.Resume_URL;
   const socials = [
     {
       name: "Bengaluru",
@@ -20,7 +21,7 @@ const Footer = ({ imageEnter, largeEnter }) => {
 
     {
       name: "Resume",
-      link: "https://drive.google.com/file/d/1gdC7zdeDq_ZZZVhfR79LOOZrqUFiqytM/view?usp=sharing",
+      link: resumeLink,
     },
   ];
   const container = {

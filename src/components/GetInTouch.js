@@ -22,6 +22,8 @@ const GetInTouch = ({ imageEnter, largeEnter }) => {
             <a
               href="http://www.linkedin.com/in/shradha-b-k"
               onMouseEnter={largeEnter}
+              target="_blank"
+              rel="noreferrer"
               onMouseLeave={imageEnter}
               style={{
                 color: "#FFC7D1",

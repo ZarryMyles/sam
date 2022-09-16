@@ -4,6 +4,8 @@ import { Link } from "react-scroll";
 import $ from "jquery";
 
 const Navbar = ({ largeEnter, imageEnter, defaultColor }) => {
+  const resumeLink = process.env.Resume_URL;
+  console.log(resumeLink);
   const links = [
     {
       name: "Work",
@@ -23,7 +25,7 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor }) => {
     {
       name: "Resume",
       targ: "_blank",
-      link: "/shradha.pdf",
+      link: resumeLink,
     },
   ];
 
@@ -141,7 +143,7 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor }) => {
             onMouseLeave={imageEnter}
             target="_blank"
             rel="noreferrer"
-            href="/shradha.pdf"
+            href={resumeLink}
             onClick={uncheckNav}
             className="font-lato text-lg  top-0 overflow-hidden pl-2 flex flex-row items-center"
           >
@@ -220,7 +222,7 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor }) => {
             onMouseLeave={imageEnter}
             target="_blank"
             rel="noreferrer"
-            href="/shradha.pdf"
+            href={resumeLink}
             onClick={uncheckNav}
             className="font-lato text-lg  top-0 overflow-hidden pl-2 flex flex-row items-center"
           >
