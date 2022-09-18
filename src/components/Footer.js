@@ -9,19 +9,23 @@ const Footer = ({ imageEnter, largeEnter }) => {
       name: "Bengaluru",
       link: "https://goo.gl/maps/81bSbpJiwa8DrD219",
       icon: <MapPin strokeWidth={2} width={16} height={16} color="#7A2222" />,
+      target: "_blank",
     },
     {
       name: "Email",
       link: "mailto:shradhabkaba@gmail.com",
+      target: "",
     },
     {
       name: "LinkedIn",
       link: "https://www.linkedin.com/in/shradha-b-k",
+      target: "_blank",
     },
 
     {
       name: "Resume",
       link: resumeLink,
+      target: "_blank",
     },
   ];
   const container = {
@@ -74,7 +78,7 @@ const Footer = ({ imageEnter, largeEnter }) => {
                     Shradha
                   </div>
                   <div
-                    className=" text-sm md:text-lg tracking-widest max-w-max font-lato   "
+                    className=" text-sm md:mt-4 md:text-lg tracking-widest max-w-max font-lato   "
                     style={{
                       color: "#B5B5B5",
                       fontWeight: "300",
@@ -92,7 +96,7 @@ const Footer = ({ imageEnter, largeEnter }) => {
                 onMouseEnter={largeEnter}
                 onMouseLeave={imageEnter}
                 href={social.link}
-                target="_blank"
+                target={social.target}
                 rel="noreferrer"
                 class="text-brand-gray font-lato flex items-center  text-sm md:text-base     md:w-max  my-2 md:my-0"
               >

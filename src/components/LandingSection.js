@@ -12,7 +12,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
     >
       <div class="  z-20 relative  md:h-full md:mt-0   md:py-52 w-full ">
         <h1
-          class="text-3xl md:text-5xl font-thin mt-60  md:mt-20 w-9/10  md:w-7/10 font-lato-light-italic landing-page-text  "
+          class="text-3xl md:text-5xl md:ml-4 font-thin mt-60  md:mt-16 w-9/10  md:w-8/10 font-lato-light-italic landing-page-text  "
           onMouseEnter={largeEnter}
           onMouseLeave={imageEnter}
           style={{
@@ -22,7 +22,8 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
         >
           Hello I’m <span className="font-lora-italic ml-1">Shradha</span>
           <br />I work with designs driven by{" "}
-          <span class="font-lora-italic">purpose</span> that reaches{" "}
+          <span class="font-lora-italic">purpose</span> <br />
+          that reaches{" "}
           <span class=" font-lora-italic mr-1">beyond modernity.</span>
         </h1>
         <div
@@ -40,7 +41,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
             href="https://www.linkedin.com/in/shradha-b-k/"
             target="_blank"
             rel="noreferrer"
-            class=" py-2 md:py-4 flex justify-center items-center mt-2 md:mt-0 rounded-l-full rounded-r-full text-white  max-w-max tracking-wider"
+            class=" py-2 md:py-4 flex justify-center items-center md:ml-4 mt-2 md:mt-0 rounded-l-full rounded-r-full text-white  max-w-max tracking-wider"
           >
             <ArrowRightCircle
               color="#FFC7D1"
@@ -68,8 +69,8 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
       </div>
       <div
         style={{
-          width: "520px",
-          height: "400px",
+          width: "40%",
+          height: "371px",
           backgroundImage: `url(${HeroImage})`,
         }}
         class="hidden md:block absolute z-10 bg-gray-500  right-52 bottom-10 bg-cover bg-center bg-no-repeat"

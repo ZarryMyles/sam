@@ -5,7 +5,7 @@ import $ from "jquery";
 
 const Navbar = ({ largeEnter, imageEnter, defaultColor }) => {
   const resumeLink = process.env.REACT_APP_RESUME_URL;
-  console.log(resumeLink);
+  // console.log(resumeLink);
   const links = [
     {
       name: "Work",
