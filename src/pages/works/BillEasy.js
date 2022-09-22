@@ -273,7 +273,7 @@ const BillEasy = () => {
           <div class="px-5 md:px-0 hidden md:block col-span-1"></div>
 
           <div class=" col-span-12 md:col-span-5  flex flex-col items-center  justify-center md:pl-10 rounded-xl text-brand-white ">
-            <div className="  px-5 md:px-0 md:pr-24 rounded-l-lg flex flex-col justify-center mt-[32px] md:mt-0 bg-brand-darkGrey2 md:pl-14 py-10  ">
+            <div className="  px-5 md:px-0 md:pr-24 md:rounded-l-lg flex flex-col justify-center mt-[32px] md:mt-0 bg-brand-darkGrey2 md:pl-14 py-10  ">
               <div className=" mb-8">
                 <div className=" mb-2 flex items-center">
                   <img src={Check} className="mr-2 w-5 " alt="" /> Results
@@ -540,7 +540,11 @@ const BillEasy = () => {
           </div>
         </div>
         <div class=" mt-7 flex items-center md:hidden justify-center">
-          <img className="w-full object-center" src={insightsImg} alt="" />
+          <img
+            className="w-full object-center scale-110"
+            src={insightsImg}
+            alt=""
+          />
         </div>
         {/* usability testing */}
         <div class="p-5 md:px-24  py-10 md:py-[130px] mt-[130px] font-lato bg-brand-darkGrey2 w-full">

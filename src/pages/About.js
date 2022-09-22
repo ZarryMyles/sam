@@ -134,7 +134,7 @@ const About = () => {
             style={{
               letterSpacing: "0.4px",
             }}
-            class="flex flex-col md:flex-row w-full text-lg leading-[28px] tracking-[0.4px] md:leading-9 text-justify md:pb-20"
+            class="flex flex-col md:flex-row w-full text-base md:text-lg leading-[28px] tracking-[0.4px] md:leading-9 text-justify md:pb-20"
           >
             <div class="w-full md:w-1/2 md:pr-16 mb-10 md:my-0 ">
               <div>Interests</div>

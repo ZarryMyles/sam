@@ -58,7 +58,7 @@ const Video = ({ work, largeEnter, imageEnter }) => {
           !showOverlay ? " hidden" : "opacity-50"
         }`}
       >
-        {videoswitch ? (
+        {/* {videoswitch ? (
           <PauseCircle
             color="#FEFEFE"
             strokeWidth={1}
@@ -86,7 +86,7 @@ const Video = ({ work, largeEnter, imageEnter }) => {
             } `}
             size={50}
           />
-        )}
+        )} */}
       </div>
     </div>
   );

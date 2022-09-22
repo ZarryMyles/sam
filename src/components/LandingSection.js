@@ -69,7 +69,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
       </div>
       <div
         style={{
-          width: "40%",
+          width: "581px",
           height: "371px",
           backgroundImage: `url(${HeroImage})`,
         }}
