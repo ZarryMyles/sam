@@ -433,9 +433,9 @@ const SmartVision = () => {
           <WorkHeading text={"research"} />
         </div>
         <div class="   ">
-          <div class=" px-5 md:px-24 text-2xl md:text-4xl flex items-center  md:-ml-2  tracking-1.5 font-lato ">
-            <img src={GuideDog} alt="" class="w-9 mr-2" /> Identifying the
-            problem
+          <div class=" px-5 md:px-24 text-2xl md:text-4xl text-left flex   md:-ml-2  tracking-1.5 font-lato ">
+            <img src={GuideDog} alt="" class="w-9 h-9  mr-2  " />{" "}
+            <div>Identifying the problem</div>
           </div>
           <ul className="  list-disc ml-5 px-5 md:px-24">
             <li className="my-3">

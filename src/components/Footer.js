@@ -78,7 +78,7 @@ const Footer = ({ imageEnter, largeEnter }) => {
                     Shradha
                   </div>
                   <div
-                    className=" text-sm md:mt-4 md:text-lg tracking-widest max-w-max font-lato   "
+                    className=" text-sm md:mt-[4px] md:text-lg tracking-widest max-w-max font-lato   "
                     style={{
                       color: "#B5B5B5",
                       fontWeight: "300",
@@ -115,12 +115,7 @@ const Footer = ({ imageEnter, largeEnter }) => {
             ))}
           </div>
         </div>
-        <div
-          style={{
-            fontSize: "10px",
-          }}
-          className=" footerDiv2 shadow-xl text-sm md:text-base  font-lato text-brand-gray flex items-center justify-center p-5 md:p-10"
-        >
+        <div className=" footerDiv2 shadow-xl text-sm md:text-[11px] text-center  font-lato text-brand-gray flex items-center justify-center p-5 md:p-10">
           © {new Date().getFullYear()}. shradha.design . All Rights Reserved.
         </div>
       </AnimationOnScroll>
