@@ -472,7 +472,7 @@ const BillEasyVisual = () => {
           className="bg-scroll mx-7 bg-no-repeat whitespace-nowrap overflow-x-scroll h-[200px]"
         ></div> */}
         <div className="w-full h-full md:hidden">
-          <Marquee speed={10} direction="left">
+          <Marquee speed={7} direction="left">
             <img src={buttons} height="550px" alt="visual" />
           </Marquee>
         </div>

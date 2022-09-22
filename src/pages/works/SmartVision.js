@@ -446,7 +446,6 @@ const SmartVision = () => {
                 people in India are unfamiliar of legal <br /> blindness
               </span>
             </li>
-            <br />
             <li className="my-3">
               I was able to interview two of the teammates with different levels
               of work experience.

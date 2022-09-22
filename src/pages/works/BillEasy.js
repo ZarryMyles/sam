@@ -839,7 +839,7 @@ const BillEasy = () => {
           </div>
           {/* mobile vertical scroll thingy */}
           <div class="md:px-5 block md:hidden relative mt-10 mb-[124px] md:my-0  ">
-            <Marquee speed={10} direction="left">
+            <Marquee speed={7} direction="left">
               <img src={collage} className="  md:w-full" alt="" />
               <img src={collage} className="  md:w-full" alt="" />
               <img src={collage} className="  md:w-full" alt="" />
