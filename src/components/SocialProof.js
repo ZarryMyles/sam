@@ -145,7 +145,7 @@ const SocialProof = ({ imageEnter, largeEnter }) => {
         {feedbacks.map((feedback, index) => (
           <SwiperSlide className="md:hidden w-full h-full">
             <div className="px-5 md:px-24 font-lato py-10 md:py-20 md:pt-0 flex items-center justify-center my-10 md:my-5  bg-brand-black transition-all duration-500">
-              <div class="  flex min-h-[700px]   bg-brand-darkGrey2 pt-10  text-brand-gray w-full px-5  pb-[125px] md:p-24   flex-col md:items-center justify-end relative">
+              <div class="  flex h-[700px]   bg-brand-darkGrey2 pt-10  text-brand-gray w-full px-5  pb-[125px] md:p-24   flex-col md:items-center  relative">
                 <div class=" flex items-center text-brand-gray w-full text-xl uppercase tracking-widest">
                   <div
                     className="font-lato tracking-2 md:tracking-3 text-xs md:text-base text-brand-gray"
@@ -191,11 +191,12 @@ const SocialProof = ({ imageEnter, largeEnter }) => {
                         backgroundImage: `url(${feedback.image})`,
                       }}
                     />
-                    <div class="flex tracking-1 md:tracking-3 ">
+                    <div class=" tracking-1 md:tracking-3 ">
                       <div className="text-xs md:text-xl">
                         {feedback.name},{" "}
                       </div>
-                      <div className="text-xs md:text-xl pl-1">
+
+                      <div className="text-xs md:text-xl ">
                         {feedback.company}
                       </div>
                     </div>

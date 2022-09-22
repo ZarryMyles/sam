@@ -755,36 +755,36 @@ const BillEasy = () => {
             </div>
             <div class="hidden md:block col-span-1"></div>
             <div class="col-span-12 md:col-span-5 h-full flex flex-col justify-center ">
-              <div class="flex w-full justify-between items-center my-3 bg-brand-darkGrey2 rounded-xl my py-3 px-4">
+              <div class="flex w-full justify-between  my-3 bg-brand-darkGrey2 rounded-md my pt-3 pb-[6px] px-4">
                 <img
                   src={persona1}
-                  className="w-10 md:w-14 h-10 md:h-14 mr-5"
+                  className="w-[44px] md:w-14 h-[44px] md:h-14 mr-5"
                   alt=""
                 />
                 <div>
-                  <div className="text-sm font-lato-italic ">
+                  <div className=" text-xs font-lato-italic ">
                     “ I’ve <span style={{ color: "#6AC296" }}>no problem</span>{" "}
                     with the process, I can perform same tasks without external
                     software 🙂 “
                   </div>
                   <div
                     style={{
-                      marginTop: "6px",
+                      marginTop: "2px",
+                      fontSize: "10px",
                     }}
-                    className="text-xs "
                   >
                     Sateesh Grande , Lead Accountant
                   </div>
                 </div>
               </div>
-              <div class="flex w-full justify- items-center  my-3 bg-brand-darkGrey2 rounded-xl my py-3 px-4">
+              <div class="flex w-full justify-   my-3 bg-brand-darkGrey2 rounded-xl my pt-3 pb-[6px] px-4">
                 <img
                   src={persona2}
-                  className="w-10 md:w-14 h-10 md:h-14 mr-5"
+                  className="w-[44px] md:w-14 h-[44px] md:h-14 mr-5"
                   alt=""
                 />
                 <div>
-                  <div className="text-sm font-lato-italic ">
+                  <div className="text-xs font-lato-italic ">
                     “ Feels easy but I keep forgetting, I might’ve a{" "}
                     <span style={{ color: "#6AC296" }}>
                       bad memory Ha Ha Ha!
@@ -793,9 +793,9 @@ const BillEasy = () => {
                   </div>
                   <div
                     style={{
-                      marginTop: "6px",
+                      marginTop: "2px",
+                      fontSize: "10px",
                     }}
-                    className="text-xs "
                   >
                     Srinivas , Accountant
                   </div>
@@ -839,7 +839,7 @@ const BillEasy = () => {
           </div>
           {/* mobile vertical scroll thingy */}
           <div class="md:px-5 block md:hidden relative mt-10 mb-[124px] md:my-0  ">
-            <Marquee speed={5} direction="left">
+            <Marquee speed={10} direction="left">
               <img src={collage} className="  md:w-full" alt="" />
               <img src={collage} className="  md:w-full" alt="" />
               <img src={collage} className="  md:w-full" alt="" />
