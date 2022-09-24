@@ -109,7 +109,7 @@ const BillEasyVisual = () => {
       {loading && (
         <div class="fixed loaderDiv w-screen h-screen">
           {" "}
-          <Loader />{" "}
+          {/* <Loader />{" "} */}
         </div>
       )}
       <Navbar
@@ -467,12 +467,8 @@ const BillEasyVisual = () => {
             </li>
           </ul>
         </div>
-        {/* <div
-          style={{ backgroundImage: `url(${buttons})` }}
-          className="bg-scroll mx-7 bg-no-repeat whitespace-nowrap overflow-x-scroll h-[200px]"
-        ></div> */}
         <div className="w-full h-full md:hidden">
-          <Marquee speed={7} direction="left">
+          <Marquee speed={10} direction="left">
             <img src={buttons} height="550px" alt="visual" />
           </Marquee>
         </div>

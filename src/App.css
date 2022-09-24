@@ -204,3 +204,24 @@ path:nth-child(6) {
     width: 100%;
   }
 }
+
+/* Marquee */
+
+.buttonBg {
+  height: 100%;
+  width: 300%;
+  background-image: url("/src/assets/works/billEasyVisual/Buttons.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  animation: marq 20s infinite;
+}
+
+@keyframes marq {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-144vw);
+  }
+}
