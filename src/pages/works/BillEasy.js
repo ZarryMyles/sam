@@ -842,6 +842,8 @@ const BillEasy = () => {
               <div className="marq">
                 <img src={collage} className="  md:w-full" alt="" />
                 <img src={collage} className="  md:w-full" alt="" />
+                <img src={collage} className="  md:w-full" alt="" />
+                <img src={collage} className="  md:w-full" alt="" />
               </div>
             </div>
           </div>

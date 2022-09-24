@@ -222,7 +222,7 @@ path:nth-child(6) {
   display: flex;
   flex-direction: row;
   align-items: center;
-  animation: marquee-anim 50s linear infinite;
+  animation: marquee-anim 100s linear infinite;
   animation-play-state: running;
   animation-direction: normal;
 }
