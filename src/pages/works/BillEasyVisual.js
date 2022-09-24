@@ -109,7 +109,7 @@ const BillEasyVisual = () => {
       {loading && (
         <div class="fixed loaderDiv w-screen h-screen">
           {" "}
-          {/* <Loader />{" "} */}
+          <Loader />{" "}
         </div>
       )}
       <Navbar
@@ -467,10 +467,15 @@ const BillEasyVisual = () => {
             </li>
           </ul>
         </div>
-        <div className="w-full h-full md:hidden">
+        {/* <div className="w-full h-full md:hidden">
           <Marquee speed={10} direction="left">
             <img src={buttons} height="550px" alt="visual" />
           </Marquee>
+        </div> */}
+        <div className="marqContainer md:hidden">
+          <div className="marq md:hidden">
+            <img src={buttons} height="550px" alt="visual" />
+          </div>
         </div>
         <div className="w-full h-full md:block hidden">
           {" "}

@@ -207,21 +207,40 @@ path:nth-child(6) {
 
 /* Marquee */
 
-.buttonBg {
-  height: 100%;
-  width: 300%;
-  background-image: url("/src/assets/works/billEasyVisual/Buttons.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  animation: marq 20s infinite;
+.marqContainer {
+  overflow-x: hidden !important;
+  display: flex !important;
+  flex-direction: row !important;
+  position: relative;
+  width: 100%;
 }
 
-@keyframes marq {
+.marq {
+  flex: 0 0 auto;
+  min-width: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  animation: marquee-anim 50s linear infinite;
+  animation-play-state: running;
+  animation-direction: normal;
+}
+
+@keyframes marquee-anim {
   0% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(-144vw);
+    transform: translateX(-100%);
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .marqContainer {
+    display: none !important;
+  }
+  .marq {
+    display: none !important;
   }
 }
