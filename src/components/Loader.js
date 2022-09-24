@@ -2,7 +2,7 @@ import React from "react";
 
 const Loader = () => {
   return (
-    <div className="flex loaderDiv z-10 text-brand-white flex-col p-6 justify-center text- items-center bg-brand-darkGrey w-screen h-screen">
+    <div className="flex loaderDiv z-10 text-brand-white flex-col p-6 justify-center  items-center bg-brand-darkGrey w-screen h-screen">
       <div className="font-lato-light font-light md:text-4xl text-2xl mb-5 md:mb-7">
         Shradha
       </div>
