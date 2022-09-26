@@ -115,7 +115,7 @@ const Footer = ({ imageEnter, largeEnter }) => {
             ))}
           </div>
         </div>
-        <div className=" footerDiv2 shadow-xl text-sm md:text-[11px] text-center  font-lato text-brand-gray flex items-center justify-center p-5 md:p-10">
+        <div className=" footerDiv2 shadow-xl text-xs md:text-[11px] text-center  font-lato text-brand-gray flex items-center justify-center p-5 md:p-10">
           © {new Date().getFullYear()}. shradha.design . All Rights Reserved.
         </div>
       </AnimationOnScroll>
