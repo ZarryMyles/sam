@@ -204,3 +204,43 @@ path:nth-child(6) {
     width: 100%;
   }
 }
+
+/* Marquee */
+
+.marqContainer {
+  overflow-x: hidden !important;
+  display: flex !important;
+  flex-direction: row !important;
+  position: relative;
+  width: 100%;
+}
+
+.marq {
+  flex: 0 0 auto;
+  min-width: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  animation: marquee-anim 100s linear infinite;
+  animation-play-state: running;
+  animation-direction: normal;
+}
+
+@keyframes marquee-anim {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .marqContainer {
+    display: none !important;
+  }
+  .marq {
+    display: none !important;
+  }
+}
