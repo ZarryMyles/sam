@@ -3,28 +3,32 @@ import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import $ from "jquery";
 
-const Navbar = ({ largeEnter, imageEnter, defaultColor }) => {
+const Navbar = ({ largeEnter, imageEnter, defaultColor, callHome }) => {
   const resumeLink = process.env.REACT_APP_RESUME_URL;
   // console.log(resumeLink);
   const links = [
     {
       name: "Work",
       link: "/#work",
+      noHome: "/",
       targ: "",
     },
     {
       name: "About",
       link: "/about",
+      noHome: "/about",
       targ: "",
     },
     {
       name: "Contact",
       link: "/#get-in-touch",
+      noHome: "/",
       targ: "",
     },
     {
       name: "Resume",
       targ: "_blank",
+      noHome: resumeLink,
       link: resumeLink,
     },
   ];
@@ -95,23 +99,34 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor }) => {
           style={{ color: "#b5b5b5" }}
           className="flex tracking-1.5 flex-row "
         >
-          <Link
-            activeClass="active"
-            to="work"
-            spy={true}
-            smooth={true}
-            duration={500}
-            className="block md:inline-block p-2 no-underline border-none"
-          >
+          {callHome ? (
+            <Link
+              activeClass="active"
+              to="work"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className="block md:inline-block p-2 no-underline border-none"
+            >
+              <a
+                href="/#work"
+                onMouseEnter={largeEnter}
+                onMouseLeave={imageEnter}
+                className="text-lg font-lato cursor-pointer block md:inline-block p-2 no-underline border-none"
+              >
+                Work
+              </a>
+            </Link>
+          ) : (
             <a
-              href="/#work"
+              href="/"
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
-              className="text-lg font-lato cursor-pointer block md:inline-block p-2 no-underline border-none"
+              className="text-lg font-lato cursor-pointer block md:inline-block p-4 no-underline border-none"
             >
               Work
             </a>
-          </Link>
+          )}
           <a
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
@@ -121,23 +136,34 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor }) => {
           >
             About
           </a>
-          <Link
-            activeClass="active"
-            to="get-in-touch"
-            spy={true}
-            smooth={true}
-            duration={500}
-            className="block md:inline-block p-2 no-underline border-none"
-          >
+          {callHome ? (
+            <Link
+              activeClass="active"
+              to="get-in-touch"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className="block md:inline-block p-2 no-underline border-none"
+            >
+              <a
+                href="/#get-in-touch"
+                onMouseEnter={largeEnter}
+                onMouseLeave={imageEnter}
+                className="text-lg font-lato cursor-pointer block md:inline-block p-2 no-underline border-none"
+              >
+                Contact
+              </a>
+            </Link>
+          ) : (
             <a
-              href="/#get-in-touch"
+              href={callHome ? "/#get-in-touch" : "/"}
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
-              className="text-lg font-lato cursor-pointer block md:inline-block p-2 no-underline border-none"
+              className="text-lg font-lato cursor-pointer block md:inline-block p-4 no-underline border-none"
             >
               Contact
             </a>
-          </Link>
+          )}
           <a
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
@@ -174,23 +200,34 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor }) => {
           style={{ color: "#b5b5b5" }}
           className="flex tracking-1.5 flex-row "
         >
-          <Link
-            activeClass="active"
-            to="work"
-            spy={true}
-            smooth={true}
-            duration={500}
-            className="block md:inline-block px-2 no-underline border-none"
-          >
+          {callHome ? (
+            <Link
+              activeClass="active"
+              to="work"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className="block md:inline-block px-2 no-underline border-none"
+            >
+              <a
+                href="/#work"
+                onMouseEnter={largeEnter}
+                onMouseLeave={imageEnter}
+                className="text-lg font-lato cursor-pointer block md:inline-block px-2 no-underline border-none"
+              >
+                Work
+              </a>
+            </Link>
+          ) : (
             <a
-              href="/#work"
+              href="/"
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
-              className="text-lg font-lato cursor-pointer block md:inline-block px-2 no-underline border-none"
+              className="text-lg font-lato cursor-pointer block md:inline-block px-4 no-underline border-none"
             >
               Work
             </a>
-          </Link>
+          )}
           <a
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
@@ -200,23 +237,35 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor }) => {
           >
             About
           </a>
-          <Link
-            activeClass="active"
-            to="get-in-touch"
-            spy={true}
-            smooth={true}
-            duration={500}
-            className="block md:inline-block px-2 no-underline border-none"
-          >
+          {callHome ? (
+            <Link
+              activeClass="active"
+              to="get-in-touch"
+              spy={true}
+              smooth={true}
+              duration={500}
+              className="block md:inline-block px-2 no-underline border-none"
+            >
+              <a
+                href="/#get-in-touch"
+                onMouseEnter={largeEnter}
+                onMouseLeave={imageEnter}
+                className="text-lg font-lato cursor-pointer block md:inline-block px-2 no-underline border-none"
+              >
+                Contact
+              </a>
+            </Link>
+          ) : (
             <a
-              href="/#get-in-touch"
+              href="/"
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
-              className="text-lg font-lato cursor-pointer block md:inline-block px-2 no-underline border-none"
+              className="text-lg font-lato cursor-pointer block md:inline-block px-4 no-underline border-none"
             >
               Contact
             </a>
-          </Link>
+          )}
+
           <a
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
@@ -243,7 +292,11 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor }) => {
         >
           {links.map((value, key) => (
             <div key={key} className="block" onClick={resize}>
-              <a href={value.link} target={value.targ} rel="noreferrer">
+              <a
+                href={callHome ? value.link : value.noHome}
+                target={value.targ}
+                rel="noreferrer"
+              >
                 {value.name}
               </a>
             </div>
