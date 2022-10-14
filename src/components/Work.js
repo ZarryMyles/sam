@@ -237,7 +237,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
                 src={work.video}
                 // alt="loading..."
               />
-              <div class="absolute w-full h-full bg-black opacity-50 left-0 top-0"></div>
+              <div class="absolute w-full h-full bg-black opacity-60 left-0 top-0"></div>
             </div>
           ) : (
             <div
@@ -259,7 +259,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
               >
                 <source src={work.video} type="video/mp4" />
               </video>
-              <div class="absolute w-full h-full bg-black opacity-50 left-0 top-0"></div>
+              <div class="absolute w-full h-full bg-black opacity-60 left-0 top-0"></div>
             </div>
           )
         )}
