@@ -1,5 +1,6 @@
-# Getting Started with Create React App
+# Portfolio Site of Shradha
 
+Deployment: [https://shradha.design](https://shradha.design)<br/>
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
