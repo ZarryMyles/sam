@@ -28,3 +28,4 @@ export { default as Ladder } from "./Ladder.svg";
 export { default as Placard } from "./Placard.svg";
 export { default as Pointer } from "./Pointer.svg";
 export { default as GrinningFace } from "./GrinningFace.svg";
+export { default as arrowRight } from "./pinkCta.svg";

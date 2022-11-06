@@ -21,6 +21,11 @@ const Footer = ({ imageEnter, largeEnter }) => {
       link: "https://www.linkedin.com/in/shradha-b-k",
       target: "_blank",
     },
+    {
+      name: "Dribble",
+      link: "https://dribbble.com/Shradha_b_k",
+      target: "_blank",
+    },
 
     {
       name: "Resume",

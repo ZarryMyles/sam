@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ChevronRight, ChevronLeft, ArrowRightCircle } from "react-feather";
+import { arrowRight } from "../assets/icons/fluent";
 import WorkVideoMob from "./WorkVideoMob";
 
 const works = [
@@ -17,6 +18,10 @@ const works = [
     mobVideo:
       "https://res.cloudinary.com/samydoo/video/upload/v1663049954/SamWebsite/Work/Desktop/BillEasy-short_yhhk58_kyqft8.webm",
     link: "/billeasy",
+    cta: "View Research",
+    cta2: "Product Presentation",
+    cta2Link:
+      "https://www.figma.com/proto/5rQaNyCPAiVrvlftmI0Oup/Website?page-id=279%3A302&node-id=1228%3A11865&viewport=-3699%2C-8383%2C0.4&scaling=contain&starting-point-node-id=1228%3A11865",
   },
 
   {
@@ -35,6 +40,8 @@ const works = [
       "https://res.cloudinary.com/samydoo/video/upload/v1663016142/SamWebsite/Work/Mobile/Mob_BillEasy_Visual_v1xkni_njlrpg.webm",
 
     link: "/billeasy-visual-design",
+    cta: "View visual design",
+    cta2: "Product Presentation",
   },
 
   {
@@ -51,6 +58,7 @@ const works = [
     mobVideo:
       "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/Comp_1_tdwzlp.gif",
     link: "/smartvision",
+    cta: "View case study",
   },
   {
     id: 4,
@@ -66,6 +74,7 @@ const works = [
     mobVideo:
       "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/render_s6dzdu.gif",
     link: "/happilyever",
+    cta: "View case study",
   },
 ];
 const LandingSection = ({ imageEnter, largeEnter }) => {
@@ -126,7 +135,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
               href={activeWork.link}
-              class=" py-4 duration-100 transition-all  w-max  flex items-center my-3 rounded-l-full rounded-r-full text-white  max-w-max tracking-wider             "
+              class=" pt-4 duration-100 transition-all  w-max  flex items-center my-3 rounded-l-full rounded-r-full text-white  max-w-max tracking-wider             "
             >
               <ArrowRightCircle
                 color="#fefefe"
@@ -136,17 +145,39 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
                 class="  mr-4    "
               />
               <div
-                class=" text-sm md:text-lg tracking-3  font-lato"
+                class=" text-sm md:text-lg tracking-3 uppercase  font-lato"
                 style={{
                   letterSpacing: "3px",
                   color: "#fefefe",
                   fontSize: "16px",
                 }}
               >
-                VIEW CASE
+                {activeWork.cta}
               </div>
             </a>
           </div>
+          {activeWork.cta2 && (
+            <div className="">
+              <a
+                onMouseEnter={largeEnter}
+                onMouseLeave={imageEnter}
+                href={activeWork.cta2Link}
+                class=" my-6 duration-100 transition-all  w-max  flex items-center  rounded-l-full rounded-r-full text-white  max-w-max tracking-wider             "
+              >
+                <img src={arrowRight} alt="" class="w-[30px] mr-4" />
+                <div
+                  class=" text-sm md:text-lg tracking-3 uppercase  font-lato"
+                  style={{
+                    letterSpacing: "3px",
+                    color: "#fefefe",
+                    fontSize: "16px",
+                  }}
+                >
+                  {activeWork.cta2}
+                </div>
+              </a>
+            </div>
+          )}
         </div>
         {/* the no. with text stroke */}
         <div class="hidden md:flex w-full md:w-auto absolute bottom-10  md:bottom-2  md:right-24   flex-col items-center ">

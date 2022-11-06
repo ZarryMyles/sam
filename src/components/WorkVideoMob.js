@@ -2,6 +2,7 @@ import React from "react";
 import { ChevronRight, ChevronLeft, ArrowRightCircle } from "react-feather";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
+import { arrowRight } from "../assets/icons/fluent";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -24,6 +25,10 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
       mobVideo:
         "https://res.cloudinary.com/samydoo/video/upload/v1663049954/SamWebsite/Work/Desktop/BillEasy-short_yhhk58_kyqft8.webm",
       link: "/billeasy",
+      cta: "View Research",
+      cta2: "Product Presentation",
+      cta2Link:
+        "https://www.figma.com/proto/5rQaNyCPAiVrvlftmI0Oup/Website?page-id=279%3A302&node-id=1228%3A11865&viewport=-3699%2C-8383%2C0.4&scaling=contain&starting-point-node-id=1228%3A11865",
     },
     {
       id: 2,
@@ -42,6 +47,8 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
         "https://res.cloudinary.com/samydoo/video/upload/v1663017008/SamWebsite/Work/Desktop/BillEasy_Visual_hzrwgo_rmmpq4.webm",
 
       link: "/billeasy-visual-design",
+      cta: "View visual design",
+      cta2: "Product Presentation",
     },
     {
       id: 3,
@@ -59,6 +66,7 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
       mobVideo:
         "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/Comp_1_tdwzlp.gif",
       link: "/smartvision",
+      cta: "View case study",
     },
     {
       id: 4,
@@ -76,6 +84,7 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
       mobVideo:
         "https://res.cloudinary.com/genesiscloudimages/image/upload/v1660394155/work_gifs/render_s6dzdu.gif",
       link: "/happilyever",
+      cta: "View case study",
     },
   ];
   const pagination = {
@@ -148,7 +157,7 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
                       onMouseEnter={largeEnter}
                       onMouseLeave={imageEnter}
                       href={work.link}
-                      class=" py-4 duration-100 transition-all  w-max  flex items-center my-3 rounded-l-full rounded-r-full text-white  max-w-max tracking-wider             "
+                      class=" pt-4 duration-100 transition-all  w-max  flex items-center my-3 rounded-l-full rounded-r-full text-white  max-w-max tracking-wider             "
                     >
                       <ArrowRightCircle
                         color="#fefefe"
@@ -158,17 +167,39 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
                         class="  mr-4    "
                       />
                       <div
-                        class=" text-sm md:text-lg tracking-3  font-lato"
+                        class=" text-sm md:text-lg tracking-3 upper  font-lato"
                         style={{
                           letterSpacing: "3px",
                           color: "#fefefe",
                           fontSize: "16px",
                         }}
                       >
-                        VIEW CASE
+                        {work.cta}
                       </div>
                     </a>
                   </div>
+                  {work.cta2 && (
+                    <div className="">
+                      <a
+                        onMouseEnter={largeEnter}
+                        onMouseLeave={imageEnter}
+                        href={work.cta2Link}
+                        class=" my-6 duration-100 transition-all  w-max  flex items-center  rounded-l-full rounded-r-full text-white  max-w-max tracking-wider             "
+                      >
+                        <img src={arrowRight} alt="" class="w-[30px] mr-4" />
+                        <div
+                          class=" text-sm md:text-lg tracking-3  font-lato"
+                          style={{
+                            letterSpacing: "3px",
+                            color: "#fefefe",
+                            fontSize: "16px",
+                          }}
+                        >
+                          {work.cta2}
+                        </div>
+                      </a>
+                    </div>
+                  )}
                 </div>
                 {/* the no. with text stroke */}
                 <div class="hidden md:flex w-full md:w-auto absolute bottom-10  md:bottom-2  md:right-24   flex-col items-center ">
