@@ -26,7 +26,7 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
         "https://res.cloudinary.com/samydoo/video/upload/v1663049954/SamWebsite/Work/Desktop/BillEasy-short_yhhk58_kyqft8.webm",
       link: "/billeasy",
       cta: "View Research",
-      cta2: "Product Presentation",
+      cta2: "Product presentation",
       cta2Link:
         "https://www.figma.com/proto/5rQaNyCPAiVrvlftmI0Oup/Website?page-id=279%3A302&node-id=1228%3A11865&viewport=-3699%2C-8383%2C0.4&scaling=contain&starting-point-node-id=1228%3A11865",
     },
@@ -48,7 +48,7 @@ const WorkVideoMob = ({ imageEnter, largeEnter }) => {
 
       link: "/billeasy-visual-design",
       cta: "View visual design",
-      cta2: "Product Presentation",
+      cta2: "Product presentation",
       cta2Link:
         "https://www.figma.com/proto/5rQaNyCPAiVrvlftmI0Oup/Website?page-id=279%3A302&node-id=1228%3A11865&viewport=-3699%2C-8383%2C0.4&scaling=contain&starting-point-node-id=1228%3A11865",
     },
