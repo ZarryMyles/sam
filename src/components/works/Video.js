@@ -55,7 +55,7 @@ const Video = ({ work, largeEnter, imageEnter }) => {
           setShowOverlay(false);
         }}
         class={`absolute bg-black  transition-all duration-300 w-full h-full top-0 left-0 ${
-          !showOverlay ? " hidden" : "opacity-50"
+          !showOverlay ? " hidden" : "opacity-60"
         }`}
       >
         {/* {videoswitch ? (

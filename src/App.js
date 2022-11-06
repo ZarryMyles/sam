@@ -96,6 +96,7 @@ function App() {
           imageEnter={imageEnter}
           largeEnter={largeEnter}
           defaultColor={"white"}
+          callHome={true}
         />
         <div
           id="sections"
