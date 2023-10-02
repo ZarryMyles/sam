@@ -38,6 +38,7 @@ module.exports = {
         black: "#0D0D0D",
         white: "#fefefe",
         pink: "#ffc7d1",
+        gold: "#FFEE8C",
         loaderGray: "#323232",
         boxWhite: "#fafafa",
       },

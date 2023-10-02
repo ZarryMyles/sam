@@ -1,5 +1,4 @@
 import React from "react";
-import { ArrowRightCircle } from "react-feather";
 import HeroImage from "../assets/landingpage/sam.jpg";
 
 const LandingSection = ({ imageEnter, largeEnter }) => {
@@ -28,7 +27,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
         </h1>
         <div
           style={{
-            // width: "520px",
+            // width: "581px",
             height: "260px",
             backgroundImage: `url(${HeroImage})`,
             // left: "746px",
@@ -43,34 +42,25 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
             rel="noreferrer"
             class=" py-2 md:py-4 flex justify-center items-center md:ml-4 mt-2 md:mt-0 rounded-l-full rounded-r-full text-white  max-w-max tracking-wider"
           >
-            <ArrowRightCircle
-              color="#FFC7D1"
-              width={30}
-              height={30}
-              onMouseEnter={largeEnter}
-              onMouseLeave={imageEnter}
-              strokeWidth={1}
-              class=" text-3xl   mr-4  rounded-full   "
-            />
             <div
               style={{
                 letterSpacing: "0.2em",
-                color: "#FFC7D1",
+                color: "#FFEE8C",
                 fontSize: "16px",
               }}
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
-              class="uppercase font-lato"
+              class="uppercase font-lato border-2 rounded-full py-[18px] pl-5 pr-4 border-[#A79F74]"
             >
-              Work with me
+              Work with me ✨
             </div>
           </a>
         </div>
       </div>
       <div
         style={{
-          width: "581px",
-          height: "371px",
+          width: "371px",
+          height: "500px",
           backgroundImage: `url(${HeroImage})`,
         }}
         class="hidden md:block absolute z-10 bg-gray-500  right-52 bottom-10 bg-cover bg-center bg-no-repeat"

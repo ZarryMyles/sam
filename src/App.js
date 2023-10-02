@@ -44,14 +44,14 @@ function App() {
       width: 50,
       x: mousePos.x - 25,
       y: mousePos.y - 25,
-      backgroundColor: "#ffc7d1",
+      backgroundColor: "#FFEE8C",
       mixBlendMode: "difference",
       bounce: 0,
     },
     secondary: {
       x: mousePos.x - 10,
       y: mousePos.y - 10,
-      backgroundColor: "#ffc7d1",
+      backgroundColor: "#FFEE8C",
       mixBlendMode: "difference",
       transition: {
         type: "spring",
@@ -63,7 +63,7 @@ function App() {
       width: 80,
       x: mousePos.x - 40,
       y: mousePos.y - 40,
-      backgroundColor: "#ffc7d1",
+      backgroundColor: "#FFEE8C",
       mixBlendMode: "difference",
       transition: {
         type: "spring",

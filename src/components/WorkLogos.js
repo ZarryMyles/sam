@@ -101,7 +101,7 @@ const WorkLogos = ({ imageEnter, largeEnter }) => {
               style={{
                 fontWeight: "100",
               }}
-              className="px-10 flex my-7 items-center text-xl md:text-4xl tracking-1.5  dark:text-brand-gray font-lato-light   md:mx-3"
+              className="px-10 flex my-7 items-center text-xl md:text-4xl tracking-1.5  dark:text-brand-gold font-lato-light   md:mx-3"
             >
               {client.name}
             </a>
@@ -115,7 +115,7 @@ const WorkLogos = ({ imageEnter, largeEnter }) => {
               rel="noopener noreferrer"
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
-              className="px-10 flex mb-5 items-center  font-lora-italic  text-xl md:text-4xl tracking-1.5  dark:text-brand-gray md:mx-3"
+              className="px-10 flex mb-5 items-center  font-lora-italic  text-xl md:text-4xl tracking-1.5  dark:text-brand-gold md:mx-3"
             >
               {client.name}
             </a>

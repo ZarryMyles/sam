@@ -90,7 +90,7 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor, callHome }) => {
             className="font-lora-italic text-2xl top-0 overflow-hidden  flex flex-row items-center "
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
-            style={{ color: "#b5b5b5" }}
+            style={{ color: "#FFEE8C" }}
           >
             S
           </div>
@@ -191,7 +191,7 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor, callHome }) => {
             className="font-lora-italic  text-2xl top-0 overflow-hidden  flex flex-row items-center "
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
-            style={{ color: "#b5b5b5" }}
+            style={{ color: "#FFEE8C" }}
           >
             S
           </div>

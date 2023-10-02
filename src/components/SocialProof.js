@@ -114,11 +114,11 @@ const SocialProof = ({ imageEnter, largeEnter }) => {
                   <div
                     style={{
                       height: "2px",
-                      color: "#ffc7d1",
+                      color: "#FFEE8C",
                     }}
                     class={` transition-all duration-200 rounded-l-full rounded-r-full ${
                       item.name === feedback.name
-                        ? "bg-black dark:bg-brand-pink w-6 "
+                        ? "bg-black dark:bg-brand-gold w-6 "
                         : " bg-gray-500 w-4"
                     }   mx-1 `}
                   />
@@ -131,7 +131,7 @@ const SocialProof = ({ imageEnter, largeEnter }) => {
             className="absolute -bottom-5 md:-bottom-6 right-6 md:right-10 w-10 md:w-14 h-10 md:h-14 fill-black dark:fill-white "
             stroke="none"
             style={{
-              fill: "#ffc7d1",
+              fill: "#FFEE8C",
             }}
           />
         </div>
@@ -201,7 +201,7 @@ const SocialProof = ({ imageEnter, largeEnter }) => {
           className="absolute bottom-16 right-10 w-10 h-10 z-20 "
           stroke="none"
           style={{
-            fill: "#ffc7d1",
+            fill: "#FFEE8C",
           }}
         />
       </Swiper>

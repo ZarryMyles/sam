@@ -68,7 +68,7 @@ const Footer = ({ imageEnter, largeEnter }) => {
           <div
             className="flex text-gray-400 flex-col justify-center  md:w-2/6 mb-5 md:mb-0"
             style={{
-              color: "#FFC7D1",
+              color: "#fff",
             }}
           >
             <ul
@@ -80,16 +80,10 @@ const Footer = ({ imageEnter, largeEnter }) => {
               <li className=" " variants={item}>
                 <>
                   <div className=" max-w-max text-base md:text-[32px] tracking-[0.04em] font-lora-italic">
-                    Shradha
-                  </div>
-                  <div
-                    className=" text-sm md:mt-[4px] md:text-lg tracking-widest max-w-max font-lato   "
-                    style={{
-                      color: "#B5B5B5",
-                      fontWeight: "300",
-                    }}
-                  >
-                    Product Designer
+                    Shradha,{" "}
+                    <span className="font-lato text-lg font-normal text-[#B6B6B6]">
+                      UX Researcher
+                    </span>
                   </div>
                 </>
               </li>
@@ -121,7 +115,7 @@ const Footer = ({ imageEnter, largeEnter }) => {
           </div>
         </div>
         <div className=" footerDiv2 shadow-xl text-xs md:text-[11px] text-center  font-lato text-brand-gray flex items-center justify-center p-5 md:p-10">
-          © {new Date().getFullYear()}. shradha.design . All Rights Reserved.
+          © {new Date().getFullYear()}. shradha.research . All Rights Reserved.
         </div>
       </AnimationOnScroll>
     </div>

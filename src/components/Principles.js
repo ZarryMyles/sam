@@ -25,7 +25,7 @@ const Principles = ({ largeEnter, imageEnter }) => {
             <div class="  text-2xl  mt-7 md:mt-12 mb-3">Understand</div>
             <div class="text-center leading-6 text-base ">
               The process of design is to <br className="md:hidden" />
-              <span className="text-brand-pink">understand minds.</span>
+              <span className="text-brand-gold">understand minds.</span>
             </div>
           </div>
         </div>
@@ -34,8 +34,8 @@ const Principles = ({ largeEnter, imageEnter }) => {
             <img src={prin2} alt="" className=" w-16 h-16" />
             <div class="  text-2xl  mt-7 md:mt-12 mb-3">Vision</div>
             <div class="text-center leading-6 text-base ">
-              A <span className="text-brand-pink">clear vision</span> and{" "}
-              <span className="text-brand-pink">purpose</span> is a{" "}
+              A <span className="text-brand-gold">clear vision</span> and{" "}
+              <span className="text-brand-gold">purpose</span> is a{" "}
               <br className="md:hidden" /> driving force for any product.
             </div>
           </div>
@@ -45,8 +45,8 @@ const Principles = ({ largeEnter, imageEnter }) => {
             <img src={prin3} alt="" className=" w-16 h-16" />
             <div class="  text-2xl  mt-7 md:mt-12 mb-3">Perspective</div>
             <div class="text-center leading-6 text-base ">
-              <span className="text-brand-pink">Diverse perspectives</span> and{" "}
-              <span className="text-brand-pink">common goals</span>{" "}
+              <span className="text-brand-gold">Diverse perspectives</span> and{" "}
+              <span className="text-brand-gold">common goals</span>{" "}
               <br className="md:hidden" />
               are the recipes for fantastic teams.
             </div>
