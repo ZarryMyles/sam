@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { GetInTouch, Principles, Navbar } from "../components";
+import { GetInTouch, Principles, Navbar, Footer } from "../components";
 import { ReactComponent as Quote } from "../assets/icons/quotestart.svg";
 import { useTitle } from "../hooks/useTitle";
-import { WorkHeading } from "../components";
-import HeroImage from "../assets/landingpage/sam.jpg";
+// import { WorkHeading } from "../components";
+import HeroImage from "../assets/about/about.png";
 
 const About = () => {
   useTitle("About");
@@ -66,17 +66,13 @@ const About = () => {
       <div
         onMouseEnter={imageEnter}
         onMouseLeave={imageEnter}
-        className="w-full h-auto font-lato pt-10 bg-brand-black text-brand-white "
+        className="w-full h-auto font-lato pt-10 bg-brand-black text-[#fefefe] "
       >
         {/* landing section */}
-        <div class=" h-screen  w-full  px-5 md:pr-0 md:pl-48 pt-10 md:py-20 flex flex-col md:flex-row md:items-center md:justify-center">
-          <div class="w-full md:w-5/10 h-full flex flex-col justify-center items-start tracking-wide ">
+        <div class="h-screen relative  w-full md:px-48  md:pr-0 md:pl-48 pt-10 md:py-20 flex flex-col md:flex-row md:items-center md:justify-start">
+          <div class="w-full md:w-4/7 z-20 pt-10 md:pt-0 px-7 flex flex-col justify-center items-start tracking-wide ">
             <div class="text-brand-white relative text-[26px] md:text-4xl  w-full ">
-              <div
-                onMouseEnter={largeEnter}
-                onMouseLeave={imageEnter}
-                // class="md:-mr-10 "
-              >
+              <div onMouseEnter={largeEnter} onMouseLeave={imageEnter}>
                 Hey there!
               </div>
             </div>
@@ -84,9 +80,9 @@ const About = () => {
               style={{
                 letterSpacing: "0.4px",
               }}
-              class="  text-base md:text-lg leading-[28px] md:leading-9  w-full  my-8 md:my-10 text-justify "
+              class="text-lg leading-[30px] md:leading-9 text-[#fefefe] w-full my-8 md:my-10 md:text-justify "
             >
-              I’m Shradha. <br />A UX Researcher who works with the purpose, I
+              I’m Shradha. <br />A UX Researcher who works with a purpose, I
               indulge myself in{" "}
               <span className="text-brand-gold">
                 understanding and studying people’s patterns.
@@ -99,74 +95,19 @@ const About = () => {
                 technological and humanistic values.
               </span>
             </div>
-            {/* <div
-              onMouseEnter={largeEnter}
-              onMouseLeave={imageEnter}
-              class="text-brand-darkGrey3 text-xl mb-1  flex items-center "
-            >
-              <div className="font-lora-italic">Shradha</div>
-              <div
-                style={{
-                  height: "1px",
-                  width: "40px",
-                }}
-                class="  ml-4 mr-1  w-20 bg-brand-darkGrey3"
-              />
-            </div>
-            <div class="text-lg  ">Product Designer</div> */}
           </div>
-          <div class=" md:w-5/10 h-92 md:h-full bg-brand-darkGrey2 rounded-lg hidden md:flex justify-center items-center md:p-20">
-            <div
-              style={{
-                backgroundImage: `url(${HeroImage})`,
-              }}
-              class="bg-center  bg-no-repeat bg-cover h-full  w-full"
-            />
-          </div>
-        </div>
-        {/* landing image for phone only */}
-        <img src={HeroImage} alt="" class="w-full block md:hidden mb-[178px]" />
-        {/* principles abide */}
-        {/* <div class="bg-brand-darkGrey2 md:pt-16 md:mt-40 py-10 px-5 md:px-48  ">
-          <WorkHeading text={"about"} />
-          <div class=" text-2xl -mt-[14px] mb-8">Motivations</div>
           <div
             style={{
-              letterSpacing: "0.4px",
+              width: "580px",
+              height: "435px",
+              background: `url(${HeroImage})`,
+              backgroundSize: "contain",
             }}
-            class="flex flex-col md:flex-row w-full text-base md:text-lg leading-[28px] tracking-[0.4px] md:leading-9 text-justify md:pb-20"
-          >
-            <div class="w-full md:w-1/2 md:pr-16 mb-10 md:my-0 ">
-              <div>Interests</div>
-              <div>
-                I enjoy gaining new experiences, my latest interest has been in
-                learning to play the guitar. In my spare time, I like to put my
-                artistic interest to use. On a regular basis, I am keen on going
-                for <span class="text-brand-gold">nature walks</span> and{" "}
-                <span class="text-brand-gold">
-                  {" "}
-                  meeting my four-legged furry friends 🐕‍🦺
-                </span>
-              </div>
-            </div>
-            <div class="w-full md:w-1/2 md:pl-16  md:my-0">
-              <div>Skills</div>
-              <div>
-                With strong insights in{" "}
-                <span class="text-brand-gold">Research</span> and{" "}
-                <span class="text-brand-gold">Analytical skills,</span> I{" "}
-                <br className="hidden md:block" /> have been able to develop{" "}
-                <span class="text-brand-gold">Interactive prototypes</span> and{" "}
-                <br className="hidden md:block" />{" "}
-                <span class="text-brand-gold">Consumer-centric designs.</span>
-                <ul class="ml-4 list-disc">
-                  <li>UI & UX Design </li>
-                  <li>Visual design</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div> */}
+            className="md:absolute md:block hidden top-56 right-40 bg-red-300"
+          ></div>
+          {/* landing image for phone only */}
+          <img src={HeroImage} alt="" class="w-full block md:hidden" />
+        </div>
         {/* quote */}
         <div class="md:h-screen flex mt-[200px] mb-[200px] md:mt-0 md:mb-0 justify-center items-center px-5 ">
           <div
@@ -188,6 +129,7 @@ const About = () => {
         <div className="mt-[130px] md:mt-0">
           <GetInTouch imageEnter={imageEnter} largeEnter={largeEnter} />
         </div>
+        <Footer imageEnter={imageEnter} largeEnter={largeEnter} />
         <motion.div
           className="cursor hidden md:flex"
           variants={variants}

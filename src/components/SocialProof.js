@@ -131,7 +131,7 @@ const SocialProof = ({ imageEnter, largeEnter }) => {
             className="absolute -bottom-5 md:-bottom-6 right-6 md:right-10 w-10 md:w-14 h-10 md:h-14 fill-black dark:fill-white "
             stroke="none"
             style={{
-              fill: "#FFEE8C",
+              fill: "#979797",
             }}
           />
         </div>
@@ -201,7 +201,7 @@ const SocialProof = ({ imageEnter, largeEnter }) => {
           className="absolute bottom-16 right-10 w-10 h-10 z-20 "
           stroke="none"
           style={{
-            fill: "#FFEE8C",
+            fill: "#979797",
           }}
         />
       </Swiper>

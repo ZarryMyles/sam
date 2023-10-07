@@ -7,10 +7,10 @@ import App from "./App";
 import {
   Error,
   About,
-  BillEasyPage,
-  SmartVision,
-  BillEasyVisual,
-  HappilyEver,
+  // BillEasyPage,
+  // SmartVision,
+  // BillEasyVisual,
+  // HappilyEver,
 } from "./pages";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -20,11 +20,11 @@ root.render(
       <Route path="/" element={<App />} />
       <Route path="about" element={<About />} />
       {/* works */}
-      <Route path="billeasy" element={<BillEasyPage />} />
+      {/* <Route path="billeasy" element={<BillEasyPage />} />
       <Route path="smart-vision" element={<SmartVision />} />
       <Route path="billeasy-visual-design" element={<BillEasyVisual />} />
       <Route path="happilyever" element={<HappilyEver />} />
-      <Route path="smartvision" element={<SmartVision />} />
+      <Route path="smartvision" element={<SmartVision />} /> */}
 
       <Route path="*" element={<Error />} />
     </Routes>

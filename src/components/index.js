@@ -2,7 +2,8 @@ export { default as Navbar } from "./Navbar";
 export { default as Loader } from "./Loader";
 // home page
 export { default as LandingSection } from "./LandingSection";
-export { default as Work } from "./Work";
+// export { default as Work } from "./Work";
+export { default as NewWork } from "./NewWork";
 export { default as WorkLogos } from "./WorkLogos";
 export { default as SocialProof } from "./SocialProof";
 export { default as GetInTouch } from "./GetInTouch";

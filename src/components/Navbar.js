@@ -96,7 +96,7 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor, callHome }) => {
           </div>
         </a>
         <div
-          style={{ color: "#b5b5b5" }}
+          style={{ color: "#fefefe" }}
           className="flex tracking-1.5 flex-row "
         >
           {callHome ? (
@@ -197,7 +197,7 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor, callHome }) => {
           </div>
         </a>
         <div
-          style={{ color: "#b5b5b5" }}
+          style={{ color: "#fefefe" }}
           className="flex tracking-1.5 flex-row "
         >
           {callHome ? (

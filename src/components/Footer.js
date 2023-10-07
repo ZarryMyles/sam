@@ -80,8 +80,11 @@ const Footer = ({ imageEnter, largeEnter }) => {
               <li className=" " variants={item}>
                 <>
                   <div className=" max-w-max text-base md:text-[32px] tracking-[0.04em] font-lora-italic">
-                    Shradha,{" "}
-                    <span className="font-lato text-lg font-normal text-[#B6B6B6]">
+                    Shradha<span className="hidden md:inline-block">,</span>{" "}
+                    <span className="md:hidden">
+                      <br />
+                    </span>
+                    <span className="font-lato md:text-lg text-sm font-normal text-[#B6B6B6]">
                       UX Researcher
                     </span>
                   </div>
@@ -114,7 +117,7 @@ const Footer = ({ imageEnter, largeEnter }) => {
             ))}
           </div>
         </div>
-        <div className=" footerDiv2 shadow-xl text-xs md:text-[11px] text-center  font-lato text-brand-gray flex items-center justify-center p-5 md:p-10">
+        <div className=" footerDiv2 shadow-xl text-[11px] text-center  font-lato text-brand-gray flex items-center justify-center p-5 md:p-10">
           © {new Date().getFullYear()}. shradha.research . All Rights Reserved.
         </div>
       </AnimationOnScroll>
