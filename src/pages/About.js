@@ -102,6 +102,7 @@ const About = () => {
               height: "435px",
               background: `url(${HeroImage})`,
               backgroundSize: "contain",
+              borderRadius: "10px",
             }}
             className="md:absolute md:block hidden top-56 right-40 bg-red-300"
           ></div>
@@ -109,7 +110,7 @@ const About = () => {
           <img src={HeroImage} alt="" class="w-full block md:hidden" />
         </div>
         {/* quote */}
-        <div class="md:h-screen flex mt-[200px] mb-[200px] md:mt-0 md:mb-0 justify-center items-center px-5 ">
+        <div class="flex mt-[200px] mb-[200px] justify-center items-center px-5 ">
           <div
             class="  text-brand-gold text-xl relative text-justify md:text-center leading-[30px]"
             style={{
@@ -125,6 +126,7 @@ const About = () => {
           </div>
         </div>
 
+        {/* Values */}
         <Principles imageEnter={imageEnter} largeEnter={largeEnter} />
         <div className="mt-[130px] md:mt-0">
           <GetInTouch imageEnter={imageEnter} largeEnter={largeEnter} />

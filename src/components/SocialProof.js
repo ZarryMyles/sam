@@ -92,8 +92,10 @@ const SocialProof = ({ imageEnter, largeEnter }) => {
                 }}
               />
               <div class="flex tracking-1 md:tracking-3 ">
-                <div className="text-xs md:text-xl">{feedback.name}, </div>
-                <div className="text-xs md:text-xl pl-1">
+                <div className="text-xs md:text-base md:leading-4">
+                  {feedback.name},{" "}
+                </div>
+                <div className="text-xs md:text-base md:leading-4 pl-1">
                   {feedback.company}
                 </div>
               </div>

@@ -46,23 +46,24 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor, callHome }) => {
   // For Navbar to show up when scrolled up
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const controlNavbar = () => {
-    if (typeof window !== "undefined") {
-      if (window.scrollY > lastScrollY) {
-        // if scroll down hide the navbar
-        setShow(true);
-      } else {
-        // if scroll up show the navbar
-        setShow(false);
-      }
-      if (window.scrollY < 50) {
-        setShow(true);
-      }
-      // remember current page location to use in the next move
-      setLastScrollY(window.scrollY);
-    }
-  };
   useEffect(() => {
+    const controlNavbar = () => {
+      if (typeof window !== "undefined") {
+        if (window.scrollY > lastScrollY) {
+          // if scroll down hide the navbar
+          setShow(true);
+        } else {
+          // if scroll up show the navbar
+          setShow(false);
+        }
+        if (window.scrollY < 50) {
+          setShow(true);
+        }
+        // remember current page location to use in the next move
+        setLastScrollY(window.scrollY);
+      }
+    };
+
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", controlNavbar);
 
@@ -87,7 +88,7 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor, callHome }) => {
       >
         <a href="/" className="flex items-center">
           <div
-            className="font-lora-italic text-2xl top-0 overflow-hidden  flex flex-row items-center "
+            className="font-lora-italic text-4xl top-0 overflow-hidden  flex flex-row items-center "
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
             style={{ color: "#FFEE8C" }}
@@ -188,7 +189,7 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor, callHome }) => {
       >
         <a href="/" className="flex items-center">
           <div
-            className="font-lora-italic  text-2xl top-0 overflow-hidden  flex flex-row items-center "
+            className="font-lora-italic  text-4xl top-0 overflow-hidden  flex flex-row items-center "
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
             style={{ color: "#FFEE8C" }}

@@ -1,34 +1,51 @@
-import React from "react";
-import { MapPin } from "react-feather";
-import { AnimationOnScroll } from "react-animation-on-scroll";
+import React, { useState } from "react";
+import resume from "../assets/icons/socials/resume.png";
+import resumeColor from "../assets/icons/socials/resumeColor.png";
+import linkedin from "../assets/icons/socials/linkedin.png";
+import linkedinColor from "../assets/icons/socials/linkedinColor.png";
+import mail from "../assets/icons/socials/mail.png";
+import mailColor from "../assets/icons/socials/mailColor.png";
+import dribbble from "../assets/icons/socials/dribbble.png";
+import dribbbleColor from "../assets/icons/socials/dribbbleColor.png";
+import location from "../assets/icons/socials/location.png";
+import locationColor from "../assets/icons/socials/locationColor.png";
+// import { MapPin } from "react-feather";
+// import { AnimationOnScroll } from "react-animation-on-scroll";
 
 const Footer = ({ imageEnter, largeEnter }) => {
+  const [hoveredIconIndex, setHoveredIconIndex] = useState(null);
   const resumeLink = process.env.REACT_APP_RESUME_URL;
   const socials = [
     {
       name: "Bengaluru",
       link: "https://goo.gl/maps/81bSbpJiwa8DrD219",
-      icon: <MapPin strokeWidth={2} width={16} height={16} color="#7A2222" />,
+      // icon: <MapPin strokeWidth={2} width={16} height={16} color="#7A2222" />,
+      icon: location,
+      iconColor: locationColor,
       target: "_blank",
     },
     {
-      name: "Email",
+      icon: mail,
+      iconColor: mailColor,
       link: "mailto:shradhabkaba@gmail.com",
       target: "",
     },
     {
-      name: "LinkedIn",
+      icon: linkedin,
+      iconColor: linkedinColor,
       link: "https://www.linkedin.com/in/shradha-b-k",
       target: "_blank",
     },
     {
-      name: "Dribble",
+      icon: dribbble,
+      iconColor: dribbbleColor,
       link: "https://dribbble.com/Shradha_b_k",
       target: "_blank",
     },
 
     {
-      name: "Resume",
+      icon: resume,
+      iconColor: resumeColor,
       link: resumeLink,
       target: "_blank",
     },
@@ -54,73 +71,76 @@ const Footer = ({ imageEnter, largeEnter }) => {
   };
   return (
     <div
-      onMouseEnter={imageEnter}
-      onMouseLeave={imageEnter}
+      onMouseEnter={() => {
+        imageEnter();
+        setHoveredIconIndex(null);
+      }}
+      onMouseLeave={() => {
+        imageEnter();
+        setHoveredIconIndex(null);
+      }}
       id="footer-main"
       className="w-full bg-brand-darkGrey2 flex flex-col"
     >
-      <AnimationOnScroll
-        animateIn="animate__fadeInUp"
-        animateOnce={true}
-        duration={1}
-      >
-        <div className=" footerDiv flex flex-col md:flex-row md:items-end md:justify-between px-5 md:px-48 py-10 md:py-24 ">
-          <div
-            className="flex text-gray-400 flex-col justify-center  md:w-2/6 mb-5 md:mb-0"
-            style={{
-              color: "#fff",
-            }}
+      <div className=" footerDiv flex flex-col md:flex-row md:items-end md:justify-between px-5 md:px-48 py-10 md:py-24 ">
+        <div
+          className="flex text-gray-400 flex-col justify-center  md:w-2/6 mb-5 md:mb-0"
+          style={{
+            color: "#fff",
+          }}
+        >
+          <ul
+            className="container"
+            variants={container}
+            initial="hidden"
+            animate="visible"
           >
-            <ul
-              className="container"
-              variants={container}
-              initial="hidden"
-              animate="visible"
+            <li className=" " variants={item}>
+              <>
+                <div className=" max-w-max text-base md:text-[32px] tracking-[0.04em] font-lora-italic">
+                  Shradha<span className="hidden md:inline-block">,</span>{" "}
+                  <span className="md:hidden">
+                    <br />
+                  </span>
+                  <span className="font-lato md:text-lg text-sm font-normal text-[#B6B6B6]">
+                    UX Researcher
+                  </span>
+                </div>
+              </>
+            </li>
+          </ul>
+        </div>
+        <div class="flex  flex-row justify-between tracking-[0.01em] items-center md:w-3/6 w-full ">
+          {socials.map((social, index) => (
+            <a
+              onMouseEnter={() => {
+                setHoveredIconIndex(index);
+              }}
+              onMouseLeave={() => {
+                setHoveredIconIndex(null);
+              }}
+              href={social.link}
+              target={social.target}
+              rel="noreferrer"
+              class="text-brand-gray font-lato flex items-center  text-sm md:text-lg md:w-max  my-2 md:my-0 transform hover:scale-110 transition-transform duration-300 ease-in-out"
             >
-              <li className=" " variants={item}>
-                <>
-                  <div className=" max-w-max text-base md:text-[32px] tracking-[0.04em] font-lora-italic">
-                    Shradha<span className="hidden md:inline-block">,</span>{" "}
-                    <span className="md:hidden">
-                      <br />
-                    </span>
-                    <span className="font-lato md:text-lg text-sm font-normal text-[#B6B6B6]">
-                      UX Researcher
-                    </span>
-                  </div>
-                </>
-              </li>
-            </ul>
-          </div>
-          <div class="flex  flex-row justify-between tracking-[0.01em] items-center md:w-3/6 w-full ">
-            {socials.map((social, index) => (
-              <a
-                onMouseEnter={largeEnter}
-                onMouseLeave={imageEnter}
-                href={social.link}
-                target={social.target}
-                rel="noreferrer"
-                class="text-brand-gray font-lato flex items-center  text-sm md:text-base     md:w-max  my-2 md:my-0"
-              >
-                {social.icon && (
-                  <div
-                    class=" mr-2 text-xl "
-                    style={{
-                      color: "#7A2222",
-                    }}
-                  >
-                    {social.icon}
-                  </div>
-                )}
-                {social.name}
-              </a>
-            ))}
-          </div>
+              {social.icon && (
+                <img
+                  src={
+                    hoveredIconIndex === index ? social.iconColor : social.icon
+                  }
+                  alt="Social icon"
+                  className=" mr-2"
+                />
+              )}
+              {social.name}
+            </a>
+          ))}
         </div>
-        <div className=" footerDiv2 shadow-xl text-[11px] text-center  font-lato text-brand-gray flex items-center justify-center p-5 md:p-10">
-          © {new Date().getFullYear()}. shradha.research . All Rights Reserved.
-        </div>
-      </AnimationOnScroll>
+      </div>
+      <div className=" footerDiv2 shadow-xl text-[11px] text-center  font-lato text-brand-gray flex items-center justify-center p-5 md:p-10">
+        © {new Date().getFullYear()}. shradha.research . All Rights Reserved.
+      </div>
     </div>
   );
 };

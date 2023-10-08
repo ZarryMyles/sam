@@ -8,7 +8,7 @@ const Principles = ({ largeEnter, imageEnter }) => {
   return (
     <div
       onMouseEnter={imageEnter}
-      className="min-h-screen my-10 md:my-0 px-5 md:px-48 flex flex-col justify-center "
+      className="min-h-screen md:min-h-0 my-10 md:my-0 px-5 md:px-48 flex flex-col justify-center "
     >
       <WorkHeading text={"values"} />
       <div

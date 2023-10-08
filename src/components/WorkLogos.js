@@ -3,24 +3,9 @@ import Marquee from "react-fast-marquee";
 const WorkLogos = ({ imageEnter, largeEnter }) => {
   const clients = [
     {
-      name: "Google Developers",
-      logo: "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
-      link: "https://www.linkedin.com/in/dscreva",
-    },
-    {
-      name: "HappilyEver",
-      logo: "https://www.facebook.com/images/fb_icon_325x325.png",
-      link: "https://www.linkedin.com/company/happilyever-lens/",
-    },
-    {
-      name: "REVA HACK </>2020",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png",
-      link: "https://www.linkedin.com/company/reva-hack-2022/",
-    },
-    {
-      name: "NinjaasLabs",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/1200px-Microsoft_logo.svg.png",
-      link: "https://ninjaas.com/pages/about-us",
+      name: "Hike",
+      logo: "https://images.squarespace-cdn.com/content/v1/619d2006b23f9f7f9f282ea8/2f9744f0-cfc9-435a-82e0-781528a48028/hike_logo.png",
+      link: "https://www.hike.in/",
     },
     {
       name: "Google Developers",
@@ -43,6 +28,11 @@ const WorkLogos = ({ imageEnter, largeEnter }) => {
       link: "https://ninjaas.com/pages/about-us",
     },
     {
+      name: "Hike",
+      logo: "https://images.squarespace-cdn.com/content/v1/619d2006b23f9f7f9f282ea8/2f9744f0-cfc9-435a-82e0-781528a48028/hike_logo.png",
+      link: "https://www.hike.in/",
+    },
+    {
       name: "Google Developers",
       logo: "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
       link: "https://www.linkedin.com/in/dscreva",
@@ -61,6 +51,36 @@ const WorkLogos = ({ imageEnter, largeEnter }) => {
       name: "NinjaasLabs",
       logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/1200px-Microsoft_logo.svg.png",
       link: "https://ninjaas.com/pages/about-us",
+    },
+    {
+      name: "Hike",
+      logo: "https://images.squarespace-cdn.com/content/v1/619d2006b23f9f7f9f282ea8/2f9744f0-cfc9-435a-82e0-781528a48028/hike_logo.png",
+      link: "https://www.hike.in/",
+    },
+    {
+      name: "Google Developers",
+      logo: "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+      link: "https://www.linkedin.com/in/dscreva",
+    },
+    {
+      name: "HappilyEver",
+      logo: "https://www.facebook.com/images/fb_icon_325x325.png",
+      link: "https://www.linkedin.com/company/happilyever-lens/",
+    },
+    {
+      name: "REVA HACK </>2020",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png",
+      link: "https://www.linkedin.com/company/reva-hack-2022/",
+    },
+    {
+      name: "NinjaasLabs",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/1200px-Microsoft_logo.svg.png",
+      link: "https://ninjaas.com/pages/about-us",
+    },
+    {
+      name: "Hike",
+      logo: "https://images.squarespace-cdn.com/content/v1/619d2006b23f9f7f9f282ea8/2f9744f0-cfc9-435a-82e0-781528a48028/hike_logo.png",
+      link: "https://www.hike.in/",
     },
     {
       name: "Google Developers",
