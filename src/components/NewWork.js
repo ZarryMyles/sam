@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Tilt from "react-parallax-tilt";
+import { ParallaxHover } from "react-parallax-hover";
 
 // Work Backgrounds
 import HikeBG from "../assets/newwork/hikebg.png";
@@ -31,16 +31,14 @@ const WorkItem = ({ key, item }) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <Tilt
-        glareEnable={true}
-        glareMaxOpacity={0.2}
-        glareColor="lightblue"
-        glarePosition="all"
-        tiltReverse={true}
-        tiltMaxAngleX={10}
-        tiltMaxAngleY={10}
-        glareBorderRadius={"10px"}
-        style={{ borderRadius: "10px !important" }}
+      <ParallaxHover
+        borderRadius={10}
+        height={440}
+        rotation={2}
+        scale={0}
+        shadow={0}
+        shine={1}
+        width={664}
       >
         <div
           className={`rounded-[10px] ${hovered ? "hovered" : ""}`}
@@ -75,7 +73,7 @@ const WorkItem = ({ key, item }) => {
             </p>
           </div>
         </div>
-      </Tilt>
+      </ParallaxHover>
       <p className="text-[#fefefe] text-[22px] tracking-[0.33px]">
         {item.subTitle}
       </p>
