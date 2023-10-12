@@ -17,23 +17,11 @@ const Footer = ({ imageEnter, largeEnter }) => {
   const resumeLink = process.env.REACT_APP_RESUME_URL;
   const socials = [
     {
-      name: "Bengaluru",
+      name: "",
       link: "https://goo.gl/maps/81bSbpJiwa8DrD219",
       // icon: <MapPin strokeWidth={2} width={16} height={16} color="#7A2222" />,
       icon: location,
       iconColor: locationColor,
-      target: "_blank",
-    },
-    {
-      icon: mail,
-      iconColor: mailColor,
-      link: "mailto:shradhabkaba@gmail.com",
-      target: "",
-    },
-    {
-      icon: linkedin,
-      iconColor: linkedinColor,
-      link: "https://www.linkedin.com/in/shradha-b-k",
       target: "_blank",
     },
     {
@@ -42,7 +30,18 @@ const Footer = ({ imageEnter, largeEnter }) => {
       link: "https://dribbble.com/Shradha_b_k",
       target: "_blank",
     },
-
+    {
+      icon: linkedin,
+      iconColor: linkedinColor,
+      link: "https://www.linkedin.com/in/shradha-b-k",
+      target: "_blank",
+    },
+    {
+      icon: mail,
+      iconColor: mailColor,
+      link: "mailto:shradhabkaba@gmail.com",
+      target: "",
+    },
     {
       icon: resume,
       iconColor: resumeColor,
