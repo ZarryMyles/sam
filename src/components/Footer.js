@@ -138,7 +138,7 @@ const Footer = ({ imageEnter, largeEnter }) => {
         </div>
       </div>
       <div className=" footerDiv2 shadow-xl text-[11px] text-center  font-lato text-brand-gray flex items-center justify-center p-5 md:p-10">
-        © {new Date().getFullYear()}. shradha.research . All Rights Reserved.
+        © {new Date().getFullYear()}. shradha-b.com . All Rights Reserved.
       </div>
     </div>
   );

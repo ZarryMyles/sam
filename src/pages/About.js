@@ -80,17 +80,17 @@ const About = () => {
               style={{
                 letterSpacing: "0.4px",
               }}
-              class="text-lg leading-[30px] md:leading-9 text-[#fefefe] w-full my-8 md:my-10 md:text-justify "
+              class="text-lg leading-[36px] md:leading-9 text-[#fefefe] w-full my-8 md:my-10 md:text-justify md:tracking-[0.4px] md:w-[690px]"
             >
               I’m Shradha. <br />A UX Researcher who works with a purpose, I
               indulge myself in{" "}
               <span className="text-brand-gold">
                 understanding and studying people’s patterns.
-              </span>{" "}
+              </span>
               <br />
               From an early stage, I have believed that successful designs are
-              people focused. <br />
-              Hence, I am keen on working with projects having both{" "}
+              people focused. Hence, I am keen on working with projects having
+              both{" "}
               <span className="text-brand-gold">
                 technological and humanistic values.
               </span>
@@ -121,8 +121,8 @@ const About = () => {
               className="absolute -top-12 md:-top-7 left-0 md:-left-8  w-7 md:w-7 h-6   "
               stroke="none"
             />
-            Unhappy users are a source for learning, But the users who provide
-            critique are those who help me gain knowledge
+            Empathy illuminates the path, research opens the doors, together,
+            they reveal the endless possibilities.
           </div>
         </div>
 
