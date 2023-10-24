@@ -15,17 +15,7 @@ import SmartVisionMob from "../assets/newwork/smartvisionmob.png";
 // Icons
 import Lock from "../assets/icons/lock.png";
 
-const WorkItem = ({ key, item }) => {
-  const [hovered, setHovered] = useState(false);
-
-  const handleMouseEnter = () => {
-    setHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setHovered(false);
-  };
-
+const WorkItem = ({ key, item, imageEnter, largeEnter }) => {
   return (
     <a
       href={item.link ? item.link : null}
@@ -33,8 +23,8 @@ const WorkItem = ({ key, item }) => {
       target="_blank"
       key={key}
       className="flex flex-col gap-6"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      onMouseEnter={item.islocked ? imageEnter : largeEnter}
+      onMouseLeave={imageEnter}
     >
       <ParallaxHover
         borderRadius={10}
@@ -46,7 +36,7 @@ const WorkItem = ({ key, item }) => {
         width={664}
       >
         <div
-          className={`rounded-[10px] ${hovered ? "hovered" : ""}`}
+          className={`rounded-[10px] hovered`}
           style={{
             width: "664px",
             height: "440px",
@@ -66,7 +56,7 @@ const WorkItem = ({ key, item }) => {
               {item.company}{" "}
               {item.islocked && (
                 <img
-                  className={`lock-icon ${hovered ? "visible" : ""}`}
+                  className="lock-icon"
                   width={24}
                   src={Lock}
                   alt="Lock Icon"
@@ -204,7 +194,12 @@ const NewWork = ({ imageEnter, largeEnter }) => {
         </h3>
         <div className="hidden md:flex gap-[18px]">
           {recentWorkInfo.map((item, index) => (
-            <WorkItem key={index} item={item} />
+            <WorkItem
+              key={index}
+              item={item}
+              imageEnter={imageEnter}
+              largeEnter={largeEnter}
+            />
           ))}
         </div>
         <div className="md:hidden flex flex-col">
@@ -219,7 +214,12 @@ const NewWork = ({ imageEnter, largeEnter }) => {
         </h3>
         <div className="hidden md:flex gap-[18px]">
           {otherWorkInfo.map((item, index) => (
-            <WorkItem key={index} item={item} />
+            <WorkItem
+              key={index}
+              item={item}
+              imageEnter={imageEnter}
+              largeEnter={largeEnter}
+            />
           ))}
         </div>
         <div className="md:hidden flex flex-col">

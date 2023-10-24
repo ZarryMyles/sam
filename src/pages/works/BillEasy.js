@@ -575,7 +575,7 @@ const BillEasy = () => {
                 <li className="my-6 md:my-4">
                   We chose to run a test on{" "}
                   <span style={{ color: "#6AC296" }}>Clear one software</span>{" "}
-                  through our competitors' study since it was close to our
+                  through our competitors’ study since it was close to our
                   vision.
                 </li>
 
@@ -725,7 +725,7 @@ const BillEasy = () => {
               </ul>
               <ol className="list-decimal ml-4">
                 <li className=" my-6">
-                  During the interview, Satish frequently mentioned that he's
+                  During the interview, Satish frequently mentioned that he’s
                   satisfied with the ongoing process of managing reports and
                   invoices because he feels{" "}
                   <span style={{ color: "#6AC296" }}>
@@ -748,7 +748,7 @@ const BillEasy = () => {
                     {" "}
                     effectively communicate the pain-points{" "}
                   </span>{" "}
-                  (some of which were similar to Satish's).
+                  (some of which were similar to Satish’s).
                 </li>
               </ol>
             </div>

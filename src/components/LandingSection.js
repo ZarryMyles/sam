@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import HeroImage from "../assets/landingpage/sam.png";
-import IndiaFlag from "../assets/landingpage/🇮🇳.svg";
+import IndiaFlag from "../assets/landingpage/🇮🇳.png";
 
 const LandingSection = ({ imageEnter, largeEnter }) => {
   const [hovered, setHovered] = useState(false);

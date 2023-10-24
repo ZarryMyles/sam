@@ -439,8 +439,8 @@ const SmartVision = () => {
           </div>
           <ul className="  list-disc ml-5 px-5 md:px-24">
             <li className="my-3">
-              While searching for users to interview, I couldn't find any
-              relevant people, thanks to the pandemic :') During which, I
+              While searching for users to interview, I couldn’t find any
+              relevant people, thanks to the pandemic :’) During which, I
               discovered that{" "}
               <span style={{ color: "#7CCBCD" }}>
                 people in India are unfamiliar of legal <br /> blindness
@@ -519,7 +519,7 @@ const SmartVision = () => {
                   Keyboard letters are{" "}
                   <span style={{ color: "#7CCBCD" }}>not legible enough.</span>{" "}
                   Feels <span style={{ color: "#7CCBCD" }}>time consuming</span>{" "}
-                  with TTS unless you've mastered it.
+                  with TTS unless you’ve mastered it.
                 </li>
               </ul>
             </div>
@@ -541,7 +541,7 @@ const SmartVision = () => {
                 </li>
                 <li>Over informative</li>
                 <li>
-                  It's a{" "}
+                  It’s a{" "}
                   <span style={{ color: "#7CCBCD" }}>
                     pain texting in group chats since
                   </span>{" "}
@@ -582,7 +582,7 @@ const SmartVision = () => {
               <div class=" font-lato mb-6 ">Feel</div>
               <ul class="my-0 md:my-8 list-decimal ml-4 leading-7">
                 <li>
-                  Doesn't prefer people to{" "}
+                  Doesn’t prefer people to{" "}
                   <span style={{ color: "#7CCBCD" }}>
                     hear their messages aloud.
                   </span>
@@ -666,7 +666,7 @@ const SmartVision = () => {
                       understand the texts better than <br />
                       images.
                     </span>{" "}
-                    Screen readers can't interpret images.
+                    Screen readers can’t interpret images.
                   </li>
                   <li className="my-9">
                     Hence, Image descriptions are used to{" "}
@@ -850,7 +850,7 @@ const SmartVision = () => {
                 understand the texts better than <br />
                 images.
               </span>{" "}
-              Screen readers can't interpret images.
+              Screen readers can’t interpret images.
             </li>
             <li className="my-9">
               Hence, Image descriptions are used to{" "}

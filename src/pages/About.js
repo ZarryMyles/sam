@@ -110,7 +110,7 @@ const About = () => {
           <img src={HeroImage} alt="" class="w-full block md:hidden" />
         </div>
         {/* quote */}
-        <div class="flex mt-[200px] mb-[200px] justify-center items-center px-5 ">
+        <div class="flex justify-center items-center px-5 h-screen">
           <div
             class="  text-brand-gold text-xl relative text-justify md:text-center leading-[30px]"
             style={{
