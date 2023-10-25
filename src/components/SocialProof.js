@@ -92,8 +92,10 @@ const SocialProof = ({ imageEnter, largeEnter }) => {
                 }}
               />
               <div class="flex tracking-1 md:tracking-3 ">
-                <div className="text-xs md:text-xl">{feedback.name}, </div>
-                <div className="text-xs md:text-xl pl-1">
+                <div className="text-xs md:text-base md:leading-4">
+                  {feedback.name},{" "}
+                </div>
+                <div className="text-xs md:text-base md:leading-4 pl-1">
                   {feedback.company}
                 </div>
               </div>
@@ -114,11 +116,11 @@ const SocialProof = ({ imageEnter, largeEnter }) => {
                   <div
                     style={{
                       height: "2px",
-                      color: "#ffc7d1",
+                      color: "#FFEE8C",
                     }}
                     class={` transition-all duration-200 rounded-l-full rounded-r-full ${
                       item.name === feedback.name
-                        ? "bg-black dark:bg-brand-pink w-6 "
+                        ? "bg-black dark:bg-brand-gold w-6 "
                         : " bg-gray-500 w-4"
                     }   mx-1 `}
                   />
@@ -131,7 +133,7 @@ const SocialProof = ({ imageEnter, largeEnter }) => {
             className="absolute -bottom-5 md:-bottom-6 right-6 md:right-10 w-10 md:w-14 h-10 md:h-14 fill-black dark:fill-white "
             stroke="none"
             style={{
-              fill: "#ffc7d1",
+              fill: "#979797",
             }}
           />
         </div>
@@ -201,7 +203,7 @@ const SocialProof = ({ imageEnter, largeEnter }) => {
           className="absolute bottom-16 right-10 w-10 h-10 z-20 "
           stroke="none"
           style={{
-            fill: "#ffc7d1",
+            fill: "#979797",
           }}
         />
       </Swiper>

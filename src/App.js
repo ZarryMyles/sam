@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 import "./App.css";
 import "./vishal.css";
 import {
-  Work,
+  // Work,
+  NewWork,
   WorkLogos,
   SocialProof,
   GetInTouch,
@@ -40,18 +41,18 @@ function App() {
       bounce: 0,
     },
     text: {
-      height: 50,
-      width: 50,
-      x: mousePos.x - 25,
-      y: mousePos.y - 25,
-      backgroundColor: "#ffc7d1",
+      height: 4,
+      width: 4,
+      x: mousePos.x - 2,
+      y: mousePos.y - 2,
+      backgroundColor: "#FFEE8C",
       mixBlendMode: "difference",
       bounce: 0,
     },
     secondary: {
-      x: mousePos.x - 10,
-      y: mousePos.y - 10,
-      backgroundColor: "#ffc7d1",
+      x: mousePos.x - 2,
+      y: mousePos.y - 2,
+      backgroundColor: "#FFEE8C",
       mixBlendMode: "difference",
       transition: {
         type: "spring",
@@ -59,11 +60,11 @@ function App() {
       },
     },
     large: {
-      height: 80,
-      width: 80,
-      x: mousePos.x - 40,
-      y: mousePos.y - 40,
-      backgroundColor: "#ffc7d1",
+      height: 60,
+      width: 60,
+      x: mousePos.x - 30,
+      y: mousePos.y - 30,
+      backgroundColor: "#FFEE8C",
       mixBlendMode: "difference",
       transition: {
         type: "spring",
@@ -103,10 +104,15 @@ function App() {
           className="  flex flex-col items-center justify-center"
         >
           <LandingSection imageEnter={imageEnter} largeEnter={largeEnter} />
-          <Work imageEnter={imageEnter} largeEnter={largeEnter} />
+          {/* <Work imageEnter={imageEnter} largeEnter={largeEnter} /> */}
+          <NewWork imageEnter={imageEnter} largeEnter={largeEnter} />
           <WorkLogos imageEnter={imageEnter} largeEnter={largeEnter} />
           <SocialProof imageEnter={imageEnter} largeEnter={largeEnter} />
-          <GetInTouch imageEnter={imageEnter} largeEnter={largeEnter} />
+          <GetInTouch
+            imageEnter={imageEnter}
+            largeEnter={largeEnter}
+            location="home"
+          />
           <Footer imageEnter={imageEnter} largeEnter={largeEnter} />
           {/* other sections */}
 

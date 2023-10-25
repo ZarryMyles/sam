@@ -76,7 +76,7 @@ const BillEasy = () => {
       width: 50,
       x: mousePos.x - 25,
       y: mousePos.y - 25,
-      backgroundColor: "#ffc7d1",
+      backgroundColor: "#FFEE8C",
       mixBlendMode: "difference",
       transition: {
         type: "spring",
@@ -86,7 +86,7 @@ const BillEasy = () => {
     secondary: {
       x: mousePos.x - 10,
       y: mousePos.y - 10,
-      backgroundColor: "#ffc7d1",
+      backgroundColor: "#FFEE8C",
       mixBlendMode: "difference",
       transition: {
         type: "spring",
@@ -98,7 +98,7 @@ const BillEasy = () => {
       width: 80,
       x: mousePos.x - 40,
       y: mousePos.y - 40,
-      backgroundColor: "#ffc7d1",
+      backgroundColor: "#FFEE8C",
       mixBlendMode: "difference",
       transition: {
         type: "spring",
@@ -575,7 +575,7 @@ const BillEasy = () => {
                 <li className="my-6 md:my-4">
                   We chose to run a test on{" "}
                   <span style={{ color: "#6AC296" }}>Clear one software</span>{" "}
-                  through our competitors' study since it was close to our
+                  through our competitors’ study since it was close to our
                   vision.
                 </li>
 
@@ -725,7 +725,7 @@ const BillEasy = () => {
               </ul>
               <ol className="list-decimal ml-4">
                 <li className=" my-6">
-                  During the interview, Satish frequently mentioned that he's
+                  During the interview, Satish frequently mentioned that he’s
                   satisfied with the ongoing process of managing reports and
                   invoices because he feels{" "}
                   <span style={{ color: "#6AC296" }}>
@@ -748,7 +748,7 @@ const BillEasy = () => {
                     {" "}
                     effectively communicate the pain-points{" "}
                   </span>{" "}
-                  (some of which were similar to Satish's).
+                  (some of which were similar to Satish’s).
                 </li>
               </ol>
             </div>

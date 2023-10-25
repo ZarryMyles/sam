@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { GetInTouch, Principles, Navbar } from "../components";
+import { GetInTouch, Principles, Navbar, Footer } from "../components";
 import { ReactComponent as Quote } from "../assets/icons/quotestart.svg";
 import { useTitle } from "../hooks/useTitle";
-import { WorkHeading } from "../components";
-import HeroImage from "../assets/landingpage/sam.jpg";
+// import { WorkHeading } from "../components";
+import HeroImage from "../assets/about/about.png";
 
 const About = () => {
   useTitle("About");
@@ -32,7 +32,7 @@ const About = () => {
     secondary: {
       x: mousePos.x - 10,
       y: mousePos.y - 10,
-      backgroundColor: "#ffc7d1",
+      backgroundColor: "#FFEE8C",
       mixBlendMode: "difference",
       transition: {
         type: "spring",
@@ -44,7 +44,7 @@ const About = () => {
       width: 80,
       x: mousePos.x - 40,
       y: mousePos.y - 40,
-      backgroundColor: "#ffc7d1",
+      backgroundColor: "#FFEE8C",
       mixBlendMode: "difference",
       transition: {
         type: "spring",
@@ -66,17 +66,13 @@ const About = () => {
       <div
         onMouseEnter={imageEnter}
         onMouseLeave={imageEnter}
-        className="w-full h-auto font-lato pt-10 bg-brand-black text-brand-white "
+        className="w-full h-auto font-lato pt-10 bg-brand-black text-[#fefefe] "
       >
         {/* landing section */}
-        <div class=" h-screen  w-full  px-5 md:pr-0 md:pl-48 pt-10 md:py-20 flex flex-col md:flex-row md:items-center md:justify-center">
-          <div class="w-full md:w-5/10 h-full flex flex-col justify-center items-start tracking-wide ">
+        <div class="h-screen relative  w-full md:px-48  md:pr-0 md:pl-48 pt-10 md:py-20 flex flex-col md:flex-row md:items-center md:justify-start">
+          <div class="w-full md:w-4/7 z-20 pt-10 md:pt-0 px-7 flex flex-col justify-center items-start tracking-wide ">
             <div class="text-brand-white relative text-[26px] md:text-4xl  w-full ">
-              <div
-                onMouseEnter={largeEnter}
-                onMouseLeave={imageEnter}
-                // class="md:-mr-10 "
-              >
+              <div onMouseEnter={largeEnter} onMouseLeave={imageEnter}>
                 Hey there!
               </div>
             </div>
@@ -84,93 +80,36 @@ const About = () => {
               style={{
                 letterSpacing: "0.4px",
               }}
-              class="  text-base md:text-lg leading-[28px] md:leading-9  w-full md:w-3/4  my-8 md:my-10 text-justify "
+              class="text-lg leading-[36px] md:leading-9 text-[#fefefe] w-full my-8 md:my-10 md:text-justify md:tracking-[0.4px] md:w-[690px]"
             >
-              I’m Shradha, a fresh graduate looking to make my mark in the world
-              of product design. <br /> A Product designer who works with the
-              purpose, I indulge myself in{" "}
-              <span class="text-brand-pink">
-                understanding and studying people’s patterns.
+              I’m Shradha. <br />a UX Researcher driven by purpose. I immerse
+              myself in deciphering human behaviour and patterns. From an early
+              stage, I've believed that{" "}
+              <span className="text-brand-gold">
+                exceptional designs are rooted in a deep understanding of
+                people.
               </span>{" "}
-              From an early stage, I have believed that successful designs are
-              people focused. Hence, I am keen on working with projects having
-              both{" "}
-              <span class="text-brand-pink">
-                technological and humanistic values.
-              </span>
+              As such, I love collaborating on projects that combine
+              technological with human-centric values.
             </div>
-            <div
-              onMouseEnter={largeEnter}
-              onMouseLeave={imageEnter}
-              class="text-brand-darkGrey3 text-xl mb-1  flex items-center "
-            >
-              <div className="font-lora-italic">Shradha</div>
-              <div
-                style={{
-                  height: "1px",
-                  width: "40px",
-                }}
-                class="  ml-4 mr-1  w-20 bg-brand-darkGrey3"
-              />
-            </div>
-            <div class="text-lg  ">Product Designer</div>
           </div>
-          <div class=" md:w-5/10 h-92 md:h-full bg-brand-darkGrey2 rounded-lg hidden md:flex justify-center items-center md:p-20">
-            <div
-              style={{
-                backgroundImage: `url(${HeroImage})`,
-              }}
-              class="bg-center  bg-no-repeat bg-cover h-full  w-full"
-            />
-          </div>
-        </div>
-        {/* landing image for phone only */}
-        <img src={HeroImage} alt="" class="w-full block md:hidden mb-[178px]" />
-        {/* principles abide */}
-        <div class="bg-brand-darkGrey2 md:pt-16 md:mt-40 py-10 px-5 md:px-48  ">
-          <WorkHeading text={"about"} />
-          <div class=" text-2xl -mt-[14px] mb-8">Motivations</div>
           <div
             style={{
-              letterSpacing: "0.4px",
+              width: "580px",
+              height: "435px",
+              background: `url(${HeroImage})`,
+              backgroundSize: "contain",
+              borderRadius: "10px",
             }}
-            class="flex flex-col md:flex-row w-full text-base md:text-lg leading-[28px] tracking-[0.4px] md:leading-9 text-justify md:pb-20"
-          >
-            <div class="w-full md:w-1/2 md:pr-16 mb-10 md:my-0 ">
-              <div>Interests</div>
-              <div>
-                I enjoy gaining new experiences, my latest interest has been in
-                learning to play the guitar. In my spare time, I like to put my
-                artistic interest to use. On a regular basis, I am keen on going
-                for <span class="text-brand-pink">nature walks</span> and{" "}
-                <span class="text-brand-pink">
-                  {" "}
-                  meeting my four-legged furry friends 🐕‍🦺
-                </span>
-              </div>
-            </div>
-            <div class="w-full md:w-1/2 md:pl-16  md:my-0">
-              <div>Skills</div>
-              <div>
-                With strong insights in{" "}
-                <span class="text-brand-pink">Research</span> and{" "}
-                <span class="text-brand-pink">Analytical skills,</span> I{" "}
-                <br className="hidden md:block" /> have been able to develop{" "}
-                <span class="text-brand-pink">Interactive prototypes</span> and{" "}
-                <br className="hidden md:block" />{" "}
-                <span class="text-brand-pink">Consumer-centric designs.</span>
-                <ul class="ml-4 list-disc">
-                  <li>UI & UX Design </li>
-                  <li>Visual design</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+            className="md:absolute md:block hidden top-56 right-40 bg-red-300"
+          ></div>
+          {/* landing image for phone only */}
+          <img src={HeroImage} alt="" class="w-full block md:hidden" />
         </div>
         {/* quote */}
-        <div class="md:h-screen flex mt-[200px] mb-[200px] md:mt-0 md:mb-0 justify-center items-center px-5 ">
+        <div class="flex justify-center items-center px-5 md:h-screen md:my-0 my-[150px]">
           <div
-            class="  text-brand-pink text-xl relative text-justify md:text-center leading-[30px]"
+            class="  text-brand-gold text-xl relative text-justify md:text-center leading-[30px]"
             style={{
               letterSpacing: "0.4px",
             }}
@@ -179,15 +118,17 @@ const About = () => {
               className="absolute -top-12 md:-top-7 left-0 md:-left-8  w-7 md:w-7 h-6   "
               stroke="none"
             />
-            Unhappy users are a source for learning, But the users who provide
-            critique are those who help me gain knowledge
+            Empathy illuminates the path, research opens the doors, together,
+            they reveal the endless possibilities.
           </div>
         </div>
 
+        {/* Values */}
         <Principles imageEnter={imageEnter} largeEnter={largeEnter} />
         <div className="mt-[130px] md:mt-0">
           <GetInTouch imageEnter={imageEnter} largeEnter={largeEnter} />
         </div>
+        <Footer imageEnter={imageEnter} largeEnter={largeEnter} />
         <motion.div
           className="cursor hidden md:flex"
           variants={variants}

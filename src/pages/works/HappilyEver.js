@@ -61,7 +61,7 @@ const HappilyEver = () => {
       width: 50,
       x: mousePos.x - 25,
       y: mousePos.y - 25,
-      backgroundColor: "#ffc7d1",
+      backgroundColor: "#FFEE8C",
       mixBlendMode: "difference",
       transition: {
         type: "spring",
@@ -71,7 +71,7 @@ const HappilyEver = () => {
     secondary: {
       x: mousePos.x - 10,
       y: mousePos.y - 10,
-      backgroundColor: "#ffc7d1",
+      backgroundColor: "#FFEE8C",
       mixBlendMode: "difference",
       transition: {
         type: "spring",
@@ -83,7 +83,7 @@ const HappilyEver = () => {
       width: 80,
       x: mousePos.x - 40,
       y: mousePos.y - 40,
-      backgroundColor: "#ffc7d1",
+      backgroundColor: "#FFEE8C",
       mixBlendMode: "difference",
       transition: {
         type: "spring",
@@ -283,7 +283,7 @@ const HappilyEver = () => {
           <div className="md:w-6/10  ">
             <div class="md:pr-10 md:leading-6 tracking-0.5 leading-7 font-lato font-normal">
               <div className=" ">
-                1. The product's vision is to "
+                1. The product’s vision is to "
                 <span style={{ color: "#ED9D9D" }}>
                   foster meaningful connections
                 </span>
@@ -335,7 +335,7 @@ const HappilyEver = () => {
                     {" "}
                     understanding brand values
                   </span>{" "}
-                  was to know the product's mission and motive. This interview
+                  was to know the product’s mission and motive. This interview
                   helped the stakeholder in developing a{" "}
                   <span style={{ color: "#ED9D9D" }}>clear vision.</span>
                 </li>
