@@ -82,18 +82,15 @@ const About = () => {
               }}
               class="text-lg leading-[36px] md:leading-9 text-[#fefefe] w-full my-8 md:my-10 md:text-justify md:tracking-[0.4px] md:w-[690px]"
             >
-              I’m Shradha. <br />A UX Researcher who works with a purpose, I
-              indulge myself in{" "}
+              I’m Shradha. <br />a UX Researcher driven by purpose. I immerse
+              myself in deciphering human behaviour and patterns. From an early
+              stage, I've believed that{" "}
               <span className="text-brand-gold">
-                understanding and studying people’s patterns.
-              </span>
-              <br />
-              From an early stage, I have believed that successful designs are
-              people focused. Hence, I am keen on working with projects having
-              both{" "}
-              <span className="text-brand-gold">
-                technological and humanistic values.
-              </span>
+                exceptional designs are rooted in a deep understanding of
+                people.
+              </span>{" "}
+              As such, I love collaborating on projects that combine
+              technological with human-centric values.
             </div>
           </div>
           <div
@@ -110,7 +107,7 @@ const About = () => {
           <img src={HeroImage} alt="" class="w-full block md:hidden" />
         </div>
         {/* quote */}
-        <div class="flex justify-center items-center px-5 h-screen">
+        <div class="flex justify-center items-center px-5 md:h-screen md:my-0 my-[150px]">
           <div
             class="  text-brand-gold text-xl relative text-justify md:text-center leading-[30px]"
             style={{

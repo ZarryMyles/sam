@@ -147,7 +147,8 @@ const NewWork = ({ imageEnter, largeEnter }) => {
       background: HikeBG,
       backgroundMob: HikeBGmob,
       mobWidth: 292,
-      link: "https://www.figma.com/proto/X6IFgiegAQerDSBe5RKBs3/Case-study-stack?page-id=1%3A2&type=design&node-id=1-8501&viewport=758%2C738%2C0.24&t=jbsnjihAGYGdgkII-1&scaling=contain&starting-point-node-id=1%3A8284&mode=design",
+      islocked: true,
+      // link: "https://www.figma.com/proto/X6IFgiegAQerDSBe5RKBs3/Case-study-stack?page-id=1%3A2&type=design&node-id=1-8501&viewport=758%2C738%2C0.24&t=jbsnjihAGYGdgkII-1&scaling=contain&starting-point-node-id=1%3A8284&mode=design",
     },
     {
       company: "hike",

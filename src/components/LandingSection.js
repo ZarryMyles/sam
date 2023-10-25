@@ -16,12 +16,12 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
   return (
     <div
       id="landing-section"
-      className="px-7 md:px-0 min-h-screen md:min w-full text-white top-0 left-0"
+      className="px-7 md:px-0 md:min-h-screen md:min w-full text-white top-0 left-0"
       onMouseEnter={imageEnter}
       onMouseLeave={imageEnter}
     >
       <div className="relative w-full h-full md:m-auto md:max-w-7xl ">
-        <div class="relative flex flex-col justify-center items-center md:block h-full mt-20 md:mt-0 md:py-52 w-full">
+        <div class="relative flex flex-col justify-center items-center md:block h-full md:mt-0 md:py-52 w-full">
           <h1
             class="text-3xl z-20 md:text-5xl md:ml-28 font-thin mt-60 md:mt-16 w-9/10  md:w-8/10 font-lato-light-italic landing-page-text  "
             onMouseEnter={largeEnter}
@@ -74,10 +74,11 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
           }}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          className={`hidden md:block absolute right-32 bottom-20 bg-cover bg-center bg-no-repeat`}
+          className={`hidden md:block absolute right-32 bottom-20 bg-cover bg-center bg-no-repeat hover:z-40`}
         >
           <img
             src={HeroImage}
+            className="hover:z-40"
             alt="Hero Pic"
             style={{
               width: "100%",
@@ -103,6 +104,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
                 }}
               ></div>
               <div
+                className="hover:z-40"
                 style={{
                   position: "absolute",
                   top: "50%",

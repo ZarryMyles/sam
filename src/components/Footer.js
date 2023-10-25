@@ -39,7 +39,7 @@ const Footer = ({ imageEnter, largeEnter }) => {
     {
       icon: mail,
       iconColor: mailColor,
-      link: "mailto:shradhabkaba@gmail.com",
+      link: "mailto:shradhakaba@gmail.com",
       target: "",
     },
     {
