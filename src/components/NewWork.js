@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { ParallaxHover } from "react-parallax-hover";
 
 // Work Backgrounds Desktop
@@ -90,7 +90,7 @@ const WorkItemMobile = ({ key, item }) => {
           width: "100%",
           background: `url(${item.backgroundMob})`,
           backgroundPosition: "center",
-          backgroundSize: "cover",
+          backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
         }}
       >
@@ -120,13 +120,15 @@ const WorkItemMobile = ({ key, item }) => {
                 </svg>
               )}
             </p>
-            <p
-              className={`font-lora-italic text-[#fefefe] text-[22px] font-medium leading-9 tracking-[0.33px] w-[${
-                item.mobWidth ? item.mobWidth : "270"
-              }px]`}
+            <div
+              style={{ width: `${item.mobWidth ? item.mobWidth : "270"}px` }}
             >
-              {item.title}
-            </p>
+              <p
+                className={`font-lora-italic text-[#fefefe] text-[22px] font-medium leading-9 tracking-[0.33px]`}
+              >
+                {item.title}
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -146,7 +148,7 @@ const NewWork = ({ imageEnter, largeEnter }) => {
       subTitle: "Rush By Hike, A Real Money Gaming App",
       background: HikeBG,
       backgroundMob: HikeBGmob,
-      mobWidth: 292,
+      mobWidth: 290,
       islocked: true,
       // link: "https://www.figma.com/proto/X6IFgiegAQerDSBe5RKBs3/Case-study-stack?page-id=1%3A2&type=design&node-id=1-8501&viewport=758%2C738%2C0.24&t=jbsnjihAGYGdgkII-1&scaling=contain&starting-point-node-id=1%3A8284&mode=design",
     },

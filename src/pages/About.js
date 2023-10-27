@@ -69,8 +69,8 @@ const About = () => {
         className="w-full h-auto font-lato pt-10 bg-brand-black text-[#fefefe] "
       >
         {/* landing section */}
-        <div class="h-screen relative  w-full md:px-48  md:pr-0 md:pl-48 pt-10 md:py-20 flex flex-col md:flex-row md:items-center md:justify-start">
-          <div class="w-full md:w-4/7 z-20 pt-10 md:pt-0 px-7 flex flex-col justify-center items-start tracking-wide ">
+        <div class="h-screen relative  w-full md:px-48  md:pr-0 md:pl-48 pt-10 md:py-20 md:pt-0 flex flex-col md:flex-row md:items-center md:justify-start">
+          <div class="w-full md:w-4/7 z-20 pt-10 md:pt-[0] px-7 flex flex-col justify-center items-start tracking-wide ">
             <div class="text-brand-white relative text-[26px] md:text-4xl  w-full ">
               <div onMouseEnter={largeEnter} onMouseLeave={imageEnter}>
                 Hey there!

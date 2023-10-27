@@ -244,3 +244,18 @@ path:nth-child(6) {
     display: none !important;
   }
 }
+
+/* Landing page hover transition */
+
+.hoveredLanding {
+  animation: hoverAnimation 0.3s ease forwards;
+}
+
+@keyframes hoverAnimation {
+  from {
+    z-index: 10;
+  }
+  to {
+    z-index: 40;
+  }
+}

@@ -187,11 +187,9 @@ const SocialProof = ({ imageEnter, largeEnter }) => {
                       backgroundImage: `url(${feedback.image})`,
                     }}
                   />
-                  <div class=" tracking-1 md:tracking-3 ">
-                    <div className="text-xs md:text-xl">{feedback.name}, </div>
-
-                    <div className="text-xs md:text-xl ">
-                      {feedback.company}
+                  <div class=" flex tracking-1 md:tracking-3 ">
+                    <div className="text-xs font-light md:text-xl">
+                      {feedback.name}, {feedback.company}
                     </div>
                   </div>
                 </div>

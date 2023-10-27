@@ -1,9 +1,14 @@
-import React, { useState } from "react";
-import HeroImage from "../assets/landingpage/sam.png";
+import React, { useEffect, useState } from "react";
+import HeroImage from "../assets/landingpage/sam.jpg";
 import IndiaFlag from "../assets/landingpage/🇮🇳.png";
+import overlay from "../assets/landingpage/landingOverlay.svg";
 
 const LandingSection = ({ imageEnter, largeEnter }) => {
   const [hovered, setHovered] = useState(false);
+
+  useEffect(() => {
+    console.log(hovered);
+  }, [hovered]);
 
   const handleMouseEnter = () => {
     setHovered(true);
@@ -23,7 +28,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
       <div className="relative w-full h-full md:m-auto md:max-w-7xl ">
         <div class="relative flex flex-col justify-center items-center md:block h-full md:mt-0 md:py-52 w-full">
           <h1
-            class="text-3xl z-20 md:text-5xl md:ml-28 font-thin mt-60 md:mt-16 w-9/10  md:w-8/10 font-lato-light-italic landing-page-text  "
+            class="text-3xl z-20 md:text-5xl md:ml-28 font-thin mt-60 md:mt-20 w-full mx-auto md:w-max font-lato-light-italic landing-page-text  "
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
             style={{
@@ -44,7 +49,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
               href="https://www.linkedin.com/in/shradha-b-k/"
               target="_blank"
               rel="noreferrer"
-              className="py-2 md:py-4 flex justify-center items-center md:ml-28 mt-2 md:mt-0 rounded-l-full rounded-r-full text-white max-w-max tracking-wider"
+              className="py-2 pt-0 md:py-4 flex justify-center items-center md:ml-28 mt-2 md:mt-0 rounded-l-full rounded-r-full text-white max-w-max tracking-wider"
             >
               <div
                 style={{
@@ -69,40 +74,27 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
             borderRadius: "10px",
             position: "absolute",
             overflow: "hidden",
-            zIndex: 10, // Ensure this div is on top of the content
-            transition: "transform 0.3s ease-in-out",
+            zIndex: hovered ? 40 : 10,
+            background: `url(${HeroImage})`,
+            backgroundSize: "contain",
+            transition: "z-index 0.4s ease",
           }}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
-          className={`hidden md:block absolute right-32 bottom-20 bg-cover bg-center bg-no-repeat hover:z-40`}
+          className={`hidden md:flex justify-start align-top absolute right-32 bottom-20 bg-cover bg-center bg-no-repeat hover:z-40 ${
+            hovered ? "hoveredLanding" : ""
+          }`}
         >
-          <img
-            src={HeroImage}
-            className="hover:z-40"
-            alt="Hero Pic"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-            }}
-          />
           {hovered && (
-            <>
-              <div
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%",
-                  zIndex: 11,
-                  // border: "2px dotted #FFF",
-                  background:
-                    "lightgray 50% / cover no-repeat, linear-gradient(117deg, rgba(255, 255, 255, 0.25) 2.61%, rgba(255, 255, 255, 0.00) 87.34%)",
-                  boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.05)",
-                  backdropFilter: "blur(13px)",
-                }}
-              ></div>
+            <div
+              style={{
+                background: `url(${overlay})`,
+                width: "330px",
+                height: "432px",
+                marginLeft: "-3px",
+              }}
+              className=""
+            >
               <div
                 className="hover:z-40"
                 style={{
@@ -128,7 +120,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
                   </span>
                 </p>
               </div>
-            </>
+            </div>
           )}
         </div>
       </div>
