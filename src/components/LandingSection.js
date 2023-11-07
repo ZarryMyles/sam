@@ -105,7 +105,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
               >
                 <div
                   className="ml-4 leading-[35px] font-lora-italic font-semibold text-xs tracking-[0.18px]"
-                  style={{ textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}
+                  // style={{ textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}
                 >
                   Van Gogh Art - Bengaluru, India
                 </div>

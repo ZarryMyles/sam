@@ -211,7 +211,7 @@ const NewWork = ({ imageEnter, largeEnter }) => {
   return (
     <div
       id="work"
-      className="min-h-screen pt-20 md:pt-0 md:px-24 md:py-5 flex flex-col text-white w-full md:gap-32"
+      className="min-h-screen pt-20 md:pt-[60px] md:px-24 md:py-5 flex flex-col text-white w-full md:gap-32"
     >
       <div className="flex flex-col md:gap-14">
         <h3 className="text-[#979797] font-lato-italic md:text-3xl px-[22px] md:px-0 pb-4 md:pb-0 text-lg font-medium track">
