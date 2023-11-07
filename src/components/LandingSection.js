@@ -79,8 +79,8 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
             scale={0}
             shadow={0}
             shine={1}
-            width={365}
-            height={472}
+            width={353}
+            height={460}
             borderRadius={10}
           >
             <div
