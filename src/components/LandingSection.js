@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import HeroImage from "../assets/landingpage/sam.jpg";
-import IndiaFlag from "../assets/landingpage/🇮🇳.png";
-import overlay from "../assets/landingpage/landingOverlay.svg";
+import { ParallaxHover } from "react-parallax-hover";
 
 const LandingSection = ({ imageEnter, largeEnter }) => {
   const [hovered, setHovered] = useState(false);
@@ -67,61 +66,51 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
           </div>
         </div>
         <div
+          className="absolute right-32 bottom-20 hidden md:block"
           style={{
-            width: "324px",
-            height: "432px",
             transform: "rotate(2.832deg) translateY(0)",
-            borderRadius: "10px",
-            position: "absolute",
-            overflow: "hidden",
-            zIndex: hovered ? 40 : 10,
-            background: `url(${HeroImage})`,
-            backgroundSize: "contain",
-            transition: "z-index 0.4s ease",
           }}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-          className={`hidden md:flex justify-start align-top absolute right-32 bottom-20 bg-cover bg-center bg-no-repeat hover:z-40 ${
-            hovered ? "hoveredLanding" : ""
-          }`}
         >
-          {hovered && (
+          <ParallaxHover
+            rotation={2}
+            scale={0}
+            shadow={0}
+            shine={1}
+            width={353}
+            height={460}
+            borderRadius={10}
+          >
             <div
+              className="hideen md:flex justify-center items-center bg-[#121212] w-full h-full"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
               style={{
-                background: `url(${overlay})`,
-                width: "330px",
-                height: "432px",
-                marginLeft: "-3px",
+                borderRadius: "10px",
+                overflow: "hidden",
               }}
-              className=""
             >
               <div
-                className="hover:z-40"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
                 style={{
-                  position: "absolute",
-                  top: "50%",
-                  left: "50%",
-                  transform: "translate(-50%, -50%)",
-                  textAlign: "center",
-                  zIndex: 12,
-                  whiteSpace: "nowrap",
+                  zIndex: hovered ? 40 : 10,
+                  background: `url(${HeroImage})`,
+                  backgroundSize: "contain",
+                  width: "324px",
+                  height: "432px",
+                  borderRadius: "10px",
                 }}
+                className={`hidden md:flex justify-start items-end bg-cover bg-center bg-no-repeat}`}
               >
-                <p
-                  style={{ color: "#fefefe", fontWeight: "bold" }}
-                  className="font-lora-italic text-4xl"
+                <div
+                  className="ml-4 leading-[35px] font-lora-italic font-semibold text-xs tracking-[0.18px] drop-shadow-md"
+                  style={{ textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}
                 >
-                  Van Gogh Art
-                </p>
-                <p className="pt-3 flex w-full justify-center align-baseline gap-3">
-                  Bengaluru{" "}
-                  <span>
-                    <img src={IndiaFlag} alt="India Flag" />
-                  </span>
-                </p>
+                  Van Gogh Art - Bengaluru, India
+                </div>
               </div>
             </div>
-          )}
+          </ParallaxHover>
         </div>
       </div>
     </div>

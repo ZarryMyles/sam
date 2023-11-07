@@ -14,6 +14,7 @@ import SmartVisionMob from "../assets/newwork/smartvisionmob.png";
 
 // Icons
 import Lock from "../assets/icons/lock.png";
+import Player from "../assets/newwork/player.png";
 
 const WorkItem = ({ key, item, imageEnter, largeEnter }) => {
   return (
@@ -66,6 +67,16 @@ const WorkItem = ({ key, item, imageEnter, largeEnter }) => {
             <p className="font-lora-italic md:pt-3 text-[#fefefe] text-[34px] tracking-[0.51px]">
               {item.title}
             </p>
+            {item.isVideo && (
+              <a
+                href={item.videoLink}
+                className="md:mt-7 z-40"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={Player} alt="Player icon" width={62} height={62} />
+              </a>
+            )}
           </div>
         </div>
       </ParallaxHover>
@@ -87,10 +98,10 @@ const WorkItemMobile = ({ key, item }) => {
     >
       <div
         style={{
-          width: "100%",
+          minWidth: "100vw",
           background: `url(${item.backgroundMob})`,
           backgroundPosition: "center",
-          backgroundSize: "contain",
+          backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
       >
@@ -128,6 +139,16 @@ const WorkItemMobile = ({ key, item }) => {
               >
                 {item.title}
               </p>
+              {item.isVideo && (
+                <a
+                  href={item.videoLink}
+                  className="z-40 mt-3 w-max flex"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={Player} alt="Player icon" width={43} height={43} />
+                </a>
+              )}
             </div>
           </div>
         </div>
@@ -149,8 +170,8 @@ const NewWork = ({ imageEnter, largeEnter }) => {
       background: HikeBG,
       backgroundMob: HikeBGmob,
       mobWidth: 290,
-      islocked: true,
-      // link: "https://www.figma.com/proto/X6IFgiegAQerDSBe5RKBs3/Case-study-stack?page-id=1%3A2&type=design&node-id=1-8501&viewport=758%2C738%2C0.24&t=jbsnjihAGYGdgkII-1&scaling=contain&starting-point-node-id=1%3A8284&mode=design",
+      // islocked: true,
+      link: "https://www.figma.com/proto/X6IFgiegAQerDSBe5RKBs3/Case-study-stack?page-id=1%3A2&type=design&node-id=1-8501&viewport=758%2C738%2C0.24&t=jbsnjihAGYGdgkII-1&scaling=contain&starting-point-node-id=1%3A8284&mode=design",
     },
     {
       company: "hike",
@@ -173,7 +194,8 @@ const NewWork = ({ imageEnter, largeEnter }) => {
       backgroundMob: NinjaslaabMob,
       link: "https://www.figma.com/proto/X6IFgiegAQerDSBe5RKBs3/Case-study-stack?page-id=0%3A1&type=design&node-id=1-2711&viewport=1570%2C1616%2C0.11&t=yfChFZCfkj0srHhB-1&scaling=scale-down&starting-point-node-id=1%3A2711&mode=design",
       isVideo: true,
-      videoLink: "",
+      videoLink:
+        "https://res.cloudinary.com/samydoo/video/upload/v1663016727/SamWebsite/Work/Desktop/C01_yqtldj_byvhkv.webm",
     },
     {
       company: "PROJECT",
@@ -195,7 +217,7 @@ const NewWork = ({ imageEnter, largeEnter }) => {
         <h3 className="text-[#979797] font-lato-italic md:text-3xl px-[22px] md:px-0 pb-4 md:pb-0 text-lg font-medium track">
           Recent Work
         </h3>
-        <div className="hidden md:flex gap-[18px]">
+        <div className="hidden md:flex md:justify-between gap-[18px]">
           {recentWorkInfo.map((item, index) => (
             <WorkItem
               key={index}
@@ -215,7 +237,7 @@ const NewWork = ({ imageEnter, largeEnter }) => {
         <h3 className="text-[#979797] font-lato-italic md:text-3xl px-[22px] md:px-0 pb-4 md:pb-0 text-lg font-medium track">
           Past Work
         </h3>
-        <div className="hidden md:flex gap-[18px]">
+        <div className="hidden md:flex md:justify-between gap-[18px]">
           {otherWorkInfo.map((item, index) => (
             <WorkItem
               key={index}
