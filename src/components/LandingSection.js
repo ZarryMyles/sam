@@ -66,9 +66,12 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
           </div>
         </div>
         <div
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
           className="absolute right-32 bottom-20 hidden md:block"
           style={{
             transform: "rotate(2.832deg) translateY(0)",
+            zIndex: hovered ? "40" : "10",
           }}
         >
           <ParallaxHover
@@ -76,14 +79,13 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
             scale={0}
             shadow={0}
             shine={1}
-            width={353}
-            height={460}
+            width={365}
+            height={472}
             borderRadius={10}
           >
             <div
               className="hideen md:flex justify-center items-center bg-[#121212] w-full h-full"
               onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
               style={{
                 borderRadius: "10px",
                 overflow: "hidden",
@@ -91,7 +93,6 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
             >
               <div
                 onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
                 style={{
                   zIndex: hovered ? 40 : 10,
                   background: `url(${HeroImage})`,
@@ -103,7 +104,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
                 className={`hidden md:flex justify-start items-end bg-cover bg-center bg-no-repeat}`}
               >
                 <div
-                  className="ml-4 leading-[35px] font-lora-italic font-semibold text-xs tracking-[0.18px] drop-shadow-md"
+                  className="ml-4 leading-[35px] font-lora-italic font-semibold text-xs tracking-[0.18px]"
                   style={{ textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}
                 >
                   Van Gogh Art - Bengaluru, India
