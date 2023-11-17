@@ -175,13 +175,12 @@ const NewWork = ({ imageEnter, largeEnter }) => {
     },
     {
       company: "hike",
-      title:
-        "Revamping Onboarding Journey to Boost User Engagement & conversions",
+      title: "Concept Evaluation: Testing 'Tap to Choose' Feature in Ludo Game",
       subTitle: "Rush By Hike, A Real Money Gaming App",
       background: HikeBG2,
       backgroundMob: HikeBG2mob,
-      link: "",
-      islocked: true,
+      link: "https://morning-jackrabbit-815.notion.site/Concept-Evaluation-Testing-Tap-to-Choose-Feature-in-Ludo-Game-74217ff086d04d7cbf8a56cb81d87b9f?pvs=4",
+      // islocked: true,
     },
   ];
 
