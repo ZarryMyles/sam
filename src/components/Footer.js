@@ -109,7 +109,7 @@ const Footer = ({ imageEnter, largeEnter }) => {
             </li>
           </ul>
         </div>
-        <div class="flex  flex-row justify-between tracking-[0.01em] items-center md:w-3/6 w-full ">
+        <div class="flex flex-row justify-end tracking-[0.01em] items-center md:w-3/6 w-full gap-16">
           {socials.map((social, index) => (
             <a
               onMouseEnter={() => {
@@ -138,7 +138,7 @@ const Footer = ({ imageEnter, largeEnter }) => {
         </div>
       </div>
       <div className=" footerDiv2 shadow-xl text-[11px] text-center  font-lato text-brand-gray flex items-center justify-center p-5 md:p-10">
-        © {new Date().getFullYear()}. shradha-b.com . All Rights Reserved.
+        © {new Date().getFullYear()}. shradha-b. All Rights Reserved.
       </div>
     </div>
   );

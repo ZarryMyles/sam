@@ -7,7 +7,7 @@ import { useTitle } from "../hooks/useTitle";
 import HeroImage from "../assets/about/about.png";
 
 const About = () => {
-  useTitle("About");
+  useTitle("About | Shradha B");
   const [mousePos, setMousePos] = useState({
     x: 0,
     y: 0,

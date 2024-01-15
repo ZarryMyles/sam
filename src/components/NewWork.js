@@ -5,7 +5,7 @@ import { ParallaxHover } from "react-parallax-hover";
 import HikeBG from "../assets/newwork/hikebg.png";
 import HikeBG2 from "../assets/newwork/hikebg2.png";
 import Ninjaslaab from "../assets/newwork/ninjaaslab.png";
-import SmartVision from "../assets/newwork/smartvision.png";
+import Cricket from "../assets/newwork/cricket.png";
 // Work Backgrounds Mobile
 import HikeBGmob from "../assets/newwork/hikebgmob.png";
 import HikeBG2mob from "../assets/newwork/hikebg2mob.png";
@@ -15,6 +15,14 @@ import SmartVisionMob from "../assets/newwork/smartvisionmob.png";
 // Icons
 import Lock from "../assets/icons/lock.png";
 import Player from "../assets/newwork/player.png";
+
+const TagPill = ({ text }) => {
+  return (
+    <span className="bg-[#202020] border-[#292929] border-2 rounded-full px-4 py-1.5 text-xl tracking-[0.3px] leading-8 text-[#d1d1d1]">
+      {text}
+    </span>
+  );
+};
 
 const WorkItem = ({ key, item, imageEnter, largeEnter }) => {
   return (
@@ -29,19 +37,20 @@ const WorkItem = ({ key, item, imageEnter, largeEnter }) => {
     >
       <ParallaxHover
         borderRadius={10}
-        height={440}
+        height={420}
         rotation={2}
         scale={0}
         shadow={0}
         shine={1}
-        width={664}
+        width={632}
       >
         <div
-          className={`rounded-[10px] hovered`}
+          className={`rounded-[10px] hovered bg-cover`}
           style={{
-            width: "664px",
-            height: "440px",
+            width: "632px",
+            height: "420px",
             background: `url(${item.background})`,
+            backgroundSize: "cover",
           }}
         >
           <div
@@ -80,9 +89,11 @@ const WorkItem = ({ key, item, imageEnter, largeEnter }) => {
           </div>
         </div>
       </ParallaxHover>
-      <p className="text-[#fefefe] text-[22px] tracking-[0.33px]">
-        {item.subTitle}
-      </p>
+      <div className="text-[#fefefe] text-[22px] tracking-[0.33px] gap-4 flex">
+        {item.labels.map((label, index) => (
+          <TagPill key={index} text={label} />
+        ))}
+      </div>
     </a>
   );
 };
@@ -164,27 +175,38 @@ const NewWork = ({ imageEnter, largeEnter }) => {
   const recentWorkInfo = [
     {
       company: "hike",
-      title:
-        "Field Study : Diving into the Realm of Users through User Immersion",
+      title: "Diving into the Realm of Users through User Immersion",
       subTitle: "Rush By Hike, A Real Money Gaming App",
       background: HikeBG,
       backgroundMob: HikeBGmob,
       mobWidth: 290,
       // islocked: true,
       link: "https://www.figma.com/proto/X6IFgiegAQerDSBe5RKBs3/Case-study-stack?page-id=1%3A2&type=design&node-id=1-8501&viewport=758%2C738%2C0.24&t=jbsnjihAGYGdgkII-1&scaling=contain&starting-point-node-id=1%3A8284&mode=design",
+      labels: ["Field Study", "User Interviews", "Usability Test"],
     },
     {
       company: "hike",
-      title: "Concept Evaluation: Testing 'Tap to Choose' Feature in Ludo Game",
+      title: "Testing 'Tap to Choose' Feature in Ludo Game",
       subTitle: "Rush By Hike, A Real Money Gaming App",
       background: HikeBG2,
       backgroundMob: HikeBG2mob,
       link: "https://morning-jackrabbit-815.notion.site/Concept-Evaluation-Testing-Tap-to-Choose-Feature-in-Ludo-Game-74217ff086d04d7cbf8a56cb81d87b9f?pvs=4",
+      labels: ["Evaluative Study", "Usability Test", "User Interviews"],
       // islocked: true,
     },
   ];
 
   const otherWorkInfo = [
+    {
+      company: "Hike",
+      title: "Exploring the Dynamics of Opinion Trading Games in Cricket",
+      subTitle: "Exploring the Dynamics of Opinion Trading Games in Cricket",
+      background: Cricket,
+      backgroundMob: SmartVisionMob,
+      link: "",
+      islocked: true,
+      labels: ["Generative Study", "Survey", "User Interviews"],
+    },
     {
       company: "NINJAASLABS",
       title: "Streamlining Accounting Processes for Evolving Businesses",
@@ -193,28 +215,20 @@ const NewWork = ({ imageEnter, largeEnter }) => {
       backgroundMob: NinjaslaabMob,
       link: "https://www.figma.com/proto/X6IFgiegAQerDSBe5RKBs3/Case-study-stack?page-id=0%3A1&type=design&node-id=1-2711&viewport=1570%2C1616%2C0.11&t=yfChFZCfkj0srHhB-1&scaling=scale-down&starting-point-node-id=1%3A2711&mode=design",
       isVideo: true,
+      labels: ["Product Design", "UI Design", "Qualtitative Research"],
       videoLink:
         "https://res.cloudinary.com/samydoo/video/upload/v1663016727/SamWebsite/Work/Desktop/C01_yqtldj_byvhkv.webm",
-    },
-    {
-      company: "PROJECT",
-      title: "Simplifying Smartphones for Users with Impaired Vision",
-      subTitle: "Smart Vision, An Inclusive Messaging App",
-      background: SmartVision,
-      backgroundMob: SmartVisionMob,
-      link: "",
-      islocked: true,
     },
   ];
 
   return (
     <div
-      id="work"
+      id="research"
       className="min-h-screen pt-20 md:pt-[60px] md:px-24 md:py-5 flex flex-col text-white w-full md:gap-32"
     >
       <div className="flex flex-col md:gap-14">
         <h3 className="text-[#979797] font-lato-italic md:text-3xl px-[22px] md:px-0 pb-4 md:pb-0 text-lg font-medium track">
-          Recent Work
+          Recent Research Work
         </h3>
         <div className="hidden md:flex md:justify-between gap-[18px]">
           {recentWorkInfo.map((item, index) => (
@@ -234,7 +248,7 @@ const NewWork = ({ imageEnter, largeEnter }) => {
       </div>
       <div className="flex flex-col md:gap-14 mt-8 md:mt-0">
         <h3 className="text-[#979797] font-lato-italic md:text-3xl px-[22px] md:px-0 pb-4 md:pb-0 text-lg font-medium track">
-          Past Work
+          Past Research Work
         </h3>
         <div className="hidden md:flex md:justify-between gap-[18px]">
           {otherWorkInfo.map((item, index) => (

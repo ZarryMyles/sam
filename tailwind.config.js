@@ -39,6 +39,7 @@ module.exports = {
         white: "#fefefe",
         pink: "#ffc7d1",
         gold: "#FFEE8C",
+        fadedGold: "#A79F74",
         loaderGray: "#323232",
         boxWhite: "#fafafa",
       },

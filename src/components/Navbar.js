@@ -103,19 +103,19 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor, callHome }) => {
           {callHome ? (
             <Link
               activeClass="active"
-              to="work"
+              to="research"
               spy={true}
               smooth={true}
               duration={500}
               className="block md:inline-block p-2 no-underline border-none"
             >
               <a
-                href="/#work"
+                href="/#research"
                 onMouseEnter={largeEnter}
                 onMouseLeave={imageEnter}
                 className="text-lg font-lato cursor-pointer block md:inline-block p-2 no-underline border-none"
               >
-                Work
+                Research
               </a>
             </Link>
           ) : (
@@ -125,9 +125,18 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor, callHome }) => {
               onMouseLeave={imageEnter}
               className="text-lg font-lato cursor-pointer block md:inline-block p-4 no-underline border-none"
             >
-              Work
+              Research
             </a>
           )}
+          <a
+            onMouseEnter={largeEnter}
+            onMouseLeave={imageEnter}
+            href="/design"
+            onClick={uncheckNav}
+            className="font-lato text-lg  top-0 overflow-hidden p-2 flex flex-row items-center"
+          >
+            Design
+          </a>
           <a
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
@@ -204,7 +213,7 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor, callHome }) => {
           {callHome ? (
             <Link
               activeClass="active"
-              to="work"
+              to="research"
               spy={true}
               smooth={true}
               duration={500}
@@ -216,7 +225,7 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor, callHome }) => {
                 onMouseLeave={imageEnter}
                 className="text-lg font-lato cursor-pointer block md:inline-block px-2 no-underline border-none"
               >
-                Work
+                Research
               </a>
             </Link>
           ) : (
@@ -226,9 +235,18 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor, callHome }) => {
               onMouseLeave={imageEnter}
               className="text-lg font-lato cursor-pointer block md:inline-block px-4 no-underline border-none"
             >
-              Work
+              Research
             </a>
           )}
+          <a
+            onMouseEnter={largeEnter}
+            onMouseLeave={imageEnter}
+            href="/design"
+            onClick={uncheckNav}
+            className="font-lato text-lg  top-0 overflow-hidden px-2 flex flex-row items-center"
+          >
+            Design
+          </a>
           <a
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}

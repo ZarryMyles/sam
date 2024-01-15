@@ -5,6 +5,7 @@ import "./vishal.css";
 import {
   // Work,
   NewWork,
+  DesignCTA,
   WorkLogos,
   SocialProof,
   GetInTouch,
@@ -106,6 +107,7 @@ function App() {
           <LandingSection imageEnter={imageEnter} largeEnter={largeEnter} />
           {/* <Work imageEnter={imageEnter} largeEnter={largeEnter} /> */}
           <NewWork imageEnter={imageEnter} largeEnter={largeEnter} />
+          <DesignCTA imageEnter={imageEnter} largeEnter={largeEnter} />
           <WorkLogos imageEnter={imageEnter} largeEnter={largeEnter} />
           <SocialProof imageEnter={imageEnter} largeEnter={largeEnter} />
           <GetInTouch

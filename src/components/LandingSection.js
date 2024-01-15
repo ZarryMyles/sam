@@ -2,6 +2,11 @@ import React, { useEffect, useState } from "react";
 import HeroImage from "../assets/landingpage/sam.jpg";
 import { ParallaxHover } from "react-parallax-hover";
 
+// Icons
+import linkedin from "../assets/icons/socials/linkedin_landing.png";
+import dribbble from "../assets/icons/socials/dribbble_landing.png";
+import mail from "../assets/icons/socials/mail_landing.png";
+
 const LandingSection = ({ imageEnter, largeEnter }) => {
   const [hovered, setHovered] = useState(false);
 
@@ -43,24 +48,42 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
             that reaches{" "}
             <span className="font-lora-italic mr-1">beyond modernity.</span>
           </h1>
-          <div class="flex flex-col md:flex-row md:items-center w-full work-landing-text md:mb-0 md:mt-0">
+          <div className="flex flex-col md:flex-row md:items-center w-full work-landing-text md:mb-0 md:mt-0 md:ml-28 gap-6">
             <a
-              href="https://www.linkedin.com/in/shradha-b-k/"
+              href="https://www.linkedin.com/in/shradha-b-k"
               target="_blank"
               rel="noreferrer"
-              className="py-2 pt-0 md:py-4 flex justify-center items-center md:ml-28 mt-2 md:mt-0 rounded-l-full rounded-r-full text-white max-w-max tracking-wider"
             >
-              <div
-                style={{
-                  letterSpacing: "0.2em",
-                  color: "#FFEE8C",
-                  fontSize: "16px",
-                }}
-                onMouseEnter={largeEnter}
-                onMouseLeave={imageEnter}
-                className="uppercase font-lato border-2 font-semibold rounded-full py-[18px] pl-5 pr-4 border-[#A79F74]"
-              >
-                Work with me ✨
+              <div className="p-[15px] border-2 rounded-[50%] border-brand-fadedGold hover:bg-brand-gold hover:border-brand-gold w-[56px] h-[56px] flex items-center justify-center">
+                <img
+                  src={linkedin}
+                  alt="Linkedin Landing"
+                  width={24}
+                  height={24}
+                />
+              </div>
+            </a>
+            <a
+              href="https://dribbble.com/Shradha_b_k"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div className="p-[15px] border-2 rounded-[50%] border-brand-fadedGold hover:bg-brand-gold hover:border-brand-gold w-[56px] h-[56px] flex items-center justify-center">
+                <img
+                  src={dribbble}
+                  alt="Linkedin Landing"
+                  width={24}
+                  height={24}
+                />
+              </div>
+            </a>
+            <a
+              href="mailto:shradhakaba@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div className="p-[15px] border-2 rounded-[50%] border-brand-fadedGold hover:bg-brand-gold hover:border-brand-gold w-[56px] h-[56px] flex items-center justify-center">
+                <img src={mail} alt="Linkedin Landing" width={24} height={24} />
               </div>
             </a>
           </div>

@@ -29,15 +29,22 @@ const GetInTouch = ({ imageEnter, largeEnter, location }) => {
           <div
             style={{
               letterSpacing: ".08em",
-              color: "#FFEE8C",
             }}
-            className="text-left text-[24px] md:text-4xl z-20  font-lato font-bold uppercase text-brand-white  tracking-wider mb-3 md:my-0"
+            className="text-left text-[24px] md:text-4xl z-20  font-lato font-semibold uppercase text-brand-white  tracking-wider mb-3 md:my-0"
           >
             Get In Touch
           </div>
 
           <div className="font-lora-italic w-4/5 z-20 leading-6 md:w-auto text-left tracking-[0.01em] md:tracking-1  text-base md:text-[22px]  text-brand-white  font-medium">
-            Lets create more{" "}
+            <a
+              href="mailto:shradhakaba@gmail.com"
+              onMouseEnter={largeEnter}
+              onMouseLeave={imageEnter}
+              className="inline px-3 py-3 border-2 text-brand-gold border-brand-fadedGold rounded-full"
+            >
+              Lets create
+            </a>{" "}
+            more{" "}
             <a
               href="http://www.linkedin.com/in/shradha-b-k"
               onMouseEnter={largeEnter}
