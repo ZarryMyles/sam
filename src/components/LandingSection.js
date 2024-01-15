@@ -53,8 +53,10 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
               href="https://www.linkedin.com/in/shradha-b-k"
               target="_blank"
               rel="noreferrer"
+              onMouseEnter={largeEnter}
+              onMouseLeave={imageEnter}
             >
-              <div className="p-[15px] border-2 rounded-[50%] border-brand-fadedGold hover:bg-brand-gold hover:border-brand-gold w-[56px] h-[56px] flex items-center justify-center">
+              <div className="p-[15px] border-2 rounded-[50%] bg-brand-gold border-brand-gold w-[56px] h-[56px] flex items-center justify-center">
                 <img
                   src={linkedin}
                   alt="Linkedin Landing"
@@ -67,8 +69,10 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
               href="https://dribbble.com/Shradha_b_k"
               target="_blank"
               rel="noreferrer"
+              onMouseEnter={largeEnter}
+              onMouseLeave={imageEnter}
             >
-              <div className="p-[15px] border-2 rounded-[50%] border-brand-fadedGold hover:bg-brand-gold hover:border-brand-gold w-[56px] h-[56px] flex items-center justify-center">
+              <div className="p-[15px] border-2 rounded-[50%] border-brand-fadedGold w-[56px] h-[56px] flex items-center justify-center">
                 <img
                   src={dribbble}
                   alt="Linkedin Landing"
@@ -81,8 +85,10 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
               href="mailto:shradhakaba@gmail.com"
               target="_blank"
               rel="noreferrer"
+              onMouseEnter={largeEnter}
+              onMouseLeave={imageEnter}
             >
-              <div className="p-[15px] border-2 rounded-[50%] border-brand-fadedGold hover:bg-brand-gold hover:border-brand-gold w-[56px] h-[56px] flex items-center justify-center">
+              <div className="p-[15px] border-2 rounded-[50%] border-brand-fadedGold w-[56px] h-[56px] flex items-center justify-center">
                 <img src={mail} alt="Linkedin Landing" width={24} height={24} />
               </div>
             </a>

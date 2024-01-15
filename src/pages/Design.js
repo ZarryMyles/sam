@@ -97,6 +97,8 @@ const Design = () => {
           <div className="flex flex-wrap gap-6">
             {/* Filter Section */}
             <button
+              onMouseEnter={largeEnter}
+              onMouseLeave={imageEnter}
               onClick={() => handleFilterChange("All")}
               className={`px-4 py-2 border-2 rounded-full hover:cursor-none ${
                 selectedFilter === "All"
@@ -107,6 +109,8 @@ const Design = () => {
               All
             </button>
             <button
+              onMouseEnter={largeEnter}
+              onMouseLeave={imageEnter}
               onClick={() => handleFilterChange("Illustration")}
               className={`px-4 py-2 border-2 rounded-full ${
                 selectedFilter === "Illustration"
@@ -117,6 +121,8 @@ const Design = () => {
               Illustration
             </button>
             <button
+              onMouseEnter={largeEnter}
+              onMouseLeave={imageEnter}
               onClick={() => handleFilterChange("App")}
               className={`px-4 py-2 border-2 rounded-full ${
                 selectedFilter === "App"
@@ -127,6 +133,8 @@ const Design = () => {
               App Design
             </button>
             <button
+              onMouseEnter={largeEnter}
+              onMouseLeave={imageEnter}
               onClick={() => handleFilterChange("Web")}
               className={`px-4 py-2 border-2 rounded-full ${
                 selectedFilter === "Web"

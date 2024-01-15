@@ -98,7 +98,7 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor, callHome }) => {
         </a>
         <div
           style={{ color: "#fefefe" }}
-          className="flex tracking-1.5 flex-row "
+          className="flex tracking-1.5 flex-row gap-8"
         >
           {callHome ? (
             <Link
@@ -107,13 +107,13 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor, callHome }) => {
               spy={true}
               smooth={true}
               duration={500}
-              className="block md:inline-block p-2 no-underline border-none"
+              className="block md:inline-block no-underline border-none"
             >
               <a
                 href="/#research"
                 onMouseEnter={largeEnter}
                 onMouseLeave={imageEnter}
-                className="text-lg font-lato cursor-pointer block md:inline-block p-2 no-underline border-none"
+                className="text-lg font-lato cursor-pointer block md:inline-block no-underline border-none"
               >
                 Research
               </a>
@@ -123,7 +123,7 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor, callHome }) => {
               href="/"
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
-              className="text-lg font-lato cursor-pointer block md:inline-block p-4 no-underline border-none"
+              className="text-lg font-lato cursor-pointer block md:inline-block no-underline border-none"
             >
               Research
             </a>
@@ -133,7 +133,7 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor, callHome }) => {
             onMouseLeave={imageEnter}
             href="/design"
             onClick={uncheckNav}
-            className="font-lato text-lg  top-0 overflow-hidden p-2 flex flex-row items-center"
+            className="font-lato text-lg  top-0 overflow-hidden flex flex-row items-center"
           >
             Design
           </a>
@@ -142,7 +142,7 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor, callHome }) => {
             onMouseLeave={imageEnter}
             href="/about"
             onClick={uncheckNav}
-            className="font-lato text-lg  top-0 overflow-hidden p-2 flex flex-row items-center"
+            className="font-lato text-lg  top-0 overflow-hidden flex flex-row items-center"
           >
             About
           </a>
@@ -153,13 +153,13 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor, callHome }) => {
               spy={true}
               smooth={true}
               duration={500}
-              className="block md:inline-block p-2 no-underline border-none"
+              className="block md:inline-block no-underline border-none"
             >
               <a
                 href="/#get-in-touch"
                 onMouseEnter={largeEnter}
                 onMouseLeave={imageEnter}
-                className="text-lg font-lato cursor-pointer block md:inline-block p-2 no-underline border-none"
+                className="text-lg font-lato cursor-pointer block md:inline-block no-underline border-none"
               >
                 Contact
               </a>
@@ -169,7 +169,7 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor, callHome }) => {
               href={callHome ? "/#get-in-touch" : "/"}
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
-              className="text-lg font-lato cursor-pointer block md:inline-block p-4 no-underline border-none"
+              className="text-lg font-lato cursor-pointer block md:inline-block no-underline border-none"
             >
               Contact
             </a>
@@ -181,7 +181,7 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor, callHome }) => {
             rel="noreferrer"
             href={resumeLink}
             onClick={uncheckNav}
-            className="font-lato text-lg  top-0 overflow-hidden pl-2 flex flex-row items-center"
+            className="font-lato text-lg  top-0 overflow-hidden flex flex-row items-center"
           >
             Resume
           </a>
@@ -208,7 +208,7 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor, callHome }) => {
         </a>
         <div
           style={{ color: "#fefefe" }}
-          className="flex tracking-1.5 flex-row "
+          className="flex tracking-1.5 flex-row gap-8"
         >
           {callHome ? (
             <Link
@@ -217,13 +217,13 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor, callHome }) => {
               spy={true}
               smooth={true}
               duration={500}
-              className="block md:inline-block px-2 no-underline border-none"
+              className="block md:inline-block no-underline border-none"
             >
               <a
                 href="/#work"
                 onMouseEnter={largeEnter}
                 onMouseLeave={imageEnter}
-                className="text-lg font-lato cursor-pointer block md:inline-block px-2 no-underline border-none"
+                className="text-lg font-lato cursor-pointer block md:inline-block no-underline border-none"
               >
                 Research
               </a>
@@ -233,7 +233,7 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor, callHome }) => {
               href="/"
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
-              className="text-lg font-lato cursor-pointer block md:inline-block px-4 no-underline border-none"
+              className="text-lg font-lato cursor-pointer block md:inline-block no-underline border-none"
             >
               Research
             </a>
@@ -243,7 +243,7 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor, callHome }) => {
             onMouseLeave={imageEnter}
             href="/design"
             onClick={uncheckNav}
-            className="font-lato text-lg  top-0 overflow-hidden px-2 flex flex-row items-center"
+            className="font-lato text-lg  top-0 overflow-hidden flex flex-row items-center"
           >
             Design
           </a>
@@ -252,7 +252,7 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor, callHome }) => {
             onMouseLeave={imageEnter}
             href="/about"
             onClick={uncheckNav}
-            className="font-lato text-lg  top-0 overflow-hidden px-2 flex flex-row items-center"
+            className="font-lato text-lg  top-0 overflow-hidden flex flex-row items-center"
           >
             About
           </a>
@@ -263,13 +263,13 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor, callHome }) => {
               spy={true}
               smooth={true}
               duration={500}
-              className="block md:inline-block px-2 no-underline border-none"
+              className="block md:inline-block no-underline border-none"
             >
               <a
                 href="/#get-in-touch"
                 onMouseEnter={largeEnter}
                 onMouseLeave={imageEnter}
-                className="text-lg font-lato cursor-pointer block md:inline-block px-2 no-underline border-none"
+                className="text-lg font-lato cursor-pointer block md:inline-block no-underline border-none"
               >
                 Contact
               </a>
@@ -279,7 +279,7 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor, callHome }) => {
               href="/"
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
-              className="text-lg font-lato cursor-pointer block md:inline-block px-4 no-underline border-none"
+              className="text-lg font-lato cursor-pointer block md:inline-block no-underline border-none"
             >
               Contact
             </a>
@@ -292,7 +292,7 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor, callHome }) => {
             rel="noreferrer"
             href={resumeLink}
             onClick={uncheckNav}
-            className="font-lato text-lg  top-0 overflow-hidden pl-2 flex flex-row items-center"
+            className="font-lato text-lg  top-0 overflow-hidden flex flex-row items-center"
           >
             Resume
           </a>

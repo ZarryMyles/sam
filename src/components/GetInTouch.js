@@ -35,7 +35,7 @@ const GetInTouch = ({ imageEnter, largeEnter, location }) => {
             Get In Touch
           </div>
 
-          <div className="font-lora-italic w-4/5 z-20 leading-6 md:w-auto text-left tracking-[0.01em] md:tracking-1  text-base md:text-[22px]  text-brand-white  font-medium">
+          <div className="font-lora-italic w-4/5 z-20 leading-6 md:w-auto font-normal text-left tracking-[0.01em] md:tracking-1  text-base md:text-[22px]  text-brand-white">
             <a
               href="mailto:shradhakaba@gmail.com"
               onMouseEnter={largeEnter}

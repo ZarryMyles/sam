@@ -26,75 +26,77 @@ const TagPill = ({ text }) => {
 
 const WorkItem = ({ key, item, imageEnter, largeEnter }) => {
   return (
-    <a
-      href={item.link ? item.link : null}
-      rel="noreferrer"
-      target="_blank"
-      key={key}
-      className="flex flex-col gap-6"
-      onMouseEnter={item.islocked ? imageEnter : largeEnter}
-      onMouseLeave={imageEnter}
-    >
-      <ParallaxHover
-        borderRadius={10}
-        height={420}
-        rotation={2}
-        scale={0}
-        shadow={0}
-        shine={1}
-        width={632}
+    <div className="flex flex-col gap-6">
+      <a
+        href={item.link ? item.link : null}
+        rel="noreferrer"
+        target="_blank"
+        key={key}
+        className="flex flex-col"
+        onMouseEnter={item.islocked ? imageEnter : largeEnter}
+        onMouseLeave={imageEnter}
       >
-        <div
-          className={`rounded-[10px] hovered bg-cover`}
-          style={{
-            width: "632px",
-            height: "420px",
-            background: `url(${item.background})`,
-            backgroundSize: "cover",
-          }}
+        <ParallaxHover
+          borderRadius={10}
+          height={420}
+          rotation={2}
+          scale={0}
+          shadow={0}
+          shine={1}
+          width={632}
         >
           <div
-            style={
-              {
-                // backdropFilter: "blur(13px)",
-                // boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.05)",
-              }
-            }
-            className="w-full h-full flex flex-col justify-start items-start md:px-11 md:pt-12 rounded-[10px]"
+            className={`rounded-[10px] hovered bg-cover`}
+            style={{
+              width: "632px",
+              height: "420px",
+              background: `url(${item.background})`,
+              backgroundSize: "cover",
+            }}
           >
-            <p className="uppercase font-lato text-xl font-extrabold tracking-[2.6px] flex gap-2">
-              {item.company}{" "}
-              {item.islocked && (
-                <img
-                  className="lock-icon"
-                  width={24}
-                  src={Lock}
-                  alt="Lock Icon"
-                />
+            <div
+              style={
+                {
+                  // backdropFilter: "blur(13px)",
+                  // boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.05)",
+                }
+              }
+              className="w-full h-full flex flex-col justify-start items-start md:px-11 md:pt-12 rounded-[10px]"
+            >
+              <p className="uppercase font-lato text-xl font-extrabold tracking-[2.6px] flex gap-2">
+                {item.company}{" "}
+                {item.islocked && (
+                  <img
+                    className="lock-icon"
+                    width={24}
+                    src={Lock}
+                    alt="Lock Icon"
+                  />
+                )}
+              </p>
+              <p className="font-lora-italic md:pt-3 text-[#fefefe] text-[34px] tracking-[0.51px]">
+                {item.title}
+              </p>
+              {item.isVideo && (
+                <a
+                  href={item.videoLink}
+                  className="md:mt-7 z-40"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={Player} alt="Player icon" width={62} height={62} />
+                </a>
               )}
-            </p>
-            <p className="font-lora-italic md:pt-3 text-[#fefefe] text-[34px] tracking-[0.51px]">
-              {item.title}
-            </p>
-            {item.isVideo && (
-              <a
-                href={item.videoLink}
-                className="md:mt-7 z-40"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img src={Player} alt="Player icon" width={62} height={62} />
-              </a>
-            )}
+            </div>
           </div>
-        </div>
-      </ParallaxHover>
+        </ParallaxHover>
+      </a>
       <div className="text-[#fefefe] text-[22px] tracking-[0.33px] gap-4 flex">
         {item.labels.map((label, index) => (
           <TagPill key={index} text={label} />
         ))}
       </div>
-    </a>
+    </div>
   );
 };
 
@@ -226,7 +228,7 @@ const NewWork = ({ imageEnter, largeEnter }) => {
       id="research"
       className="min-h-screen pt-20 md:pt-[60px] md:px-24 md:py-5 flex flex-col text-white w-full md:gap-32"
     >
-      <div className="flex flex-col md:gap-14">
+      <div className="flex flex-col md:gap-10">
         <h3 className="text-[#979797] font-lato-italic md:text-3xl px-[22px] md:px-0 pb-4 md:pb-0 text-lg font-medium track">
           Recent Research Work
         </h3>
@@ -246,7 +248,7 @@ const NewWork = ({ imageEnter, largeEnter }) => {
           ))}
         </div>
       </div>
-      <div className="flex flex-col md:gap-14 mt-8 md:mt-0">
+      <div className="flex flex-col md:gap-10 mt-8 md:mt-0">
         <h3 className="text-[#979797] font-lato-italic md:text-3xl px-[22px] md:px-0 pb-4 md:pb-0 text-lg font-medium track">
           Past Research Work
         </h3>
