@@ -353,3 +353,8 @@ path:nth-child(6) {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Design page filters */
+.filtersDesign::-webkit-scrollbar {
+  display: none;
+}

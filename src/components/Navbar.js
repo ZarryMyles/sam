@@ -8,9 +8,15 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor, callHome }) => {
   // console.log(resumeLink);
   const links = [
     {
-      name: "Work",
-      link: "/#work",
+      name: "Research",
+      link: "/#research",
       noHome: "/",
+      targ: "",
+    },
+    {
+      name: "Design",
+      link: "/design",
+      noHome: "/design",
       targ: "",
     },
     {

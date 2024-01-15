@@ -10,7 +10,7 @@ import Cricket from "../assets/newwork/cricket.png";
 import HikeBGmob from "../assets/newwork/hikebgmob.png";
 import HikeBG2mob from "../assets/newwork/hikebg2mob.png";
 import NinjaslaabMob from "../assets/newwork/ninjaaslabmob.png";
-import SmartVisionMob from "../assets/newwork/smartvisionmob.png";
+import cricketMob from "../assets/newwork/cricketmob.png";
 
 // Icons
 import Lock from "../assets/icons/lock.png";
@@ -18,7 +18,7 @@ import Player from "../assets/newwork/player.png";
 
 const TagPill = ({ text }) => {
   return (
-    <span className="bg-[#202020] border-[#292929] border-2 rounded-full px-4 py-1.5 text-xl tracking-[0.3px] leading-8 text-[#d1d1d1]">
+    <span className="bg-[#202020] border-[#292929] border-2 rounded-full px-4 py-1 md:py-1.5 text-base md:text-xl tracking-[0.3px] leading-8 text-[#d1d1d1]">
       {text}
     </span>
   );
@@ -102,74 +102,76 @@ const WorkItem = ({ key, item, imageEnter, largeEnter }) => {
 
 const WorkItemMobile = ({ key, item }) => {
   return (
-    <a
-      href={item.link}
-      rel="noreferrer"
-      target="_blank"
-      key={key}
-      className="flex flex-col gap-[10px] mb-8 w-full"
-    >
-      <div
-        style={{
-          minWidth: "100vw",
-          background: `url(${item.backgroundMob})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
+    <div className="flex flex-col gap-[16px] mb-8 w-full">
+      <a href={item.link} rel="noreferrer" target="_blank" key={key}>
         <div
+          className="bg-cover"
           style={{
-            // backdropFilter: "blur(13px)",
-            // boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.05)",
-            minHeight: "231px",
+            minWidth: "100vw",
+            background: `url(${item.backgroundMob})`,
+            backgroundSize: "cover",
           }}
-          className="w-full h-full"
         >
-          <div className="w-full h-full flex flex-col justify-center items-start pl-[22px] pr-[40px] py-8">
-            <p className="uppercase font-lato text-sm font-extrabold tracking-[1.82px] mb-5 flex gap-1.5 items-center">
-              {item.company}{" "}
-              {item.islocked && (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                >
-                  <path
-                    d="M11.3332 6.00004V4.66671C11.3332 3.78265 10.982 2.93481 10.3569 2.30968C9.73174 1.68456 8.8839 1.33337 7.99984 1.33337C7.11578 1.33337 6.26794 1.68456 5.64282 2.30968C5.01769 2.93481 4.6665 3.78265 4.6665 4.66671V6.00004C4.13607 6.00004 3.62736 6.21075 3.25229 6.58582C2.87722 6.9609 2.6665 7.46961 2.6665 8.00004V12.6667C2.6665 13.1971 2.87722 13.7058 3.25229 14.0809C3.62736 14.456 4.13607 14.6667 4.6665 14.6667H11.3332C11.8636 14.6667 12.3723 14.456 12.7474 14.0809C13.1225 13.7058 13.3332 13.1971 13.3332 12.6667V8.00004C13.3332 7.46961 13.1225 6.9609 12.7474 6.58582C12.3723 6.21075 11.8636 6.00004 11.3332 6.00004ZM5.99984 4.66671C5.99984 4.13627 6.21055 3.62757 6.58563 3.25249C6.9607 2.87742 7.46941 2.66671 7.99984 2.66671C8.53027 2.66671 9.03898 2.87742 9.41405 3.25249C9.78913 3.62757 9.99984 4.13627 9.99984 4.66671V6.00004H5.99984V4.66671ZM11.9998 12.6667C11.9998 12.8435 11.9296 13.0131 11.8046 13.1381C11.6796 13.2631 11.51 13.3334 11.3332 13.3334H4.6665C4.48969 13.3334 4.32012 13.2631 4.1951 13.1381C4.07008 13.0131 3.99984 12.8435 3.99984 12.6667V8.00004C3.99984 7.82323 4.07008 7.65366 4.1951 7.52863C4.32012 7.40361 4.48969 7.33337 4.6665 7.33337H11.3332C11.51 7.33337 11.6796 7.40361 11.8046 7.52863C11.9296 7.65366 11.9998 7.82323 11.9998 8.00004V12.6667Z"
-                    fill="white"
-                  />
-                </svg>
-              )}
-            </p>
-            <div
-              style={{ width: `${item.mobWidth ? item.mobWidth : "270"}px` }}
-            >
-              <p
-                className={`font-lora-italic text-[#fefefe] text-[22px] font-medium leading-9 tracking-[0.33px]`}
-              >
-                {item.title}
+          <div
+            style={{
+              // backdropFilter: "blur(13px)",
+              // boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.05)",
+              minHeight: "231px",
+            }}
+            className="w-full h-full"
+          >
+            <div className="w-full h-full flex flex-col justify-center items-start pl-[22px] pr-[40px] py-8">
+              <p className="uppercase font-lato text-sm font-extrabold tracking-[1.82px] mb-5 flex gap-1.5 items-center">
+                {item.company}{" "}
+                {item.islocked && (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
+                    <path
+                      d="M11.3332 6.00004V4.66671C11.3332 3.78265 10.982 2.93481 10.3569 2.30968C9.73174 1.68456 8.8839 1.33337 7.99984 1.33337C7.11578 1.33337 6.26794 1.68456 5.64282 2.30968C5.01769 2.93481 4.6665 3.78265 4.6665 4.66671V6.00004C4.13607 6.00004 3.62736 6.21075 3.25229 6.58582C2.87722 6.9609 2.6665 7.46961 2.6665 8.00004V12.6667C2.6665 13.1971 2.87722 13.7058 3.25229 14.0809C3.62736 14.456 4.13607 14.6667 4.6665 14.6667H11.3332C11.8636 14.6667 12.3723 14.456 12.7474 14.0809C13.1225 13.7058 13.3332 13.1971 13.3332 12.6667V8.00004C13.3332 7.46961 13.1225 6.9609 12.7474 6.58582C12.3723 6.21075 11.8636 6.00004 11.3332 6.00004ZM5.99984 4.66671C5.99984 4.13627 6.21055 3.62757 6.58563 3.25249C6.9607 2.87742 7.46941 2.66671 7.99984 2.66671C8.53027 2.66671 9.03898 2.87742 9.41405 3.25249C9.78913 3.62757 9.99984 4.13627 9.99984 4.66671V6.00004H5.99984V4.66671ZM11.9998 12.6667C11.9998 12.8435 11.9296 13.0131 11.8046 13.1381C11.6796 13.2631 11.51 13.3334 11.3332 13.3334H4.6665C4.48969 13.3334 4.32012 13.2631 4.1951 13.1381C4.07008 13.0131 3.99984 12.8435 3.99984 12.6667V8.00004C3.99984 7.82323 4.07008 7.65366 4.1951 7.52863C4.32012 7.40361 4.48969 7.33337 4.6665 7.33337H11.3332C11.51 7.33337 11.6796 7.40361 11.8046 7.52863C11.9296 7.65366 11.9998 7.82323 11.9998 8.00004V12.6667Z"
+                      fill="white"
+                    />
+                  </svg>
+                )}
               </p>
-              {item.isVideo && (
-                <a
-                  href={item.videoLink}
-                  className="z-40 mt-3 w-max flex"
-                  target="_blank"
-                  rel="noreferrer"
+              <div
+                style={{ width: `${item.mobWidth ? item.mobWidth : "270"}px` }}
+              >
+                <p
+                  className={`font-lora-italic text-[#fefefe] text-[22px] font-medium leading-9 tracking-[0.33px]`}
                 >
-                  <img src={Player} alt="Player icon" width={43} height={43} />
-                </a>
-              )}
+                  {item.title}
+                </p>
+                {item.isVideo && (
+                  <a
+                    href={item.videoLink}
+                    className="z-40 mt-3 w-max flex"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img
+                      src={Player}
+                      alt="Player icon"
+                      width={43}
+                      height={43}
+                    />
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         </div>
+      </a>
+      <div className="mx-[22px] tracking-[0.33px] gap-[10px] flex flex-wrap">
+        {item.labels.map((label, index) => (
+          <TagPill key={index} text={label} />
+        ))}
       </div>
-      <p className="text-[#fefefe] text-[16px] tracking-[0.24px] pl-[22px]">
-        {item.subTitle}
-      </p>
-    </a>
+    </div>
   );
 };
 
@@ -204,7 +206,7 @@ const NewWork = ({ imageEnter, largeEnter }) => {
       title: "Exploring the Dynamics of Opinion Trading Games in Cricket",
       subTitle: "Exploring the Dynamics of Opinion Trading Games in Cricket",
       background: Cricket,
-      backgroundMob: SmartVisionMob,
+      backgroundMob: cricketMob,
       link: "",
       islocked: true,
       labels: ["Generative Study", "Survey", "User Interviews"],

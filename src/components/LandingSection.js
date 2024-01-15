@@ -48,7 +48,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
             that reaches{" "}
             <span className="font-lora-italic mr-1">beyond modernity.</span>
           </h1>
-          <div className="flex flex-col md:flex-row md:items-center w-full work-landing-text md:mb-0 md:mt-0 md:ml-28 gap-6">
+          <div className="flex flex-row md:items-center w-full work-landing-text md:mb-0 md:mt-0 md:ml-28 gap-6">
             <a
               href="https://www.linkedin.com/in/shradha-b-k"
               target="_blank"

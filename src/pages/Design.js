@@ -93,8 +93,8 @@ const Design = () => {
         onMouseLeave={imageEnter}
         className="w-full h-auto font-lato pt-40 bg-brand-black text-[#fefefe] min-h-screen"
       >
-        <div className="flex flex-col gap-10 font-lato text-xl tracking-[0.3px] leading-7 md:px-24">
-          <div className="flex flex-wrap gap-6">
+        <div className="flex flex-col gap-10 font-lato text-xl tracking-[0.3px] leading-7 md:px-24 mb-16 md:mb-20 overflow-hidden">
+          <div className="flex gap-6 overflow-x-scroll whitespace-nowrap filtersDesign ml-6 md:ml-0">
             {/* Filter Section */}
             <button
               onMouseEnter={largeEnter}
@@ -144,18 +144,17 @@ const Design = () => {
             >
               Web Design
             </button>
-            {/* Add more buttons for other tags */}
           </div>
-          <div className="flex flex-wrap gap-[14px]">
+          <div className="flex flex-wrap gap-[10px] md:gap-[14px]">
             {/* Image Gallery */}
             {filteredImages.map((image) => (
-              <div key={image.id} className="rounded-lg">
+              <div key={image.id} className="md:rounded-lg">
                 <Zoom>
                   <img
                     src={image.src}
                     alt={image.tag}
                     width={430}
-                    className="rounded-lg"
+                    className="md:rounded-lg"
                   />
                 </Zoom>
               </div>
