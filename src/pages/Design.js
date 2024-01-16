@@ -63,9 +63,9 @@ const Design = () => {
   const allImages = [
     { id: 1, src: Ill1, tag: "Illustration" },
     { id: 2, src: App1, tag: "App" },
-    { id: 3, src: Web1, tag: "Web" },
-    { id: 4, src: Web2, tag: "Web" },
-    { id: 5, src: Web3, tag: "Web" },
+    { id: 3, src: Web3, tag: "Web" },
+    { id: 4, src: Web1, tag: "Web" },
+    { id: 5, src: Web2, tag: "Web" },
   ];
   const [selectedFilter, setSelectedFilter] = useState("All");
   const handleFilterChange = (filter) => {

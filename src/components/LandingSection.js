@@ -56,7 +56,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
             >
-              <div className="md:p-[15px] p-[13px] border-2 rounded-[50%] bg-brand-gold border-brand-gold w-[52px] h-[52px] flex items-center justify-center">
+              <div className="md:p-[15px] p-[13px] border-2 rounded-[50%] bg-brand-gold border-brand-gold w-[52px] h-[52px] md:w-[56px] md:h-[56px] flex items-center justify-center">
                 <img
                   src={linkedin}
                   alt="Linkedin Landing"
@@ -72,7 +72,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
             >
-              <div className="md:p-[15px] p-[13px] border-2 rounded-[50%] border-brand-fadedGold w-[52px] h-[52px] flex items-center justify-center">
+              <div className="md:p-[15px] p-[13px] border-2 rounded-[50%] border-brand-fadedGold w-[52px] h-[52px] md:w-[56px] md:h-[56px] flex items-center justify-center">
                 <img
                   src={dribbble}
                   alt="Linkedin Landing"
@@ -88,7 +88,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
             >
-              <div className="md:p-[15px] p-[13px] border-2 rounded-[50%] border-brand-fadedGold w-[52px] h-[52px] flex items-center justify-center">
+              <div className="md:p-[15px] p-[13px] border-2 rounded-[50%] border-brand-fadedGold w-[52px] h-[52px] md:w-[56px] md:h-[56px] flex items-center justify-center">
                 <img src={mail} alt="Linkedin Landing" width={24} height={24} />
               </div>
             </a>
