@@ -18,7 +18,7 @@ import Player from "../assets/newwork/player.png";
 
 const TagPill = ({ text }) => {
   return (
-    <span className="bg-[#202020] border-[#292929] border-[1.5px] md:border-2 rounded-full px-4 py-1 font-normal text-base md:text-xl tracking-[0.3px] leading-[30px] md:leading-8 text-[#d1d1d1]">
+    <span className="bg-[#202020] border-[#292929] font-lato border-[1.5px] md:border-2 rounded-full px-4 py-1 font-normal text-base md:text-xl tracking-[0.3px] leading-[30px] md:leading-8 text-[#d1d1d1]">
       {text}
     </span>
   );

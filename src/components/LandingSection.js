@@ -3,9 +3,9 @@ import HeroImage from "../assets/landingpage/sam.jpg";
 import { ParallaxHover } from "react-parallax-hover";
 
 // Icons
-import linkedin from "../assets/icons/socials/linkedin_landing.png";
-import dribbble from "../assets/icons/socials/dribbble_landing.png";
-import mail from "../assets/icons/socials/mail_landing.png";
+import linkedin from "../assets/icons/socials/linkedin_landing.svg";
+import dribbble from "../assets/icons/socials/dribbble_landing.svg";
+import mail from "../assets/icons/socials/mail_landing.svg";
 
 const LandingSection = ({ imageEnter, largeEnter }) => {
   const [hovered, setHovered] = useState(false);
