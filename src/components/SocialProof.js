@@ -147,7 +147,7 @@ const SocialProof = ({ imageEnter, largeEnter }) => {
       >
         {feedbacks.map((feedback, index) => (
           <SwiperSlide className="md:hidden w-full h-full">
-            <div className="px-5 md:px-24 font-lato py-10 md:py-20 md:pt-0 flex items-center justify-center my-10 md:my-5  bg-brand-black transition-all duration-500">
+            <div className="px-5 md:px-24 font-lato py-[60px] md:py-20 md:pt-0 flex items-center justify-center my-10 md:my-5  bg-brand-black transition-all duration-500">
               <div class="  flex h-[700px]   bg-brand-darkGrey2 pt-10  text-brand-gray w-full px-5  pb-[120px] md:p-24   flex-col justify-between md:items-center  relative">
                 <div class="  text-brand-gray w-full ">
                   <div className="flex items-center text-xl  tracking-widest uppercase">

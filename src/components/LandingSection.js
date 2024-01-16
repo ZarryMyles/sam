@@ -32,7 +32,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
       <div className="relative w-full h-full md:m-auto md:max-w-7xl ">
         <div class="relative flex flex-col justify-center items-center md:block h-full md:mt-0 md:py-52 w-full">
           <h1
-            class="text-3xl z-20 md:text-5xl md:ml-28 font-thin mt-60 md:mt-20 w-full mx-auto md:w-max font-lato-light-italic landing-page-text  "
+            class="text-[26px] leading-[40px] md:leading-normal z-20 md:text-5xl md:ml-28 font-thin mt-[200px] md:mt-20 w-full mx-auto md:w-max font-lato-light-italic landing-page-text  "
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
             style={{
@@ -48,7 +48,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
             that reaches{" "}
             <span className="font-lora-italic mr-1">beyond modernity.</span>
           </h1>
-          <div className="flex flex-row md:items-center w-full work-landing-text md:mb-0 md:mt-0 md:ml-28 gap-6">
+          <div className="flex flex-row md:items-center w-full work-landing-text md:mb-0 mb-0 -mt-4 md:mt-0 md:ml-28 md:gap-6 gap-5">
             <a
               href="https://www.linkedin.com/in/shradha-b-k"
               target="_blank"
@@ -56,7 +56,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
             >
-              <div className="p-[15px] border-2 rounded-[50%] bg-brand-gold border-brand-gold w-[56px] h-[56px] flex items-center justify-center">
+              <div className="md:p-[15px] p-[13px] border-2 rounded-[50%] bg-brand-gold border-brand-gold w-[52px] h-[52px] flex items-center justify-center">
                 <img
                   src={linkedin}
                   alt="Linkedin Landing"
@@ -72,7 +72,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
             >
-              <div className="p-[15px] border-2 rounded-[50%] border-brand-fadedGold w-[56px] h-[56px] flex items-center justify-center">
+              <div className="md:p-[15px] p-[13px] border-2 rounded-[50%] border-brand-fadedGold w-[52px] h-[52px] flex items-center justify-center">
                 <img
                   src={dribbble}
                   alt="Linkedin Landing"
@@ -88,7 +88,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
             >
-              <div className="p-[15px] border-2 rounded-[50%] border-brand-fadedGold w-[56px] h-[56px] flex items-center justify-center">
+              <div className="md:p-[15px] p-[13px] border-2 rounded-[50%] border-brand-fadedGold w-[52px] h-[52px] flex items-center justify-center">
                 <img src={mail} alt="Linkedin Landing" width={24} height={24} />
               </div>
             </a>

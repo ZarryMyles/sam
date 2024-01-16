@@ -6,7 +6,7 @@ const GetInTouch = ({ imageEnter, largeEnter, location }) => {
   return (
     <div
       id="get-in-touch"
-      className="  w-full overflow-clip    mt-10 relative  "
+      className="  w-full overflow-clip    md:mt-10 relative  "
     >
       <div className="relative text-brand-white px-7 md:px-48  pb-20 md:pb-[158px] pt-10 md:py-40  w-full   left-0 top-0">
         <div
@@ -40,7 +40,7 @@ const GetInTouch = ({ imageEnter, largeEnter, location }) => {
               href="mailto:shradhakaba@gmail.com"
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
-              className="px-3 py-3 border-2 text-brand-gold border-brand-fadedGold rounded-full w-max"
+              className="py-2 px-4 md:px-3 md:py-3 border-2 text-brand-gold border-brand-fadedGold rounded-full w-max"
             >
               Lets create
             </a>

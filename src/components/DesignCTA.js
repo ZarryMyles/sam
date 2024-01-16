@@ -3,13 +3,8 @@ import Arrow from "../assets/icons/guidance-arrow.png";
 
 const DesignCTA = ({ imageEnter, largeEnter }) => {
   return (
-    <div className="text-white w-full px-6 md:px-24 md:py-36 ">
-      <a
-        href="/design"
-        target="_blank"
-        rel="noreferrer"
-        className="flex items-center gap-6 md:gap-[40px] w-max"
-      >
+    <div className="text-white w-full px-6 pt-8 pb-[76px] md:px-24 md:pt-36 md:pb-36 ">
+      <a href="/design" className="flex items-center gap-6 md:gap-[40px] w-max">
         <span
           onMouseEnter={largeEnter}
           onMouseLeave={imageEnter}

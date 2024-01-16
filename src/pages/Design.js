@@ -91,16 +91,16 @@ const Design = () => {
       <div
         onMouseEnter={imageEnter}
         onMouseLeave={imageEnter}
-        className="w-full h-auto font-lato pt-40 bg-brand-black text-[#fefefe] min-h-screen"
+        className="w-full h-auto font-lato pt-[80px] md:pt-40 bg-brand-black text-[#fefefe] min-h-screen"
       >
-        <div className="flex flex-col gap-10 font-lato text-xl tracking-[0.3px] leading-7 md:px-24 mb-16 md:mb-20 overflow-hidden">
-          <div className="flex gap-6 overflow-x-scroll whitespace-nowrap filtersDesign ml-6 md:ml-0">
+        <div className="flex flex-col gap-10 font-lato text-base md:text-xl tracking-[0.3px] leading-7 md:px-24 mb-16 md:mb-20 overflow-hidden">
+          <div className="flex gap-[14px] md:gap-6 overflow-x-scroll whitespace-nowrap filtersDesign ml-6 md:ml-0">
             {/* Filter Section */}
             <button
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
               onClick={() => handleFilterChange("All")}
-              className={`px-4 py-2 border-2 rounded-full hover:cursor-none ${
+              className={`px-4 py-1 md:py-2 border-2 rounded-[200px] hover:cursor-none  ${
                 selectedFilter === "All"
                   ? "border-brand-gold bg-brand-gold text-brand-black"
                   : "border-[#292929] text-[#d1d1d1] bg-transparent"
@@ -112,7 +112,7 @@ const Design = () => {
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
               onClick={() => handleFilterChange("Illustration")}
-              className={`px-4 py-2 border-2 rounded-full ${
+              className={`px-4 py-1 md:py-2 border-2 rounded-[200px] ${
                 selectedFilter === "Illustration"
                   ? "border-brand-gold bg-brand-gold text-brand-black"
                   : "border-[#292929] text-[#d1d1d1] bg-transparent"
@@ -124,7 +124,7 @@ const Design = () => {
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
               onClick={() => handleFilterChange("App")}
-              className={`px-4 py-2 border-2 rounded-full ${
+              className={`px-4 py-1 md:py-2 border-2 rounded-full ${
                 selectedFilter === "App"
                   ? "border-brand-gold bg-brand-gold text-brand-black"
                   : "border-[#292929] text-[#d1d1d1] bg-transparent"
@@ -136,7 +136,7 @@ const Design = () => {
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
               onClick={() => handleFilterChange("Web")}
-              className={`px-4 py-2 border-2 rounded-full ${
+              className={`px-4 py-1 md:py-2 border-2 rounded-full ${
                 selectedFilter === "Web"
                   ? "border-brand-gold bg-brand-gold text-brand-black"
                   : "border-[#292929] text-[#d1d1d1] bg-transparent"

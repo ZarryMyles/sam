@@ -18,7 +18,7 @@ import Player from "../assets/newwork/player.png";
 
 const TagPill = ({ text }) => {
   return (
-    <span className="bg-[#202020] border-[#292929] border-2 rounded-full px-4 py-1 md:py-1.5 text-base md:text-xl tracking-[0.3px] leading-8 text-[#d1d1d1]">
+    <span className="bg-[#202020] border-[#292929] border-[1.5px] md:border-2 rounded-full px-4 py-1 font-normal text-base md:text-xl tracking-[0.3px] leading-[30px] md:leading-8 text-[#d1d1d1]">
       {text}
     </span>
   );
@@ -228,10 +228,10 @@ const NewWork = ({ imageEnter, largeEnter }) => {
   return (
     <div
       id="research"
-      className="min-h-screen pt-20 md:pt-[60px] md:px-24 md:py-5 flex flex-col text-white w-full md:gap-32"
+      className="min-h-screen pt-[80px] md:pt-[60px] md:px-24 md:py-5 flex flex-col text-white w-full md:gap-32"
     >
       <div className="flex flex-col md:gap-10">
-        <h3 className="text-[#979797] font-lato-italic md:text-3xl px-[22px] md:px-0 pb-4 md:pb-0 text-lg font-medium track">
+        <h3 className="text-[#979797] font-lato-italic md:text-3xl px-[22px] md:px-0 pb-5 md:pb-0 text-lg font-medium track">
           Recent Research Work
         </h3>
         <div className="hidden md:flex md:justify-between gap-[18px]">
@@ -251,7 +251,7 @@ const NewWork = ({ imageEnter, largeEnter }) => {
         </div>
       </div>
       <div className="flex flex-col md:gap-10 mt-8 md:mt-0">
-        <h3 className="text-[#979797] font-lato-italic md:text-3xl px-[22px] md:px-0 pb-4 md:pb-0 text-lg font-medium track">
+        <h3 className="text-[#979797] font-lato-italic md:text-3xl px-[22px] md:px-0 pb-5 md:pb-0 text-lg font-medium track">
           Past Research Work
         </h3>
         <div className="hidden md:flex md:justify-between gap-[18px]">
