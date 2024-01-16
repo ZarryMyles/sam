@@ -2,6 +2,11 @@ import React, { useEffect, useState } from "react";
 import HeroImage from "../assets/landingpage/sam.jpg";
 import { ParallaxHover } from "react-parallax-hover";
 
+// Icons
+import linkedin from "../assets/icons/socials/linkedin_landing.svg";
+import dribbble from "../assets/icons/socials/dribbble_landing.svg";
+import mail from "../assets/icons/socials/mail_landing.svg";
+
 const LandingSection = ({ imageEnter, largeEnter }) => {
   const [hovered, setHovered] = useState(false);
 
@@ -27,7 +32,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
       <div className="relative w-full h-full md:m-auto md:max-w-7xl ">
         <div class="relative flex flex-col justify-center items-center md:block h-full md:mt-0 md:py-52 w-full">
           <h1
-            class="text-3xl z-20 md:text-5xl md:ml-28 font-thin mt-60 md:mt-20 w-full mx-auto md:w-max font-lato-light-italic landing-page-text  "
+            class="text-[26px] leading-[40px] md:leading-normal z-20 md:text-5xl md:ml-28 font-thin mt-[200px] md:mt-20 w-full mx-auto md:w-max font-lato-light-italic landing-page-text  "
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
             style={{
@@ -43,24 +48,48 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
             that reaches{" "}
             <span className="font-lora-italic mr-1">beyond modernity.</span>
           </h1>
-          <div class="flex flex-col md:flex-row md:items-center w-full work-landing-text md:mb-0 md:mt-0">
+          <div className="flex flex-row md:items-center w-full work-landing-text md:mb-0 mb-0 -mt-4 md:mt-0 md:ml-28 md:gap-6 gap-5">
             <a
-              href="https://www.linkedin.com/in/shradha-b-k/"
+              href="https://www.linkedin.com/in/shradha-b-k"
               target="_blank"
               rel="noreferrer"
-              className="py-2 pt-0 md:py-4 flex justify-center items-center md:ml-28 mt-2 md:mt-0 rounded-l-full rounded-r-full text-white max-w-max tracking-wider"
+              onMouseEnter={largeEnter}
+              onMouseLeave={imageEnter}
             >
-              <div
-                style={{
-                  letterSpacing: "0.2em",
-                  color: "#FFEE8C",
-                  fontSize: "16px",
-                }}
-                onMouseEnter={largeEnter}
-                onMouseLeave={imageEnter}
-                className="uppercase font-lato border-2 font-semibold rounded-full py-[18px] pl-5 pr-4 border-[#A79F74]"
-              >
-                Work with me ✨
+              <div className="md:p-[15px] p-[13px] border-2 rounded-[50%] bg-brand-gold border-brand-gold w-[52px] h-[52px] md:w-[56px] md:h-[56px] flex items-center justify-center">
+                <img
+                  src={linkedin}
+                  alt="Linkedin Landing"
+                  width={24}
+                  height={24}
+                />
+              </div>
+            </a>
+            <a
+              href="https://dribbble.com/Shradha_b_k"
+              target="_blank"
+              rel="noreferrer"
+              onMouseEnter={largeEnter}
+              onMouseLeave={imageEnter}
+            >
+              <div className="md:p-[15px] p-[13px] border-2 rounded-[50%] border-brand-fadedGold w-[52px] h-[52px] md:w-[56px] md:h-[56px] flex items-center justify-center">
+                <img
+                  src={dribbble}
+                  alt="Linkedin Landing"
+                  width={24}
+                  height={24}
+                />
+              </div>
+            </a>
+            <a
+              href="mailto:shradhakaba@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+              onMouseEnter={largeEnter}
+              onMouseLeave={imageEnter}
+            >
+              <div className="md:p-[15px] p-[13px] border-2 rounded-[50%] border-brand-fadedGold w-[52px] h-[52px] md:w-[56px] md:h-[56px] flex items-center justify-center">
+                <img src={mail} alt="Linkedin Landing" width={24} height={24} />
               </div>
             </a>
           </div>

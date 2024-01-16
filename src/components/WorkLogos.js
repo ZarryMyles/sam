@@ -18,14 +18,9 @@ const WorkLogos = ({ imageEnter, largeEnter }) => {
       link: "https://www.linkedin.com/company/happilyever-lens/",
     },
     {
-      name: "REVA HACK </>2020",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png",
-      link: "https://www.linkedin.com/company/reva-hack-2022/",
-    },
-    {
       name: "NinjaasLabs",
       logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/1200px-Microsoft_logo.svg.png",
-      link: "https://ninjaas.com/pages/about-us",
+      link: "https://ninjaas.com/",
     },
     {
       name: "Hike",
@@ -43,14 +38,9 @@ const WorkLogos = ({ imageEnter, largeEnter }) => {
       link: "https://www.linkedin.com/company/happilyever-lens/",
     },
     {
-      name: "REVA HACK </>2020",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png",
-      link: "https://www.linkedin.com/company/reva-hack-2022/",
-    },
-    {
       name: "NinjaasLabs",
       logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/1200px-Microsoft_logo.svg.png",
-      link: "https://ninjaas.com/pages/about-us",
+      link: "https://ninjaas.com/",
     },
     {
       name: "Hike",
@@ -68,14 +58,9 @@ const WorkLogos = ({ imageEnter, largeEnter }) => {
       link: "https://www.linkedin.com/company/happilyever-lens/",
     },
     {
-      name: "REVA HACK </>2020",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png",
-      link: "https://www.linkedin.com/company/reva-hack-2022/",
-    },
-    {
       name: "NinjaasLabs",
       logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/1200px-Microsoft_logo.svg.png",
-      link: "https://ninjaas.com/pages/about-us",
+      link: "https://ninjaas.com/",
     },
     {
       name: "Hike",
@@ -93,20 +78,15 @@ const WorkLogos = ({ imageEnter, largeEnter }) => {
       link: "https://www.linkedin.com/company/happilyever-lens/",
     },
     {
-      name: "REVA HACK </>2020",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png",
-      link: "https://www.linkedin.com/company/reva-hack-2022/",
-    },
-    {
       name: "NinjaasLabs",
       logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/1200px-Microsoft_logo.svg.png",
-      link: "https://ninjaas.com/pages/about-us",
+      link: "https://ninjaas.com/",
     },
   ];
 
   return (
     <div
-      className=" pt-16 mb-10 md:pt-48 md:pb-52 flex justify-center items-center w-full  dark:bg-brand-black"
+      className=" pt-16 mb-10 md:py-24 flex justify-center items-center w-full  dark:bg-brand-black"
       id="work-logo-container "
     >
       <div class="w-full ">
@@ -121,7 +101,7 @@ const WorkLogos = ({ imageEnter, largeEnter }) => {
               style={{
                 fontWeight: "100",
               }}
-              className="px-10 flex my-7 items-center text-xl md:text-4xl tracking-1.5  dark:text-brand-gold font-lato-light   md:mx-3"
+              className="px-10 flex md:my-7 my-3 items-center text-xl md:text-4xl tracking-1.5  dark:text-[#454545] font-lato-light   md:mx-3"
             >
               {client.name}
             </a>
@@ -135,7 +115,7 @@ const WorkLogos = ({ imageEnter, largeEnter }) => {
               rel="noopener noreferrer"
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
-              className="px-10 flex mb-5 items-center  font-lora-italic  text-xl md:text-4xl tracking-1.5  dark:text-brand-gold md:mx-3"
+              className="px-10 flex mb-5 items-center  font-lora-italic  text-xl md:text-4xl tracking-1.5  dark:text-[#a7a7a7] md:mx-3"
             >
               {client.name}
             </a>
