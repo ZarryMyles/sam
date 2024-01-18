@@ -4,6 +4,7 @@ export { default as Loader } from "./Loader";
 export { default as LandingSection } from "./LandingSection";
 // export { default as Work } from "./Work";
 export { default as NewWork } from "./NewWork";
+export { default as DesignCTA } from "./DesignCTA";
 export { default as WorkLogos } from "./WorkLogos";
 export { default as SocialProof } from "./SocialProof";
 export { default as GetInTouch } from "./GetInTouch";

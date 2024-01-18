@@ -9,13 +9,6 @@ import "swiper/css/pagination";
 // feedback
 const feedbacks = [
   {
-    name: "Soumya",
-    company: "UI Developer at NinjaasLabs",
-    image: "/assets/feedback/soumya.jpg",
-    feedback:
-      "It’s rare that you come across a hardworking standout talent like Shradha. At NinjaasLabs, I had the opportunity of collaborating on several projects with her. I was particularly impressed by her ability to effectively collaborate between client and developer. fake:123 She has been a brilliant leader to work with, and I wholeheartedly endorse her as an invaluable team member! from scratch, which resulted in a rich user experience and helped advance our projects from a design and usability perspective.  She has been a brilliant leader to work with, and I wholeheartedly endorse her as an invaluable team member!",
-  },
-  {
     name: "Sanjana",
     company: "SDE at Amazon",
     image: "/assets/feedback/sanjana.jpg",
@@ -30,6 +23,13 @@ const feedbacks = [
 
     feedback:
       "Shradha is one of the colleagues who has immense dedication towards her work and art. Her knowledge in the field of design is impeccable. Shradha would be a great asset to any organization that she works with.fake:123  Her keen eye for details and strong work ethic added elegance and simplicity to all of our applications. She showed initiative in building the design architecture from scratch, which resulted in a rich user experience and helped advance our projects from a design and usability perspective.  She has been a brilliant leader to work with, and I wholeheartedly endorse her as an invaluable team member!",
+  },
+  {
+    name: "Soumya",
+    company: "UI Developer at NinjaasLabs",
+    image: "/assets/feedback/soumya.jpg",
+    feedback:
+      "It’s rare that you come across a hardworking standout talent like Shradha. At NinjaasLabs, I had the opportunity of collaborating on several projects with her. I was particularly impressed by her ability to effectively collaborate between client and developer. fake:123 She has been a brilliant leader to work with, and I wholeheartedly endorse her as an invaluable team member! from scratch, which resulted in a rich user experience and helped advance our projects from a design and usability perspective.  She has been a brilliant leader to work with, and I wholeheartedly endorse her as an invaluable team member!",
   },
 ];
 const SocialProof = ({ imageEnter, largeEnter }) => {
@@ -147,7 +147,7 @@ const SocialProof = ({ imageEnter, largeEnter }) => {
       >
         {feedbacks.map((feedback, index) => (
           <SwiperSlide className="md:hidden w-full h-full">
-            <div className="px-5 md:px-24 font-lato py-10 md:py-20 md:pt-0 flex items-center justify-center my-10 md:my-5  bg-brand-black transition-all duration-500">
+            <div className="px-5 md:px-24 font-lato py-[60px] md:py-20 md:pt-0 flex items-center justify-center my-10 md:my-5  bg-brand-black transition-all duration-500">
               <div class="  flex h-[700px]   bg-brand-darkGrey2 pt-10  text-brand-gray w-full px-5  pb-[120px] md:p-24   flex-col justify-between md:items-center  relative">
                 <div class="  text-brand-gray w-full ">
                   <div className="flex items-center text-xl  tracking-widest uppercase">

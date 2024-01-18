@@ -7,6 +7,7 @@ import App from "./App";
 import {
   Error,
   About,
+  Design,
   // BillEasyPage,
   // SmartVision,
   // BillEasyVisual,
@@ -19,6 +20,7 @@ root.render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="about" element={<About />} />
+      <Route path="design" element={<Design />} />
       {/* works */}
       {/* <Route path="billeasy" element={<BillEasyPage />} />
       <Route path="smart-vision" element={<SmartVision />} />
