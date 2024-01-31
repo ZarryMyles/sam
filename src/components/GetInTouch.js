@@ -40,7 +40,7 @@ const GetInTouch = ({ imageEnter, largeEnter, location }) => {
               href="mailto:shradhakaba@gmail.com"
               onMouseEnter={largeEnter}
               onMouseLeave={imageEnter}
-              className="py-2 px-4 md:px-3 md:py-3 border-2 text-brand-gold border-brand-fadedGold rounded-full w-max"
+              className="py-2 px-4 md:px-[14px] md:py-3 border-2 text-brand-gold border-brand-fadedGold rounded-full w-max"
             >
               Lets create
             </a>
@@ -50,7 +50,7 @@ const GetInTouch = ({ imageEnter, largeEnter, location }) => {
               target="_blank"
               rel="noreferrer"
               onMouseLeave={imageEnter}
-              className=" font-lora-italic pl-3 mt-1 md:pl-0 md:mt-0"
+              className=" font-lora-italic pl-3 md:pl-0"
             >
               more soulful stories and delightful experiences
             </a>

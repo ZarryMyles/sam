@@ -2,19 +2,22 @@ import React from "react";
 import { ParallaxHover } from "react-parallax-hover";
 
 // Work Backgrounds Desktop
-import HikeBG from "../assets/newwork/hikebg.png";
+import HikeBG from "../assets/newwork/hikebg.jpg";
 import HikeBG2 from "../assets/newwork/hikebg2.png";
 import Ninjaslaab from "../assets/newwork/ninjaaslab.png";
 import Cricket from "../assets/newwork/cricket.png";
+import travel from "../assets/newwork/travel.png";
 // Work Backgrounds Mobile
 import HikeBGmob from "../assets/newwork/hikebgmob.png";
 import HikeBG2mob from "../assets/newwork/hikebg2mob.png";
 import NinjaslaabMob from "../assets/newwork/ninjaaslabmob.png";
 import cricketMob from "../assets/newwork/cricketmob.png";
+import travelMob from "../assets/newwork/travelmob.png";
 
 // Icons
 import Lock from "../assets/icons/lock.png";
 import Player from "../assets/newwork/player.png";
+import Arrow from "../assets/icons/guidance-arrow.png";
 
 const TagPill = ({ text }) => {
   return (
@@ -46,12 +49,11 @@ const WorkItem = ({ key, item, imageEnter, largeEnter }) => {
           width={632}
         >
           <div
-            className={`rounded-[10px] hovered bg-cover`}
+            className={`rounded-[10px] hovered !bg-cover`}
             style={{
               width: "632px",
               height: "420px",
               background: `url(${item.background})`,
-              backgroundSize: "cover",
             }}
           >
             <div
@@ -100,7 +102,7 @@ const WorkItem = ({ key, item, imageEnter, largeEnter }) => {
   );
 };
 
-const WorkItemMobile = ({ key, item }) => {
+const WorkItemMobile = ({ key, item, isSmallerWidth }) => {
   return (
     <div className="flex flex-col gap-[16px] mb-8 w-full">
       <a href={item.link} rel="noreferrer" target="_blank" key={key}>
@@ -139,7 +141,15 @@ const WorkItemMobile = ({ key, item }) => {
                 )}
               </p>
               <div
-                style={{ width: `${item.mobWidth ? item.mobWidth : "270"}px` }}
+                style={{
+                  width: `${
+                    item.mobWidth
+                      ? item.mobWidth
+                      : isSmallerWidth
+                      ? "290"
+                      : "270"
+                  }px`,
+                }}
               >
                 <p
                   className={`font-lora-italic text-[#fefefe] text-[22px] font-medium leading-9 tracking-[0.33px]`}
@@ -225,6 +235,19 @@ const NewWork = ({ imageEnter, largeEnter }) => {
     },
   ];
 
+  const designWork = [
+    {
+      company: "Design Challenge",
+      title: "Efficient Travel Experience Evaluation System for Employees",
+      subTitle: "",
+      background: travel,
+      backgroundMob: travelMob,
+      link: "https://www.figma.com/proto/leRCfYDmtbR6WtskNX1RZB/Design-Challenge?page-id=0%3A1&type=design&node-id=1-3&viewport=663%2C270%2C0.03&t=GAor76GXzdOLnAkw-1&scaling=contain&starting-point-node-id=1%3A3&mode=design",
+      islocked: false,
+      labels: ["Product Design", "UI Design", "User Interviews"],
+    },
+  ];
+
   return (
     <div
       id="research"
@@ -248,6 +271,68 @@ const NewWork = ({ imageEnter, largeEnter }) => {
           {recentWorkInfo.map((item, index) => (
             <WorkItemMobile key={index} item={item} />
           ))}
+        </div>
+      </div>
+      <div className="flex flex-col md:gap-10 mt-8 md:mt-0">
+        <h3 className="text-[#979797] font-lato-italic md:text-3xl px-[22px] md:px-0 pb-5 md:pb-0 text-lg font-medium track">
+          Recent Design Work
+        </h3>
+        <div className="hidden md:flex md:justify-between md:items-center gap-[18px]">
+          {designWork.map((item, index) => (
+            <WorkItem
+              key={index}
+              item={item}
+              imageEnter={imageEnter}
+              largeEnter={largeEnter}
+            />
+          ))}
+          <div className="text-white w-full px-6 pt-8 pb-[76px] md:px-24 ">
+            <a
+              href="/design"
+              className="flex items-center gap-6 md:gap-[32px] w-max"
+            >
+              <span
+                onMouseEnter={largeEnter}
+                onMouseLeave={imageEnter}
+                className="border-2 border-brand-fadedGold rounded-full px-4 md:px-10 py-3 md:py-4 text-brand-gold font-lora-italic tracking-[0.54px] text-base md:text-[30px]"
+              >
+                Check out my designs ✨
+              </span>
+              <img
+                onMouseEnter={largeEnter}
+                onMouseLeave={imageEnter}
+                src={Arrow}
+                alt="guidance arrow"
+                className="w-12 md:w-auto md:h-auto "
+              />
+            </a>
+          </div>
+        </div>
+        <div className="md:hidden flex flex-col">
+          {designWork.map((item, index) => (
+            <WorkItemMobile key={index} item={item} isSmallerWidth={true} />
+          ))}
+          <div className="text-white w-full px-6 pb-8 md:px-24 ">
+            <a
+              href="/design"
+              className="flex items-center gap-6 md:gap-[32px] w-max"
+            >
+              <span
+                onMouseEnter={largeEnter}
+                onMouseLeave={imageEnter}
+                className="border-2 border-brand-fadedGold rounded-full px-4 md:px-10 py-3 md:py-4 text-brand-gold font-lora-italic tracking-[0.54px] text-base md:text-[30px]"
+              >
+                Check out my designs ✨
+              </span>
+              <img
+                onMouseEnter={largeEnter}
+                onMouseLeave={imageEnter}
+                src={Arrow}
+                alt="guidance arrow"
+                className="w-12 md:w-auto md:h-auto "
+              />
+            </a>
+          </div>
         </div>
       </div>
       <div className="flex flex-col md:gap-10 mt-8 md:mt-0">

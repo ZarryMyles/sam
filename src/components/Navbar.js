@@ -90,7 +90,7 @@ const Navbar = ({ largeEnter, imageEnter, defaultColor, callHome }) => {
       <div
         style={{ color: defaultColor }}
         onMouseEnter={imageEnter}
-        className="w-full hidden zed md:flex  absolute justify-between items-center md:px-24 md:py-5"
+        className="w-full hidden zed md:flex  absolute justify-between items-center md:px-24 md:py-14"
       >
         <a href="/" className="flex items-center">
           <div
