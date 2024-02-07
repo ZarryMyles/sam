@@ -83,6 +83,35 @@ const Design = () => {
       ? allImages
       : allImages.filter((image) => image.tag === selectedFilter);
 
+  // No of images per row related operations
+  const [imagesPerRow, setImagesPerRow] = useState(3);
+
+  useEffect(() => {
+    const updateImagesPerRow = () => {
+      const screenWidth = window.innerWidth;
+      // Adjust the breakpoints and number of images per row as needed
+      if (screenWidth >= 765) {
+        setImagesPerRow(3);
+      } else if (screenWidth >= 425) {
+        // Set a different number of images per row for smaller screens if needed
+        setImagesPerRow(2);
+      } else {
+        setImagesPerRow(1);
+      }
+    };
+
+    // Initial update
+    updateImagesPerRow();
+
+    // Update on window resize
+    window.addEventListener("resize", updateImagesPerRow);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener("resize", updateImagesPerRow);
+    };
+  }, []);
+
   return (
     <>
       <Navbar
@@ -150,13 +179,21 @@ const Design = () => {
           <div className="flex flex-wrap gap-[10px] md:gap-[14px]">
             {/* Image Gallery */}
             {filteredImages.map((image) => (
-              <div key={image.id} className="md:rounded-lg">
+              <div
+                key={image.id}
+                className="md:rounded-lg"
+                style={{
+                  width: `calc(${100 / imagesPerRow}% - 14px)`,
+                  flex: `0 0 calc(${100 / imagesPerRow}% - 14px)`,
+                  minWidth: "200px",
+                }}
+              >
                 <Zoom>
                   <img
                     src={image.src}
                     alt={image.tag}
-                    width={430}
-                    className="md:rounded-lg"
+                    width="100%"
+                    className="md:rounded-lg md:inline"
                   />
                 </Zoom>
               </div>
