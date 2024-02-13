@@ -1,6 +1,8 @@
 import React from "react";
 import { ParallaxHover } from "react-parallax-hover";
 
+import WorkCTA from "./WorkCTA";
+
 // Work Backgrounds Desktop
 import HikeBG from "../assets/newwork/hikebg.jpg";
 import HikeBG2 from "../assets/newwork/hikebg2.png";
@@ -17,7 +19,6 @@ import travelMob from "../assets/newwork/travelmob.png";
 // Icons
 import Lock from "../assets/icons/lock.png";
 import Player from "../assets/newwork/player.png";
-import Arrow from "../assets/icons/guidance-arrow.png";
 
 const TagPill = ({ text }) => {
   return (
@@ -188,7 +189,7 @@ const WorkItemMobile = ({ key, item, isSmallerWidth }) => {
 const NewWork = ({ imageEnter, largeEnter }) => {
   const recentWorkInfo = [
     {
-      company: "hike",
+      company: "Hike",
       title: "Diving into the Realm of Users through User Immersion",
       subTitle: "Rush By Hike, A Real Money Gaming App",
       background: HikeBG,
@@ -199,7 +200,7 @@ const NewWork = ({ imageEnter, largeEnter }) => {
       labels: ["Field Study", "User Interviews", "Usability Test"],
     },
     {
-      company: "hike",
+      company: "Hike",
       title: "Testing 'Tap to Choose' Feature in Ludo Game",
       subTitle: "Rush By Hike, A Real Money Gaming App",
       background: HikeBG2,
@@ -222,16 +223,14 @@ const NewWork = ({ imageEnter, largeEnter }) => {
       labels: ["Generative Study", "Survey", "User Interviews"],
     },
     {
-      company: "NINJAASLABS",
-      title: "Streamlining Accounting Processes for Evolving Businesses",
-      subTitle: "BillEasy, In-house Invoicing Software",
-      background: Ninjaslaab,
-      backgroundMob: NinjaslaabMob,
-      link: "https://www.figma.com/proto/X6IFgiegAQerDSBe5RKBs3/Case-study-stack?page-id=0%3A1&type=design&node-id=1-2711&viewport=1570%2C1616%2C0.11&t=yfChFZCfkj0srHhB-1&scaling=scale-down&starting-point-node-id=1%3A2711&mode=design",
-      isVideo: true,
-      labels: ["Product Design", "UI Design", "Qualtitative Research"],
-      videoLink:
-        "https://res.cloudinary.com/samydoo/video/upload/v1663016727/SamWebsite/Work/Desktop/C01_yqtldj_byvhkv.webm",
+      company: "Hike",
+      title: "Exploring the Dynamics of Opinion Trading Games in Cricket",
+      subTitle: "Exploring the Dynamics of Opinion Trading Games in Cricket",
+      background: Cricket,
+      backgroundMob: cricketMob,
+      link: "",
+      islocked: true,
+      labels: ["Generative Study", "Survey", "User Interviews"],
     },
   ];
 
@@ -246,6 +245,18 @@ const NewWork = ({ imageEnter, largeEnter }) => {
       islocked: false,
       labels: ["Product Design", "UI Design", "User Interviews"],
     },
+    {
+      company: "NINJAASLABS",
+      title: "Streamlining Accounting Processes for Evolving Businesses",
+      subTitle: "BillEasy, In-house Invoicing Software",
+      background: Ninjaslaab,
+      backgroundMob: NinjaslaabMob,
+      link: "https://www.figma.com/proto/X6IFgiegAQerDSBe5RKBs3/Case-study-stack?page-id=0%3A1&type=design&node-id=1-2711&viewport=1570%2C1616%2C0.11&t=yfChFZCfkj0srHhB-1&scaling=scale-down&starting-point-node-id=1%3A2711&mode=design",
+      isVideo: true,
+      labels: ["Product Design", "UI Design", "Qualtitative Research"],
+      videoLink:
+        "https://res.cloudinary.com/samydoo/video/upload/v1663016727/SamWebsite/Work/Desktop/C01_yqtldj_byvhkv.webm",
+    },
   ];
 
   return (
@@ -255,7 +266,7 @@ const NewWork = ({ imageEnter, largeEnter }) => {
     >
       <div className="flex flex-col md:gap-10">
         <h3 className="text-[#979797] font-lato-italic md:text-3xl px-[22px] md:px-0 pb-5 md:pb-0 text-lg font-medium track">
-          Recent Research Work
+          Best Research Work
         </h3>
         <div className="hidden md:flex md:justify-between gap-[18px]">
           {recentWorkInfo.map((item, index) => (
@@ -267,15 +278,28 @@ const NewWork = ({ imageEnter, largeEnter }) => {
             />
           ))}
         </div>
+        <WorkCTA
+          imageEnter={imageEnter}
+          largeEnter={largeEnter}
+          isDesign={false}
+          isMobile={false}
+        />
+
         <div className="md:hidden flex flex-col">
           {recentWorkInfo.map((item, index) => (
             <WorkItemMobile key={index} item={item} />
           ))}
+          <WorkCTA
+            imageEnter={imageEnter}
+            largeEnter={largeEnter}
+            isDesign={false}
+            isMobile={true}
+          />
         </div>
       </div>
       <div className="flex flex-col md:gap-10 mt-8 md:mt-0">
         <h3 className="text-[#979797] font-lato-italic md:text-3xl px-[22px] md:px-0 pb-5 md:pb-0 text-lg font-medium track">
-          Recent Design Work
+          Best Design Work
         </h3>
         <div className="hidden md:flex md:justify-between md:items-center gap-[18px]">
           {designWork.map((item, index) => (
@@ -286,58 +310,28 @@ const NewWork = ({ imageEnter, largeEnter }) => {
               largeEnter={largeEnter}
             />
           ))}
-          <div className="text-white w-full px-6 pt-8 pb-[76px] md:px-24 ">
-            <a
-              href="/design"
-              className="flex items-center gap-6 md:gap-[32px] w-max"
-            >
-              <span
-                onMouseEnter={largeEnter}
-                onMouseLeave={imageEnter}
-                className="border-2 border-brand-fadedGold rounded-full px-4 md:px-10 py-3 md:py-4 text-brand-gold font-lora-italic tracking-[0.54px] text-base md:text-[30px]"
-              >
-                Check out my designs ✨
-              </span>
-              <img
-                onMouseEnter={largeEnter}
-                onMouseLeave={imageEnter}
-                src={Arrow}
-                alt="guidance arrow"
-                className="w-12 md:w-auto md:h-auto "
-              />
-            </a>
-          </div>
         </div>
+        <WorkCTA
+          imageEnter={imageEnter}
+          largeEnter={largeEnter}
+          isDesign={true}
+          isMobile={false}
+        />
         <div className="md:hidden flex flex-col">
           {designWork.map((item, index) => (
             <WorkItemMobile key={index} item={item} isSmallerWidth={true} />
           ))}
-          <div className="text-white w-full px-6 pb-8 md:px-24 ">
-            <a
-              href="/design"
-              className="flex items-center gap-6 md:gap-[32px] w-max"
-            >
-              <span
-                onMouseEnter={largeEnter}
-                onMouseLeave={imageEnter}
-                className="border-2 border-brand-fadedGold rounded-full px-4 md:px-10 py-3 md:py-4 text-brand-gold font-lora-italic tracking-[0.54px] text-base md:text-[30px]"
-              >
-                Check out my designs ✨
-              </span>
-              <img
-                onMouseEnter={largeEnter}
-                onMouseLeave={imageEnter}
-                src={Arrow}
-                alt="guidance arrow"
-                className="w-12 md:w-auto md:h-auto "
-              />
-            </a>
-          </div>
+          <WorkCTA
+            imageEnter={imageEnter}
+            largeEnter={largeEnter}
+            isDesign={true}
+            isMobile={true}
+          />
         </div>
       </div>
       <div className="flex flex-col md:gap-10 mt-8 md:mt-0">
         <h3 className="text-[#979797] font-lato-italic md:text-3xl px-[22px] md:px-0 pb-5 md:pb-0 text-lg font-medium track">
-          Past Research Work
+          Other Work
         </h3>
         <div className="hidden md:flex md:justify-between gap-[18px]">
           {otherWorkInfo.map((item, index) => (

@@ -32,7 +32,7 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
       <div className="relative w-full h-full md:m-auto md:max-w-7xl ">
         <div class="relative flex flex-col justify-center items-center md:block h-full md:mt-0 md:py-52 w-full">
           <h1
-            class="text-[26px] leading-[40px] md:leading-normal z-20 md:text-5xl md:ml-28 font-thin mt-[200px] md:mt-20 w-full mx-auto md:w-max font-lato-light-italic landing-page-text  "
+            class="text-[26px] leading-[40px] md:leading-normal md:tracking-[1.5%] z-20 md:text-[46px] md:ml-28 font-thin mt-[200px] md:mt-20 w-full mx-auto md:w-max font-lato-light-italic landing-page-text  "
             onMouseEnter={largeEnter}
             onMouseLeave={imageEnter}
             style={{
@@ -42,11 +42,15 @@ const LandingSection = ({ imageEnter, largeEnter }) => {
               position: "inherit",
             }}
           >
-            Hey I’m <span className="font-lora-italic ml-1">Shradha</span>
-            <br />I work with products driven by{" "}
-            <span className="font-lora-italic">purpose</span> <br />
-            that reaches{" "}
-            <span className="font-lora-italic mr-1">beyond modernity.</span>
+            Hey, I’m <span className="font-lora-italic ml-1">Shradha</span>
+            <br />A Researcher & Designer at Hike.
+            <br /> <span className="font-lora-italic mr-1">Purpose</span>is my
+            driving force,{" "}
+            <span className="font-lora-italic mr-1">minimalism</span>
+            <span className="hidden md:inline">
+              <br />
+            </span>{" "}
+            is my aesthetics.
           </h1>
           <div className="flex flex-row md:items-center w-full work-landing-text md:mb-0 mb-0 -mt-4 md:mt-0 md:ml-28 md:gap-6 gap-5">
             <a
