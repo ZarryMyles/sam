@@ -9,7 +9,13 @@ const WorkCTA = ({ imageEnter, largeEnter, isDesign, isMobile }) => {
       } text-white w-full px-6 pb-[76px] md:px-0 md:pb-0 md:pt-5`}
     >
       <a
-        href={isDesign ? "/design" : "notion.com"}
+        href={
+          isDesign
+            ? "/design"
+            : "https://morning-jackrabbit-815.notion.site/My-Research-Work-5ef065ef92df48fc9a9ab033595cbc2b?pvs=4"
+        }
+        target="_blank"
+        rel="noreferrer"
         className="flex items-center gap-6 md:gap-[32px] w-max"
       >
         <span

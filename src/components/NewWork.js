@@ -9,12 +9,14 @@ import HikeBG2 from "../assets/newwork/hikebg2.png";
 import Ninjaslaab from "../assets/newwork/ninjaaslab.png";
 import Cricket from "../assets/newwork/cricket.png";
 import travel from "../assets/newwork/travel.png";
+import house from "../assets/newwork/house.png";
 // Work Backgrounds Mobile
 import HikeBGmob from "../assets/newwork/hikebgmob.png";
 import HikeBG2mob from "../assets/newwork/hikebg2mob.png";
 import NinjaslaabMob from "../assets/newwork/ninjaaslabmob.png";
 import cricketMob from "../assets/newwork/cricketmob.png";
 import travelMob from "../assets/newwork/travelmob.png";
+import houseMob from "../assets/newwork/houseMob.png";
 
 // Icons
 import Lock from "../assets/icons/lock.png";
@@ -22,7 +24,7 @@ import Player from "../assets/newwork/player.png";
 
 const TagPill = ({ text }) => {
   return (
-    <span className="bg-[#202020] border-[#292929] font-lato border-[1.5px] md:border-2 rounded-full px-4 py-1 font-normal text-base md:text-xl tracking-[0.3px] leading-[30px] md:leading-8 text-[#d1d1d1]">
+    <span className="bg-[#202020] border-[#292929] font-lato border-[1.5px] md:border-2 rounded-full px-4 py-[11px] md:py-1 font-normal text-base md:text-xl tracking-[0.3px] leading-[15.6px] md:leading-8 text-[#d1d1d1]">
       {text}
     </span>
   );
@@ -77,7 +79,11 @@ const WorkItem = ({ key, item, imageEnter, largeEnter }) => {
                   />
                 )}
               </p>
-              <p className="font-lora-italic md:pt-3 text-[#fefefe] text-[34px] tracking-[0.51px]">
+              <p
+                className={`font-lora-italic md:pt-3 text-[#fefefe] text-[34px] tracking-[0.51px] ${
+                  item.smallerTitle && "md:pr-28"
+                }`}
+              >
                 {item.title}
               </p>
               {item.isVideo && (
@@ -197,7 +203,7 @@ const NewWork = ({ imageEnter, largeEnter }) => {
       mobWidth: 290,
       // islocked: true,
       link: "https://www.figma.com/proto/X6IFgiegAQerDSBe5RKBs3/Case-study-stack?page-id=1%3A2&type=design&node-id=1-8501&viewport=758%2C738%2C0.24&t=jbsnjihAGYGdgkII-1&scaling=contain&starting-point-node-id=1%3A8284&mode=design",
-      labels: ["Field Study", "User Interviews", "Usability Test"],
+      labels: ["B2C", "Gaming", "Field Study", "User Interviews"],
     },
     {
       company: "Hike",
@@ -211,29 +217,6 @@ const NewWork = ({ imageEnter, largeEnter }) => {
     },
   ];
 
-  const otherWorkInfo = [
-    {
-      company: "Hike",
-      title: "Exploring the Dynamics of Opinion Trading Games in Cricket",
-      subTitle: "Exploring the Dynamics of Opinion Trading Games in Cricket",
-      background: Cricket,
-      backgroundMob: cricketMob,
-      link: "",
-      islocked: true,
-      labels: ["Generative Study", "Survey", "User Interviews"],
-    },
-    {
-      company: "Hike",
-      title: "Exploring the Dynamics of Opinion Trading Games in Cricket",
-      subTitle: "Exploring the Dynamics of Opinion Trading Games in Cricket",
-      background: Cricket,
-      backgroundMob: cricketMob,
-      link: "",
-      islocked: true,
-      labels: ["Generative Study", "Survey", "User Interviews"],
-    },
-  ];
-
   const designWork = [
     {
       company: "Design Challenge",
@@ -243,7 +226,7 @@ const NewWork = ({ imageEnter, largeEnter }) => {
       backgroundMob: travelMob,
       link: "https://www.figma.com/proto/leRCfYDmtbR6WtskNX1RZB/Design-Challenge?page-id=0%3A1&type=design&node-id=1-3&viewport=663%2C270%2C0.03&t=GAor76GXzdOLnAkw-1&scaling=contain&starting-point-node-id=1%3A3&mode=design",
       islocked: false,
-      labels: ["Product Design", "UI Design", "User Interviews"],
+      labels: ["B2B", "Travel", "Product Design"],
     },
     {
       company: "NINJAASLABS",
@@ -253,9 +236,33 @@ const NewWork = ({ imageEnter, largeEnter }) => {
       backgroundMob: NinjaslaabMob,
       link: "https://www.figma.com/proto/X6IFgiegAQerDSBe5RKBs3/Case-study-stack?page-id=0%3A1&type=design&node-id=1-2711&viewport=1570%2C1616%2C0.11&t=yfChFZCfkj0srHhB-1&scaling=scale-down&starting-point-node-id=1%3A2711&mode=design",
       isVideo: true,
-      labels: ["Product Design", "UI Design", "Qualtitative Research"],
+      labels: ["B2B", "Fin-tech", "Product Design", "Design Systems"],
       videoLink:
         "https://res.cloudinary.com/samydoo/video/upload/v1663016727/SamWebsite/Work/Desktop/C01_yqtldj_byvhkv.webm",
+    },
+  ];
+
+  const otherWorkInfo = [
+    {
+      company: "Personal Project",
+      title: "Documenting the Process of Designing My Dream Home",
+      subTitle: "Exploring the Dynamics of Opinion Trading Games in Cricket",
+      background: house,
+      backgroundMob: houseMob,
+      link: "",
+      islocked: true,
+      labels: ["Coming soon!", "Pre-D Research", "Interior Design"],
+      smallerTitle: true,
+    },
+    {
+      company: "Hike",
+      title: "Exploring the Dynamics of Opinion Trading Games in Cricket",
+      subTitle: "Exploring the Dynamics of Opinion Trading Games in Cricket",
+      background: Cricket,
+      backgroundMob: cricketMob,
+      link: "",
+      islocked: true,
+      labels: ["Generative Study", "Survey", "User Interviews"],
     },
   ];
 
