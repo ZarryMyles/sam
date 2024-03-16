@@ -219,16 +219,6 @@ const NewWork = ({ imageEnter, largeEnter }) => {
 
   const designWork = [
     {
-      company: "Design Challenge",
-      title: "Efficient Travel Experience Evaluation System for Employees",
-      subTitle: "",
-      background: travel,
-      backgroundMob: travelMob,
-      link: "https://www.figma.com/proto/leRCfYDmtbR6WtskNX1RZB/Design-Challenge?page-id=0%3A1&type=design&node-id=1-3&viewport=663%2C270%2C0.03&t=GAor76GXzdOLnAkw-1&scaling=contain&starting-point-node-id=1%3A3&mode=design",
-      islocked: false,
-      labels: ["B2B", "Travel", "Product Design"],
-    },
-    {
       company: "NINJAASLABS",
       title: "Streamlining Accounting Processes for Evolving Businesses",
       subTitle: "BillEasy, In-house Invoicing Software",
@@ -239,6 +229,16 @@ const NewWork = ({ imageEnter, largeEnter }) => {
       labels: ["B2B", "Fin-tech", "Product Design", "Design Systems"],
       videoLink:
         "https://res.cloudinary.com/samydoo/video/upload/v1663016727/SamWebsite/Work/Desktop/C01_yqtldj_byvhkv.webm",
+    },
+    {
+      company: "Design Challenge",
+      title: "Efficient Travel Experience Evaluation System for Employees",
+      subTitle: "",
+      background: travel,
+      backgroundMob: travelMob,
+      link: "https://www.figma.com/proto/leRCfYDmtbR6WtskNX1RZB/Design-Challenge?page-id=0%3A1&type=design&node-id=1-3&viewport=663%2C270%2C0.03&t=GAor76GXzdOLnAkw-1&scaling=contain&starting-point-node-id=1%3A3&mode=design",
+      islocked: false,
+      labels: ["B2B", "Travel", "Product Design"],
     },
   ];
 
